@@ -16,34 +16,34 @@ Vec3 att;
 
 
 void sendMessage(){
-  radio.write( &vx, sizeof(float) );
-  radio.write( &vy, sizeof(float) );
-  radio.write( &theta, sizeof(float) );
-  radio.write( &thetaROC, sizeof(float) );
-  radio.startListening();
-
-  unsigned long started_waiting_at = micros();
-  boolean timeout = false;
-  while ( ! radio.available() ){
-    if (micros() - started_waiting_at > 200000 ){
+//  radio.write( &vx, sizeof(float) );
+//  radio.write( &vy, sizeof(float) );
+//  radio.write( &theta, sizeof(float) );
+//  radio.write( &thetaROC, sizeof(float) );
+//  radio.startListening();
+  time_t  startTime,currTime;
+  time(&startTime);//seconds
+  bool timeout = false;
+  while ( false ){//!radio.available()
+    time(&currTime)
+    if ((currTime-startTime) > 10 ){//timeout after 10 seconds
         timeout = true;
         break;
     }
   }
   if ( timeout ){
-
+    //TODO: fill this in lol
   }
-  else{
-    if (radio.available()){
+  // else{
+  //   if (radio.available()){
+  //
+  //     for(int i = 0; i<4; i++){
+  //       char log_msg [50];
+  //       float got_time;
+  //       radio.read( &got_time, sizeof(float) );
+  //    }
+  //   }
 
-      for(int i = 0; i<4; i++){
-        char log_msg [50];
-        float got_time;
-        radio.read( &got_time, sizeof(float) );
-
-        delay(3);
-     }
-    }
   }
 }
 void messageCallback( const geometry_msgs::TransformStamped& t){
@@ -90,7 +90,7 @@ void logmsg(float a){
   float temp = a;
   int temp1 = (temp - (int)temp) * 100;
   sprintf(log_msg, "Float = %0d.%d", (int)temp, temp1);
-  nh.loginfo(log_msg);
+  ROS_DEBUG(log_msg);
 
 }
 
