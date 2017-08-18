@@ -3,7 +3,7 @@
 #include <geometry_msgs/TransformStamped.h>
 #include <geometry_msgs/Twist.h>
 #include "quaternion.h"
-#include <XBee.h>
+#include "device.h"
 
 ros::NodeHandle nh;
 float vx,vy,theta,thetaROC;
