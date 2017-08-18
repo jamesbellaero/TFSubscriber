@@ -45,13 +45,6 @@ void sendMessage(){
   //   }
 
   }
-void logmsg(float a){
-  char log_msg[50];
-  int temp1 = (a - (int)a) * 100;
-  sprintf(log_msg, "Float = %0d.%d", (int)temp, temp1);
-  //ROS_DEBUG(log_msg);
-
-}
 
 void messageCallback( const geometry_msgs::TransformStamped& t){
 
@@ -68,7 +61,6 @@ void messageCallback( const geometry_msgs::TransformStamped& t){
     quat.v[2] = t.transform.rotation.y;
     quat.v[3] = t.transform.rotation.z;
     tarAtt = Quat2RPY(quat);
-    logmsg(t.transform.translation);
   }
   else{
     loc.v[0] = t.transform.translation.x;
