@@ -25,7 +25,7 @@ void sendMessage(){
   time(&startTime);//seconds
   bool timeout = false;
   while ( false ){//!radio.available()
-    time(&currTime)
+    time(&currTime);
     if ((currTime-startTime) > 10 ){//timeout after 10 seconds
         timeout = true;
         break;
@@ -45,7 +45,7 @@ void sendMessage(){
   //   }
 
   }
-}
+
 void messageCallback( const geometry_msgs::TransformStamped& t){
 
   string a =  t.header.frame_id;
