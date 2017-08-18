@@ -1,0 +1,43 @@
+\hypertarget{xbee__discovery_8c}{}\section{src/xbee/xbee\+\_\+discovery.c File Reference}
+\label{xbee__discovery_8c}\index{src/xbee/xbee\+\_\+discovery.\+c@{src/xbee/xbee\+\_\+discovery.\+c}}
+
+
+Code related to \char`\"{}\+Node Discovery\char`\"{} (the A\+T\+ND command, 0x95 frames).  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/atcmd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/byteorder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/discovery.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__xbee__discovery_ga1efd48449a49119fc19ab9843af5ef6c}{xbee\+\_\+disc\+\_\+nd\+\_\+parse} (\hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$parsed, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$source, int source\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Parse a Node Discovery response and store it in an \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} structure. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__xbee__discovery_ga8eb851e497917304412328f434af7c95}{xbee\+\_\+disc\+\_\+device\+\_\+type\+\_\+str} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__discovery_gab9c960832b7e834e6657e0c6ab4c3d8a}{device\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Return a string (\char`\"{}\+Coord\char`\"{}, \char`\"{}\+Router\char`\"{}, \char`\"{}\+End\+Dev\char`\"{}, or \char`\"{}???\char`\"{}) description for the \char`\"{}\+Device Type\char`\"{} field of a Node ID message. \end{DoxyCompactList}\item 
+void \hyperlink{group__xbee__discovery_gab155a485a9aa4870a45dd86d1d468c52}{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+dump} (const \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ni)
+\begin{DoxyCompactList}\small\item\em Debugging function used to dump an \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} structure to stdout. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga59a0294fbcb1b9f43b8436d4ec3a5a9e}{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{group__xbee__device_ga64bf72cf58030a080f12f8916cd7d2a2}{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+fn} fn)
+\begin{DoxyCompactList}\small\item\em Designate a function to receive parsed Node ID messages on a given X\+Bee device. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga091ae347ddae0bd1b54948714e9d6933}{xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{group__xbee__device_ga64bf72cf58030a080f12f8916cd7d2a2}{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+fn} fn)
+\begin{DoxyCompactList}\small\item\em Remove a function registered to receive parsed Node ID messages on a given X\+Bee device. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga8db9bd798e5fb2f6c75037e0e9d3faff}{\+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$\hyperlink{group__xbee__discovery_ga85b75c5bbcd6d39fb6e2802f35f926ff}{node\+\_\+data}, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Common function used to parse Node ID messages from various sources, and then pass them on to registered receivers. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga20bc82e8efc243e295c99c23948bed3b}{xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Process messages sent to the Node ID Message cluster (0x0095) of the Digi Data endpoint (0x\+E8) when A\+T\+AO != 0. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga6d1190133ded980a4eeca2034508c8a5}{xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Process AT Command Response frames (type 0x88), looking for A\+T\+ND responses to parse and pass to Node ID handlers. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_gac15854e05ef3f80d6ddae653065c0a40}{xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Process Node Identification frames (type 0x95), sent when A\+T\+AO = 0. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga12d6a10c8348cf5eb9636bbf02420dd3}{xbee\+\_\+disc\+\_\+discover\+\_\+nodes} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const char $\ast$identifier)
+\begin{DoxyCompactList}\small\item\em Send an A\+T\+ND command to the X\+Bee, initiating node discovery for all nodes or a specific node\textquotesingle{}s \char`\"{}node identification\char`\"{} (A\+T\+NI) string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Code related to \char`\"{}\+Node Discovery\char`\"{} (the A\+T\+ND command, 0x95 frames). 
+
+See full documentation in \hyperlink{discovery_8h}{xbee/discovery.\+h}. 

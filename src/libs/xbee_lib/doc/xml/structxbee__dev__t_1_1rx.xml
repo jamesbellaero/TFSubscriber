@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structxbee__dev__t_1_1rx" kind="struct" language="C++" prot="public">
+    <compoundname>xbee_dev_t::rx</compoundname>
+    <includes refid="device_8h" local="yes">xbee/device.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__xbee__device_1ga758a79cfaf819f091728c06474466321" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="group__xbee__device_1ga30374ada0aff261c5da7557882fd09de" kindref="member">xbee_dev_rx_state</ref></type>
+        <definition>enum xbee_dev_rx_state state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+<para>current state of receiving a frame </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/device.h" line="420" column="1" bodyfile="include/xbee/device.h" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__device_1ga1048ca0eb1adc5759a0df48ae8ae740a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t bytes_in_frame</definition>
+        <argsstring></argsstring>
+        <name>bytes_in_frame</name>
+        <briefdescription>
+<para>bytes in frame being read; does not include checksum byte </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/device.h" line="447" column="1" bodyfile="include/xbee/device.h" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__device_1gad7b2ae5814cb8706ab662a5d67e4837a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t bytes_read</definition>
+        <argsstring></argsstring>
+        <name>bytes_read</name>
+        <briefdescription>
+<para>bytes read so far </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/device.h" line="450" column="1" bodyfile="include/xbee/device.h" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__device_1gaa172073584adf9e2f74034489f9cd2a4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t frame_data[XBEE_MAX_FRAME_LEN+1]</definition>
+        <argsstring>[XBEE_MAX_FRAME_LEN+1]</argsstring>
+        <name>frame_data</name>
+        <briefdescription>
+<para>bytes received, starting with frame_type, +1 is for checksum </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/device.h" line="453" column="1" bodyfile="include/xbee/device.h" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Current mode of the XBee device (e.g., boot loader, API, command). </para>    </briefdescription>
+    <detaileddescription>
+<para>Buffer and state variables used for receiving a frame. Keep at the end of the structure since frame_data can be large. </para>    </detaileddescription>
+    <location file="include/xbee/device.h" line="442" column="1" bodyfile="include/xbee/device.h" bodystart="442" bodyend="454"/>
+    <listofallmembers>
+      <member refid="group__xbee__device_1ga1048ca0eb1adc5759a0df48ae8ae740a" prot="public" virt="non-virtual"><scope>xbee_dev_t::rx</scope><name>bytes_in_frame</name></member>
+      <member refid="group__xbee__device_1gad7b2ae5814cb8706ab662a5d67e4837a" prot="public" virt="non-virtual"><scope>xbee_dev_t::rx</scope><name>bytes_read</name></member>
+      <member refid="group__xbee__device_1gaa172073584adf9e2f74034489f9cd2a4" prot="public" virt="non-virtual"><scope>xbee_dev_t::rx</scope><name>frame_data</name></member>
+      <member refid="group__xbee__device_1ga758a79cfaf819f091728c06474466321" prot="public" virt="non-virtual"><scope>xbee_dev_t::rx</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

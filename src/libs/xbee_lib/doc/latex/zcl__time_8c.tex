@@ -1,0 +1,56 @@
+\hypertarget{zcl__time_8c}{}\section{src/zigbee/zcl\+\_\+time.c File Reference}
+\label{zcl__time_8c}\index{src/zigbee/zcl\+\_\+time.\+c@{src/zigbee/zcl\+\_\+time.\+c}}
+
+
+Client and server code to implement the Zig\+Bee Time Cluster.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/byteorder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}zigbee/zcl\+\_\+time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}zigbee/zdo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}zigbee/zcl\+\_\+client.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__zcl__time_ga052b988d6d2448af6640028b45ee1f68}{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+set} (const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$attribute, \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$rec)
+\begin{DoxyCompactList}\small\item\em Function registered to \hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME} attribute of Time Cluster and called to modify the attribute. Also called internally to update the zcl\+\_\+time\+\_\+skew global. \end{DoxyCompactList}\item 
+uint\+\_\+fast8\+\_\+t \hyperlink{group__zcl__time_ga9c0749b71318a4f7fd28d9112ffd5462}{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+get} (const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$attribute)
+\begin{DoxyCompactList}\small\item\em Function registered to \hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME} attribute of Time Cluster and called to refresh the Time attribute (global zcl\+\_\+time\+\_\+time). \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl__time_ga1b55e2dc0a4e0752c92dda9b65d349d2}{\+\_\+zcl\+\_\+time\+\_\+timestatus\+\_\+set} (const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$attribute, \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$rec)
+\begin{DoxyCompactList}\small\item\em Special code for setting bitfield of Time\+Status attribute. \end{DoxyCompactList}\item 
+zcl\+\_\+utctime\+\_\+t \hyperlink{group__zcl__time_gad56f618c84b428540c5ffcb60095462c}{zcl\+\_\+time\+\_\+now} (void)
+\begin{DoxyCompactList}\small\item\em Returns the current date/time, using the Z\+CL epoch of January 1, 2000. \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl__time_ga2c66ee215547beae5b5dde4f23cc8e00}{zcl\+\_\+time\+\_\+client} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Handle Read Attribute Responses to requests sent as part of the \hyperlink{group__zcl__time_ga32a901048d0bf5b6c6cf9a1cf7fb1e28}{zcl\+\_\+time\+\_\+find\+\_\+servers()} process. \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl__time_ga32a901048d0bf5b6c6cf9a1cf7fb1e28}{zcl\+\_\+time\+\_\+find\+\_\+servers} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} profile\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Find Time Servers on the network, query them for the current time and then synchronize this device\textquotesingle{}s clock to that time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+zcl\+\_\+utctime\+\_\+t \hyperlink{group__zcl__time_ga4e1da84a7e72ee1626d6328252fd621a}{zcl\+\_\+time\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Current value of Time Attribute (\hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME}), start value doesn\textquotesingle{}t matter since it is set by \hyperlink{group__zcl__time_ga9c0749b71318a4f7fd28d9112ffd5462}{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+get()}. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl__time_ga76f465fead960f138224d8e2a9a59469}{zcl\+\_\+time\+\_\+timestatus} = 0
+\begin{DoxyCompactList}\small\item\em Current value of Time\+Status Attribute (\hyperlink{group__zcl__time_ga5931aa648c777cb21c8337249b6e1699}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+US}) \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gafd12020da5a235dfcf0c3c748fb5baed}{int32\+\_\+t} \hyperlink{group__zcl__time_ga999cc34fc0c4c1eb840543f1e8237d29}{zcl\+\_\+time\+\_\+skew} = 0
+\begin{DoxyCompactList}\small\item\em difference between xbee\+\_\+seconds\+\_\+timer() and actual calendar time \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{structzcl__attribute__full__t}{zcl\_attribute\_full\_t} {\bfseries time}\\
+\>\hyperlink{structzcl__attribute__full__t}{zcl\_attribute\_full\_t} {\bfseries time\_status}\\
+\>\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t} {\bfseries end\_of\_list}\\
+\} \hyperlink{group__zcl__time_gad6a3c9d4f109933785ddc31101dabdc1}{zcl\_time\_attr}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em Global attribute list used in \#\+Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+R\+V\+ER and for adding a Time Cluster Server to an endpoint. \end{DoxyCompactList}\item 
+const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} {\bfseries zcl\+\_\+time\+\_\+attribute\+\_\+tree} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Client and server code to implement the Zig\+Bee Time Cluster. 
+
+This is an attribute-\/only cluster, so it could use the General Command handler in its cluster definition, but we use a special client to intercept Read Attribute Responses so we don\textquotesingle{}t take up an entry in the conversation table. 

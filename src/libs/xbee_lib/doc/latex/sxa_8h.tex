@@ -1,0 +1,244 @@
+\hypertarget{sxa_8h}{}\section{include/xbee/sxa.h File Reference}
+\label{sxa_8h}\index{include/xbee/sxa.\+h@{include/xbee/sxa.\+h}}
+
+
+Header for Simplified X\+Bee A\+PI.  
+
+
+{\ttfamily \#include \char`\"{}xbee/atcmd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/wpan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/discovery.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/io.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/reg\+\_\+descr.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsxa__cached__group__t}{sxa\+\_\+cached\+\_\+group\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Cached register group value. \end{DoxyCompactList}\item 
+struct \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t}
+\begin{DoxyCompactList}\small\item\em This structure and the attendant functions provide a useful layer for Rabbit applications who wish to use a simplified interface to the X\+Bee A\+PI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___s_x_a_ga0deca0e430c1eeb8d4719574d1331900}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+S\+I\+ZE}~(sizeof(\hyperlink{group___s_x_a_ga21b45e50d83fcc1363c4239313e88c06}{sxa\+\_\+cache\+\_\+flags\+\_\+t}))
+\item 
+\#define \hyperlink{group___s_x_a_ga43c6a2c7e1b5ee83edc039a248412580}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+S\+T\+R\+I\+NG}(name,  len)~\hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \{ \hyperlink{group___s_x_a_ga21b45e50d83fcc1363c4239313e88c06}{sxa\+\_\+cache\+\_\+flags\+\_\+t} flags; \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value}\mbox{[}len+1\mbox{]}; \} name
+\begin{DoxyCompactList}\small\item\em Cached string register value. \end{DoxyCompactList}\item 
+\#define \hyperlink{group___s_x_a_gaa0c4e5507161ec6f607d737e4d949a0b}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+B\+IN}(name,  len)~\hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \{ \hyperlink{group___s_x_a_ga21b45e50d83fcc1363c4239313e88c06}{sxa\+\_\+cache\+\_\+flags\+\_\+t} flags; \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value}\mbox{[}len\mbox{]}; \} name
+\begin{DoxyCompactList}\small\item\em Cached binary register value. \end{DoxyCompactList}\item 
+\#define {\bfseries Z\+B\+\_\+\+C\+A\+P\+\_\+\+A\+D\+V\+\_\+\+A\+D\+DR}~0x00000001
+\item 
+\#define {\bfseries Z\+B\+\_\+\+C\+A\+P\+\_\+\+Z\+DO}~0x00000002
+\item 
+\#define {\bfseries Z\+B\+\_\+\+C\+A\+P\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+D\+DO}~0x00000004
+\item 
+\#define {\bfseries Z\+B\+\_\+\+C\+A\+P\+\_\+\+G\+W\+\_\+\+FW}~0x00000008
+\item 
+\#define {\bfseries Z\+B\+\_\+\+C\+A\+P\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+FW}~0x00000010
+\item 
+\#define {\bfseries Z\+B\+\_\+\+C\+A\+P\+\_\+\+Z\+I\+G\+B\+EE}~0x00000020
+\item 
+\#define {\bfseries Z\+B\+\_\+\+C\+A\+P\+\_\+\+Z\+B\+P\+RO}~0x00000040
+\item 
+\#define {\bfseries Z\+B\+\_\+\+C\+A\+P\+\_\+\+D\+I\+G\+I\+M\+E\+SH}~0x00000080
+\item 
+\#define {\bfseries Z\+B\+\_\+\+C\+A\+P\+\_\+\+C\+H\+I\+L\+D\+R\+EN}~0x00000100
+\item 
+\#define {\bfseries Z\+B\+\_\+\+C\+A\+P\+\_\+\+SE}~0x00000200
+\item 
+\mbox{\Hypertarget{sxa_8h_a9e47d5fe0e89846d0bc2b3f1584382ae}\label{sxa_8h_a9e47d5fe0e89846d0bc2b3f1584382ae}} 
+\#define \hyperlink{sxa_8h_a9e47d5fe0e89846d0bc2b3f1584382ae}{\+\_\+\+S\+X\+A\+\_\+\+M\+A\+X\+\_\+\+Q\+U\+E\+U\+ED}~100
+\begin{DoxyCompactList}\small\item\em Cached register value handling\+: maximum number of queued updates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sxa_8h_aa754324fce180c44b1d675a2dbe46f7a}\label{sxa_8h_aa754324fce180c44b1d675a2dbe46f7a}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+A\+T\+A\+O\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}~0x\+FF
+\item 
+\mbox{\Hypertarget{sxa_8h_a8d3c7ba0affaea1263d5012dee2a649a}\label{sxa_8h_a8d3c7ba0affaea1263d5012dee2a649a}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+U\+N\+S\+P\+EC}~0x00000000
+\item 
+\mbox{\Hypertarget{sxa_8h_a710d0ad1188fe527e8d2a049fbdd76a2}\label{sxa_8h_a710d0ad1188fe527e8d2a049fbdd76a2}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+S\+E\+R\+I\+E\+S1}~0x00010000
+\item 
+\mbox{\Hypertarget{sxa_8h_a9700191e71e1416a63e4c73607179074}\label{sxa_8h_a9700191e71e1416a63e4c73607179074}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+Z\+N\+E\+T25}~0x00020000
+\item 
+\mbox{\Hypertarget{sxa_8h_ac602c91d81917fcedc5666c646222b99}\label{sxa_8h_ac602c91d81917fcedc5666c646222b99}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+ZB}~0x00030000
+\item 
+\mbox{\Hypertarget{sxa_8h_af59d8caa0a43aea92d3ee1421b3d3fd3}\label{sxa_8h_af59d8caa0a43aea92d3ee1421b3d3fd3}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+X\+B\+E\+E900}~0x00040000
+\item 
+\mbox{\Hypertarget{sxa_8h_ab518fa03292f9d7def5c4b9538939666}\label{sxa_8h_ab518fa03292f9d7def5c4b9538939666}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+X\+B\+E\+E24}~0x00050000
+\item 
+\mbox{\Hypertarget{sxa_8h_a8dc38e9f092715b3ed09d0220e20f19d}\label{sxa_8h_a8dc38e9f092715b3ed09d0220e20f19d}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+X\+B\+E\+E868}~0x00060000
+\item 
+\mbox{\Hypertarget{sxa_8h_a8b8bfb0f476c5f535cf472b58e4a7214}\label{sxa_8h_a8b8bfb0f476c5f535cf472b58e4a7214}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+X\+B\+E\+E900\+DP}~0x00070000
+\item 
+\mbox{\Hypertarget{sxa_8h_a75b8e1058149fa41ddf5f67d17f96758}\label{sxa_8h_a75b8e1058149fa41ddf5f67d17f96758}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+Z\+B\+\_\+\+S2C}~0x000a0000
+\item 
+\mbox{\Hypertarget{sxa_8h_a8e462d23bd10b144cd773ef63032be70}\label{sxa_8h_a8e462d23bd10b144cd773ef63032be70}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+M\+IN}~M\+S\+\_\+\+M\+O\+D\+\_\+\+S\+E\+R\+I\+E\+S1
+\item 
+\mbox{\Hypertarget{sxa_8h_aa0e0f93b25b5977913d96981684e2b81}\label{sxa_8h_aa0e0f93b25b5977913d96981684e2b81}} 
+\#define {\bfseries M\+S\+\_\+\+M\+O\+D\+\_\+\+M\+AX}~M\+S\+\_\+\+M\+O\+D\+\_\+\+Z\+B\+\_\+\+S2C
+\item 
+\#define {\bfseries sxa\+\_\+list\+\_\+head}()~sxa\+\_\+table
+\item 
+\#define {\bfseries sxa\+\_\+list\+\_\+count}()~sxa\+\_\+table\+\_\+count
+\item 
+\#define {\bfseries sxa\+\_\+xbee}(s)~((s)-\/$>$xbee)
+\item 
+\#define {\bfseries sxa\+\_\+wpan\+\_\+address}(s)~((s)-\/$>$addr\+\_\+ptr)
+\item 
+\#define \hyperlink{group___s_x_a_ga988e2b4c52622034d041f38848881a09}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+N\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}
+\begin{DoxyCompactList}\small\item\em Macro for registering a handler to receive node announcements via both A\+T\+ND responses and 0x95 frames received. \end{DoxyCompactList}\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY}
+\item 
+\#define \hyperlink{group___s_x_a_ga4ef8415bf147396546ed97d7fc7ef8fd}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+I\+S\+\_\+\+R\+E\+S\+P\+O\+N\+SE}
+\begin{DoxyCompactList}\small\item\em Macro for registering a handler to receive I/O samples via both A\+T\+IS responses and 0x92 frames received. \end{DoxyCompactList}\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group___s_x_a_gaaeb2977fc8c351b3edcf007c1effc374}{sxa\+\_\+cache\+\_\+upd\+\_\+fn}) (struct \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, const struct \hyperlink{structsxa__cached__group__t}{sxa\+\_\+cached\+\_\+group\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$cgroup)
+\begin{DoxyCompactList}\small\item\em Function registered for cache group update post-\/processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\hyperlink{group___s_x_a_gga0411cd49bb5b71852cecd93bcbf0ca2da16320fc3c50be3823236003df46858b5}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+U\+N\+K\+N\+O\+WN} = 0x00, 
+\hyperlink{group___s_x_a_gga0411cd49bb5b71852cecd93bcbf0ca2da54498f64b3ad7c2be423d32b45deac04}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+OK} = 0x01, 
+\hyperlink{group___s_x_a_gga0411cd49bb5b71852cecd93bcbf0ca2da0d4d4f7cbf0ca196f444b164cb127413}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+E\+R\+R\+OR} = 0x02, 
+\hyperlink{group___s_x_a_gga0411cd49bb5b71852cecd93bcbf0ca2da9f8ebeda64ea0f23a8db672978ddb13b}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+B\+U\+SY} = 0x04, 
+\newline
+\hyperlink{group___s_x_a_gga0411cd49bb5b71852cecd93bcbf0ca2da17a60752eacd20e0104ef906a4960437}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+P\+E\+N\+D\+I\+NG} = 0x08, 
+\hyperlink{group___s_x_a_gga0411cd49bb5b71852cecd93bcbf0ca2da7d03e78354198ea487076fa69dd2658f}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+B\+A\+D\+\_\+\+G\+R\+O\+UP} = 0x10
+ \}
+\item 
+enum \{ \newline
+\hyperlink{group___s_x_a_ggabed82baf7f470b522273a3e37c24c600ae3f816f5c71d3395d2b2c034227bf14d}{S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+N\+O\+NE}, 
+\hyperlink{group___s_x_a_ggabed82baf7f470b522273a3e37c24c600a8d6b7f78660e6b7da06d0fa99dfb6df6}{S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+N\+O\+D\+E\+\_\+\+ID}, 
+\hyperlink{group___s_x_a_ggabed82baf7f470b522273a3e37c24c600a8f3afd72952b8d47c03b1c9c4ea76622}{S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+I\+O\+\_\+\+C\+O\+N\+F\+IG}, 
+\hyperlink{group___s_x_a_ggabed82baf7f470b522273a3e37c24c600a689a1dccc7c16583fec02c8d8c7ba35d}{S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+FO}, 
+\newline
+\hyperlink{group___s_x_a_ggabed82baf7f470b522273a3e37c24c600a0ad9240e8ef31156d92883213e899924}{S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+D\+H\+DL}, 
+\hyperlink{group___s_x_a_ggabed82baf7f470b522273a3e37c24c600a8110f7d71f749b08814ced492ca2bd71}{S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+M\+I\+SC} = 255
+ \}\begin{DoxyCompactList}\small\item\em This enum gives numeric identification to all cache groups. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structsxa__cached__group__t}{sxa\+\_\+cached\+\_\+group\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries \+\_\+sxa\+\_\+cache\+\_\+group\+\_\+by\+\_\+id} (\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} id)
+\item 
+void {\bfseries \+\_\+sxa\+\_\+update\+\_\+io\+\_\+config\+\_\+group} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, const \hyperlink{structsxa__cached__group__t}{sxa\+\_\+cached\+\_\+group\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$cgroup)
+\item 
+void {\bfseries \+\_\+sxa\+\_\+process\+\_\+version\+\_\+info} (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$reg, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries sxa\+\_\+node\+\_\+by\+\_\+addr} (const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ieee\+\_\+be)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries sxa\+\_\+local\+\_\+node} (const \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries sxa\+\_\+node\+\_\+by\+\_\+name} (const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$name)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries sxa\+\_\+node\+\_\+by\+\_\+index} (int index)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries sxa\+\_\+node\+\_\+add} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$node\+\_\+id)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug void {\bfseries sxa\+\_\+node\+\_\+table\+\_\+dump} (void)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$() {\bfseries sxa\+\_\+xbee} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$() {\bfseries sxa\+\_\+wpan\+\_\+address} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries sxa\+\_\+get\+\_\+digital\+\_\+input} (const \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, uint\+\_\+fast8\+\_\+t index)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries sxa\+\_\+get\+\_\+digital\+\_\+output} (const \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, uint\+\_\+fast8\+\_\+t index)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} {\bfseries sxa\+\_\+get\+\_\+analog\+\_\+input} (const \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, uint\+\_\+fast8\+\_\+t index)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries sxa\+\_\+set\+\_\+digital\+\_\+output} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, uint\+\_\+fast8\+\_\+t index, enum \hyperlink{group__xbee__io_gaf104a10d2bc34550b99de92fe3564cd2}{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state} state)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries sxa\+\_\+io\+\_\+configure} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, uint\+\_\+fast8\+\_\+t index, enum \hyperlink{group__xbee__io_gac23a55c53310f865d9ed2381e331a438}{xbee\+\_\+io\+\_\+type} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type})
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries sxa\+\_\+io\+\_\+set\+\_\+options} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} sample\+\_\+rate, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} change\+\_\+mask)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug void {\bfseries sxa\+\_\+io\+\_\+dump} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries sxa\+\_\+io\+\_\+query} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries sxa\+\_\+io\+\_\+query\+\_\+status} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries sxa\+\_\+init\+\_\+or\+\_\+exit} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const \hyperlink{structwpan__endpoint__table__entry__t}{wpan\+\_\+endpoint\+\_\+table\+\_\+entry\+\_\+t} $\ast$ep\+\_\+table, int verbose)
+\item 
+void {\bfseries \+\_\+sxa\+\_\+launch\+\_\+update} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, const struct \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$xrd, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} cache\+\_\+group)
+\item 
+void {\bfseries sxa\+\_\+tick} (void)
+\item 
+int {\bfseries sxa\+\_\+is\+\_\+digi} (const \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int \hyperlink{group___s_x_a_ga9ae9421a9cd885d2299aabb74251cb48}{\+\_\+sxa\+\_\+disc\+\_\+process\+\_\+node\+\_\+data} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Function shared by multiple functions that process Node Identification Messages (0x95 frames and A\+T\+ND responses). \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int \hyperlink{group___s_x_a_gaaa5cd9591d2c4735e4d9df944323ce17}{\+\_\+sxa\+\_\+disc\+\_\+atnd\+\_\+response} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Frame handler for processing AT Command Response frames. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int \hyperlink{group___s_x_a_gadd7b9ea8d43a02a15c22957b936c8a71}{\+\_\+sxa\+\_\+disc\+\_\+handle\+\_\+frame\+\_\+0x95} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Frame handler for processing Node Identification Indicator (0x95) frames. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int \hyperlink{group___s_x_a_ga7129f2a09a9a49d26c50cbff75e50232}{\+\_\+sxa\+\_\+disc\+\_\+cluster\+\_\+handler} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Cluster handler for \char`\"{}\+Digi Node Identification\char`\"{} cluster. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int \hyperlink{group___s_x_a_ga8b7ff9c6ba3a7223a6061b8ec52e195e}{\+\_\+sxa\+\_\+io\+\_\+process\+\_\+response} (const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ieee\+\_\+be, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Function shared by multiple functions that process I/O sample messages (0x92 frames and A\+T\+IS responses). \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries \+\_\+sxa\+\_\+io\+\_\+response\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries \+\_\+sxa\+\_\+io\+\_\+cluster\+\_\+handler} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries \+\_\+sxa\+\_\+remote\+\_\+is\+\_\+cmd\+\_\+response\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries \+\_\+sxa\+\_\+local\+\_\+is\+\_\+cmd\+\_\+response\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\item 
+\hyperlink{group___s_x_a_ga21b45e50d83fcc1363c4239313e88c06}{sxa\+\_\+cache\+\_\+flags\+\_\+t} {\bfseries sxa\+\_\+cache\+\_\+status} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, const \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$zb, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} cache\+\_\+group)
+\item 
+void {\bfseries \+\_\+sxa\+\_\+set\+\_\+cache\+\_\+status} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, const \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$zb, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} cache\+\_\+group, \hyperlink{group___s_x_a_ga21b45e50d83fcc1363c4239313e88c06}{sxa\+\_\+cache\+\_\+flags\+\_\+t} flags)
+\item 
+void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries sxa\+\_\+cached\+\_\+value\+\_\+ptr} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, const \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$zb)
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries sxa\+\_\+cached\+\_\+value\+\_\+len} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, const \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$zb)
+\item 
+int {\bfseries sxa\+\_\+find\+\_\+pending\+\_\+cache} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, const \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$zb)
+\item 
+int {\bfseries sxa\+\_\+schedule\+\_\+update\+\_\+cache} (\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$sxa, const \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$zb)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal_ga336bff4f4a6012aacc4468132bbd3d7f}{X\+B\+E\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS} typedef \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group___s_x_a_ga21b45e50d83fcc1363c4239313e88c06}{sxa\+\_\+cache\+\_\+flags\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}
+\begin{DoxyCompactList}\small\item\em Cached generic register value (no data) \end{DoxyCompactList}\item 
+{\bfseries sxa\+\_\+cached\+\_\+t}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group___s_x_a_ga810fe9819dfe66daa9ce4981812b46c3}{value}
+\begin{DoxyCompactList}\small\item\em Cached value. \end{DoxyCompactList}\item 
+{\bfseries sxa\+\_\+cached\+\_\+uint8\+\_\+t}
+\item 
+{\bfseries sxa\+\_\+cached\+\_\+uint16\+\_\+t}
+\item 
+{\bfseries sxa\+\_\+cached\+\_\+uint32\+\_\+t}
+\item 
+{\bfseries sxa\+\_\+cached\+\_\+addr64}
+\item 
+const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{structsxa__cached__group__t}{sxa\+\_\+cached\+\_\+group\+\_\+t} {\bfseries \+\_\+sxa\+\_\+default\+\_\+cache\+\_\+groups} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries sxa\+\_\+table}
+\item 
+int {\bfseries sxa\+\_\+table\+\_\+count}
+\item 
+\hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries sxa\+\_\+local\+\_\+table}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header for Simplified X\+Bee A\+PI. 
+

@@ -1,0 +1,925 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="zcl__bacnet_8h" kind="file" language="C++">
+    <compoundname>zcl_bacnet.h</compoundname>
+    <includes refid="aps_8h" local="yes">wpan/aps.h</includes>
+    <includes refid="zcl_8h" local="yes">zigbee/zcl.h</includes>
+    <incdepgraph>
+      <node id="897">
+        <label>errno.h</label>
+      </node>
+      <node id="899">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="900" relation="include">
+        </childnode>
+      </node>
+      <node id="898">
+        <label>stddef.h</label>
+      </node>
+      <node id="894">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="895" relation="include">
+        </childnode>
+      </node>
+      <node id="903">
+        <label>xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="896" relation="include">
+        </childnode>
+      </node>
+      <node id="901">
+        <label>zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="896" relation="include">
+        </childnode>
+        <childnode refid="894" relation="include">
+        </childnode>
+        <childnode refid="902" relation="include">
+        </childnode>
+      </node>
+      <node id="904">
+        <label>string.h</label>
+      </node>
+      <node id="895">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="896" relation="include">
+        </childnode>
+      </node>
+      <node id="896">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="898" relation="include">
+        </childnode>
+        <childnode refid="899" relation="include">
+        </childnode>
+      </node>
+      <node id="902">
+        <label>zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="896" relation="include">
+        </childnode>
+        <childnode refid="903" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+      </node>
+      <node id="905">
+        <label>zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="896" relation="include">
+        </childnode>
+      </node>
+      <node id="900">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+      <node id="893">
+        <label>include/zigbee/zcl_bacnet.h</label>
+        <link refid="zcl__bacnet_8h"/>
+        <childnode refid="894" relation="include">
+        </childnode>
+        <childnode refid="901" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structzcl__binary__output__attr__t" prot="public">zcl_binary_output_attr_t</innerclass>
+    <innerclass refid="structzcl__binary__output__t" prot="public">zcl_binary_output_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="zcl__bacnet_8h_1a178d4887e3139eac3bba5bd92073fae0" prot="public" static="no">
+        <name>ZCL_BACNET_PROFILE</name>
+        <initializer>0x0105</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="26" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a0a68b01c7434f2238331aeca82fa8710" prot="public" static="no">
+        <name>ZCL_BACNET_DEV_CONSTRUCTED</name>
+        <initializer>0x000A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="29" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1ad3fcd8d31c226e82ceaab75758f72b20" prot="public" static="no">
+        <name>ZCL_BACNET_DEV_TUNNELED</name>
+        <initializer>0x000B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="30" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1ac306b2a7407e8bbde59b6253a45d9893" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_ACKED_TRANSITIONS</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="32" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1af01f02cb5d3576e1d902bd7347207760" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_ACTIVE_TEXT</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="33" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1ab4c3e0fe51515b08eda1cf4ae585cac0" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_ALARM_VALUE</name>
+        <initializer>0x0006</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="34" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a01615fb08c0e478acfee79cf45fc5398" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_STATE_TEXT</name>
+        <initializer>0x000E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="35" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1aa18a993ad1122be29a56841dd26384ec" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_CHANGE_OF_STATE_COUNT</name>
+        <initializer>0x000F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="36" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a52d2b98917f481e0607c1b21cb02dc16" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_CHANGE_OF_STATE_TIME</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="37" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1acef8512a94b91813d07b3635f9f1c0dc" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_NOTIFICATION_CLASS</name>
+        <initializer>0x0011</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="38" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a30f98d4272b5cc96797cc37623e282aa" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_COV_INCREMENT</name>
+        <initializer>0x0016</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="39" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a2527a6bb60f01226c9f36b9850c46021" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_DEADBAND</name>
+        <initializer>0x0019</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="40" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1afabe4ee20a5eb4ff29067ea637f2886f" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_DESCRIPTION</name>
+        <initializer>0x001C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="41" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1aeb2196851522d8afb2a9841c570a64a4" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_DEVICE_TYPE</name>
+        <initializer>0x001F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="42" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a2a66ad65f2745b9b41a97ba2cfae7b21" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_ELAPSED_ACTIVE_TIME</name>
+        <initializer>0x0021</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="43" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1acea3151083299e57cedc535ed5c7ae6a" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_EVENT_ENABLE</name>
+        <initializer>0x0023</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="44" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1ab61c2e36657fb7e592d153301ca12b75" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_EVENT_STATE</name>
+        <initializer>0x0024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="45" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a69bcd451a05551f4dce8a6fef4bfa1d3" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_FAULT_VALUES</name>
+        <initializer>0x0025</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="46" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a073250573ec2afc72cca9f9d2080203b" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_FEEDBACK_VALUE</name>
+        <initializer>0x0028</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="47" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1ada6be370ea9b951c22529a42a8302894" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_HIGH_LIMIT</name>
+        <initializer>0x002D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="48" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a5f3c3ff61349aae0a9d813c57a94b288" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_INACTIVE_TEXT</name>
+        <initializer>0x002E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="49" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1aa565b436dfc19a32f20714772580b8f8" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_LIMIT_ENABLE</name>
+        <initializer>0x0034</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="50" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1ae508d4cfa1c29e469880b1cc19ee2626" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_LOW_LIMIT</name>
+        <initializer>0x003B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="51" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1aa2267d03cb7d3dc9f8e35a0aba53d7da" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_MAX_PRESENT_VALUE</name>
+        <initializer>0x0041</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="52" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a923009533d4b3c26d76583941a7b43fa" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_MINIMUM_OFF_TIME</name>
+        <initializer>0x0042</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="53" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a502c30e73bfc5150630b323ffc5e31f8" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_MINIMUM_ON_TIME</name>
+        <initializer>0x0043</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="54" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1ac7a52e03d803216b1ad40d1020d64b31" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_MIN_PRESENT_VALUE</name>
+        <initializer>0x0045</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="55" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a2ef725764dcfd43fa64a9de6e8303e92" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_NOTIFY_TYPE</name>
+        <initializer>0x0048</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="56" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1abe101e8c77c4087c20800507c9cfd1ad" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_NUMBER_OF_STATES</name>
+        <initializer>0x004A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="57" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a34b2d332475183f1f52fb9119c478883" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_OBJECT_IDENTIFIER</name>
+        <initializer>0x004B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="58" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1ac42ec66010a84ce8bbc1110ba073df62" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_OBJECT_NAME</name>
+        <initializer>0x004D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="59" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1abdcb9e19452638a6e1d016c5d5cbad04" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_OBJECT_TYPE</name>
+        <initializer>0x004F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="60" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1afef7eb641f6cff2889f20388d85dfee1" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_OUT_OF_SERVICE</name>
+        <initializer>0x0051</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="61" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a21bd8af9856a654c8eb898a0a11d464e" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_POLARITY</name>
+        <initializer>0x0054</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="62" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a44e23154e0cddf73856fe5401eeaade5" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_PRESENT_VALUE</name>
+        <initializer>0x0055</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="63" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a118351445733b0528f5679efc9c4e80d" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_PRIORITY_ARRAY</name>
+        <initializer>0x0057</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="64" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a1690b528e1f97428c0113188c2628afd" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_RELIABILITY</name>
+        <initializer>0x0067</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="65" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a21e0396bbba28cb7898111c118bc5812" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_RELINQUISH_DEFAULT</name>
+        <initializer>0x0068</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="66" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1adaf3011f1a147addae7a7428fd23f813" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_RESOLUTION</name>
+        <initializer>0x006A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="67" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1aae13851d70f1b3ea2dc0a3cd6ac8c0c6" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_STATUS_FLAGS</name>
+        <initializer>0x006F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="68" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a27ce6d09ba1e0cc3968d2b8693c9a93b" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_TIME_DELAY</name>
+        <initializer>0x0071</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="69" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a70945d061b887457f2116ac625211a60" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_TIME_OF_AT_RESET</name>
+        <initializer>0x0072</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="70" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1aa065b143b3a6ed0c14d526f1a958982d" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_TIME_OF_SC_RESET</name>
+        <initializer>0x0073</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="71" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1af5995a83c826e27f5d42e1cc9d7a402f" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_ENGINEERING_UNITS</name>
+        <initializer>0x0075</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="72" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1ac4c64dce73ede268aab30d909366c8d9" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_UPDATE_INTERVAL</name>
+        <initializer>0x0076</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="73" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a4919abe642ba1791003c5e4cb0e3ed1f" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_EVENT_TIME_STAMPS</name>
+        <initializer>0x0082</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="74" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a1790a45075948b04da20d9e8ed37a2a8" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_PROFILE_NAME</name>
+        <initializer>0x00A8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="75" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a37bbc53c8ba67e8f8d406a308a8ef721" prot="public" static="no">
+        <name>ZCL_BACNET_ATTR_APPLICATION_TYPE</name>
+        <initializer>0x0100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="76" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a59eaed35a8b5019fa0d97d199df165d7" prot="public" static="no">
+        <name>ZCL_BACNET_STATUS_FLAG_IN_ALARM</name>
+        <initializer>(1&lt;&lt;0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="82" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a3acad3e6d1e6cbb2498c8d2d3fa74f46" prot="public" static="no">
+        <name>ZCL_BACNET_STATUS_FLAG_FAULT</name>
+        <initializer>(1&lt;&lt;1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="83" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1af36b4c442bb646e82042a90176a83fd8" prot="public" static="no">
+        <name>ZCL_BACNET_STATUS_FLAG_OVERRIDDEN</name>
+        <initializer>(1&lt;&lt;2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="84" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a3781df564bd91f0b0e881a0eaf799db0" prot="public" static="no">
+        <name>ZCL_BACNET_STATUS_FLAG_OUT_OF_SERVICE</name>
+        <initializer>(1&lt;&lt;3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="85" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a18a3a1e45624300c6f3169fd6e158c36" prot="public" static="no">
+        <name>ZCL_BACNET_POLARITY_NORMAL</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="88" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a11f4ef65f7c5d24f052aeeca97816d69" prot="public" static="no">
+        <name>ZCL_BACNET_POLARITY_REVERSE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="89" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a5b67169d1c0756d7fb635211f5019861" prot="public" static="no">
+        <name>ZCL_BINARY_OUTPUT_VARS</name>
+        <param><defname>var</defname></param>
+        <param><defname>desc</defname></param>
+        <param><defname>zbot</defname></param>
+        <param><defname>value_write</defname></param>
+        <param><defname>status_read</defname></param>
+        <initializer>const <ref refid="structzcl__binary__output__attr__t" kindref="compound">zcl_binary_output_attr_t</ref> var ## _attr = {									\
+		{	ZCL_BACNET_ATTR_ACTIVE_TEXT,		ZCL_ATTRIB_FLAG_READONLY,			\
+			<ref refid="group__zcl__types_1ga64286e0c69e0ed344a6eb8756ac81f95" kindref="member">ZCL_TYPE_STRING_CHAR</ref>,				desc &quot; ON&quot; },							\
+		{	ZCL_BACNET_ATTR_DESCRIPTION,		ZCL_ATTRIB_FLAG_READONLY,			\
+			<ref refid="group__zcl__types_1ga64286e0c69e0ed344a6eb8756ac81f95" kindref="member">ZCL_TYPE_STRING_CHAR</ref>,				desc },									\
+		{	ZCL_BACNET_ATTR_INACTIVE_TEXT,	ZCL_ATTRIB_FLAG_READONLY,			\
+			<ref refid="group__zcl__types_1ga64286e0c69e0ed344a6eb8756ac81f95" kindref="member">ZCL_TYPE_STRING_CHAR</ref>,				desc &quot; OFF&quot; },							\
+		{	ZCL_BACNET_ATTR_OUT_OF_SERVICE,	ZCL_ATTRIB_FLAG_READONLY,			\
+			ZCL_TYPE_LOGICAL_BOOLEAN,			&amp;zbot.out_of_service },				\
+		{	{	ZCL_BACNET_ATTR_PRESENT_VALUE,	<ref refid="group__zcl_1ga40104652d30fa17b7ea5dde9e8b788b8" kindref="member">ZCL_ATTRIB_FLAG_FULL</ref>,			\
+				ZCL_TYPE_LOGICAL_BOOLEAN,		&amp;zbot.present_value					\
+			},	0, 0, NULL, value_write },													\
+		{	{	ZCL_BACNET_ATTR_STATUS_FLAGS,												\
+				<ref refid="group__zcl_1ga40104652d30fa17b7ea5dde9e8b788b8" kindref="member">ZCL_ATTRIB_FLAG_FULL</ref> | ZCL_ATTRIB_FLAG_READONLY,					\
+				ZCL_TYPE_BITMAP_8BIT,			&amp;zbot.status_flags					\
+			}, 0, 0, status_read, NULL },													\
+		<ref refid="group__zcl_1gab05da20cf1dfaef97e20dfca2fd26d14" kindref="member">ZCL_ATTRIBUTE_END_OF_LIST</ref> };														\
+	const <ref refid="structzcl__attribute__tree__t" kindref="compound">zcl_attribute_tree_t</ref> var ## _tree[] =										\
+		{ { ZCL_MFG_NONE, &amp;var ## _attr.active_text, NULL } };					\
+	const <ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref> var ## _cluster_table[] =					\
+		{ 	<ref refid="group__zcl__basic_1gad8336fcfc2729c8deb86eda7f125f271" kindref="member">ZCL_CLUST_ENTRY_BASIC_SERVER</ref>, 												\
+			<ref refid="group__zcl__identify_1gaeae5b3a460629b095247d160235ec586" kindref="member">ZCL_CLUST_ENTRY_IDENTIFY_SERVER</ref>,												\
+			{	ZCL_CLUST_BINARY_OUT, 														\
+				&amp;<ref refid="group__zcl_1gac3849121e93e777ce9a7510d24517b9b" kindref="member">zcl_general_command</ref>, 														\
+				var ## _tree, 																	\
+				<ref refid="group__wpan__aps_1ga9e0a1a0abf5594d8fa5a38b1ca40b3bc" kindref="member">WPAN_CLUST_FLAG_SERVER</ref>														\
+			}, 																					\
+			{ <ref refid="group__wpan__aps_1ga55a7fbd8adf019d268f17b6ede90fe0f" kindref="member">WPAN_CLUST_ENTRY_LIST_END</ref> }													\
+		};																							\
+	<ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref> var ## _ep_state;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="113" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1ac3a3e1830faa100d40aa95453f33431e" prot="public" static="no">
+        <name>ZCL_BINARY_OUTPUT_EXTERN</name>
+        <param><defname>var</defname></param>
+        <initializer>extern <ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref> var ## _ep_state;										\
+	extern const <ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref> var ## _cluster_table[]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="147" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="zcl__bacnet_8h_1a468f0eb8b1aadc22cd9ffb2aff52cf4b" prot="public" static="no">
+        <name>ZCL_BACNET_ENDPOINT</name>
+        <param><defname>id</defname></param>
+        <param><defname>profile</defname></param>
+        <param><defname>name</defname></param>
+        <initializer>{	id, profile, <ref refid="group__zcl_1ga23e4657d006b8b39ac54f0ee61786910" kindref="member">zcl_invalid_cluster</ref>, &amp;name ## _ep_state, \
+		ZCL_BACNET_DEV_CONSTRUCTED, 0x00, name ## _cluster_table }</initializer>
+        <briefdescription>
+<para>Create an entry in the endpoint table for a constructed BACnet device. </para>        </briefdescription>
+        <detaileddescription>
+<para>Parameter <computeroutput>name</computeroutput> should refer to a <ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref> global (named {name}_ep_state) and a const array of <ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref> (named {name}_cluster_table). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="159" column="9" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Macros associated with supporting BACnet under ZigBee. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>ZCL_BACNET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="aps_8h" kindref="compound">wpan/aps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zcl_8h" kindref="compound">zigbee/zcl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_PROFILE<sp/>0x0105</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Devices<sp/>from<sp/>the<sp/>CBA<sp/>(Commercial<sp/>Building<sp/>Automation)<sp/>Profile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_DEV_CONSTRUCTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x000A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_DEV_TUNNELED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x000B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_ACKED_TRANSITIONS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0000<sp/><sp/><sp/>//<sp/>BITMAP8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_ACTIVE_TEXT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0004<sp/><sp/><sp/>//<sp/>CHAR<sp/>STRING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_ALARM_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0006<sp/><sp/><sp/>//<sp/>BOOLEAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_STATE_TEXT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x000E<sp/><sp/><sp/>//<sp/>ARRAY<sp/>of<sp/>STRING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_CHANGE_OF_STATE_COUNT<sp/><sp/><sp/>0x000F<sp/><sp/><sp/>//<sp/>UINT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_CHANGE_OF_STATE_TIME<sp/><sp/><sp/><sp/>0x0010<sp/><sp/><sp/>//<sp/>STRUCT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_NOTIFICATION_CLASS<sp/><sp/><sp/><sp/><sp/><sp/>0x0011<sp/><sp/><sp/>//<sp/>UINT16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_COV_INCREMENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0016<sp/><sp/><sp/>//<sp/>FLOAT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_DEADBAND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0019<sp/><sp/><sp/>//<sp/>FLOAT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_DESCRIPTION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x001C<sp/><sp/><sp/>//<sp/>CHAR<sp/>STRING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_DEVICE_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x001F<sp/><sp/><sp/>//<sp/>CHAR<sp/>STRING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_ELAPSED_ACTIVE_TIME<sp/><sp/><sp/><sp/><sp/>0x0021<sp/><sp/><sp/>//<sp/>UINT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_EVENT_ENABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0023<sp/><sp/><sp/>//<sp/>BITMAP8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_EVENT_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0024<sp/><sp/><sp/>//<sp/>ENUM8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_FAULT_VALUES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0025<sp/><sp/><sp/>//<sp/>SET<sp/>of<sp/>UINT16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_FEEDBACK_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0028<sp/><sp/><sp/>//<sp/>ENUM8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_HIGH_LIMIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x002D<sp/><sp/><sp/>//<sp/>FLOAT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_INACTIVE_TEXT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x002E<sp/><sp/><sp/>//<sp/>CHAR<sp/>STRING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_LIMIT_ENABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0034<sp/><sp/><sp/>//<sp/>BITMAP8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_LOW_LIMIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x003B<sp/><sp/><sp/>//<sp/>FLOAT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_MAX_PRESENT_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0041<sp/><sp/><sp/>//<sp/>FLOAT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_MINIMUM_OFF_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0042<sp/><sp/><sp/>//<sp/>UINT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_MINIMUM_ON_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0043<sp/><sp/><sp/>//<sp/>UINT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_MIN_PRESENT_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0045<sp/><sp/><sp/>//<sp/>FLOAT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_NOTIFY_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0048<sp/><sp/><sp/>//<sp/>ENUM8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_NUMBER_OF_STATES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x004A<sp/><sp/><sp/>//<sp/>UINT16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_OBJECT_IDENTIFIER<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x004B<sp/><sp/><sp/>//<sp/>BACnet<sp/>OID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_OBJECT_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x004D<sp/><sp/><sp/>//<sp/>CHAR<sp/>STRING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_OBJECT_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x004F<sp/><sp/><sp/>//<sp/>ENUM16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_OUT_OF_SERVICE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0051<sp/><sp/><sp/>//<sp/>BOOLEAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_POLARITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0054<sp/><sp/><sp/>//<sp/>ENUM8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_PRESENT_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0055<sp/><sp/><sp/>//<sp/>FLOAT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_PRIORITY_ARRAY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0057<sp/><sp/><sp/>//<sp/>ARRAY<sp/>of<sp/>STRUCT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_RELIABILITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0067<sp/><sp/><sp/>//<sp/>ENUM8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_RELINQUISH_DEFAULT<sp/><sp/><sp/><sp/><sp/><sp/>0x0068<sp/><sp/><sp/>//<sp/>FLOAT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_RESOLUTION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x006A<sp/><sp/><sp/>//<sp/>FLOAT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_STATUS_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x006F<sp/><sp/><sp/>//<sp/>BITMAP8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_TIME_DELAY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0071<sp/><sp/><sp/>//<sp/>UINT8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_TIME_OF_AT_RESET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0072<sp/><sp/><sp/>//<sp/>STRUCT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_TIME_OF_SC_RESET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0073<sp/><sp/><sp/>//<sp/>STRUCT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_ENGINEERING_UNITS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0075<sp/><sp/><sp/>//<sp/>ENUM16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_UPDATE_INTERVAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0076<sp/><sp/><sp/>//<sp/>UINT8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_EVENT_TIME_STAMPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0082<sp/><sp/><sp/>//<sp/>ARRAY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_PROFILE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00A8<sp/><sp/><sp/>//<sp/>CHAR<sp/>STRING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ATTR_APPLICATION_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0100<sp/><sp/><sp/>//<sp/>UINT32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Values<sp/>less<sp/>than<sp/>0x0400<sp/>are<sp/>reserved;<sp/>0x0400<sp/>to<sp/>0xFFFF<sp/>are<sp/>reserved<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>vendor-specific<sp/>attributes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>bits<sp/>of<sp/>the<sp/>ZCL_BACNET_ATTR_STATUS_FLAGS<sp/>attribute</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_STATUS_FLAG_IN_ALARM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1&lt;&lt;0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_STATUS_FLAG_FAULT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1&lt;&lt;1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_STATUS_FLAG_OVERRIDDEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1&lt;&lt;2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_STATUS_FLAG_OUT_OF_SERVICE<sp/><sp/><sp/>(1&lt;&lt;3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/>values<sp/>for<sp/>ZCL_BACNET_ATTR_POLARITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_POLARITY_NORMAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BACNET_POLARITY_REVERSE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Attributes<sp/>structure<sp/>for<sp/>ZCL_CLUST_BINARY_OUT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="structzcl__binary__output__attr__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structzcl__binary__output__attr__t" kindref="compound">zcl_binary_output_attr_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>active_text;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>description;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>inactive_text;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>out_of_service;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><sp/><sp/><sp/>present_value;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><sp/><sp/><sp/>status_flags;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end_of_list;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}<sp/><ref refid="structzcl__binary__output__attr__t" kindref="compound">zcl_binary_output_attr_t</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Variable<sp/>data<sp/>for<sp/>ZCL_CLUST_BINARY_OUT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="structzcl__binary__output__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structzcl__binary__output__t" kindref="compound">zcl_binary_output_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>present_value;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>out_of_service;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>status_flags;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}<sp/><ref refid="structzcl__binary__output__t" kindref="compound">zcl_binary_output_t</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//<sp/>macro<sp/>to<sp/>create<sp/>attributes<sp/>for<sp/>binary<sp/>output<sp/>cluster<sp/>(ZCL_CLUST_BINARY_OUT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>need<sp/>to<sp/>pass<sp/>in<sp/>function<sp/>pointers<sp/>for<sp/>value_write<sp/>and<sp/>status_read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/>maybe<sp/>split<sp/>cluster<sp/>table<sp/>and<sp/>ep<sp/>state<sp/>out,<sp/>since<sp/>there<sp/>could<sp/>be<sp/>a<sp/>need</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>create<sp/>an<sp/>endpoint<sp/>with<sp/>both<sp/>an<sp/>output<sp/>and<sp/>an<sp/>input?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BINARY_OUTPUT_VARS(<sp/>var,<sp/>desc,<sp/>zbot,<sp/>value_write,<sp/>status_read)<sp/>\</highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor"><sp/><sp/><sp/>const<sp/>zcl_binary_output_attr_t<sp/>var<sp/>##<sp/>_attr<sp/>=<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="115"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>ZCL_BACNET_ATTR_ACTIVE_TEXT,<sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_STRING_CHAR,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>desc<sp/>&quot;<sp/>ON&quot;<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>ZCL_BACNET_ATTR_DESCRIPTION,<sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_STRING_CHAR,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>desc<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>ZCL_BACNET_ATTR_INACTIVE_TEXT,<sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_STRING_CHAR,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>desc<sp/>&quot;<sp/>OFF&quot;<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>ZCL_BACNET_ATTR_OUT_OF_SERVICE,<sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_LOGICAL_BOOLEAN,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;zbot.out_of_service<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>{<sp/><sp/>ZCL_BACNET_ATTR_PRESENT_VALUE,<sp/><sp/><sp/>ZCL_ATTRIB_FLAG_FULL,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_LOGICAL_BOOLEAN,<sp/><sp/><sp/><sp/><sp/>&amp;zbot.present_value<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/>0,<sp/>0,<sp/>NULL,<sp/>value_write<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>{<sp/><sp/>ZCL_BACNET_ATTR_STATUS_FLAGS,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_FULL<sp/>|<sp/>ZCL_ATTRIB_FLAG_READONLY,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_BITMAP_8BIT,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;zbot.status_flags<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="129"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/>0,<sp/>0,<sp/>status_read,<sp/>NULL<sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="130"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIBUTE_END_OF_LIST<sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"><sp/><sp/><sp/>const<sp/>zcl_attribute_tree_t<sp/>var<sp/>##<sp/>_tree[]<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>ZCL_MFG_NONE,<sp/>&amp;var<sp/>##<sp/>_attr.active_text,<sp/>NULL<sp/>}<sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/>const<sp/>wpan_cluster_table_entry_t<sp/>var<sp/>##<sp/>_cluster_table[]<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>ZCL_CLUST_ENTRY_BASIC_SERVER,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_CLUST_ENTRY_IDENTIFY_SERVER,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="136"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>ZCL_CLUST_BINARY_OUT,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="137"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;zcl_general_command,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="138"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>##<sp/>_tree,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WPAN_CLUST_FLAG_SERVER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="140"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="141"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>WPAN_CLUST_ENTRY_LIST_END<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="143"><highlight class="preprocessor"><sp/><sp/><sp/>wpan_ep_state_t<sp/>var<sp/>##<sp/>_ep_state;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//<sp/>extern<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/>@sa<sp/>ZCL_BINARY_OUTPUT_VARS,<sp/>ZCL_BACNET_ENDPOINT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BINARY_OUTPUT_EXTERN(<sp/>var)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor"><sp/><sp/><sp/>extern<sp/>wpan_ep_state_t<sp/>var<sp/>##<sp/>_ep_state;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor"><sp/><sp/><sp/>extern<sp/>const<sp/>wpan_cluster_table_entry_t<sp/>var<sp/>##<sp/>_cluster_table[]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="zcl__bacnet_8h_1a468f0eb8b1aadc22cd9ffb2aff52cf4b" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_BACNET_ENDPOINT(<sp/>id,<sp/>profile,<sp/>name)<sp/>\</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"><sp/><sp/><sp/>{<sp/><sp/>id,<sp/>profile,<sp/>zcl_invalid_cluster,<sp/>&amp;name<sp/>##<sp/>_ep_state,<sp/>\</highlight></codeline>
+<codeline lineno="161"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_BACNET_DEV_CONSTRUCTED,<sp/>0x00,<sp/>name<sp/>##<sp/>_cluster_table<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><ref refid="group__hal_1ga8d7f5a691878e9ffb7da396899581062" kindref="member">XBEE_END_DECLS</ref></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/zigbee/zcl_bacnet.h"/>
+  </compounddef>
+</doxygen>

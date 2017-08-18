@@ -1,0 +1,50 @@
+\hypertarget{xbee__readline_8c}{}\section{src/posix/xbee\+\_\+readline.c File Reference}
+\label{xbee__readline_8c}\index{src/posix/xbee\+\_\+readline.\+c@{src/posix/xbee\+\_\+readline.\+c}}
+
+
+A\+N\+SI C \hyperlink{group__hal__posix_ga8c0c80b64f63d395e718172190b21fcc}{xbee\+\_\+readline()} implementation that works for P\+O\+S\+IX platforms (Win32, Linux, B\+SD, Mac OS X).  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries N\+B\+\_\+\+E\+N\+A\+B\+LE}~0
+\item 
+\#define {\bfseries N\+B\+\_\+\+D\+I\+S\+A\+B\+LE}~1
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+R\+E\+A\+D\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+IT}~0
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+R\+E\+A\+D\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T\+\_\+\+L\+I\+NE}~1
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+R\+E\+A\+D\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+L\+I\+NE}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries kbhit} ()
+\item 
+void {\bfseries \+\_\+restore\+\_\+tty} (void)
+\item 
+void {\bfseries nonblock} (int state)
+\item 
+int \hyperlink{group__hal__posix_ga8c0c80b64f63d395e718172190b21fcc}{xbee\+\_\+readline} (char $\ast$buffer, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em This function is a non-\/blocking version of gets(), used to read a line of input from the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct termios {\bfseries \+\_\+ttystate\+\_\+orig}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+N\+SI C \hyperlink{group__hal__posix_ga8c0c80b64f63d395e718172190b21fcc}{xbee\+\_\+readline()} implementation that works for P\+O\+S\+IX platforms (Win32, Linux, B\+SD, Mac OS X). 
+
+Function documentation appears in \hyperlink{platform_8h}{xbee/platform.\+h}. 

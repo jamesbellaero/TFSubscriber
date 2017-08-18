@@ -1,0 +1,2292 @@
+\hypertarget{group__zcl}{}\section{Zig\+Bee Cluster Library}
+\label{group__zcl}\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__zcl__64}{64-\/bit integer support}
+\item 
+\hyperlink{group__zcl__types}{Datatypes}
+\item 
+\hyperlink{group__zcl__client}{Cluster Client support code}
+\item 
+\hyperlink{group__zcl__clusters}{Clusters}
+\end{DoxyCompactItemize}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{zigbee__zcl_8c}{zigbee\+\_\+zcl.\+c}
+\begin{DoxyCompactList}\small\item\em Process General Commands for Zig\+Bee Cluster Library and provide support functions to other layers of the stack. \end{DoxyCompactList}\item 
+file \hyperlink{zcl_8h}{zcl.\+h}
+\begin{DoxyCompactList}\small\item\em Header for implementation of Zig\+Bee Cluster Library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionzcl__rec__reporting__config__t}{zcl\+\_\+rec\+\_\+reporting\+\_\+config\+\_\+t}
+\item 
+union \hyperlink{unionzcl__attribute__minmax__t}{zcl\+\_\+attribute\+\_\+minmax\+\_\+t}
+\item 
+struct \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t}
+\item 
+struct \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Basic structure for storing a list of attributes in a cluster. \end{DoxyCompactList}\item 
+struct \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Use this structure for attributes with min/max values or the need to have a read/write function. \end{DoxyCompactList}\item 
+struct \hyperlink{structzcl__array__t}{zcl\+\_\+array\+\_\+t}
+\begin{DoxyCompactList}\small\item\em If a \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} has a type of Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+R\+R\+AY, its .value points to this structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structzcl__struct__element__t}{zcl\+\_\+struct\+\_\+element\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{structzcl__struct__t}{zcl\+\_\+struct\+\_\+t} contains an array of these elements, describing each element in the structure and its offset from the \hyperlink{group__zcl_ga2c4fcaeccedd1b62207f9bb03a26fdf1}{zcl\+\_\+struct\+\_\+t.\+base\+\_\+address}. \end{DoxyCompactList}\item 
+struct \hyperlink{structzcl__struct__t}{zcl\+\_\+struct\+\_\+t}
+\begin{DoxyCompactList}\small\item\em If a \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} has a type of Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+U\+CT, its .value points to this structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t}
+\item 
+struct \hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure populated by \hyperlink{group__zcl_gadeb35ab493fffec9ba1c33f658929136}{zcl\+\_\+command\+\_\+build()} with the Z\+CL header from a received Z\+CL command frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_ga1d1ebe413ff0242049bed47dc8ffefe9}\label{group__zcl_ga1d1ebe413ff0242049bed47dc8ffefe9}} 
+\#define {\bfseries zigbee\+\_\+zcl\+\_\+debug}
+\item 
+\mbox{\Hypertarget{group__zcl_ga0b1185c5098f4fa736010b594ab2b71f}\label{group__zcl_ga0b1185c5098f4fa736010b594ab2b71f}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+M\+AX}~20
+\item 
+\#define \hyperlink{group__zcl_ga0bbd651dae138e104715e6e2de62084e}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+M\+A\+T\+CH}(p,  \hyperlink{group__zcl_gacef7f7e36d411b8000d1ac172c5e8782}{mfg},  dir,  \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type})
+\begin{DoxyCompactList}\small\item\em Macro for checking the frame control field of a Z\+CL command. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl_gaafcfd290eea997dae1be3d22aa106264}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}(p)~(\hyperlink{group__zcl_ga332a452ea08eb67a3ebf962320bf8819}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+O\+F\+I\+LE} == ((const \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$)(p) \& \hyperlink{group__zcl_gad2e6a61d29cd303e906699a49fa2eb8e}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK}))
+\begin{DoxyCompactList}\small\item\em Identify profile commands (as opposed to cluster commands) using the frame control field of a Z\+CL command. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl_gaaef303ea4f7fa9a8beeace9ce3a1f9fd}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+M\+F\+G\+\_\+\+C\+L\+U\+S\+T\+ER}(p)
+\begin{DoxyCompactList}\small\item\em Identify manufacturer-\/specific cluster commands using the frame control field of a Z\+CL command. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl_gacf3dd5326c4c70dcca078b1eae0c3661}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+C\+L\+U\+S\+T\+ER}(p)
+\begin{DoxyCompactList}\small\item\em Identify cluster commands that are not manufacturer-\/specific, using the frame control field of a Z\+CL command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gad579227f53a05118d43fccab9a651cd7}\label{group__zcl_gad579227f53a05118d43fccab9a651cd7}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+S\+E\+ND}~0x00
+\item 
+\mbox{\Hypertarget{group__zcl_gad5c68f751f625199d813004d16a77d30}\label{group__zcl_gad5c68f751f625199d813004d16a77d30}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+VE}~0x01
+\item 
+\mbox{\Hypertarget{group__zcl_ga6853d1fba6ab5e122dee4befe8e6d5e6}\label{group__zcl_ga6853d1fba6ab5e122dee4befe8e6d5e6}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+I\+N\+D\+I\+C\+A\+T\+O\+R\+\_\+\+I\+N\+D\+I\+C\+E\+S\+\_\+\+M\+A\+SK}~0x0F
+\item 
+\mbox{\Hypertarget{group__zcl_ga90d8c7d7dc7b8aa4b27ab1a8a3656ee3}\label{group__zcl_ga90d8c7d7dc7b8aa4b27ab1a8a3656ee3}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+I\+N\+D\+I\+C\+A\+T\+O\+R\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+M\+A\+SK}~0x\+F0
+\item 
+\mbox{\Hypertarget{group__zcl_ga708c678fc0321c8f3cfdc6faac3dbf33}\label{group__zcl_ga708c678fc0321c8f3cfdc6faac3dbf33}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+I\+N\+D\+I\+C\+A\+T\+O\+R\+\_\+\+R\+E\+P\+L\+A\+CE}~0x00
+\item 
+\mbox{\Hypertarget{group__zcl_gada825912c939a0b47ab998f1b64d1e4f}\label{group__zcl_gada825912c939a0b47ab998f1b64d1e4f}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+I\+N\+D\+I\+C\+A\+T\+O\+R\+\_\+\+A\+D\+D\+\_\+\+E\+L\+E\+M\+E\+NT}~0x10
+\item 
+\mbox{\Hypertarget{group__zcl_ga0793be06976a8d352c95a532761e66d7}\label{group__zcl_ga0793be06976a8d352c95a532761e66d7}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+I\+N\+D\+I\+C\+A\+T\+O\+R\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+E\+L\+E\+M\+E\+NT}~0x20
+\item 
+\mbox{\Hypertarget{group__zcl_ga3e55f9168585bd3f3012da69348c7e4e}\label{group__zcl_ga3e55f9168585bd3f3012da69348c7e4e}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE}~0x00
+\item 
+\#define \hyperlink{group__zcl_ga2bb65a6c04a14957000feaa12de9769c}{Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+A\+S\+S\+I\+GN}~0x01
+\begin{DoxyCompactList}\small\item\em Assign the new value to the attribute (if not set, just checks the validity of the data). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gadf9cb5a2dc8c96c57fbfafe48247256a}\label{group__zcl_gadf9cb5a2dc8c96c57fbfafe48247256a}} 
+\#define \hyperlink{group__zcl_gadf9cb5a2dc8c96c57fbfafe48247256a}{Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+EQ}~0x00
+\begin{DoxyCompactList}\small\item\em Parsing a Write Attribute Request record. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga928e86b414e2662235b7bb39ffaf0635}\label{group__zcl_ga928e86b414e2662235b7bb39ffaf0635}} 
+\#define \hyperlink{group__zcl_ga928e86b414e2662235b7bb39ffaf0635}{Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+SP}~0x02
+\begin{DoxyCompactList}\small\item\em Parsing a Read Attribute Response record. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gab05da20cf1dfaef97e20dfca2fd26d14}\label{group__zcl_gab05da20cf1dfaef97e20dfca2fd26d14}} 
+\#define \hyperlink{group__zcl_gab05da20cf1dfaef97e20dfca2fd26d14}{Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+ST}~0x\+F\+F\+FF
+\begin{DoxyCompactList}\small\item\em Attribute ID for end of list marker. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga7966bd513458cfd80b13a81512712cd8}\label{group__zcl_ga7966bd513458cfd80b13a81512712cd8}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+M\+F\+G\+\_\+\+N\+O\+NE}~0x0000
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_gaece1b64b04ac629f83358d6d815451a5}{zcl\+\_\+header\+\_\+common\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Common portion of Z\+CL header (appears after optional Manufacturer Code) \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_gafc361d46dded7f1761048d78e3d4e18d}{zcl\+\_\+header\+\_\+t}
+\begin{DoxyCompactList}\small\item\em General header for casting onto an incoming frame. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_gaeac1f6671916dd0ad92b271080ec272a}{zcl\+\_\+header\+\_\+response\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Z\+CL header structure used for building response frames that may or may not be manufacturer-\/specific. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_gac376225f8ee77006b884a222a9ac25cc}{zcl\+\_\+header\+\_\+withmfg\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Z\+LC header structure used when building a manufacturer-\/specific response frame. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_gae988eb59c8a2e75b6cb34aefeca315d1}{zcl\+\_\+header\+\_\+nomfg\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Z\+LC header structure used when building a normal (non-\/manufacturer-\/specific response frame. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_ga2373217b6694c1cb1a99113c24519a73}{zcl\+\_\+attrib\+\_\+t}
+\begin{DoxyCompactList}\small\item\em General format for an attribute, used for Write Attributes and Report Attributes commands. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_ga4d098e33e67cdba2f8a968ff66471cfb}{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+resp\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Used for \hyperlink{group__zcl_ga85ca2068c5dc26db307b60b0ac54bc9c}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+error\+\_\+resp\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+array\+\_\+resp\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+struct\+\_\+resp\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_ga22e48ce5d4bb199b52f155f53e396f87}{zcl\+\_\+rec\+\_\+write\+\_\+attrib\+\_\+status\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Used for \hyperlink{group__zcl_ga0595c0f6957be4e80265ecd36158c0ae}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+reporting\+\_\+status\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+read\+\_\+report\+\_\+cfg\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+report\+\_\+error\+\_\+resp\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+resp\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+resp\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_ga71b28f3a9303e556e06d1a4d18c7a834}{zcl\+\_\+default\+\_\+response\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Used for \hyperlink{group__zcl_ga92499f538455b8d5a525510fba54adb2}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP}. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_gab0970af8e1b078745a55523dd60bdff6}{zcl\+\_\+discover\+\_\+attrib\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Used for \hyperlink{group__zcl_ga2919d6fc8068efac4c9969938a4b9ff5}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB}. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_ga4c81303b52f05c2819ac615fa92e0e5f}{zcl\+\_\+rec\+\_\+attrib\+\_\+report\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Used for \hyperlink{group__zcl_gae15c30229c1d8a8cdee1bd92b2cc6a15}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl_ga6e35b82b4bc8167f8d45d7d514e3cfda}{zcl\+\_\+discover\+\_\+attrib\+\_\+resp\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Used for \hyperlink{group__zcl_gae15c30229c1d8a8cdee1bd92b2cc6a15}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+selector\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+read\+\_\+struct\+\_\+attrib\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+resp\+\_\+t}
+\item 
+typedef uint\+\_\+fast8\+\_\+t($\ast$ \hyperlink{group__zcl_gace94cfc3f22379fa08a5b8de8c6977f6}{zcl\+\_\+attribute\+\_\+update\+\_\+fn}) (const struct \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$entry)
+\begin{DoxyCompactList}\small\item\em Function pointer assigned to a Z\+CL attribute record, called to update the value of the given attribute. \end{DoxyCompactList}\item 
+typedef int($\ast$ \hyperlink{group__zcl_ga70fa1740c517a1e49c700cba7cf6b339}{zcl\+\_\+attribute\+\_\+write\+\_\+fn}) (const struct \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$entry, \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$rec)
+\begin{DoxyCompactList}\small\item\em Function pointer assigned to a Z\+CL attribute record, called instead of \hyperlink{group__zcl_ga15bf36dadccd7a045bad7d6f0842e25a}{zcl\+\_\+decode\+\_\+attribute()} to process a Write Request for the attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_ga947f6103f6bbe716ddeacbaed65e3ce3}{zcl\+\_\+send\+\_\+response} (\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$request, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Send a response to a Z\+CL command. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_ga66d9c3c646422e71fed6c94d67c14fdd}{zcl\+\_\+attribute\+\_\+get\+\_\+next} (const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$entry)
+\begin{DoxyCompactList}\small\item\em Return a pointer to the next attribute entry from an attribute table. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_ga00ac8dd36cad01d9479a84c296380f40}{zcl\+\_\+find\+\_\+attribute} (const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$entry, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} search\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Search the attribute table starting at {\ttfamily entry}, for attribute ID {\ttfamily search\+\_\+id}. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_ga592c970c1f0bda49f1c618d2895dbc6d}{zcl\+\_\+build\+\_\+header} (\hyperlink{group__zcl_gaeac1f6671916dd0ad92b271080ec272a}{zcl\+\_\+header\+\_\+response\+\_\+t} $\ast$rsp, \hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$cmd)
+\begin{DoxyCompactList}\small\item\em Support function to fill in a Z\+CL response header. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_gab5c99acba0d864acd326bcab46d1416e}{zcl\+\_\+default\+\_\+response} (\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$request, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status})
+\begin{DoxyCompactList}\small\item\em Send a Default Response (\hyperlink{group__zcl_ga92499f538455b8d5a525510fba54adb2}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP}) to a given command. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_ga87ee4a8117e0420786a109b1f590ddc5}{zcl\+\_\+check\+\_\+minmax} (const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$entry, const \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer\+\_\+le)
+\begin{DoxyCompactList}\small\item\em Checks whether a new value from a Write Attributes command is within the limits specified for a given attribute. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_ga9f9ac99001185554fe24dc7b09c0b0b0}{zcl\+\_\+parse\+\_\+attribute\+\_\+record} (const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$entry, \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$write\+\_\+rec)
+\begin{DoxyCompactList}\small\item\em Parse an attribute record from a Write Attributes Request or a Read Attributes Response and possibly store the new attribute value. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__zcl_ga405e1c70b6278aae3a307971433c9229}{zcl\+\_\+convert\+\_\+24bit} (const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$value\+\_\+le, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} extend\+\_\+sign)
+\begin{DoxyCompactList}\small\item\em Convert a 24-\/bit (3-\/byte) little-\/endian value to a 32-\/bit value in host byte order. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_ga15bf36dadccd7a045bad7d6f0842e25a}{zcl\+\_\+decode\+\_\+attribute} (const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$entry, \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$rec)
+\begin{DoxyCompactList}\small\item\em Decode attribute value from a Write Attribute Request or Read Attribute Response record and optionally write to {\ttfamily entry}. \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl_gaff3abb5d2022101c2873e7a8e8b027e5}{\+\_\+zcl\+\_\+write\+\_\+attributes} (\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$cmd)
+\begin{DoxyCompactList}\small\item\em Process the three types of Write Attributes requests. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_ga4387e5f016fb26d1ac43b24f78aa066a}{\+\_\+zcl\+\_\+encode\+\_\+struct\+\_\+value} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} bufsize, const \hyperlink{structzcl__struct__t}{zcl\+\_\+struct\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$zcl\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Format a Z\+CL struct for a Read Attributes Response or a Write Attributes Request. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_gaae79107724236347a5e22612869df2bf}{\+\_\+zcl\+\_\+encode\+\_\+array\+\_\+value} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} bufsize, const \hyperlink{structzcl__array__t}{zcl\+\_\+array\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$array)
+\begin{DoxyCompactList}\small\item\em Format a Z\+CL array for a Read Attributes Response or a Write Attributes Request. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_gae3f7f58d3b08caf95aa11f90e3995397}{zcl\+\_\+encode\+\_\+attribute\+\_\+value} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} bufsize, const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$entry)
+\begin{DoxyCompactList}\small\item\em Format a Z\+CL attribute\textquotesingle{}s value for a Read Attributes Response or a Write Attributes Request. \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl_gaa34c917bf05a57503e63553efcb77dc9}{\+\_\+zcl\+\_\+read\+\_\+attributes} (\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$cmd)
+\begin{DoxyCompactList}\small\item\em Process the Read Attributes Command (\hyperlink{group__zcl_ga7a3d858b466e4202c6f2148a1b6a3eb2}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+IB}). \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl_ga385c41594437cdf661bfb518f11ee0fc}{\+\_\+zcl\+\_\+discover\+\_\+attributes} (\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$cmd)
+\begin{DoxyCompactList}\small\item\em Process the Discover Attributes Command (\hyperlink{group__zcl_ga2919d6fc8068efac4c9969938a4b9ff5}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB}). \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_gadeb35ab493fffec9ba1c33f658929136}{zcl\+\_\+command\+\_\+build} (\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$cmd, const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$tree)
+\begin{DoxyCompactList}\small\item\em Parse a Z\+CL request and store in a \hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} structure with fields in fixed locations (therefore easier to use than the variable-\/length frame header). \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug void \hyperlink{group__zcl_gaca5c04dd787b041bf40f3b2a4463bb70}{zcl\+\_\+command\+\_\+dump} (const \hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$cmd)
+\begin{DoxyCompactList}\small\item\em Debugging routine that dumps contents of a parsed Z\+CL command structure to S\+T\+D\+O\+UT. \end{DoxyCompactList}\item 
+void \hyperlink{group__zcl_ga2057f6176d44e9fad2df4f619e5777d3}{zcl\+\_\+envelope\+\_\+payload\+\_\+dump} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Debugging routine that parses an envelope payload as a Z\+CL command and dumps a parsed copy to S\+T\+D\+O\+UT. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_ga23e4657d006b8b39ac54f0ee61786910}{zcl\+\_\+invalid\+\_\+cluster} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ep\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Called if a request comes in for an invalid endpoint/cluster combination. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_ga4251fbed33d85d2f7bbccb48857cae95}{zcl\+\_\+invalid\+\_\+command} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Called if a request comes in for an invalid command on a valid endpoint/cluster combination. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug int \hyperlink{group__zcl_gac3849121e93e777ce9a7510d24517b9b}{zcl\+\_\+general\+\_\+command} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Handler for Z\+CL General Commands. \end{DoxyCompactList}\item 
+zigbee\+\_\+zcl\+\_\+debug const char $\ast$ \hyperlink{group__zcl_ga04c32f1b9f6c36fae06e9bed5bd8f7dd}{zcl\+\_\+status\+\_\+text} (uint\+\_\+fast8\+\_\+t \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status})
+\begin{DoxyCompactList}\small\item\em Converts a Z\+CL status byte (one of the Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macros) into a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{group__zcl_gad1e7f7dd501a7ab02f6004e4091c6bea}{zcl\+\_\+attributes\+\_\+none} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em If a cluster doesn\textquotesingle{}t have attributes, use zcl\+\_\+attributes\+\_\+none (a single, empty attribute list) in the cluster definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga1a5aaa930940857f68f245eeb89506b5}\label{group__zcl_ga1a5aaa930940857f68f245eeb89506b5}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries command}
+\item 
+\mbox{\Hypertarget{group__zcl_gacb1403989580c30b5cac60f347c5d6ab}\label{group__zcl_gacb1403989580c30b5cac60f347c5d6ab}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_gacb1403989580c30b5cac60f347c5d6ab}{payload} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em first byte of variable-\/length field \end{DoxyCompactList}\item 
+{\bfseries P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+\hyperlink{group__zcl_gaece1b64b04ac629f83358d6d815451a5}{zcl\+\_\+header\+\_\+common\+\_\+t} {\bfseries common}
+\item 
+\hyperlink{group__zcl_gacef7f7e36d411b8000d1ac172c5e8782}{mfg}
+\begin{DoxyCompactList}\small\item\em manufacturer-\/specific extension \end{DoxyCompactList}\item 
+\hyperlink{group__zcl_ga36fda9bc88c532ecc94200bcd756b1d3}{std}
+\begin{DoxyCompactList}\small\item\em standard \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>{\bfseries PACKED\_STRUCT}\\
+\>\hyperlink{group__zcl_gaece1b64b04ac629f83358d6d815451a5}{zcl\_header\_common\_t} {\bfseries common}\\
+\>\hyperlink{group__zcl_gacef7f7e36d411b8000d1ac172c5e8782}{mfg}\\
+\>\>{\em manufacturer-\/specific extension }\\
+\>\hyperlink{group__zcl_ga36fda9bc88c532ecc94200bcd756b1d3}{std}\\
+\>\>{\em standard }\\
+\} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em see \hyperlink{zcl__types_8h}{zigbee/zcl\+\_\+types.\+h} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gacb5c8866a58116314f6c8eda9dc3544c}\label{group__zcl_gacb5c8866a58116314f6c8eda9dc3544c}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries sequence}
+\item 
+\mbox{\Hypertarget{group__zcl_gaf5ecfc107b4958e60701a824b3059bcb}\label{group__zcl_gaf5ecfc107b4958e60701a824b3059bcb}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries mfg\+\_\+code\+\_\+le}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em variable length, depending on type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gade818037fd6c985038ff29656089758d}\label{group__zcl_gade818037fd6c985038ff29656089758d}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries status}
+\item 
+\mbox{\Hypertarget{group__zcl_ga550de1d9594d987e5f7bf5482c36bb43}\label{group__zcl_ga550de1d9594d987e5f7bf5482c36bb43}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries element\+\_\+type}
+\item 
+\mbox{\Hypertarget{group__zcl_gaf097182653bc185e0b103ae4a751e320}\label{group__zcl_gaf097182653bc185e0b103ae4a751e320}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_gaf097182653bc185e0b103ae4a751e320}{count\+\_\+le}
+\begin{DoxyCompactList}\small\item\em number of elements to follow \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga41182853b4ed09884567019cecdf9358}\label{group__zcl_ga41182853b4ed09884567019cecdf9358}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga41182853b4ed09884567019cecdf9358}{elements} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em mult. uint8\+\_\+t type and variable-\/length value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga5362d5f34924d89ad47bf654355894eb}\label{group__zcl_ga5362d5f34924d89ad47bf654355894eb}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries id\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zcl_ga21f7dfce4361ae19ae7e96c34c5847bc}\label{group__zcl_ga21f7dfce4361ae19ae7e96c34c5847bc}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries attrib\+\_\+id\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zcl_gaf488540e5a4d40656fcf2980f5eedbb0}\label{group__zcl_gaf488540e5a4d40656fcf2980f5eedbb0}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries attrib\+\_\+type}
+\item 
+\mbox{\Hypertarget{group__zcl_ga8e150d385ec3f0f2a1803c35c6354420}\label{group__zcl_ga8e150d385ec3f0f2a1803c35c6354420}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries min\+\_\+interval\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zcl_ga90e714f3fe386bde6b473b878dbbbeb9}\label{group__zcl_ga90e714f3fe386bde6b473b878dbbbeb9}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries max\+\_\+interval\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zcl_ga5145dd9f9ae28a44a49172e1afbdf120}\label{group__zcl_ga5145dd9f9ae28a44a49172e1afbdf120}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries timeout\+\_\+period\+\_\+le}
+\item 
+{\bfseries P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+\mbox{\Hypertarget{group__zcl_ga21f7dfce4361ae19ae7e96c34c5847bc}\label{group__zcl_ga21f7dfce4361ae19ae7e96c34c5847bc}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries attrib\+\_\+id\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zcl_gaf0916fb62ad7f1acdcd1c264608dfe6b}\label{group__zcl_gaf0916fb62ad7f1acdcd1c264608dfe6b}} 
+{\bfseries common}
+\item 
+\mbox{\Hypertarget{group__zcl_gaaaef83599eb50b682857d7e1e6acf45d}\label{group__zcl_gaaaef83599eb50b682857d7e1e6acf45d}} 
+zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+t {\bfseries send}
+\item 
+\mbox{\Hypertarget{group__zcl_ga5b72b8ed4593e1c792c061de064aa5df}\label{group__zcl_ga5b72b8ed4593e1c792c061de064aa5df}} 
+zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+t {\bfseries receive}
+\item 
+\mbox{\Hypertarget{group__zcl_gac6116d5235e13e059e591879c46d7174}\label{group__zcl_gac6116d5235e13e059e591879c46d7174}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries direction}
+\item 
+\mbox{\Hypertarget{group__zcl_gad34074318d957250c9415241dc09287a}\label{group__zcl_gad34074318d957250c9415241dc09287a}} 
+zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+t {\bfseries report\+\_\+cfg}
+\item 
+\mbox{\Hypertarget{group__zcl_ga84911c1549a3c89d7c054fd0fe216c1b}\label{group__zcl_ga84911c1549a3c89d7c054fd0fe216c1b}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries max\+\_\+return\+\_\+count}
+\item 
+\mbox{\Hypertarget{group__zcl_gaa573fa6a1224d1505c4534810334092f}\label{group__zcl_gaa573fa6a1224d1505c4534810334092f}} 
+\hyperlink{group__zcl_ga4c81303b52f05c2819ac615fa92e0e5f}{zcl\+\_\+rec\+\_\+attrib\+\_\+report\+\_\+t} {\bfseries attrib} \mbox{[}1\mbox{]}
+\item 
+\mbox{\Hypertarget{group__zcl_ga4a9f2bf3e233c70483986975e8cc5491}\label{group__zcl_ga4a9f2bf3e233c70483986975e8cc5491}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries index\+\_\+le} \mbox{[}15\mbox{]}
+\item 
+\mbox{\Hypertarget{group__zcl_ga7170b683dd49dc8fa60d9b63654630e8}\label{group__zcl_ga7170b683dd49dc8fa60d9b63654630e8}} 
+zcl\+\_\+selector\+\_\+t {\bfseries selector}
+\item 
+\mbox{\Hypertarget{group__zcl_ga4fc3a0c58dfbd1e68224521185cb9384}\label{group__zcl_ga4fc3a0c58dfbd1e68224521185cb9384}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries id}
+\item 
+\mbox{\Hypertarget{group__zcl_gaf6243ea4edbb271f4a04dbd17bd4e1ec}\label{group__zcl_gaf6243ea4edbb271f4a04dbd17bd4e1ec}} 
+\hyperlink{group__hal__dos_gafd12020da5a235dfcf0c3c748fb5baed}{int32\+\_\+t} {\bfseries \+\_\+signed}
+\item 
+\mbox{\Hypertarget{group__zcl_ga39d687d8e7bab88e70fd8f84213c18ab}\label{group__zcl_ga39d687d8e7bab88e70fd8f84213c18ab}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries \+\_\+unsigned}
+\item 
+\mbox{\Hypertarget{group__zcl_ga552109c4aeafc45875faff0313ae8202}\label{group__zcl_ga552109c4aeafc45875faff0313ae8202}} 
+float {\bfseries \+\_\+float}
+\item 
+\mbox{\Hypertarget{group__zcl_ga669940d05e1abc9807300f7d34169496}\label{group__zcl_ga669940d05e1abc9807300f7d34169496}} 
+const \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_ga669940d05e1abc9807300f7d34169496}{buffer}
+\begin{DoxyCompactList}\small\item\em Source data to write to attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga0d88b9a4d20f93d09002c72ef71cf861}\label{group__zcl_ga0d88b9a4d20f93d09002c72ef71cf861}} 
+\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} \hyperlink{group__zcl_ga0d88b9a4d20f93d09002c72ef71cf861}{buflen}
+\begin{DoxyCompactList}\small\item\em Number of bytes in {\ttfamily buffer}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gaa2585d779da0ab21273a8d92de9a0ebe}\label{group__zcl_gaa2585d779da0ab21273a8d92de9a0ebe}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_gaa2585d779da0ab21273a8d92de9a0ebe}{flags}
+\begin{DoxyCompactList}\small\item\em Parsing flags (see Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+$\ast$ macros for valid flags). \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_gade818037fd6c985038ff29656089758d}{status}
+\begin{DoxyCompactList}\small\item\em Set to \#\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS if data is valid, or some other Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macro if there\textquotesingle{}s an error. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga4fc3a0c58dfbd1e68224521185cb9384}\label{group__zcl_ga4fc3a0c58dfbd1e68224521185cb9384}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries id}
+\item 
+\mbox{\Hypertarget{group__zcl_gaa2585d779da0ab21273a8d92de9a0ebe}\label{group__zcl_gaa2585d779da0ab21273a8d92de9a0ebe}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries flags}
+\item 
+\mbox{\Hypertarget{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}\label{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}
+\begin{DoxyCompactList}\small\item\em The Z\+CL Attribute Type, should be one of the Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+$\ast$ macros defined in \hyperlink{zcl__types_8h}{zigbee/zcl\+\_\+types.\+h}. \end{DoxyCompactList}\item 
+const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_gaaaa0b89997c57cfca2dfae40f46e702d}{value}
+\begin{DoxyCompactList}\small\item\em Pointer to global variable of correct type, set as {\ttfamily const} to allow for both const and non-\/const values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga8f041b4b145b30d5f92acdcb08ba43a3}\label{group__zcl_ga8f041b4b145b30d5f92acdcb08ba43a3}} 
+\hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} {\bfseries base}
+\item 
+\hyperlink{unionzcl__attribute__minmax__t}{zcl\+\_\+attribute\+\_\+minmax\+\_\+t} \hyperlink{group__zcl_gaad888af9d07cd3b611c75f15f8c90dfe}{min}
+\begin{DoxyCompactList}\small\item\em Minimum value for attribute (currently unused until I pick a value to represent \char`\"{}none\char`\"{}). \end{DoxyCompactList}\item 
+\hyperlink{unionzcl__attribute__minmax__t}{zcl\+\_\+attribute\+\_\+minmax\+\_\+t} \hyperlink{group__zcl_gae2490849003f8344782c06334b1e6b17}{max}
+\begin{DoxyCompactList}\small\item\em Maximum value for attribute, assumes 32-\/bit limit. \end{DoxyCompactList}\item 
+\hyperlink{group__zcl_gace94cfc3f22379fa08a5b8de8c6977f6}{zcl\+\_\+attribute\+\_\+update\+\_\+fn} \hyperlink{group__zcl_ga80943597b8cce9d751a45efa823596ac}{read}
+\begin{DoxyCompactList}\small\item\em On an attribute read, the Z\+CL dispatcher will call the .read function to refresh the attribute\textquotesingle{}s value before responding to the request. \end{DoxyCompactList}\item 
+\hyperlink{group__zcl_ga70fa1740c517a1e49c700cba7cf6b339}{zcl\+\_\+attribute\+\_\+write\+\_\+fn} \hyperlink{group__zcl_gac8bd2f85f7df500d34b1d3cd27033a4e}{write}
+\begin{DoxyCompactList}\small\item\em On an attribute write, the Z\+CL dispatcher will call the .write function with a structure containing information about the write request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga7b50573c335728800d65f3fb5479f9bc}\label{group__zcl_ga7b50573c335728800d65f3fb5479f9bc}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga7b50573c335728800d65f3fb5479f9bc}{max\+\_\+count}
+\begin{DoxyCompactList}\small\item\em maximum number of elements to store \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gaf83468db7e4fc12ef11ded6f62ffe7f8}\label{group__zcl_gaf83468db7e4fc12ef11ded6f62ffe7f8}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_gaf83468db7e4fc12ef11ded6f62ffe7f8}{current\+\_\+count}
+\begin{DoxyCompactList}\small\item\em current number of elements \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga16152e39a199182441f04a3360c45657}\label{group__zcl_ga16152e39a199182441f04a3360c45657}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga16152e39a199182441f04a3360c45657}{element\+\_\+size}
+\begin{DoxyCompactList}\small\item\em number of bytes in each element \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}\label{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}
+\begin{DoxyCompactList}\small\item\em type of data stored in array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gaaaa0b89997c57cfca2dfae40f46e702d}\label{group__zcl_gaaaa0b89997c57cfca2dfae40f46e702d}} 
+const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries value}
+\item 
+\mbox{\Hypertarget{group__zcl_ga6934aa0a5db19737df5eec9c2fdeb997}\label{group__zcl_ga6934aa0a5db19737df5eec9c2fdeb997}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga6934aa0a5db19737df5eec9c2fdeb997}{zcl\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Z\+CL data type of element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gac681806181c80437cfab37335f62ff39}\label{group__zcl_gac681806181c80437cfab37335f62ff39}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_gac681806181c80437cfab37335f62ff39}{offset}
+\begin{DoxyCompactList}\small\item\em offset into structure \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gadb910d838105c452018c676e15202224}\label{group__zcl_gadb910d838105c452018c676e15202224}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_gadb910d838105c452018c676e15202224}{element\+\_\+count}
+\begin{DoxyCompactList}\small\item\em number of elements in structure \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga2c4fcaeccedd1b62207f9bb03a26fdf1}\label{group__zcl_ga2c4fcaeccedd1b62207f9bb03a26fdf1}} 
+const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_ga2c4fcaeccedd1b62207f9bb03a26fdf1}{base\+\_\+address}
+\begin{DoxyCompactList}\small\item\em base address of structure \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gacfb513b58d4138fe737df9448fb52e5a}\label{group__zcl_gacfb513b58d4138fe737df9448fb52e5a}} 
+const \hyperlink{structzcl__struct__element__t}{zcl\+\_\+struct\+\_\+element\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_gacfb513b58d4138fe737df9448fb52e5a}{element}
+\begin{DoxyCompactList}\small\item\em elements in the structure \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga4ad31fcb69f8aaca8f3c1820bb4d8594}\label{group__zcl_ga4ad31fcb69f8aaca8f3c1820bb4d8594}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga4ad31fcb69f8aaca8f3c1820bb4d8594}{manufacturer\+\_\+id}
+\begin{DoxyCompactList}\small\item\em ID for manufacturer-\/specific attributes or Z\+C\+L\+\_\+\+M\+F\+G\+\_\+\+N\+O\+NE if general. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga711c76cba8f7c0f30a95dcc5f7c0b7fb}\label{group__zcl_ga711c76cba8f7c0f30a95dcc5f7c0b7fb}} 
+const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_ga711c76cba8f7c0f30a95dcc5f7c0b7fb}{server}
+\begin{DoxyCompactList}\small\item\em List of attributes for the S\+E\+R\+V\+ER cluster (or N\+U\+LL if none). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gabb37e65dc5e6f9179ff1c17268031d9b}\label{group__zcl_gabb37e65dc5e6f9179ff1c17268031d9b}} 
+const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_gabb37e65dc5e6f9179ff1c17268031d9b}{client}
+\begin{DoxyCompactList}\small\item\em List of attributes for the C\+L\+I\+E\+NT cluster (or N\+U\+LL if none). \end{DoxyCompactList}\item 
+const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{group__zcl_gad1e7f7dd501a7ab02f6004e4091c6bea}{zcl\+\_\+attributes\+\_\+none} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em If a cluster doesn\textquotesingle{}t have attributes, use zcl\+\_\+attributes\+\_\+none (a single, empty attribute list) in the cluster definition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga1c24c7848d60bc6aa335a8ba9fd14b7a}\label{group__zcl_ga1c24c7848d60bc6aa335a8ba9fd14b7a}} 
+const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_ga1c24c7848d60bc6aa335a8ba9fd14b7a}{envelope}
+\begin{DoxyCompactList}\small\item\em envelope for the received command, envelope\textquotesingle{}s payload and length include the Z\+CL header \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga5226462a41663bc81a5d67c04f18868a}\label{group__zcl_ga5226462a41663bc81a5d67c04f18868a}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga5226462a41663bc81a5d67c04f18868a}{frame\+\_\+control}
+\begin{DoxyCompactList}\small\item\em frame control byte from the Z\+CL header \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga011fb17c1112658806badaccba7a246d}\label{group__zcl_ga011fb17c1112658806badaccba7a246d}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga011fb17c1112658806badaccba7a246d}{mfg\+\_\+code}
+\begin{DoxyCompactList}\small\item\em manufacturer code from the Z\+CL header, in host byte order, or 0x0000 if not mfg specific \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gacb5c8866a58116314f6c8eda9dc3544c}\label{group__zcl_gacb5c8866a58116314f6c8eda9dc3544c}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_gacb5c8866a58116314f6c8eda9dc3544c}{sequence}
+\begin{DoxyCompactList}\small\item\em sequence byte from the Z\+CL header \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga1a5aaa930940857f68f245eeb89506b5}\label{group__zcl_ga1a5aaa930940857f68f245eeb89506b5}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1a5aaa930940857f68f245eeb89506b5}{command}
+\begin{DoxyCompactList}\small\item\em command byte from the Z\+CL header \end{DoxyCompactList}\item 
+const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_ga04c31df34f50e8dd1efaf1105631b2bc}{attributes}
+\begin{DoxyCompactList}\small\item\em Appropriate list of attributes on this device, related to the command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gaf0e34793a3febabcdb61c020aecbf805}\label{group__zcl_gaf0e34793a3febabcdb61c020aecbf805}} 
+const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_gaf0e34793a3febabcdb61c020aecbf805}{zcl\+\_\+payload}
+\begin{DoxyCompactList}\small\item\em pointer to the Z\+CL payload (first byte after Z\+CL header) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga0ff9f63e333676ba1359f505d02dd281}\label{group__zcl_ga0ff9f63e333676ba1359f505d02dd281}} 
+\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} \hyperlink{group__zcl_ga0ff9f63e333676ba1359f505d02dd281}{length}
+\begin{DoxyCompactList}\small\item\em length of the Z\+CL payload \end{DoxyCompactList}\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+0x0000-\/0x00ff General Clusters \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_gaf9a529b80905a98850e72bc153789913}\label{group__zcl_gaf9a529b80905a98850e72bc153789913}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+S\+IC}~0x0000
+\item 
+\mbox{\Hypertarget{group__zcl_ga9a1f2c8d3d83f46e48b63db97ffd1658}\label{group__zcl_ga9a1f2c8d3d83f46e48b63db97ffd1658}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+P\+O\+W\+E\+R\+\_\+\+C\+O\+N\+F\+IG}~0x0001
+\item 
+\mbox{\Hypertarget{group__zcl_gae28407832bda3643467a6b9e35a9332b}\label{group__zcl_gae28407832bda3643467a6b9e35a9332b}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+E\+M\+P\+\_\+\+C\+O\+N\+F\+IG}~0x0002
+\item 
+\mbox{\Hypertarget{group__zcl_ga01d2578ad705eff1e1bf19b8affdcbac}\label{group__zcl_ga01d2578ad705eff1e1bf19b8affdcbac}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+I\+D\+E\+N\+T\+I\+FY}~0x0003
+\item 
+\mbox{\Hypertarget{group__zcl_gae0f6675dd4154e57413beef821d51392}\label{group__zcl_gae0f6675dd4154e57413beef821d51392}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+G\+R\+O\+U\+PS}~0x0004
+\item 
+\mbox{\Hypertarget{group__zcl_gae9c2a6f6108cb9317b17dbaa8e1bf52d}\label{group__zcl_gae9c2a6f6108cb9317b17dbaa8e1bf52d}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+S\+C\+E\+N\+ES}~0x0005
+\item 
+\mbox{\Hypertarget{group__zcl_ga2f39cf2e480d57a36e4345c2e5cd7342}\label{group__zcl_ga2f39cf2e480d57a36e4345c2e5cd7342}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+O\+N\+O\+FF}~0x0006
+\item 
+\mbox{\Hypertarget{group__zcl_ga0c50bd8024bac316e6c3b5445adbe24e}\label{group__zcl_ga0c50bd8024bac316e6c3b5445adbe24e}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+O\+N\+O\+F\+F\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+C\+O\+N\+F\+IG}~0x0007
+\item 
+\mbox{\Hypertarget{group__zcl_ga08590a00da63decd094dca9eb78e2b8e}\label{group__zcl_ga08590a00da63decd094dca9eb78e2b8e}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+C\+O\+N\+T\+R\+OL}~0x0008
+\item 
+\mbox{\Hypertarget{group__zcl_ga660f2cbe707f2fa1089363d782726876}\label{group__zcl_ga660f2cbe707f2fa1089363d782726876}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+A\+L\+A\+R\+MS}~0x0009
+\item 
+\mbox{\Hypertarget{group__zcl_gaf21f5b2c5bed64debf5d817a65d83d69}\label{group__zcl_gaf21f5b2c5bed64debf5d817a65d83d69}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+T\+I\+ME}~0x000a
+\item 
+\mbox{\Hypertarget{group__zcl_gac13b2895b15d1293afb359996709e638}\label{group__zcl_gac13b2895b15d1293afb359996709e638}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+R\+S\+S\+I\+\_\+\+L\+O\+C\+A\+T\+I\+ON}~0x000b
+\item 
+\mbox{\Hypertarget{group__zcl_ga2b4fbabe7511a86fae352f564bed3012}\label{group__zcl_ga2b4fbabe7511a86fae352f564bed3012}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+IN}~0x000c
+\item 
+\mbox{\Hypertarget{group__zcl_gad3a725684cb791e5a9c0e84d8549bb6a}\label{group__zcl_gad3a725684cb791e5a9c0e84d8549bb6a}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+O\+UT}~0x000d
+\item 
+\mbox{\Hypertarget{group__zcl_gabece8a12cc79a662e518016d3b1378b5}\label{group__zcl_gabece8a12cc79a662e518016d3b1378b5}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+V\+A\+L\+UE}~0x000e
+\item 
+\mbox{\Hypertarget{group__zcl_ga54bc6473ba454f3f84251bd37a2d1dc5}\label{group__zcl_ga54bc6473ba454f3f84251bd37a2d1dc5}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+IN}~0x000f
+\item 
+\mbox{\Hypertarget{group__zcl_gab553808690d6f12100305f090909e501}\label{group__zcl_gab553808690d6f12100305f090909e501}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+UT}~0x0010
+\item 
+\mbox{\Hypertarget{group__zcl_ga8b482af4088fea7de7a3ff70dfd6cdb6}\label{group__zcl_ga8b482af4088fea7de7a3ff70dfd6cdb6}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+A\+L\+UE}~0x0011
+\item 
+\mbox{\Hypertarget{group__zcl_ga0c54d0abb514bdb233c389d6608bb6f7}\label{group__zcl_ga0c54d0abb514bdb233c389d6608bb6f7}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+IN}~0x0012
+\item 
+\mbox{\Hypertarget{group__zcl_ga9dbb3e0eb48f6d263eb57ed8a3c8343a}\label{group__zcl_ga9dbb3e0eb48f6d263eb57ed8a3c8343a}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+O\+UT}~0x0013
+\item 
+\mbox{\Hypertarget{group__zcl_gaeeda9501abc7a193da0708cbbb08cc84}\label{group__zcl_gaeeda9501abc7a193da0708cbbb08cc84}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+V\+A\+L\+UE}~0x0014
+\item 
+\mbox{\Hypertarget{group__zcl_ga547cd138961d72d75ec09224e7777ed7}\label{group__zcl_ga547cd138961d72d75ec09224e7777ed7}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+C\+O\+M\+M\+I\+S\+S\+I\+O\+N\+I\+NG}~0x0015
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+0x0100-\/0x01ff Closure Clusters \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_ga72f0565da3072ed47f56ba4a5f21ab65}\label{group__zcl_ga72f0565da3072ed47f56ba4a5f21ab65}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+S\+H\+A\+D\+E\+\_\+\+C\+O\+N\+F\+IG}~0x0100
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+0x0200-\/0x02ff H\+V\+AC Clusters \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_ga498ed423dfc4bdfec0fd83ce47f2f0f3}\label{group__zcl_ga498ed423dfc4bdfec0fd83ce47f2f0f3}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+P\+U\+M\+P\+\_\+\+C\+O\+N\+F\+IG}~0x0200
+\item 
+\mbox{\Hypertarget{group__zcl_gaad276e851819eb0847930b299b886029}\label{group__zcl_gaad276e851819eb0847930b299b886029}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+T\+H\+E\+R\+M\+O\+S\+T\+AT}~0x0201
+\item 
+\mbox{\Hypertarget{group__zcl_ga472e1fc64714dc49510922fc3012c6df}\label{group__zcl_ga472e1fc64714dc49510922fc3012c6df}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+F\+A\+N\+\_\+\+C\+O\+N\+T\+R\+OL}~0x0202
+\item 
+\mbox{\Hypertarget{group__zcl_gaa5b947e5e872b25c8779ad332cd827d2}\label{group__zcl_gaa5b947e5e872b25c8779ad332cd827d2}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+D\+E\+H\+U\+M\+I\+D\+I\+F\+Y\+\_\+\+C\+O\+N\+T\+R\+OL}~0x0203
+\item 
+\mbox{\Hypertarget{group__zcl_ga62cebc179e8588411483c047dbd56476}\label{group__zcl_ga62cebc179e8588411483c047dbd56476}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+T\+H\+E\+R\+M\+O\+S\+T\+A\+T\+\_\+\+U\+I\+\_\+\+C\+O\+N\+F\+IG}~0x0204
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+0x0300-\/0x03ff Lighting Clusters \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_ga9d7f67c80b4ee0fc4c1d216d72eb1d21}\label{group__zcl_ga9d7f67c80b4ee0fc4c1d216d72eb1d21}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+N\+T\+R\+OL}~0x0300
+\item 
+\mbox{\Hypertarget{group__zcl_ga5422419fb816668fc07ccdd5d630fea1}\label{group__zcl_ga5422419fb816668fc07ccdd5d630fea1}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+L\+L\+A\+S\+T\+\_\+\+C\+O\+N\+F\+IG}~0x0301
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+0x0400-\/0x04ff Measurement and Sensing Clusters \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_gae5d4f50414cbf30d92667430c6a3cfa9}\label{group__zcl_gae5d4f50414cbf30d92667430c6a3cfa9}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+I\+L\+L\+U\+M\+\_\+\+M\+E\+A\+S\+U\+RE}~0x0400
+\item 
+\mbox{\Hypertarget{group__zcl_ga9959f2e667fb70bfbae24ba82b27efd9}\label{group__zcl_ga9959f2e667fb70bfbae24ba82b27efd9}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+I\+L\+L\+U\+M\+\_\+\+L\+E\+V\+E\+L\+\_\+\+S\+E\+N\+S\+I\+NG}~0x0401
+\item 
+\mbox{\Hypertarget{group__zcl_gada1c1b659aa1618d26c3a8d35c2f8c7e}\label{group__zcl_gada1c1b659aa1618d26c3a8d35c2f8c7e}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+T\+E\+M\+P\+\_\+\+M\+E\+A\+S\+U\+RE}~0x0402
+\item 
+\mbox{\Hypertarget{group__zcl_ga415c4708f3e2c1d011a49f47b9f83a23}\label{group__zcl_ga415c4708f3e2c1d011a49f47b9f83a23}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+P\+R\+E\+S\+S\+U\+R\+E\+\_\+\+M\+E\+A\+S\+U\+RE}~0x0403
+\item 
+\mbox{\Hypertarget{group__zcl_gacd01cad291629fd4727bf9e0c7f894ad}\label{group__zcl_gacd01cad291629fd4727bf9e0c7f894ad}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+F\+L\+O\+W\+\_\+\+M\+E\+A\+S\+U\+RE}~0x0404
+\item 
+\mbox{\Hypertarget{group__zcl_gae16b40a0813e06d1a730cb82d73bf1ae}\label{group__zcl_gae16b40a0813e06d1a730cb82d73bf1ae}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+H\+U\+M\+I\+D\+I\+T\+Y\+\_\+\+M\+E\+A\+S\+U\+RE}~0x0405
+\item 
+\mbox{\Hypertarget{group__zcl_gaf9aa3a90bc4b4192d92c37d5ef91b7b7}\label{group__zcl_gaf9aa3a90bc4b4192d92c37d5ef91b7b7}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+O\+C\+C\+U\+P\+A\+N\+C\+Y\+\_\+\+S\+E\+N\+S\+I\+NG}~0x0406
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+0x0500-\/0x05ff Security and Safety Clusters \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_ga9b93acd32b917310f0336ac84d7efdea}\label{group__zcl_ga9b93acd32b917310f0336ac84d7efdea}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+I\+A\+S\+\_\+\+Z\+O\+NE}~0x0500
+\item 
+\mbox{\Hypertarget{group__zcl_ga442974e611b0c74732377892affefd11}\label{group__zcl_ga442974e611b0c74732377892affefd11}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+I\+A\+S\+\_\+\+A\+CE}~0x0501
+\item 
+\mbox{\Hypertarget{group__zcl_ga4e118fcd980560cb3adb695997a48fd3}\label{group__zcl_ga4e118fcd980560cb3adb695997a48fd3}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+I\+A\+S\+\_\+\+WD}~0x0502
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+0x0600-\/0x06ff Protocol Interface Clusters \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_ga9ac47617e3db4ad44b22c890b6a5ab47}\label{group__zcl_ga9ac47617e3db4ad44b22c890b6a5ab47}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+G\+E\+N\+E\+R\+I\+C\+\_\+\+T\+U\+N\+N\+EL}~0x0600
+\item 
+\mbox{\Hypertarget{group__zcl_ga8752b8b9d5c32c535a2bf24bd0f246f5}\label{group__zcl_ga8752b8b9d5c32c535a2bf24bd0f246f5}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+T\+U\+N\+N\+EL}~0x0601
+\item 
+\mbox{\Hypertarget{group__zcl_ga255eda08cdf2d37e7ee7d9c3171b1574}\label{group__zcl_ga255eda08cdf2d37e7ee7d9c3171b1574}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+R\+E\+G\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+IN}~0x0602
+\item 
+\mbox{\Hypertarget{group__zcl_ga67ff2d43a5736e28d48d67b883736cff}\label{group__zcl_ga67ff2d43a5736e28d48d67b883736cff}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+X\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+IN}~0x0603
+\item 
+\mbox{\Hypertarget{group__zcl_gabbb40e815833de049b591db02737c642}\label{group__zcl_gabbb40e815833de049b591db02737c642}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+R\+E\+G\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+O\+UT}~0x0604
+\item 
+\mbox{\Hypertarget{group__zcl_ga8fea21ca7403db52e2ced5207e942584}\label{group__zcl_ga8fea21ca7403db52e2ced5207e942584}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+X\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+O\+UT}~0x0605
+\item 
+\mbox{\Hypertarget{group__zcl_gaf8eec7c3306e846d7a3bb1ac6fd79f94}\label{group__zcl_gaf8eec7c3306e846d7a3bb1ac6fd79f94}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+R\+E\+G\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+V\+A\+L\+UE}~0x0606
+\item 
+\mbox{\Hypertarget{group__zcl_ga141804cd31b8ae5223519b8c14a3c411}\label{group__zcl_ga141804cd31b8ae5223519b8c14a3c411}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+X\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+V\+A\+L\+UE}~0x0607
+\item 
+\mbox{\Hypertarget{group__zcl_ga1656ef8cb0ffed118cc274fa7c8e8496}\label{group__zcl_ga1656ef8cb0ffed118cc274fa7c8e8496}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+R\+E\+G\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+IN}~0x0608
+\item 
+\mbox{\Hypertarget{group__zcl_gab909a7fc228d6e171a73a448d46859f5}\label{group__zcl_gab909a7fc228d6e171a73a448d46859f5}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+X\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+IN}~0x0609
+\item 
+\mbox{\Hypertarget{group__zcl_gacd2257cf2c2ec6fef7b481191db3a1cf}\label{group__zcl_gacd2257cf2c2ec6fef7b481191db3a1cf}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+R\+E\+G\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+UT}~0x060a
+\item 
+\mbox{\Hypertarget{group__zcl_ga79f225dbdd3ff8341b6f061e94a86e2d}\label{group__zcl_ga79f225dbdd3ff8341b6f061e94a86e2d}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+X\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+UT}~0x060b
+\item 
+\mbox{\Hypertarget{group__zcl_gad5a654eccd9418893c386ae81cf4956f}\label{group__zcl_gad5a654eccd9418893c386ae81cf4956f}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+R\+E\+G\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+A\+L\+UE}~0x060c
+\item 
+\mbox{\Hypertarget{group__zcl_ga56dcda150a30a66548abee50b40a3cb1}\label{group__zcl_ga56dcda150a30a66548abee50b40a3cb1}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+X\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+V\+A\+L\+UE}~0x060d
+\item 
+\mbox{\Hypertarget{group__zcl_ga019cd5f70e44a06efce061562ccc01a4}\label{group__zcl_ga019cd5f70e44a06efce061562ccc01a4}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+R\+E\+G\+\_\+\+M\+U\+L\+T\+I\+\_\+\+IN}~0x060e
+\item 
+\mbox{\Hypertarget{group__zcl_ga36f5e811622f3ead41a075688778dc95}\label{group__zcl_ga36f5e811622f3ead41a075688778dc95}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+X\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+IN}~0x060f
+\item 
+\mbox{\Hypertarget{group__zcl_ga6a07b9b5a340a9e7d07b116a6f0ec722}\label{group__zcl_ga6a07b9b5a340a9e7d07b116a6f0ec722}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+R\+E\+G\+\_\+\+M\+U\+L\+T\+I\+\_\+\+O\+UT}~0x0610
+\item 
+\mbox{\Hypertarget{group__zcl_ga5db36a6dbe5a242aa6f6adb2dbfd4164}\label{group__zcl_ga5db36a6dbe5a242aa6f6adb2dbfd4164}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+X\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+O\+UT}~0x0611
+\item 
+\mbox{\Hypertarget{group__zcl_ga15f9c19ffa747c96928e35dbb1ae871e}\label{group__zcl_ga15f9c19ffa747c96928e35dbb1ae871e}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+R\+E\+G\+\_\+\+M\+U\+L\+T\+I\+\_\+\+V\+A\+L\+UE}~0x0612
+\item 
+\mbox{\Hypertarget{group__zcl_ga81f7df07e9322e17d24501a9b7eeb0b6}\label{group__zcl_ga81f7df07e9322e17d24501a9b7eeb0b6}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+X\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+V\+A\+L\+UE}~0x0613
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+Bit masks for the frame\+\_\+control field of a Z\+CL header (zcl\+\_\+header\+\_\+t, zcl\+\_\+header\+\_\+response\+\_\+t, zcl\+\_\+header\+\_\+withmfg\+\_\+t, or zcl\+\_\+header\+\_\+nomfg\+\_\+t) \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_gad2e6a61d29cd303e906699a49fa2eb8e}\label{group__zcl_gad2e6a61d29cd303e906699a49fa2eb8e}} 
+\#define \hyperlink{group__zcl_gad2e6a61d29cd303e906699a49fa2eb8e}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK}~0x03
+\begin{DoxyCompactList}\small\item\em Bits of frame type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga332a452ea08eb67a3ebf962320bf8819}\label{group__zcl_ga332a452ea08eb67a3ebf962320bf8819}} 
+\#define \hyperlink{group__zcl_ga332a452ea08eb67a3ebf962320bf8819}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+O\+F\+I\+LE}~0x00
+\begin{DoxyCompactList}\small\item\em cmd acts across entire profile \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga75efeedff171558e183dbf8d646ea5dd}\label{group__zcl_ga75efeedff171558e183dbf8d646ea5dd}} 
+\#define \hyperlink{group__zcl_ga75efeedff171558e183dbf8d646ea5dd}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+L\+U\+S\+T\+ER}~0x01
+\begin{DoxyCompactList}\small\item\em cmd is specific to a cluster \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga8b924ad81837f99ce23adb416f888cba}\label{group__zcl_ga8b924ad81837f99ce23adb416f888cba}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D1}~0x02
+\item 
+\mbox{\Hypertarget{group__zcl_gadd2b5e079220ed32284b8e188d34d613}\label{group__zcl_gadd2b5e079220ed32284b8e188d34d613}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D2}~0x03
+\item 
+\mbox{\Hypertarget{group__zcl_ga09fb05e268f791031acb037c9b5df555}\label{group__zcl_ga09fb05e268f791031acb037c9b5df555}} 
+\#define \hyperlink{group__zcl_ga09fb05e268f791031acb037c9b5df555}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+G\+E\+N\+E\+R\+AL}~0x00
+\begin{DoxyCompactList}\small\item\em mfg code field not present \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga48ffbdfe840975527d8e9e6d86c12dae}\label{group__zcl_ga48ffbdfe840975527d8e9e6d86c12dae}} 
+\#define \hyperlink{group__zcl_ga48ffbdfe840975527d8e9e6d86c12dae}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+M\+F\+G\+\_\+\+S\+P\+E\+C\+I\+F\+IC}~0x04
+\begin{DoxyCompactList}\small\item\em mfg code field present \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga38975849d925ebb3643cb9f5d62b68fe}\label{group__zcl_ga38975849d925ebb3643cb9f5d62b68fe}} 
+\#define \hyperlink{group__zcl_ga38975849d925ebb3643cb9f5d62b68fe}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}~0x08
+\begin{DoxyCompactList}\small\item\em direction bit \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga245f966df7431d5b9268bbf227770173}\label{group__zcl_ga245f966df7431d5b9268bbf227770173}} 
+\#define \hyperlink{group__zcl_ga245f966df7431d5b9268bbf227770173}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+T\+O\+\_\+\+S\+E\+R\+V\+ER}~0
+\begin{DoxyCompactList}\small\item\em cmd sent from client to server \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gac173779e7c48817dbd79042d7a189524}\label{group__zcl_gac173779e7c48817dbd79042d7a189524}} 
+\#define \hyperlink{group__zcl_gac173779e7c48817dbd79042d7a189524}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+T\+O\+\_\+\+C\+L\+I\+E\+NT}~\hyperlink{group__zcl_ga38975849d925ebb3643cb9f5d62b68fe}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}
+\begin{DoxyCompactList}\small\item\em cmd sent from server to client \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga080b9f73f48767fc6af9b5da27d30d70}\label{group__zcl_ga080b9f73f48767fc6af9b5da27d30d70}} 
+\#define \hyperlink{group__zcl_ga080b9f73f48767fc6af9b5da27d30d70}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+D\+E\+F\+\_\+\+R\+E\+SP}~0x10
+\begin{DoxyCompactList}\small\item\em default response only on error \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga5a5d33260e614faaf630df493d0fea1f}\label{group__zcl_ga5a5d33260e614faaf630df493d0fea1f}} 
+\#define \hyperlink{group__zcl_ga5a5d33260e614faaf630df493d0fea1f}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+B\+I\+TS}~0x\+E0
+\begin{DoxyCompactList}\small\item\em should be set to 0 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Z\+CL Status Enumerations}
+\label{_amgrp0e2bca1e4595fbe46ba15a7bdc1e2591}%
+Note that these defines use the exact names from the Z\+CL standard, with Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+ prepended. \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_ga47e4ec72d1f3f241da408873d2666fdc}\label{group__zcl_ga47e4ec72d1f3f241da408873d2666fdc}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}~0x00
+\item 
+\mbox{\Hypertarget{group__zcl_gaab010fd0ef9bd352f1ef9f97477f1ad1}\label{group__zcl_gaab010fd0ef9bd352f1ef9f97477f1ad1}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE}~0x01
+\item 
+\mbox{\Hypertarget{group__zcl_gaf0bc5736d44e407eda875155084ce22b}\label{group__zcl_gaf0bc5736d44e407eda875155084ce22b}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+ED}~0x7e
+\item 
+\mbox{\Hypertarget{group__zcl_ga53669b6df991a0e56ca67823a5669f34}\label{group__zcl_ga53669b6df991a0e56ca67823a5669f34}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+F\+I\+E\+L\+D\+\_\+\+N\+O\+T\+\_\+\+Z\+E\+RO}~0x7f
+\item 
+\mbox{\Hypertarget{group__zcl_ga597a075f762fba23016d89a6029122c8}\label{group__zcl_ga597a075f762fba23016d89a6029122c8}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+L\+F\+O\+R\+M\+E\+D\+\_\+\+C\+O\+M\+M\+A\+ND}~0x80
+\item 
+\mbox{\Hypertarget{group__zcl_ga65af01126024e9e321d341767f6f96cb}\label{group__zcl_ga65af01126024e9e321d341767f6f96cb}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+S\+U\+P\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+ND}~0x81
+\item 
+\mbox{\Hypertarget{group__zcl_ga794bb528f7379a80b304d88ea3db9627}\label{group__zcl_ga794bb528f7379a80b304d88ea3db9627}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+S\+U\+P\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+C\+O\+M\+M\+A\+ND}~0x82
+\item 
+\mbox{\Hypertarget{group__zcl_gae1c212c2db7f6bc3fde9e5f1720451f2}\label{group__zcl_gae1c212c2db7f6bc3fde9e5f1720451f2}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+S\+U\+P\+\_\+\+M\+A\+N\+U\+F\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+ND}~0x83
+\item 
+\mbox{\Hypertarget{group__zcl_ga8fcbd022ad41842b88587e0e3e8a9e04}\label{group__zcl_ga8fcbd022ad41842b88587e0e3e8a9e04}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+S\+U\+P\+\_\+\+M\+A\+N\+U\+F\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+C\+O\+M\+M\+A\+ND}~0x84
+\item 
+\mbox{\Hypertarget{group__zcl_ga425702cf3f34e360da8c9acff16c40e1}\label{group__zcl_ga425702cf3f34e360da8c9acff16c40e1}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+I\+E\+LD}~0x85
+\item 
+\mbox{\Hypertarget{group__zcl_gaa6537cd123db9c7bd0fc1e6dd266a87c}\label{group__zcl_gaa6537cd123db9c7bd0fc1e6dd266a87c}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}~0x86
+\item 
+\mbox{\Hypertarget{group__zcl_ga3bcdd6dde9bfb34db2f3128bd24c71c0}\label{group__zcl_ga3bcdd6dde9bfb34db2f3128bd24c71c0}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+L\+UE}~0x87
+\item 
+\mbox{\Hypertarget{group__zcl_ga2f7d3dfd56cab3ea207adf13eb749d9b}\label{group__zcl_ga2f7d3dfd56cab3ea207adf13eb749d9b}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+A\+D\+\_\+\+O\+N\+LY}~0x88
+\item 
+\mbox{\Hypertarget{group__zcl_ga705d2bc0eb7e564ea9da16181f99a0db}\label{group__zcl_ga705d2bc0eb7e564ea9da16181f99a0db}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+S\+U\+F\+F\+I\+C\+I\+E\+N\+T\+\_\+\+S\+P\+A\+CE}~0x89
+\item 
+\mbox{\Hypertarget{group__zcl_ga1546fae37fa7e173f23019ea26756bbe}\label{group__zcl_ga1546fae37fa7e173f23019ea26756bbe}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+E\+X\+I\+S\+TS}~0x8a
+\item 
+\mbox{\Hypertarget{group__zcl_gaed9246e31c0878bdf0806ae5f35ffff7}\label{group__zcl_gaed9246e31c0878bdf0806ae5f35ffff7}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}~0x8b
+\item 
+\mbox{\Hypertarget{group__zcl_gacaff54a5d8b766e546eb451cfc803fa4}\label{group__zcl_gacaff54a5d8b766e546eb451cfc803fa4}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+R\+E\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}~0x8c
+\item 
+\mbox{\Hypertarget{group__zcl_ga59b0c5ada36435dc36af717573f91b16}\label{group__zcl_ga59b0c5ada36435dc36af717573f91b16}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+Y\+PE}~0x8d
+\item 
+\mbox{\Hypertarget{group__zcl_ga28907da0ee4264d19ff6c2c354b7c50b}\label{group__zcl_ga28907da0ee4264d19ff6c2c354b7c50b}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+OR}~0x8e
+\item 
+\mbox{\Hypertarget{group__zcl_gac7386b6a4777fb92dbbf86a5b014807d}\label{group__zcl_gac7386b6a4777fb92dbbf86a5b014807d}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+W\+R\+I\+T\+E\+\_\+\+O\+N\+LY}~0x8f
+\item 
+\mbox{\Hypertarget{group__zcl_gaee6e14129b1399a33c1a29dc7b912396}\label{group__zcl_gaee6e14129b1399a33c1a29dc7b912396}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+C\+O\+N\+S\+I\+S\+T\+E\+N\+T\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+\+S\+T\+A\+TE}~0x90
+\item 
+\mbox{\Hypertarget{group__zcl_ga1361f5efe6f70e39fbb7c91174d94076}\label{group__zcl_ga1361f5efe6f70e39fbb7c91174d94076}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+E\+F\+I\+N\+E\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+A\+ND}~0x91
+\item 
+\mbox{\Hypertarget{group__zcl_ga34e6f4bfd5b2539f9644fcbd1449724f}\label{group__zcl_ga34e6f4bfd5b2539f9644fcbd1449724f}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE}~0xc0
+\item 
+\mbox{\Hypertarget{group__zcl_ga0a3806ae2bf91be66123013afd4ccdec}\label{group__zcl_ga0a3806ae2bf91be66123013afd4ccdec}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE}~0xc1
+\item 
+\mbox{\Hypertarget{group__zcl_ga64a57931e9c19abbd33a2edb4acefb8c}\label{group__zcl_ga64a57931e9c19abbd33a2edb4acefb8c}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+E\+R\+R\+OR}~0xc2
+\end{DoxyCompactItemize}
+\subsection*{Z\+CL General Command I\+Ds}
+\label{_amgrp27eea603d65ab29a11d175579fcb3efa}%
+Used for the .command element of the Z\+CL header.
+
+Command I\+Ds 0x11 to 0x7F (Standard Zig\+Bee command) and 0x80 to 0x\+FF are reserved.
+
+\begin{DoxyNote}{Note}
+Only supported commands are currently documented. 
+\end{DoxyNote}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_ga7a3d858b466e4202c6f2148a1b6a3eb2}\label{group__zcl_ga7a3d858b466e4202c6f2148a1b6a3eb2}} 
+\#define \hyperlink{group__zcl_ga7a3d858b466e4202c6f2148a1b6a3eb2}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+IB}~0x00
+\begin{DoxyCompactList}\small\item\em Read Attributes Command, payload is 1 to n 2-\/byte attribute I\+Ds. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl_ga85ca2068c5dc26db307b60b0ac54bc9c}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}~0x01
+\begin{DoxyCompactList}\small\item\em Read Attributes Response Command, payload is 1 to n variable-\/length Read Attribute Status records (zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+status\+\_\+t). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl_ga8843c2bcb861c091ae6f9a4e36f7e4d8}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+IB}~0x02
+\begin{DoxyCompactList}\small\item\em Write Attributes Command, payload is 1 to n variable-\/length Write Attribute Record fields (same as zcl\+\_\+attrib\+\_\+t). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl_ga9d67bef86e1ec74d60c06e1a09cfb86a}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+U\+N\+D\+IV}~0x03
+\begin{DoxyCompactList}\small\item\em Write Attributes Undivided Command, same payload as Write Attributes Command (zcl\+\_\+attrib\+\_\+t), but attributes are only written if all attributes can be written successfully. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga0595c0f6957be4e80265ecd36158c0ae}\label{group__zcl_ga0595c0f6957be4e80265ecd36158c0ae}} 
+\#define \hyperlink{group__zcl_ga0595c0f6957be4e80265ecd36158c0ae}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}~0x04
+\begin{DoxyCompactList}\small\item\em Write Attributes Response Command, payload is a single byte (Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS) if all writes were successful or 1 to n 3-\/byte Write Attribute Status records (zcl\+\_\+rec\+\_\+write\+\_\+attrib\+\_\+status\+\_\+t) for each write that failed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl_ga57091c6a11fbc2680ac63fa262bf74ca}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+N\+O\+R\+E\+SP}~0x05
+\begin{DoxyCompactList}\small\item\em Write Attributes No Response Command, same payload as Write Attributes Command (\hyperlink{group__zcl_ga8843c2bcb861c091ae6f9a4e36f7e4d8}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+IB}), handled as a Write Attributes Command except the response is not sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_gab0589ada40dc08b6772b72c1fa091370}\label{group__zcl_gab0589ada40dc08b6772b72c1fa091370}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+E\+\_\+\+R\+E\+P\+O\+RT}~0x06
+\item 
+\mbox{\Hypertarget{group__zcl_ga9def3ca612f14c134aa89e9ae24adc83}\label{group__zcl_ga9def3ca612f14c134aa89e9ae24adc83}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+E\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+R\+E\+SP}~0x07
+\item 
+\mbox{\Hypertarget{group__zcl_gadb61cd667445ad48fc1a6030fe73febb}\label{group__zcl_gadb61cd667445ad48fc1a6030fe73febb}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+C\+FG}~0x08
+\item 
+\mbox{\Hypertarget{group__zcl_ga73febefe9cdeeef0f741a7f8ab9644b8}\label{group__zcl_ga73febefe9cdeeef0f741a7f8ab9644b8}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+C\+F\+G\+\_\+\+R\+E\+SP}~0x09
+\item 
+\mbox{\Hypertarget{group__zcl_ga23155269324ae4f2a0b8c4978f2cc738}\label{group__zcl_ga23155269324ae4f2a0b8c4978f2cc738}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+IB}~0x0a
+\item 
+\#define \hyperlink{group__zcl_ga92499f538455b8d5a525510fba54adb2}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP}~0x0b
+\begin{DoxyCompactList}\small\item\em Default Response Command, payload is 2 bytes; Command ID and Status Code (zcl\+\_\+default\+\_\+response\+\_\+t). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl_ga2919d6fc8068efac4c9969938a4b9ff5}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB}~0x0c
+\begin{DoxyCompactList}\small\item\em Discover Attributes Command, payload is 3 bytes; start attribute ID and maximum number of attributes to return (zcl\+\_\+discover\+\_\+attrib\+\_\+t). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl_gae15c30229c1d8a8cdee1bd92b2cc6a15}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}~0x0d
+\begin{DoxyCompactList}\small\item\em Discover Attributes Response Command payload is a \char`\"{}discovery complete\char`\"{} byte (done = Z\+C\+L\+\_\+\+B\+O\+O\+L\+\_\+\+T\+R\+UE, more attributes = Z\+C\+L\+\_\+\+B\+O\+O\+L\+\_\+\+T\+R\+UE), followed by 1 to n 3-\/byte Attribute Report fields (zcl\+\_\+rec\+\_\+attrib\+\_\+report\+\_\+t). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga6a1346696520f086e414bf00e535ef51}\label{group__zcl_ga6a1346696520f086e414bf00e535ef51}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+A\+T\+T\+R\+IB}~0x0e
+\item 
+\mbox{\Hypertarget{group__zcl_ga319ebdd453d91eb2fa8ca8334a313e2f}\label{group__zcl_ga319ebdd453d91eb2fa8ca8334a313e2f}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+A\+T\+T\+R\+IB}~0x0f
+\item 
+\mbox{\Hypertarget{group__zcl_ga70640c0c70451c2f2a88dcb020a64298}\label{group__zcl_ga70640c0c70451c2f2a88dcb020a64298}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}~0x10
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+Values for {\ttfamily flags} element of \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t}. \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl_gadfb37ba33684e81ca1bca08f0baa66dc}\label{group__zcl_gadfb37ba33684e81ca1bca08f0baa66dc}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE}~0x00
+\item 
+\mbox{\Hypertarget{group__zcl_ga6103eeb5c0c701821394eab09d4fa9d3}\label{group__zcl_ga6103eeb5c0c701821394eab09d4fa9d3}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+W\+R\+I\+T\+E\+O\+N\+LY}~0x01
+\item 
+\mbox{\Hypertarget{group__zcl_ga68b4663d5c6611aa5df04d77cde570f7}\label{group__zcl_ga68b4663d5c6611aa5df04d77cde570f7}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+A\+D\+O\+N\+LY}~0x02
+\item 
+\mbox{\Hypertarget{group__zcl_gad45fe12534c2dfca4475a5311c123612}\label{group__zcl_gad45fe12534c2dfca4475a5311c123612}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+H\+A\+S\+\_\+\+M\+IN}~0x04
+\item 
+\mbox{\Hypertarget{group__zcl_ga9414f883d371589bd69a8508be794452}\label{group__zcl_ga9414f883d371589bd69a8508be794452}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+H\+A\+S\+\_\+\+M\+AX}~0x08
+\item 
+\mbox{\Hypertarget{group__zcl_gab8576636338997753adc686493184f91}\label{group__zcl_gab8576636338997753adc686493184f91}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+P\+O\+R\+T\+A\+B\+LE}~0x10
+\item 
+\mbox{\Hypertarget{group__zcl_gab546a9b7cfef2d6f57b73b4e12ccf401}\label{group__zcl_gab546a9b7cfef2d6f57b73b4e12ccf401}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+U\+N\+U\+S\+E\+D1}~0x20
+\item 
+\#define \hyperlink{group__zcl_gae40d06ea09e652f6c68fd13e61eb9624}{Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+R\+AW}~0x40
+\begin{DoxyCompactList}\small\item\em Data is stored as sent/received in Z\+CL requests (little-\/endian, 24-\/bit types stored as 3 bytes instead of 4). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl_ga40104652d30fa17b7ea5dde9e8b788b8}\label{group__zcl_ga40104652d30fa17b7ea5dde9e8b788b8}} 
+\#define \hyperlink{group__zcl_ga40104652d30fa17b7ea5dde9e8b788b8}{Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+F\+U\+LL}~0x80
+\begin{DoxyCompactList}\small\item\em If set, this is part of a \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__zcl_ga2bb65a6c04a14957000feaa12de9769c}\label{group__zcl_ga2bb65a6c04a14957000feaa12de9769c}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+A\+S\+S\+I\+GN@{Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+A\+S\+S\+I\+GN}}
+\index{Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+A\+S\+S\+I\+GN@{Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+A\+S\+S\+I\+GN}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+A\+S\+S\+I\+GN}{ZCL\_ATTR\_WRITE\_FLAG\_ASSIGN}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+A\+S\+S\+I\+GN~0x01}
+
+
+
+Assign the new value to the attribute (if not set, just checks the validity of the data). 
+
+
+
+Referenced by \+\_\+zcl\+\_\+identify\+\_\+time\+\_\+set().
+
+\mbox{\Hypertarget{group__zcl_gae40d06ea09e652f6c68fd13e61eb9624}\label{group__zcl_gae40d06ea09e652f6c68fd13e61eb9624}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+R\+AW@{Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+R\+AW}}
+\index{Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+R\+AW@{Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+R\+AW}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+R\+AW}{ZCL\_ATTRIB\_FLAG\_RAW}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+R\+AW~0x40}
+
+
+
+Data is stored as sent/received in Z\+CL requests (little-\/endian, 24-\/bit types stored as 3 bytes instead of 4). 
+
+Not applicable to string types. \mbox{\Hypertarget{group__zcl_ga92499f538455b8d5a525510fba54adb2}\label{group__zcl_ga92499f538455b8d5a525510fba54adb2}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP}{ZCL\_CMD\_DEFAULT\_RESP}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP~0x0b}
+
+
+
+Default Response Command, payload is 2 bytes; Command ID and Status Code (zcl\+\_\+default\+\_\+response\+\_\+t). 
+
+
+
+Referenced by zcl\+\_\+command\+\_\+dump().
+
+\mbox{\Hypertarget{group__zcl_ga2919d6fc8068efac4c9969938a4b9ff5}\label{group__zcl_ga2919d6fc8068efac4c9969938a4b9ff5}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB}{ZCL\_CMD\_DISCOVER\_ATTRIB}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB~0x0c}
+
+
+
+Discover Attributes Command, payload is 3 bytes; start attribute ID and maximum number of attributes to return (zcl\+\_\+discover\+\_\+attrib\+\_\+t). 
+
+\mbox{\Hypertarget{group__zcl_gae15c30229c1d8a8cdee1bd92b2cc6a15}\label{group__zcl_gae15c30229c1d8a8cdee1bd92b2cc6a15}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}{ZCL\_CMD\_DISCOVER\_ATTRIB\_RESP}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP~0x0d}
+
+
+
+Discover Attributes Response Command payload is a \char`\"{}discovery complete\char`\"{} byte (done = Z\+C\+L\+\_\+\+B\+O\+O\+L\+\_\+\+T\+R\+UE, more attributes = Z\+C\+L\+\_\+\+B\+O\+O\+L\+\_\+\+T\+R\+UE), followed by 1 to n 3-\/byte Attribute Report fields (zcl\+\_\+rec\+\_\+attrib\+\_\+report\+\_\+t). 
+
+\mbox{\Hypertarget{group__zcl_gacf3dd5326c4c70dcca078b1eae0c3661}\label{group__zcl_gacf3dd5326c4c70dcca078b1eae0c3661}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+C\+L\+U\+S\+T\+ER@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+C\+L\+U\+S\+T\+ER}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+C\+L\+U\+S\+T\+ER@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+C\+L\+U\+S\+T\+ER}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+C\+L\+U\+S\+T\+ER}{ZCL\_CMD\_IS\_CLUSTER}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+C\+L\+U\+S\+T\+ER(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(\hyperlink{group__zcl_ga75efeedff171558e183dbf8d646ea5dd}{ZCL\_FRAME\_TYPE\_CLUSTER} ==      \(\backslash\)
+   ((\textcolor{keyword}{const} \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{FAR} *)(p) & (\hyperlink{group__zcl_gad2e6a61d29cd303e906699a49fa2eb8e}{ZCL\_FRAME\_TYPE\_MASK} | 
+      \hyperlink{group__zcl_ga48ffbdfe840975527d8e9e6d86c12dae}{ZCL\_FRAME\_MFG\_SPECIFIC})))
+\end{DoxyCode}
+
+
+Identify cluster commands that are not manufacturer-\/specific, using the frame control field of a Z\+CL command. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & pointer to first byte of payload\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Z\+CL command is manufacturer and cluster-\/specific \\
+\hline
+{\em F\+A\+L\+SE} & Z\+CL command doesn\textquotesingle{}t have the manufacturer-\/specific bit set, or is a profile-\/wide command \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__zcl_gaaef303ea4f7fa9a8beeace9ce3a1f9fd}\label{group__zcl_gaaef303ea4f7fa9a8beeace9ce3a1f9fd}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+M\+F\+G\+\_\+\+C\+L\+U\+S\+T\+ER@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+M\+F\+G\+\_\+\+C\+L\+U\+S\+T\+ER}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+M\+F\+G\+\_\+\+C\+L\+U\+S\+T\+ER@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+M\+F\+G\+\_\+\+C\+L\+U\+S\+T\+ER}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+M\+F\+G\+\_\+\+C\+L\+U\+S\+T\+ER}{ZCL\_CMD\_IS\_MFG\_CLUSTER}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+M\+F\+G\+\_\+\+C\+L\+U\+S\+T\+ER(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((\hyperlink{group__zcl_ga75efeedff171558e183dbf8d646ea5dd}{ZCL\_FRAME\_TYPE\_CLUSTER} | \hyperlink{group__zcl_ga48ffbdfe840975527d8e9e6d86c12dae}{ZCL\_FRAME\_MFG\_SPECIFIC}) ==     \(\backslash\)
+   ((\textcolor{keyword}{const} \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{FAR} *)(p) & (\hyperlink{group__zcl_gad2e6a61d29cd303e906699a49fa2eb8e}{ZCL\_FRAME\_TYPE\_MASK} | 
+      \hyperlink{group__zcl_ga48ffbdfe840975527d8e9e6d86c12dae}{ZCL\_FRAME\_MFG\_SPECIFIC})))
+\end{DoxyCode}
+
+
+Identify manufacturer-\/specific cluster commands using the frame control field of a Z\+CL command. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & pointer to first byte of payload\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Z\+CL command is manufacturer and cluster-\/specific \\
+\hline
+{\em F\+A\+L\+SE} & Z\+CL command doesn\textquotesingle{}t have the manufacturer-\/specific bit set, or is a profile-\/wide command \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__zcl_gaafcfd290eea997dae1be3d22aa106264}\label{group__zcl_gaafcfd290eea997dae1be3d22aa106264}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE}{ZCL\_CMD\_IS\_PROFILE}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+I\+S\+\_\+\+P\+R\+O\+F\+I\+LE(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~(\hyperlink{group__zcl_ga332a452ea08eb67a3ebf962320bf8819}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+O\+F\+I\+LE} == ((const \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$)(p) \& \hyperlink{group__zcl_gad2e6a61d29cd303e906699a49fa2eb8e}{Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK}))}
+
+
+
+Identify profile commands (as opposed to cluster commands) using the frame control field of a Z\+CL command. 
+
+Ignores the manufacturer-\/specific bit (which specifies use of manufacturer-\/specific attributes).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & pointer to first byte of payload\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Z\+CL command is not cluster-\/specific (profile command) \\
+\hline
+{\em F\+A\+L\+SE} & Z\+CL command is cluster-\/specific \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__zcl_ga0bbd651dae138e104715e6e2de62084e}\label{group__zcl_ga0bbd651dae138e104715e6e2de62084e}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+M\+A\+T\+CH@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+M\+A\+T\+CH}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+M\+A\+T\+CH@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+M\+A\+T\+CH}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+M\+A\+T\+CH}{ZCL\_CMD\_MATCH}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+M\+A\+T\+CH(\begin{DoxyParamCaption}\item[{}]{p,  }\item[{}]{\hyperlink{group__zcl_gacef7f7e36d411b8000d1ac172c5e8782}{mfg},  }\item[{}]{dir,  }\item[{}]{\hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+((*(\textcolor{keyword}{const} \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{FAR} *)(p) &                              \(\backslash\)
+   (\hyperlink{group__zcl_ga48ffbdfe840975527d8e9e6d86c12dae}{ZCL\_FRAME\_MFG\_SPECIFIC} | \hyperlink{group__zcl_ga38975849d925ebb3643cb9f5d62b68fe}{ZCL\_FRAME\_DIRECTION} | 
+      \hyperlink{group__zcl_gad2e6a61d29cd303e906699a49fa2eb8e}{ZCL\_FRAME\_TYPE\_MASK})) ==  \(\backslash\)
+   (ZCL\_FRAME\_ ## \hyperlink{group__zcl_gacef7f7e36d411b8000d1ac172c5e8782}{mfg} | ZCL\_FRAME\_ ## dir | ZCL\_FRAME\_TYPE\_ ## \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}))
+\end{DoxyCode}
+
+
+Macro for checking the frame control field of a Z\+CL command. 
+
+Used to filter out commands that are (or are not) handled by the current function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & pointer to first byte of payload (typically {\ttfamily envelope-\/$>$payload} when called from a standard Z\+CL command handler, or the address of {\ttfamily frame\+\_\+control} from a \hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} built with zcl\+\_\+command\+\_\+build) \\
+\hline
+\mbox{\tt in}  & {\em mfg} & either M\+F\+G\+\_\+\+S\+P\+E\+C\+I\+F\+IC or G\+E\+N\+E\+R\+AL \\
+\hline
+\mbox{\tt in}  & {\em dir} & either C\+L\+I\+E\+N\+T\+\_\+\+T\+O\+\_\+\+S\+E\+R\+V\+ER or S\+E\+R\+V\+E\+R\+\_\+\+T\+O\+\_\+\+C\+L\+I\+E\+NT \\
+\hline
+\mbox{\tt in}  & {\em type} & either P\+R\+O\+F\+I\+LE (e.\+g., general commands) or C\+L\+U\+S\+T\+ER (cluster-\/specific command)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em T\+R\+UE} & Z\+CL command matches all three filters \\
+\hline
+{\em F\+A\+L\+SE} & Z\+CL command does not match \\
+\hline
+\end{DoxyRetVals}
+
+
+Referenced by \+\_\+zcl\+\_\+basic\+\_\+server(), \+\_\+zcl\+\_\+onoff\+\_\+handler(), zcl\+\_\+identify\+\_\+command(), and zcl\+\_\+time\+\_\+client().
+
+\mbox{\Hypertarget{group__zcl_ga85ca2068c5dc26db307b60b0ac54bc9c}\label{group__zcl_ga85ca2068c5dc26db307b60b0ac54bc9c}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}{ZCL\_CMD\_READ\_ATTRIB\_RESP}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP~0x01}
+
+
+
+Read Attributes Response Command, payload is 1 to n variable-\/length Read Attribute Status records (zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+status\+\_\+t). 
+
+
+
+Referenced by zcl\+\_\+time\+\_\+client().
+
+\mbox{\Hypertarget{group__zcl_ga8843c2bcb861c091ae6f9a4e36f7e4d8}\label{group__zcl_ga8843c2bcb861c091ae6f9a4e36f7e4d8}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+IB@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+IB}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+IB@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+IB}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+IB}{ZCL\_CMD\_WRITE\_ATTRIB}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+IB~0x02}
+
+
+
+Write Attributes Command, payload is 1 to n variable-\/length Write Attribute Record fields (same as zcl\+\_\+attrib\+\_\+t). 
+
+\mbox{\Hypertarget{group__zcl_ga57091c6a11fbc2680ac63fa262bf74ca}\label{group__zcl_ga57091c6a11fbc2680ac63fa262bf74ca}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+N\+O\+R\+E\+SP@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+N\+O\+R\+E\+SP}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+N\+O\+R\+E\+SP@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+N\+O\+R\+E\+SP}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+N\+O\+R\+E\+SP}{ZCL\_CMD\_WRITE\_ATTRIB\_NORESP}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+N\+O\+R\+E\+SP~0x05}
+
+
+
+Write Attributes No Response Command, same payload as Write Attributes Command (\hyperlink{group__zcl_ga8843c2bcb861c091ae6f9a4e36f7e4d8}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+IB}), handled as a Write Attributes Command except the response is not sent. 
+
+\mbox{\Hypertarget{group__zcl_ga9d67bef86e1ec74d60c06e1a09cfb86a}\label{group__zcl_ga9d67bef86e1ec74d60c06e1a09cfb86a}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+U\+N\+D\+IV@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+U\+N\+D\+IV}}
+\index{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+U\+N\+D\+IV@{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+U\+N\+D\+IV}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+U\+N\+D\+IV}{ZCL\_CMD\_WRITE\_ATTRIB\_UNDIV}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+U\+N\+D\+IV~0x03}
+
+
+
+Write Attributes Undivided Command, same payload as Write Attributes Command (zcl\+\_\+attrib\+\_\+t), but attributes are only written if all attributes can be written successfully. 
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__zcl_ga2373217b6694c1cb1a99113c24519a73}\label{group__zcl_ga2373217b6694c1cb1a99113c24519a73}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+attrib\+\_\+t@{zcl\+\_\+attrib\+\_\+t}}
+\index{zcl\+\_\+attrib\+\_\+t@{zcl\+\_\+attrib\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+attrib\+\_\+t}{zcl\_attrib\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_ga2373217b6694c1cb1a99113c24519a73}{zcl\+\_\+attrib\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}  id\_le
+\end{DoxyCode}
+
+
+General format for an attribute, used for Write Attributes and Report Attributes commands. 
+
+\mbox{\Hypertarget{group__zcl_gace94cfc3f22379fa08a5b8de8c6977f6}\label{group__zcl_gace94cfc3f22379fa08a5b8de8c6977f6}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+attribute\+\_\+update\+\_\+fn@{zcl\+\_\+attribute\+\_\+update\+\_\+fn}}
+\index{zcl\+\_\+attribute\+\_\+update\+\_\+fn@{zcl\+\_\+attribute\+\_\+update\+\_\+fn}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+attribute\+\_\+update\+\_\+fn}{zcl\_attribute\_update\_fn}}
+{\footnotesize\ttfamily typedef uint\+\_\+fast8\+\_\+t($\ast$ zcl\+\_\+attribute\+\_\+update\+\_\+fn) (const struct \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$entry)}
+
+
+
+Function pointer assigned to a Z\+CL attribute record, called to update the value of the given attribute. 
+
+Necessary for attributes that are tied to physical hardware (only updated when requested) or attributes that change over time (as with the Z\+CL Identify cluster).
+
+If the return value is not Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS, the Z\+CL Read Attributes handler will return that as an error in the response frame.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em entry} & attribute to update\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS} & successfully updated value \\
+\hline
+{\em Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE} & unable to update value due to hardware problem \\
+\hline
+{\em Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE} & unable to update value due to software problem\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zcl_ga70fa1740c517a1e49c700cba7cf6b339}{zcl\+\_\+attribute\+\_\+write\+\_\+fn()}, \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__zcl_ga70fa1740c517a1e49c700cba7cf6b339}\label{group__zcl_ga70fa1740c517a1e49c700cba7cf6b339}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+attribute\+\_\+write\+\_\+fn@{zcl\+\_\+attribute\+\_\+write\+\_\+fn}}
+\index{zcl\+\_\+attribute\+\_\+write\+\_\+fn@{zcl\+\_\+attribute\+\_\+write\+\_\+fn}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+attribute\+\_\+write\+\_\+fn}{zcl\_attribute\_write\_fn}}
+{\footnotesize\ttfamily typedef int($\ast$ zcl\+\_\+attribute\+\_\+write\+\_\+fn) (const struct \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$entry, \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$rec)}
+
+
+
+Function pointer assigned to a Z\+CL attribute record, called instead of \hyperlink{group__zcl_ga15bf36dadccd7a045bad7d6f0842e25a}{zcl\+\_\+decode\+\_\+attribute()} to process a Write Request for the attribute. 
+
+This function typically calls \hyperlink{group__zcl_ga15bf36dadccd7a045bad7d6f0842e25a}{zcl\+\_\+decode\+\_\+attribute()} to convert the request to a temporary variable and then perform additional checks on it before assigning to the actual variable.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em entry} & attribute to update \\
+\hline
+\mbox{\tt in,out}  & {\em rec} & record from Write Request with new value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes consumed from Write Request
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zcl_gace94cfc3f22379fa08a5b8de8c6977f6}{zcl\+\_\+attribute\+\_\+update\+\_\+fn()}, \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__zcl_ga71b28f3a9303e556e06d1a4d18c7a834}\label{group__zcl_ga71b28f3a9303e556e06d1a4d18c7a834}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+default\+\_\+response\+\_\+t@{zcl\+\_\+default\+\_\+response\+\_\+t}}
+\index{zcl\+\_\+default\+\_\+response\+\_\+t@{zcl\+\_\+default\+\_\+response\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+default\+\_\+response\+\_\+t}{zcl\_default\_response\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_ga71b28f3a9303e556e06d1a4d18c7a834}{zcl\+\_\+default\+\_\+response\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} \hyperlink{group__xbee__atcmd_ga1a5aaa930940857f68f245eeb89506b5}{command}
+\end{DoxyCode}
+
+
+Used for \hyperlink{group__zcl_ga92499f538455b8d5a525510fba54adb2}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP}. 
+
+\mbox{\Hypertarget{group__zcl_ga6e35b82b4bc8167f8d45d7d514e3cfda}\label{group__zcl_ga6e35b82b4bc8167f8d45d7d514e3cfda}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+discover\+\_\+attrib\+\_\+resp\+\_\+t@{zcl\+\_\+discover\+\_\+attrib\+\_\+resp\+\_\+t}}
+\index{zcl\+\_\+discover\+\_\+attrib\+\_\+resp\+\_\+t@{zcl\+\_\+discover\+\_\+attrib\+\_\+resp\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+discover\+\_\+attrib\+\_\+resp\+\_\+t}{zcl\_discover\_attrib\_resp\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_ga6e35b82b4bc8167f8d45d7d514e3cfda}{zcl\+\_\+discover\+\_\+attrib\+\_\+resp\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}                   discovery\_complete
+\end{DoxyCode}
+
+
+Used for \hyperlink{group__zcl_gae15c30229c1d8a8cdee1bd92b2cc6a15}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}. 
+
+\mbox{\Hypertarget{group__zcl_gab0970af8e1b078745a55523dd60bdff6}\label{group__zcl_gab0970af8e1b078745a55523dd60bdff6}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+discover\+\_\+attrib\+\_\+t@{zcl\+\_\+discover\+\_\+attrib\+\_\+t}}
+\index{zcl\+\_\+discover\+\_\+attrib\+\_\+t@{zcl\+\_\+discover\+\_\+attrib\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+discover\+\_\+attrib\+\_\+t}{zcl\_discover\_attrib\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_gab0970af8e1b078745a55523dd60bdff6}{zcl\+\_\+discover\+\_\+attrib\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}  start\_attrib\_id\_le
+\end{DoxyCode}
+
+
+Used for \hyperlink{group__zcl_ga2919d6fc8068efac4c9969938a4b9ff5}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB}. 
+
+\mbox{\Hypertarget{group__zcl_gaece1b64b04ac629f83358d6d815451a5}\label{group__zcl_gaece1b64b04ac629f83358d6d815451a5}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+header\+\_\+common\+\_\+t@{zcl\+\_\+header\+\_\+common\+\_\+t}}
+\index{zcl\+\_\+header\+\_\+common\+\_\+t@{zcl\+\_\+header\+\_\+common\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+header\+\_\+common\+\_\+t}{zcl\_header\_common\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_gaece1b64b04ac629f83358d6d815451a5}{zcl\+\_\+header\+\_\+common\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} sequence
+\end{DoxyCode}
+
+
+Common portion of Z\+CL header (appears after optional Manufacturer Code) 
+
+\mbox{\Hypertarget{group__zcl_gae988eb59c8a2e75b6cb34aefeca315d1}\label{group__zcl_gae988eb59c8a2e75b6cb34aefeca315d1}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+header\+\_\+nomfg\+\_\+t@{zcl\+\_\+header\+\_\+nomfg\+\_\+t}}
+\index{zcl\+\_\+header\+\_\+nomfg\+\_\+t@{zcl\+\_\+header\+\_\+nomfg\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+header\+\_\+nomfg\+\_\+t}{zcl\_header\_nomfg\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_gae988eb59c8a2e75b6cb34aefeca315d1}{zcl\+\_\+header\+\_\+nomfg\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} frame\_control
+\end{DoxyCode}
+
+
+Z\+LC header structure used when building a normal (non-\/manufacturer-\/specific response frame. 
+
+\mbox{\Hypertarget{group__zcl_gaeac1f6671916dd0ad92b271080ec272a}\label{group__zcl_gaeac1f6671916dd0ad92b271080ec272a}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+header\+\_\+response\+\_\+t@{zcl\+\_\+header\+\_\+response\+\_\+t}}
+\index{zcl\+\_\+header\+\_\+response\+\_\+t@{zcl\+\_\+header\+\_\+response\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+header\+\_\+response\+\_\+t}{zcl\_header\_response\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_gaeac1f6671916dd0ad92b271080ec272a}{zcl\+\_\+header\+\_\+response\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \textcolor{keyword}{union }\{
+      \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{PACKED\_STRUCT} \{
+         \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    frame\_control;
+         \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}     mfg\_code\_le;
+      \} \hyperlink{group__zcl_gacef7f7e36d411b8000d1ac172c5e8782}{mfg};
+      \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{PACKED\_STRUCT} \{
+         \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}     dummy;
+         \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    frame\_control;
+      \} \hyperlink{group__zcl_ga36fda9bc88c532ecc94200bcd756b1d3}{std};
+   \} u
+\end{DoxyCode}
+
+
+Z\+CL header structure used for building response frames that may or may not be manufacturer-\/specific. 
+
+Frame is sent starting with element .u.\+mfg.\+frame\+\_\+control or .u.\+std.\+frame\+\_\+control. \mbox{\Hypertarget{group__zcl_gafc361d46dded7f1761048d78e3d4e18d}\label{group__zcl_gafc361d46dded7f1761048d78e3d4e18d}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+header\+\_\+t@{zcl\+\_\+header\+\_\+t}}
+\index{zcl\+\_\+header\+\_\+t@{zcl\+\_\+header\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+header\+\_\+t}{zcl\_header\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_gafc361d46dded7f1761048d78e3d4e18d}{zcl\+\_\+header\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} frame\_control
+\end{DoxyCode}
+
+
+General header for casting onto an incoming frame. 
+
+Reference .type.\+mfg if (.frame\+\_\+control \& Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+M\+F\+G\+\_\+\+S\+P\+E\+C\+I\+F\+IC != 0). Reference .type.\+std otherwise. \mbox{\Hypertarget{group__zcl_gac376225f8ee77006b884a222a9ac25cc}\label{group__zcl_gac376225f8ee77006b884a222a9ac25cc}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+header\+\_\+withmfg\+\_\+t@{zcl\+\_\+header\+\_\+withmfg\+\_\+t}}
+\index{zcl\+\_\+header\+\_\+withmfg\+\_\+t@{zcl\+\_\+header\+\_\+withmfg\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+header\+\_\+withmfg\+\_\+t}{zcl\_header\_withmfg\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_gac376225f8ee77006b884a222a9ac25cc}{zcl\+\_\+header\+\_\+withmfg\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} frame\_control
+\end{DoxyCode}
+
+
+Z\+LC header structure used when building a manufacturer-\/specific response frame. 
+
+\mbox{\Hypertarget{group__zcl_ga57caed081252123eef830fd81e8860c8}\label{group__zcl_ga57caed081252123eef830fd81e8860c8}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+read\+\_\+struct\+\_\+attrib\+\_\+t@{zcl\+\_\+read\+\_\+struct\+\_\+attrib\+\_\+t}}
+\index{zcl\+\_\+read\+\_\+struct\+\_\+attrib\+\_\+t@{zcl\+\_\+read\+\_\+struct\+\_\+attrib\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+read\+\_\+struct\+\_\+attrib\+\_\+t}{zcl\_read\_struct\_attrib\_t}}
+{\footnotesize\ttfamily zcl\+\_\+read\+\_\+struct\+\_\+attrib\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}        attrib\_id\_le
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga4c81303b52f05c2819ac615fa92e0e5f}\label{group__zcl_ga4c81303b52f05c2819ac615fa92e0e5f}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+attrib\+\_\+report\+\_\+t@{zcl\+\_\+rec\+\_\+attrib\+\_\+report\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+attrib\+\_\+report\+\_\+t@{zcl\+\_\+rec\+\_\+attrib\+\_\+report\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+attrib\+\_\+report\+\_\+t}{zcl\_rec\_attrib\_report\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_ga4c81303b52f05c2819ac615fa92e0e5f}{zcl\+\_\+rec\+\_\+attrib\+\_\+report\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}  id\_le
+\end{DoxyCode}
+
+
+Used for \hyperlink{group__zcl_gae15c30229c1d8a8cdee1bd92b2cc6a15}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}. 
+
+\mbox{\Hypertarget{group__zcl_gac03de3174e96a8415458929557dd325d}\label{group__zcl_gac03de3174e96a8415458929557dd325d}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+array\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+array\+\_\+resp\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+array\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+array\+\_\+resp\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+array\+\_\+resp\+\_\+t}{zcl\_rec\_read\_attrib\_array\_resp\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+array\+\_\+resp\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}  id\_le
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga1a0b0c8e09b164da7619445260dbe63b}\label{group__zcl_ga1a0b0c8e09b164da7619445260dbe63b}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+error\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+error\+\_\+resp\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+error\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+error\+\_\+resp\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+error\+\_\+resp\+\_\+t}{zcl\_rec\_read\_attrib\_error\_resp\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+error\+\_\+resp\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}  id\_le
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga4d098e33e67cdba2f8a968ff66471cfb}\label{group__zcl_ga4d098e33e67cdba2f8a968ff66471cfb}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+resp\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+resp\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+resp\+\_\+t}{zcl\_rec\_read\_attrib\_resp\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_ga4d098e33e67cdba2f8a968ff66471cfb}{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+resp\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}  id\_le
+\end{DoxyCode}
+
+
+Used for \hyperlink{group__zcl_ga85ca2068c5dc26db307b60b0ac54bc9c}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}. 
+
+\mbox{\Hypertarget{group__zcl_ga0b54e13fb752b8fc25657293533bb4d9}\label{group__zcl_ga0b54e13fb752b8fc25657293533bb4d9}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+struct\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+struct\+\_\+resp\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+struct\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+struct\+\_\+resp\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+struct\+\_\+resp\+\_\+t}{zcl\_rec\_read\_attrib\_struct\_resp\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+read\+\_\+attrib\+\_\+struct\+\_\+resp\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}  id\_le
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_gabf517fb6d14a7633b5ab3716e4fbd729}\label{group__zcl_gabf517fb6d14a7633b5ab3716e4fbd729}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+read\+\_\+report\+\_\+cfg\+\_\+t@{zcl\+\_\+rec\+\_\+read\+\_\+report\+\_\+cfg\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+read\+\_\+report\+\_\+cfg\+\_\+t@{zcl\+\_\+rec\+\_\+read\+\_\+report\+\_\+cfg\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+read\+\_\+report\+\_\+cfg\+\_\+t}{zcl\_rec\_read\_report\_cfg\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+read\+\_\+report\+\_\+cfg\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} direction
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_gaf30ea9825e58580f4e7be1c88e19ef07}\label{group__zcl_gaf30ea9825e58580f4e7be1c88e19ef07}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+report\+\_\+error\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+report\+\_\+error\+\_\+resp\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+report\+\_\+error\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+report\+\_\+error\+\_\+resp\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+report\+\_\+error\+\_\+resp\+\_\+t}{zcl\_rec\_report\_error\_resp\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+report\+\_\+error\+\_\+resp\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_gaecc2bf2f3ea76a7b88e6af0b54d77094}\label{group__zcl_gaecc2bf2f3ea76a7b88e6af0b54d77094}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+resp\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+resp\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+resp\+\_\+t}{zcl\_rec\_report\_receive\_resp\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+resp\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}                   \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_gab616238e95ce74a2a494fbc2dbc9a4d0}\label{group__zcl_gab616238e95ce74a2a494fbc2dbc9a4d0}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+t@{zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+t@{zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+t}{zcl\_rec\_report\_receive\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+report\+\_\+receive\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} direction
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga82408517e6763d9fac1b65e75d243e76}\label{group__zcl_ga82408517e6763d9fac1b65e75d243e76}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+resp\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+resp\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+resp\+\_\+t}{zcl\_rec\_report\_send\_resp\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+resp\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}                   \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga42e7fdd1061c92f7bb3df7bc32f70214}\label{group__zcl_ga42e7fdd1061c92f7bb3df7bc32f70214}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+t@{zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+t@{zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+t}{zcl\_rec\_report\_send\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+report\+\_\+send\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} direction
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_gad862e66d577981b536aae73ab139a62a}\label{group__zcl_gad862e66d577981b536aae73ab139a62a}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+reporting\+\_\+status\+\_\+t@{zcl\+\_\+rec\+\_\+reporting\+\_\+status\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+reporting\+\_\+status\+\_\+t@{zcl\+\_\+rec\+\_\+reporting\+\_\+status\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+reporting\+\_\+status\+\_\+t}{zcl\_rec\_reporting\_status\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+reporting\+\_\+status\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga22e48ce5d4bb199b52f155f53e396f87}\label{group__zcl_ga22e48ce5d4bb199b52f155f53e396f87}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+write\+\_\+attrib\+\_\+status\+\_\+t@{zcl\+\_\+rec\+\_\+write\+\_\+attrib\+\_\+status\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+write\+\_\+attrib\+\_\+status\+\_\+t@{zcl\+\_\+rec\+\_\+write\+\_\+attrib\+\_\+status\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+write\+\_\+attrib\+\_\+status\+\_\+t}{zcl\_rec\_write\_attrib\_status\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_ga22e48ce5d4bb199b52f155f53e396f87}{zcl\+\_\+rec\+\_\+write\+\_\+attrib\+\_\+status\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+
+
+Used for \hyperlink{group__zcl_ga0595c0f6957be4e80265ecd36158c0ae}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP}. 
+
+\mbox{\Hypertarget{group__zcl_ga6115997e4149a38764e0ecdd8e2828d1}\label{group__zcl_ga6115997e4149a38764e0ecdd8e2828d1}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+resp\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+resp\+\_\+t@{zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+resp\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+resp\+\_\+t}{zcl\_rec\_write\_struct\_attrib\_resp\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+resp\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}       \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga0bcadc9c7f337bea7b7eaf1ec6dd0a28}\label{group__zcl_ga0bcadc9c7f337bea7b7eaf1ec6dd0a28}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+t@{zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+t}}
+\index{zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+t@{zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+t}{zcl\_rec\_write\_struct\_attrib\_t}}
+{\footnotesize\ttfamily zcl\+\_\+rec\+\_\+write\+\_\+struct\+\_\+attrib\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}        id\_le
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga38527c36b75dbd4dadd7aec7eb9b8c6d}\label{group__zcl_ga38527c36b75dbd4dadd7aec7eb9b8c6d}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+selector\+\_\+t@{zcl\+\_\+selector\+\_\+t}}
+\index{zcl\+\_\+selector\+\_\+t@{zcl\+\_\+selector\+\_\+t}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+selector\+\_\+t}{zcl\_selector\_t}}
+{\footnotesize\ttfamily zcl\+\_\+selector\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} indicator
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__zcl_ga385c41594437cdf661bfb518f11ee0fc}\label{group__zcl_ga385c41594437cdf661bfb518f11ee0fc}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!\+\_\+zcl\+\_\+discover\+\_\+attributes@{\+\_\+zcl\+\_\+discover\+\_\+attributes}}
+\index{\+\_\+zcl\+\_\+discover\+\_\+attributes@{\+\_\+zcl\+\_\+discover\+\_\+attributes}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{\+\_\+zcl\+\_\+discover\+\_\+attributes()}{\_zcl\_discover\_attributes()}}
+{\footnotesize\ttfamily zigbee\+\_\+zcl\+\_\+debug int \+\_\+zcl\+\_\+discover\+\_\+attributes (\begin{DoxyParamCaption}\item[{\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Process the Discover Attributes Command (\hyperlink{group__zcl_ga2919d6fc8068efac4c9969938a4b9ff5}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+\_\+\+A\+T\+T\+R\+IB}). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cmd} & command to respond to\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully sent response \\
+\hline
+{\em !0} & error on send \\
+\hline
+\end{DoxyRetVals}
+
+
+References F\+AR, and P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT.
+
+\mbox{\Hypertarget{group__zcl_gaae79107724236347a5e22612869df2bf}\label{group__zcl_gaae79107724236347a5e22612869df2bf}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!\+\_\+zcl\+\_\+encode\+\_\+array\+\_\+value@{\+\_\+zcl\+\_\+encode\+\_\+array\+\_\+value}}
+\index{\+\_\+zcl\+\_\+encode\+\_\+array\+\_\+value@{\+\_\+zcl\+\_\+encode\+\_\+array\+\_\+value}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{\+\_\+zcl\+\_\+encode\+\_\+array\+\_\+value()}{\_zcl\_encode\_array\_value()}}
+{\footnotesize\ttfamily zigbee\+\_\+zcl\+\_\+debug int \+\_\+zcl\+\_\+encode\+\_\+array\+\_\+value (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{bufsize,  }\item[{const \hyperlink{structzcl__array__t}{zcl\+\_\+array\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{array }\end{DoxyParamCaption})}
+
+
+
+Format a Z\+CL array for a Read Attributes Response or a Write Attributes Request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buffer} & buffer to store encoded attribute \\
+\hline
+\mbox{\tt in}  & {\em bufsize} & number of bytes available in {\ttfamily buffer} \\
+\hline
+\mbox{\tt in}  & {\em array} & array to encode into {\ttfamily buffer} \\
+\hline
+\end{DoxyParams}
+Copies the value of attribute {\ttfamily entry} to {\ttfamily buffer} in little-\/endian byte order. Will not write more than {\ttfamily bufsize} bytes. Used to build Z\+CL frames.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+S\+U\+F\+F\+I\+C\+I\+E\+N\+T\+\_\+\+S\+P\+A\+CE} & buffer too small to encode value \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE} & unknown/unsupported attribute type \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE} & failure updating attribute value \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE} & failure updating attribute value \\
+\hline
+{\em $>$=0} & number of bytes written\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zcl_gae3f7f58d3b08caf95aa11f90e3995397}{zcl\+\_\+encode\+\_\+attribute\+\_\+value} 
+\end{DoxySeeAlso}
+
+
+References F\+AR.
+
+\mbox{\Hypertarget{group__zcl_ga4387e5f016fb26d1ac43b24f78aa066a}\label{group__zcl_ga4387e5f016fb26d1ac43b24f78aa066a}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!\+\_\+zcl\+\_\+encode\+\_\+struct\+\_\+value@{\+\_\+zcl\+\_\+encode\+\_\+struct\+\_\+value}}
+\index{\+\_\+zcl\+\_\+encode\+\_\+struct\+\_\+value@{\+\_\+zcl\+\_\+encode\+\_\+struct\+\_\+value}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{\+\_\+zcl\+\_\+encode\+\_\+struct\+\_\+value()}{\_zcl\_encode\_struct\_value()}}
+{\footnotesize\ttfamily zigbee\+\_\+zcl\+\_\+debug int \+\_\+zcl\+\_\+encode\+\_\+struct\+\_\+value (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{bufsize,  }\item[{const \hyperlink{structzcl__struct__t}{zcl\+\_\+struct\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{zcl\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Format a Z\+CL struct for a Read Attributes Response or a Write Attributes Request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buffer} & buffer to store encoded attribute \\
+\hline
+\mbox{\tt in}  & {\em bufsize} & number of bytes available in {\ttfamily buffer} \\
+\hline
+\mbox{\tt in}  & {\em zcl\+\_\+struct} & struct to encode into {\ttfamily buffer} \\
+\hline
+\end{DoxyParams}
+Copies the value of attribute {\ttfamily entry} to {\ttfamily buffer} in little-\/endian byte order. Will not write more than {\ttfamily bufsize} bytes. Used to build Z\+CL frames.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+S\+U\+F\+F\+I\+C\+I\+E\+N\+T\+\_\+\+S\+P\+A\+CE} & buffer too small to encode value \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE} & unknown/unsupported attribute type \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE} & failure updating attribute value \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE} & failure updating attribute value \\
+\hline
+{\em $>$=0} & number of bytes written\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zcl_gae3f7f58d3b08caf95aa11f90e3995397}{zcl\+\_\+encode\+\_\+attribute\+\_\+value} 
+\end{DoxySeeAlso}
+
+
+References F\+AR.
+
+\mbox{\Hypertarget{group__zcl_gaa34c917bf05a57503e63553efcb77dc9}\label{group__zcl_gaa34c917bf05a57503e63553efcb77dc9}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!\+\_\+zcl\+\_\+read\+\_\+attributes@{\+\_\+zcl\+\_\+read\+\_\+attributes}}
+\index{\+\_\+zcl\+\_\+read\+\_\+attributes@{\+\_\+zcl\+\_\+read\+\_\+attributes}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{\+\_\+zcl\+\_\+read\+\_\+attributes()}{\_zcl\_read\_attributes()}}
+{\footnotesize\ttfamily zigbee\+\_\+zcl\+\_\+debug int \+\_\+zcl\+\_\+read\+\_\+attributes (\begin{DoxyParamCaption}\item[{\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Process the Read Attributes Command (\hyperlink{group__zcl_ga7a3d858b466e4202c6f2148a1b6a3eb2}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+IB}). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cmd} & command to respond to\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully sent response \\
+\hline
+{\em !0} & error on send \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & N\+U\+LL {\ttfamily cmd} parameter \\
+\hline
+\end{DoxyRetVals}
+
+
+References F\+AR.
+
+\mbox{\Hypertarget{group__zcl_gaff3abb5d2022101c2873e7a8e8b027e5}\label{group__zcl_gaff3abb5d2022101c2873e7a8e8b027e5}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!\+\_\+zcl\+\_\+write\+\_\+attributes@{\+\_\+zcl\+\_\+write\+\_\+attributes}}
+\index{\+\_\+zcl\+\_\+write\+\_\+attributes@{\+\_\+zcl\+\_\+write\+\_\+attributes}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{\+\_\+zcl\+\_\+write\+\_\+attributes()}{\_zcl\_write\_attributes()}}
+{\footnotesize\ttfamily zigbee\+\_\+zcl\+\_\+debug int \+\_\+zcl\+\_\+write\+\_\+attributes (\begin{DoxyParamCaption}\item[{\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Process the three types of Write Attributes requests. 
+
+Handles Write Attributes (\hyperlink{group__zcl_ga8843c2bcb861c091ae6f9a4e36f7e4d8}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+IB}), Write Attributes Undivided (\hyperlink{group__zcl_ga9d67bef86e1ec74d60c06e1a09cfb86a}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+U\+N\+D\+IV}) and Write Attributes No Response (\hyperlink{group__zcl_ga57091c6a11fbc2680ac63fa262bf74ca}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+N\+O\+R\+E\+SP}).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cmd} & command to respond to\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully sent response or \char`\"{}\+No Response\char`\"{} requested \\
+\hline
+{\em !0} & error on send\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000021}{Todo}]Generate error if command is not one of the three expected commands.\end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000022}{Todo}]Update to limit number of status records in response. \end{DoxyRefDesc}
+
+
+References length, P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT, and status.
+
+\mbox{\Hypertarget{group__zcl_ga66d9c3c646422e71fed6c94d67c14fdd}\label{group__zcl_ga66d9c3c646422e71fed6c94d67c14fdd}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+attribute\+\_\+get\+\_\+next@{zcl\+\_\+attribute\+\_\+get\+\_\+next}}
+\index{zcl\+\_\+attribute\+\_\+get\+\_\+next@{zcl\+\_\+attribute\+\_\+get\+\_\+next}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+attribute\+\_\+get\+\_\+next()}{zcl\_attribute\_get\_next()}}
+{\footnotesize\ttfamily const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ zcl\+\_\+attribute\+\_\+get\+\_\+next (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{entry }\end{DoxyParamCaption})}
+
+
+
+Return a pointer to the next attribute entry from an attribute table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em entry} & current entry from the table\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & entry was N\+U\+LL \\
+\hline
+{\em !\+N\+U\+LL} & pointer to next attribute record\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+If {\itshape entry} points to the last entry in the table, this function will return the same address instead of advancing off the end of the table.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zcl_ga00ac8dd36cad01d9479a84c296380f40}{zcl\+\_\+find\+\_\+attribute} 
+\end{DoxySeeAlso}
+
+
+References Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+ST.
+
+
+
+Referenced by zcl\+\_\+create\+\_\+attribute\+\_\+records().
+
+\mbox{\Hypertarget{group__zcl_ga592c970c1f0bda49f1c618d2895dbc6d}\label{group__zcl_ga592c970c1f0bda49f1c618d2895dbc6d}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+build\+\_\+header@{zcl\+\_\+build\+\_\+header}}
+\index{zcl\+\_\+build\+\_\+header@{zcl\+\_\+build\+\_\+header}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+build\+\_\+header()}{zcl\_build\_header()}}
+{\footnotesize\ttfamily int zcl\+\_\+build\+\_\+header (\begin{DoxyParamCaption}\item[{\hyperlink{group__zcl_gaeac1f6671916dd0ad92b271080ec272a}{zcl\+\_\+header\+\_\+response\+\_\+t} $\ast$}]{rsp,  }\item[{\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Support function to fill in a Z\+CL response header. 
+
+Set the {\ttfamily frame\+\_\+control}, {\ttfamily sequence} and optional {\ttfamily mfg\+\_\+code} fields of the Z\+CL response header, and return the offset to the actual start of the header (non-\/mfg specific skips the first two bytes).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em rsp} & buffer to store header of response \\
+\hline
+\mbox{\tt in}  & {\em cmd} & command we\textquotesingle{}re responding to\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & responding to manufacturer-\/specific command \\
+\hline
+{\em 2} & responding to non-\/manufacturer-\/specific command \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__zcl_ga87ee4a8117e0420786a109b1f590ddc5}\label{group__zcl_ga87ee4a8117e0420786a109b1f590ddc5}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+check\+\_\+minmax@{zcl\+\_\+check\+\_\+minmax}}
+\index{zcl\+\_\+check\+\_\+minmax@{zcl\+\_\+check\+\_\+minmax}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+check\+\_\+minmax()}{zcl\_check\_minmax()}}
+{\footnotesize\ttfamily int zcl\+\_\+check\+\_\+minmax (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{entry,  }\item[{const \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer\+\_\+le }\end{DoxyParamCaption})}
+
+
+
+Checks whether a new value from a Write Attributes command is within the limits specified for a given attribute. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em entry} & entry to use for min/max check \\
+\hline
+\mbox{\tt in}  & {\em buffer\+\_\+le} & buffer with new value (in little-\/endian byte order), from write attributes command\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & new value is within range (or attribute doesn\textquotesingle{}t have a min/max) \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+{\em !0} & value is out of range \\
+\hline
+\end{DoxyRetVals}
+
+
+References F\+AR, and value.
+
+\mbox{\Hypertarget{group__zcl_gadeb35ab493fffec9ba1c33f658929136}\label{group__zcl_gadeb35ab493fffec9ba1c33f658929136}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+command\+\_\+build@{zcl\+\_\+command\+\_\+build}}
+\index{zcl\+\_\+command\+\_\+build@{zcl\+\_\+command\+\_\+build}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+command\+\_\+build()}{zcl\_command\_build()}}
+{\footnotesize\ttfamily int zcl\+\_\+command\+\_\+build (\begin{DoxyParamCaption}\item[{\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$}]{cmd,  }\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope,  }\item[{\hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+
+
+Parse a Z\+CL request and store in a \hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} structure with fields in fixed locations (therefore easier to use than the variable-\/length frame header). 
+
+Also uses the direction bit and manufacturer ID to search the attribute tree for the correct list of attributes.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em cmd} & buffer to store parsed Z\+CL command \\
+\hline
+\mbox{\tt in}  & {\em envelope} & envelope from received message \\
+\hline
+\mbox{\tt in}  & {\em tree} & pointer to attribute tree for cluster or N\+U\+LL if the cluster doesn\textquotesingle{}t have any attributes (typically passed in via endpoint dispatcher)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & parsed payload from {\ttfamily envelope} into {\ttfamily cmd} \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+{\em -\/\+E\+B\+A\+D\+M\+SG} & frame is too small for Z\+CL header\textquotesingle{}s frame\+\_\+control value \\
+\hline
+\end{DoxyRetVals}
+
+
+References F\+AR.
+
+
+
+Referenced by \+\_\+zcl\+\_\+basic\+\_\+server(), \+\_\+zcl\+\_\+onoff\+\_\+handler(), zcl\+\_\+general\+\_\+command(), zcl\+\_\+identify\+\_\+command(), zcl\+\_\+invalid\+\_\+cluster(), zcl\+\_\+invalid\+\_\+command(), and zcl\+\_\+time\+\_\+client().
+
+\mbox{\Hypertarget{group__zcl_gaca5c04dd787b041bf40f3b2a4463bb70}\label{group__zcl_gaca5c04dd787b041bf40f3b2a4463bb70}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+command\+\_\+dump@{zcl\+\_\+command\+\_\+dump}}
+\index{zcl\+\_\+command\+\_\+dump@{zcl\+\_\+command\+\_\+dump}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+command\+\_\+dump()}{zcl\_command\_dump()}}
+{\footnotesize\ttfamily void zcl\+\_\+command\+\_\+dump (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Debugging routine that dumps contents of a parsed Z\+CL command structure to S\+T\+D\+O\+UT. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cmd} & \hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} structure populated by \hyperlink{group__zcl_gadeb35ab493fffec9ba1c33f658929136}{zcl\+\_\+command\+\_\+build()} \\
+\hline
+\end{DoxyParams}
+
+
+References \+\_\+\+T\+A\+B\+L\+E\+\_\+\+E\+N\+T\+R\+I\+ES, zcl\+\_\+command\+\_\+t\+::command, F\+AR, zcl\+\_\+command\+\_\+t\+::frame\+\_\+control, length, zcl\+\_\+command\+\_\+t\+::length, zcl\+\_\+command\+\_\+t\+::mfg\+\_\+code, zcl\+\_\+command\+\_\+t\+::sequence, Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP, Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP, Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+T\+O\+\_\+\+S\+E\+R\+V\+ER, Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON, Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+D\+E\+F\+\_\+\+R\+E\+SP, Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK, Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+O\+F\+I\+LE, zcl\+\_\+command\+\_\+t\+::zcl\+\_\+payload, and zcl\+\_\+status\+\_\+text().
+
+\mbox{\Hypertarget{group__zcl_ga405e1c70b6278aae3a307971433c9229}\label{group__zcl_ga405e1c70b6278aae3a307971433c9229}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+convert\+\_\+24bit@{zcl\+\_\+convert\+\_\+24bit}}
+\index{zcl\+\_\+convert\+\_\+24bit@{zcl\+\_\+convert\+\_\+24bit}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+convert\+\_\+24bit()}{zcl\_convert\_24bit()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} zcl\+\_\+convert\+\_\+24bit (\begin{DoxyParamCaption}\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{value\+\_\+le,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{extend\+\_\+sign }\end{DoxyParamCaption})}
+
+
+
+Convert a 24-\/bit (3-\/byte) little-\/endian value to a 32-\/bit value in host byte order. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value\+\_\+le} & pointer to 3 bytes to convert \\
+\hline
+\mbox{\tt in}  & {\em extend\+\_\+sign} & if T\+R\+UE, set high byte of result to 0x\+FF if top bit of 24-\/bit value is set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 32-\/bit, host-\/byte-\/order version of the 24-\/bit, little-\/endian value passed in. 
+\end{DoxyReturn}
+
+
+References F\+AR.
+
+\mbox{\Hypertarget{group__zcl_ga15bf36dadccd7a045bad7d6f0842e25a}\label{group__zcl_ga15bf36dadccd7a045bad7d6f0842e25a}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+decode\+\_\+attribute@{zcl\+\_\+decode\+\_\+attribute}}
+\index{zcl\+\_\+decode\+\_\+attribute@{zcl\+\_\+decode\+\_\+attribute}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+decode\+\_\+attribute()}{zcl\_decode\_attribute()}}
+{\footnotesize\ttfamily int zcl\+\_\+decode\+\_\+attribute (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{entry,  }\item[{\hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$}]{rec }\end{DoxyParamCaption})}
+
+
+
+Decode attribute value from a Write Attribute Request or Read Attribute Response record and optionally write to {\ttfamily entry}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em entry} & entry from attribute table \\
+\hline
+\mbox{\tt in,out}  & {\em rec} & state information for parsing write request\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & number of bytes consumed from {\ttfamily rec-\/$>$buffer} \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+\end{DoxyRetVals}
+
+
+References F\+AR, and length.
+
+
+
+Referenced by \+\_\+zcl\+\_\+identify\+\_\+time\+\_\+set().
+
+\mbox{\Hypertarget{group__zcl_gab5c99acba0d864acd326bcab46d1416e}\label{group__zcl_gab5c99acba0d864acd326bcab46d1416e}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+default\+\_\+response@{zcl\+\_\+default\+\_\+response}}
+\index{zcl\+\_\+default\+\_\+response@{zcl\+\_\+default\+\_\+response}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+default\+\_\+response()}{zcl\_default\_response()}}
+{\footnotesize\ttfamily int zcl\+\_\+default\+\_\+response (\begin{DoxyParamCaption}\item[{\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$}]{request,  }\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}}]{status }\end{DoxyParamCaption})}
+
+
+
+Send a Default Response (\hyperlink{group__zcl_ga92499f538455b8d5a525510fba54adb2}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP}) to a given command. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em request} & command we\textquotesingle{}re responding to \\
+\hline
+\mbox{\tt in}  & {\em status} & status to use in the response (see Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macros under \char`\"{}\+Z\+C\+L Status Enumerations\char`\"{} in \hyperlink{zcl_8h}{zigbee/zcl.\+h})\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully sent response, or response not required (message was broadcast, sent to the broadcast endpoint, or sender set the disable default response bit) \\
+\hline
+{\em !0} & error on send \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+\end{DoxyRetVals}
+
+
+References command, P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT, and status.
+
+
+
+Referenced by zcl\+\_\+invalid\+\_\+cluster().
+
+\mbox{\Hypertarget{group__zcl_gae3f7f58d3b08caf95aa11f90e3995397}\label{group__zcl_gae3f7f58d3b08caf95aa11f90e3995397}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+encode\+\_\+attribute\+\_\+value@{zcl\+\_\+encode\+\_\+attribute\+\_\+value}}
+\index{zcl\+\_\+encode\+\_\+attribute\+\_\+value@{zcl\+\_\+encode\+\_\+attribute\+\_\+value}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+encode\+\_\+attribute\+\_\+value()}{zcl\_encode\_attribute\_value()}}
+{\footnotesize\ttfamily int zcl\+\_\+encode\+\_\+attribute\+\_\+value (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{bufsize,  }\item[{const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{entry }\end{DoxyParamCaption})}
+
+
+
+Format a Z\+CL attribute\textquotesingle{}s value for a Read Attributes Response or a Write Attributes Request. 
+
+Copies the value of attribute {\ttfamily entry} to {\ttfamily buffer} in little-\/endian byte order. Will not write more than {\ttfamily bufsize} bytes. Used to build Z\+CL frames.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buffer} & buffer to store encoded attribute \\
+\hline
+\mbox{\tt in}  & {\em bufsize} & number of bytes available in {\ttfamily buffer} \\
+\hline
+\mbox{\tt in}  & {\em entry} & attribute to encode into {\ttfamily buffer} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE} & invalid parameter passed in \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+E\+F\+I\+N\+E\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+A\+ND} & ghost attribute with N\+U\+LL {\ttfamily value} \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+S\+U\+F\+F\+I\+C\+I\+E\+N\+T\+\_\+\+S\+P\+A\+CE} & buffer too small to encode value \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE} & unknown/unsupported attribute type \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE} & failure updating attribute value \\
+\hline
+{\em -\/\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+F\+A\+I\+L\+U\+RE} & failure updating attribute value \\
+\hline
+{\em $>$=0} & number of bytes written \\
+\hline
+\end{DoxyRetVals}
+
+
+References F\+AR, status, and type.
+
+
+
+Referenced by zcl\+\_\+create\+\_\+attribute\+\_\+records().
+
+\mbox{\Hypertarget{group__zcl_ga2057f6176d44e9fad2df4f619e5777d3}\label{group__zcl_ga2057f6176d44e9fad2df4f619e5777d3}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+envelope\+\_\+payload\+\_\+dump@{zcl\+\_\+envelope\+\_\+payload\+\_\+dump}}
+\index{zcl\+\_\+envelope\+\_\+payload\+\_\+dump@{zcl\+\_\+envelope\+\_\+payload\+\_\+dump}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+envelope\+\_\+payload\+\_\+dump()}{zcl\_envelope\_payload\_dump()}}
+{\footnotesize\ttfamily void zcl\+\_\+envelope\+\_\+payload\+\_\+dump (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$}]{envelope }\end{DoxyParamCaption})}
+
+
+
+Debugging routine that parses an envelope payload as a Z\+CL command and dumps a parsed copy to S\+T\+D\+O\+UT. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} structure with a Z\+CL command payload \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__zcl_ga00ac8dd36cad01d9479a84c296380f40}\label{group__zcl_ga00ac8dd36cad01d9479a84c296380f40}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+find\+\_\+attribute@{zcl\+\_\+find\+\_\+attribute}}
+\index{zcl\+\_\+find\+\_\+attribute@{zcl\+\_\+find\+\_\+attribute}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+find\+\_\+attribute()}{zcl\_find\_attribute()}}
+{\footnotesize\ttfamily const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ zcl\+\_\+find\+\_\+attribute (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{entry,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{search\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Search the attribute table starting at {\ttfamily entry}, for attribute ID {\ttfamily search\+\_\+id}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em entry} & starting entry for search \\
+\hline
+\mbox{\tt in}  & {\em search\+\_\+id} & attribute ID to look for\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & attribute id {\ttfamily search\+\_\+id} not in list \\
+\hline
+{\em !\+N\+U\+LL} & pointer to attribute record \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__zcl_gac3849121e93e777ce9a7510d24517b9b}\label{group__zcl_gac3849121e93e777ce9a7510d24517b9b}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+general\+\_\+command@{zcl\+\_\+general\+\_\+command}}
+\index{zcl\+\_\+general\+\_\+command@{zcl\+\_\+general\+\_\+command}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+general\+\_\+command()}{zcl\_general\_command()}}
+{\footnotesize\ttfamily int zcl\+\_\+general\+\_\+command (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Handler for Z\+CL General Commands. 
+
+Used as the handler for attribute-\/only clusters (e.\+g., Basic Cluster), or called from a cluster\textquotesingle{}s handler for commands it doesn\textquotesingle{}t handle.
+
+Will send a Default Response for commands it can\textquotesingle{}t handle.
+
+Currently does not support attribute reporting.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & envelope from received message \\
+\hline
+\mbox{\tt in}  & {\em context} & pointer to attribute tree for cluster or N\+U\+LL if the cluster doesn\textquotesingle{}t have any attributes (typically passed in via endpoint dispatcher)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & command was processed, including sending a possible response \\
+\hline
+{\em !0} & error sending response or processing command \\
+\hline
+\end{DoxyRetVals}
+
+
+References zcl\+\_\+command\+\_\+build().
+
+\mbox{\Hypertarget{group__zcl_ga23e4657d006b8b39ac54f0ee61786910}\label{group__zcl_ga23e4657d006b8b39ac54f0ee61786910}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+invalid\+\_\+cluster@{zcl\+\_\+invalid\+\_\+cluster}}
+\index{zcl\+\_\+invalid\+\_\+cluster@{zcl\+\_\+invalid\+\_\+cluster}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+invalid\+\_\+cluster()}{zcl\_invalid\_cluster()}}
+{\footnotesize\ttfamily int zcl\+\_\+invalid\+\_\+cluster (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope,  }\item[{\hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{ep\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Called if a request comes in for an invalid endpoint/cluster combination. 
+
+Sends a Default Response (\hyperlink{group__zcl_ga92499f538455b8d5a525510fba54adb2}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP}) of \#\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE unless the received command was a Default Response or was broadcast.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & envelope from received message \\
+\hline
+\mbox{\tt in}  & {\em ep\+\_\+state} & pointer to endpoint\textquotesingle{}s \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & command was a default response (and therefore ignored), or a default response was successfully sent \\
+\hline
+{\em !0} & error sending response \\
+\hline
+\end{DoxyRetVals}
+
+
+References X\+B\+E\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER, zcl\+\_\+command\+\_\+build(), and zcl\+\_\+default\+\_\+response().
+
+\mbox{\Hypertarget{group__zcl_ga4251fbed33d85d2f7bbccb48857cae95}\label{group__zcl_ga4251fbed33d85d2f7bbccb48857cae95}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+invalid\+\_\+command@{zcl\+\_\+invalid\+\_\+command}}
+\index{zcl\+\_\+invalid\+\_\+command@{zcl\+\_\+invalid\+\_\+command}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+invalid\+\_\+command()}{zcl\_invalid\_command()}}
+{\footnotesize\ttfamily int zcl\+\_\+invalid\+\_\+command (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope }\end{DoxyParamCaption})}
+
+
+
+Called if a request comes in for an invalid command on a valid endpoint/cluster combination. 
+
+Sends a Default Response (\hyperlink{group__zcl_ga92499f538455b8d5a525510fba54adb2}{Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+SP}) unless the received command was a Default Response or was broadcast. Depending on the command received, the response will be one of\+:
+\begin{DoxyItemize}
+\item Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+S\+U\+P\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+ND
+\item Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+S\+U\+P\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+C\+O\+M\+M\+A\+ND
+\item Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+S\+U\+P\+\_\+\+M\+A\+N\+U\+F\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+ND
+\item Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+S\+U\+P\+\_\+\+M\+A\+N\+U\+F\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+C\+O\+M\+M\+A\+ND
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & envelope from received message\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & default response was successfully sent, or command did not require a default response \\
+\hline
+{\em !0} & error building or sending response \\
+\hline
+\end{DoxyRetVals}
+
+
+References zcl\+\_\+command\+\_\+t\+::frame\+\_\+control, status, zcl\+\_\+command\+\_\+build(), and Z\+C\+L\+\_\+\+F\+R\+A\+M\+E\+\_\+\+M\+F\+G\+\_\+\+S\+P\+E\+C\+I\+F\+IC.
+
+\mbox{\Hypertarget{group__zcl_ga9f9ac99001185554fe24dc7b09c0b0b0}\label{group__zcl_ga9f9ac99001185554fe24dc7b09c0b0b0}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+parse\+\_\+attribute\+\_\+record@{zcl\+\_\+parse\+\_\+attribute\+\_\+record}}
+\index{zcl\+\_\+parse\+\_\+attribute\+\_\+record@{zcl\+\_\+parse\+\_\+attribute\+\_\+record}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+parse\+\_\+attribute\+\_\+record()}{zcl\_parse\_attribute\_record()}}
+{\footnotesize\ttfamily int zcl\+\_\+parse\+\_\+attribute\+\_\+record (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{entry,  }\item[{\hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$}]{write\+\_\+rec }\end{DoxyParamCaption})}
+
+
+
+Parse an attribute record from a Write Attributes Request or a Read Attributes Response and possibly store the new attribute value. 
+
+If \hyperlink{group__zcl_ga928e86b414e2662235b7bb39ffaf0635}{Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+SP} is set in {\ttfamily write\+\_\+rec-\/$>$flags}, {\ttfamily write\+\_\+rec-\/$>$buffer} will be parsed as a Read Attributes Response record. Otherwise, it\textquotesingle{}s parsed as a Write Attributes Request record.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em entry} & attribute table to search or N\+U\+LL if there aren\textquotesingle{}t any attributes on this cluster \\
+\hline
+\mbox{\tt in,out}  & {\em write\+\_\+rec} & state information for parsing write request\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & number of bytes consumed from buffer \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000020}{Todo}]should we set a flag in write\+\_\+rec to indicate that the status was not success? \end{DoxyRefDesc}
+
+
+References F\+AR, and type.
+
+\mbox{\Hypertarget{group__zcl_ga947f6103f6bbe716ddeacbaed65e3ce3}\label{group__zcl_ga947f6103f6bbe716ddeacbaed65e3ce3}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+send\+\_\+response@{zcl\+\_\+send\+\_\+response}}
+\index{zcl\+\_\+send\+\_\+response@{zcl\+\_\+send\+\_\+response}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+send\+\_\+response()}{zcl\_send\_response()}}
+{\footnotesize\ttfamily int zcl\+\_\+send\+\_\+response (\begin{DoxyParamCaption}\item[{\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$}]{request,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{response,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{length }\end{DoxyParamCaption})}
+
+
+
+Send a response to a Z\+CL command. 
+
+Uses information from the command received to populate fields in the response.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em request} & command to respond to \\
+\hline
+\mbox{\tt in}  & {\em response} & payload to send as response \\
+\hline
+\mbox{\tt in}  & {\em length} & number of bytes in {\itshape response} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully sent response \\
+\hline
+{\em !0} & error on send \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__zcl_ga04c32f1b9f6c36fae06e9bed5bd8f7dd}\label{group__zcl_ga04c32f1b9f6c36fae06e9bed5bd8f7dd}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+status\+\_\+text@{zcl\+\_\+status\+\_\+text}}
+\index{zcl\+\_\+status\+\_\+text@{zcl\+\_\+status\+\_\+text}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+status\+\_\+text()}{zcl\_status\_text()}}
+{\footnotesize\ttfamily const char $\ast$ zcl\+\_\+status\+\_\+text (\begin{DoxyParamCaption}\item[{uint\+\_\+fast8\+\_\+t}]{status }\end{DoxyParamCaption})}
+
+
+
+Converts a Z\+CL status byte (one of the Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macros) into a string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em status} & status byte to convert\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to an unmodifiable string with a description of the status 
+\end{DoxyReturn}
+
+
+Referenced by zcl\+\_\+command\+\_\+dump().
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__zcl_ga04c31df34f50e8dd1efaf1105631b2bc}\label{group__zcl_ga04c31df34f50e8dd1efaf1105631b2bc}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!attributes@{attributes}}
+\index{attributes@{attributes}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{attributes}{attributes}}
+{\footnotesize\ttfamily const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR}$\ast$ attributes}
+
+
+
+Appropriate list of attributes on this device, related to the command. 
+
+Based on the {\ttfamily direction} bit from {\ttfamily frame\+\_\+control} and the {\ttfamily mfg\+\_\+code} field. \mbox{\Hypertarget{group__zcl_gae2490849003f8344782c06334b1e6b17}\label{group__zcl_gae2490849003f8344782c06334b1e6b17}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!max@{max}}
+\index{max@{max}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily \hyperlink{unionzcl__attribute__minmax__t}{zcl\+\_\+attribute\+\_\+minmax\+\_\+t} max}
+
+
+
+Maximum value for attribute, assumes 32-\/bit limit. 
+
+For string attributes, the maximum length that can be stored at {\ttfamily value}. \mbox{\Hypertarget{group__zcl_gaad888af9d07cd3b611c75f15f8c90dfe}\label{group__zcl_gaad888af9d07cd3b611c75f15f8c90dfe}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!min@{min}}
+\index{min@{min}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily \hyperlink{unionzcl__attribute__minmax__t}{zcl\+\_\+attribute\+\_\+minmax\+\_\+t} min}
+
+
+
+Minimum value for attribute (currently unused until I pick a value to represent \char`\"{}none\char`\"{}). 
+
+\mbox{\Hypertarget{group__zcl_ga5d86508e715769ce35a4845ed5f8f252}\label{group__zcl_ga5d86508e715769ce35a4845ed5f8f252}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}{PACKED\_STRUCT}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+         \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}              mfg\_code\_le
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga5d86508e715769ce35a4845ed5f8f252}\label{group__zcl_ga5d86508e715769ce35a4845ed5f8f252}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}{PACKED\_STRUCT}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+         \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}              mfg\_code\_le
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga5d86508e715769ce35a4845ed5f8f252}\label{group__zcl_ga5d86508e715769ce35a4845ed5f8f252}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}{PACKED\_STRUCT}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+      \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} direction
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl_ga80943597b8cce9d751a45efa823596ac}\label{group__zcl_ga80943597b8cce9d751a45efa823596ac}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!read@{read}}
+\index{read@{read}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_gace94cfc3f22379fa08a5b8de8c6977f6}{zcl\+\_\+attribute\+\_\+update\+\_\+fn} read}
+
+
+
+On an attribute read, the Z\+CL dispatcher will call the .read function to refresh the attribute\textquotesingle{}s value before responding to the request. 
+
+Do I need a return value in the function to pass an error up? \mbox{\Hypertarget{group__zcl_gade818037fd6c985038ff29656089758d}\label{group__zcl_gade818037fd6c985038ff29656089758d}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!status@{status}}
+\index{status@{status}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} status}
+
+
+
+Set to \#\+Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS if data is valid, or some other Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macro if there\textquotesingle{}s an error. 
+
+
+
+Referenced by \+\_\+zcl\+\_\+time\+\_\+time\+\_\+set().
+
+\mbox{\Hypertarget{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}\label{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!type@{type}}
+\index{type@{type}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} type}
+
+
+
+see \hyperlink{zcl__types_8h}{zigbee/zcl\+\_\+types.\+h} 
+
+always Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+U\+CT
+
+one of Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+R\+R\+AY, Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+ET, Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+AG
+
+only included if status == Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS 
+
+Referenced by \+\_\+zdo\+\_\+match\+\_\+desc\+\_\+respond(), zcl\+\_\+encode\+\_\+attribute\+\_\+value(), zcl\+\_\+parse\+\_\+attribute\+\_\+record(), zcl\+\_\+print\+\_\+array\+\_\+value(), zcl\+\_\+print\+\_\+struct\+\_\+value(), zcl\+\_\+sizeof\+\_\+type(), and zdo\+\_\+send\+\_\+bind\+\_\+req().
+
+\mbox{\Hypertarget{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}\label{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!value@{value}}
+\index{value@{value}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{value}{value}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} value\mbox{[}1\mbox{]}}
+
+
+
+variable length, depending on type 
+
+variable length, only if Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS \mbox{\Hypertarget{group__zcl_gaaaa0b89997c57cfca2dfae40f46e702d}\label{group__zcl_gaaaa0b89997c57cfca2dfae40f46e702d}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!value@{value}}
+\index{value@{value}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{value}{value}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR}$\ast$ value}
+
+
+
+Pointer to global variable of correct type, set as {\ttfamily const} to allow for both const and non-\/const values. 
+
+(If {\ttfamily const}, flags should be include \#\+Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+A\+D\+O\+N\+LY.) If N\+U\+LL, the Z\+CL stack will respond to attempts to read/write with Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+E\+F\+I\+N\+E\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+A\+ND. \mbox{\Hypertarget{group__zcl_gac8bd2f85f7df500d34b1d3cd27033a4e}\label{group__zcl_gac8bd2f85f7df500d34b1d3cd27033a4e}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!write@{write}}
+\index{write@{write}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily \hyperlink{group__zcl_ga70fa1740c517a1e49c700cba7cf6b339}{zcl\+\_\+attribute\+\_\+write\+\_\+fn} write}
+
+
+
+On an attribute write, the Z\+CL dispatcher will call the .write function with a structure containing information about the write request. 
+
+See the documentation for \hyperlink{group__zcl_ga70fa1740c517a1e49c700cba7cf6b339}{zcl\+\_\+attribute\+\_\+write\+\_\+fn()} for the A\+PI, and the Time and Identify clusters for examples of its use. \mbox{\Hypertarget{group__zcl_gad1e7f7dd501a7ab02f6004e4091c6bea}\label{group__zcl_gad1e7f7dd501a7ab02f6004e4091c6bea}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+attributes\+\_\+none@{zcl\+\_\+attributes\+\_\+none}}
+\index{zcl\+\_\+attributes\+\_\+none@{zcl\+\_\+attributes\+\_\+none}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+attributes\+\_\+none}{zcl\_attributes\_none}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} zcl\+\_\+attributes\+\_\+none\mbox{[}1\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+   \{ \{ ZCL\_MFG\_NONE, NULL, NULL \} \}
+\end{DoxyCode}
+
+
+If a cluster doesn\textquotesingle{}t have attributes, use zcl\+\_\+attributes\+\_\+none (a single, empty attribute list) in the cluster definition. 
+
+Don\textquotesingle{}t use N\+U\+LL, since the A\+PS dispatcher will use endpoint\textquotesingle{}s context if the cluster\textquotesingle{}s context is N\+U\+LL. \mbox{\Hypertarget{group__zcl_gad1e7f7dd501a7ab02f6004e4091c6bea}\label{group__zcl_gad1e7f7dd501a7ab02f6004e4091c6bea}} 
+\index{Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}!zcl\+\_\+attributes\+\_\+none@{zcl\+\_\+attributes\+\_\+none}}
+\index{zcl\+\_\+attributes\+\_\+none@{zcl\+\_\+attributes\+\_\+none}!Zig\+Bee Cluster Library@{Zig\+Bee Cluster Library}}
+\subsubsection{\texorpdfstring{zcl\+\_\+attributes\+\_\+none}{zcl\_attributes\_none}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} zcl\+\_\+attributes\+\_\+none\mbox{[}1\mbox{]}}
+
+
+
+If a cluster doesn\textquotesingle{}t have attributes, use zcl\+\_\+attributes\+\_\+none (a single, empty attribute list) in the cluster definition. 
+
+Don\textquotesingle{}t use N\+U\+LL, since the A\+PS dispatcher will use endpoint\textquotesingle{}s context if the cluster\textquotesingle{}s context is N\+U\+LL. 

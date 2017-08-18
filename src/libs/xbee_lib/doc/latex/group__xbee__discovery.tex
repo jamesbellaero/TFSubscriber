@@ -1,0 +1,517 @@
+\hypertarget{group__xbee__discovery}{}\section{Node Discovery}
+\label{group__xbee__discovery}\index{Node Discovery@{Node Discovery}}
+
+
+This layer manages A\+T\+ND responses and 0x95 frames related to proprietary (X\+Bee-\/only) node discovery methods used in Zig\+Bee firmware (not supported in Smart Energy firmware builds).  
+
+
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{xbee__discovery_8c}{xbee\+\_\+discovery.\+c}
+\begin{DoxyCompactList}\small\item\em Code related to \char`\"{}\+Node Discovery\char`\"{} (the A\+T\+ND command, 0x95 frames). \end{DoxyCompactList}\item 
+file \hyperlink{discovery_8h}{discovery.\+h}
+\begin{DoxyCompactList}\small\item\em Header for code related to \char`\"{}\+Node Discovery\char`\"{} (the A\+T\+ND command, 0x95 frames) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t}
+\begin{DoxyCompactList}\small\item\em parsed Node ID in host-\/byte-\/order and fixed length fields \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga0df6e63d6ccca22fcf154b6f0be46da6}\label{group__xbee__discovery_ga0df6e63d6ccca22fcf154b6f0be46da6}} 
+\#define \hyperlink{group__xbee__discovery_ga0df6e63d6ccca22fcf154b6f0be46da6}{X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E\+I\+D\+\_\+\+L\+EN}~20
+\begin{DoxyCompactList}\small\item\em Maximum length of a Node ID string (A\+T\+NI value) (excludes null terminator). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_gad01a0deb6da2cfa51bf893b93c33145b}\label{group__xbee__discovery_gad01a0deb6da2cfa51bf893b93c33145b}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+N\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+O\+RD}~0
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga7b5f045986178759d39b922d9671ef58}\label{group__xbee__discovery_ga7b5f045986178759d39b922d9671ef58}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+N\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+U\+T\+ER}~1
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga1d539a23a1b7f387256a706825b2ba01}\label{group__xbee__discovery_ga1d539a23a1b7f387256a706825b2ba01}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+N\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+D\+D\+EV}~2
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga65247596c3705407f5f2eb73497ef5ca}\label{group__xbee__discovery_ga65247596c3705407f5f2eb73497ef5ca}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+N\+D\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+O\+NE}~0
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_gafe8894115d7013fb820444fa2c77a12a}\label{group__xbee__discovery_gafe8894115d7013fb820444fa2c77a12a}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+N\+D\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+U\+S\+H\+B\+U\+T\+T\+ON}~1
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_gad3637e6febeec639fd9750c40a6e7a7f}\label{group__xbee__discovery_gad3637e6febeec639fd9750c40a6e7a7f}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+N\+D\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+J\+O\+I\+N\+ED}~2
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga0e1a51031fe5f18aa5b2c5ad02bbb329}\label{group__xbee__discovery_ga0e1a51031fe5f18aa5b2c5ad02bbb329}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+N\+D\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+O\+W\+E\+R\+\_\+\+C\+Y\+C\+LE}~3
+\item 
+\#define \hyperlink{group__xbee__discovery_ga8f678e29b22812632df7d3fa3d0f951a}{X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+T\+RY}
+\begin{DoxyCompactList}\small\item\em Include xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler in the cluster table for the the Digi Data endpoint. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_gadfed4daf7748e615dedf036d94d9fee9}\label{group__xbee__discovery_gadfed4daf7748e615dedf036d94d9fee9}} 
+\#define \hyperlink{group__xbee__discovery_gadfed4daf7748e615dedf036d94d9fee9}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+T\+N\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}~\{ \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9ae66771334070219cd098c8201936cf4a}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE}, 0, \hyperlink{group__xbee__discovery_ga6d1190133ded980a4eeca2034508c8a5}{xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler}, N\+U\+LL \}
+\begin{DoxyCompactList}\small\item\em Include xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler in xbee\+\_\+frame\+\_\+handlers\mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__discovery_ga11002dcf6525c8a0d1144215bebbc774}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+O0\+\_\+\+N\+O\+D\+E\+ID}~\{ \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a5b572839c3123f1059ec2ced643cf5d2}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+N\+O\+D\+E\+\_\+\+ID}, 0, \hyperlink{group__xbee__discovery_gac15854e05ef3f80d6ddae653065c0a40}{xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler}, N\+U\+LL \}
+\begin{DoxyCompactList}\small\item\em Include xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler in xbee\+\_\+frame\+\_\+handlers\mbox{[}\mbox{]} (only necessary if A\+T\+AO is set to 0). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__discovery_gaf00a7a98eff47e084bf5f8741bf41220}{xbee\+\_\+node\+\_\+id1\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A\+T\+MY value \mbox{[}0x\+F\+F\+FE on Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__discovery_ga4c7c2f1049e4dc4bb4552269077cf4fc}{xbee\+\_\+node\+\_\+id2\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A\+T\+MP value \mbox{[}0x\+F\+F\+FE on Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__discovery_ga6343d5dfdcee86d1d294b1bafb8d6f23}{xbee\+\_\+frame\+\_\+node\+\_\+id\+\_\+t}
+\begin{DoxyCompactList}\small\item\em format of 0x95 frames received from X\+Bee \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__xbee__discovery_ga1efd48449a49119fc19ab9843af5ef6c}{xbee\+\_\+disc\+\_\+nd\+\_\+parse} (\hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$parsed, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$source, int source\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Parse a Node Discovery response and store it in an \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} structure. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__xbee__discovery_ga8eb851e497917304412328f434af7c95}{xbee\+\_\+disc\+\_\+device\+\_\+type\+\_\+str} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__discovery_gab9c960832b7e834e6657e0c6ab4c3d8a}{device\+\_\+type})
+\begin{DoxyCompactList}\small\item\em Return a string (\char`\"{}\+Coord\char`\"{}, \char`\"{}\+Router\char`\"{}, \char`\"{}\+End\+Dev\char`\"{}, or \char`\"{}???\char`\"{}) description for the \char`\"{}\+Device Type\char`\"{} field of a Node ID message. \end{DoxyCompactList}\item 
+void \hyperlink{group__xbee__discovery_gab155a485a9aa4870a45dd86d1d468c52}{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+dump} (const \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ni)
+\begin{DoxyCompactList}\small\item\em Debugging function used to dump an \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} structure to stdout. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga59a0294fbcb1b9f43b8436d4ec3a5a9e}{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{group__xbee__device_ga64bf72cf58030a080f12f8916cd7d2a2}{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+fn} fn)
+\begin{DoxyCompactList}\small\item\em Designate a function to receive parsed Node ID messages on a given X\+Bee device. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga091ae347ddae0bd1b54948714e9d6933}{xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{group__xbee__device_ga64bf72cf58030a080f12f8916cd7d2a2}{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+fn} fn)
+\begin{DoxyCompactList}\small\item\em Remove a function registered to receive parsed Node ID messages on a given X\+Bee device. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga8db9bd798e5fb2f6c75037e0e9d3faff}{\+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$\hyperlink{group__xbee__discovery_ga85b75c5bbcd6d39fb6e2802f35f926ff}{node\+\_\+data}, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Common function used to parse Node ID messages from various sources, and then pass them on to registered receivers. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga20bc82e8efc243e295c99c23948bed3b}{xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Process messages sent to the Node ID Message cluster (0x0095) of the Digi Data endpoint (0x\+E8) when A\+T\+AO != 0. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga6d1190133ded980a4eeca2034508c8a5}{xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Process AT Command Response frames (type 0x88), looking for A\+T\+ND responses to parse and pass to Node ID handlers. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_gac15854e05ef3f80d6ddae653065c0a40}{xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Process Node Identification frames (type 0x95), sent when A\+T\+AO = 0. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__discovery_ga12d6a10c8348cf5eb9636bbf02420dd3}{xbee\+\_\+disc\+\_\+discover\+\_\+nodes} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const char $\ast$identifier)
+\begin{DoxyCompactList}\small\item\em Send an A\+T\+ND command to the X\+Bee, initiating node discovery for all nodes or a specific node\textquotesingle{}s \char`\"{}node identification\char`\"{} (A\+T\+NI) string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga719f89263ecae9f127dc655c1c14fdac}\label{group__xbee__discovery_ga719f89263ecae9f127dc655c1c14fdac}} 
+\hyperlink{unionaddr64}{addr64} \hyperlink{group__xbee__discovery_ga719f89263ecae9f127dc655c1c14fdac}{ieee\+\_\+addr\+\_\+be}
+\begin{DoxyCompactList}\small\item\em A\+T\+SH and A\+T\+SL. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_gaa667bab3abb953bc14d9f5bcc36644b8}\label{group__xbee__discovery_gaa667bab3abb953bc14d9f5bcc36644b8}} 
+char \hyperlink{group__xbee__discovery_gaa667bab3abb953bc14d9f5bcc36644b8}{node\+\_\+info} \mbox{[}\hyperlink{group__xbee__discovery_ga0df6e63d6ccca22fcf154b6f0be46da6}{X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E\+I\+D\+\_\+\+L\+EN}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em null-\/terminated A\+T\+NI value (variable length) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_gab9c960832b7e834e6657e0c6ab4c3d8a}\label{group__xbee__discovery_gab9c960832b7e834e6657e0c6ab4c3d8a}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__discovery_gab9c960832b7e834e6657e0c6ab4c3d8a}{device\+\_\+type}
+\begin{DoxyCompactList}\small\item\em one of X\+B\+E\+E\+\_\+\+N\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+$\ast$ macro values \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga0fb7817a87e8f275a4313c6629d189c7}\label{group__xbee__discovery_ga0fb7817a87e8f275a4313c6629d189c7}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__discovery_ga0fb7817a87e8f275a4313c6629d189c7}{source\+\_\+event}
+\begin{DoxyCompactList}\small\item\em event that generated the ND frame \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga4de8649ccb3a83bd14fc5702328bb667}\label{group__xbee__discovery_ga4de8649ccb3a83bd14fc5702328bb667}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__discovery_ga4de8649ccb3a83bd14fc5702328bb667}{profile\+\_\+be}
+\begin{DoxyCompactList}\small\item\em Digi Profile ID (0x\+C105) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga35abb56c1328cf62dfa8e54bc700ed19}\label{group__xbee__discovery_ga35abb56c1328cf62dfa8e54bc700ed19}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__discovery_ga35abb56c1328cf62dfa8e54bc700ed19}{manufacturer\+\_\+be}
+\begin{DoxyCompactList}\small\item\em Manufacturer ID (0x101E) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga7c278740875f8ad1696c446db22e3407}\label{group__xbee__discovery_ga7c278740875f8ad1696c446db22e3407}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__xbee__discovery_ga7c278740875f8ad1696c446db22e3407}{device\+\_\+id\+\_\+be}
+\begin{DoxyCompactList}\small\item\em A\+T\+DD of remote device \mbox{[}optional field enabled with A\+T\+NO on Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_gafb67d818cd76cce8057affabcb1979a6}\label{group__xbee__discovery_gafb67d818cd76cce8057affabcb1979a6}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__discovery_gafb67d818cd76cce8057affabcb1979a6}{rssi}
+\begin{DoxyCompactList}\small\item\em R\+S\+SI of packet \mbox{[}optional field enabled with A\+T\+NO on Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga231e348f98931de7fde1d09f64264afc}\label{group__xbee__discovery_ga231e348f98931de7fde1d09f64264afc}} 
+\hyperlink{unionaddr64}{addr64} {\bfseries ieee\+\_\+address\+\_\+be}
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga73d48563eb05cd5fcc4add79d226a3b8}\label{group__xbee__discovery_ga73d48563eb05cd5fcc4add79d226a3b8}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries network\+\_\+address\+\_\+be}
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_gaace3d640c8d449b8db1162993d259d3f}\label{group__xbee__discovery_gaace3d640c8d449b8db1162993d259d3f}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries options}
+\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga85b75c5bbcd6d39fb6e2802f35f926ff}\label{group__xbee__discovery_ga85b75c5bbcd6d39fb6e2802f35f926ff}} 
+\hyperlink{group__xbee__discovery_gaf00a7a98eff47e084bf5f8741bf41220}{xbee\+\_\+node\+\_\+id1\+\_\+t} \hyperlink{group__xbee__discovery_ga85b75c5bbcd6d39fb6e2802f35f926ff}{node\+\_\+data}
+\begin{DoxyCompactList}\small\item\em variable-\/length data, parsed with \hyperlink{group__xbee__discovery_ga1efd48449a49119fc19ab9843af5ef6c}{xbee\+\_\+disc\+\_\+nd\+\_\+parse()} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga719f89263ecae9f127dc655c1c14fdac}\label{group__xbee__discovery_ga719f89263ecae9f127dc655c1c14fdac}} 
+\hyperlink{unionaddr64}{addr64} \hyperlink{group__xbee__discovery_ga719f89263ecae9f127dc655c1c14fdac}{ieee\+\_\+addr\+\_\+be}
+\begin{DoxyCompactList}\small\item\em A\+T\+SH and A\+T\+SL. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_gac1fa8be8752da585fe6a567d4732c147}\label{group__xbee__discovery_gac1fa8be8752da585fe6a567d4732c147}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__discovery_gac1fa8be8752da585fe6a567d4732c147}{network\+\_\+addr}
+\begin{DoxyCompactList}\small\item\em A\+T\+MY value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_ga300e014f0c31d08adc1145613e0b0f72}\label{group__xbee__discovery_ga300e014f0c31d08adc1145613e0b0f72}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__discovery_ga300e014f0c31d08adc1145613e0b0f72}{parent\+\_\+addr}
+\begin{DoxyCompactList}\small\item\em A\+T\+MP. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_gab9c960832b7e834e6657e0c6ab4c3d8a}\label{group__xbee__discovery_gab9c960832b7e834e6657e0c6ab4c3d8a}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__discovery_gab9c960832b7e834e6657e0c6ab4c3d8a}{device\+\_\+type}
+\begin{DoxyCompactList}\small\item\em one of X\+B\+E\+E\+\_\+\+N\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+O\+RD, \+\_\+\+R\+O\+U\+T\+ER or \+\_\+\+E\+N\+D\+D\+EV \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__discovery_gaa667bab3abb953bc14d9f5bcc36644b8}\label{group__xbee__discovery_gaa667bab3abb953bc14d9f5bcc36644b8}} 
+char \hyperlink{group__xbee__discovery_gaa667bab3abb953bc14d9f5bcc36644b8}{node\+\_\+info} \mbox{[}\hyperlink{group__xbee__discovery_ga0df6e63d6ccca22fcf154b6f0be46da6}{X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E\+I\+D\+\_\+\+L\+EN}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em A\+T\+NI value (variable length, null-\/terminated) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This layer manages A\+T\+ND responses and 0x95 frames related to proprietary (X\+Bee-\/only) node discovery methods used in Zig\+Bee firmware (not supported in Smart Energy firmware builds). 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__xbee__discovery_ga8f678e29b22812632df7d3fa3d0f951a}\label{group__xbee__discovery_ga8f678e29b22812632df7d3fa3d0f951a}} 
+\index{Node Discovery@{Node Discovery}!X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+T\+RY@{X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+T\+RY}}
+\index{X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+T\+RY@{X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+T\+RY}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+T\+RY}{XBEE\_DISC\_DIGI\_DATA\_CLUSTER\_ENTRY}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+T\+RY}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \hyperlink{group__wpan__aps_gga1227ab13b41d82d9c9c9080662f74cf7ad19431fd18576cc8463e8ac362a8579c}{DIGI\_CLUST\_NODEID\_MESSAGE}, 
+      \hyperlink{group__xbee__discovery_ga20bc82e8efc243e295c99c23948bed3b}{xbee\_disc\_nodeid\_cluster\_handler}, NULL, \(\backslash\)
+      WPAN\_CLUST\_FLAG\_INPUT | \hyperlink{group__wpan__aps_gacb0e365a8c5e72ee90be503513e7e630}{WPAN\_CLUST\_FLAG\_NOT\_ZCL}\}
+\end{DoxyCode}
+
+
+Include xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler in the cluster table for the the Digi Data endpoint. 
+
+\mbox{\Hypertarget{group__xbee__discovery_ga11002dcf6525c8a0d1144215bebbc774}\label{group__xbee__discovery_ga11002dcf6525c8a0d1144215bebbc774}} 
+\index{Node Discovery@{Node Discovery}!X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+O0\+\_\+\+N\+O\+D\+E\+ID@{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+O0\+\_\+\+N\+O\+D\+E\+ID}}
+\index{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+O0\+\_\+\+N\+O\+D\+E\+ID@{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+O0\+\_\+\+N\+O\+D\+E\+ID}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+O0\+\_\+\+N\+O\+D\+E\+ID}{XBEE\_FRAME\_HANDLE\_AO0\_NODEID}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+O0\+\_\+\+N\+O\+D\+E\+ID~\{ \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a5b572839c3123f1059ec2ced643cf5d2}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+N\+O\+D\+E\+\_\+\+ID}, 0, \hyperlink{group__xbee__discovery_gac15854e05ef3f80d6ddae653065c0a40}{xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler}, N\+U\+LL \}}
+
+
+
+Include xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler in xbee\+\_\+frame\+\_\+handlers\mbox{[}\mbox{]} (only necessary if A\+T\+AO is set to 0). 
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__xbee__discovery_ga6343d5dfdcee86d1d294b1bafb8d6f23}\label{group__xbee__discovery_ga6343d5dfdcee86d1d294b1bafb8d6f23}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+frame\+\_\+node\+\_\+id\+\_\+t@{xbee\+\_\+frame\+\_\+node\+\_\+id\+\_\+t}}
+\index{xbee\+\_\+frame\+\_\+node\+\_\+id\+\_\+t@{xbee\+\_\+frame\+\_\+node\+\_\+id\+\_\+t}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+frame\+\_\+node\+\_\+id\+\_\+t}{xbee\_frame\_node\_id\_t}}
+{\footnotesize\ttfamily \hyperlink{group__xbee__discovery_ga6343d5dfdcee86d1d294b1bafb8d6f23}{xbee\+\_\+frame\+\_\+node\+\_\+id\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}          frame\_type
+\end{DoxyCode}
+
+
+format of 0x95 frames received from X\+Bee 
+
+X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+N\+O\+D\+E\+\_\+\+ID (0x95) \mbox{\Hypertarget{group__xbee__discovery_gaf00a7a98eff47e084bf5f8741bf41220}\label{group__xbee__discovery_gaf00a7a98eff47e084bf5f8741bf41220}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+node\+\_\+id1\+\_\+t@{xbee\+\_\+node\+\_\+id1\+\_\+t}}
+\index{xbee\+\_\+node\+\_\+id1\+\_\+t@{xbee\+\_\+node\+\_\+id1\+\_\+t}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+node\+\_\+id1\+\_\+t}{xbee\_node\_id1\_t}}
+{\footnotesize\ttfamily \hyperlink{group__xbee__discovery_gaf00a7a98eff47e084bf5f8741bf41220}{xbee\+\_\+node\+\_\+id1\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}        network\_addr\_be
+\end{DoxyCode}
+
+
+A\+T\+MY value \mbox{[}0x\+F\+F\+FE on Digi\+Mesh\mbox{]}. 
+
+\mbox{\Hypertarget{group__xbee__discovery_ga4c7c2f1049e4dc4bb4552269077cf4fc}\label{group__xbee__discovery_ga4c7c2f1049e4dc4bb4552269077cf4fc}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+node\+\_\+id2\+\_\+t@{xbee\+\_\+node\+\_\+id2\+\_\+t}}
+\index{xbee\+\_\+node\+\_\+id2\+\_\+t@{xbee\+\_\+node\+\_\+id2\+\_\+t}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+node\+\_\+id2\+\_\+t}{xbee\_node\_id2\_t}}
+{\footnotesize\ttfamily \hyperlink{group__xbee__discovery_ga4c7c2f1049e4dc4bb4552269077cf4fc}{xbee\+\_\+node\+\_\+id2\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}        parent\_addr\_be
+\end{DoxyCode}
+
+
+A\+T\+MP value \mbox{[}0x\+F\+F\+FE on Digi\+Mesh\mbox{]}. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__xbee__discovery_ga8db9bd798e5fb2f6c75037e0e9d3faff}\label{group__xbee__discovery_ga8db9bd798e5fb2f6c75037e0e9d3faff}} 
+\index{Node Discovery@{Node Discovery}!\+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass@{\+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass}}
+\index{\+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass@{\+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass()}{\_xbee\_disc\_parse\_and\_pass()}}
+{\footnotesize\ttfamily int \+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{node\+\_\+data,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Common function used to parse Node ID messages from various sources, and then pass them on to registered receivers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & X\+Bee device that received the message \\
+\hline
+\mbox{\tt in}  & {\em node\+\_\+data} & pointer to raw Node ID message \\
+\hline
+\mbox{\tt in}  & {\em length} & length of Node ID message\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Node ID message parsed and passed on to any registered receivers \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+{\em -\/\+E\+B\+A\+D\+M\+SG} & error parsing Node ID message\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__discovery_ga1efd48449a49119fc19ab9843af5ef6c}{xbee\+\_\+disc\+\_\+nd\+\_\+parse}, \hyperlink{group__xbee__discovery_ga59a0294fbcb1b9f43b8436d4ec3a5a9e}{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler}, \hyperlink{group__xbee__discovery_ga091ae347ddae0bd1b54948714e9d6933}{xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler} 
+\end{DoxySeeAlso}
+
+
+References xbee\+\_\+dev\+\_\+t\+::node\+\_\+id\+\_\+handler, and xbee\+\_\+disc\+\_\+nd\+\_\+parse().
+
+
+
+Referenced by xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler(), xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler(), and xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler().
+
+\mbox{\Hypertarget{group__xbee__discovery_ga59a0294fbcb1b9f43b8436d4ec3a5a9e}\label{group__xbee__discovery_ga59a0294fbcb1b9f43b8436d4ec3a5a9e}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler@{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler}}
+\index{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler@{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler()}{xbee\_disc\_add\_node\_id\_handler()}}
+{\footnotesize\ttfamily int xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{\hyperlink{group__xbee__device_ga64bf72cf58030a080f12f8916cd7d2a2}{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+fn}}]{fn }\end{DoxyParamCaption})}
+
+
+
+Designate a function to receive parsed Node ID messages on a given X\+Bee device. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & X\+Bee device to monitor \\
+\hline
+\mbox{\tt in}  & {\em fn} & function to receive parsed Node ID messages\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & function assigned \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+{\em -\/\+E\+N\+O\+S\+PC} & can\textquotesingle{}t assign handler to device\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__discovery_ga091ae347ddae0bd1b54948714e9d6933}{xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler} 
+\end{DoxySeeAlso}
+
+
+References E\+I\+N\+V\+AL, E\+N\+O\+S\+PC, and xbee\+\_\+dev\+\_\+t\+::node\+\_\+id\+\_\+handler.
+
+\mbox{\Hypertarget{group__xbee__discovery_ga6d1190133ded980a4eeca2034508c8a5}\label{group__xbee__discovery_ga6d1190133ded980a4eeca2034508c8a5}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler@{xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler}}
+\index{xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler@{xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler()}{xbee\_disc\_atnd\_response\_handler()}}
+{\footnotesize\ttfamily int xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{raw,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{length,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Process AT Command Response frames (type 0x88), looking for A\+T\+ND responses to parse and pass to Node ID handlers. 
+
+This function parses the frame and then passes an \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} structure on to Node ID handlers configured with \hyperlink{group__xbee__discovery_ga59a0294fbcb1b9f43b8436d4ec3a5a9e}{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler()}. If the A\+T\+ND command fails or returns a timeout, it passes a N\+U\+LL \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} to the functions.
+
+Do not call this function directly, it should be included in the X\+Bee Frame Handlers table by using the macro X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+T\+N\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE.
+
+See the function help for \hyperlink{group__xbee__device_ga3e6f2b540e8cec7a69ef0b0166da14ff}{xbee\+\_\+frame\+\_\+handler\+\_\+fn()} for full documentation on this function\textquotesingle{}s A\+PI.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__discovery_gadfed4daf7748e615dedf036d94d9fee9}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+T\+N\+D\+\_\+\+R\+E\+S\+P\+O\+N\+SE}, \hyperlink{group__xbee__discovery_gac15854e05ef3f80d6ddae653065c0a40}{xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler}, \hyperlink{group__xbee__discovery_ga20bc82e8efc243e295c99c23948bed3b}{xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__discovery_ga8eb851e497917304412328f434af7c95}\label{group__xbee__discovery_ga8eb851e497917304412328f434af7c95}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+disc\+\_\+device\+\_\+type\+\_\+str@{xbee\+\_\+disc\+\_\+device\+\_\+type\+\_\+str}}
+\index{xbee\+\_\+disc\+\_\+device\+\_\+type\+\_\+str@{xbee\+\_\+disc\+\_\+device\+\_\+type\+\_\+str}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+disc\+\_\+device\+\_\+type\+\_\+str()}{xbee\_disc\_device\_type\_str()}}
+{\footnotesize\ttfamily const char $\ast$ xbee\+\_\+disc\+\_\+device\+\_\+type\+\_\+str (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}}]{device\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Return a string (\char`\"{}\+Coord\char`\"{}, \char`\"{}\+Router\char`\"{}, \char`\"{}\+End\+Dev\char`\"{}, or \char`\"{}???\char`\"{}) description for the \char`\"{}\+Device Type\char`\"{} field of a Node ID message. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device\+\_\+type} & the device\+\_\+type field from a Node ID message\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to a string describing the type, or \char`\"{}???\char`\"{} if {\itshape device\+\_\+type} is invalid
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} 
+\end{DoxySeeAlso}
+
+
+Referenced by xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+dump().
+
+\mbox{\Hypertarget{group__xbee__discovery_ga12d6a10c8348cf5eb9636bbf02420dd3}\label{group__xbee__discovery_ga12d6a10c8348cf5eb9636bbf02420dd3}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+disc\+\_\+discover\+\_\+nodes@{xbee\+\_\+disc\+\_\+discover\+\_\+nodes}}
+\index{xbee\+\_\+disc\+\_\+discover\+\_\+nodes@{xbee\+\_\+disc\+\_\+discover\+\_\+nodes}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+disc\+\_\+discover\+\_\+nodes()}{xbee\_disc\_discover\_nodes()}}
+{\footnotesize\ttfamily int xbee\+\_\+disc\+\_\+discover\+\_\+nodes (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const char $\ast$}]{identifier }\end{DoxyParamCaption})}
+
+
+
+Send an A\+T\+ND command to the X\+Bee, initiating node discovery for all nodes or a specific node\textquotesingle{}s \char`\"{}node identification\char`\"{} (A\+T\+NI) string. 
+
+Responses from remote nodes are parsed and then passed on to Node ID handlers configured with \hyperlink{group__xbee__discovery_ga59a0294fbcb1b9f43b8436d4ec3a5a9e}{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler()}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & X\+Bee device to use as the target \\
+\hline
+\mbox{\tt in}  & {\em identifier} & the A\+T\+NI (node identification) string of a device on the network, or N\+U\+LL to discover all devices\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & command sent \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & an invalid parameter was passed to the function \\
+\hline
+{\em -\/\+E\+B\+U\+SY} & transmit serial buffer is full, or X\+Bee is not accepting serial data (deasserting /\+C\+TS signal).\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__discovery_ga59a0294fbcb1b9f43b8436d4ec3a5a9e}{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler}, \hyperlink{group__xbee__discovery_ga091ae347ddae0bd1b54948714e9d6933}{xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler} 
+\end{DoxySeeAlso}
+
+
+References E\+I\+N\+V\+AL, xbee\+\_\+cmd\+\_\+execute(), and X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E\+I\+D\+\_\+\+L\+EN.
+
+\mbox{\Hypertarget{group__xbee__discovery_ga1efd48449a49119fc19ab9843af5ef6c}\label{group__xbee__discovery_ga1efd48449a49119fc19ab9843af5ef6c}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+disc\+\_\+nd\+\_\+parse@{xbee\+\_\+disc\+\_\+nd\+\_\+parse}}
+\index{xbee\+\_\+disc\+\_\+nd\+\_\+parse@{xbee\+\_\+disc\+\_\+nd\+\_\+parse}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+disc\+\_\+nd\+\_\+parse()}{xbee\_disc\_nd\_parse()}}
+{\footnotesize\ttfamily int xbee\+\_\+disc\+\_\+nd\+\_\+parse (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{parsed,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{source,  }\item[{int}]{source\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Parse a Node Discovery response and store it in an \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em parsed} & buffer to hold parsed Node ID message \\
+\hline
+\mbox{\tt in}  & {\em source} & source of Node ID message, starting with the 16-\/bit network address \\
+\hline
+\mbox{\tt in}  & {\em source\+\_\+length} & number of bytes in source of Node ID message\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Node ID message parsed and stored in /a parsed \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+{\em -\/\+E\+B\+A\+D\+M\+SG} & error parsing Node ID message \\
+\hline
+\end{DoxyRetVals}
+
+
+References be16toh, E\+B\+A\+D\+M\+SG, E\+I\+N\+V\+AL, F\+AR, node\+\_\+info, and X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E\+I\+D\+\_\+\+L\+EN.
+
+
+
+Referenced by \+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass().
+
+\mbox{\Hypertarget{group__xbee__discovery_gab155a485a9aa4870a45dd86d1d468c52}\label{group__xbee__discovery_gab155a485a9aa4870a45dd86d1d468c52}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+dump@{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+dump}}
+\index{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+dump@{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+dump}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+dump()}{xbee\_disc\_node\_id\_dump()}}
+{\footnotesize\ttfamily void xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+dump (\begin{DoxyParamCaption}\item[{const \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{ni }\end{DoxyParamCaption})}
+
+
+
+Debugging function used to dump an \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} structure to stdout. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ni} & pointer to an \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} structure \\
+\hline
+\end{DoxyParams}
+
+
+References be32toh, P\+R\+Is\+F\+AR, P\+R\+Ix32, and xbee\+\_\+disc\+\_\+device\+\_\+type\+\_\+str().
+
+\mbox{\Hypertarget{group__xbee__discovery_ga20bc82e8efc243e295c99c23948bed3b}\label{group__xbee__discovery_ga20bc82e8efc243e295c99c23948bed3b}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler@{xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler}}
+\index{xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler@{xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler()}{xbee\_disc\_nodeid\_cluster\_handler()}}
+{\footnotesize\ttfamily int xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Process messages sent to the Node ID Message cluster (0x0095) of the Digi Data endpoint (0x\+E8) when A\+T\+AO != 0. 
+
+This function parses the frame and then passes an \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} structure on to Node ID handlers configured with \hyperlink{group__xbee__discovery_ga59a0294fbcb1b9f43b8436d4ec3a5a9e}{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler()}.
+
+Do not call this function directly, it should be included in the Cluster table of the Digi Data endpoint by using the macro X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+T\+RY.
+
+Hosts communicating to X\+Bee modules running with A\+T\+AO set to zero do not need to use this handler.
+
+See the function help for \hyperlink{group__wpan__aps_ga8575b0db762a5fbb858d4994c9b657e3}{wpan\+\_\+aps\+\_\+handler\+\_\+fn()} for full documentation on this function\textquotesingle{}s A\+PI.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__discovery_ga8f678e29b22812632df7d3fa3d0f951a}{X\+B\+E\+E\+\_\+\+D\+I\+S\+C\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+T\+RY}, \hyperlink{group__xbee__discovery_gac15854e05ef3f80d6ddae653065c0a40}{xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler}, \hyperlink{group__xbee__discovery_ga6d1190133ded980a4eeca2034508c8a5}{xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler} 
+\end{DoxySeeAlso}
+
+
+References \+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass(), E\+I\+N\+V\+AL, and X\+B\+E\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER.
+
+\mbox{\Hypertarget{group__xbee__discovery_gac15854e05ef3f80d6ddae653065c0a40}\label{group__xbee__discovery_gac15854e05ef3f80d6ddae653065c0a40}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler@{xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler}}
+\index{xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler@{xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler()}{xbee\_disc\_nodeid\_frame\_handler()}}
+{\footnotesize\ttfamily int xbee\+\_\+disc\+\_\+nodeid\+\_\+frame\+\_\+handler (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{raw,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{length,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Process Node Identification frames (type 0x95), sent when A\+T\+AO = 0. 
+
+These frames are sent to the host when A\+T\+AO is set to 0 and a remote node\+:
+\begin{DoxyItemize}
+\item Has A\+T\+D0 set to 1, and someone presses the commissioning button once.
+\item Has A\+T\+JN set to 1, and has joined the network.
+\end{DoxyItemize}
+
+This function parses a the frame and then passes an \hyperlink{structxbee__node__id__t}{xbee\+\_\+node\+\_\+id\+\_\+t} structure on to Node ID handlers configured with \hyperlink{group__xbee__discovery_ga59a0294fbcb1b9f43b8436d4ec3a5a9e}{xbee\+\_\+disc\+\_\+add\+\_\+node\+\_\+id\+\_\+handler()}.
+
+Do not call this function directly, it should be included in the X\+Bee Frame Handlers table by using the macro X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+A\+O0\+\_\+\+N\+O\+D\+E\+ID. Hosts communicating to X\+Bee modules running with A\+T\+AO set to a non-\/zero value do not need to use this handler.
+
+See the function help for \hyperlink{group__xbee__device_ga3e6f2b540e8cec7a69ef0b0166da14ff}{xbee\+\_\+frame\+\_\+handler\+\_\+fn()} for full documentation on this function\textquotesingle{}s A\+PI.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__discovery_ga20bc82e8efc243e295c99c23948bed3b}{xbee\+\_\+disc\+\_\+nodeid\+\_\+cluster\+\_\+handler}, \hyperlink{group__xbee__discovery_ga6d1190133ded980a4eeca2034508c8a5}{xbee\+\_\+disc\+\_\+atnd\+\_\+response\+\_\+handler} 
+\end{DoxySeeAlso}
+
+
+References \+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass(), E\+I\+N\+V\+AL, F\+AR, node\+\_\+data, and X\+B\+E\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER.
+
+\mbox{\Hypertarget{group__xbee__discovery_ga091ae347ddae0bd1b54948714e9d6933}\label{group__xbee__discovery_ga091ae347ddae0bd1b54948714e9d6933}} 
+\index{Node Discovery@{Node Discovery}!xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler@{xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler}}
+\index{xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler@{xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler}!Node Discovery@{Node Discovery}}
+\subsubsection{\texorpdfstring{xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler()}{xbee\_disc\_remove\_node\_id\_handler()}}
+{\footnotesize\ttfamily int xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{\hyperlink{group__xbee__device_ga64bf72cf58030a080f12f8916cd7d2a2}{xbee\+\_\+disc\+\_\+node\+\_\+id\+\_\+fn}}]{fn }\end{DoxyParamCaption})}
+
+
+
+Remove a function registered to receive parsed Node ID messages on a given X\+Bee device. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & X\+Bee device to monitor \\
+\hline
+\mbox{\tt in}  & {\em fn} & function to receive parsed Node ID messages\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & function removed \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+{\em -\/\+E\+N\+O\+E\+NT} & function isn\textquotesingle{}t assigned to this X\+Bee module\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__discovery_ga091ae347ddae0bd1b54948714e9d6933}{xbee\+\_\+disc\+\_\+remove\+\_\+node\+\_\+id\+\_\+handler} 
+\end{DoxySeeAlso}
+
+
+References \+\_\+xbee\+\_\+disc\+\_\+parse\+\_\+and\+\_\+pass(), E\+I\+N\+V\+AL, E\+N\+O\+E\+NT, F\+AR, length, node\+\_\+data, and xbee\+\_\+dev\+\_\+t\+::node\+\_\+id\+\_\+handler.
+

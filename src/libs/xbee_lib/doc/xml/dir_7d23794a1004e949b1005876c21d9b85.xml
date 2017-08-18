@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_7d23794a1004e949b1005876c21d9b85" kind="dir">
+    <compoundname>src/mbed</compoundname>
+    <innerfile refid="xbee__platform__mbed_8cpp">xbee_platform_mbed.cpp</innerfile>
+    <innerfile refid="xbee__serial__mbed_8cpp">xbee_serial_mbed.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/mbed/"/>
+  </compounddef>
+</doxygen>

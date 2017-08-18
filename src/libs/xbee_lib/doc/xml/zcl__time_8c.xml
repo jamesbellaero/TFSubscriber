@@ -1,0 +1,882 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="zcl__time_8c" kind="file" language="C++">
+    <compoundname>zcl_time.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">time.h</includes>
+    <includes refid="platform_8h" local="yes">xbee/platform.h</includes>
+    <includes refid="byteorder_8h" local="yes">xbee/byteorder.h</includes>
+    <includes refid="zcl__time_8h" local="yes">zigbee/zcl_time.h</includes>
+    <includes refid="zdo_8h" local="yes">zigbee/zdo.h</includes>
+    <includes refid="zcl__client_8h" local="yes">zigbee/zcl_client.h</includes>
+    <incdepgraph>
+      <node id="1659">
+        <label>src/zigbee/zcl_time.c</label>
+        <link refid="zcl__time_8c"/>
+        <childnode refid="1660" relation="include">
+        </childnode>
+        <childnode refid="1661" relation="include">
+        </childnode>
+        <childnode refid="1662" relation="include">
+        </childnode>
+        <childnode refid="1663" relation="include">
+        </childnode>
+        <childnode refid="1668" relation="include">
+        </childnode>
+        <childnode refid="1670" relation="include">
+        </childnode>
+        <childnode refid="1677" relation="include">
+        </childnode>
+        <childnode refid="1678" relation="include">
+        </childnode>
+      </node>
+      <node id="1661">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1664">
+        <label>errno.h</label>
+      </node>
+      <node id="1666">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="1667" relation="include">
+        </childnode>
+      </node>
+      <node id="1676">
+        <label>xbee/time.h</label>
+      </node>
+      <node id="1665">
+        <label>stddef.h</label>
+      </node>
+      <node id="1678">
+        <label>zigbee/zcl_client.h</label>
+        <link refid="zcl__client_8h"/>
+        <childnode refid="1672" relation="include">
+        </childnode>
+        <childnode refid="1671" relation="include">
+        </childnode>
+      </node>
+      <node id="1672">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="1673" relation="include">
+        </childnode>
+      </node>
+      <node id="1668">
+        <label>xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="1669" relation="include">
+        </childnode>
+        <childnode refid="1663" relation="include">
+        </childnode>
+      </node>
+      <node id="1671">
+        <label>zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="1663" relation="include">
+        </childnode>
+        <childnode refid="1672" relation="include">
+        </childnode>
+        <childnode refid="1674" relation="include">
+        </childnode>
+      </node>
+      <node id="1669">
+        <label>string.h</label>
+      </node>
+      <node id="1673">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="1663" relation="include">
+        </childnode>
+      </node>
+      <node id="1663">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="1664" relation="include">
+        </childnode>
+        <childnode refid="1665" relation="include">
+        </childnode>
+        <childnode refid="1666" relation="include">
+        </childnode>
+      </node>
+      <node id="1670">
+        <label>zigbee/zcl_time.h</label>
+        <link refid="zcl__time_8h"/>
+        <childnode refid="1662" relation="include">
+        </childnode>
+        <childnode refid="1671" relation="include">
+        </childnode>
+        <childnode refid="1676" relation="include">
+        </childnode>
+      </node>
+      <node id="1674">
+        <label>zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="1663" relation="include">
+        </childnode>
+        <childnode refid="1668" relation="include">
+        </childnode>
+        <childnode refid="1675" relation="include">
+        </childnode>
+      </node>
+      <node id="1675">
+        <label>zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="1663" relation="include">
+        </childnode>
+      </node>
+      <node id="1662">
+        <label>time.h</label>
+      </node>
+      <node id="1677">
+        <label>zigbee/zdo.h</label>
+        <link refid="zdo_8h"/>
+        <childnode refid="1673" relation="include">
+        </childnode>
+        <childnode refid="1672" relation="include">
+        </childnode>
+      </node>
+      <node id="1667">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+      <node id="1660">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__zcl__time_1ga5d1d038f66ada681b4430b29f7dc4cda" prot="public" static="no">
+        <name>_zcl_time_debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="36" column="10" bodyfile="src/zigbee/zcl_time.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" prot="public" static="no" mutable="no">
+        <type>zcl_utctime_t</type>
+        <definition>zcl_utctime_t zcl_time_time</definition>
+        <argsstring></argsstring>
+        <name>zcl_time_time</name>
+        <briefdescription>
+<para>Current value of Time Attribute (<ref refid="group__zcl__time_1ga6abf0e2cc70ac533ebe153a40185be63" kindref="member">ZCL_TIME_ATTR_TIME</ref>), start value doesn&apos;t matter since it is set by <ref refid="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" kindref="member">_zcl_time_time_get()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="45" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="50" bodyend="-1"/>
+        <referencedby refid="group__zcl__time_1gad56f618c84b428540c5ffcb60095462c" compoundref="zcl__time_8c" startline="246" endline="259">zcl_time_now</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t zcl_time_timestatus</definition>
+        <argsstring></argsstring>
+        <name>zcl_time_timestatus</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Current value of TimeStatus Attribute (<ref refid="group__zcl__time_1ga5931aa648c777cb21c8337249b6e1699" kindref="member">ZCL_TIME_ATTR_TIME_STATUS</ref>) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="46" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="56" bodyend="-1"/>
+        <referencedby refid="group__zcl__time_1ga052b988d6d2448af6640028b45ee1f68" compoundref="zcl__time_8c" startline="81" endline="113">_zcl_time_time_set</referencedby>
+        <referencedby refid="group__zcl__time_1gad56f618c84b428540c5ffcb60095462c" compoundref="zcl__time_8c" startline="246" endline="259">zcl_time_now</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__time_1ga999cc34fc0c4c1eb840543f1e8237d29" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gafd12020da5a235dfcf0c3c748fb5baed" kindref="member">int32_t</ref></type>
+        <definition>int32_t zcl_time_skew</definition>
+        <argsstring></argsstring>
+        <name>zcl_time_skew</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>difference between xbee_seconds_timer() and actual calendar time </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="65" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="65" bodyend="-1"/>
+        <referencedby refid="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" compoundref="zcl__time_8c" startline="124" endline="149">_zcl_time_time_get</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__time_1ga9ebc2ff4a76b13297f08e147d092cf48" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref></type>
+        <definition>zcl_attribute_full_t time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="202" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__time_1ga1d1b0a116c32c46e7ab4c94e5f789cfa" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref></type>
+        <definition>zcl_attribute_full_t time_status</definition>
+        <argsstring></argsstring>
+        <name>time_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="203" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__time_1ga2066d4a3853d4b0d8de8b162f829e10f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t end_of_list</definition>
+        <argsstring></argsstring>
+        <name>end_of_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="204" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__time_1gad6a3c9d4f109933785ddc31101dabdc1" prot="public" static="no" mutable="no">
+        <type>const struct @4</type>
+        <definition>const struct @4  zcl_time_attr</definition>
+        <argsstring></argsstring>
+        <name>zcl_time_attr</name>
+        <initializer>=
+{
+
+	{ { <ref refid="group__zcl__time_1ga6abf0e2cc70ac533ebe153a40185be63" kindref="member">ZCL_TIME_ATTR_TIME</ref>,
+		<ref refid="group__zcl_1ga40104652d30fa17b7ea5dde9e8b788b8" kindref="member">ZCL_ATTRIB_FLAG_FULL</ref>,
+		<ref refid="group__zcl__types_1ga8f678e97557cb052c0df4be97e9f1e82" kindref="member">ZCL_TYPE_TIME_UTCTIME</ref>,
+		&amp;<ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref> },
+		{ 0 }, { 0 },
+		&amp;<ref refid="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" kindref="member">_zcl_time_time_get</ref>, &amp;<ref refid="group__zcl__time_1ga052b988d6d2448af6640028b45ee1f68" kindref="member">_zcl_time_time_set</ref> },
+	{ { <ref refid="group__zcl__time_1ga5931aa648c777cb21c8337249b6e1699" kindref="member">ZCL_TIME_ATTR_TIME_STATUS</ref>,
+		<ref refid="group__zcl_1ga40104652d30fa17b7ea5dde9e8b788b8" kindref="member">ZCL_ATTRIB_FLAG_FULL</ref>,
+		ZCL_TYPE_BITMAP_8BIT,
+		&amp;<ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref> },
+		{ 0 }, { 0 },
+		NULL, &amp;<ref refid="group__zcl__time_1ga1b55e2dc0a4e0752c92dda9b65d349d2" kindref="member">_zcl_time_timestatus_set</ref> },
+	<ref refid="group__zcl_1gab05da20cf1dfaef97e20dfca2fd26d14" kindref="member">ZCL_ATTRIBUTE_END_OF_LIST</ref>
+}</initializer>
+        <briefdescription>
+<para>Global attribute list used in #ZCL_CLUST_ENTRY_TIME_SERVER and for adding a Time Cluster Server to an endpoint. </para>        </briefdescription>
+        <detaileddescription>
+<para>The Time Cluster Client does not have any attributes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__time_1gabd8e3bd6481f3841825a7596bc131b2f" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structzcl__attribute__tree__t" kindref="compound">zcl_attribute_tree_t</ref></type>
+        <definition>const zcl_attribute_tree_t zcl_time_attribute_tree[]</definition>
+        <argsstring>[]</argsstring>
+        <name>zcl_time_attribute_tree</name>
+        <initializer>=
+		{ { ZCL_MFG_NONE, &amp;zcl_time_attr.time.base, NULL } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="223" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__zcl__time_1ga052b988d6d2448af6640028b45ee1f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _zcl_time_time_set</definition>
+        <argsstring>(const zcl_attribute_full_t FAR *attribute, zcl_attribute_write_rec_t *rec)</argsstring>
+        <name>_zcl_time_time_set</name>
+        <param>
+          <type>const <ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>attribute</declname>
+        </param>
+        <param>
+          <type><ref refid="structzcl__attribute__write__rec__t" kindref="compound">zcl_attribute_write_rec_t</ref> *</type>
+          <declname>rec</declname>
+        </param>
+        <briefdescription>
+<para>Function registered to <ref refid="group__zcl__time_1ga6abf0e2cc70ac533ebe153a40185be63" kindref="member">ZCL_TIME_ATTR_TIME</ref> attribute of Time Cluster and called to modify the attribute. Also called internally to update the zcl_time_skew global. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attribute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored; assumed to point to zcl_time_time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">rec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if NULL, function was called internally to update zcl_time_skew only</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+See <ref refid="group__zcl_1ga70fa1740c517a1e49c700cba7cf6b339" kindref="member">zcl_attribute_write_fn()</ref> for calling convention. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="60" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="81" bodyend="113"/>
+        <references refid="group__zcl_1gade818037fd6c985038ff29656089758d" compoundref="zcl_8h" startline="706">zcl_attribute_write_rec_t::status</references>
+        <references refid="group__zcl__time_1gabf057b123b136f20ade3faf065dcb298" compoundref="zcl__time_8h" startline="76">ZCL_TIME_STATUS_MASTER</references>
+        <references refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" compoundref="zcl__time_8c" startline="56">zcl_time_timestatus</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint_fast8_t</type>
+        <definition>uint_fast8_t _zcl_time_time_get</definition>
+        <argsstring>(const zcl_attribute_full_t FAR *attribute)</argsstring>
+        <name>_zcl_time_time_get</name>
+        <param>
+          <type>const <ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>attribute</declname>
+        </param>
+        <briefdescription>
+<para>Function registered to <ref refid="group__zcl__time_1ga6abf0e2cc70ac533ebe153a40185be63" kindref="member">ZCL_TIME_ATTR_TIME</ref> attribute of Time Cluster and called to refresh the Time attribute (global zcl_time_time). </para>        </briefdescription>
+        <detaileddescription>
+<internal><para>See <ref refid="group__zcl_1gace94cfc3f22379fa08a5b8de8c6977f6" kindref="member">zcl_attribute_update_fn()</ref> for calling convention. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="62" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="124" bodyend="149"/>
+        <references refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" compoundref="platform_8h" startline="399">XBEE_UNUSED_PARAMETER</references>
+        <references refid="group__zcl__time_1ga999cc34fc0c4c1eb840543f1e8237d29" compoundref="zcl__time_8c" startline="65">zcl_time_skew</references>
+        <referencedby refid="group__zcl__time_1gad56f618c84b428540c5ffcb60095462c" compoundref="zcl__time_8c" startline="246" endline="259">zcl_time_now</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__time_1ga1b55e2dc0a4e0752c92dda9b65d349d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _zcl_time_timestatus_set</definition>
+        <argsstring>(const zcl_attribute_full_t FAR *attribute, zcl_attribute_write_rec_t *rec)</argsstring>
+        <name>_zcl_time_timestatus_set</name>
+        <param>
+          <type>const <ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>attribute</declname>
+        </param>
+        <param>
+          <type><ref refid="structzcl__attribute__write__rec__t" kindref="compound">zcl_attribute_write_rec_t</ref> *</type>
+          <declname>rec</declname>
+        </param>
+        <briefdescription>
+<para>Special code for setting bitfield of TimeStatus attribute. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para>See ZCL Spec section 3.12.2.2.2 for rules on setting values in this field.</para><para>Only used if device has a Time Server. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="163" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="163" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__time_1gad56f618c84b428540c5ffcb60095462c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_utctime_t</type>
+        <definition>zcl_utctime_t zcl_time_now</definition>
+        <argsstring>(void)</argsstring>
+        <name>zcl_time_now</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the current date/time, using the ZCL epoch of January 1, 2000. </para>        </briefdescription>
+        <detaileddescription>
+<para>Assumes that device has connected to a time server and updated its clock accordingly. Returns ZCL_UTCTIME_INVALID if the device has not synchronized its clock.</para><para>Do not use this value for tracking elapsed time <ndash/> use xbee_seconds_timer() or xbee_millisecond_timer() instead. The value may jump forward (or even backward) when the device decides to synchronize with a time server.</para><para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>ZCL_UTCTIME_INVALID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Clock not synchronized to a time source. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0-0xFFFFFFFE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elapsed seconds since midnight UTC on January 1, 2000.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__hal_1ga5c1a8bccd41acf1d7264a75698077749" kindref="member">xbee_seconds_timer</ref>, <ref refid="group__hal_1ga22b4e3df788254ca5f8530e9aee58515" kindref="member">xbee_millisecond_timer</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="246" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="246" bodyend="259"/>
+        <references refid="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" compoundref="zcl__time_8c" startline="124" endline="149">_zcl_time_time_get</references>
+        <references refid="group__zcl__time_1gabf057b123b136f20ade3faf065dcb298" compoundref="zcl__time_8h" startline="76">ZCL_TIME_STATUS_MASTER</references>
+        <references refid="group__zcl__time_1ga07fc4fc7df3e8b1b44817bcaa50b7170" compoundref="zcl__time_8h" startline="81">ZCL_TIME_STATUS_SYNCHRONIZED</references>
+        <references refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" compoundref="zcl__time_8c" startline="50">zcl_time_time</references>
+        <references refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" compoundref="zcl__time_8c" startline="56">zcl_time_timestatus</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__time_1ga2c66ee215547beae5b5dde4f23cc8e00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int zcl_time_client</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, void FAR *context)</argsstring>
+        <name>zcl_time_client</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Handle Read Attribute Responses to requests sent as part of the <ref refid="group__zcl__time_1ga32a901048d0bf5b6c6cf9a1cf7fb1e28" kindref="member">zcl_time_find_servers()</ref> process. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function expects to receive &quot;read attribute response&quot; packets ONLY for reads of Time and TimeStatus.</para><para>If responding device is a master or is synchronized with one, use it&apos;s Time value to update a &quot;skew&quot; global used to track the offset between system time (which may just be &quot;seconds of uptime&quot;) and calendar time.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>envelope from received message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to attribute list for cluster (typically passed in via endpoint dispatcher)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command was processed and default response (with either success or error status) was sent.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error sending default response; time may or may not have been set. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="291" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="291" bodyend="392"/>
+        <references refid="group__zcl_1ga1a5aaa930940857f68f245eeb89506b5" compoundref="zcl_8h" startline="889">zcl_command_t::command</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__zcl_1ga5226462a41663bc81a5d67c04f18868a" compoundref="zcl_8h" startline="882">zcl_command_t::frame_control</references>
+        <references refid="group__zcl_1ga0bbd651dae138e104715e6e2de62084e" compoundref="zcl_8h" startline="261">ZCL_CMD_MATCH</references>
+        <references refid="group__zcl_1ga85ca2068c5dc26db307b60b0ac54bc9c" compoundref="zcl_8h" startline="357">ZCL_CMD_READ_ATTRIB_RESP</references>
+        <references refid="group__zcl_1gadeb35ab493fffec9ba1c33f658929136" compoundref="zigbee__zcl_8c" startline="1474" endline="1545">zcl_command_build</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__time_1ga32a901048d0bf5b6c6cf9a1cf7fb1e28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int zcl_time_find_servers</definition>
+        <argsstring>(wpan_dev_t *dev, uint16_t profile_id)</argsstring>
+        <name>zcl_time_find_servers</name>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>profile_id</declname>
+        </param>
+        <briefdescription>
+<para>Find Time Servers on the network, query them for the current time and then synchronize this device&apos;s clock to that time. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function uses a static buffer to hold context information for the ZDO responder that generates the ZCL Read Attributes request. Wait at least 60 seconds between calls to allow for earlier requests to time out.</para></simplesect>
+<simplesect kind="note"><para>This function will only work correctly if the Time Cluster Client in your endpoint table is using the <ref refid="group__zcl__time_1ga2c66ee215547beae5b5dde4f23cc8e00" kindref="member">zcl_time_client()</ref> function as its callback handler. If you use the ZCL_CLUST_ENTRY_TIME_CLIENT or ZCL_CLUST_ENTRY_TIME_BOTH macro, the client cluster is set up correctly.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device to send query on </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">profile_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>profile ID to match in endpoint table or #WPAN_APS_PROFILE_ANY to use the first endpoint with a Time Cluster Client</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Successfully issued ZDO Match Descriptor Request to find Time Cluster Servers on the network. No guarantee that we&apos;ll get a response. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Some sort of error occurred in generating or sending the ZDO Match Descriptor Request. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Couldn&apos;t find a Time Cluster Client with <computeroutput>profile_id</computeroutput> in the endpoint table of <computeroutput>dev</computeroutput>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_time.c" line="427" column="1" bodyfile="src/zigbee/zcl_time.c" bodystart="427" bodyend="464"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Client and server code to implement the ZigBee Time Cluster. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is an attribute-only cluster, so it could use the General Command handler in its cluster definition, but we use a special client to intercept Read Attribute Responses so we don&apos;t take up an entry in the conversation table. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">/***<sp/>BeginHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="byteorder_8h" kindref="compound">xbee/byteorder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zcl__time_8h" kindref="compound">zigbee/zcl_time.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zdo_8h" kindref="compound">zigbee/zdo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__DC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>_zcl_time_debug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>ZCL_TIME_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>_zcl_time_debug<sp/><sp/><sp/><sp/>__debug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>_zcl_time_debug<sp/><sp/><sp/><sp/>__nodebug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>zcl_time_time,<sp/>zcl_time_timestatus<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>zcl_utctime_t<sp/><ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight></codeline>
+<codeline lineno="50" refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" refkind="member"><highlight class="normal">zcl_utctime_t<sp/><sp/><ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#ifdef<sp/>ZCL_ENABLE_TIME_SERVER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref><sp/>=<sp/><ref refid="group__zcl__time_1gabf057b123b136f20ade3faf065dcb298" kindref="member">ZCL_TIME_STATUS_MASTER</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>_zcl_time_time_set,<sp/>_zcl_time_time_get<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zcl__time_1ga052b988d6d2448af6640028b45ee1f68" kindref="member">_zcl_time_time_set</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*attribute,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__write__rec__t" kindref="compound">zcl_attribute_write_rec_t</ref><sp/>*rec);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">uint_fast8_t<sp/><ref refid="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" kindref="member">_zcl_time_time_get</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*attribute);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight></codeline>
+<codeline lineno="65" refid="group__zcl__time_1ga999cc34fc0c4c1eb840543f1e8237d29" refkind="member"><highlight class="normal"><ref refid="group__hal__dos_1gafd12020da5a235dfcf0c3c748fb5baed" kindref="member">int32_t</ref><sp/><ref refid="group__zcl__time_1ga999cc34fc0c4c1eb840543f1e8237d29" kindref="member">zcl_time_skew</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">_zcl_time_debug</highlight></codeline>
+<codeline lineno="81" refid="group__zcl__time_1ga052b988d6d2448af6640028b45ee1f68" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zcl__time_1ga052b988d6d2448af6640028b45ee1f68" kindref="member">_zcl_time_time_set</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*attribute,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__write__rec__t" kindref="compound">zcl_attribute_write_rec_t</ref><sp/>*rec)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref><sp/>bytes_read<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>decode<sp/>using<sp/>standard<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rec)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>this<sp/>device<sp/>is<sp/>a<sp/>MASTER,<sp/>Time<sp/>is<sp/>read-only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref><sp/>&amp;<sp/><ref refid="group__zcl__time_1gabf057b123b136f20ade3faf065dcb298" kindref="member">ZCL_TIME_STATUS_MASTER</ref>)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rec-&gt;<ref refid="group__zcl_1gade818037fd6c985038ff29656089758d" kindref="member">status</ref><sp/>=<sp/>ZCL_STATUS_READ_ONLY;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rec-&gt;<ref refid="group__zcl_1ga669940d05e1abc9807300f7d34169496" kindref="member">buffer</ref><sp/>+=<sp/>4;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>4;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bytes_read<sp/>=<sp/><ref refid="group__zcl_1ga15bf36dadccd7a045bad7d6f0842e25a" kindref="member">zcl_decode_attribute</ref>(<sp/>&amp;attribute-&gt;base,<sp/>rec);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>(rec-&gt;<ref refid="group__zcl_1gaa2585d779da0ab21273a8d92de9a0ebe" kindref="member">flags</ref><sp/>&amp;<sp/><ref refid="group__zcl_1ga2bb65a6c04a14957000feaa12de9769c" kindref="member">ZCL_ATTR_WRITE_FLAG_ASSIGN</ref>))</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bytes_read;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__zcl__time_1ga999cc34fc0c4c1eb840543f1e8237d29" kindref="member">zcl_time_skew</ref><sp/>=<sp/><ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref><sp/>-</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(xbee_seconds_timer()<sp/>-<sp/>ZCL_TIME_EPOCH_DELTA);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#ifdef<sp/>ZCL_TIME_VERBOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(<sp/></highlight><highlight class="stringliteral">&quot;%s:<sp/>setting<sp/>time<sp/>to<sp/>0x%&quot;</highlight><highlight class="normal"><sp/><ref refid="group__hal_1ga80ca66bcc9e366733f02c90ed4b0838c" kindref="member">PRIx32</ref><sp/></highlight><highlight class="stringliteral">&quot;;<sp/>skew<sp/>is<sp/>%&quot;</highlight><highlight class="normal"><sp/>PRId32<sp/></highlight><highlight class="stringliteral">&quot;<sp/>sec\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FUNCTION__,<sp/><ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref>,<sp/><ref refid="group__zcl__time_1ga999cc34fc0c4c1eb840543f1e8237d29" kindref="member">zcl_time_skew</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bytes_read;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">_zcl_time_debug</highlight></codeline>
+<codeline lineno="124" refid="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" refkind="member"><highlight class="normal">uint_fast8_t<sp/><ref refid="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" kindref="member">_zcl_time_time_get</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*attribute)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>zcl_attribute_update_fn<sp/>API,<sp/>but<sp/>&apos;attribute&apos;<sp/>parameter&apos;s<sp/>value<sp/>is<sp/>always</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>pointer<sp/>to<sp/>&apos;zcl_time_time&apos;<sp/>variable.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>attribute);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ZCL_TIME_EPOCH_DELTA<sp/>&gt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/><ref refid="group__zcl__time_1ga999cc34fc0c4c1eb840543f1e8237d29" kindref="member">zcl_time_skew</ref><sp/>&amp;&amp;<sp/>xbee_seconds_timer()<sp/>&lt;<sp/>ZCL_TIME_EPOCH_DELTA)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>don&apos;t<sp/>really<sp/>know<sp/>what<sp/>time<sp/>it<sp/>is...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref><sp/>=<sp/>ZCL_UTCTIME_INVALID;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref><sp/>=<sp/><ref refid="group__zcl__time_1ga999cc34fc0c4c1eb840543f1e8237d29" kindref="member">zcl_time_skew</ref><sp/>+</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(xbee_seconds_timer()<sp/>-<sp/>ZCL_TIME_EPOCH_DELTA);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#ifdef<sp/>ZCL_TIME_VERBOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(<sp/></highlight><highlight class="stringliteral">&quot;%s:<sp/>read<sp/>clock<sp/>&amp;<sp/>updated<sp/>zcl_time_time<sp/>to<sp/>0x%&quot;</highlight><highlight class="normal"><sp/><ref refid="group__hal_1ga80ca66bcc9e366733f02c90ed4b0838c" kindref="member">PRIx32</ref><sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FUNCTION__,<sp/><ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ZCL_STATUS_SUCCESS;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>zcl_time_attribute_tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">_zcl_time_debug</highlight></codeline>
+<codeline lineno="163" refid="group__zcl__time_1ga1b55e2dc0a4e0752c92dda9b65d349d2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zcl__time_1ga1b55e2dc0a4e0752c92dda9b65d349d2" kindref="member">_zcl_time_timestatus_set</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*attribute,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__write__rec__t" kindref="compound">zcl_attribute_write_rec_t</ref><sp/>*rec)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/>time_status;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>zcl_attribute_write_fn<sp/>API,<sp/>but<sp/>&apos;attribute&apos;<sp/>parameter&apos;s<sp/>value<sp/>is<sp/>always</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>pointer<sp/>to<sp/>&apos;time_status&apos;<sp/>variable.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>attribute);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rec-&gt;<ref refid="group__zcl_1gaa2585d779da0ab21273a8d92de9a0ebe" kindref="member">flags</ref><sp/>&amp;<sp/><ref refid="group__zcl_1ga2bb65a6c04a14957000feaa12de9769c" kindref="member">ZCL_ATTR_WRITE_FLAG_ASSIGN</ref>)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Master<sp/>and<sp/>MasterZoneDst<sp/>bits<sp/>are<sp/>not<sp/>settable.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>Master<sp/>is<sp/>set<sp/>to<sp/>1,<sp/>Synchronized<sp/>bit<sp/>is<sp/>always<sp/>set<sp/>to<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>time_status<sp/>=<sp/>*rec-&gt;<ref refid="group__zcl_1ga669940d05e1abc9807300f7d34169496" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>only<sp/>set<sp/>the<sp/>Synchronized<sp/>bit<sp/>if<sp/>Master<sp/>bit<sp/>is<sp/>not<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(<ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref><sp/>&amp;<sp/><ref refid="group__zcl__time_1gabf057b123b136f20ade3faf065dcb298" kindref="member">ZCL_TIME_STATUS_MASTER</ref>))</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time_status<sp/>&amp;<sp/><ref refid="group__zcl__time_1ga07fc4fc7df3e8b1b44817bcaa50b7170" kindref="member">ZCL_TIME_STATUS_SYNCHRONIZED</ref>)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>Synchronized<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref><sp/>|=<sp/><ref refid="group__zcl__time_1ga07fc4fc7df3e8b1b44817bcaa50b7170" kindref="member">ZCL_TIME_STATUS_SYNCHRONIZED</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clear<sp/>Synchronized<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref><sp/>&amp;=<sp/>~ZCL_TIME_STATUS_SYNCHRONIZED;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_status;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end_of_list;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}<sp/><ref refid="group__zcl__time_1gad6a3c9d4f109933785ddc31101dabdc1" kindref="member">zcl_time_attr</ref><sp/>=</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>ID,<sp/>Flags,<sp/>Type,<sp/>Address<sp/>to<sp/>data,<sp/>min,<sp/>max,<sp/>read,<sp/>write</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/>{<sp/>{<sp/><ref refid="group__zcl__time_1ga6abf0e2cc70ac533ebe153a40185be63" kindref="member">ZCL_TIME_ATTR_TIME</ref>,</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl_1ga40104652d30fa17b7ea5dde9e8b788b8" kindref="member">ZCL_ATTRIB_FLAG_FULL</ref>,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__types_1ga8f678e97557cb052c0df4be97e9f1e82" kindref="member">ZCL_TYPE_TIME_UTCTIME</ref>,</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref><sp/>},</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0<sp/>},<sp/>{<sp/>0<sp/>},</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" kindref="member">_zcl_time_time_get</ref>,<sp/>&amp;<ref refid="group__zcl__time_1ga052b988d6d2448af6640028b45ee1f68" kindref="member">_zcl_time_time_set</ref><sp/>},</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/>{<sp/>{<sp/><ref refid="group__zcl__time_1ga5931aa648c777cb21c8337249b6e1699" kindref="member">ZCL_TIME_ATTR_TIME_STATUS</ref>,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl_1ga40104652d30fa17b7ea5dde9e8b788b8" kindref="member">ZCL_ATTRIB_FLAG_FULL</ref>,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_BITMAP_8BIT,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref><sp/>},</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0<sp/>},<sp/>{<sp/>0<sp/>},</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/>&amp;<ref refid="group__zcl__time_1ga1b55e2dc0a4e0752c92dda9b65d349d2" kindref="member">_zcl_time_timestatus_set</ref><sp/>},</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__zcl_1gab05da20cf1dfaef97e20dfca2fd26d14" kindref="member">ZCL_ATTRIBUTE_END_OF_LIST</ref></highlight></codeline>
+<codeline lineno="221"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__attribute__tree__t" kindref="compound">zcl_attribute_tree_t</ref><sp/>zcl_time_attribute_tree[]<sp/>=</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>ZCL_MFG_NONE,<sp/>&amp;<ref refid="group__zcl__time_1gad6a3c9d4f109933785ddc31101dabdc1" kindref="member">zcl_time_attr</ref>.time.base,<sp/>NULL<sp/>}<sp/>};</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>zcl_time_now<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight></codeline>
+<codeline lineno="246" refid="group__zcl__time_1gad56f618c84b428540c5ffcb60095462c" refkind="member"><highlight class="normal">zcl_utctime_t<sp/><ref refid="group__zcl__time_1gad56f618c84b428540c5ffcb60095462c" kindref="member">zcl_time_now</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Confirm<sp/>that<sp/>we<sp/>are<sp/>a<sp/>master<sp/>or<sp/>have<sp/>synchronized<sp/>with<sp/>one.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<sp/>(<ref refid="group__zcl__time_1gabf057b123b136f20ade3faf065dcb298" kindref="member">ZCL_TIME_STATUS_MASTER</ref><sp/>|<sp/><ref refid="group__zcl__time_1ga07fc4fc7df3e8b1b44817bcaa50b7170" kindref="member">ZCL_TIME_STATUS_SYNCHRONIZED</ref>))</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" kindref="member">_zcl_time_time_get</ref>(<sp/>NULL);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref>;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ZCL_UTCTIME_INVALID;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>zcl_time_client<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="comment">//<sp/>TODO:<sp/>make<sp/>use<sp/>of<sp/>zcl_process_read_attr_response()<sp/>in<sp/>zcl_client.c<sp/>to<sp/>parse</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Read<sp/>Attributes<sp/>Response<sp/>and<sp/>populate<sp/>a<sp/>temporary<sp/>attribute<sp/>list<sp/>with<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">//<sp/>values.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">_zcl_time_debug</highlight></codeline>
+<codeline lineno="291" refid="group__zcl__time_1ga2c66ee215547beae5b5dde4f23cc8e00" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zcl__time_1ga2c66ee215547beae5b5dde4f23cc8e00" kindref="member">zcl_time_client</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context)</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__command__t" kindref="compound">zcl_command_t</ref><sp/><sp/>zcl;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We&apos;re<sp/>only<sp/>expecting<sp/>Read<sp/>Attribute<sp/>Responses.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>frame<sp/>is<sp/>server-to-client,<sp/>not<sp/>manufacturer-specific<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>profile<sp/>(not<sp/>cluster)<sp/>command.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__zcl_1gadeb35ab493fffec9ba1c33f658929136" kindref="member">zcl_command_build</ref>(<sp/>&amp;zcl,<sp/>envelope,<sp/>context)<sp/>==<sp/>0<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>zcl.<ref refid="group__zcl_1ga1a5aaa930940857f68f245eeb89506b5" kindref="member">command</ref><sp/>==<sp/><ref refid="group__zcl_1ga85ca2068c5dc26db307b60b0ac54bc9c" kindref="member">ZCL_CMD_READ_ATTRIB_RESP</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl_1ga0bbd651dae138e104715e6e2de62084e" kindref="member">ZCL_CMD_MATCH</ref>(<sp/>&amp;zcl.<ref refid="group__zcl_1ga5226462a41663bc81a5d67c04f18868a" kindref="member">frame_control</ref>,<sp/>GENERAL,<sp/>SERVER_TO_CLIENT,<sp/>PROFILE))</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__zcl_1gafc361d46dded7f1761048d78e3d4e18d" kindref="member">zcl_header_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*header<sp/>=<sp/>envelope-&gt;payload;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*u8;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*u16_le;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*u32_le;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>walk;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>used<sp/>to<sp/>walk<sp/>the<sp/>payload</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*payload_end;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute_id;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute_type;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>zcl_utctime_t<sp/><sp/>time<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_status<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/>ZCL_STATUS_SUCCESS;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>ZCL_TIME_VERBOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(<sp/></highlight><highlight class="stringliteral">&quot;%s:<sp/>%d-byte<sp/>payload<sp/>to<sp/>time<sp/>client\n&quot;</highlight><highlight class="normal">,<sp/>__FUNCTION__,</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>envelope-&gt;length);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__util_1gaa321236a0cb6f4e0dad592fdf1b550d2" kindref="member">hex_dump</ref>(<sp/>envelope-&gt;payload,<sp/>envelope-&gt;length,<sp/><ref refid="group__hal_1ga696f6553e33cbd20eda34e220ec9939a" kindref="member">HEX_DUMP_FLAG_TAB</ref>);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>payload_end<sp/>=<sp/>((<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*)envelope-&gt;payload)<sp/>+<sp/>envelope-&gt;length;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>walk.u8<sp/>=<sp/>header-&gt;type.std.common.payload;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(response<sp/>==<sp/>ZCL_STATUS_SUCCESS<sp/>&amp;&amp;<sp/>walk.u8<sp/>&lt;<sp/>payload_end)</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute_id<sp/>=<sp/><ref refid="group__util__byteorder_1ga684a5d26d1989cbd925e97292cc81c72" kindref="member">le16toh</ref>(<sp/>*walk.u16_le++);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*walk.u8++<sp/>==<sp/>ZCL_STATUS_SUCCESS)</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute_type<sp/>=<sp/>*walk.u8++;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute_id<sp/>==<sp/><ref refid="group__zcl__time_1ga6abf0e2cc70ac533ebe153a40185be63" kindref="member">ZCL_TIME_ATTR_TIME</ref>)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute_type<sp/>!=<sp/><ref refid="group__zcl__types_1ga8f678e97557cb052c0df4be97e9f1e82" kindref="member">ZCL_TYPE_TIME_UTCTIME</ref>)</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/>ZCL_STATUS_INVALID_DATA_TYPE;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>=<sp/><ref refid="group__util__byteorder_1gad2dfbafcefb3add65ea44e581398e90a" kindref="member">le32toh</ref>(<sp/>*walk.u32_le++);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute_id<sp/>==<sp/><ref refid="group__zcl__time_1ga5931aa648c777cb21c8337249b6e1699" kindref="member">ZCL_TIME_ATTR_TIME_STATUS</ref>)</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute_type<sp/>!=<sp/>ZCL_TYPE_BITMAP_8BIT)</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/>ZCL_STATUS_INVALID_DATA_TYPE;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_status<sp/>=<sp/>*walk.u8++;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>unexpected<sp/>attribute<sp/>in<sp/>response</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/>ZCL_STATUS_UNSUPPORTED_ATTRIBUTE;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>didn&apos;t<sp/>get<sp/>a<sp/>valid<sp/>time<sp/>in<sp/>response</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(response<sp/>==<sp/>ZCL_STATUS_SUCCESS<sp/>&amp;&amp;<sp/>!<sp/>time)</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>ZCL_TIME_VERBOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(<sp/></highlight><highlight class="stringliteral">&quot;%s:<sp/>response<sp/>did<sp/>not<sp/>contain<sp/>a<sp/>valid<sp/>time\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FUNCTION__);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/>ZCL_STATUS_FAILURE;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(response<sp/>==<sp/>ZCL_STATUS_SUCCESS)</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>ZCL_TIME_VERBOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(<sp/></highlight><highlight class="stringliteral">&quot;%s:<sp/>the<sp/>time<sp/>is<sp/>%&quot;</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaaf2af4a10f0bd308e9c349c8382382be" kindref="member">PRIu32</ref><sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,<sp/>__FUNCTION__,<sp/>time);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>set<sp/>the<sp/>clock<sp/>if<sp/>the<sp/>response<sp/>has<sp/>a<sp/>valid<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time<sp/>!=<sp/>ZCL_UTCTIME_INVALID<sp/>&amp;&amp;<sp/>(time_status<sp/>&amp;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="group__zcl__time_1gabf057b123b136f20ade3faf065dcb298" kindref="member">ZCL_TIME_STATUS_MASTER</ref><sp/>|<sp/><ref refid="group__zcl__time_1ga07fc4fc7df3e8b1b44817bcaa50b7170" kindref="member">ZCL_TIME_STATUS_SYNCHRONIZED</ref>))<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga4e1da84a7e72ee1626d6328252fd621a" kindref="member">zcl_time_time</ref><sp/>=<sp/>time;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga052b988d6d2448af6640028b45ee1f68" kindref="member">_zcl_time_time_set</ref>(<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>Synchronized<sp/>bit<sp/>of<sp/>our<sp/>TimeStatus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga76f465fead960f138224d8e2a9a59469" kindref="member">zcl_time_timestatus</ref><sp/>|=<sp/><ref refid="group__zcl__time_1ga07fc4fc7df3e8b1b44817bcaa50b7170" kindref="member">ZCL_TIME_STATUS_SYNCHRONIZED</ref>;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__zcl_1gab5c99acba0d864acd326bcab46d1416e" kindref="member">zcl_default_response</ref>(<sp/>&amp;zcl,<sp/>response);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>command<sp/>not<sp/>handled<sp/>by<sp/>this<sp/>function,<sp/>try<sp/>general<sp/>command<sp/>handler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__zcl_1gac3849121e93e777ce9a7510d24517b9b" kindref="member">zcl_general_command</ref>(<sp/>envelope,<sp/>context);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>zcl_time_find_servers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zcl__client_8h" kindref="compound">zigbee/zcl_client.h</ref>&quot;</highlight></codeline>
+<codeline lineno="427" refid="group__zcl__time_1ga32a901048d0bf5b6c6cf9a1cf7fb1e28" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zcl__time_1ga32a901048d0bf5b6c6cf9a1cf7fb1e28" kindref="member">zcl_time_find_servers</ref>(<sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*dev,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>profile_id)</highlight></codeline>
+<codeline lineno="428"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Might<sp/>as<sp/>well<sp/>keep<sp/>this<sp/>const<sp/>--<sp/>fewer<sp/>bytes<sp/>to<sp/>have<sp/>a<sp/>const<sp/>table<sp/>than</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>have<sp/>code<sp/>to<sp/>build<sp/>it<sp/>in<sp/>RAM.<sp/><sp/>If<sp/>not<sp/>const,<sp/>still<sp/>needs<sp/>const<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>use<sp/>for<sp/>initializing<sp/>a<sp/>list<sp/>in<sp/>RAM.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>clusters[]<sp/>=</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>ZCL_CLUST_TIME,<sp/><ref refid="group__wpan__aps_1gacbfdff1cef70167f178c4e05b69f65fe" kindref="member">WPAN_CLUSTER_END_OF_LIST</ref><sp/>};</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>structures<sp/>are<sp/>static<sp/>since<sp/>they<sp/>must<sp/>persist<sp/>after<sp/>this<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ends.<sp/><sp/>They&apos;re<sp/>used<sp/>as<sp/>the<sp/>context<sp/>for<sp/>a<sp/>callback,<sp/>and<sp/>the<sp/>function<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>generages<sp/>a<sp/>ZCL<sp/>Read<sp/>Attributes<sp/>Request<sp/>from<sp/>the<sp/>ZDO<sp/>Match<sp/>Descriptor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>response<sp/>needs<sp/>the<sp/>contents<sp/>of<sp/>this<sp/>structure.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>attributes[]<sp/>=</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga6abf0e2cc70ac533ebe153a40185be63" kindref="member">ZCL_TIME_ATTR_TIME</ref>,</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__time_1ga5931aa648c777cb21c8337249b6e1699" kindref="member">ZCL_TIME_ATTR_TIME_STATUS</ref>,</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl_1gab05da20cf1dfaef97e20dfca2fd26d14" kindref="member">ZCL_ATTRIBUTE_END_OF_LIST</ref></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>structure<sp/>can&apos;t<sp/>be<sp/>const,<sp/>since<sp/>we<sp/>fill<sp/>in<sp/>the<sp/>endpoint<sp/>from<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>device&apos;s<sp/>endpoint<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structzcl__client__read__t" kindref="compound">zcl_client_read_t</ref><sp/>client_read<sp/>=</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fill<sp/>in<sp/>with<sp/>endpoint<sp/>passed<sp/>to<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_MFG_NONE,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>part<sp/>of<sp/>ZCL,<sp/>not<sp/>a<sp/>manufacturer-specific<sp/>cluster</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_CLUST_TIME,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cluster<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributes<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>attributes<sp/>to<sp/>request</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>a<sp/>Time<sp/>Cluster<sp/>Client<sp/>with<sp/>the<sp/>correct<sp/>profile<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/>client_read.ep<sp/>=<sp/><ref refid="group__wpan__aps_1ga2cc975231963e0eb75c449c11b1d95de" kindref="member">wpan_endpoint_of_cluster</ref>(<sp/>dev,<sp/>profile_id,</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_CLUST_TIME,<sp/><ref refid="group__wpan__aps_1ga9aae0646b212af63cbb07c98a33cd986" kindref="member">WPAN_CLUST_FLAG_CLIENT</ref>);</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(client_read.ep<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__zcl__client_1gae673efbd325cea1f3befacda58332191" kindref="member">zcl_find_and_read_attributes</ref>(<sp/>dev,<sp/>clusters,<sp/>&amp;client_read);</highlight></codeline>
+<codeline lineno="464"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/zigbee/zcl_time.c"/>
+  </compounddef>
+</doxygen>

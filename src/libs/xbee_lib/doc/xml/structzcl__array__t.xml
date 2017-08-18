@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structzcl__array__t" kind="struct" language="C++" prot="public">
+    <compoundname>zcl_array_t</compoundname>
+    <includes refid="zcl_8h" local="yes">zigbee/zcl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__zcl_1ga7b50573c335728800d65f3fb5479f9bc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t max_count</definition>
+        <argsstring></argsstring>
+        <name>max_count</name>
+        <briefdescription>
+<para>maximum number of elements to store </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="816" column="1" bodyfile="include/zigbee/zcl.h" bodystart="816" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1gaf83468db7e4fc12ef11ded6f62ffe7f8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t current_count</definition>
+        <argsstring></argsstring>
+        <name>current_count</name>
+        <briefdescription>
+<para>current number of elements </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="817" column="1" bodyfile="include/zigbee/zcl.h" bodystart="817" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga16152e39a199182441f04a3360c45657" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t element_size</definition>
+        <argsstring></argsstring>
+        <name>element_size</name>
+        <briefdescription>
+<para>number of bytes in each element </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="818" column="1" bodyfile="include/zigbee/zcl.h" bodystart="818" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>type of data stored in array </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="819" column="1" bodyfile="include/zigbee/zcl.h" bodystart="819" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1gaaaa0b89997c57cfca2dfae40f46e702d" prot="public" static="no" mutable="no">
+        <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const void FAR* value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="820" column="1" bodyfile="include/zigbee/zcl.h" bodystart="820" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>If a <ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref> has a type of ZCL_TYPE_ARRAY, its .value points to this structure. </para>    </briefdescription>
+    <detaileddescription>
+<para>It&apos;s possible to read and write values of the array by accessing <programlisting><codeline><highlight class="normal">(uint8_t<sp/>FAR<sp/>*)arr-&gt;value<sp/>+<sp/>index<sp/>*<sp/>arr-&gt;element_size<sp/></highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+    <location file="include/zigbee/zcl.h" line="815" column="1" bodyfile="include/zigbee/zcl.h" bodystart="814" bodyend="821"/>
+    <listofallmembers>
+      <member refid="group__zcl_1gaf83468db7e4fc12ef11ded6f62ffe7f8" prot="public" virt="non-virtual"><scope>zcl_array_t</scope><name>current_count</name></member>
+      <member refid="group__zcl_1ga16152e39a199182441f04a3360c45657" prot="public" virt="non-virtual"><scope>zcl_array_t</scope><name>element_size</name></member>
+      <member refid="group__zcl_1ga7b50573c335728800d65f3fb5479f9bc" prot="public" virt="non-virtual"><scope>zcl_array_t</scope><name>max_count</name></member>
+      <member refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" prot="public" virt="non-virtual"><scope>zcl_array_t</scope><name>type</name></member>
+      <member refid="group__zcl_1gaaaa0b89997c57cfca2dfae40f46e702d" prot="public" virt="non-virtual"><scope>zcl_array_t</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

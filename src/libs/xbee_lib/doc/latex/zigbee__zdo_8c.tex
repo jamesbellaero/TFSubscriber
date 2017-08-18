@@ -1,0 +1,73 @@
+\hypertarget{zigbee__zdo_8c}{}\section{src/zigbee/zigbee\+\_\+zdo.c File Reference}
+\label{zigbee__zdo_8c}\index{src/zigbee/zigbee\+\_\+zdo.\+c@{src/zigbee/zigbee\+\_\+zdo.\+c}}
+
+
+Zig\+Bee Device Objects (Z\+DO) and Zig\+Bee Device Profile (Z\+DP).  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wpan/aps.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/byteorder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}zigbee/zdo.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries zigbee\+\_\+zdo\+\_\+debug}
+\item 
+\#define {\bfseries Z\+D\+O\+\_\+\+M\+A\+X\+\_\+\+E\+N\+D\+P\+O\+I\+N\+TS}~20
+\item 
+\mbox{\Hypertarget{zigbee__zdo_8c_a7a0df3b2e59823292a8c201fcb90c0c3}\label{zigbee__zdo_8c_a7a0df3b2e59823292a8c201fcb90c0c3}} 
+\#define {\bfseries M\+A\+X\+\_\+\+C\+L\+U\+S\+T\+E\+RS}~((sizeof rsp.\+clusters -\/ 2) / sizeof(\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structwpan__endpoint__table__entry__t}{wpan\+\_\+endpoint\+\_\+table\+\_\+entry\+\_\+t} $\ast$ \hyperlink{group__zdo_gab405baf051b6c2b3c85bc4e80aa5c2bb}{\+\_\+zdo\+\_\+endpoint\+\_\+of} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em Return the endpoint table entry for the Z\+DO endpoint. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zdo_gaaf992619b06595291c2aead8a3d4dba1}{zdo\+\_\+endpoint\+\_\+state} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em Returns the Z\+DO endpoint\textquotesingle{}s state if a device has a Z\+DO endpoint. \end{DoxyCompactList}\item 
+const \hyperlink{unionaddr64}{addr64} $\ast$ \hyperlink{group__zdo_gae4b6736d215caf2a10790761ed52443d}{\+\_\+zdo\+\_\+envelope\+\_\+create} (\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$envelope, \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, const \hyperlink{unionaddr64}{addr64} $\ast$address)
+\begin{DoxyCompactList}\small\item\em helper function for creating Z\+DO request envelopes \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga1d645805a731e1419b5012a5c8a09bf8}{zdo\+\_\+send\+\_\+response} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$request, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Send a response to a Z\+DO request. \end{DoxyCompactList}\item 
+int \hyperlink{group__zdo_ga1a65d88af9f0c9906d548aa1ff2586f7}{\+\_\+match\+\_\+desc\+\_\+cluster\+\_\+list} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} $\ast$$\ast$buffer, const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} $\ast$clust\+\_\+read, int max\+\_\+count)
+\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga5746efffb4b90718eb973796f2b4bb41}{zdo\+\_\+match\+\_\+desc\+\_\+request} (void $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} buflen, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} addr\+\_\+of\+\_\+interest, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} profile\+\_\+id, const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} $\ast$in\+Clust, const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} $\ast$out\+Clust)
+\begin{DoxyCompactList}\small\item\em Generate a Match\+\_\+\+Desc (Match Descriptor) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+7) to send on the network. \end{DoxyCompactList}\item 
+int \hyperlink{group__zdo_ga41d93e5e12d9ed4e18d092fe3af779a2}{\+\_\+zdo\+\_\+match\+\_\+desc\+\_\+respond} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Respond to a Match Descriptor (Match\+\_\+\+Desc) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+7). \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_gafbbece379bc09af360099d1e0825d507}{zdo\+\_\+simple\+\_\+desc\+\_\+request} (\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$envelope, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} addr\+\_\+of\+\_\+interest, uint\+\_\+fast8\+\_\+t \hyperlink{group__zdo_ga7d397493728da2bca8d55b2d61c4ec5d}{endpoint}, \hyperlink{group__wpan__aps_gabf0a6b85c9ff3ff9104c8b58c1436d72}{wpan\+\_\+response\+\_\+fn} callback, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Send a Z\+DO Simple Descriptor Request. \end{DoxyCompactList}\item 
+int \hyperlink{group__zdo_gaa70aa4bcb14a98c69e7a54a9971ea194}{\+\_\+zdo\+\_\+simple\+\_\+desc\+\_\+respond} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Respond to a Simple Descriptor (Simple\+\_\+\+Desc) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+5). \end{DoxyCompactList}\item 
+int \hyperlink{group__zdo_ga558539813d6a9c8813eeae855e77385f}{\+\_\+simple\+\_\+desc\+\_\+cluster\+\_\+list} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} $\ast$$\ast$buffer, int max\+\_\+count, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} mask, const \hyperlink{structwpan__cluster__table__entry__t}{wpan\+\_\+cluster\+\_\+table\+\_\+entry\+\_\+t} $\ast$entry)
+\item 
+int \hyperlink{group__zdo_ga233f2d57bc9b9d68cb18bd9d76c08e34}{\+\_\+zdo\+\_\+active\+\_\+ep\+\_\+respond} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Respond to an Active Endpoint (Active\+\_\+\+EP) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+6). \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga2e4465da8204d6c9a67edc3a6f210c1d}{zdo\+\_\+handler} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ep\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Process Z\+DO frames (received on endpoint 0 with Profile ID 0). \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_gab02e4c1584594c0a96d05399bd69bffa}{zdo\+\_\+send\+\_\+bind\+\_\+req} (\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$envelope, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}, \hyperlink{group__wpan__aps_gabf0a6b85c9ff3ff9104c8b58c1436d72}{wpan\+\_\+response\+\_\+fn} callback, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Send a Z\+DO Bind (or Unbind) Request to the destination address in the envelope. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga4ab17250ec2957d91a6ef4f1377ab62d}{zdo\+\_\+mgmt\+\_\+leave\+\_\+req} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, const \hyperlink{unionaddr64}{addr64} $\ast$address, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Send a Z\+DO Management Leave Request. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_gac842062e5e1a60d25cddf16ec22ef601}{zdo\+\_\+send\+\_\+descriptor\+\_\+req} (\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$envelope, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} cluster, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} addr\+\_\+of\+\_\+interest, \hyperlink{group__wpan__aps_gabf0a6b85c9ff3ff9104c8b58c1436d72}{wpan\+\_\+response\+\_\+fn} callback, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Send a Z\+DO Node, Power, Complex or User Descriptor request, or an Active Endpoint request. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga9c1afb2178cc3e3b515373c7e351fc02}{\+\_\+zdo\+\_\+process\+\_\+nwk\+\_\+addr\+\_\+resp} (\hyperlink{structwpan__conversation__t}{wpan\+\_\+conversation\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$conversation, const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Callback function to process N\+W\+K\+\_\+addr response frames. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga40f076c190ab2390836687b8e1f705eb}{zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ieee\+\_\+be, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$net)
+\begin{DoxyCompactList}\small\item\em Given a device\textquotesingle{}s I\+E\+EE (64-\/bit) address, get its 16-\/bit network address by unicasting a Z\+DO N\+W\+K\+\_\+addr request to it. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_gad723bd899ccda9ec96f6226893c1335b}{\+\_\+zdo\+\_\+process\+\_\+ieee\+\_\+addr\+\_\+resp} (\hyperlink{structwpan__conversation__t}{wpan\+\_\+conversation\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$conversation, const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Callback function to process I\+E\+E\+E\+\_\+addr response frames. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga4af5f8d70054f7883dbc1305e3a3f181}{zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} net\+\_\+addr, \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ieee\+\_\+be)
+\begin{DoxyCompactList}\small\item\em Given a device\textquotesingle{}s 16-\/bit network address, get its I\+E\+EE (64-\/bit) address by unicasting a Z\+DO I\+E\+E\+E\+\_\+addr request to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Zig\+Bee Device Objects (Z\+DO) and Zig\+Bee Device Profile (Z\+DP). 
+
+Note that Zig\+Bee firmware needs to have A\+T\+AO set to 3 (or \char`\"{}not 1\char`\"{}) in order to receive the Simple Descriptor, Active Endpoints and Match Descriptor requests. We assume that the Ember stack handles responses to those requests for our children devies, and will only pass requests up for our device to respond to.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000023}{Todo}]Create a cluster table and have the \hyperlink{group__zdo_gaef7118e478f5ad9949dcd23f6e0901c9}{Z\+D\+O\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T()} macro use it instead of having zdo\+\_\+handler use a switch on cluster\+\_\+id to call the handlers for each command. \end{DoxyRefDesc}

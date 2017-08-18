@@ -1,0 +1,24 @@
+\hypertarget{xbee__platform__posix_8c}{}\section{src/posix/xbee\+\_\+platform\+\_\+posix.c File Reference}
+\label{xbee__platform__posix_8c}\index{src/posix/xbee\+\_\+platform\+\_\+posix.\+c@{src/posix/xbee\+\_\+platform\+\_\+posix.\+c}}
+
+
+Platform-\/specific functions for use by the X\+Bee Driver on P\+O\+S\+IX platform.  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__hal__posix_gad66d00b144089426f04db771be5baa8b}{xbee\+\_\+seconds\+\_\+timer} ()
+\begin{DoxyCompactList}\small\item\em Platform-\/specific function to return the number of elapsed seconds. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__hal__posix_ga63bb246b86f72e88fa8ddc7a429c0e67}{xbee\+\_\+millisecond\+\_\+timer} ()
+\begin{DoxyCompactList}\small\item\em Platform-\/specific function to return the number of elapsed milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Platform-\/specific functions for use by the X\+Bee Driver on P\+O\+S\+IX platform. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Create a platform unit test, one that can verify that the millisecond timer doesn\textquotesingle{}t run backwards and that it matches up accurately with the seconds timer (base it on the H\+C\+S08 regression). \end{DoxyRefDesc}

@@ -1,0 +1,65 @@
+\hypertarget{route_8h}{}\section{include/xbee/route.h File Reference}
+\label{route_8h}\index{include/xbee/route.\+h@{include/xbee/route.\+h}}
+
+
+Receive inbound route records, and send \char`\"{}\+Create Source Route\char`\"{} frames.  
+
+
+{\ttfamily \#include \char`\"{}xbee/device.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__xbee__route_ga41b7c2f8ef5f6e4912572871790611d2}{X\+B\+E\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+M\+A\+X\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+C\+O\+U\+NT}~11
+\begin{DoxyCompactList}\small\item\em Number of addresses that can appear in a Create Source Route request or a Route Record Indicator frame. \end{DoxyCompactList}\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+O\+U\+TE}~0x21
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+O\+P\+T\+I\+O\+N\+S\+\_\+\+N\+O\+NE}~0x00
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+R\+E\+C\+O\+R\+D\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR}~0x\+A1
+\item 
+\#define \hyperlink{group__xbee__route_ga47ed8d34bae2282e8397becffbe212fb}{X\+B\+E\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+D\+U\+M\+P\+\_\+\+R\+E\+C\+O\+R\+D\+\_\+\+I\+N\+D\+I\+C\+A\+T\+OR}
+\begin{DoxyCompactList}\small\item\em Add this macro to the list of X\+Bee frame handlers to have route record indicators dumped to S\+T\+D\+O\+UT. \end{DoxyCompactList}\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+M\+A\+N\+Y\+\_\+\+T\+O\+\_\+\+O\+N\+E\+\_\+\+R\+EQ}~0x\+A3
+\item 
+\#define \hyperlink{group__xbee__route_gab9293f39692e0bc50896eed12ef89d4e}{X\+B\+E\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+D\+U\+M\+P\+\_\+\+M\+A\+N\+Y\+\_\+\+T\+O\+\_\+\+O\+N\+E\+\_\+\+R\+EQ}
+\begin{DoxyCompactList}\small\item\em Add this macro to the list of X\+Bee frame handlers to have route record indicators dumped to S\+T\+D\+O\+UT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries xbee\+\_\+frame\+\_\+create\+\_\+source\+\_\+route\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries xbee\+\_\+frame\+\_\+route\+\_\+record\+\_\+indicator\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__route_gafc3f728061ea39f21f16bc8ac5d443bd}{xbee\+\_\+frame\+\_\+route\+\_\+many\+\_\+to\+\_\+one\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em The many-\/to-\/one route request indicator frame is sent out the serial port whenever a many-\/to-\/one route request is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries xbee\+\_\+route\+\_\+dump\+\_\+record\+\_\+indicator} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$frame, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\item 
+int {\bfseries xbee\+\_\+route\+\_\+dump\+\_\+many\+\_\+to\+\_\+one\+\_\+req} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$frame, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__route_ga03c1016ac46b9df250b994f242cf956a}{frame\+\_\+id}
+\begin{DoxyCompactList}\small\item\em ID, always set to 0. \end{DoxyCompactList}\item 
+\hyperlink{unionaddr64}{addr64} \hyperlink{group__xbee__route_ga2549f921e25a72dfa05a2154a792e2bf}{ieee\+\_\+address}
+\begin{DoxyCompactList}\small\item\em 64-\/bit I\+E\+EE address (big-\/endian) of destination. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__route_ga73d48563eb05cd5fcc4add79d226a3b8}{network\+\_\+address\+\_\+be}
+\begin{DoxyCompactList}\small\item\em 16-\/bit network address (big-\/endian) of destination. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__route_gad1af5d8a8f1c2531c591cc5fdd7bff8d}{route\+\_\+options}
+\begin{DoxyCompactList}\small\item\em Always set to X\+B\+E\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+O\+P\+T\+I\+O\+N\+S\+\_\+\+N\+O\+NE. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__route_ga568b7e68dfcb5aabdbcf38de26f1b63d}{address\+\_\+count}
+\begin{DoxyCompactList}\small\item\em Number of addresses in route, excluding source and destination. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__route_ga943070c7e317d394725c1e65ef4efd04}{route\+\_\+address\+\_\+be} \mbox{[}\hyperlink{group__xbee__route_ga41b7c2f8ef5f6e4912572871790611d2}{X\+B\+E\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+M\+A\+X\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+C\+O\+U\+NT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Network addresses of nodes in route, starting next to destination and ending with node next to source (us). \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__route_gabf2f34f6b8fa4870cb757aa844335a4f}{receive\+\_\+options}
+\begin{DoxyCompactList}\small\item\em Combination of X\+B\+E\+E\+\_\+\+R\+X\+\_\+\+O\+P\+T\+\_\+\+X\+XX macro values. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__route_gacb7bc06bed6f6408d719334fc41698c7}{reserved}
+\begin{DoxyCompactList}\small\item\em Reserved field always set to 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Receive inbound route records, and send \char`\"{}\+Create Source Route\char`\"{} frames. 
+

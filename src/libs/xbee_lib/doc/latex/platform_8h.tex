@@ -1,0 +1,167 @@
+\hypertarget{platform_8h}{}\section{include/xbee/platform.h File Reference}
+\label{platform_8h}\index{include/xbee/platform.\+h@{include/xbee/platform.\+h}}
+
+
+Common header for Hardware Abstraction Layer.  
+
+
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xbee/jslong\+\_\+glue.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__hal_ga336bff4f4a6012aacc4468132bbd3d7f}{X\+B\+E\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS}
+\begin{DoxyCompactList}\small\item\em Macro defined to. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga8d7f5a691878e9ffb7da396899581062}{X\+B\+E\+E\+\_\+\+E\+N\+D\+\_\+\+D\+E\+C\+LS}
+\begin{DoxyCompactList}\small\item\em Macro defined to. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gaa1c89a351daab5e3d33a2dc48f85f9a4}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+D\+E\+L\+T\+A\+\_\+1980}~((U\+I\+N\+T32\+\_\+C(20) $\ast$ 365 + 5) $\ast$ 24 $\ast$ 60 $\ast$ 60)
+\begin{DoxyCompactList}\small\item\em For 1/1/1980 epoch (Rabbit), add 20 years, plus 5 leap days (1980, 1984, 1988, 1992, 1996) to get to Zig\+Bee epoch of 1/1/2000. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga735b0974380a73e9d7a12a1f199a5921}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+D\+E\+L\+T\+A\+\_\+1970}~((U\+I\+N\+T32\+\_\+C(30) $\ast$ 365 + 7) $\ast$ 24 $\ast$ 60 $\ast$ 60)
+\begin{DoxyCompactList}\small\item\em For 1/1/1970 epoch (Win32, Unix), add 30 years, plus 7 leap days (1972, 1976, 1980, 1984, 1988, 1992, 1996) to get to Zig\+Bee epoch of 1/1/2000. \end{DoxyCompactList}\item 
+\#define {\bfseries T\+R\+UE}~1
+\item 
+\#define {\bfseries F\+A\+L\+SE}~0
+\item 
+\#define {\bfseries xbee\+\_\+get\+\_\+unaligned16}(p)~($\ast$(\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$)(p))
+\item 
+\#define {\bfseries xbee\+\_\+get\+\_\+unaligned32}(p)~($\ast$(\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$)(p))
+\item 
+\#define {\bfseries xbee\+\_\+set\+\_\+unaligned16}(p,  v)~$\ast$(\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$)(p) = (v)
+\item 
+\#define {\bfseries xbee\+\_\+set\+\_\+unaligned32}(p,  v)~$\ast$(\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$)(p) = (v)
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+L\+L\+ED}
+\item 
+\#define {\bfseries P\+R\+Id16}~\char`\"{}hd\char`\"{}
+\item 
+\#define {\bfseries P\+R\+Id32}~\char`\"{}ld\char`\"{}
+\item 
+\#define \hyperlink{group__hal_ga2fb602f8a5b3533a57c2c4b92f248569}{\+\_\+\+T\+A\+B\+L\+E\+\_\+\+E\+N\+T\+R\+I\+ES}(array)~((sizeof (array)) / (sizeof ($\ast$array)))
+\begin{DoxyCompactList}\small\item\em Helper macro for calculating the number of entries in an array. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga9a3ee9eece1e3ee1c6fbaa27bc0928d3}{X\+B\+E\+E\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+O\+M\+P\+A\+RE}(a,  op,  b)~( ((\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t})((\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t})(a) -\/ (\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t})(b))) op 0 )
+\begin{DoxyCompactList}\small\item\em Compare two uint16\+\_\+t timer values, with proper handling of rollover (e.\+g., 0x\+F\+F\+FF $<$ 0x0000). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga848a9903fa7859d84cb22aeddde4c42f}{X\+B\+E\+E\+\_\+\+S\+E\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}(delay)~((\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t})\hyperlink{group__hal_ga22b4e3df788254ca5f8530e9aee58515}{xbee\+\_\+millisecond\+\_\+timer}() + (delay))
+\begin{DoxyCompactList}\small\item\em Macro used to load a variable with an expiration time, later used with \hyperlink{group__hal_gac3485c3c34a50a5a35d553cc743d163e}{X\+B\+E\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+M\+S()} macro. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gac3485c3c34a50a5a35d553cc743d163e}{X\+B\+E\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}(timer)~((\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t})((\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t})\hyperlink{group__hal_ga22b4e3df788254ca5f8530e9aee58515}{xbee\+\_\+millisecond\+\_\+timer}() -\/ (timer)) $>$= 0)
+\begin{DoxyCompactList}\small\item\em Macro used to check a timer set by \hyperlink{group__hal_ga848a9903fa7859d84cb22aeddde4c42f}{X\+B\+E\+E\+\_\+\+S\+E\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+M\+S()}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga6adb5c9e19c84a261c569ff4d77d1170}{X\+B\+E\+E\+\_\+\+S\+E\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+S\+EC}(delay)~((\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t})\hyperlink{group__hal_ga5c1a8bccd41acf1d7264a75698077749}{xbee\+\_\+seconds\+\_\+timer}() + (delay))
+\begin{DoxyCompactList}\small\item\em Macro used to load a variable with an expiration time, later used with \hyperlink{group__hal_ga858c3c1caa899efd6af9ee8a0fe09246}{X\+B\+E\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+S\+E\+C()} macro. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga858c3c1caa899efd6af9ee8a0fe09246}{X\+B\+E\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+S\+EC}(timer)~((\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t})((\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t})\hyperlink{group__hal_ga5c1a8bccd41acf1d7264a75698077749}{xbee\+\_\+seconds\+\_\+timer}() -\/ (timer)) $>$= 0)
+\begin{DoxyCompactList}\small\item\em Macro used to check a timer set by \hyperlink{group__hal_ga6adb5c9e19c84a261c569ff4d77d1170}{X\+B\+E\+E\+\_\+\+S\+E\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+S\+E\+C()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal_ga336bff4f4a6012aacc4468132bbd3d7f}{X\+B\+E\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS} \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}() \hyperlink{group__hal_ga5c1a8bccd41acf1d7264a75698077749}{xbee\+\_\+seconds\+\_\+timer} (void)
+\begin{DoxyCompactList}\small\item\em Platform-\/specific function to return the number of elapsed seconds. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}() \hyperlink{group__hal_ga22b4e3df788254ca5f8530e9aee58515}{xbee\+\_\+millisecond\+\_\+timer} (void)
+\begin{DoxyCompactList}\small\item\em Platform-\/specific function to return the number of elapsed milliseconds. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal_ga519e5ae2049b59689a474a8c48fee353}{hexstrtobyte} (const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Converts two hex characters (0-\/9\+A-\/\+Fa-\/f) to a byte. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal_ga8c0c80b64f63d395e718172190b21fcc}{xbee\+\_\+readline} (char $\ast$buffer, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em This function is a non-\/blocking version of gets(), used to read a line of input from the user. \end{DoxyCompactList}\item 
+void \hyperlink{group__hal_gaa321236a0cb6f4e0dad592fdf1b550d2}{hex\+\_\+dump} (const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Helper function for printing a hex dump of memory to stdout. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal_gaae7cb3384b4bbd83726511ccfbd747d3}{memcheck} (const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$src, int c, size\+\_\+t \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Test whether a block of memory is set to a single byte value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+These error names are used throughout the library.
+
+Some platforms don\textquotesingle{}t define them in errno.\+h, so we define them here using arbitrary values. \begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__hal_ga0030614bc864d1b24eaedd71585acc27}{E\+N\+O\+D\+A\+TA}~20000
+\begin{DoxyCompactList}\small\item\em no message is available on the S\+T\+R\+E\+AM head read queue (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga2d1678d5a7cc8ce499643f3b8957def4}{E\+I\+N\+V\+AL}~20001
+\begin{DoxyCompactList}\small\item\em invalid argument (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga70979f50f9c83e5aebab3d6a1bd4cf35}{E\+IO}~20002
+\begin{DoxyCompactList}\small\item\em input/output error (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga8368025077a0385849d6817b2007c095}{E\+B\+U\+SY}~20003
+\begin{DoxyCompactList}\small\item\em device or resource busy (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga0a3bef9e5c47e42917692b5dae3b5498}{E\+E\+X\+I\+ST}~20004
+\begin{DoxyCompactList}\small\item\em file exists (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga088abe8bad2df798edad3053d719b937}{E\+N\+O\+S\+PC}~20005
+\begin{DoxyCompactList}\small\item\em no space left on device (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga03e689f378f643d16ea7537918528a48}{E\+N\+O\+E\+NT}~20006
+\begin{DoxyCompactList}\small\item\em no such file or directory (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gaba8481985c201ff726f349d7f2d09895}{E2\+B\+IG}~20007
+\begin{DoxyCompactList}\small\item\em argument list too long (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga251e9b536ed96ccb16aa28ca2d5bd656}{E\+B\+A\+D\+M\+SG}~20010
+\begin{DoxyCompactList}\small\item\em bad message (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga91457bbf35f0f1085619a99423bb1f33}{E\+N\+O\+T\+S\+UP}~20011
+\begin{DoxyCompactList}\small\item\em operation not supported (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga597718e59a8fc9c4d4ab63f5a34e28b1}{E\+T\+I\+M\+E\+D\+O\+UT}~20012
+\begin{DoxyCompactList}\small\item\em connection timed out (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gac6c071293826a4e66a717bb38db7794d}{E\+I\+L\+S\+EQ}~20013
+\begin{DoxyCompactList}\small\item\em illegal byte sequence (P\+O\+S\+I\+X.\+1, C99) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gaf0fac1cea1165b4debec7f686edf3313}{E\+A\+G\+A\+IN}~20014
+\begin{DoxyCompactList}\small\item\em resource temporarily unavailable (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga43785b9969e0bd1af532dbde06c5540b}{E\+N\+O\+S\+YS}~20015
+\begin{DoxyCompactList}\small\item\em function not implemented (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gac2a2e9fa555401f94478f74e01868032}{E\+A\+C\+C\+ES}~20016
+\begin{DoxyCompactList}\small\item\em permission denied (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga9532d840ef91fd8e1ecc5d7ca7cbf212}{E\+C\+A\+N\+C\+E\+L\+ED}~20017
+\begin{DoxyCompactList}\small\item\em operation canceled (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gae37becfaa095a9df5c5c788bce5aa06f}{E\+M\+S\+G\+S\+I\+ZE}~20018
+\begin{DoxyCompactList}\small\item\em message too long (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gadd669d31505a077f769cff8e66c780b3}{E\+P\+E\+RM}~20019
+\begin{DoxyCompactList}\small\item\em operation not permitted (P\+O\+S\+I\+X.\+1) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__hal_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}~struct
+\begin{DoxyCompactList}\small\item\em A replacement for \mbox{[}struct\mbox{]} when defining a packed structure where the elements are not aligned based on type. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gacf43057fc38f77d20456c074909ba772}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}
+\begin{DoxyCompactList}\small\item\em Enable C\+PU interrupts (at the level of the serial port driver, at least). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga658c3ad175b50000ac44b3b9ea836d1a}{I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}
+\begin{DoxyCompactList}\small\item\em Disable C\+PU interrupts (at the level of the serial port driver, at least). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga3847c218bf0c9d56e1a01b87ae7c1900}{X\+B\+E\+E\+\_\+\+W\+I\+F\+I\+\_\+\+E\+N\+A\+B\+L\+ED}~0
+\begin{DoxyCompactList}\small\item\em Defined by the platform as either 0 or 1, depending on whether code for the Wi-\/\+Fi X\+Bee Module should be compiled in or not. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gacddb73dac3fd1bdec26cd7dc0a652c00}{X\+B\+E\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}(p)~(void) p
+\begin{DoxyCompactList}\small\item\em Functions with unused parameters (common due to the use of function pointers) can use this macro to dismiss compiler warnings about unused parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{platform\+\_\+far}
+\label{_amgrpa1b148d56cbfc1db797440591bed5acf}%
+Macros related to supporting far ($>$16-\/bit) pointers. \begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR}
+\begin{DoxyCompactList}\small\item\em On platforms with \char`\"{}far\char`\"{} pointers, define to the proper keyword; empty definition if not required. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga0220c5cb877cc5718402ab41b91b7252}{C\+A\+S\+T\+\_\+\+F\+A\+R\+\_\+\+T\+O\+\_\+\+N\+E\+AR}(p)~(p)
+\begin{DoxyCompactList}\small\item\em On platforms with \char`\"{}far\char`\"{} pointers, define to a series of explicit casts to convert a \char`\"{}far\char`\"{} pointer back to \char`\"{}near\char`\"{}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga379022d2cd3136d8f3500c88658056b7}{P\+R\+Is\+F\+AR}~\char`\"{}s\char`\"{}
+\begin{DoxyCompactList}\small\item\em Literal string format specifier for printing a far string, typically {\ttfamily \char`\"{}s\char`\"{}}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga8429a3beb3448b89cb7c3877b8909369}{P\+R\+Ip\+F\+AR}~\char`\"{}p\char`\"{}
+\begin{DoxyCompactList}\small\item\em Literal string format specifier for printing a far pointer, typically {\ttfamily \char`\"{}p\char`\"{}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{platform\+\_\+inttypes}
+\label{_amgrp35b931ac4659d850ad6bd5148751f3f6}%
+Macros typically defined in $<$inttypes.\+h$>$, define manually if inttypes.\+h is not available on this platform. \begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__hal_ga86bc00ee87e8e40787e0681fc34c576a}{P\+R\+Iu16}~\char`\"{}hu\char`\"{}
+\begin{DoxyCompactList}\small\item\em Format specifier for 16-\/bit unsigned (usually {\ttfamily \char`\"{}u\char`\"{}} or {\ttfamily \char`\"{}hu\char`\"{}}) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gaaf2af4a10f0bd308e9c349c8382382be}{P\+R\+Iu32}~\char`\"{}lu\char`\"{}
+\begin{DoxyCompactList}\small\item\em Format specifier for 32-\/bit unsigned (usually {\ttfamily \char`\"{}lu\char`\"{}} or {\ttfamily \char`\"{}u\char`\"{}}) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga70f5e38b517f714518c970a4da37bef1}{P\+R\+Ix16}~\char`\"{}hx\char`\"{}
+\begin{DoxyCompactList}\small\item\em Format specifier for 16-\/bit lowercase hex (usually {\ttfamily \char`\"{}x\char`\"{}} or {\ttfamily \char`\"{}hx\char`\"{}}) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga80ca66bcc9e366733f02c90ed4b0838c}{P\+R\+Ix32}~\char`\"{}lx\char`\"{}
+\begin{DoxyCompactList}\small\item\em Format specifier for 32-\/bit lowercase hex (usually {\ttfamily \char`\"{}lx\char`\"{}} or {\ttfamily \char`\"{}x\char`\"{}}) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga570ca9af5087023f75fc8a1a602d26ab}{P\+R\+I\+X16}~\char`\"{}hX\char`\"{}
+\begin{DoxyCompactList}\small\item\em Format specifier for 16-\/bit uppercase hex (usually {\ttfamily \char`\"{}\+X\char`\"{}} or {\ttfamily \char`\"{}h\+X\char`\"{}}) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga32b0c8a04aae5d4454d15e6cbe109f64}{P\+R\+I\+X32}~\char`\"{}lX\char`\"{}
+\begin{DoxyCompactList}\small\item\em Format specifier for 32-\/bit uppercase hex (usually {\ttfamily \char`\"{}l\+X\char`\"{}} or {\ttfamily \char`\"{}\+X\char`\"{}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+Flags to pass to \hyperlink{group__util_gaa321236a0cb6f4e0dad592fdf1b550d2}{hex\+\_\+dump()}. \begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__hal_gae60f842ae8bc3cc952cdeece611670d5}{H\+E\+X\+\_\+\+D\+U\+M\+P\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE}~0x0000
+\begin{DoxyCompactList}\small\item\em Default settings (no prefix). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_gaec79525addd1a70fda55b1ea11534832}{H\+E\+X\+\_\+\+D\+U\+M\+P\+\_\+\+F\+L\+A\+G\+\_\+\+O\+F\+F\+S\+ET}~0x0001
+\begin{DoxyCompactList}\small\item\em Prefix each line with the memory offset (0000\+: xx xx xx). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga967137c51c026d68d03d1668402ec12b}{H\+E\+X\+\_\+\+D\+U\+M\+P\+\_\+\+F\+L\+A\+G\+\_\+\+A\+D\+D\+R\+E\+SS}~0x0002
+\begin{DoxyCompactList}\small\item\em Prefix each line with the address (uses p specifier) (000000\+: xx xx xx). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__hal_ga696f6553e33cbd20eda34e220ec9939a}{H\+E\+X\+\_\+\+D\+U\+M\+P\+\_\+\+F\+L\+A\+G\+\_\+\+T\+AB}~0x0004
+\begin{DoxyCompactList}\small\item\em Prefix each line with a tab character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common header for Hardware Abstraction Layer. 
+
+This file should be included by all other files in the library.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000028}{Todo}]find pre-\/processor macro to identify P\+O\+S\+IX platform \end{DoxyRefDesc}

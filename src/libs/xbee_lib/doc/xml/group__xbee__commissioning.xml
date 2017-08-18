@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__xbee__commissioning" kind="group">
+    <compoundname>xbee_commissioning</compoundname>
+    <title>XBee-specific support of ZCL Commissioning</title>
+    <innerfile refid="xbee__commissioning_8c">xbee_commissioning.c</innerfile>
+    <innerfile refid="commissioning_8h">commissioning.h</innerfile>
+    <innerclass refid="structxbee__comm__reg__t" prot="public">xbee_comm_reg_t</innerclass>
+    <innerclass refid="structxbee__comm__dl__t" prot="public">xbee_comm_dl_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__xbee__commissioning_1gaa98ef492d346b9dc608d7866597ec9a8" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* xbee_comm_fn) (zcl_comm_startup_param_t FAR *p, const void FAR *value_be)</definition>
+        <argsstring>)(zcl_comm_startup_param_t FAR *p, const void FAR *value_be)</argsstring>
+        <name>xbee_comm_fn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="32" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__xbee__commissioning_1gaa1e66c60bb56acaced6ca2646fd44616" prot="public" static="no" mutable="no">
+        <type><ref refid="unionxbee__at__cmd__t" kindref="compound">xbee_at_cmd_t</ref></type>
+        <definition>xbee_at_cmd_t command</definition>
+        <argsstring></argsstring>
+        <name>command</name>
+        <briefdescription>
+<para>command to send to XBee device </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="38" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__commissioning_1ga7cde42d4d91d04d62d5810e84cde3228" prot="public" static="no" mutable="no">
+        <type>xbee_comm_fn</type>
+        <definition>xbee_comm_fn assign_fn</definition>
+        <argsstring></argsstring>
+        <name>assign_fn</name>
+        <briefdescription>
+<para>function to process result </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="39" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__commissioning_1ga9428f4229e2203fa643916ca52a3e663" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t b0</definition>
+        <argsstring></argsstring>
+        <name>b0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="111" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__commissioning_1gac252074002fd2018498430cf078d3c48" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t b1</definition>
+        <argsstring></argsstring>
+        <name>b1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="112" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__commissioning_1gaf1d156a71c42f5c2c5b2554084b0b6de" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t b2</definition>
+        <argsstring></argsstring>
+        <name>b2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="113" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__commissioning_1ga959afae272eb1d7a12fad05cb5e55ec7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t startup_control</definition>
+        <argsstring></argsstring>
+        <name>startup_control</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="114" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__commissioning_1ga010b1bb0118167125a07e4bde6db5e36" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structxbee__comm__reg__t" kindref="compound">xbee_comm_reg_t</ref></type>
+        <definition>const xbee_comm_reg_t xbee_comm_regs[]</definition>
+        <argsstring>[]</argsstring>
+        <name>xbee_comm_regs</name>
+        <initializer>= {
+	{ { { &apos;D&apos;, &apos;L&apos; } }, xbee_comm_DL },
+	{ { { &apos;S&apos;, &apos;C&apos; } }, <ref refid="group__xbee__commissioning_1ga886012f757de4a74d0c992d3ab04a373" kindref="member">xbee_comm_SC</ref> },
+	{ { { &apos;A&apos;, &apos;R&apos; } }, xbee_comm_AR },
+	{ { { &apos;B&apos;, &apos;H&apos; } }, xbee_comm_BH },
+	{ { { &apos;E&apos;, &apos;O&apos; } }, xbee_comm_EO },
+	
+	{ { { &apos;O&apos;, &apos;P&apos; } }, xbee_comm_OP },
+	{ { { &apos;O&apos;, &apos;I&apos; } }, xbee_comm_OI },
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="128" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__commissioning_1ga886012f757de4a74d0c992d3ab04a373" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_comm_SC</definition>
+        <argsstring>(zcl_comm_startup_param_t FAR *p, const void FAR *value_be)</argsstring>
+        <name>xbee_comm_SC</name>
+        <param>
+          <type><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>value_be</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000010"><xreftitle>Todo</xreftitle><xrefdescription><para>Depending on the value of StartupControl, the extended_panid attribute might be set from ID (extended PAN ID) or OP (operating PAN ID).</para></xrefdescription></xrefsect></para><para>I think.</para><para>Note that spec (3.15.2.2.1.2) says that all Fs is used for &quot;unspecified&quot;, so we may need to map all 0s to all Fs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="52" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="52" bodyend="56"/>
+        <references refid="group__util__byteorder_1gabb9b3120f6457dc04471c134fee1d221" compoundref="byteorder_8h" startline="131">be16toh</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1ga38cdf15db91d2b0d3afc7288c4f4205a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_comm_OP</definition>
+        <argsstring>(zcl_comm_startup_param_t FAR *p, const void FAR *value_be)</argsstring>
+        <name>xbee_comm_OP</name>
+        <param>
+          <type><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>value_be</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="58" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="58" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1ga9b5ced283d3e0d514a28b676935a3b95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_comm_OI</definition>
+        <argsstring>(zcl_comm_startup_param_t FAR *p, const void FAR *value_be)</argsstring>
+        <name>xbee_comm_OI</name>
+        <param>
+          <type><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>value_be</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="71" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1gaa49a8990f5c4b47e2000f49b2258fc2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_comm_AR</definition>
+        <argsstring>(zcl_comm_startup_param_t FAR *p, const void FAR *value_be)</argsstring>
+        <name>xbee_comm_AR</name>
+        <param>
+          <type><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>value_be</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="79" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="79" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1gae214f43be9de8be54815b9351935202f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_comm_BH</definition>
+        <argsstring>(zcl_comm_startup_param_t FAR *p, const void FAR *value_be)</argsstring>
+        <name>xbee_comm_BH</name>
+        <param>
+          <type><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>value_be</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="100" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1ga337f66d75fea43d5a792ffd534e2f65c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_comm_DL</definition>
+        <argsstring>(zcl_comm_startup_param_t FAR *p, const void FAR *value_be)</argsstring>
+        <name>xbee_comm_DL</name>
+        <param>
+          <type><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>value_be</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="116" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="116" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1ga22b333ec115d26b72abc100fc5d3c431" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_comm_EO</definition>
+        <argsstring>(zcl_comm_startup_param_t FAR *p, const void FAR *value_be)</argsstring>
+        <name>xbee_comm_EO</name>
+        <param>
+          <type><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>value_be</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="123" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1gaec84ef238a638e643c6f8b363630d636" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_comm_reg_callback</definition>
+        <argsstring>(const xbee_cmd_response_t FAR *response)</argsstring>
+        <name>xbee_comm_reg_callback</name>
+        <param>
+          <type>const <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="139" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="139" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1ga4927f3fc029f50dbbd1ec3e0292e873b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_commissioning_query</definition>
+        <argsstring>(zcl_comm_state_t *comm, xbee_dev_t *xbee, const char FAR *reg)</argsstring>
+        <name>xbee_commissioning_query</name>
+        <param>
+          <type><ref refid="structzcl__comm__state__t" kindref="compound">zcl_comm_state_t</ref> *</type>
+          <declname>comm</declname>
+        </param>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="197" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="197" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1ga9c6e11a80f7544775d5e0d855f840334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_commissioning_init</definition>
+        <argsstring>(zcl_comm_state_t *comm, xbee_dev_t *xbee)</argsstring>
+        <name>xbee_commissioning_init</name>
+        <param>
+          <type><ref refid="structzcl__comm__state__t" kindref="compound">zcl_comm_state_t</ref> *</type>
+          <declname>comm</declname>
+        </param>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="214" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="214" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1ga6fb796928aa5ff990ca4b62c4893bc2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_commissioning_set</definition>
+        <argsstring>(xbee_dev_t *xbee, zcl_comm_startup_param_t *sas)</argsstring>
+        <name>xbee_commissioning_set</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref> *</type>
+          <declname>sas</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="263" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="263" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1gadd6acaa6c6403e9371358da445f3f194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_commissioning_tick</definition>
+        <argsstring>(xbee_dev_t *xbee, zcl_comm_state_t *comm)</argsstring>
+        <name>xbee_commissioning_tick</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="structzcl__comm__state__t" kindref="compound">zcl_comm_state_t</ref> *</type>
+          <declname>comm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="461" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="461" bodyend="591"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__xbee__commissioning_1ga23d98ae5f8500da3bfa56812d5fcf568" prot="public" static="no">
+        <name>XBEE_COMM_SCAN_ATTEMPTS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/commissioning.h" line="30" column="9" bodyfile="include/xbee/commissioning.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__commissioning_1gaf8d4e57bf93de8024ae827ddd8a5e9d2" prot="public" static="no">
+        <name>XBEE_COMM_TIME_BETWEEN_SCANS</name>
+        <initializer>0x0064</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/commissioning.h" line="31" column="9" bodyfile="include/xbee/commissioning.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__commissioning_1gafe13908815f7385ccfb912c0b5aca770" prot="public" static="no">
+        <name>XBEE_COMM_REJOIN_INTERVAL</name>
+        <initializer>0x003C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/commissioning.h" line="32" column="9" bodyfile="include/xbee/commissioning.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__commissioning_1gabae5f132ed1e863cd313c12b4c5ce3a3" prot="public" static="no">
+        <name>XBEE_COMM_MAX_REJOIN_INTERVAL</name>
+        <initializer>0x0E10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/commissioning.h" line="33" column="9" bodyfile="include/xbee/commissioning.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Cluster. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

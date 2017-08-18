@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="unionzcl__rec__reporting__config__t" kind="union" language="C++" prot="public">
+    <compoundname>zcl_rec_reporting_config_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__zcl_1ga5d86508e715769ce35a4845ed5f8f252" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>PACKED_STRUCT</definition>
+        <argsstring></argsstring>
+        <name>PACKED_STRUCT</name>
+        <initializer>{
+		<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>	direction</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="480" column="1" bodyfile="include/zigbee/zcl.h" bodystart="480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga21f7dfce4361ae19ae7e96c34c5847bc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t attrib_id_le</definition>
+        <argsstring></argsstring>
+        <name>attrib_id_le</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="482" column="1" bodyfile="include/zigbee/zcl.h" bodystart="482" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1gaf0916fb62ad7f1acdcd1c264608dfe6b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>common</definition>
+        <argsstring></argsstring>
+        <name>common</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="483" column="1" bodyfile="include/zigbee/zcl.h" bodystart="483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1gaaaef83599eb50b682857d7e1e6acf45d" prot="public" static="no" mutable="no">
+        <type>zcl_rec_report_send_t</type>
+        <definition>zcl_rec_report_send_t send</definition>
+        <argsstring></argsstring>
+        <name>send</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="484" column="1" bodyfile="include/zigbee/zcl.h" bodystart="484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga5b72b8ed4593e1c792c061de064aa5df" prot="public" static="no" mutable="no">
+        <type>zcl_rec_report_receive_t</type>
+        <definition>zcl_rec_report_receive_t receive</definition>
+        <argsstring></argsstring>
+        <name>receive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="485" column="1" bodyfile="include/zigbee/zcl.h" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/zigbee/zcl.h" line="479" column="1" bodyfile="include/zigbee/zcl.h" bodystart="479" bodyend="486"/>
+    <listofallmembers>
+      <member refid="group__zcl_1ga21f7dfce4361ae19ae7e96c34c5847bc" prot="public" virt="non-virtual"><scope>zcl_rec_reporting_config_t</scope><name>attrib_id_le</name></member>
+      <member refid="group__zcl_1gaf0916fb62ad7f1acdcd1c264608dfe6b" prot="public" virt="non-virtual"><scope>zcl_rec_reporting_config_t</scope><name>common</name></member>
+      <member refid="group__zcl_1ga5d86508e715769ce35a4845ed5f8f252" prot="public" virt="non-virtual"><scope>zcl_rec_reporting_config_t</scope><name>PACKED_STRUCT</name></member>
+      <member refid="group__zcl_1ga5b72b8ed4593e1c792c061de064aa5df" prot="public" virt="non-virtual"><scope>zcl_rec_reporting_config_t</scope><name>receive</name></member>
+      <member refid="group__zcl_1gaaaef83599eb50b682857d7e1e6acf45d" prot="public" virt="non-virtual"><scope>zcl_rec_reporting_config_t</scope><name>send</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

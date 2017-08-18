@@ -1,0 +1,2151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group___s_x_a" kind="group">
+    <compoundname>SXA</compoundname>
+    <title>SXA</title>
+    <innerfile refid="xbee__sxa__socket_8c">xbee_sxa_socket.c</innerfile>
+    <innerfile refid="xbee__reg__descr_8c">xbee_reg_descr.c</innerfile>
+    <innerfile refid="xbee__sxa_8c">xbee_sxa.c</innerfile>
+    <innerfile refid="sxa_8h">sxa.h</innerfile>
+    <innerfile refid="sxa__socket_8h">sxa_socket.h</innerfile>
+    <innerclass refid="structsxa__cached__group__t" prot="public">sxa_cached_group_t</innerclass>
+    <innerclass refid="structsxa__node__t" prot="public">sxa_node_t</innerclass>
+    <innerclass refid="struct__sxa__sock__hdr__t" prot="public">_sxa_sock_hdr_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___s_x_a_1ga0411cd49bb5b71852cecd93bcbf0ca2d" prot="public" static="no">
+        <name>@7</name>
+        <enumvalue id="group___s_x_a_1gga0411cd49bb5b71852cecd93bcbf0ca2da16320fc3c50be3823236003df46858b5" prot="public">
+          <name>_SXA_CACHED_UNKNOWN</name>
+          <initializer>=	0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<internal><para>Cached register value status: value unknown (never read) </para></internal>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_x_a_1gga0411cd49bb5b71852cecd93bcbf0ca2da54498f64b3ad7c2be423d32b45deac04" prot="public">
+          <name>_SXA_CACHED_OK</name>
+          <initializer>=			0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<internal><para>Cached register value status: value read successfully from device </para></internal>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_x_a_1gga0411cd49bb5b71852cecd93bcbf0ca2da0d4d4f7cbf0ca196f444b164cb127413" prot="public">
+          <name>_SXA_CACHED_ERROR</name>
+          <initializer>=		0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<internal><para>Cached register value status: value could not be read from device </para></internal>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_x_a_1gga0411cd49bb5b71852cecd93bcbf0ca2da9f8ebeda64ea0f23a8db672978ddb13b" prot="public">
+          <name>_SXA_CACHED_BUSY</name>
+          <initializer>=		0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<internal><para>Cached register value status: value is being read from device </para></internal>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_x_a_1gga0411cd49bb5b71852cecd93bcbf0ca2da17a60752eacd20e0104ef906a4960437" prot="public">
+          <name>_SXA_CACHED_PENDING</name>
+          <initializer>=	0x08</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<internal><para>Cached register value status: value is pending a radio query </para></internal>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_x_a_1gga0411cd49bb5b71852cecd93bcbf0ca2da7d03e78354198ea487076fa69dd2658f" prot="public">
+          <name>_SXA_CACHED_BAD_GROUP</name>
+          <initializer>=	0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<internal><para>Cached register value status: not a valid cache group </para></internal>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="46" column="1" bodyfile="include/xbee/sxa.h" bodystart="45" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___s_x_a_1gabed82baf7f470b522273a3e37c24c600" prot="public" static="no">
+        <name>@8</name>
+        <enumvalue id="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600ae3f816f5c71d3395d2b2c034227bf14d" prot="public">
+          <name>SXA_CACHED_NONE</name>
+          <briefdescription>
+<para>Dummy for when no caching required. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600a8d6b7f78660e6b7da06d0fa99dfb6df6" prot="public">
+          <name>SXA_CACHED_NODE_ID</name>
+          <briefdescription>
+<para>Got .id.node_id (normally obtained by initial discovery, however app can explicitly refresh if desired). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600a8f3afd72952b8d47c03b1c9c4ea76622" prot="public">
+          <name>SXA_CACHED_IO_CONFIG</name>
+          <briefdescription>
+<para>I/O configuration: ATD0 etc., in .io field. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600a689a1dccc7c16583fec02c8d8c7ba35d" prot="public">
+          <name>SXA_CACHED_DEVICE_INFO</name>
+          <briefdescription>
+<para>Device information: HV, VR and DD. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600a0ad9240e8ef31156d92883213e899924" prot="public">
+          <name>SXA_CACHED_DHDL</name>
+          <briefdescription>
+<para>Dest addr: DH,DL. </para>          </briefdescription>
+          <detaileddescription>
+<para>This is a group since it is exceptional in requiring two commands to get a single (logical) 64 bit value. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600a8110f7d71f749b08814ced492ca2bd71" prot="public">
+          <name>SXA_CACHED_MISC</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+<para>Miscellaneous stuff (one of the sxa_cached_* sub-structures) - these have their own individual cache status flags. </para>          </briefdescription>
+          <detaileddescription>
+<para>This should be the last entry, and not have an entry in the group table. Miscellaneous entries have their cache status flag immediately before the binary data, and thus do not need a group table entry. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>This enum gives numeric identification to all cache groups. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="464" column="1" bodyfile="include/xbee/sxa.h" bodystart="463" bodyend="484"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref> typedef <ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>XBEE_BEGIN_DECLS typedef uint8_t sxa_cache_flags_t</definition>
+        <argsstring></argsstring>
+        <name>sxa_cache_flags_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<internal><para>Flag data for register value cache status</para><para>For this library to work, structure packing must be enabled (accomplished using the PACKED_STRUCT macro). This is because the size of the actual data must be derivable from the size of the containing structure, minus the size of the following flags field.</para><para>The flags field takes on one of the <ref refid="group___s_x_a_1gga0411cd49bb5b71852cecd93bcbf0ca2da54498f64b3ad7c2be423d32b45deac04" kindref="member">_SXA_CACHED_OK</ref> etc. values. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="40" column="1" bodyfile="include/xbee/sxa.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga62238d483c628f8c996664ff0f47ccef" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* _xbee_rci_types[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_xbee_rci_types</name>
+        <initializer>=
+{
+	
+	&quot;uint32&quot;,
+   &quot;0x_hex32&quot;,
+   &quot;string&quot;,
+   &quot;string&quot;,
+   &quot;xbee_ext_addr&quot;,
+}</initializer>
+        <briefdescription>
+<para>Table to map _xbee_rci_type_t to RCI type string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="73" column="1" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga38e53826af221faaa9c92525dfeb8ed3" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="struct__xbee__reg__descr__t" kindref="compound">_xbee_reg_descr_t</ref></type>
+        <definition>const FAR _xbee_reg_descr_t _xbee_reg_table[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_xbee_reg_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="90" column="1" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1gafaf56c450e4f885ee2d8fd0dfc0bc0a9" prot="public" static="no" mutable="no">
+        <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>sxa_node_t FAR* sxa_table</definition>
+        <argsstring></argsstring>
+        <name>sxa_table</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="58" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1gaf690fd80428627087e91a1e1b28fad0f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sxa_table_count</definition>
+        <argsstring></argsstring>
+        <name>sxa_table_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="59" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga01bfbcf717c18bfb7825eba4715b3ad4" prot="public" static="no" mutable="no">
+        <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>sxa_node_t FAR* sxa_local_table</definition>
+        <argsstring></argsstring>
+        <name>sxa_local_table</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="60" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga935f2ece9e3b939de8cf5b0a223d5346" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref></type>
+        <definition>const FAR xbee_atcmd_reg_t _sxa_ni_query_regs[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_sxa_ni_query_regs</name>
+        <initializer>= {
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;N&apos;, &apos;I&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633" kindref="member">XBEE_CLT_COPY</ref>, <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref>, <ref refid="group__xbee__discovery_1gaa667bab3abb953bc14d9f5bcc36644b8" kindref="member">id.node_info</ref>),
+   <ref refid="group__xbee__atcmd_1ga22fe547f7ae9fd0b090c5e45f03c162d" kindref="member">XBEE_ATCMD_REG_END</ref>
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="90" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga96cff97476dfc4ddb18bfd8b65731472" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref></type>
+        <definition>const FAR xbee_atcmd_reg_t _sxa_devinfo_query_regs[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_sxa_devinfo_query_regs</name>
+        <initializer>= {
+	<ref refid="group__xbee__atcmd_1gaf5f12cd2d94f9f4ecf0a679196a6ed21" kindref="member">XBEE_ATCMD_REG_MOVE_THEN_CB</ref>( &apos;A&apos;, &apos;O&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537" kindref="member">XBEE_CLT_COPY_BE</ref>,
+   					<ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref>, ao,
+                  _sxa_process_version_info, 0),
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;H&apos;, &apos;V&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537" kindref="member">XBEE_CLT_COPY_BE</ref>, <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref>, hardware_version),
+	<ref refid="group__xbee__atcmd_1gaf5f12cd2d94f9f4ecf0a679196a6ed21" kindref="member">XBEE_ATCMD_REG_MOVE_THEN_CB</ref>( &apos;V&apos;, &apos;R&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537" kindref="member">XBEE_CLT_COPY_BE</ref>,
+   					<ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref>, firmware_version,
+                  _sxa_process_version_info, 1),
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;D&apos;, &apos;D&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537" kindref="member">XBEE_CLT_COPY_BE</ref>, <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref>, dd),
+   <ref refid="group__xbee__atcmd_1ga22fe547f7ae9fd0b090c5e45f03c162d" kindref="member">XBEE_ATCMD_REG_END</ref>
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="95" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga6fccbd755db52c5f1da42d07f76fcb11" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref></type>
+        <definition>const FAR xbee_atcmd_reg_t _sxa_dhdl_query_regs[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_sxa_dhdl_query_regs</name>
+        <initializer>= {
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;D&apos;, &apos;H&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633" kindref="member">XBEE_CLT_COPY</ref>, <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref>, dest_addr.l[0]),
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;D&apos;, &apos;L&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633" kindref="member">XBEE_CLT_COPY</ref>, <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref>, dest_addr.l[1]),
+   <ref refid="group__xbee__atcmd_1ga22fe547f7ae9fd0b090c5e45f03c162d" kindref="member">XBEE_ATCMD_REG_END</ref>
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="107" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga88c9810bd98b37f572f8fb294cb02349" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="structsxa__cached__group__t" kindref="compound">sxa_cached_group_t</ref></type>
+        <definition>const FAR sxa_cached_group_t _sxa_default_cache_groups[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_sxa_default_cache_groups</name>
+        <initializer>=
+{
+	_SXA_CG_INIT(<ref refid="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600a8d6b7f78660e6b7da06d0fa99dfb6df6" kindref="member">SXA_CACHED_NODE_ID</ref>,		node_id_cf,			_sxa_ni_query_regs, 			NULL),
+	_SXA_CG_INIT(<ref refid="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600a8f3afd72952b8d47c03b1c9c4ea76622" kindref="member">SXA_CACHED_IO_CONFIG</ref>,	io_config_cf, 		NULL, 							_sxa_update_io_config_group),
+	_SXA_CG_INIT(<ref refid="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600a689a1dccc7c16583fec02c8d8c7ba35d" kindref="member">SXA_CACHED_DEVICE_INFO</ref>,device_info_cf,	_sxa_devinfo_query_regs,	NULL),
+	_SXA_CG_INIT(<ref refid="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600a0ad9240e8ef31156d92883213e899924" kindref="member">SXA_CACHED_DHDL</ref>,			dhdl_cf, 			_sxa_dhdl_query_regs, 		NULL),
+	_SXA_CG_INIT_END
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="119" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1gaa4c14a57419394312307388b4fde4a0f" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref></type>
+        <definition>const FAR xbee_atcmd_reg_t _sxa_init_query_regs[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_sxa_init_query_regs</name>
+        <initializer>= {
+   
+	<ref refid="group__xbee__atcmd_1ga37dcc1cfc854d7876be99eff279bf2a0" kindref="member">XBEE_ATCMD_REG_SET_8</ref>( &apos;N&apos;, &apos;O&apos;, 2),
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="859" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="859" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" prot="public" static="no" mutable="no">
+        <type>typedef</type>
+        <definition>typedef PACKED_STRUCT</definition>
+        <argsstring></argsstring>
+        <name>PACKED_STRUCT</name>
+        <initializer>{
+	<ref refid="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" kindref="member">sxa_cache_flags_t</ref>	flags</initializer>
+        <briefdescription>
+<para>Cached generic register value (no data) </para>        </briefdescription>
+        <detaileddescription>
+<para>Cached extended address register value.</para><para>Cached uint32_t register value.</para><para>Cached uint16_t register value.</para><para>Cached uint8_t register value.</para><para>Cache status flags (<ref refid="group___s_x_a_1gga0411cd49bb5b71852cecd93bcbf0ca2da54498f64b3ad7c2be423d32b45deac04" kindref="member">_SXA_CACHED_OK</ref> etc.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="69" column="1" bodyfile="include/xbee/sxa.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="group__zcl_1ga385c41594437cdf661bfb518f11ee0fc" compoundref="zigbee__zcl_8c" startline="1361" endline="1447">_zcl_discover_attributes</referencedby>
+        <referencedby refid="group__zcl__client_1ga15f191f3166c71f3f436b2a32d108a9f" compoundref="zcl__client_8c" startline="182" endline="278">_zcl_send_read_from_zdo_match</referencedby>
+        <referencedby refid="group__zcl_1gaff3abb5d2022101c2873e7a8e8b027e5" compoundref="zigbee__zcl_8c" startline="841" endline="927">_zcl_write_attributes</referencedby>
+        <referencedby refid="group__zdo_1ga233f2d57bc9b9d68cb18bd9d76c08e34" compoundref="zigbee__zdo_8c" startline="660" endline="711">_zdo_active_ep_respond</referencedby>
+        <referencedby refid="group__zdo_1ga41d93e5e12d9ed4e18d092fe3af779a2" compoundref="zigbee__zdo_8c" startline="316" endline="412">_zdo_match_desc_respond</referencedby>
+        <referencedby refid="group__zdo_1gad723bd899ccda9ec96f6226893c1335b" compoundref="zigbee__zdo_8c" startline="1083" endline="1130">_zdo_process_ieee_addr_resp</referencedby>
+        <referencedby refid="group__zdo_1ga9c1afb2178cc3e3b515373c7e351fc02" compoundref="zigbee__zdo_8c" startline="982" endline="1024">_zdo_process_nwk_addr_resp</referencedby>
+        <referencedby refid="group__zdo_1gaa70aa4bcb14a98c69e7a54a9971ea194" compoundref="zigbee__zdo_8c" startline="526" endline="637">_zdo_simple_desc_respond</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga6b157fe048c0082253056a7bda0ba9bb" compoundref="xbee__atcmd_8c" startline="1767" endline="1790">xbee_cmd_simple</referencedby>
+        <referencedby refid="group__zcl__client_1ga24a7c15cdfe484aff260848694fccae2" compoundref="zcl__client_8c" startline="103" endline="152">zcl_client_read_attributes</referencedby>
+        <referencedby refid="group__zcl__commissioning_1ga3d73d7ef453da4940c923d7d7663f8d9" compoundref="zcl__commissioning_8c" startline="464" endline="493">zcl_comm_reset_parameters</referencedby>
+        <referencedby refid="group__zcl__commissioning_1ga57f9aaf3da6dc9b513f7f9ccbb473a0b" compoundref="zcl__commissioning_8c" startline="265" endline="295">zcl_comm_response</referencedby>
+        <referencedby refid="group__zcl__commissioning_1ga891e67720dee8334b805756597a62607" compoundref="zcl__commissioning_8c" startline="409" endline="437">zcl_comm_restart_device</referencedby>
+        <referencedby refid="group__zcl_1gab5c99acba0d864acd326bcab46d1416e" compoundref="zigbee__zcl_8c" startline="248" endline="308">zcl_default_response</referencedby>
+        <referencedby refid="group__zcl__identify_1ga94a1fe7c8892b55e0ffd3e2795139b1d" compoundref="zcl__identify_8c" startline="181" endline="243">zcl_identify_command</referencedby>
+        <referencedby refid="group__zdo_1ga5746efffb4b90718eb973796f2b4bb41" compoundref="zigbee__zdo_8c" startline="247" endline="292">zdo_match_desc_request</referencedby>
+        <referencedby refid="group__zdo_1gab02e4c1584594c0a96d05399bd69bffa" compoundref="zigbee__zdo_8c" startline="839" endline="885">zdo_send_bind_req</referencedby>
+        <referencedby refid="group__zdo_1gac842062e5e1a60d25cddf16ec22ef601" compoundref="zigbee__zdo_8c" startline="925" endline="969">zdo_send_descriptor_req</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga96e5f9309b5a697a88199927d4ababa3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sxa_cached_t</definition>
+        <argsstring></argsstring>
+        <name>sxa_cached_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="72" column="1" bodyfile="include/xbee/sxa.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga810fe9819dfe66daa9ce4981812b46c3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>addr64 value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+<para>Cached value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="80" column="1" bodyfile="include/xbee/sxa.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1gac74fc48f2d0a7772b891264671bff3db" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sxa_cached_uint8_t</definition>
+        <argsstring></argsstring>
+        <name>sxa_cached_uint8_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="81" column="1" bodyfile="include/xbee/sxa.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga3d2a91f4eb47232935501ac9a8711659" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sxa_cached_uint16_t</definition>
+        <argsstring></argsstring>
+        <name>sxa_cached_uint16_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="90" column="1" bodyfile="include/xbee/sxa.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga138eab92aae0a7afd56d36f4824512c8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sxa_cached_uint32_t</definition>
+        <argsstring></argsstring>
+        <name>sxa_cached_uint32_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="99" column="1" bodyfile="include/xbee/sxa.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga7fc067af06a5c045590e9884073b3f98" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sxa_cached_addr64</definition>
+        <argsstring></argsstring>
+        <name>sxa_cached_addr64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="108" column="1" bodyfile="include/xbee/sxa.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga88c9810bd98b37f572f8fb294cb02349" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="structsxa__cached__group__t" kindref="compound">sxa_cached_group_t</ref></type>
+        <definition>const FAR sxa_cached_group_t _sxa_default_cache_groups[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_sxa_default_cache_groups</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="486" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1gafaf56c450e4f885ee2d8fd0dfc0bc0a9" prot="public" static="no" mutable="no">
+        <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>sxa_node_t FAR* sxa_table</definition>
+        <argsstring></argsstring>
+        <name>sxa_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="500" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1gaf690fd80428627087e91a1e1b28fad0f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sxa_table_count</definition>
+        <argsstring></argsstring>
+        <name>sxa_table_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="501" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___s_x_a_1ga01bfbcf717c18bfb7825eba4715b3ad4" prot="public" static="no" mutable="no">
+        <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>sxa_node_t FAR* sxa_local_table</definition>
+        <argsstring></argsstring>
+        <name>sxa_local_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="502" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___s_x_a_1gaaeb2977fc8c351b3edcf007c1effc374" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* sxa_cache_upd_fn) (struct sxa_node_t FAR *sxa, const struct sxa_cached_group_t FAR *cgroup)</definition>
+        <argsstring>)(struct sxa_node_t FAR *sxa, const struct sxa_cached_group_t FAR *cgroup)</argsstring>
+        <name>sxa_cache_upd_fn</name>
+        <briefdescription>
+<para>Function registered for cache group update post-processing. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sxa</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Relevant SXA. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cgroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cache group being updated (within sxa) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="140" column="1" bodyfile="include/xbee/sxa.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___s_x_a_1ga04cec5760ca52362801366f825805a0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_socket_tx_handler</definition>
+        <argsstring>(struct LoopbackHandler __far *lh, ll_Gather *g)</argsstring>
+        <name>_sxa_socket_tx_handler</name>
+        <param>
+          <type>struct LoopbackHandler __far *</type>
+          <declname>lh</declname>
+        </param>
+        <param>
+          <type>ll_Gather *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rabbit/xbee_sxa_socket.c" line="130" column="1" bodyfile="src/rabbit/xbee_sxa_socket.c" bodystart="130" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gad08c29c9cffd4775a178909a52d93121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sxa_socket_rx_handler</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, wpan_ep_state_t FAR *ep_state)</argsstring>
+        <name>_sxa_socket_rx_handler</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>ep_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rabbit/xbee_sxa_socket.c" line="245" column="1" bodyfile="src/rabbit/xbee_sxa_socket.c" bodystart="245" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaacbb5ad05beda82f9f21740433c7d3f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int sxa_socket_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>sxa_socket_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rabbit/xbee_sxa_socket.c" line="374" column="1" bodyfile="src/rabbit/xbee_sxa_socket.c" bodystart="374" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gad0139281f543c65392ad240887314fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *()</type>
+        <definition>_xbee_sxa_debug sxa_node_t FAR*() sxa_list_head</definition>
+        <argsstring>(void)</argsstring>
+        <name>sxa_list_head</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="63" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gac6f2b023adc97cc6329c8879ed129520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int()</type>
+        <definition>_xbee_sxa_debug int() sxa_list_count</definition>
+        <argsstring>(void)</argsstring>
+        <name>sxa_list_count</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="69" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gafcff798c9cdd29339bd32d72fec3ec52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *()</type>
+        <definition>_xbee_sxa_debug xbee_dev_t*() sxa_xbee</definition>
+        <argsstring>(sxa_node_t FAR *sxa)</argsstring>
+        <name>sxa_xbee</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="75" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gac3fa6c3eac7807ed51bdbee114e9e4dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug <ref refid="structwpan__address__t" kindref="compound">wpan_address_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *()</type>
+        <definition>_xbee_sxa_debug wpan_address_t FAR*() sxa_wpan_address</definition>
+        <argsstring>(sxa_node_t FAR *sxa)</argsstring>
+        <name>sxa_wpan_address</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="81" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaf299bcddfe8f4dfb4a3f0617a16d671e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structsxa__cached__group__t" kindref="compound">sxa_cached_group_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const sxa_cached_group_t FAR * _sxa_cache_group_by_id</definition>
+        <argsstring>(uint16_t id)</argsstring>
+        <name>_sxa_cache_group_by_id</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="130" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="130" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaac6448275c5e6b10263ae7c73afce3c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _sxa_process_version_info</definition>
+        <argsstring>(const xbee_cmd_response_t FAR *response, const struct xbee_atcmd_reg_t FAR *reg, void FAR *base)</argsstring>
+        <name>_sxa_process_version_info</name>
+        <param>
+          <type>const <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>response</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="147" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="147" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga52a1b2b68e747e9f286974c473cb8a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _sxa_update_io_config_group</definition>
+        <argsstring>(sxa_node_t FAR *sxa, const sxa_cached_group_t FAR *cgroup)</argsstring>
+        <name>_sxa_update_io_config_group</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsxa__cached__group__t" kindref="compound">sxa_cached_group_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>cgroup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="288" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="288" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga9ae9421a9cd885d2299aabb74251cb48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_disc_process_node_data</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, int length)</argsstring>
+        <name>_sxa_disc_process_node_data</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Function shared by multiple functions that process Node Identification Messages (0x95 frames and ATND responses). </para>        </briefdescription>
+        <detaileddescription>
+<internal><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device that received the message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">raw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>successfully parsed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error parsing data or calling <emphasis>handler()</emphasis> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="311" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="311" bodyend="352"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaaa5cd9591d2c4735e4d9df944323ce17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_disc_atnd_response</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>_sxa_disc_atnd_response</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Frame handler for processing AT Command Response frames. </para>        </briefdescription>
+        <detaileddescription>
+<para>Should only be called by the frame dispatcher and unit tests.</para><para>See the function help for <ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> for full documentation on this function&apos;s API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="366" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="366" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gadd7b9ea8d43a02a15c22957b936c8a71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_disc_handle_frame_0x95</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>_sxa_disc_handle_frame_0x95</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Frame handler for processing Node Identification Indicator (0x95) frames. </para>        </briefdescription>
+        <detaileddescription>
+<para>Should only be called by the frame dispatcher and unit tests.</para><para>See the function help for <ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> for full documentation on this function&apos;s API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="400" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="400" bodyend="410"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaf2be09cd0493eb7daf5c1b1d32c2cdf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>sxa_node_t FAR * sxa_node_by_addr</definition>
+        <argsstring>(const addr64 FAR *ieee_be)</argsstring>
+        <name>sxa_node_by_addr</name>
+        <param>
+          <type>const <ref refid="unionaddr64" kindref="compound">addr64</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>ieee_be</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="418" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="418" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaa489c5f8d5296fd609793f3a46f8b62e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>sxa_node_t FAR * sxa_local_node</definition>
+        <argsstring>(const xbee_dev_t *xbee)</argsstring>
+        <name>sxa_local_node</name>
+        <param>
+          <type>const <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="442" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="442" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga0b1c597794cd34a06c04b1a8d7a67985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>sxa_node_t FAR * sxa_node_by_name</definition>
+        <argsstring>(const char FAR *name)</argsstring>
+        <name>sxa_node_by_name</name>
+        <param>
+          <type>const char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="461" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="461" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga1712e218c433eb314121599866b9b886" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>sxa_node_t FAR * sxa_node_by_index</definition>
+        <argsstring>(int index)</argsstring>
+        <name>sxa_node_by_index</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="482" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="482" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga30754e1f60c895be7c4cf1818ea3e777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>sxa_node_t FAR * sxa_node_add</definition>
+        <argsstring>(xbee_dev_t *xbee, const xbee_node_id_t FAR *node_id)</argsstring>
+        <name>sxa_node_add</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>node_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="502" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="502" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga63185b350cf48c154f2071931fd7d0d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug void</type>
+        <definition>void sxa_node_table_dump</definition>
+        <argsstring>(void)</argsstring>
+        <name>sxa_node_table_dump</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="563" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="563" bodyend="597"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga7129f2a09a9a49d26c50cbff75e50232" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_disc_cluster_handler</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, void FAR *context)</argsstring>
+        <name>_sxa_disc_cluster_handler</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Cluster handler for &quot;Digi Node Identification&quot; cluster. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para>Used in the cluster table of <ref refid="group__wpan__aps_1ga83cb85a2a1e374554f9ad735c9c06e7b" kindref="member">WPAN_ENDPOINT_DIGI_DATA</ref> (0xE8) for cluster DIGI_CLUST_NODEID_MESSAGE (0x0095).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>information about the frame (addresses, endpoint, profile, cluster, etc.) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handled data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>some sort of error processing data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__wpan__aps_1ga8575b0db762a5fbb858d4994c9b657e3" kindref="member">wpan_aps_handler_fn()</ref> </para></simplesect>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="621" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="621" bodyend="632"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga8b7ff9c6ba3a7223a6061b8ec52e195e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_io_process_response</definition>
+        <argsstring>(const addr64 FAR *ieee_be, const void FAR *raw, int length)</argsstring>
+        <name>_sxa_io_process_response</name>
+        <param>
+          <type>const <ref refid="unionaddr64" kindref="compound">addr64</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>ieee_be</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Function shared by multiple functions that process I/O sample messages (0x92 frames and ATIS responses). </para>        </briefdescription>
+        <detaileddescription>
+<internal><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device that received the message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">raw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the message (starting at sample count field) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>successfully parsed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error parsing data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="652" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="652" bodyend="682"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga2cefa3759e8a990ec49519b6154295fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_io_response_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>_sxa_io_response_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="691" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="691" bodyend="704"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga44f8ee62266041b8996967081fe6479f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_io_cluster_handler</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, void FAR *context)</argsstring>
+        <name>_sxa_io_cluster_handler</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="709" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="709" bodyend="719"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaba26b5a39ec4012c2abf63d16f4ab765" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_remote_is_cmd_response_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>_sxa_remote_is_cmd_response_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="724" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="724" bodyend="742"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaecaa5cfd1a9568899d54920909a01081" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_local_is_cmd_response_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>_sxa_local_is_cmd_response_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="747" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="747" bodyend="766"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gadfbf4b01e49eee344a444f643bd00eab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int sxa_get_digital_input</definition>
+        <argsstring>(const sxa_node_t FAR *sxa, uint_fast8_t index)</argsstring>
+        <name>sxa_get_digital_input</name>
+        <param>
+          <type>const <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>uint_fast8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="772" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="772" bodyend="775"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga6a9905fa096110df102ea073aa021914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int sxa_get_digital_output</definition>
+        <argsstring>(const sxa_node_t FAR *sxa, uint_fast8_t index)</argsstring>
+        <name>sxa_get_digital_output</name>
+        <param>
+          <type>const <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>uint_fast8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="780" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="780" bodyend="783"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga1687997b92d82244cf50cf8dbc311aa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug <ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+        <definition>int16_t sxa_get_analog_input</definition>
+        <argsstring>(const sxa_node_t FAR *sxa, uint_fast8_t index)</argsstring>
+        <name>sxa_get_analog_input</name>
+        <param>
+          <type>const <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>uint_fast8_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="788" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="788" bodyend="791"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga5479fd816024530e822d6191357d8d79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int sxa_set_digital_output</definition>
+        <argsstring>(sxa_node_t FAR *sxa, uint_fast8_t index, enum xbee_io_digital_output_state state)</argsstring>
+        <name>sxa_set_digital_output</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>uint_fast8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="group__xbee__io_1gaf104a10d2bc34550b99de92fe3564cd2" kindref="member">xbee_io_digital_output_state</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="796" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="796" bodyend="801"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaeedb9e47f6ee8470ebae15440a9343f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int sxa_io_configure</definition>
+        <argsstring>(sxa_node_t FAR *sxa, uint_fast8_t index, enum xbee_io_type type)</argsstring>
+        <name>sxa_io_configure</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>uint_fast8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="group__xbee__io_1gac23a55c53310f865d9ed2381e331a438" kindref="member">xbee_io_type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="806" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="806" bodyend="811"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gab8bd3f38d1a7cb4497e1d037d9e3e7dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int sxa_io_set_options</definition>
+        <argsstring>(sxa_node_t FAR *sxa, uint16_t sample_rate, uint16_t change_mask)</argsstring>
+        <name>sxa_io_set_options</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>sample_rate</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>change_mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="816" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="816" bodyend="821"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga652e37d2a3e16d2723e68ad4488d8cce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int sxa_io_query</definition>
+        <argsstring>(sxa_node_t FAR *sxa)</argsstring>
+        <name>sxa_io_query</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="826" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="826" bodyend="829"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga47f2a1443c29bcbd290292ec33574403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int sxa_io_query_status</definition>
+        <argsstring>(sxa_node_t FAR *sxa)</argsstring>
+        <name>sxa_io_query_status</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="834" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="834" bodyend="837"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga698650d3afb6074ef65c9bccf846f471" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug void</type>
+        <definition>void sxa_io_dump</definition>
+        <argsstring>(sxa_node_t FAR *sxa)</argsstring>
+        <name>sxa_io_dump</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="843" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="843" bodyend="854"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga20be2a68c0403ec05230526554ffc1ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>sxa_node_t FAR * sxa_init_or_exit</definition>
+        <argsstring>(xbee_dev_t *xbee, const wpan_endpoint_table_entry_t *ep_table, int verbose)</argsstring>
+        <name>sxa_init_or_exit</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *</type>
+          <declname>ep_table</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="866" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="866" bodyend="937"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga7b3fb6046bd92a9d898403451f524737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _sxa_cmd_list_cache_cb</definition>
+        <argsstring>(const xbee_cmd_response_t FAR *response, const struct xbee_atcmd_reg_t FAR *reg, void FAR *base)</argsstring>
+        <name>_sxa_cmd_list_cache_cb</name>
+        <param>
+          <type>const <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>response</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="944" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="944" bodyend="958"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga81312d0cecb0cac7d7677b0daab1a38a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _sxa_launch_update</definition>
+        <argsstring>(sxa_node_t FAR *sxa, const struct _xbee_reg_descr_t FAR *xrd, uint16_t cache_group)</argsstring>
+        <name>_sxa_launch_update</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="struct__xbee__reg__descr__t" kindref="compound">_xbee_reg_descr_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>xrd</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>cache_group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="960" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="960" bodyend="1019"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga4d338eecde830dfb7301886e30dd8afd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sxa_tick</definition>
+        <argsstring>(void)</argsstring>
+        <name>sxa_tick</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="1025" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="1025" bodyend="1169"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gabbf7dbee8c4abf56830494ada37783a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" kindref="member">sxa_cache_flags_t</ref></type>
+        <definition>sxa_cache_flags_t sxa_cache_status</definition>
+        <argsstring>(sxa_node_t FAR *sxa, const _xbee_reg_descr_t FAR *zb, uint16_t cache_group)</argsstring>
+        <name>sxa_cache_status</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct__xbee__reg__descr__t" kindref="compound">_xbee_reg_descr_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>zb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>cache_group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="1174" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="1174" bodyend="1196"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga99d0aaec6a2a702f2ee9a73ac985f3ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _sxa_set_cache_status</definition>
+        <argsstring>(sxa_node_t FAR *sxa, const _xbee_reg_descr_t FAR *zb, uint16_t cache_group, sxa_cache_flags_t flags)</argsstring>
+        <name>_sxa_set_cache_status</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct__xbee__reg__descr__t" kindref="compound">_xbee_reg_descr_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>zb</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>cache_group</declname>
+        </param>
+        <param>
+          <type><ref refid="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" kindref="member">sxa_cache_flags_t</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="1200" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="1200" bodyend="1221"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaf30ed0cbc76c65f737aa24272fd6f8c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>void FAR * sxa_cached_value_ptr</definition>
+        <argsstring>(sxa_node_t FAR *sxa, const _xbee_reg_descr_t FAR *zb)</argsstring>
+        <name>sxa_cached_value_ptr</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct__xbee__reg__descr__t" kindref="compound">_xbee_reg_descr_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>zb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="1225" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="1225" bodyend="1236"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga7795a6e72cb0489fdc2910d235d320ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t sxa_cached_value_len</definition>
+        <argsstring>(sxa_node_t FAR *sxa, const _xbee_reg_descr_t FAR *zb)</argsstring>
+        <name>sxa_cached_value_len</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct__xbee__reg__descr__t" kindref="compound">_xbee_reg_descr_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>zb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="1240" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="1240" bodyend="1248"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga77e16624f969e20d1c39a468d783a5ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sxa_find_pending_cache</definition>
+        <argsstring>(sxa_node_t FAR *sxa, const _xbee_reg_descr_t FAR *zb)</argsstring>
+        <name>sxa_find_pending_cache</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct__xbee__reg__descr__t" kindref="compound">_xbee_reg_descr_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>zb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="1252" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="1252" bodyend="1266"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaa85363be4aaec395e0702bffe9fd737a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sxa_schedule_update_cache</definition>
+        <argsstring>(sxa_node_t FAR *sxa, const _xbee_reg_descr_t FAR *zb)</argsstring>
+        <name>sxa_schedule_update_cache</name>
+        <param>
+          <type><ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct__xbee__reg__descr__t" kindref="compound">_xbee_reg_descr_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>zb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="1270" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="1270" bodyend="1291"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1ga4e69849f1bd4c5261fd1185506a96b01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sxa_is_digi</definition>
+        <argsstring>(const sxa_node_t FAR *sxa)</argsstring>
+        <name>sxa_is_digi</name>
+        <param>
+          <type>const <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>sxa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="1296" column="1" bodyfile="src/xbee/xbee_sxa.c" bodystart="1296" bodyend="1302"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___s_x_a_1ga27795359331f2e44d8d40c1b9163a674" prot="public" static="no">
+        <name>sxa_list_head</name>
+        <param><defname>void</defname></param>
+        <initializer>sxa_table</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="511" column="9" bodyfile="include/xbee/sxa.h" bodystart="511" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gab0d9a6292749d033909b792227bd85ad" prot="public" static="no">
+        <name>sxa_list_count</name>
+        <param><defname>void</defname></param>
+        <initializer>sxa_table_count</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="513" column="9" bodyfile="include/xbee/sxa.h" bodystart="513" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga83cec2028c202eb87ad7bd5500949b24" prot="public" static="no">
+        <name>_XRT_ENTRY</name>
+        <param><defname>state</defname></param>
+        <param><defname>tag</defname></param>
+        <param><defname>at</defname></param>
+        <param><defname>cxv</defname></param>
+        <param><defname>desc</defname></param>
+        <param><defname>units</defname></param>
+        <param><defname>min</defname></param>
+        <param><defname>max</defname></param>
+        <param><defname>rci_type</defname></param>
+        <param><defname>sxa_field</defname></param>
+        <param><defname>group</defname></param>
+        <initializer>{ state, #at, cxv, rci_type, \
+   		offsetof(<ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref>,sxa_field), \
+         sizeof((*(<ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> *)NULL).sxa_field), \
+         SXA_CACHED_##group }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="46" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gaebf0bdb7cd47b4d4c612c2cadee1a743" prot="public" static="no">
+        <name>F8</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="57" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gaa58c02315d6d183636fa06f91600855c" prot="public" static="no">
+        <name>EZ</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="58" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga7c41685fef06e2a89abc69a7edfb4500" prot="public" static="no">
+        <name>ZB</name>
+        <initializer>0x0408</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="59" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga415a5793bb5269705fcb36b6d3800952" prot="public" static="no">
+        <name>X9</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="60" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga79ae03a0214cb30e57b9e8835f2a0019" prot="public" static="no">
+        <name>X2</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="61" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga97d09b56987fc327100f41788e1b26db" prot="public" static="no">
+        <name>X8</name>
+        <initializer>0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="62" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gab3383e72bb58d5e6faf0501cd117acfa" prot="public" static="no">
+        <name>DP</name>
+        <initializer>0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="63" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gab288c4e26b9e229231ba0f0f6b039b62" prot="public" static="no">
+        <name>FZ</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="66" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga18bbe716f5be6adbd2150139244c0262" prot="public" static="no">
+        <name>SE</name>
+        <initializer>0x0100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="67" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga1edd1ea8bddaf4d9c5eb3eae1ee1726a" prot="public" static="no">
+        <name>ALL</name>
+        <initializer>0x07ff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="68" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gaac44b4153048abba18e0e606de4e42bc" prot="public" static="no">
+        <name>GW</name>
+        <initializer>0x8000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_reg_descr.c" line="69" column="9" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gade008fe82b5455e08af1525adb4fd2ae" prot="public" static="no">
+        <name>_xbee_sxa_debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="41" column="10" bodyfile="src/xbee/xbee_sxa.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga5d892efb368534a238af99c167fcf490" prot="public" static="no">
+        <name>_sys_calloc</name>
+        <param><defname>s</defname></param>
+        <initializer>calloc( s, 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="43" column="10" bodyfile="src/xbee/xbee_sxa.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga90f66b432e3d4f1df7742dd79c3bffbc" prot="public" static="no">
+        <name>_sys_malloc</name>
+        <param><defname>s</defname></param>
+        <initializer>malloc( s)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="44" column="10" bodyfile="src/xbee/xbee_sxa.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga61f8debfdf54fdac92d3ad1754e8afe5" prot="public" static="no">
+        <name>_sys_free</name>
+        <param><defname>p</defname></param>
+        <initializer>free( p)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="45" column="10" bodyfile="src/xbee/xbee_sxa.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga8f17956f64da8e8d2302ce13991f41b9" prot="public" static="no">
+        <name>SXA_OFFSET</name>
+        <param><defname>base</defname></param>
+        <param><defname>ofs</defname></param>
+        <initializer>(void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *)((char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *)(base) + (ofs))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="52" column="9" bodyfile="src/xbee/xbee_sxa.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gab234f96bee6d9d1493d29872a2d48110" prot="public" static="no">
+        <name>_SXA_CG_INIT</name>
+        <param><defname>id</defname></param>
+        <param><defname>field</defname></param>
+        <param><defname>get</defname></param>
+        <param><defname>fn</defname></param>
+        <initializer>{ id, offsetof(<ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref>, field), get, fn }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="114" column="9" bodyfile="src/xbee/xbee_sxa.c" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga77fd70a084eb4c9fcb54902d1237c40a" prot="public" static="no">
+        <name>_SXA_CG_INIT_END</name>
+        <initializer>{ 0, 0, NULL, NULL }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_sxa.c" line="116" column="9" bodyfile="src/xbee/xbee_sxa.c" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga0deca0e430c1eeb8d4719574d1331900" prot="public" static="no">
+        <name>_SXA_CACHED_PREFIX_SIZE</name>
+        <initializer>(sizeof(<ref refid="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" kindref="member">sxa_cache_flags_t</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<internal><para>Size of cache flags and any other prefix data in each sxa_cached_* struct. Each struct must have same prefix data. Only the final &apos;value&apos; field may be different. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="64" column="9" bodyfile="include/xbee/sxa.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga43c6a2c7e1b5ee83edc039a248412580" prot="public" static="no">
+        <name>_SXA_CACHED_STRING</name>
+        <param><defname>name</defname></param>
+        <param><defname>len</defname></param>
+        <initializer><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref> { <ref refid="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" kindref="member">sxa_cache_flags_t</ref> flags; <ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref> <ref refid="group__zcl_1ga1ed5b151a90f7e99af8cca2e6875ddf4" kindref="member">value</ref>[len+1]; } name</initializer>
+        <briefdescription>
+<para>Cached string register value. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is in the form of a macro which generates an in-line struct definition, since strings are arrays with generally different maximum lengths.</para><para>One extra char is automatically added, for the null terminator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="117" column="9" bodyfile="include/xbee/sxa.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gaa0c4e5507161ec6f607d737e4d949a0b" prot="public" static="no">
+        <name>_SXA_CACHED_BIN</name>
+        <param><defname>name</defname></param>
+        <param><defname>len</defname></param>
+        <initializer><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref> { <ref refid="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" kindref="member">sxa_cache_flags_t</ref> flags; <ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref> <ref refid="group__zcl_1ga1ed5b151a90f7e99af8cca2e6875ddf4" kindref="member">value</ref>[len]; } name</initializer>
+        <briefdescription>
+<para>Cached binary register value. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is in the form of a macro which generates an in-line struct definition, since binaries are arrays with generally different maximum lengths. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="125" column="9" bodyfile="include/xbee/sxa.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gaa7956981f26959da78a1394c2ad65c4d" prot="public" static="no">
+        <name>ZB_CAP_ADV_ADDR</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="190" column="9" bodyfile="include/xbee/sxa.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gaa2470002554608a36463a2f19ddf96f4" prot="public" static="no">
+        <name>ZB_CAP_ZDO</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="193" column="9" bodyfile="include/xbee/sxa.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga2c7a5cf548a644f0ffb85e45138f60f3" prot="public" static="no">
+        <name>ZB_CAP_REMOTE_DDO</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="197" column="9" bodyfile="include/xbee/sxa.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gadf32af1981087015b41e8d701d8d2f10" prot="public" static="no">
+        <name>ZB_CAP_GW_FW</name>
+        <initializer>0x00000008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="200" column="9" bodyfile="include/xbee/sxa.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga7615b11eb71c25970e03e108523c3ded" prot="public" static="no">
+        <name>ZB_CAP_REMOTE_FW</name>
+        <initializer>0x00000010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="203" column="9" bodyfile="include/xbee/sxa.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga5293bd87697d34089625bfcc772312be" prot="public" static="no">
+        <name>ZB_CAP_ZIGBEE</name>
+        <initializer>0x00000020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="206" column="9" bodyfile="include/xbee/sxa.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga32d4e77a012a752e5ea1b736cdcadd10" prot="public" static="no">
+        <name>ZB_CAP_ZBPRO</name>
+        <initializer>0x00000040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="209" column="9" bodyfile="include/xbee/sxa.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga00fdeef09968d5bc40cf7200494a09b4" prot="public" static="no">
+        <name>ZB_CAP_DIGIMESH</name>
+        <initializer>0x00000080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="212" column="9" bodyfile="include/xbee/sxa.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga0cced2faadc2f7350d02728629abf0a3" prot="public" static="no">
+        <name>ZB_CAP_CHILDREN</name>
+        <initializer>0x00000100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="215" column="9" bodyfile="include/xbee/sxa.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga45291623ecceaded53004da1c2293150" prot="public" static="no">
+        <name>ZB_CAP_SE</name>
+        <initializer>0x00000200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="218" column="9" bodyfile="include/xbee/sxa.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gac382904e58cb18272c185f902e1f527d" prot="public" static="no">
+        <name>sxa_xbee</name>
+        <param><defname>s</defname></param>
+        <initializer>((s)-&gt;xbee)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="515" column="9" bodyfile="include/xbee/sxa.h" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga69ad5cef9cec5623f2c88e37e3af6ce0" prot="public" static="no">
+        <name>sxa_wpan_address</name>
+        <param><defname>s</defname></param>
+        <initializer>((s)-&gt;addr_ptr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="517" column="9" bodyfile="include/xbee/sxa.h" bodystart="517" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga988e2b4c52622034d041f38848881a09" prot="public" static="no">
+        <name>XBEE_FRAME_HANDLE_ND_RESPONSE</name>
+        <initializer>{ <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9ae66771334070219cd098c8201936cf4a" kindref="member">XBEE_FRAME_LOCAL_AT_RESPONSE</ref>, 0, <ref refid="group___s_x_a_1gaaa5cd9591d2c4735e4d9df944323ce17" kindref="member">_sxa_disc_atnd_response</ref>, NULL },	\
+		{ <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9a5b572839c3123f1059ec2ced643cf5d2" kindref="member">XBEE_FRAME_NODE_ID</ref>, 0, <ref refid="group___s_x_a_1gadd7b9ea8d43a02a15c22957b936c8a71" kindref="member">_sxa_disc_handle_frame_0x95</ref>, NULL }</initializer>
+        <briefdescription>
+<para>Macro for registering a handler to receive node announcements via both ATND responses and 0x95 frames received. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that the XBEE_FRAME_NODE_ID (0x95) handler is only necessary when ATAO=0. When ATAO is not zero, the 0x95 frames come in as 0x91 frames on the Digi Data Endpoint. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="563" column="9" bodyfile="include/xbee/sxa.h" bodystart="563" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga93a9155944812240b991ee57b5ef0ada" prot="public" static="no">
+        <name>XBEE_DISC_CLIENT_CLUST_ENTRY</name>
+        <initializer>{ <ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ad19431fd18576cc8463e8ac362a8579c" kindref="member">DIGI_CLUST_NODEID_MESSAGE</ref>, <ref refid="group___s_x_a_1ga7129f2a09a9a49d26c50cbff75e50232" kindref="member">_sxa_disc_cluster_handler</ref>, NULL, 		\
+		<ref refid="group__wpan__aps_1ga2024b5d21c6f8c2f151cc2b0576c08f4" kindref="member">WPAN_CLUST_FLAG_INPUT</ref> | <ref refid="group__wpan__aps_1gacb0e365a8c5e72ee90be503513e7e630" kindref="member">WPAN_CLUST_FLAG_NOT_ZCL</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="567" column="9" bodyfile="include/xbee/sxa.h" bodystart="567" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga4ef8415bf147396546ed97d7fc7ef8fd" prot="public" static="no">
+        <name>XBEE_FRAME_HANDLE_IS_RESPONSE</name>
+        <initializer>{ <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9a3cd726459592fab4cdc9b5e6bbecb79f" kindref="member">XBEE_FRAME_REMOTE_AT_RESPONSE</ref>, 0, _sxa_remote_is_cmd_response_handler, NULL }, \
+	{ <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9ae66771334070219cd098c8201936cf4a" kindref="member">XBEE_FRAME_LOCAL_AT_RESPONSE</ref>, 0, _sxa_local_is_cmd_response_handler, NULL },	\
+   { <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9abd1291a130de887d7b01cae0f5adbe25" kindref="member">XBEE_FRAME_IO_RESPONSE</ref>, 0, _sxa_io_response_handler, NULL }</initializer>
+        <briefdescription>
+<para>Macro for registering a handler to receive I/O samples via both ATIS responses and 0x92 frames received. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that the XBEE_FRAME_IO_RESPONSE (0x92) handler is only necessary when ATAO=0. When ATAO is not zero, the 0x92 frames come in as 0x91 frames on the Digi Data Endpoint. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="613" column="9" bodyfile="include/xbee/sxa.h" bodystart="613" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga19c9d9c766179398cff4bf8b33f57ae9" prot="public" static="no">
+        <name>XBEE_IO_CLIENT_CLUST_ENTRY</name>
+        <initializer>{<ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a66527ddc0653858888ce47c469c95349" kindref="member">DIGI_CLUST_IODATA</ref>, _sxa_io_cluster_handler, NULL,	\
+			<ref refid="group__wpan__aps_1ga2024b5d21c6f8c2f151cc2b0576c08f4" kindref="member">WPAN_CLUST_FLAG_INPUT</ref> | <ref refid="group__wpan__aps_1gacb0e365a8c5e72ee90be503513e7e630" kindref="member">WPAN_CLUST_FLAG_NOT_ZCL</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="618" column="9" bodyfile="include/xbee/sxa.h" bodystart="618" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga24cd1c18c4568b532a09c4d3ae6a3700" prot="public" static="no">
+        <name>SXA_SOCKET_MTU</name>
+        <initializer>104</initializer>
+        <briefdescription>
+<para>Network interface Maximum Transmission Unit, as seen by TCP stack. </para>        </briefdescription>
+        <detaileddescription>
+<para>Selection of this constant is a bit tricky. ZigBee has a small MTU, however the XBee modules accept larger payloads and fragments them if necessary when transmitting. TCP likes to avoid fragmentation and tries to select an MSS (TCP payload size) as large as possible, but not so large as to require any fragmentation along the transmission path.</para><para>There is no reliable method to set the MSS, because the ZigBee MTU depends on various header options such as encryption and source routing. Because of this, we select a conservative value for the TCP MSS of 64 bytes. To this, we add 40 bytes (for the IP and TCP headers) to get an MTU of 104, since TCP computes its MSS by assuming IP and TCP headers are required for each segment. This MTU of 104 exceeds that for ZigBee, however out implementation of SXA sockets effectively compresses the IP and TCP headers into a 6-byte header. This gives a real MTU of 64+6 = 70 bytes. This is an acceptable envelope payload size, which will avoid fragmentation.</para><para>Thus, whatever this constant is, the real MTU will be 34 bytes less than this, and the TCP MSS will be 40 bytes less. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="55" column="10" bodyfile="include/xbee/sxa_socket.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga0ae330bea7b42c331e9f473387e5766b" prot="public" static="no">
+        <name>SXA_INDEX_TO_IP</name>
+        <param><defname>index</defname></param>
+        <initializer>IPADDR(127,1,0,index)</initializer>
+        <briefdescription>
+<para>Macro to generate the appropriate &quot;loopback&quot; IP address, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>the IP address to use to talk to a particular remote node defined by its SXA node table index. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="61" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga686d56084362bb9152a4d5e6b048b80d" prot="public" static="no">
+        <name>SXA_STREAM_PORT</name>
+        <initializer>UINT16_C(61616)</initializer>
+        <briefdescription>
+<para>Macro to use for first and last valid TCP port numbers, for both source port and destination port. </para>        </briefdescription>
+        <detaileddescription>
+<para>This range is selected since port numbers must compress into 8-bit fields. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="66" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gab048ec29a4d3a7904f5aec7986ddcf6e" prot="public" static="no">
+        <name>SXA_MAX_STREAM_PORT</name>
+        <initializer>UINT16_C(61616+255)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="67" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga1d3ed304c9ba526771772782f6f446e5" prot="public" static="no">
+        <name>WPAN_ENDPOINT_DIGI_STREAM</name>
+        <initializer>0x66</initializer>
+        <briefdescription>
+<para>Provisional endpoint for reliable stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="70" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gacef6e474f41d87ead3269f543f2c5efd" prot="public" static="no">
+        <name>SXA_SOCKET_ENDPOINT</name>
+        <initializer>{ \
+        <ref refid="group___s_x_a_1ga1d3ed304c9ba526771772782f6f446e5" kindref="member">WPAN_ENDPOINT_DIGI_STREAM</ref>,	\
+        <ref refid="group__wpan__aps_1gaa90d7d1301c7de503f39113eb83e93e5" kindref="member">WPAN_PROFILE_DIGI</ref>,				\
+        _sxa_socket_rx_handler,		\
+        NULL,								\
+        0x0000,							\
+        0x00,								\
+        NULL }</initializer>
+        <briefdescription>
+<para>Place this entry in endpoint table to enable SXA sockets. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="103" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

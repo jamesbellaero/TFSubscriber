@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__zcl__basic" kind="group">
+    <compoundname>zcl_basic</compoundname>
+    <title>Basic Cluster</title>
+    <innerfile refid="zcl__basic_8c">zcl_basic.c</innerfile>
+    <innerfile refid="zcl__basic_8h">zcl_basic.h</innerfile>
+    <innerfile refid="zcl__basic__attributes_8h">zcl_basic_attributes.h</innerfile>
+    <innerclass refid="structzcl__basic__dev__info" prot="public">zcl_basic_dev_info</innerclass>
+      <sectiondef kind="user-defined">
+      <header>ZCL Basic Cluster Attribute IDs</header>
+      <memberdef kind="define" id="group__zcl__basic_1ga3680b891bc5b62eeb20ad9d65502e2ee" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_ZCL_VERSION</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+<para>ZCLVersion, UINT8, read-only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="38" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1gab278ad4794718034db8bd583ed019fe7" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_APP_VERSION</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>ApplicationVersion, UINT8, read-only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="40" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1ga88bf0168f55c3addbe3c2ba54c8095b1" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_STACK_VERSION</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+<para>StackVersion, UINT8, read-only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="42" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1gab2ab6140eb1374b9a82a56342a0b0fff" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_HW_VERSION</name>
+        <initializer>0x0003</initializer>
+        <briefdescription>
+<para>HWVersion, UINT8, read-only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="44" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1ga4d657421aaf3ce5419e0e5d9ff6efcda" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_MANUFACTURER_NAME</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+<para>ManufacturerName, 32-char STRING, read-only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="46" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1gad6e74db6f2936706976045dee1c43cf2" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_MODEL_IDENTIFIER</name>
+        <initializer>0x0005</initializer>
+        <briefdescription>
+<para>ModelIdentifier, 32-char STRING, read-only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="48" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1gadfa72f9d6ff3d467de6a51314ab2cce8" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_DATE_CODE</name>
+        <initializer>0x0006</initializer>
+        <briefdescription>
+<para>DateCode, 16-char STRING, read-only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="50" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1ga566025cbf5bb2560164d45c221226844" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_POWER_SOURCE</name>
+        <initializer>0x0007</initializer>
+        <briefdescription>
+<para>PowerSource, ENUM8, read-only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="52" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1ga6fde53674c021d134286c43d77514a22" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_LOCATION_DESC</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+<para>LocationDescription, 16-char STRING, r/w. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="55" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1gafcbb476a4db9587ae36001a2dcd417fd" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_PHYSICAL_ENV</name>
+        <initializer>0x0011</initializer>
+        <briefdescription>
+<para>PhysicalEnvironment, ENUM8, r/w. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="57" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1gaf47c5e3169d58b3a323a7235636e1896" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_DEVICE_ENABLED</name>
+        <initializer>0x0012</initializer>
+        <briefdescription>
+<para>DeviceEnabled, BOOLEAN, r/w. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="59" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1gac9970c5f20b4fd743af8c71653e2d78a" prot="public" static="no">
+        <name>ZCL_BASIC_ATTR_ALARM_MASK</name>
+        <initializer>0x0013</initializer>
+        <briefdescription>
+<para>AlarmMask, BITMAP8, r/w. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="61" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para>Enumerated values for b0-b6 of PowerSource attribute. </para></description>
+      <memberdef kind="define" id="group__zcl__basic_1ga98e9e01925bb6c52e1d8ff837a32116d" prot="public" static="no">
+        <name>ZCL_BASIC_PS_UNKNOWN</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>Unknown. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="77" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1ga66eab175cd2834dbed155d4fa086e4d7" prot="public" static="no">
+        <name>ZCL_BASIC_PS_SINGLE_PHASE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>Mains (single phase) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="79" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1gacd2c65021e4ac4544bfe2419697d2407" prot="public" static="no">
+        <name>ZCL_BASIC_PS_THREE_PHASE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>Mains (3 phase) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="81" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1ga9002aa7599325d8b9ef74743dc77eb4e" prot="public" static="no">
+        <name>ZCL_BASIC_PS_BATTERY</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+<para>Battery. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="83" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1ga528fdcef318ec276618896c7cbfec618" prot="public" static="no">
+        <name>ZCL_BASIC_PS_DC</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+<para>DC source. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="85" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1gacdadf5dfcbe4d7435e1f718c9ce9d275" prot="public" static="no">
+        <name>ZCL_BASIC_PS_EMERGENCY_CONST</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+<para>Emergency mains, constant power. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="87" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1ga6a1e540c72d5ec1df8acc904c83f4bc9" prot="public" static="no">
+        <name>ZCL_BASIC_PS_EMERGENCY_SWITCH</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+<para>Emergency mains, transfer switch. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="89" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__zcl__basic_1ga192f747f17a619e344287c3e7f8a0dca" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t ZCLVersion</definition>
+        <argsstring></argsstring>
+        <name>ZCLVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic_attributes.h" line="75" column="1" bodyfile="include/zigbee/zcl_basic_attributes.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__basic_1ga339efb8b2f6c1ed9a5269621bc7adfbb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t PowerSource</definition>
+        <argsstring></argsstring>
+        <name>PowerSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic_attributes.h" line="85" column="1" bodyfile="include/zigbee/zcl_basic_attributes.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__basic_1ga739c59514b0eb0caee5541062c8e1ce8" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structzcl__basic__dev__info" kindref="compound">zcl_basic_dev_info</ref></type>
+        <definition>const struct zcl_basic_dev_info  zcl_basic_dev_info</definition>
+        <argsstring></argsstring>
+        <name>zcl_basic_dev_info</name>
+        <initializer>= {
+	<ref refid="group__zcl__basic_1ga677e87e13981dedcd3b370ede4902c54" kindref="member">ZCL_VERSION</ref>,
+
+
+
+
+
+
+
+
+
+	ZCL_POWER_SOURCE
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic_attributes.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__basic_1ga721ebe2f6ae346632475cf178671d150" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref></type>
+        <definition>const zcl_attribute_base_t FAR zcl_basic_attributes[]</definition>
+        <argsstring>[]</argsstring>
+        <name>zcl_basic_attributes</name>
+        <briefdescription>
+<para>Table of attributes for the Basic Cluster Server. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic_attributes.h" line="102" column="1" bodyfile="include/zigbee/zcl_basic_attributes.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__basic_1ga465778a2b459ad01710dc8f69ec2c19b" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structzcl__attribute__tree__t" kindref="compound">zcl_attribute_tree_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref></type>
+        <definition>const zcl_attribute_tree_t FAR zcl_basic_attribute_tree[]</definition>
+        <argsstring>[]</argsstring>
+        <name>zcl_basic_attribute_tree</name>
+        <initializer>=
+									{ { ZCL_MFG_NONE, <ref refid="group__zcl__basic_1ga721ebe2f6ae346632475cf178671d150" kindref="member">zcl_basic_attributes</ref>, NULL } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic_attributes.h" line="167" column="1" bodyfile="include/zigbee/zcl_basic_attributes.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__zcl__basic_1ga3a10395a400ea91bf9a3c37dcda69085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _zcl_basic_server</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, void FAR *context)</argsstring>
+        <name>_zcl_basic_server</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Handles commands for the Basic Server Cluster. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para>Currently supports the only command ID in the spec, 0x00 - Reset to Factory Defaults.</para><para><simplesect kind="note"><para>You must define the macro ZCL_FACTORY_RESET_FN in your program, and have it point to a function to be called when a factory reset command is sent.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__zcl__basic_1gad8336fcfc2729c8deb86eda7f125f271" kindref="member">ZCL_CLUST_ENTRY_BASIC_SERVER</ref> </para></simplesect>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_basic.c" line="50" column="1" bodyfile="src/zigbee/zcl_basic.c" bodystart="50" bodyend="72"/>
+        <references refid="group__zcl_1ga1a5aaa930940857f68f245eeb89506b5" compoundref="zcl_8h" startline="889">zcl_command_t::command</references>
+        <references refid="group__zcl_1ga5226462a41663bc81a5d67c04f18868a" compoundref="zcl_8h" startline="882">zcl_command_t::frame_control</references>
+        <references refid="group__zcl__basic_1ga3b8f5b3fdcb292179c3b8118ee142e07" compoundref="zcl__basic_8h" startline="98">ZCL_BASIC_CMD_FACTORY_DEFAULTS</references>
+        <references refid="group__zcl_1ga0bbd651dae138e104715e6e2de62084e" compoundref="zcl_8h" startline="261">ZCL_CMD_MATCH</references>
+        <references refid="group__zcl_1gadeb35ab493fffec9ba1c33f658929136" compoundref="zigbee__zcl_8c" startline="1474" endline="1545">zcl_command_build</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__zcl__basic_1ga677e87e13981dedcd3b370ede4902c54" prot="public" static="no">
+        <name>ZCL_VERSION</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>ZCL_VERSION is sent as ZCLVersion attribute. </para>        </briefdescription>
+        <detaileddescription>
+<para>Per the ZCL Spec, 3.2.2.2.2: &quot;For the initial version of the ZCL, this
+attribute shall be set to 0x01.&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="70" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1ga41f5febaea65227af827ca59f30a422b" prot="public" static="no">
+        <name>ZCL_BASIC_PS_BATTERY_BACKUP</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+<para>definition of b7 of PowerSource attribute (device has battery backup) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="95" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1ga3b8f5b3fdcb292179c3b8118ee142e07" prot="public" static="no">
+        <name>ZCL_BASIC_CMD_FACTORY_DEFAULTS</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>Single command of the Basic Server Cluster. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="98" column="9" bodyfile="include/zigbee/zcl_basic.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="group__zcl__basic_1ga3a10395a400ea91bf9a3c37dcda69085" compoundref="zcl__basic_8c" startline="50" endline="72">_zcl_basic_server</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__basic_1gad8336fcfc2729c8deb86eda7f125f271" prot="public" static="no">
+        <name>ZCL_CLUST_ENTRY_BASIC_SERVER</name>
+        <initializer>{ ZCL_CLUST_BASIC,						\
+			&amp;<ref refid="group__zcl_1gac3849121e93e777ce9a7510d24517b9b" kindref="member">zcl_general_command</ref>,				\
+			zcl_basic_attribute_tree,			\
+			<ref refid="group__wpan__aps_1ga9e0a1a0abf5594d8fa5a38b1ca40b3bc" kindref="member">WPAN_CLUST_FLAG_SERVER</ref> }</initializer>
+        <briefdescription>
+<para>Macro used to add a Basic Cluster Server to an endpoint&apos;s cluster table. </para>        </briefdescription>
+        <detaileddescription>
+<para>If #ZCL_FACTORY_RESET_FN is defined, the Basic Server Cluster will support the optional &quot;Reset to Factory Defaults&quot; command.</para><para>Note that you must #include &quot;zcl_basic_attributes.h&quot; in your program (to create constants referenced by the macros) before using these macros in a cluster table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic.h" line="119" column="11" bodyfile="include/zigbee/zcl_basic.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

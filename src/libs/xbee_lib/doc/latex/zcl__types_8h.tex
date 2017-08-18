@@ -1,0 +1,273 @@
+\hypertarget{zcl__types_8h}{}\section{include/zigbee/zcl\+\_\+types.h File Reference}
+\label{zcl__types_8h}\index{include/zigbee/zcl\+\_\+types.\+h@{include/zigbee/zcl\+\_\+types.\+h}}
+
+
+Macros and structures related to the Z\+CL datatypes.  
+
+
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/byteorder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}zigbee/zcl64.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionzcl40__t}{zcl40\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 40-\/bit unsigned in host-\/byte-\/order \end{DoxyCompactList}\item 
+union \hyperlink{unionzcl48__t}{zcl48\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 48-\/bit unsigned in host-\/byte-\/order \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+U\+T\+C\+T\+I\+M\+E\+\_\+\+I\+N\+V\+A\+L\+ID}~0x\+F\+F\+F\+F\+F\+F\+FF
+\item 
+\#define \hyperlink{group__zcl__types_ga6e143abd16187cc59cdad352c1fde4bf}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+\_\+\+A\+N\+A\+L\+OG}(t)~(\hyperlink{group__zcl__types_ga0f5737f60f1f37fb3b375e9fd5fe664d}{zcl\+\_\+type\+\_\+info}\mbox{[}t\mbox{]} \& \hyperlink{group__zcl__types_ga7b609984d4662f83a2248d1f485fd4ad}{Z\+C\+L\+\_\+\+T\+\_\+\+A\+N\+A\+L\+OG})
+\begin{DoxyCompactList}\small\item\em Z\+CL data type {\itshape t} is an analog type. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gafac9417148b2a7a3fbd64d84baf98cf7}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+\_\+\+D\+I\+S\+C\+R\+E\+TE}(t)~(\hyperlink{group__zcl__types_ga0f5737f60f1f37fb3b375e9fd5fe664d}{zcl\+\_\+type\+\_\+info}\mbox{[}t\mbox{]} \& \hyperlink{group__zcl__types_ga3e9bf95af4f58a0c9c5c34639b0dda29}{Z\+C\+L\+\_\+\+T\+\_\+\+D\+I\+S\+C\+R\+E\+TE})
+\begin{DoxyCompactList}\small\item\em Z\+CL data type {\itshape t} is a discrete type. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga9114be7b872a013b27e06e4aa437318f}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+\_\+\+S\+I\+G\+N\+ED}(t)~(\hyperlink{group__zcl__types_ga0f5737f60f1f37fb3b375e9fd5fe664d}{zcl\+\_\+type\+\_\+info}\mbox{[}t\mbox{]} \& \hyperlink{group__zcl__types_gaacf8dcd439ce0388d90681aec545e4e3}{Z\+C\+L\+\_\+\+T\+\_\+\+S\+I\+G\+N\+ED})
+\begin{DoxyCompactList}\small\item\em Z\+CL data type {\itshape t} is a signed type. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga665e39b52fa49df456f3e218dbb3c3e0}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+\_\+\+R\+E\+P\+O\+R\+T\+A\+B\+LE}(t)~(\hyperlink{group__zcl__types_ga0f5737f60f1f37fb3b375e9fd5fe664d}{zcl\+\_\+type\+\_\+info}\mbox{[}t\mbox{]} \& \hyperlink{group__zcl__types_gab0e5c23a0877c17fde12043c85728c29}{Z\+C\+L\+\_\+\+T\+\_\+\+R\+E\+P\+O\+R\+T\+A\+B\+LE})
+\begin{DoxyCompactList}\small\item\em Z\+CL data type {\itshape t} is a reportable type. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga639712ec7549d1bb6a5bcb05097386e2}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+S\+\_\+\+I\+N\+V\+A\+L\+ID}(t)~(\hyperlink{group__zcl__types_ga0f5737f60f1f37fb3b375e9fd5fe664d}{zcl\+\_\+type\+\_\+info}\mbox{[}t\mbox{]} == \hyperlink{group__zcl__types_ga7609ed68cf4399cb2c09799ecedfdbe0}{Z\+C\+L\+\_\+\+T\+\_\+\+I\+N\+V\+A\+L\+ID})
+\begin{DoxyCompactList}\small\item\em Z\+CL data type {\itshape t} is an invalid (unsupported/unrecognized) type. \end{DoxyCompactList}\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+H\+O\+RT}~-\/1
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+L\+O\+NG}~-\/2
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}~-\/3
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+I\+N\+V\+A\+L\+ID}~-\/127
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries zcl\+\_\+utctime\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl__types_gafa65aea1347d7c84cd0019a7e013b8f5}{zcl\+\_\+timeofday\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Time of Day (for \#\+Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+\_\+\+T\+OD Data Type) \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zcl__types_ga9ea8f9ebe25e922be76329748b8398b5}{zcl\+\_\+date\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Date (for \hyperlink{group__zcl__types_gad5552b0825d941f0ccd7b1d797dc091b}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+\_\+\+D\+A\+TE} Data Type) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+zcl\+\_\+types\+\_\+debug int \hyperlink{group__zcl__types_ga6134ab27d38abd300d008345e21fe560}{zcl\+\_\+sizeof\+\_\+type} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type})
+\begin{DoxyCompactList}\small\item\em Return the number of octets used by a given Z\+CL datatype. \end{DoxyCompactList}\item 
+zcl\+\_\+types\+\_\+debug const char $\ast$ \hyperlink{group__zcl__types_ga798e87a8b8f240a33706b7bc37c9ede1}{zcl\+\_\+type\+\_\+name} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type})
+\begin{DoxyCompactList}\small\item\em Return a descriptive string for a given Z\+CL attribute type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl__types_ga7acca8be0094a19be6e308ac05924c4f}{minutes}
+\begin{DoxyCompactList}\small\item\em 0-\/59 or 0xff for unused \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl__types_ga46729a903be1a03cdb248fb48d84d4f5}{seconds}
+\begin{DoxyCompactList}\small\item\em 0-\/59 or 0xff for unused \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl__types_gaa9acbdd2fcf00f83919be503371fc8a2}{hundredths}
+\begin{DoxyCompactList}\small\item\em 0-\/99 or 0xff for unused \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl__types_ga3e00faf7fbf9805e9ec4d2edd6339050}{month}
+\begin{DoxyCompactList}\small\item\em 1-\/12 or 0xff for unused \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl__types_ga72369a1087b2aeffe374bb054cb97c12}{day}
+\begin{DoxyCompactList}\small\item\em 1-\/31 or 0xff for unused \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl__types_gaf19fd1d4c2d4e9354c68c3b5546b7d41}{dayofweek}
+\begin{DoxyCompactList}\small\item\em 1-\/7 (1 = Monday, 7 = Sunday) or 0xff for unused \end{DoxyCompactList}\item 
+const \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl__types_ga0f5737f60f1f37fb3b375e9fd5fe664d}{zcl\+\_\+type\+\_\+info} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table to store information on each Z\+CL datatype. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Z\+CL Null Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+D\+A\+TA}~0x00
+\end{DoxyCompactItemize}
+\subsection*{Z\+CL General Data (discrete) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+8\+B\+IT}~0x08
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+16\+B\+IT}~0x09
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+24\+B\+IT}~0x0a
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+32\+B\+IT}~0x0b
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+40\+B\+IT}~0x0c
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+48\+B\+IT}~0x0d
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+56\+B\+IT}~0x0e
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+64\+B\+IT}~0x0f
+\end{DoxyCompactItemize}
+\subsection*{Z\+CL Logical (discrete) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+B\+O\+O\+L\+E\+AN}~0x10
+\end{DoxyCompactItemize}
+\subsection*{Values for \#Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+O\+G\+I\+C\+A\+L\+\_\+\+B\+O\+O\+L\+E\+AN}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+O\+O\+L\+\_\+\+F\+A\+L\+SE}~0x00
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+O\+O\+L\+\_\+\+T\+R\+UE}~0x01
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+O\+O\+L\+\_\+\+I\+N\+V\+A\+L\+ID}~0xff
+\end{DoxyCompactItemize}
+\subsection*{Z\+CL Bitmap (discrete) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+I\+T\+M\+A\+P\+\_\+8\+B\+IT}~0x18
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+I\+T\+M\+A\+P\+\_\+16\+B\+IT}~0x19
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+I\+T\+M\+A\+P\+\_\+24\+B\+IT}~0x1a
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+I\+T\+M\+A\+P\+\_\+32\+B\+IT}~0x1b
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+I\+T\+M\+A\+P\+\_\+40\+B\+IT}~0x1c
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+I\+T\+M\+A\+P\+\_\+48\+B\+IT}~0x1d
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+I\+T\+M\+A\+P\+\_\+56\+B\+IT}~0x1e
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+I\+T\+M\+A\+P\+\_\+64\+B\+IT}~0x1f
+\end{DoxyCompactItemize}
+\subsection*{Z\+CL Unsigned integer (analog) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+8\+B\+IT}~0x20
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+16\+B\+IT}~0x21
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+24\+B\+IT}~0x22
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+32\+B\+IT}~0x23
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+40\+B\+IT}~0x24
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+48\+B\+IT}~0x25
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+56\+B\+IT}~0x26
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+64\+B\+IT}~0x27
+\end{DoxyCompactItemize}
+\subsection*{Z\+CL Signed integer (analog) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+8\+B\+IT}~0x28
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+16\+B\+IT}~0x29
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+24\+B\+IT}~0x2a
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+32\+B\+IT}~0x2b
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+40\+B\+IT}~0x2c
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+48\+B\+IT}~0x2d
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+56\+B\+IT}~0x2e
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+64\+B\+IT}~0x2f
+\end{DoxyCompactItemize}
+\subsection*{Z\+CL Enumeration (discrete) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+U\+M\+\_\+8\+B\+IT}~0x30
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+U\+M\+\_\+16\+B\+IT}~0x31
+\end{DoxyCompactItemize}
+\subsection*{Z\+CL Floating point (analog) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__zcl__types_ga8b1e3e1ec66f72995346c295e8ba3fe7}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+A\+T\+\_\+\+S\+E\+MI}~0x38
+\begin{DoxyCompactList}\small\item\em semi-\/precision (16-\/bit) floating point (unsupported) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga4b22fe5da2b5395e0cbd178054702602}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+A\+T\+\_\+\+S\+I\+N\+G\+LE}~0x39
+\begin{DoxyCompactList}\small\item\em single-\/precision (32-\/bit) I\+E\+EE 754 floating point \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga447b33931d4cb320761a0e5034f494b2}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+O\+U\+B\+LE}~0x3a
+\begin{DoxyCompactList}\small\item\em double-\/precision (64-\/bit) I\+E\+EE 754 floating point \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Z\+CL String (discrete) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__zcl__types_ga7cd063b0a77ca0286b0dcc177e4251c5}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+O\+C\+T\+ET}~0x41
+\begin{DoxyCompactList}\small\item\em First octet is number of bytes in string or 0xff for invalid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga64286e0c69e0ed344a6eb8756ac81f95}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+C\+H\+AR}~0x42
+\begin{DoxyCompactList}\small\item\em First octet is number of characters in string or 0xff for invalid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga567563a365e2dddaced101de02fd9128}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+O\+N\+G\+\_\+\+O\+C\+T\+ET}~0x43
+\begin{DoxyCompactList}\small\item\em First two octets are number of bytes in string or 0xffff for invalid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gabb23537eaae74cc55233355c6ce5979e}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+O\+N\+G\+\_\+\+C\+H\+AR}~0x44
+\begin{DoxyCompactList}\small\item\em First two octets are number of characters in string or 0xffff for invalid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Z\+CL Ordered Sequence (discrete) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__zcl__types_ga5f609d45e4eb91ae4187bf912e4f870b}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+R\+R\+AY}~0x48
+\begin{DoxyCompactList}\small\item\em Z\+CL Array (unsupported) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga2d94a79998fd3cdd13a2cd9ed25b88cb}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+U\+CT}~0x4C
+\begin{DoxyCompactList}\small\item\em Z\+CL Struct (unsupported) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Z\+CL Collection (discrete) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__zcl__types_ga21ab004d25434d25e1e17865e895f1a7}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+ET}~0x50
+\begin{DoxyCompactList}\small\item\em Z\+CL Set (unsupported) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gacd6bd1e469abc59bab04e247bc85997b}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+AG}~0x51
+\begin{DoxyCompactList}\small\item\em Z\+CL Bag (unsupported) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Z\+CL Time (analog) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__zcl__types_gaa6fdd0dcc77890280046eb1db9f79516}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+\_\+\+T\+I\+M\+E\+O\+F\+D\+AY}~0x\+E0
+\begin{DoxyCompactList}\small\item\em see zcl\+\_\+timeofday\+\_\+t \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gad5552b0825d941f0ccd7b1d797dc091b}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+\_\+\+D\+A\+TE}~0x\+E1
+\begin{DoxyCompactList}\small\item\em see zcl\+\_\+date\+\_\+t \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga8f678e97557cb052c0df4be97e9f1e82}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+\_\+\+U\+T\+C\+T\+I\+ME}~0x\+E2
+\begin{DoxyCompactList}\small\item\em number of seconds (stored in uint32\+\_\+t) since Midnight on 1/1/2000 U\+TC \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Z\+CL Identifier (discrete) Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__zcl__types_gabf44aa40c12655d86c012c551bb6834e}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D\+\_\+\+C\+L\+U\+S\+T\+ER}~0x\+E8
+\begin{DoxyCompactList}\small\item\em 16-\/bit cluster ID \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga1dc09447fe0d1f047c4554975a11b3fa}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D\+\_\+\+A\+T\+T\+R\+IB}~0x\+E9
+\begin{DoxyCompactList}\small\item\em 16-\/bit attribute ID \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga59fe9efad9f60ec8176a13c0ab1019ac}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+D\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+O\+ID}~0x\+EA
+\begin{DoxyCompactList}\small\item\em 32-\/bit B\+A\+Cnet O\+ID \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Z\+CL Miscellaneous Types}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__zcl__types_ga13bc9499fe6127a5ce30c31f3ccae2df}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+DR}~0x\+F0
+\begin{DoxyCompactList}\small\item\em 64-\/bit I\+E\+EE address \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gaa430fee3f4e5e09767b9fc969f73cf2f}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+K\+EY}~0x\+F1
+\begin{DoxyCompactList}\small\item\em 128-\/bit security key \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Z\+CL Unknown Type}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__zcl__types_ga856105c2b5037b8406a294b668dfe755}{Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+K\+N\+O\+WN}~0x\+FF
+\begin{DoxyCompactList}\small\item\em Unknown Z\+CL Type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Settings for zcl\+\_\+type\+\_\+info\mbox{[}\mbox{]}}
+\label{_amgrpc5b79f6c3ee6519b88128e632fa3f35f}%
+These bitfields should only be used internally by the library, and should be exposed to user code via public A\+P\+Is. \begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__zcl__types_ga7609ed68cf4399cb2c09799ecedfdbe0}{Z\+C\+L\+\_\+\+T\+\_\+\+I\+N\+V\+A\+L\+ID}~0x0F
+\begin{DoxyCompactList}\small\item\em Not a valid Z\+CL type. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga3e9bf95af4f58a0c9c5c34639b0dda29}{Z\+C\+L\+\_\+\+T\+\_\+\+D\+I\+S\+C\+R\+E\+TE}~0x80
+\begin{DoxyCompactList}\small\item\em Discrete values (bitmap, enum, etc.) that can\textquotesingle{}t be added/subtracted or (if reportable) have a reportable change. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga7b609984d4662f83a2248d1f485fd4ad}{Z\+C\+L\+\_\+\+T\+\_\+\+A\+N\+A\+L\+OG}~0x20
+\begin{DoxyCompactList}\small\item\em If an attribute isn\textquotesingle{}t discrete, it\textquotesingle{}s analog (signed, unsigned, float, etc.) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gaacf8dcd439ce0388d90681aec545e4e3}{Z\+C\+L\+\_\+\+T\+\_\+\+S\+I\+G\+N\+ED}~0x40
+\begin{DoxyCompactList}\small\item\em Type is signed (default is unsigned). Only analog types can be signed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gaad99789b034d1ed0a2825e075bba62af}{Z\+C\+L\+\_\+\+T\+\_\+\+F\+L\+O\+AT}~0x10
+\begin{DoxyCompactList}\small\item\em Type is floating point (single, double or semi-\/precision). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gab0e5c23a0877c17fde12043c85728c29}{Z\+C\+L\+\_\+\+T\+\_\+\+R\+E\+P\+O\+R\+T\+A\+B\+LE}~(\hyperlink{group__zcl__types_ga7b609984d4662f83a2248d1f485fd4ad}{Z\+C\+L\+\_\+\+T\+\_\+\+A\+N\+A\+L\+OG} $\vert$ \hyperlink{group__zcl__types_ga3e9bf95af4f58a0c9c5c34639b0dda29}{Z\+C\+L\+\_\+\+T\+\_\+\+D\+I\+S\+C\+R\+E\+TE})
+\begin{DoxyCompactList}\small\item\em Type is reportable. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gaa49518f03f9632a55b3e1c4d4c68b60c}{Z\+C\+L\+\_\+\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+A\+SK}~0x0F
+\begin{DoxyCompactList}\small\item\em 0x00 to 0x08 represent 0 to 8 bytes; 0x0C is 16 bytes; 0x0D is two-\/octet size prefix, 0x0E is one-\/octet size prefix; 0x0F is invalid; 0x09, 0x0A and 0x0B are still available to encode special size information. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga5f381526f4ac9adac8cb07b7135e737d}{Z\+C\+L\+\_\+\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+I\+N\+V\+A\+L\+ID}~(\hyperlink{group__zcl__types_ga7609ed68cf4399cb2c09799ecedfdbe0}{Z\+C\+L\+\_\+\+T\+\_\+\+I\+N\+V\+A\+L\+ID} \& \hyperlink{group__zcl__types_gaa49518f03f9632a55b3e1c4d4c68b60c}{Z\+C\+L\+\_\+\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+A\+SK})
+\begin{DoxyCompactList}\small\item\em Macro used when type is invalid or doesn\textquotesingle{}t have a known size. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga5121bb1f631a19b8a50980325ee67c26}{Z\+C\+L\+\_\+\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+S\+H\+O\+RT}~0x0E
+\begin{DoxyCompactList}\small\item\em First octet of attribute\textquotesingle{}s value is its size. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gaeee15697985458060bf5f85c00c15a41}{Z\+C\+L\+\_\+\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+L\+O\+NG}~0x0D
+\begin{DoxyCompactList}\small\item\em First two octets of attribute\textquotesingle{}s value are its size. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_gad7a8d44d98b6872f187b1e0748ec7417}{Z\+C\+L\+\_\+\+T\+\_\+\+S\+I\+Z\+E\+\_\+128\+B\+IT}~0x0C
+\begin{DoxyCompactList}\small\item\em 128-\/bit (16-\/byte) value \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__types_ga7691965c8c435fdafe30025c05817cf9}{Z\+C\+L\+\_\+\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}~0x0B
+\begin{DoxyCompactList}\small\item\em variable-\/length value (array, set, bag, struct) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Macros and structures related to the Z\+CL datatypes. 
+
+All multi-\/byte types are little-\/endian. 

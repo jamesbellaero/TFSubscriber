@@ -1,0 +1,2932 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__xbee__atcmd" kind="group">
+    <compoundname>xbee_atcmd</compoundname>
+    <title>AT Commands</title>
+    <innerfile refid="xbee__atcmd_8c">xbee_atcmd.c</innerfile>
+    <innerfile refid="xbee__scan_8c">xbee_scan.c</innerfile>
+    <innerfile refid="atcmd_8h">atcmd.h</innerfile>
+    <innerfile refid="reg__descr_8h">reg_descr.h</innerfile>
+    <innerfile refid="scan_8h">scan.h</innerfile>
+    <innerclass refid="unionxbee__at__cmd__t" prot="public">xbee_at_cmd_t</innerclass>
+    <innerclass refid="structxbee__cmd__response__t" prot="public">xbee_cmd_response_t</innerclass>
+    <innerclass refid="structxbee__cmd__request__t" prot="public">xbee_cmd_request_t</innerclass>
+    <innerclass refid="unionxbee__header__at__request__t" prot="public">xbee_header_at_request_t</innerclass>
+    <innerclass refid="unionxbee__frame__at__response__t" prot="public">xbee_frame_at_response_t</innerclass>
+    <innerclass refid="structxbee__command__list__context__t" prot="public">xbee_command_list_context_t</innerclass>
+    <innerclass refid="structxbee__atcmd__reg__t" prot="public">xbee_atcmd_reg_t</innerclass>
+    <innerclass refid="struct__xbee__reg__descr__t" prot="public">_xbee_reg_descr_t</innerclass>
+    <innerclass refid="unionxbee__scan__response__t" prot="public">xbee_scan_response_t</innerclass>
+      <sectiondef kind="user-defined">
+      <description><para>Return values for <ref refid="group__xbee__atcmd_1ga113cbd0a40a638710974218de5f885fe" kindref="member">xbee_cmd_callback_fn()</ref> functions. </para></description>
+      <memberdef kind="define" id="group__xbee__atcmd_1gad51a6fee7843df5a5bfd6f3957465426" prot="public" static="no">
+        <name>XBEE_ATCMD_DONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>Returned by an <ref refid="group__xbee__atcmd_1ga113cbd0a40a638710974218de5f885fe" kindref="member">xbee_cmd_callback_fn()</ref> if the handle can be released. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="139" column="9" bodyfile="include/xbee/atcmd.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga9a5078393806d67903c87b3c82597fb1" prot="public" static="no">
+        <name>XBEE_ATCMD_REUSE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Returned by an <ref refid="group__xbee__atcmd_1ga113cbd0a40a638710974218de5f885fe" kindref="member">xbee_cmd_callback_fn()</ref> if more reponses are expected, or it has re-used the command handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="142" column="9" bodyfile="include/xbee/atcmd.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para>Values for <computeroutput></computeroutput>.options member of xbee_header_remote_at_req_t. </para></description>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga3ca0a18e4e629050e8f1387f72638f69" prot="public" static="no">
+        <name>XBEE_REMOTE_AT_OPT_QUEUE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>Queue changes until ATAC command or another request with XBEE_REMOTE_AT_OPT_IMMEDIATE set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="271" column="11" bodyfile="include/xbee/atcmd.h" bodystart="271" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" compoundref="xbee__atcmd_8c" startline="1404" endline="1485">xbee_cmd_send</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga61c52828070a499e9fbfc4e6edef158b" prot="public" static="no">
+        <name>XBEE_REMOTE_AT_OPT_IMMEDIATE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>Apply changes immediately, don&apos;t wait for ATAC command. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="274" column="11" bodyfile="include/xbee/atcmd.h" bodystart="274" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" compoundref="xbee__atcmd_8c" startline="1404" endline="1485">xbee_cmd_send</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__xbee__atcmd_1gac6a27f1b1ee32b75b6f966afbb347f22" prot="public" static="no">
+        <name>xbee_at_resp_status</name>
+        <enumvalue id="group__xbee__atcmd_1ggac6a27f1b1ee32b75b6f966afbb347f22adb75bf991027151c1aa20a454e278145" prot="public">
+          <name>XBEE_AT_RESP_STATUS_MASK</name>
+          <initializer>= 0x0F</initializer>
+          <briefdescription>
+<para>Mask to ignore extra bits used in the status response. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1ggac6a27f1b1ee32b75b6f966afbb347f22a3e64a8392d486cd4554b9485f7cee441" prot="public">
+          <name>XBEE_AT_RESP_SUCCESS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1ggac6a27f1b1ee32b75b6f966afbb347f22a396bd6bb90529821753185bc035d00b3" prot="public">
+          <name>XBEE_AT_RESP_ERROR</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1ggac6a27f1b1ee32b75b6f966afbb347f22a8ee41aeb68d793cfbf55dfb0c20634ed" prot="public">
+          <name>XBEE_AT_RESP_BAD_COMMAND</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1ggac6a27f1b1ee32b75b6f966afbb347f22a99f5b2894101fe5e0634277f4a0b7297" prot="public">
+          <name>XBEE_AT_RESP_BAD_PARAMETER</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1ggac6a27f1b1ee32b75b6f966afbb347f22af6658eb71f85aedb9241150605a7ae60" prot="public">
+          <name>XBEE_AT_RESP_TX_FAIL</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1ggac6a27f1b1ee32b75b6f966afbb347f22a52c349dd42d745e58fbeb90b51927947" prot="public">
+          <name>XBEE_AT_RESP_ATND_RSSI_INVALID</name>
+          <initializer>= 0x40</initializer>
+          <briefdescription>
+<para>The RSSI field of the ATND response is not valid [DigiMesh]. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible values of <computeroutput>status</computeroutput> byte in xbee_header_local_at_resp_t and xbee_frame_local_at_resp_t. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="295" column="1" bodyfile="include/xbee/atcmd.h" bodystart="295" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__xbee__atcmd_1ga3ec63530d743d1c91126c67493c3245d" prot="public" static="no">
+        <name>xbee_command_list_status</name>
+        <enumvalue id="group__xbee__atcmd_1gga3ec63530d743d1c91126c67493c3245dae069cd6cf3fed0511d6e02db0fb97794" prot="public">
+          <name>XBEE_COMMAND_LIST_RUNNING</name>
+          <initializer>= -EBUSY</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga3ec63530d743d1c91126c67493c3245daf9ae34095ecb48cde5ad4f218c14d9b6" prot="public">
+          <name>XBEE_COMMAND_LIST_DONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga3ec63530d743d1c91126c67493c3245da8e742210adb51669a9ecc50cc77d002d" prot="public">
+          <name>XBEE_COMMAND_LIST_TIMEOUT</name>
+          <initializer>= -ETIMEDOUT</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga3ec63530d743d1c91126c67493c3245da32ea7039ee4d5e6f32da1d463ebe4e6c" prot="public">
+          <name>XBEE_COMMAND_LIST_ERROR</name>
+          <initializer>= -EIO</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Status codes for <ref refid="group__xbee__atcmd_1gafb2d1636c675066469ee388170ea27a0" kindref="member">xbee_cmd_list_status()</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>We force these to be -Exxx codes (or 0). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="420" column="1" bodyfile="include/xbee/atcmd.h" bodystart="420" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__xbee__atcmd_1ga1bd8ecd38c107579d20ded3c79a7d70b" prot="public" static="no">
+        <name>xbee_command_list_type</name>
+        <enumvalue id="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba01bd43706bd844415cc0882b861df4d1" prot="public">
+          <name>XBEE_CLT_NONE</name>
+          <briefdescription>
+<para>No default action. Often used for callbacks. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633" prot="public">
+          <name>XBEE_CLT_COPY</name>
+          <briefdescription>
+<para>Copy response data byte-for-byte to base struct, starting at offset 0 and setting remaining bytes to 0x00. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba5450809b1aae150ec7dfb4c8faa8161a" prot="public">
+          <name>XBEE_CLT_COPY_PAD_LEFT</name>
+          <briefdescription>
+<para>Copy response data byte-for-byte to base struct,. </para>          </briefdescription>
+          <detaileddescription>
+<para>padding with 0x00 bytes before the copied data, to have last copied byte in last position of base struct. (see ATSH/ATSL). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537" prot="public">
+          <name>XBEE_CLT_COPY_BE</name>
+          <briefdescription>
+<para>Copy response, changing expected big-endian to host byte order, and store in base struct. </para>          </briefdescription>
+          <detaileddescription>
+<para>Data must be 1, 2 or 4 bytes, assumed unsigned. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70babea87822fa7171a077a3c1c88e3fa7dc" prot="public">
+          <name>XBEE_CLT_SET</name>
+          <briefdescription>
+<para>Use data in base struct as parameter for command, with binary data copied byte-for-byte. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70baef4f9c1bf1001814d8b9e44c08c91c38" prot="public">
+          <name>XBEE_CLT_SET_STR</name>
+          <briefdescription>
+<para>Use data in base struct as parameter for command, with null-terminated string data copied byte-for-byte. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba32b0b8fbea9aa5c2d6a8886ccbdbf609" prot="public">
+          <name>XBEE_CLT_SET_BE</name>
+          <briefdescription>
+<para>Use data in base struct as parameter for command, changing host byte order to big-endian. </para>          </briefdescription>
+          <detaileddescription>
+<para>Data must be 1,2 or 4 bytes, assumed unsigned. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0eb2ffa9c761ab74335695f818ce8410" prot="public">
+          <name>XBEE_CLT_SET_8</name>
+          <briefdescription>
+<para>Set value to immediate 8-bit constant in .bytes field of the <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> entry. </para>          </briefdescription>
+          <detaileddescription>
+<para>No response. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba6e78c45780bccbc7226af34868dc567f" prot="public">
+          <name>XBEE_CLT_LAST</name>
+          <briefdescription>
+<para>Last command, any response is discarded, no further command list entries are processed. </para>          </briefdescription>
+          <detaileddescription>
+<para>This is useful if ND is the last command, since the command list will terminate, but discovered nodes will be handled subsequently (asynchronously). </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="446" column="1" bodyfile="include/xbee/atcmd.h" bodystart="446" bodyend="472"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__xbee__atcmd_1gaa874b4a291f79f2e80f867ce71fccea5" prot="public" static="no">
+        <name>_xbee_rci_type_t</name>
+        <enumvalue id="group__xbee__atcmd_1ggaa874b4a291f79f2e80f867ce71fccea5a4546376823a39ebed89fb852fb046f5f" prot="public">
+          <name>XBEE_RCI_TYPE_UINT32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1ggaa874b4a291f79f2e80f867ce71fccea5a736d548f831724f7d0e288f8b9fbd970" prot="public">
+          <name>XBEE_RCI_TYPE_HEX32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1ggaa874b4a291f79f2e80f867ce71fccea5a8523a2265f9dd1297076d2575aae0552" prot="public">
+          <name>XBEE_RCI_TYPE_STRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1ggaa874b4a291f79f2e80f867ce71fccea5aab1640e5dfc1041283d133808c6f1bd1" prot="public">
+          <name>XBEE_RCI_TYPE_BIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__xbee__atcmd_1ggaa874b4a291f79f2e80f867ce71fccea5afd6155707f5b5367b8c0ef2980c7ff26" prot="public">
+          <name>XBEE_RCI_TYPE_ADDR64</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>iDigi RCI type names used by do_command type=zigbee. </para>        </briefdescription>
+        <detaileddescription>
+<para>This table is used so as to avoid having XBEE_RCI_TYPE_STRING pointers in the register descriptor table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/reg_descr.h" line="36" column="1" bodyfile="include/xbee/reg_descr.h" bodystart="35" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__xbee__atcmd_1ga113cbd0a40a638710974218de5f885fe" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* xbee_cmd_callback_fn) (const xbee_cmd_response_t FAR *response)</definition>
+        <argsstring>)(const xbee_cmd_response_t FAR *response)</argsstring>
+        <name>xbee_cmd_callback_fn</name>
+        <briefdescription>
+<para>Callback registered to an AT Command with <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>It should not modify the contents of the <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> structure passed to it. It should return either <ref refid="group__xbee__atcmd_1gad51a6fee7843df5a5bfd6f3957465426" kindref="member">XBEE_ATCMD_DONE</ref> or <ref refid="group__xbee__atcmd_1ga9a5078393806d67903c87b3c82597fb1" kindref="member">XBEE_ATCMD_REUSE</ref>.</para><para>View the help on <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> for details on the members of that structure.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>response received for AT Command</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>XBEE_ATCMD_DONE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>done with the request handle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>XBEE_ATCMD_REUSE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>more responses are expected, or the request handle will be reused</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="164" column="1" bodyfile="include/xbee/atcmd.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__atcmd_1ga9bf03869fc9022aadb223bfe0cbbce48" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>typedef PACKED_STRUCT xbee_header_local_at_req</definition>
+        <argsstring></argsstring>
+        <name>xbee_header_local_at_req</name>
+        <initializer>{
+	
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>				frame_type</initializer>
+        <briefdescription>
+<para>Header for AT Commands sent to the local (serially-attached) XBee. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="238" column="1" bodyfile="include/xbee/atcmd.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__atcmd_1gad9afb37256d642019ad00c6ec75eae05" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>typedef PACKED_STRUCT xbee_header_remote_at_req</definition>
+        <argsstring></argsstring>
+        <name>xbee_header_remote_at_req</name>
+        <initializer>{
+	
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>				frame_type</initializer>
+        <briefdescription>
+<para>Header to AT Commands sent to a remote XBee on the network. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="250" column="1" bodyfile="include/xbee/atcmd.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__atcmd_1ga99f105c39f52045b88bc1974fb520ed2" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>typedef PACKED_STRUCT xbee_header_local_at_resp</definition>
+        <argsstring></argsstring>
+        <name>xbee_header_local_at_resp</name>
+        <initializer>{
+   
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>				frame_type</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="317" column="1" bodyfile="include/xbee/atcmd.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__atcmd_1ga3f35810cc9e8761d8865f7f53f6ffa28" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>typedef PACKED_STRUCT xbee_header_remote_at_resp</definition>
+        <argsstring></argsstring>
+        <name>xbee_header_remote_at_resp</name>
+        <initializer>{
+   
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>				frame_type</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="332" column="1" bodyfile="include/xbee/atcmd.h" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__atcmd_1ga8e4eb20c6debd4dfac4a8a81d9314e98" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>typedef PACKED_STRUCT xbee_frame_local_at_resp</definition>
+        <argsstring></argsstring>
+        <name>xbee_frame_local_at_resp</name>
+        <initializer>{
+
+   xbee_header_local_at_resp_t header</initializer>
+        <briefdescription>
+<para>Response to an AT Command sent to the local serially-connected XBee. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="356" column="1" bodyfile="include/xbee/atcmd.h" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__atcmd_1ga5c11edcb9c5f6b11eec5d5d1c37cfbfd" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>typedef PACKED_STRUCT xbee_frame_remote_at_resp</definition>
+        <argsstring></argsstring>
+        <name>xbee_frame_remote_at_resp</name>
+        <initializer>{
+   xbee_header_remote_at_resp_t header</initializer>
+        <briefdescription>
+<para>Response to an AT Command sent to a remote XBee. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="364" column="1" bodyfile="include/xbee/atcmd.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__atcmd_1ga7909235eb77ba64c93742f8f9013d7fb" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* xbee_command_list_fn) (const xbee_cmd_response_t FAR *response, const struct xbee_atcmd_reg_t FAR *reg, void FAR *base)</definition>
+        <argsstring>)(const xbee_cmd_response_t FAR *response, const struct xbee_atcmd_reg_t FAR *reg, void FAR *base)</argsstring>
+        <name>xbee_command_list_fn</name>
+        <briefdescription>
+<para>Callback registered for individual command list commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>response received for AT Command. From this, the <computeroutput>context</computeroutput> field points to the start of the entire set of commands in the list being processed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Table element for this command. Usually, the callback will dereference reg-&gt;context to find any required auxiliary data for processing this command. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base address of structure to populate with response value (typical use).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This callback is called for a command response, and is intended to be used for manipulating the raw response data into something suitable for the application. There is no corresponding callback for a request (i.e. called before setting parameter data); the application is expected to perform setting parameter manipulation before invoking <ref refid="group__xbee__atcmd_1gab9fb2f15b9134bd32d937a51e4c68014" kindref="member">xbee_cmd_list_execute()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="409" column="1" bodyfile="include/xbee/atcmd.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga551531248de3d539dfb15bd89cf4734b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="structxbee__cmd__request__t" kindref="compound">xbee_cmd_request_t</ref></type>
+        <definition>FAR xbee_cmd_request_t xbee_cmd_request_table[XBEE_CMD_REQUEST_TABLESIZE]</definition>
+        <argsstring>[XBEE_CMD_REQUEST_TABLESIZE]</argsstring>
+        <name>xbee_cmd_request_table</name>
+        <briefdescription>
+<para>Table used to keep track of outstanding requests. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="67" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="67" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" compoundref="xbee__atcmd_8c" startline="170" endline="187">_xbee_cmd_handle_to_address</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga0b78107b2303165b7cf9969125064dcc" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref></type>
+        <definition>const xbee_atcmd_reg_t _xbee_atcmd_query_regs[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_xbee_atcmd_query_regs</name>
+        <initializer>= {
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;H&apos;, &apos;V&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537" kindref="member">XBEE_CLT_COPY_BE</ref>, <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref>, hardware_version),
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;V&apos;, &apos;R&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537" kindref="member">XBEE_CLT_COPY_BE</ref>, <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref>, firmware_version),
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;S&apos;, &apos;H&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba5450809b1aae150ec7dfb4c8faa8161a" kindref="member">XBEE_CLT_COPY_PAD_LEFT</ref>, <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref>, wpan_dev.address.ieee.l[0]),
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;S&apos;, &apos;L&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba5450809b1aae150ec7dfb4c8faa8161a" kindref="member">XBEE_CLT_COPY_PAD_LEFT</ref>, <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref>, wpan_dev.address.ieee.l[1]),
+
+
+
+
+
+	<ref refid="group__xbee__atcmd_1gabbaf60bd4d186b860fd58c8a6111e9f9" kindref="member">XBEE_ATCMD_REG_CB</ref>( &apos;E&apos;, &apos;O&apos;, _xbee_cmd_query_handle_eo, 0),
+	<ref refid="group__xbee__atcmd_1gabbaf60bd4d186b860fd58c8a6111e9f9" kindref="member">XBEE_ATCMD_REG_CB</ref>( &apos;A&apos;, &apos;I&apos;, _xbee_cmd_query_handle_ai, 0),
+	
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;N&apos;, &apos;P&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537" kindref="member">XBEE_CLT_COPY_BE</ref>, <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref>, <ref refid="group__zcl_1gacb1403989580c30b5cac60f347c5d6ab" kindref="member">wpan_dev.payload</ref>),
+	<ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>( &apos;M&apos;, &apos;Y&apos;, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537" kindref="member">XBEE_CLT_COPY_BE</ref>, <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref>, wpan_dev.address.network),
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<internal><para>List of XBee registers to query at startup; used to learn about the attached XBee module. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="710" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="710" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga6cd73a1bba0cb3c1766f7f7d5d2123ea" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__command__list__context__t" kindref="compound">xbee_command_list_context_t</ref></type>
+        <definition>xbee_command_list_context_t _xbee_atcmd_query_regs_head</definition>
+        <argsstring></argsstring>
+        <name>_xbee_atcmd_query_regs_head</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="729" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="729" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga03c1016ac46b9df250b994f242cf956a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t frame_id</definition>
+        <argsstring></argsstring>
+        <name>frame_id</name>
+        <briefdescription>
+<para>1 to 255, or 0 to suppress the Transmit Status response </para>        </briefdescription>
+        <detaileddescription>
+<para>ID from request, used to match response to request. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="243" column="1" bodyfile="include/xbee/atcmd.h" bodystart="243" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga3b4559f4e729b1c96f5c0d9e4476aa7d" compoundref="xbee__atcmd_8c" startline="1505" endline="1686">_xbee_cmd_handle_response</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga1a5aaa930940857f68f245eeb89506b5" prot="public" static="no" mutable="no">
+        <type><ref refid="unionxbee__at__cmd__t" kindref="compound">xbee_at_cmd_t</ref></type>
+        <definition>uint8_t command</definition>
+        <argsstring></argsstring>
+        <name>command</name>
+        <briefdescription>
+<para>two-character AT Command </para>        </briefdescription>
+        <detaileddescription>
+<para>Command from original request. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="246" column="1" bodyfile="include/xbee/atcmd.h" bodystart="246" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga3b4559f4e729b1c96f5c0d9e4476aa7d" compoundref="xbee__atcmd_8c" startline="1505" endline="1686">_xbee_cmd_handle_response</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga9f1bad1621dfd1d13b6f1102fc592d13" compoundref="xbee__atcmd_8c" startline="284" endline="448">_xbee_cmd_list_callback</referencedby>
+        <referencedby refid="group__zcl_1gab5c99acba0d864acd326bcab46d1416e" compoundref="zigbee__zcl_8c" startline="248" endline="308">zcl_default_response</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga568e56506b6d03a08723e768edbbcfa7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>xbee_header_local_at_req_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_header_local_at_req_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="247" column="1" bodyfile="include/xbee/atcmd.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga2549f921e25a72dfa05a2154a792e2bf" prot="public" static="no" mutable="no">
+        <type><ref refid="unionaddr64" kindref="compound">addr64</ref></type>
+        <definition>addr64 ieee_address</definition>
+        <argsstring></argsstring>
+        <name>ieee_address</name>
+        <briefdescription>
+<para>64-bit IEEE address (big-endian) of target </para>        </briefdescription>
+        <detaileddescription>
+<para>64-bit IEEE address (big-endian) of source.</para><para>64-bit IEEE address (big-endian) of responder. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="258" column="1" bodyfile="include/xbee/atcmd.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga73d48563eb05cd5fcc4add79d226a3b8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t network_address_be</definition>
+        <argsstring></argsstring>
+        <name>network_address_be</name>
+        <briefdescription>
+<para>16-bit network address (big-endian) of target </para>        </briefdescription>
+        <detaileddescription>
+<para>16-bit network address (big-endian) of source.</para><para>16-bit network address (big-endian) of responder. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="261" column="1" bodyfile="include/xbee/atcmd.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1gaace3d640c8d449b8db1162993d259d3f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <briefdescription>
+<para>Options byte (see XBEE_REMOTE_AT_OPT_* macros) </para>        </briefdescription>
+        <detaileddescription>
+<para>combination of XBEE_TX_OPT_* macros</para><para>bitfield, see XBEE_RX_OPT_xxx macros </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="264" column="1" bodyfile="include/xbee/atcmd.h" bodystart="264" bodyend="-1"/>
+        <referencedby refid="group__xbee__ota__server_1ga22cb77be06faba4020a4f5e0daf48f4f" compoundref="xbee__ota__server_8c" startline="30" endline="77">xbee_ota_server_cmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1gac183f43dbcf4b089132cd4c5f1677d62" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>xbee_header_remote_at_req_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_header_remote_at_req_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="277" column="1" bodyfile="include/xbee/atcmd.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1gade818037fd6c985038ff29656089758d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+<para>See enum <ref refid="group__xbee__atcmd_1gac6a27f1b1ee32b75b6f966afbb347f22" kindref="member">xbee_at_resp_status</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that DigiMesh uses the upper nibble for additional flags <ndash/> use <ref refid="group__xbee__atcmd_1ga4dc292cd07dfd93bbfb2b8632b580949" kindref="member">XBEE_AT_RESP_STATUS()</ref> macro when comparing this field to the xbee_at_resp_status enum. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="328" column="1" bodyfile="include/xbee/atcmd.h" bodystart="328" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga3b4559f4e729b1c96f5c0d9e4476aa7d" compoundref="xbee__atcmd_8c" startline="1505" endline="1686">_xbee_cmd_handle_response</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga9b0ddf7aae7599dc334304f2b642f05f" compoundref="xbee__atcmd_8c" startline="1702" endline="1739">_xbee_cmd_modem_status</referencedby>
+        <referencedby refid="group__zcl__onoff_1gae7dc87cd27559c9ae0499ac542ab6107" compoundref="zcl__onoff_8c" startline="38" endline="70">_zcl_onoff_handler</referencedby>
+        <referencedby refid="group__zcl_1gaff3abb5d2022101c2873e7a8e8b027e5" compoundref="zigbee__zcl_8c" startline="841" endline="927">_zcl_write_attributes</referencedby>
+        <referencedby refid="group__hal__posix_1ga894f6fadc890b5ba5ce32338f0acd217" compoundref="xbee__serial__posix_8c" startline="465" endline="481">xbee_ser_get_cts</referencedby>
+        <referencedby refid="group__hal__posix_1ga731188d8cf41d3d749bc84d51b672535" compoundref="xbee__serial__posix_8c" startline="425" endline="462">xbee_ser_set_rts</referencedby>
+        <referencedby refid="group__zcl__commissioning_1ga57f9aaf3da6dc9b513f7f9ccbb473a0b" compoundref="zcl__commissioning_8c" startline="265" endline="295">zcl_comm_response</referencedby>
+        <referencedby refid="group__zcl_1gab5c99acba0d864acd326bcab46d1416e" compoundref="zigbee__zcl_8c" startline="248" endline="308">zcl_default_response</referencedby>
+        <referencedby refid="group__zcl_1gae3f7f58d3b08caf95aa11f90e3995397" compoundref="zigbee__zcl_8c" startline="1087" endline="1223">zcl_encode_attribute_value</referencedby>
+        <referencedby refid="group__zcl_1ga4251fbed33d85d2f7bbccb48857cae95" compoundref="zigbee__zcl_8c" startline="1747" endline="1778">zcl_invalid_command</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1gadee54f5443232dd369d7f30cea874c69" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>xbee_header_local_at_resp_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_header_local_at_resp_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="330" column="1" bodyfile="include/xbee/atcmd.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1gaa69f16913b7efb4fafc34dbdccf198cd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>xbee_header_remote_at_resp_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_header_remote_at_resp_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="352" column="1" bodyfile="include/xbee/atcmd.h" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga5bf2410fa8ec37f47f8afeba8dcc7f1b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t value</definition>
+        <argsstring>[1]</argsstring>
+        <name>value</name>
+        <briefdescription>
+<para>First byte of multi-byte value. </para>        </briefdescription>
+        <detaileddescription>
+<para>variable length, only if ZCL_STATUS_SUCCESS</para><para>Cached value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="360" column="1" bodyfile="include/xbee/atcmd.h" bodystart="360" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga3b4559f4e729b1c96f5c0d9e4476aa7d" compoundref="xbee__atcmd_8c" startline="1505" endline="1686">_xbee_cmd_handle_response</referencedby>
+        <referencedby refid="group__zcl__commissioning_1gae3180284d1a5a9af2176173a58cc1f4c" compoundref="zcl__commissioning_8c" startline="56" endline="104">_zcl_comm_startup_control_set</referencedby>
+        <referencedby refid="group__zcl_1ga87ee4a8117e0420786a109b1f590ddc5" compoundref="zigbee__zcl_8c" startline="326" endline="415">zcl_check_minmax</referencedby>
+        <referencedby refid="group__zcl__client_1ga4e831f4977e3c0eb5ad556a991b7da5f" compoundref="zcl__client_8c" startline="617" endline="654">zcl_print_array_value</referencedby>
+        <referencedby refid="group__zcl__client_1gadd1b745da67ffd49ec948ff56ec218fa" compoundref="zcl__client_8c" startline="678" endline="717">zcl_print_struct_value</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1gab63b15c8139a653c95998e4c1bcd2b99" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>xbee_frame_local_at_resp_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_frame_local_at_resp_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="361" column="1" bodyfile="include/xbee/atcmd.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga4c2b2ae22bdb77d9f8427b9bfff5a35d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>xbee_frame_remote_at_resp_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_frame_remote_at_resp_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="369" column="1" bodyfile="include/xbee/atcmd.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga551531248de3d539dfb15bd89cf4734b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="structxbee__cmd__request__t" kindref="compound">xbee_cmd_request_t</ref></type>
+        <definition>FAR xbee_cmd_request_t xbee_cmd_request_table[XBEE_CMD_REQUEST_TABLESIZE]</definition>
+        <argsstring>[XBEE_CMD_REQUEST_TABLESIZE]</argsstring>
+        <name>xbee_cmd_request_table</name>
+        <briefdescription>
+<para>Table used to keep track of outstanding requests. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="657" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="67" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" compoundref="xbee__atcmd_8c" startline="170" endline="187">_xbee_cmd_handle_to_address</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga62238d483c628f8c996664ff0f47ccef" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* _xbee_rci_types[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_xbee_rci_types</name>
+        <briefdescription>
+<para>Table to map _xbee_rci_type_t to RCI type string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/reg_descr.h" line="46" column="1" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga38e53826af221faaa9c92525dfeb8ed3" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="struct__xbee__reg__descr__t" kindref="compound">_xbee_reg_descr_t</ref></type>
+        <definition>const FAR _xbee_reg_descr_t _xbee_reg_table[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_xbee_reg_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/reg_descr.h" line="104" column="1" bodyfile="src/xbee/xbee_reg_descr.c" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga4233297bd31be5c273d4fb0758cc54d7" prot="public" static="no" mutable="no">
+        <type>typedef</type>
+        <definition>typedef PACKED_STRUCT</definition>
+        <argsstring></argsstring>
+        <name>PACKED_STRUCT</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>	as_type</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="24" column="1" bodyfile="include/xbee/scan.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga715f5cb061d11eb75981741eda4dafcd" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t channel</definition>
+        <argsstring></argsstring>
+        <name>channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="26" column="1" bodyfile="include/xbee/scan.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga6764c432df57e31f99d528ba063ee3c3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t pan_be</definition>
+        <argsstring></argsstring>
+        <name>pan_be</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="27" column="1" bodyfile="include/xbee/scan.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga83454e414bc47cecde95577336ef19d5" prot="public" static="no" mutable="no">
+        <type><ref refid="unionaddr64" kindref="compound">addr64</ref></type>
+        <definition>addr64 extended_pan_be</definition>
+        <argsstring></argsstring>
+        <name>extended_pan_be</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="28" column="1" bodyfile="include/xbee/scan.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga4c103634447787a8b0d3377ea51107e9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t allow_join</definition>
+        <argsstring></argsstring>
+        <name>allow_join</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="29" column="1" bodyfile="include/xbee/scan.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1gaaa8b6f584719cbc7ae8923ced6e88766" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t stack_profile</definition>
+        <argsstring></argsstring>
+        <name>stack_profile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="30" column="1" bodyfile="include/xbee/scan.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga0dd69605aea6dba42ffd851067dbfe77" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t lqi</definition>
+        <argsstring></argsstring>
+        <name>lqi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="31" column="1" bodyfile="include/xbee/scan.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga3b962e67ba74725bd60ca3c29f785abe" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga20c38cc5aac7cc6b0a3c6ab05428436d" kindref="member">int8_t</ref></type>
+        <definition>int8_t rssi</definition>
+        <argsstring></argsstring>
+        <name>rssi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="32" column="1" bodyfile="include/xbee/scan.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1gabf6256ab8381b527e6933fa07b03b378" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>xbee_scan_zigbee_response_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_scan_zigbee_response_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="33" column="1" bodyfile="include/xbee/scan.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1gaadc767576eaf9c39b663366c0b05c88c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t as_type</definition>
+        <argsstring></argsstring>
+        <name>as_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="46" column="1" bodyfile="include/xbee/scan.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__atcmd_1ga487bfb4c432a318974154d1ebd0330ae" prot="public" static="no" mutable="no">
+        <type>xbee_scan_zigbee_response_t</type>
+        <definition>xbee_scan_zigbee_response_t zigbee</definition>
+        <argsstring></argsstring>
+        <name>zigbee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="47" column="1" bodyfile="include/xbee/scan.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__atcmd_1ga7ef08f6771da8c18234bbffca2be4ff3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_tick</definition>
+        <argsstring>(void)</argsstring>
+        <name>xbee_cmd_tick</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function should be called periodically (at least every few seconds) to expire old entries from the AT Command Request table. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>&gt;0 number of requests expired </para></simplesect>
+<simplesect kind="return"><para>0 none of the requests in the table expired </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="81" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="81" bodyend="150"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <referencedby refid="group__xbee__atcmd_1ga83f36dfc3c3cd2c4046719ea6e9cc53c" compoundref="xbee__atcmd_8c" startline="825" endline="835">xbee_cmd_query_status</referencedby>
+        <referencedby refid="group__xbee__io_1gad253478285335c84b310aafb13aa1b21" compoundref="xbee__io_8c" startline="779" endline="789">xbee_io_query_status</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structxbee__cmd__request__t" kindref="compound">xbee_cmd_request_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>xbee_cmd_request_t FAR * _xbee_cmd_handle_to_address</definition>
+        <argsstring>(int16_t handle)</argsstring>
+        <name>_xbee_cmd_handle_to_address</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<internal><para>Convert a handle (16-bit int) to a pointer into the command request table. Ensures that the handle is valid (correct index and sequence bytes).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle returned from <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer into the request table or NULL if handle is invalid.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref> </para></simplesect>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="153" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="170" bodyend="187"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__xbee__atcmd_1ga551531248de3d539dfb15bd89cf4734b" compoundref="xbee__atcmd_8c" startline="67">xbee_cmd_request_table</references>
+        <references refid="group__xbee__atcmd_1gaf992e9b985e2b1eb185ef3d2d38a01c0" compoundref="atcmd_8h" startline="30">XBEE_CMD_REQUEST_TABLESIZE</references>
+        <referencedby refid="group__xbee__atcmd_1ga91641619ae34da34615193962ffd1525" compoundref="xbee__atcmd_8c" startline="984" endline="989">xbee_cmd_release_handle</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" compoundref="xbee__atcmd_8c" startline="1404" endline="1485">xbee_cmd_send</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" compoundref="xbee__atcmd_8c" startline="1057" endline="1072">xbee_cmd_set_callback</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" compoundref="xbee__atcmd_8c" startline="1009" endline="1022">xbee_cmd_set_command</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" compoundref="xbee__atcmd_8c" startline="1272" endline="1285">xbee_cmd_set_param</referencedby>
+        <referencedby refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" compoundref="xbee__atcmd_8c" startline="1115" endline="1143">xbee_cmd_set_target</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga4931ffe3ba31eaf16eee72ac0a95015b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _xbee_cmd_issue_list</definition>
+        <argsstring>(xbee_dev_t *xbee, xbee_command_list_context_t FAR *clc, const xbee_cmd_response_t FAR *response)</argsstring>
+        <name>_xbee_cmd_issue_list</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="structxbee__command__list__context__t" kindref="compound">xbee_command_list_context_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>clc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<internal><para>Helper function to send off the next command in the list. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="197" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="197" bodyend="266"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga9f1bad1621dfd1d13b6f1102fc592d13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _xbee_cmd_list_callback</definition>
+        <argsstring>(const xbee_cmd_response_t FAR *response)</argsstring>
+        <name>_xbee_cmd_list_callback</name>
+        <param>
+          <type>const <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<internal><para>Callback used by xbee_cmd_query_device (and possibly other functions) to learn about the attached XBee device (hardware/firmware version, address, etc.)</para><para>View function help for <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref> for details on <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> structure. <verbatim>This callback should only be called by xbee_cmd_handle_response(). ***</verbatim> </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="284" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="284" bodyend="448"/>
+        <references refid="group__xbee__atcmd_1ga1a5aaa930940857f68f245eeb89506b5" compoundref="atcmd_8h" startline="246">command</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1gab9fb2f15b9134bd32d937a51e4c68014" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_list_execute</definition>
+        <argsstring>(xbee_dev_t *xbee, xbee_command_list_context_t FAR *clc, const xbee_atcmd_reg_t FAR *list, void FAR *base, const wpan_address_t FAR *address)</argsstring>
+        <name>xbee_cmd_list_execute</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="structxbee__command__list__context__t" kindref="compound">xbee_command_list_context_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>clc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structwpan__address__t" kindref="compound">wpan_address_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Execute a list of AT commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device to execute commands </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">clc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List head to set up. This must be static since callback functions access it asynchronously. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First entry of list of commands to execute. The list must be terminated by either <ref refid="group__xbee__atcmd_1ga22fe547f7ae9fd0b090c5e45f03c162d" kindref="member">XBEE_ATCMD_REG_END</ref> or <ref refid="group__xbee__atcmd_1gae8d6778e286e3bf82eafc842d451c161" kindref="member">XBEE_ATCMD_REG_END_CB</ref>. List entries are created using <ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref> macros etc. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base address of a structure to fill in with command results or as a source of values to set. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Remote address, or NULL if local device.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>started sending commands from the list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSPC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the AT command table is full (increase the compile-time macro XBEE_CMD_REQUEST_TABLESIZE) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an invalid parameter was passed to the function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gafb2d1636c675066469ee388170ea27a0" kindref="member">xbee_cmd_list_status()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="474" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="474" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1gafb2d1636c675066469ee388170ea27a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__xbee__atcmd_1ga3ec63530d743d1c91126c67493c3245d" kindref="member">xbee_command_list_status</ref>()</type>
+        <definition>enum xbee_command_list_status() xbee_cmd_list_status</definition>
+        <argsstring>(xbee_command_list_context_t FAR *clc)</argsstring>
+        <name>xbee_cmd_list_status</name>
+        <param>
+          <type><ref refid="structxbee__command__list__context__t" kindref="compound">xbee_command_list_context_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>clc</declname>
+        </param>
+        <briefdescription>
+<para>Determine status of command list execution. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">clc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List head passed to <ref refid="group__xbee__atcmd_1gab9fb2f15b9134bd32d937a51e4c68014" kindref="member">xbee_cmd_list_execute()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>XBEE_COMMAND_LIST_RUNNING</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>currently executing commands </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>XBEE_COMMAND_LIST_DONE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>successfully completed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>XBEE_COMMAND_LIST_TIMEOUT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timed out </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>XBEE_COMMAND_LIST_ERROR</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>completed with error(s)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab9fb2f15b9134bd32d937a51e4c68014" kindref="member">xbee_cmd_list_execute()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="474" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="519" bodyend="523"/>
+        <referencedby refid="group__xbee__atcmd_1ga83f36dfc3c3cd2c4046719ea6e9cc53c" compoundref="xbee__atcmd_8c" startline="825" endline="835">xbee_cmd_query_status</referencedby>
+        <referencedby refid="group__xbee__io_1gad253478285335c84b310aafb13aa1b21" compoundref="xbee__io_8c" startline="779" endline="789">xbee_io_query_status</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga1cc803f821ed44e27e404d38349f53c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_init_device</definition>
+        <argsstring>(xbee_dev_t *xbee)</argsstring>
+        <name>xbee_cmd_init_device</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the AT Command layer for an XBee device. </para>        </briefdescription>
+        <detaileddescription>
+<para>You need to call this function before any of the other xbee_cmd_* functions.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device on which to enable the AT Command layer. This function will automatically call xbee_cmd_query_device if it hasn&apos;t already been called for this device.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the XBee device was successfully configured to send and receive AT commands </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an invalid parameter was passed to the function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1ga12317255ca84c2539b7d7a58816eccab" kindref="member">xbee_cmd_query_device()</ref>, <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" kindref="member">xbee_cmd_set_command()</ref>, <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" kindref="member">xbee_cmd_set_target()</ref>, <ref refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" kindref="member">xbee_cmd_set_param()</ref>, <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>, <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref>, <ref refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" kindref="member">xbee_cmd_send()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="549" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="549" bodyend="573"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__xbee__device_1ga9ac684521a8154bddc272049a7a61b73" compoundref="device_8h" startline="418">xbee_dev_t::flags</references>
+        <references refid="group__xbee__atcmd_1ga12317255ca84c2539b7d7a58816eccab" compoundref="xbee__atcmd_8c" startline="764" endline="808">xbee_cmd_query_device</references>
+        <references refid="group__xbee__device_1gga80478d6b87ebdf34b5ec06e5ca6f309ea7227a8ae75aa792a17e24d20f1a5a4a8" compoundref="device_8h" startline="311">XBEE_DEV_FLAG_CMD_INIT</references>
+        <references refid="group__xbee__device_1gga80478d6b87ebdf34b5ec06e5ca6f309ea28b7d1589252302b80f10a627656a6c5" compoundref="device_8h" startline="312">XBEE_DEV_FLAG_QUERY_BEGIN</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1gac58af8f94f76f3d3201c055aaa9a559b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _xbee_cmd_query_handle_eo</definition>
+        <argsstring>(const xbee_cmd_response_t FAR *response, const struct xbee_atcmd_reg_t FAR *reg, void FAR *base)</argsstring>
+        <name>_xbee_cmd_query_handle_eo</name>
+        <param>
+          <type>const <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>response</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="579" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="579" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga1a1bd382a9a9f19787577bd709679f82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _xbee_cmd_query_handle_ai</definition>
+        <argsstring>(const xbee_cmd_response_t FAR *response, const struct xbee_atcmd_reg_t FAR *reg, void FAR *base)</argsstring>
+        <name>_xbee_cmd_query_handle_ai</name>
+        <param>
+          <type>const <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>response</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="611" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="611" bodyend="644"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1gafdbf73f2f7ab0efaa371e912f36ac8cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _xbee_cmd_query_handle_end</definition>
+        <argsstring>(const xbee_cmd_response_t FAR *response, const struct xbee_atcmd_reg_t FAR *reg, void FAR *base)</argsstring>
+        <name>_xbee_cmd_query_handle_end</name>
+        <param>
+          <type>const <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>response</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="647" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="647" bodyend="703"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga12317255ca84c2539b7d7a58816eccab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_query_device</definition>
+        <argsstring>(xbee_dev_t *xbee, uint_fast8_t refresh)</argsstring>
+        <name>xbee_cmd_query_device</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>uint_fast8_t</type>
+          <declname>refresh</declname>
+        </param>
+        <briefdescription>
+<para>Learn about the underlying device by sending a series of commands and storing the results in the <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function will likely get called by the XBee stack at some point in the startup/initialization phase.</para><para>Use <ref refid="group__xbee__atcmd_1ga83f36dfc3c3cd2c4046719ea6e9cc53c" kindref="member">xbee_cmd_query_status()</ref> to check on the progress of querying the device.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device to query. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">refresh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if non-zero, just refresh the volatile values (e.g., network settings, as opposed to device serial number)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Started querying device. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBUSY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transmit serial buffer is full, or XBee is not accepting serial data (deasserting /CTS signal).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1ga1cc803f821ed44e27e404d38349f53c7" kindref="member">xbee_cmd_init_device()</ref>, <ref refid="group__xbee__atcmd_1ga83f36dfc3c3cd2c4046719ea6e9cc53c" kindref="member">xbee_cmd_query_status()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="764" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="764" bodyend="808"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__xbee__device_1ga9ac684521a8154bddc272049a7a61b73" compoundref="device_8h" startline="418">xbee_dev_t::flags</references>
+        <references refid="group__xbee__atcmd_1ga23209b601f70aa30a5a6997c9baf313e" compoundref="xbee__atcmd_8c" startline="737">XBEE_ATCMD_REG_REFRESH_IDX</references>
+        <references refid="group__xbee__device_1gga80478d6b87ebdf34b5ec06e5ca6f309ea5f1d6c0ecfad680a292b57e8b078e357" compoundref="device_8h" startline="316">XBEE_DEV_FLAG_QUERY_INPROGRESS</references>
+        <references refid="group__xbee__device_1gga80478d6b87ebdf34b5ec06e5ca6f309ea08b02fa597f36fd613370d28ab5a0e81" compoundref="device_8h" startline="315">XBEE_DEV_FLAG_QUERY_REFRESH</references>
+        <referencedby refid="group__xbee__atcmd_1ga9b0ddf7aae7599dc334304f2b642f05f" compoundref="xbee__atcmd_8c" startline="1702" endline="1739">_xbee_cmd_modem_status</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga1cc803f821ed44e27e404d38349f53c7" compoundref="xbee__atcmd_8c" startline="549" endline="573">xbee_cmd_init_device</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga83f36dfc3c3cd2c4046719ea6e9cc53c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_query_status</definition>
+        <argsstring>(xbee_dev_t *xbee)</argsstring>
+        <name>xbee_cmd_query_status</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <briefdescription>
+<para>Check the status of querying an XBee device, as initiated by <ref refid="group__xbee__atcmd_1ga12317255ca84c2539b7d7a58816eccab" kindref="member">xbee_cmd_query_device()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device to check</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>query completed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>xbee</emphasis> is NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBUSY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>query underway </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ETIMEDOUT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>query timed out </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EIO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>halted, but query may not have completed (unexpected response) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="825" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="825" bodyend="835"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__xbee__atcmd_1gafb2d1636c675066469ee388170ea27a0" compoundref="xbee__atcmd_8c" startline="519" endline="523">xbee_cmd_list_status</references>
+        <references refid="group__xbee__atcmd_1ga7ef08f6771da8c18234bbffca2be4ff3" compoundref="xbee__atcmd_8c" startline="81" endline="150">xbee_cmd_tick</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+        <definition>int16_t xbee_cmd_create</definition>
+        <argsstring>(xbee_dev_t *xbee, const char FAR command[3])</argsstring>
+        <name>xbee_cmd_create</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref></type>
+          <declname>command</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Allocate an AT Command request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device to use as the target (local) or to send through (remote). This function will automatically call xbee_cmd_init() if it hasn&apos;t already been called for this device.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Two-letter AT Command to send (e.g., &quot;VR&quot;, &quot;NI&quot;, etc.).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>&gt;0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a &quot;handle&quot; to a request that can be built up and sent to a local (serially-attached) or remote XBee module. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSPC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the AT command table is full (increase the compile-time macro XBEE_CMD_REQUEST_TABLESIZE) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an invalid parameter was passed to the function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1ga1cc803f821ed44e27e404d38349f53c7" kindref="member">xbee_cmd_init_device()</ref>, <ref refid="group__xbee__atcmd_1ga12317255ca84c2539b7d7a58816eccab" kindref="member">xbee_cmd_query_device()</ref>, <ref refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" kindref="member">xbee_cmd_set_command()</ref>, <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" kindref="member">xbee_cmd_set_target()</ref>, <ref refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" kindref="member">xbee_cmd_set_param()</ref>, <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>, <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref>, <ref refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" kindref="member">xbee_cmd_send()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="868" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="868" bodyend="930"/>
+        <referencedby refid="group__xbee__io_1ga6a1e9ccca3a6d97f1b583e76f1193dca" compoundref="xbee__io_8c" startline="538" endline="586">xbee_io_set_options</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga899d5ef84ca5790c3c76b965f88874e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _xbee_cmd_release_request</definition>
+        <argsstring>(xbee_cmd_request_t FAR *request)</argsstring>
+        <name>_xbee_cmd_release_request</name>
+        <param>
+          <type><ref refid="structxbee__cmd__request__t" kindref="compound">xbee_cmd_request_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+<para>Release an entry from the request table by marking it as available. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para>For internal driver use only <ndash/> userspace code should use <ref refid="group__xbee__atcmd_1ga91641619ae34da34615193962ffd1525" kindref="member">xbee_cmd_release_handle()</ref> instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the table entry.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request freed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>address (<emphasis>request</emphasis>) is not valid</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga91641619ae34da34615193962ffd1525" kindref="member">xbee_cmd_release_handle()</ref></para></simplesect>
+<xrefsect id="todo_1_todo000009"><xreftitle>Todo</xreftitle><xrefdescription><para>add bounds checking on request to make sure it&apos;s in the table? </para></xrefdescription></xrefsect></para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="956" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="956" bodyend="967"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <referencedby refid="group__xbee__atcmd_1ga91641619ae34da34615193962ffd1525" compoundref="xbee__atcmd_8c" startline="984" endline="989">xbee_cmd_release_handle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga91641619ae34da34615193962ffd1525" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_release_handle</definition>
+        <argsstring>(int16_t handle)</argsstring>
+        <name>xbee_cmd_release_handle</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>Release an entry from the request table by marking it as available. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handle to the request (as returned by xbee_cmd_create)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request freed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>handle</emphasis> is not valid</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga91641619ae34da34615193962ffd1525" kindref="member">xbee_cmd_release_handle()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="984" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="984" bodyend="989"/>
+        <references refid="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" compoundref="xbee__atcmd_8c" startline="170" endline="187">_xbee_cmd_handle_to_address</references>
+        <references refid="group__xbee__atcmd_1ga899d5ef84ca5790c3c76b965f88874e0" compoundref="xbee__atcmd_8c" startline="956" endline="967">_xbee_cmd_release_request</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_set_command</definition>
+        <argsstring>(int16_t handle, const char FAR command[3])</argsstring>
+        <name>xbee_cmd_set_command</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>const char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref></type>
+          <declname>command</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Change the command associated with a request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handle to the request, as returned by <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>two-letter AT Command to send (e.g., &quot;VR&quot;, &quot;NI&quot;, etc.)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command changed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>handle</emphasis> is not valid</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" kindref="member">xbee_cmd_set_target()</ref>, <ref refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" kindref="member">xbee_cmd_set_param()</ref>, <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>, <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref>, <ref refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" kindref="member">xbee_cmd_send()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1009" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1009" bodyend="1022"/>
+        <references refid="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" compoundref="xbee__atcmd_8c" startline="170" endline="187">_xbee_cmd_handle_to_address</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_set_callback</definition>
+        <argsstring>(int16_t handle, xbee_cmd_callback_fn callback, void FAR *context)</argsstring>
+        <name>xbee_cmd_set_callback</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group__xbee__atcmd_1ga113cbd0a40a638710974218de5f885fe" kindref="member">xbee_cmd_callback_fn</ref></type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Associate a callback with a given AT Command request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the request, as returned by <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback function to receive the AT Command response. This function should take a single parameter (pointer to an <ref refid="structxbee__cmd__response__t" kindref="compound">xbee_cmd_response_t</ref>) and return either <ref refid="group__xbee__atcmd_1gad51a6fee7843df5a5bfd6f3957465426" kindref="member">XBEE_ATCMD_DONE</ref> (if done with the request handle) or <ref refid="group__xbee__atcmd_1ga9a5078393806d67903c87b3c82597fb1" kindref="member">XBEE_ATCMD_REUSE</ref> (if more responses are expected, or the request handle is going to be reused). <programlisting><codeline><highlight class="normal">int<sp/>atcmd_callback(<sp/>const<sp/>xbee_cmd_response_t<sp/>FAR<sp/>*response)</highlight></codeline>
+</programlisting></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context (or &quot;userdata&quot;) value to pass to the callback along with the AT Command response when it arrives. Should be set to NULL if not used.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>callback set </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>handle</emphasis> is not valid</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" kindref="member">xbee_cmd_set_command()</ref>, <ref refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" kindref="member">xbee_cmd_set_target()</ref>, <ref refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" kindref="member">xbee_cmd_set_param()</ref>, <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>, <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref>, <ref refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" kindref="member">xbee_cmd_send()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1057" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1057" bodyend="1072"/>
+        <references refid="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" compoundref="xbee__atcmd_8c" startline="170" endline="187">_xbee_cmd_handle_to_address</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_set_target</definition>
+        <argsstring>(int16_t handle, const addr64 FAR *ieee, uint16_t network_address)</argsstring>
+        <name>xbee_cmd_set_target</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="unionaddr64" kindref="compound">addr64</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>ieee</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>network_address</declname>
+        </param>
+        <briefdescription>
+<para>Associate a remote XBee device with a given AT Command request. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref> configures the request as a local AT Command for the serially-attached XBee module. Use this function to send the command to a remote device.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the request, as returned by <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ieee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to 64-bit IEEE hardware address of target, or NULL to switch back to the local XBee device.<itemizedlist>
+<listitem><para><ref refid="group__wpan__types_1gaced36f5538c5bb2da4f60a90313f1674" kindref="member">WPAN_IEEE_ADDR_BROADCAST</ref> for broadcast.</para></listitem><listitem><para><ref refid="group__wpan__types_1ga816199ef85ef801e07ae48350664034d" kindref="member">WPAN_IEEE_ADDR_COORDINATOR</ref> for the coordinator (use <ref refid="group__wpan__types_1ga1674d7b825e528a482725d1c06b02c10" kindref="member">WPAN_NET_ADDR_UNDEFINED</ref> for the network address).</para></listitem><listitem><para><ref refid="group__wpan__types_1ga09e965ef6cfbfd48312d86bb011f125b" kindref="member">WPAN_IEEE_ADDR_UNDEFINED</ref> to use the 16-bit network address.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">network</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16-bit network address of target.<itemizedlist>
+<listitem><para><ref refid="group__wpan__types_1ga1674d7b825e528a482725d1c06b02c10" kindref="member">WPAN_NET_ADDR_UNDEFINED</ref> if the node&apos;s network address isn&apos;t known or this is a DigiMesh network.</para></listitem><listitem><para><ref refid="group__wpan__types_1ga5158cbab6c4139bd77d1d3f80d9071b2" kindref="member">WPAN_NET_ADDR_COORDINATOR</ref> for the coordinator (use the coordinator&apos;s actual IEEE address for the <emphasis>ieee</emphasis> parameter).</para></listitem><listitem><para><ref refid="group__wpan__types_1ga08ec03f67d0d74ba6f98da543baee129" kindref="member">WPAN_NET_ADDR_BCAST_NOT_ASLEEP</ref> to broadcast to all nodes that aren&apos;t sleeping.</para></listitem><listitem><para><ref refid="group__wpan__types_1gabc1252917f345a50aa97f991bb7a3685" kindref="member">WPAN_NET_ADDR_BCAST_ROUTERS</ref> to broadcast to the coordinator and all routers.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target set </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>handle</emphasis> is not valid </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSYS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function not implemented (XBEE_CMD_DISABLE_REMOTE defined)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" kindref="member">xbee_cmd_set_command()</ref>, <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" kindref="member">xbee_cmd_set_param()</ref>, <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>, <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref>, <ref refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" kindref="member">xbee_cmd_send()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1115" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1115" bodyend="1143"/>
+        <references refid="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" compoundref="xbee__atcmd_8c" startline="170" endline="187">_xbee_cmd_handle_to_address</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1ga43785b9969e0bd1af532dbde06c5540b" compoundref="platform_8h" startline="131">ENOSYS</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <referencedby refid="group__xbee__io_1ga6a1e9ccca3a6d97f1b583e76f1193dca" compoundref="xbee__io_8c" startline="538" endline="586">xbee_io_set_options</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga484572705b9695ab429fd51188f74238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t _xbee_cmd_encode_param</definition>
+        <argsstring>(void FAR *buffer, uint32_t value)</argsstring>
+        <name>_xbee_cmd_encode_param</name>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Store an unsigned integer in 1, 2 or 4 bytes as a parameter to an AT command. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to store value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to store</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of bytes required (1, 2 or 4) to hold value. </para></simplesect>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1147" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1161" bodyend="1178"/>
+        <referencedby refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" compoundref="xbee__atcmd_8c" startline="1272" endline="1285">xbee_cmd_set_param</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1gad2cc44803cc53ada37df4557313e120b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_set_flags</definition>
+        <argsstring>(int16_t handle, uint16_t flags)</argsstring>
+        <name>xbee_cmd_set_flags</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set the flags for a given AT Command request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the request, as returned by <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One or more of the following:<itemizedlist>
+<listitem><para>XBEE_CMD_FLAG_QUEUE_CHANGE don&apos;t apply changes until ATAC or another command without this flag is sent</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flags set </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>handle</emphasis> is not valid</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1ga0828601d6b2735ee9f2ebf408d12c05c" kindref="member">xbee_cmd_clear_flags</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1199" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1199" bodyend="1212"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga0828601d6b2735ee9f2ebf408d12c05c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_clear_flags</definition>
+        <argsstring>(int16_t handle, uint16_t flags)</argsstring>
+        <name>xbee_cmd_clear_flags</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Clear the flags for a given AT Command request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the request, as returned by <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One or more of the following:<itemizedlist>
+<listitem><para>XBEE_CMD_FLAG_QUEUE_CHANGE don&apos;t apply changes until ATAC or another command without this flag is sent</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flags cleared </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>handle</emphasis> is not valid</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gad2cc44803cc53ada37df4557313e120b" kindref="member">xbee_cmd_set_flags</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1233" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1233" bodyend="1246"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_set_param</definition>
+        <argsstring>(int16_t handle, uint32_t value)</argsstring>
+        <name>xbee_cmd_set_param</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the parameter (up to 32-bits) for a given AT Command request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the request, as returned by <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to use as the parameter to the AT Command. For negative values, or values &gt; 0xFFFFFFFF, use <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>. For string parameters (e.g., for the &quot;NI&quot; command), use <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameter set </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>handle</emphasis> is not valid</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" kindref="member">xbee_cmd_set_command()</ref>, <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" kindref="member">xbee_cmd_set_target()</ref>, <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>, <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref>, <ref refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" kindref="member">xbee_cmd_send()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1272" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1272" bodyend="1285"/>
+        <references refid="group__xbee__atcmd_1ga484572705b9695ab429fd51188f74238" compoundref="xbee__atcmd_8c" startline="1161" endline="1178">_xbee_cmd_encode_param</references>
+        <references refid="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" compoundref="xbee__atcmd_8c" startline="170" endline="187">_xbee_cmd_handle_to_address</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <referencedby refid="group__xbee__io_1ga6a1e9ccca3a6d97f1b583e76f1193dca" compoundref="xbee__io_8c" startline="538" endline="586">xbee_io_set_options</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_set_param_bytes</definition>
+        <argsstring>(int16_t handle, const void FAR *data, uint8_t length)</argsstring>
+        <name>xbee_cmd_set_param_bytes</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Set the parameter for a given AT Command request to a sequence of bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the request, as returned by <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to bytes (MSB-first) to copy into request.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to copy. 0 &lt; <emphasis>length</emphasis> &lt;= <ref refid="group__xbee__atcmd_1ga9b1046f9c200c1bb0a9b57cb0ec474df" kindref="member">XBEE_CMD_MAX_PARAM_LENGTH</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameter set </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>handle</emphasis> or <emphasis>length</emphasis> is not valid </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EMSGSIZE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>length</emphasis> is greater than <ref refid="group__xbee__atcmd_1ga9b1046f9c200c1bb0a9b57cb0ec474df" kindref="member">XBEE_CMD_MAX_PARAM_LENGTH</ref></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" kindref="member">xbee_cmd_set_command()</ref>, <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" kindref="member">xbee_cmd_set_target()</ref>, <ref refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" kindref="member">xbee_cmd_set_param()</ref>, <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref>, <ref refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" kindref="member">xbee_cmd_send()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1310" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1310" bodyend="1341"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__xbee__atcmd_1ga9b1046f9c200c1bb0a9b57cb0ec474df" compoundref="atcmd_8h" startline="38">XBEE_CMD_MAX_PARAM_LENGTH</references>
+        <referencedby refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" compoundref="xbee__atcmd_8c" startline="1367" endline="1380">xbee_cmd_set_param_str</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_set_param_str</definition>
+        <argsstring>(int16_t handle, const char FAR *str)</argsstring>
+        <name>xbee_cmd_set_param_str</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>const char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Set a string parameter for a given AT Command request (e.g., the &quot;NI&quot; node identifier command). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the request, as returned by <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to use as the parameter. Must be less than <ref refid="group__xbee__atcmd_1ga9b1046f9c200c1bb0a9b57cb0ec474df" kindref="member">XBEE_CMD_MAX_PARAM_LENGTH</ref> characters long.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameter set </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>handle</emphasis> is not valid </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EMSGSIZE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>str</emphasis> is more than <ref refid="group__xbee__atcmd_1ga9b1046f9c200c1bb0a9b57cb0ec474df" kindref="member">XBEE_CMD_MAX_PARAM_LENGTH</ref> characters.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" kindref="member">xbee_cmd_set_command()</ref>, <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" kindref="member">xbee_cmd_set_target()</ref>, <ref refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" kindref="member">xbee_cmd_set_param()</ref>, <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>, <ref refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" kindref="member">xbee_cmd_send()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1367" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1367" bodyend="1380"/>
+        <references refid="group__hal_1gae37becfaa095a9df5c5c788bce5aa06f" compoundref="platform_8h" startline="140">EMSGSIZE</references>
+        <references refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" compoundref="zdo_8h" startline="410">length</references>
+        <references refid="group__xbee__atcmd_1ga9b1046f9c200c1bb0a9b57cb0ec474df" compoundref="atcmd_8h" startline="38">XBEE_CMD_MAX_PARAM_LENGTH</references>
+        <references refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" compoundref="xbee__atcmd_8c" startline="1310" endline="1341">xbee_cmd_set_param_bytes</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_send</definition>
+        <argsstring>(int16_t handle)</argsstring>
+        <name>xbee_cmd_send</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>Send an AT Command to a local or remote XBee device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle to the request, as returned by <ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handle is not valid </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBUSY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transmit serial buffer is full, or XBee is not accepting serial data (deasserting /CTS signal).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If the request does not have a callback set, it will be automatically released if <ref refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" kindref="member">xbee_cmd_send()</ref> returns 0.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" kindref="member">xbee_cmd_set_command()</ref>, <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" kindref="member">xbee_cmd_set_target()</ref>, <ref refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" kindref="member">xbee_cmd_set_param()</ref>, <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>, <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1404" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1404" bodyend="1485"/>
+        <references refid="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" compoundref="xbee__atcmd_8c" startline="170" endline="187">_xbee_cmd_handle_to_address</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="unionxbee__header__at__request__t_1afa34d393db5fa915716b483011415ddc" compoundref="atcmd_8h" startline="283">xbee_header_at_request_t::frame_type</references>
+        <references refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" compoundref="byteorder_8h" startline="127">htobe16</references>
+        <references refid="unionxbee__header__at__request__t_1afaac4d50b8627529565a1d55950c44f6" compoundref="atcmd_8h" startline="290">xbee_header_at_request_t::remote</references>
+        <references refid="atcmd_8h_1a5eaa2d8338dc2a6573754f6726f54e86" compoundref="atcmd_8h" startline="194">XBEE_CMD_FLAG_QUEUE_CHANGE</references>
+        <references refid="atcmd_8h_1a47b4e0186b3bf4fba506d58e5e7ebbe4" compoundref="atcmd_8h" startline="191">XBEE_CMD_FLAG_REMOTE</references>
+        <references refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9a44cc0afd79605edfc1f4d5cbb7ed62a2" compoundref="device_8h" startline="68">XBEE_FRAME_REMOTE_AT_CMD</references>
+        <references refid="group__xbee__device_1ga9faca10d7a960dcd3c0c3ad9c0d59cab" compoundref="xbee__device_8c" startline="61" endline="75">xbee_next_frame_id</references>
+        <references refid="group__xbee__atcmd_1ga61c52828070a499e9fbfc4e6edef158b" compoundref="atcmd_8h" startline="274">XBEE_REMOTE_AT_OPT_IMMEDIATE</references>
+        <references refid="group__xbee__atcmd_1ga3ca0a18e4e629050e8f1387f72638f69" compoundref="atcmd_8h" startline="271">XBEE_REMOTE_AT_OPT_QUEUE</references>
+        <referencedby refid="group__xbee__io_1ga6a1e9ccca3a6d97f1b583e76f1193dca" compoundref="xbee__io_8c" startline="538" endline="586">xbee_io_set_options</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga3b4559f4e729b1c96f5c0d9e4476aa7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _xbee_cmd_handle_response</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *rawframe, uint16_t length, void FAR *context)</argsstring>
+        <name>_xbee_cmd_handle_response</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>rawframe</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Callback handler registered for frame types <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9ae66771334070219cd098c8201936cf4a" kindref="member">XBEE_FRAME_LOCAL_AT_RESPONSE</ref> (0x88) and <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9a3cd726459592fab4cdc9b5e6bbecb79f" kindref="member">XBEE_FRAME_REMOTE_AT_RESPONSE</ref> (0x97). </para>        </briefdescription>
+        <detaileddescription>
+<internal><para>Should only be called by the frame dispatcher and unit tests.</para><para>See the function help for <ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> for full documentation on this function&apos;s API. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1505" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1505" bodyend="1686"/>
+        <references refid="group__xbee__atcmd_1ga1a5aaa930940857f68f245eeb89506b5" compoundref="atcmd_8h" startline="246">command</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__xbee__atcmd_1ga03c1016ac46b9df250b994f242cf956a" compoundref="atcmd_8h" startline="243">frame_id</references>
+        <references refid="group__xbee__atcmd_1gade818037fd6c985038ff29656089758d" compoundref="atcmd_8h" startline="328">status</references>
+        <references refid="group__xbee__atcmd_1ga5bf2410fa8ec37f47f8afeba8dcc7f1b" compoundref="atcmd_8h" startline="360">value</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga9b0ddf7aae7599dc334304f2b642f05f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _xbee_cmd_modem_status</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *payload, uint16_t length, void FAR *context)</argsstring>
+        <name>_xbee_cmd_modem_status</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Receive modem status frames and update our network address (and payload size) on state changes. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para><simplesect kind="see"><para><ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> </para></simplesect>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1702" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1702" bodyend="1739"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__xbee__atcmd_1gade818037fd6c985038ff29656089758d" compoundref="atcmd_8h" startline="328">status</references>
+        <references refid="group__xbee__atcmd_1ga12317255ca84c2539b7d7a58816eccab" compoundref="xbee__atcmd_8c" startline="764" endline="808">xbee_cmd_query_device</references>
+        <references refid="group__xbee__device_1ga057ed15b292ea3e48a138c6737fb0339" compoundref="device_8h" startline="543">XBEE_MODEM_STATUS_COORD_START</references>
+        <references refid="group__xbee__device_1ga2e3f5ffd01da92dd4a25257d8bc005bc" compoundref="device_8h" startline="537">XBEE_MODEM_STATUS_JOINED</references>
+        <references refid="group__xbee__device_1ga190661653f541a9b694103dbd27fd284" compoundref="device_8h" startline="557">XBEE_MODEM_STATUS_KEY_ESTABLISHED</references>
+        <references refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" compoundref="platform_8h" startline="399">XBEE_UNUSED_PARAMETER</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga6b157fe048c0082253056a7bda0ba9bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_simple</definition>
+        <argsstring>(xbee_dev_t *xbee, const char FAR command[3], uint32_t value)</argsstring>
+        <name>xbee_cmd_simple</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref></type>
+          <declname>command</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Simple interface for sending a command with a parameter to the local XBee without checking for a response. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device to use as the target.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Two-letter AT Command to send (e.g., &quot;ID&quot;, &quot;CH&quot;, etc.).</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to use as the parameter to the AT Command.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an invalid parameter was passed to the function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBUSY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transmit serial buffer is full, or XBee is not accepting serial data (deasserting /CTS signal).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" kindref="member">xbee_cmd_set_command()</ref>, <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" kindref="member">xbee_cmd_set_target()</ref>, <ref refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" kindref="member">xbee_cmd_set_param()</ref>, <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>, <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref>, <ref refid="group__xbee__atcmd_1ga19d16fbaf1da1cc581fbedcb36f7263f" kindref="member">xbee_cmd_execute()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1767" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1767" bodyend="1790"/>
+        <references refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" compoundref="sxa_8h" startline="70">PACKED_STRUCT</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga19d16fbaf1da1cc581fbedcb36f7263f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_cmd_execute</definition>
+        <argsstring>(xbee_dev_t *xbee, const char FAR command[3], const void FAR *data, uint8_t length)</argsstring>
+        <name>xbee_cmd_execute</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref></type>
+          <declname>command</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Simple interface for sending a command with an optional parameter to the local XBee without checking for a response. </para>        </briefdescription>
+        <detaileddescription>
+<para>For an asynchronous method of sending AT commands and getting the response, see xbee_cmd_create, the xbee_cmd_set_* functions and xbee_cmd_send.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device to use as the target.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Two-letter AT Command to send (e.g., &quot;ID&quot;, &quot;CH&quot;, etc.).</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional big-endian (MSB-first) value to assign to <emphasis>command</emphasis>. Use NULL if <emphasis>command</emphasis> doesn&apos;t take a parameter.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes in <emphasis>data</emphasis>; ignored if <emphasis>data</emphasis> is NULL.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an invalid parameter was passed to the function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBUSY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transmit serial buffer is full, or XBee is not accepting serial data (deasserting /CTS signal).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gab73aaf873be6f9e515dcd65748a7f21c" kindref="member">xbee_cmd_create()</ref>, <ref refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" kindref="member">xbee_cmd_set_command()</ref>, <ref refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" kindref="member">xbee_cmd_set_callback()</ref>, <ref refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" kindref="member">xbee_cmd_set_target()</ref>, <ref refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" kindref="member">xbee_cmd_set_param()</ref>, <ref refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" kindref="member">xbee_cmd_set_param_bytes()</ref>, <ref refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" kindref="member">xbee_cmd_set_param_str()</ref>, <ref refid="group__xbee__atcmd_1ga6b157fe048c0082253056a7bda0ba9bb" kindref="member">xbee_cmd_simple()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1825" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1825" bodyend="1842"/>
+        <referencedby refid="group__xbee__discovery_1ga12d6a10c8348cf5eb9636bbf02420dd3" compoundref="xbee__discovery_8c" startline="271" endline="283">xbee_disc_discover_nodes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1ga42768d8f8aa841ed4f42396cff2815aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_identify</definition>
+        <argsstring>(xbee_dev_t *xbee, bool_t identify)</argsstring>
+        <name>xbee_identify</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref></type>
+          <declname>identify</declname>
+        </param>
+        <briefdescription>
+<para>Programs with the ZCL Identify Server Cluster can call this function in their main loop to have the XBee module&apos;s association LED flash fast (100ms cycle) when in Identify Mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device to identify </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">identify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRUE if XBee should be in identify mode</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__device_1gaece12bbe1dd3135e51f714b485ed0cf2" kindref="member">xbee_zcl_identify</ref>, <ref refid="group__zcl__identify_1ga95b00d55b861c1ea6033c16794ae818d" kindref="member">zcl_identify_isactive</ref>, <ref refid="group__zcl__identify_1gaeae5b3a460629b095247d160235ec586" kindref="member">ZCL_CLUST_ENTRY_IDENTIFY_SERVER</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="1847" column="1" bodyfile="src/xbee/xbee_atcmd.c" bodystart="1847" bodyend="1857"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atcmd_1gaf0bac69b2b0db9bb2130de80697583f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_scan_dump_response</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>xbee_scan_dump_response</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_scan.c" line="31" column="1" bodyfile="src/xbee/xbee_scan.c" bodystart="31" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__xbee__atcmd_1gaa0a5c0b4df3e37c4a829f4675818fbbf" prot="public" static="no">
+        <name>_xbee_atcmd_debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="55" column="10" bodyfile="src/xbee/xbee_atcmd.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga23209b601f70aa30a5a6997c9baf313e" prot="public" static="no">
+        <name>XBEE_ATCMD_REG_REFRESH_IDX</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para>Offset into _xbee_atcmd_query_regs to use when refreshing the xbee_dev_t/ <ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_atcmd.c" line="737" column="11" bodyfile="src/xbee/xbee_atcmd.c" bodystart="737" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga12317255ca84c2539b7d7a58816eccab" compoundref="xbee__atcmd_8c" startline="764" endline="808">xbee_cmd_query_device</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gaf992e9b985e2b1eb185ef3d2d38a01c0" prot="public" static="no">
+        <name>XBEE_CMD_REQUEST_TABLESIZE</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>Maximum number of outstanding requests. </para>        </briefdescription>
+        <detaileddescription>
+<para>Two should be sufficient in most (all?) cases. One might even be enough if space is tight. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="30" column="10" bodyfile="include/xbee/atcmd.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" compoundref="xbee__atcmd_8c" startline="170" endline="187">_xbee_cmd_handle_to_address</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga9b1046f9c200c1bb0a9b57cb0ec474df" prot="public" static="no">
+        <name>XBEE_CMD_MAX_PARAM_LENGTH</name>
+        <initializer>48</initializer>
+        <briefdescription>
+<para>Maximum number of bytes in the parameter sent to a command. </para>        </briefdescription>
+        <detaileddescription>
+<para>The NI command takes a 20-byte string. ATZT is 48 bytes, ATZU is 22. Platforms can override this when limiting to AT commands with shorter parameters (e.g., 16 bytes when not using the certificate parameters). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="38" column="10" bodyfile="include/xbee/atcmd.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" compoundref="xbee__atcmd_8c" startline="1310" endline="1341">xbee_cmd_set_param_bytes</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" compoundref="xbee__atcmd_8c" startline="1367" endline="1380">xbee_cmd_set_param_str</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga386fdd4cf7046c98379878dab89e5012" prot="public" static="no">
+        <name>XBEE_CMD_REMOTE_TIMEOUT</name>
+        <initializer>180</initializer>
+        <briefdescription>
+<para>Timeout (in seconds) to wait for a response to a remote command. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set to a high value to allow for a sleeping end device. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="43" column="9" bodyfile="include/xbee/atcmd.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gae5e93a4c6f52f5853d19a8b4a78810a6" prot="public" static="no">
+        <name>XBEE_CMD_LOCAL_TIMEOUT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>Timeout (in seconds) to wait for a response to a local command. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="46" column="9" bodyfile="include/xbee/atcmd.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gaa5d4a48819eeef79e9552c6c139b73cf" prot="public" static="no">
+        <name>XBEE_CMD_ATEO_INSECURE_JOIN</name>
+        <initializer>(1&lt;&lt;0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="57" column="9" bodyfile="include/xbee/atcmd.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga0aa3bb0ab5ac949a951778338d87356d" prot="public" static="no">
+        <name>XBEE_CMD_ATEO_USE_TRUST_CENTER</name>
+        <initializer>(1&lt;&lt;1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="58" column="9" bodyfile="include/xbee/atcmd.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga203e29636f971bc1e5ca82d158eec447" prot="public" static="no">
+        <name>XBEE_CMD_ATEO_USE_HASH_LINK_KEY</name>
+        <initializer>(1&lt;&lt;2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="59" column="9" bodyfile="include/xbee/atcmd.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga11bd61fb70eddd0996b67c3b45bed8d3" prot="public" static="no">
+        <name>XBEE_CMD_ATEO_USE_AUTHENTICATION</name>
+        <initializer>(1&lt;&lt;3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="60" column="9" bodyfile="include/xbee/atcmd.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga4dc292cd07dfd93bbfb2b8632b580949" prot="public" static="no">
+        <name>XBEE_AT_RESP_STATUS</name>
+        <param><defname>var</defname></param>
+        <initializer>((var) &amp; <ref refid="group__xbee__atcmd_1ggac6a27f1b1ee32b75b6f966afbb347f22adb75bf991027151c1aa20a454e278145" kindref="member">XBEE_AT_RESP_STATUS_MASK</ref>)</initializer>
+        <briefdescription>
+<para>Macro for checking the status byte of an AT response. </para>        </briefdescription>
+        <detaileddescription>
+<para>If this library is compiled without DigiMesh support, we can use a simpler test. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="313" column="11" bodyfile="include/xbee/atcmd.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" prot="public" static="no">
+        <name>XBEE_ATCMD_REG</name>
+        <param><defname>c1</defname></param>
+        <param><defname>c2</defname></param>
+        <param><defname>type</defname></param>
+        <param><defname>obj</defname></param>
+        <param><defname>field</defname></param>
+        <initializer>{ { { c1, c2 } }, 0, <ref refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>, NULL, \
+		(<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>) sizeof((*(obj *)NULL).field), \
+		(<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>) offsetof( obj, field) }</initializer>
+        <briefdescription>
+<para>Macro used in creating command list tables. </para>        </briefdescription>
+        <detaileddescription>
+<para>This macro does not set a callback.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">c1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first character of AT command </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">c2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second character of AT command </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of xbee_command_list_type enumerated values: XBEE_CLT_NONE - no action except to issue the command. &apos;obj&apos; and &apos;field&apos; parameters are ignored. XBEE_CLT_COPY - copy response data directly, followed by 0x00 to fill the target element XBEE_CLT_COPY_PAD_LEFT - copy response data directly, padding to the left with 0x00 to fill target element XBEE_CLT_COPY_BE - copy numeric data to host byte order XBEE_CLT_SET - set command parameter directly XBEE_CLT_SET_STR - set command parameter as null- terminated string. XBEE_CLT_SET_BE - set numeric command parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>typedef name of object at base address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field in obj in which to store result</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The &apos;type&apos; parameter allows for either setting the data in the base structure as the command parameter (XBEE_CLT_SET*) or the converse, which is copying the command result back to the base structure (XBEE_CLT_COPY*).</para></simplesect>
+<simplesect kind="return"><para><ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> record for constructing command list tables</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gabbaf60bd4d186b860fd58c8a6111e9f9" kindref="member">XBEE_ATCMD_REG_CB</ref>, <ref refid="group__xbee__atcmd_1ga37dcc1cfc854d7876be99eff279bf2a0" kindref="member">XBEE_ATCMD_REG_SET_8</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="526" column="9" bodyfile="include/xbee/atcmd.h" bodystart="526" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gabbaf60bd4d186b860fd58c8a6111e9f9" prot="public" static="no">
+        <name>XBEE_ATCMD_REG_CB</name>
+        <param><defname>c1</defname></param>
+        <param><defname>c2</defname></param>
+        <param><defname>cb</defname></param>
+        <param><defname>flags</defname></param>
+        <initializer>{ { { c1, c2 } }, flags, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba01bd43706bd844415cc0882b861df4d1" kindref="member">XBEE_CLT_NONE</ref>, cb, 0, 0 }</initializer>
+        <briefdescription>
+<para>Macro used in creating command list tables. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">c1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first character of AT command </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">c2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second character of AT command </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>callback function (prototype <emphasis>xbee_command_list_fn</emphasis>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-bit flags for callback (arbitrary).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> record for constructing command list tables</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="543" column="9" bodyfile="include/xbee/atcmd.h" bodystart="543" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gaf5f12cd2d94f9f4ecf0a679196a6ed21" prot="public" static="no">
+        <name>XBEE_ATCMD_REG_MOVE_THEN_CB</name>
+        <param><defname>c1</defname></param>
+        <param><defname>c2</defname></param>
+        <param><defname>type</defname></param>
+        <param><defname>obj</defname></param>
+        <param><defname>field</defname></param>
+        <param><defname>cb</defname></param>
+        <param><defname>flags</defname></param>
+        <initializer>{ { { c1, c2 } }, flags, <ref refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>, cb,		\
+   	(<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>) sizeof((*(obj *)NULL).field), \
+		(<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>) offsetof( obj, field) }</initializer>
+        <briefdescription>
+<para>Macro used in creating command list tables. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a combination of <ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref> (moving data automatically) and <ref refid="group__xbee__atcmd_1gabbaf60bd4d186b860fd58c8a6111e9f9" kindref="member">XBEE_ATCMD_REG_CB</ref> (calling a callback function). The callback function is invoked after the data move.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">c1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first character of AT command </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">c2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second character of AT command </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of xbee_command_list_type enumerated values: XBEE_CLT_NONE - no action except to issue the command. &apos;obj&apos; and &apos;field&apos; parameters are ignored. XBEE_CLT_COPY - copy response data directly, followed by 0x00 to fill the target element XBEE_CLT_COPY_PAD_LEFT - copy response data directly, padding to the left with 0x00 to fill target element XBEE_CLT_COPY_BE - copy numeric data to host byte order XBEE_CLT_SET - set command parameter directly XBEE_CLT_SET_STR - set command parameter as null- terminated string. XBEE_CLT_SET_BE - set numeric command parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>typedef name of object at base address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field in obj in which to store result </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>callback function (prototype <emphasis>xbee_command_list_fn</emphasis>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-bit flags for callback (arbitrary).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> record for constructing command list tables</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref>, <ref refid="group__xbee__atcmd_1gabbaf60bd4d186b860fd58c8a6111e9f9" kindref="member">XBEE_ATCMD_REG_CB</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="577" column="9" bodyfile="include/xbee/atcmd.h" bodystart="577" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga37dcc1cfc854d7876be99eff279bf2a0" prot="public" static="no">
+        <name>XBEE_ATCMD_REG_SET_8</name>
+        <param><defname>c1</defname></param>
+        <param><defname>c2</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>{ { { c1, c2 } }, 0, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba0eb2ffa9c761ab74335695f818ce8410" kindref="member">XBEE_CLT_SET_8</ref>, NULL, <ref refid="group__zcl_1ga1ed5b151a90f7e99af8cca2e6875ddf4" kindref="member">value</ref>, 0 }</initializer>
+        <briefdescription>
+<para>Macro used in creating command list tables. </para>        </briefdescription>
+        <detaileddescription>
+<para>This macro does not set a callback.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">c1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first character of AT command </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">c2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second character of AT command </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned 8-bit value (compile-time constant) to set.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> record for constructing command list tables</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__xbee__atcmd_1gaafe33c3d8ea48b42b25d1183eaf93071" kindref="member">XBEE_ATCMD_REG</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="597" column="9" bodyfile="include/xbee/atcmd.h" bodystart="597" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga22fe547f7ae9fd0b090c5e45f03c162d" prot="public" static="no">
+        <name>XBEE_ATCMD_REG_END</name>
+        <initializer>{ { { &apos;\0&apos;, &apos;\0&apos; } } }</initializer>
+        <briefdescription>
+<para>Macro used in creating command list tables. </para>        </briefdescription>
+        <detaileddescription>
+<para>Used to terminate table, with no special final callback. This <bold>must</bold> be the last entry if used, or <ref refid="group__xbee__atcmd_1gae8d6778e286e3bf82eafc842d451c161" kindref="member">XBEE_ATCMD_REG_END_CB</ref> must be used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="605" column="9" bodyfile="include/xbee/atcmd.h" bodystart="605" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gaaed20e2dcb547e8a3256e1168e1c95b0" prot="public" static="no">
+        <name>XBEE_ATCMD_REG_END_CMD</name>
+        <param><defname>c1</defname></param>
+        <param><defname>c2</defname></param>
+        <initializer>{ { { c1, c2 } }, 0, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba6e78c45780bccbc7226af34868dc567f" kindref="member">XBEE_CLT_LAST</ref>, NULL, 0, 0 }</initializer>
+        <briefdescription>
+<para>Macro used in creating command list tables. </para>        </briefdescription>
+        <detaileddescription>
+<para>Used to terminate table, with a command (usually ND or WR). This <bold>must</bold> be the last entry if used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="613" column="9" bodyfile="include/xbee/atcmd.h" bodystart="613" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gae8d6778e286e3bf82eafc842d451c161" prot="public" static="no">
+        <name>XBEE_ATCMD_REG_END_CB</name>
+        <param><defname>cb</defname></param>
+        <param><defname>flags</defname></param>
+        <initializer>{ { { &apos;\0&apos;, &apos;\0&apos; } }, flags, <ref refid="group__xbee__atcmd_1gga1bd8ecd38c107579d20ded3c79a7d70ba01bd43706bd844415cc0882b861df4d1" kindref="member">XBEE_CLT_NONE</ref>, cb, 0, 0 }</initializer>
+        <briefdescription>
+<para>Macro used in creating command list tables. </para>        </briefdescription>
+        <detaileddescription>
+<para>Used to terminate table, with a final callback. This <bold>must</bold> be the last entry if used, or <ref refid="group__xbee__atcmd_1ga22fe547f7ae9fd0b090c5e45f03c162d" kindref="member">XBEE_ATCMD_REG_END</ref> must be used.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>callback function (prototype <emphasis>xbee_command_list_fn</emphasis>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The &apos;response&apos; parameter to the callback will be the final command response received. </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-bit flags for callback (arbitrary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="626" column="9" bodyfile="include/xbee/atcmd.h" bodystart="626" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga1c37bac63df4c1378f8140c6e02eb301" prot="public" static="no">
+        <name>XBEE_ATCMD_REG_VALID</name>
+        <param><defname>ptr</defname></param>
+        <initializer>(ptr-&gt;command.w != 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="629" column="9" bodyfile="include/xbee/atcmd.h" bodystart="629" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga75cfdd39f5f70bd8a180f9c858927aec" prot="public" static="no">
+        <name>xbee_cmd_list_status</name>
+        <param><defname>clc</defname></param>
+        <initializer>((clc)-&gt;<ref refid="group__xbee__atcmd_1gade818037fd6c985038ff29656089758d" kindref="member">status</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="642" column="9" bodyfile="include/xbee/atcmd.h" bodystart="642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga56c0812894871f4a6429ef00ac2d15c7" prot="public" static="no">
+        <name>XBEE_CMD_REQUEST_EMPTY</name>
+        <param><defname>index</defname></param>
+        <initializer>(<ref refid="group__xbee__atcmd_1ga551531248de3d539dfb15bd89cf4734b" kindref="member">xbee_cmd_request_table</ref>[index].device == NULL)</initializer>
+        <briefdescription>
+<para>Is entry <emphasis>index</emphasis> available (unused)? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="647" column="9" bodyfile="include/xbee/atcmd.h" bodystart="647" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gac86e9f2dc459c0c6b758ba90142bbc54" prot="public" static="no">
+        <name>XBEE_CMD_REQUEST_HANDLE</name>
+        <param><defname>index</defname></param>
+        <initializer>((index &lt;&lt; 8) || <ref refid="group__xbee__atcmd_1ga551531248de3d539dfb15bd89cf4734b" kindref="member">xbee_cmd_request_table</ref>[index].sequence)</initializer>
+        <briefdescription>
+<para>Return the handle for entry <emphasis>index</emphasis> (combination of <emphasis>index</emphasis> and <emphasis></emphasis>.sequence member of entry). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="652" column="9" bodyfile="include/xbee/atcmd.h" bodystart="652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gaae50224419f278ac13faf6637befa899" prot="public" static="no">
+        <name>XBEE_FRAME_HANDLE_LOCAL_AT</name>
+        <initializer>{ <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9ae66771334070219cd098c8201936cf4a" kindref="member">XBEE_FRAME_LOCAL_AT_RESPONSE</ref>, 0, <ref refid="group__xbee__atcmd_1ga3b4559f4e729b1c96f5c0d9e4476aa7d" kindref="member">_xbee_cmd_handle_response</ref>, NULL },	\
+	{ <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9adff71d45371cf6b933688c43994b7f81" kindref="member">XBEE_FRAME_MODEM_STATUS</ref>, 0, <ref refid="group__xbee__atcmd_1ga9b0ddf7aae7599dc334304f2b642f05f" kindref="member">_xbee_cmd_modem_status</ref>, NULL }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="686" column="9" bodyfile="include/xbee/atcmd.h" bodystart="686" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1gab361800e13206736264e7d1e5ebd159a" prot="public" static="no">
+        <name>XBEE_FRAME_HANDLE_REMOTE_AT</name>
+        <initializer>{ <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9a3cd726459592fab4cdc9b5e6bbecb79f" kindref="member">XBEE_FRAME_REMOTE_AT_RESPONSE</ref>, 0, <ref refid="group__xbee__atcmd_1ga3b4559f4e729b1c96f5c0d9e4476aa7d" kindref="member">_xbee_cmd_handle_response</ref>, NULL }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="689" column="9" bodyfile="include/xbee/atcmd.h" bodystart="689" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__atcmd_1ga707fb13fddd604c1b306c6bd30d10a98" prot="public" static="no">
+        <name>XBEE_SCAN_TYPE_ZIGBEE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/scan.h" line="54" column="9" bodyfile="include/xbee/scan.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This layer wraps the AT request/response frames to provide an easy method for querying/setting registers on, and sending AT commands to the XBee. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

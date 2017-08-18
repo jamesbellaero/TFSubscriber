@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="xbee__ota__server_8c" kind="file" language="C++">
+    <compoundname>xbee_ota_server.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="ota__server_8h" local="yes">xbee/ota_server.h</includes>
+    <incdepgraph>
+      <node id="1442">
+        <label>errno.h</label>
+      </node>
+      <node id="1444">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="1445" relation="include">
+        </childnode>
+      </node>
+      <node id="1438">
+        <label>xbee/ota_server.h</label>
+        <link refid="ota__server_8h"/>
+        <childnode refid="1439" relation="include">
+        </childnode>
+        <childnode refid="1446" relation="include">
+        </childnode>
+      </node>
+      <node id="1436">
+        <label>src/xbee/xbee_ota_server.c</label>
+        <link refid="xbee__ota__server_8c"/>
+        <childnode refid="1437" relation="include">
+        </childnode>
+        <childnode refid="1438" relation="include">
+        </childnode>
+      </node>
+      <node id="1443">
+        <label>stddef.h</label>
+      </node>
+      <node id="1439">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="1440" relation="include">
+        </childnode>
+      </node>
+      <node id="1448">
+        <label>xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="1449" relation="include">
+        </childnode>
+        <childnode refid="1441" relation="include">
+        </childnode>
+      </node>
+      <node id="1446">
+        <label>zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="1441" relation="include">
+        </childnode>
+        <childnode refid="1439" relation="include">
+        </childnode>
+        <childnode refid="1447" relation="include">
+        </childnode>
+      </node>
+      <node id="1449">
+        <label>string.h</label>
+      </node>
+      <node id="1440">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="1441" relation="include">
+        </childnode>
+      </node>
+      <node id="1441">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="1442" relation="include">
+        </childnode>
+        <childnode refid="1443" relation="include">
+        </childnode>
+        <childnode refid="1444" relation="include">
+        </childnode>
+      </node>
+      <node id="1447">
+        <label>zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="1441" relation="include">
+        </childnode>
+        <childnode refid="1448" relation="include">
+        </childnode>
+        <childnode refid="1450" relation="include">
+        </childnode>
+      </node>
+      <node id="1450">
+        <label>zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="1441" relation="include">
+        </childnode>
+      </node>
+      <node id="1445">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+      <node id="1437">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__ota__server_1ga22cb77be06faba4020a4f5e0daf48f4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>XBEE_BEGIN_DECLS int xbee_ota_server_cmd</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, void FAR *context)</argsstring>
+        <name>xbee_ota_server_cmd</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Cluster command to initiate firmware updates. </para>        </briefdescription>
+        <detaileddescription>
+<para>Verifies that APS encryption was used (if cluster is configured as such) before handing off to implementation-provided function <ref refid="group__xbee__ota__server_1ga38fdff5e9fec8c3aa8bfd167621ee35c" kindref="member">xbee_update_firmware_ota()</ref>.</para><para><simplesect kind="see"><para><ref refid="group__wpan__aps_1ga8575b0db762a5fbb858d4994c9b657e3" kindref="member">wpan_aps_handler_fn</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_ota_server.c" line="30" column="1" bodyfile="src/xbee/xbee_ota_server.c" bodystart="30" bodyend="77"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" compoundref="aps_8h" startline="62">wpan_envelope_t::length</references>
+        <references refid="group__xbee__atcmd_1gaace3d640c8d449b8db1162993d259d3f" compoundref="atcmd_8h" startline="264">options</references>
+        <references refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" compoundref="aps_8h" startline="61">wpan_envelope_t::payload</references>
+        <references refid="group__wpan__aps_1ga1eafd87038a2134da7a1f72e6801d23b" compoundref="aps_8h" startline="237">WPAN_CLUST_FLAG_ENCRYPT</references>
+        <references refid="group__wpan__aps_1gaaaee02ff456d4f6103a5e94c2ba106c5" compoundref="wpan__aps_8c" startline="752" endline="776">wpan_envelope_reply</references>
+        <references refid="group__wpan__aps_1ga3bf12c3b9fd0afac2c9f58de8e7c38e9" compoundref="aps_8h" startline="59">WPAN_ENVELOPE_RX_APS_ENCRYPT</references>
+        <references refid="group__wpan__aps_1ga06f1e9e86b74ef807ded44b79b13e283" compoundref="wpan__aps_8c" startline="790" endline="810">wpan_envelope_send</references>
+        <references refid="group__xbee__ota__server_1ga38fdff5e9fec8c3aa8bfd167621ee35c">xbee_update_firmware_ota</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Code to add an OTA Server Cluster to a device. </para>    </briefdescription>
+    <detaileddescription>
+<para>It receives notification to start an update, and then calls back to the bootloader to receive that update. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">/***<sp/>BeginHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ota__server_8h" kindref="compound">xbee/ota_server.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_ota_server_cmd<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="group__xbee__ota__server_1ga22cb77be06faba4020a4f5e0daf48f4f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__ota__server_1ga22cb77be06faba4020a4f5e0daf48f4f" kindref="member">xbee_ota_server_cmd</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__xbee__atcmd_1gaace3d640c8d449b8db1162993d259d3f" kindref="member">options</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*err<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(envelope<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stack<sp/>should<sp/>not<sp/>pass<sp/>NULL<sp/>envelope;<sp/>cover<sp/>this<sp/>condition<sp/>for<sp/>safety</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>cluster<sp/>configuration<sp/>requires<sp/>encryption,<sp/>make<sp/>sure<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>frame<sp/>was<sp/>received<sp/>encrypted.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>options<sp/>=<sp/>envelope-&gt;options<sp/>&amp;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="group__wpan__aps_1ga3bf12c3b9fd0afac2c9f58de8e7c38e9" kindref="member">WPAN_ENVELOPE_RX_APS_ENCRYPT</ref><sp/>|<sp/><ref refid="group__wpan__aps_1ga1eafd87038a2134da7a1f72e6801d23b" kindref="member">WPAN_CLUST_FLAG_ENCRYPT</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(options<sp/>==<sp/><ref refid="group__wpan__aps_1ga1eafd87038a2134da7a1f72e6801d23b" kindref="member">WPAN_CLUST_FLAG_ENCRYPT</ref>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cluster<sp/>requires<sp/>encryption,<sp/>but<sp/>frame<sp/>wasn&apos;t<sp/>encrypted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>isn&apos;t<sp/>ZCL,<sp/>so<sp/>we<sp/>can&apos;t<sp/>send<sp/>a<sp/>Default<sp/>Response<sp/>and<sp/>we</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>just<sp/>have<sp/>to<sp/>ignore<sp/>the<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;encryption<sp/>required&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>call<sp/>function<sp/>provided<sp/>by<sp/>the<sp/>application<sp/>for<sp/>starting<sp/>the<sp/>update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="group__xbee__ota__server_1ga38fdff5e9fec8c3aa8bfd167621ee35c" kindref="member">xbee_update_firmware_ota</ref>(<sp/>envelope,<sp/>context);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>xbee_update_firmware_ota<sp/>won&apos;t<sp/>return<sp/>if<sp/>it&apos;s<sp/>able<sp/>to<sp/>install<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>and<sp/>reboot</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>reply;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__wpan__aps_1gaaaee02ff456d4f6103a5e94c2ba106c5" kindref="member">wpan_envelope_reply</ref>(<sp/>&amp;reply,<sp/>envelope)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reply.<ref refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" kindref="member">payload</ref><sp/>=<sp/>err;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reply.<ref refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref><sp/>=<sp/>strlen(<sp/>err);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga06f1e9e86b74ef807ded44b79b13e283" kindref="member">wpan_envelope_send</ref>(<sp/>&amp;reply);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/xbee/xbee_ota_server.c"/>
+  </compounddef>
+</doxygen>

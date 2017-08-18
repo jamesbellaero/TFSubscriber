@@ -1,0 +1,40 @@
+\hypertarget{structzcl__command__t}{}\section{zcl\+\_\+command\+\_\+t Struct Reference}
+\label{structzcl__command__t}\index{zcl\+\_\+command\+\_\+t@{zcl\+\_\+command\+\_\+t}}
+
+
+Structure populated by \hyperlink{group__zcl_gadeb35ab493fffec9ba1c33f658929136}{zcl\+\_\+command\+\_\+build()} with the Z\+CL header from a received Z\+CL command frame.  
+
+
+
+
+{\ttfamily \#include \char`\"{}zigbee/zcl.\+h\char`\"{}}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_ga1c24c7848d60bc6aa335a8ba9fd14b7a}{envelope}
+\begin{DoxyCompactList}\small\item\em envelope for the received command, envelope\textquotesingle{}s payload and length include the Z\+CL header \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga5226462a41663bc81a5d67c04f18868a}{frame\+\_\+control}
+\begin{DoxyCompactList}\small\item\em frame control byte from the Z\+CL header \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga011fb17c1112658806badaccba7a246d}{mfg\+\_\+code}
+\begin{DoxyCompactList}\small\item\em manufacturer code from the Z\+CL header, in host byte order, or 0x0000 if not mfg specific \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_gacb5c8866a58116314f6c8eda9dc3544c}{sequence}
+\begin{DoxyCompactList}\small\item\em sequence byte from the Z\+CL header \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1a5aaa930940857f68f245eeb89506b5}{command}
+\begin{DoxyCompactList}\small\item\em command byte from the Z\+CL header \end{DoxyCompactList}\item 
+const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_ga04c31df34f50e8dd1efaf1105631b2bc}{attributes}
+\begin{DoxyCompactList}\small\item\em Appropriate list of attributes on this device, related to the command. \end{DoxyCompactList}\item 
+const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_gaf0e34793a3febabcdb61c020aecbf805}{zcl\+\_\+payload}
+\begin{DoxyCompactList}\small\item\em pointer to the Z\+CL payload (first byte after Z\+CL header) \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} \hyperlink{group__zcl_ga0ff9f63e333676ba1359f505d02dd281}{length}
+\begin{DoxyCompactList}\small\item\em length of the Z\+CL payload \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure populated by \hyperlink{group__zcl_gadeb35ab493fffec9ba1c33f658929136}{zcl\+\_\+command\+\_\+build()} with the Z\+CL header from a received Z\+CL command frame. 
+
+Does not look at the Z\+CL payload. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/zigbee/\hyperlink{zcl_8h}{zcl.\+h}\end{DoxyCompactItemize}

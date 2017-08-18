@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structxbee__ota__t" kind="struct" language="C++" prot="public">
+    <compoundname>xbee_ota_t</compoundname>
+    <includes refid="ota__client_8h" local="yes">xbee/ota_client.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__xbee__ota__client_1gaa7262b389539547f7405189cd4bf274c" prot="public" static="no" mutable="no">
+        <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+        <definition>wpan_dev_t* dev</definition>
+        <argsstring></argsstring>
+        <name>dev</name>
+        <briefdescription>
+<para>local device to send updates through </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/ota_client.h" line="37" column="1" bodyfile="include/xbee/ota_client.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="group__xbee__ota__client_1ga4805b029d840b86133ef62d64866c6af" compoundref="xbee__ota__client_8c" startline="157" endline="211">xbee_ota_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__ota__client_1gaef649f9dfe9109ac17db3fda73c61036" prot="public" static="no" mutable="no">
+        <type><ref refid="unionaddr64" kindref="compound">addr64</ref></type>
+        <definition>addr64 target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <briefdescription>
+<para>network device to update </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/ota_client.h" line="38" column="1" bodyfile="include/xbee/ota_client.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="group__xbee__ota__client_1ga4805b029d840b86133ef62d64866c6af" compoundref="xbee__ota__client_8c" startline="157" endline="211">xbee_ota_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__ota__client_1ga1e87af3c18a2fd36c61faf89949bdc3f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+<para>combination of XBEE_OTA_FLAG_* values </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/ota_client.h" line="39" column="1" bodyfile="include/xbee/ota_client.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="group__xbee__ota__client_1ga4805b029d840b86133ef62d64866c6af" compoundref="xbee__ota__client_8c" startline="157" endline="211">xbee_ota_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__ota__client_1gaa86751bccf68cd96c559cd1947e455c9" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__cbuf__t" kindref="compound">xbee_cbuf_t</ref></type>
+        <definition>xbee_cbuf_t cbuf</definition>
+        <argsstring></argsstring>
+        <name>cbuf</name>
+        <briefdescription>
+<para>track state of circular buffer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/ota_client.h" line="44" column="1" bodyfile="include/xbee/ota_client.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="group__xbee__ota__client_1ga4805b029d840b86133ef62d64866c6af" compoundref="xbee__ota__client_8c" startline="157" endline="211">xbee_ota_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__ota__client_1gafaab4db801ec47fb901e28ee4c4eac04" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t raw[255+XBEE_CBUF_OVERHEAD]</definition>
+        <argsstring>[255+XBEE_CBUF_OVERHEAD]</argsstring>
+        <name>raw</name>
+        <briefdescription>
+<para>buffer for <ref refid="structxbee__cbuf__t" kindref="compound">xbee_cbuf_t</ref> structure and bytes received from target </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/ota_client.h" line="46" column="1" bodyfile="include/xbee/ota_client.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__ota__client_1ga8a3826497465a168bcbbb5de14ea9595" prot="public" static="no" mutable="no">
+        <type>union xbee_ota_t::@6</type>
+        <definition>union xbee_ota_t::@6  rxbuf</definition>
+        <argsstring></argsstring>
+        <name>rxbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/ota_client.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__ota__client_1ga198adacee7500d0135a88d6ecc591bf5" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__xmodem__state__t" kindref="compound">xbee_xmodem_state_t</ref></type>
+        <definition>xbee_xmodem_state_t xbxm</definition>
+        <argsstring></argsstring>
+        <name>xbxm</name>
+        <briefdescription>
+<para>track state of Xmodem transfer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/ota_client.h" line="48" column="1" bodyfile="include/xbee/ota_client.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__ota__client_1ga93137186f6fec6ed6ba4db70db04ca1f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t auth_data[XBEE_OTA_MAX_AUTH_LENGTH]</definition>
+        <argsstring>[XBEE_OTA_MAX_AUTH_LENGTH]</argsstring>
+        <name>auth_data</name>
+        <briefdescription>
+<para>Payload used to initiate update. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/ota_client.h" line="51" column="1" bodyfile="include/xbee/ota_client.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__ota__client_1ga67b236f1ec1fbada8e400218c6e5c1f7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t auth_length</definition>
+        <argsstring></argsstring>
+        <name>auth_length</name>
+        <briefdescription>
+<para>Number of bytes in <computeroutput>auth_data</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/ota_client.h" line="52" column="1" bodyfile="include/xbee/ota_client.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for tracking state of over-the-air update. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="269">
+        <label>wpan_envelope_t</label>
+        <link refid="structwpan__envelope__t"/>
+        <childnode refid="266" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="268" relation="usage">
+          <edgelabel>ieee_address</edgelabel>
+        </childnode>
+      </node>
+      <node id="267">
+        <label>wpan_address_t</label>
+        <link refid="structwpan__address__t"/>
+        <childnode refid="268" relation="usage">
+          <edgelabel>ieee</edgelabel>
+        </childnode>
+      </node>
+      <node id="264">
+        <label>xbee_cbuf_t</label>
+        <link refid="structxbee__cbuf__t"/>
+      </node>
+      <node id="265">
+        <label>xbee_xmodem_state_t</label>
+        <link refid="structxbee__xmodem__state__t"/>
+      </node>
+      <node id="273">
+        <label>wpan_cluster_table_entry_t</label>
+        <link refid="structwpan__cluster__table__entry__t"/>
+        <childnode refid="269" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="270">
+        <label>wpan_endpoint_table_entry_t</label>
+        <link refid="structwpan__endpoint__table__entry__t"/>
+        <childnode refid="269" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+        <childnode refid="271" relation="usage">
+          <edgelabel>ep_state</edgelabel>
+        </childnode>
+        <childnode refid="273" relation="usage">
+          <edgelabel>cluster_table</edgelabel>
+        </childnode>
+      </node>
+      <node id="268">
+        <label>addr64</label>
+        <link refid="unionaddr64"/>
+      </node>
+      <node id="271">
+        <label>wpan_ep_state_t</label>
+        <link refid="structwpan__ep__state__t"/>
+        <childnode refid="272" relation="usage">
+          <edgelabel>conversations</edgelabel>
+        </childnode>
+      </node>
+      <node id="272">
+        <label>wpan_conversation_t</label>
+        <link refid="structwpan__conversation__t"/>
+        <childnode refid="272" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="266">
+        <label>wpan_dev_t</label>
+        <link refid="structwpan__dev__t"/>
+        <childnode refid="267" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="269" relation="usage">
+          <edgelabel>endpoint_send</edgelabel>
+        </childnode>
+        <childnode refid="270" relation="usage">
+          <edgelabel>endpoint_table</edgelabel>
+          <edgelabel>endpoint_get_next</edgelabel>
+        </childnode>
+        <childnode refid="266" relation="usage">
+          <edgelabel>tick</edgelabel>
+        </childnode>
+      </node>
+      <node id="263">
+        <label>xbee_ota_t</label>
+        <link refid="structxbee__ota__t"/>
+        <childnode refid="264" relation="usage">
+          <edgelabel>cbuf</edgelabel>
+        </childnode>
+        <childnode refid="265" relation="usage">
+          <edgelabel>xbxm</edgelabel>
+        </childnode>
+        <childnode refid="266" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="268" relation="usage">
+          <edgelabel>target</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xbee/ota_client.h" line="36" column="1" bodyfile="include/xbee/ota_client.h" bodystart="36" bodyend="53"/>
+    <listofallmembers>
+      <member refid="group__xbee__ota__client_1ga93137186f6fec6ed6ba4db70db04ca1f" prot="public" virt="non-virtual"><scope>xbee_ota_t</scope><name>auth_data</name></member>
+      <member refid="group__xbee__ota__client_1ga67b236f1ec1fbada8e400218c6e5c1f7" prot="public" virt="non-virtual"><scope>xbee_ota_t</scope><name>auth_length</name></member>
+      <member refid="group__xbee__ota__client_1gaa86751bccf68cd96c559cd1947e455c9" prot="public" virt="non-virtual"><scope>xbee_ota_t</scope><name>cbuf</name></member>
+      <member refid="group__xbee__ota__client_1gaa7262b389539547f7405189cd4bf274c" prot="public" virt="non-virtual"><scope>xbee_ota_t</scope><name>dev</name></member>
+      <member refid="group__xbee__ota__client_1ga1e87af3c18a2fd36c61faf89949bdc3f" prot="public" virt="non-virtual"><scope>xbee_ota_t</scope><name>flags</name></member>
+      <member refid="group__xbee__ota__client_1gafaab4db801ec47fb901e28ee4c4eac04" prot="public" virt="non-virtual"><scope>xbee_ota_t</scope><name>raw</name></member>
+      <member refid="group__xbee__ota__client_1ga8a3826497465a168bcbbb5de14ea9595" prot="public" virt="non-virtual"><scope>xbee_ota_t</scope><name>rxbuf</name></member>
+      <member refid="group__xbee__ota__client_1gaef649f9dfe9109ac17db3fda73c61036" prot="public" virt="non-virtual"><scope>xbee_ota_t</scope><name>target</name></member>
+      <member refid="group__xbee__ota__client_1ga198adacee7500d0135a88d6ecc591bf5" prot="public" virt="non-virtual"><scope>xbee_ota_t</scope><name>xbxm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

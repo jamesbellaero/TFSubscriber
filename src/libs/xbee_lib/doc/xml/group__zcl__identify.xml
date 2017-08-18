@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__zcl__identify" kind="group">
+    <compoundname>zcl_identify</compoundname>
+    <title>Identify Cluster</title>
+    <innerfile refid="zcl__identify_8c">zcl_identify.c</innerfile>
+    <innerfile refid="zcl__identify_8h">zcl_identify.h</innerfile>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__zcl__identify_1ga2cb1b23d3ccb08ae200e797358694d51" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t zcl_identify_time</definition>
+        <argsstring></argsstring>
+        <name>zcl_identify_time</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Private variable for tracking amount of &quot;Identification mode&quot; time left. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="49" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="53" bodyend="-1"/>
+        <referencedby refid="group__zcl__identify_1ga95b00d55b861c1ea6033c16794ae818d" compoundref="zcl__identify_8c" startline="65" endline="83">zcl_identify_isactive</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__identify_1ga467ad1e40ea8475b4e49865436883e94" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t zcl_identify_end</definition>
+        <argsstring></argsstring>
+        <name>zcl_identify_end</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Private variable for tracking value of xbee_seconds_timer() that &quot;Idenfication mode&quot; should end. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="50" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="56" bodyend="-1"/>
+        <referencedby refid="group__zcl__identify_1ga40470468c9c1fe4ebfb52612234710b0" compoundref="zcl__identify_8c" startline="104" endline="121">_zcl_identify_time_set</referencedby>
+        <referencedby refid="group__zcl__identify_1ga95b00d55b861c1ea6033c16794ae818d" compoundref="zcl__identify_8c" startline="65" endline="83">zcl_identify_isactive</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__identify_1gaeb5c4c1de8a862c365c638878e5a96c8" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref></type>
+        <definition>zcl_attribute_full_t identify_time</definition>
+        <argsstring></argsstring>
+        <name>identify_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="148" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__identify_1gaeb5c4c1de8a862c365c638878e5a96c8" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref></type>
+        <definition>zcl_attribute_full_t identify_time</definition>
+        <argsstring></argsstring>
+        <name>identify_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="148" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__identify_1ga2066d4a3853d4b0d8de8b162f829e10f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t end_of_list</definition>
+        <argsstring></argsstring>
+        <name>end_of_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="149" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__identify_1ga2066d4a3853d4b0d8de8b162f829e10f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t end_of_list</definition>
+        <argsstring></argsstring>
+        <name>end_of_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="149" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__identify_1ga794a6ffcf3d47884c65a8a2c9e60851b" prot="public" static="no" mutable="no">
+        <type>const struct @3</type>
+        <definition>const struct @3  zcl_identify_attr</definition>
+        <argsstring></argsstring>
+        <name>zcl_identify_attr</name>
+        <initializer>=
+{
+
+	{ { <ref refid="group__zcl__identify_1ga7df877a02f273adc190aa24ad0aff4c9" kindref="member">ZCL_IDENTIFY_ATTR_IDENTIFY_TIME</ref>,
+		<ref refid="group__zcl_1ga40104652d30fa17b7ea5dde9e8b788b8" kindref="member">ZCL_ATTRIB_FLAG_FULL</ref>,
+		ZCL_TYPE_UNSIGNED_16BIT,
+		&amp;<ref refid="group__zcl__identify_1ga2cb1b23d3ccb08ae200e797358694d51" kindref="member">zcl_identify_time</ref> },
+		{ 0 }, { 0 },
+		&amp;<ref refid="group__zcl__identify_1ga7cde47425d0a779f5aff87985ea01951" kindref="member">_zcl_identify_time_get</ref>, &amp;<ref refid="group__zcl__identify_1ga40470468c9c1fe4ebfb52612234710b0" kindref="member">_zcl_identify_time_set</ref> },
+	<ref refid="group__zcl_1gab05da20cf1dfaef97e20dfca2fd26d14" kindref="member">ZCL_ATTRIBUTE_END_OF_LIST</ref>
+}</initializer>
+        <briefdescription>
+<para>Standard attribute list for the Identify Server Cluster. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__identify_1gadebf533d91e359185eb3c0e1e7f044d7" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structzcl__attribute__tree__t" kindref="compound">zcl_attribute_tree_t</ref></type>
+        <definition>const zcl_attribute_tree_t zcl_identify_attribute_tree[]</definition>
+        <argsstring>[]</argsstring>
+        <name>zcl_identify_attribute_tree</name>
+        <initializer>=
+		{ { ZCL_MFG_NONE, &amp;zcl_identify_attr.identify_time.base, NULL } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="162" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__identify_1ga8a328e26487840e24d43449775060b16" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref> const <ref refid="structzcl__attribute__tree__t" kindref="compound">zcl_attribute_tree_t</ref></type>
+        <definition>XBEE_BEGIN_DECLS const zcl_attribute_tree_t zcl_identify_attribute_tree[]</definition>
+        <argsstring>[]</argsstring>
+        <name>zcl_identify_attribute_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_identify.h" line="31" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__zcl__identify_1ga95b00d55b861c1ea6033c16794ae818d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t zcl_identify_isactive</definition>
+        <argsstring>(void)</argsstring>
+        <name>zcl_identify_isactive</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Used by main program to see if a device is in &quot;Identification mode&quot;. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>&gt;0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of seconds of &quot;Identification mode&quot; left. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device is not in &quot;Identification mode&quot;. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="65" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="65" bodyend="83"/>
+        <references refid="group__zcl__identify_1ga467ad1e40ea8475b4e49865436883e94" compoundref="zcl__identify_8c" startline="56">zcl_identify_end</references>
+        <references refid="group__zcl__identify_1ga2cb1b23d3ccb08ae200e797358694d51" compoundref="zcl__identify_8c" startline="53">zcl_identify_time</references>
+        <referencedby refid="group__zcl__identify_1ga7cde47425d0a779f5aff87985ea01951" compoundref="zcl__identify_8c" startline="134" endline="142">_zcl_identify_time_get</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__identify_1ga40470468c9c1fe4ebfb52612234710b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _zcl_identify_time_set</definition>
+        <argsstring>(const zcl_attribute_full_t FAR *attribute, zcl_attribute_write_rec_t *rec)</argsstring>
+        <name>_zcl_identify_time_set</name>
+        <param>
+          <type>const <ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>attribute</declname>
+        </param>
+        <param>
+          <type><ref refid="structzcl__attribute__write__rec__t" kindref="compound">zcl_attribute_write_rec_t</ref> *</type>
+          <declname>rec</declname>
+        </param>
+        <briefdescription>
+<para>Function registered to <ref refid="group__zcl__identify_1ga7df877a02f273adc190aa24ad0aff4c9" kindref="member">ZCL_IDENTIFY_ATTR_IDENTIFY_TIME</ref> attribute of Identify Cluster. </para>        </briefdescription>
+        <detaileddescription>
+<para>Responsible for updating the IdentifyTime attribute, and also for determining when identify mode should end.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attribute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored; assumed to point to zcl_identify_time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">rec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value from write request or NULL to update the time when identify mode should end (used by the Identify cluster command).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+See <ref refid="group__zcl_1ga70fa1740c517a1e49c700cba7cf6b339" kindref="member">zcl_attribute_write_fn()</ref> for calling convention. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="86" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="104" bodyend="121"/>
+        <references refid="group__zcl_1gaa2585d779da0ab21273a8d92de9a0ebe" compoundref="zcl_8h" startline="693">zcl_attribute_write_rec_t::flags</references>
+        <references refid="group__zcl_1ga2bb65a6c04a14957000feaa12de9769c" compoundref="zcl_8h" startline="697">ZCL_ATTR_WRITE_FLAG_ASSIGN</references>
+        <references refid="group__zcl_1ga15bf36dadccd7a045bad7d6f0842e25a" compoundref="zigbee__zcl_8c" startline="652" endline="817">zcl_decode_attribute</references>
+        <references refid="group__zcl__identify_1ga467ad1e40ea8475b4e49865436883e94" compoundref="zcl__identify_8c" startline="56">zcl_identify_end</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__identify_1ga7cde47425d0a779f5aff87985ea01951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint_fast8_t</type>
+        <definition>uint_fast8_t _zcl_identify_time_get</definition>
+        <argsstring>(const zcl_attribute_full_t FAR *attribute)</argsstring>
+        <name>_zcl_identify_time_get</name>
+        <param>
+          <type>const <ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>attribute</declname>
+        </param>
+        <briefdescription>
+<para>Function registered to <ref refid="group__zcl__identify_1ga7df877a02f273adc190aa24ad0aff4c9" kindref="member">ZCL_IDENTIFY_ATTR_IDENTIFY_TIME</ref> attribute of Identify Cluster and called to refresh the IdentifyTime attribute. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para>See <ref refid="group__zcl_1gace94cfc3f22379fa08a5b8de8c6977f6" kindref="member">zcl_attribute_update_fn()</ref> for calling convention. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="124" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="134" bodyend="142"/>
+        <references refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" compoundref="platform_8h" startline="399">XBEE_UNUSED_PARAMETER</references>
+        <references refid="group__zcl__identify_1ga95b00d55b861c1ea6033c16794ae818d" compoundref="zcl__identify_8c" startline="65" endline="83">zcl_identify_isactive</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__identify_1ga94a1fe7c8892b55e0ffd3e2795139b1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int zcl_identify_command</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, void FAR *context)</argsstring>
+        <name>zcl_identify_command</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Handler for ZCL Identify Server Commands (Identify, IdentifyQuery). </para>        </briefdescription>
+        <detaileddescription>
+<para>Used in the #ZCL_CLUST_IDENTIFY cluster entry for an endpoint.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>envelope from received message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to attribute list for cluster (typically passed in via endpoint dispatcher)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command was processed, including sending a possible Identify Query Response </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error sending response or processing command </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_identify.c" line="181" column="1" bodyfile="src/zigbee/zcl_identify.c" bodystart="181" bodyend="243"/>
+        <references refid="group__zcl_1ga5226462a41663bc81a5d67c04f18868a" compoundref="zcl_8h" startline="882">zcl_command_t::frame_control</references>
+        <references refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" compoundref="sxa_8h" startline="70">PACKED_STRUCT</references>
+        <references refid="group__zcl_1ga0bbd651dae138e104715e6e2de62084e" compoundref="zcl_8h" startline="261">ZCL_CMD_MATCH</references>
+        <references refid="group__zcl_1gadeb35ab493fffec9ba1c33f658929136" compoundref="zigbee__zcl_8c" startline="1474" endline="1545">zcl_command_build</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__zcl__identify_1ga7df877a02f273adc190aa24ad0aff4c9" prot="public" static="no">
+        <name>ZCL_IDENTIFY_ATTR_IDENTIFY_TIME</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+<para>3.5.2.2, IdentifyTime Attribute </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_identify.h" line="33" column="9" bodyfile="include/zigbee/zcl_identify.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__identify_1ga40368a52613d3ef210919d39a8e5d046" prot="public" static="no">
+        <name>ZCL_IDENTIFY_CMD_IDENTIFY</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>3.5.2.3.1, Identify Command </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_identify.h" line="37" column="9" bodyfile="include/zigbee/zcl_identify.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__identify_1ga47774d9c6e213ee27738493dcf6e3f23" prot="public" static="no">
+        <name>ZCL_IDENTIFY_CMD_QUERY</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>3.5.2.3.2, Identify Query Command </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_identify.h" line="39" column="9" bodyfile="include/zigbee/zcl_identify.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__identify_1ga19fdbf2dca0a6d6fc36021c51d31214c" prot="public" static="no">
+        <name>ZCL_IDENTIFY_CMD_QUERY_RESPONSE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>3.5.2.4.1, Identify Query Response Command </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_identify.h" line="43" column="9" bodyfile="include/zigbee/zcl_identify.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__identify_1gaeae5b3a460629b095247d160235ec586" prot="public" static="no">
+        <name>ZCL_CLUST_ENTRY_IDENTIFY_SERVER</name>
+        <initializer>{ ZCL_CLUST_IDENTIFY,						\
+		&amp;<ref refid="group__zcl__identify_1ga94a1fe7c8892b55e0ffd3e2795139b1d" kindref="member">zcl_identify_command</ref>,					\
+		zcl_identify_attribute_tree,			\
+		<ref refid="group__wpan__aps_1ga9e0a1a0abf5594d8fa5a38b1ca40b3bc" kindref="member">WPAN_CLUST_FLAG_SERVER</ref> }</initializer>
+        <briefdescription>
+<para>Macro to add an Identify Server cluster to an endpoint&apos;s cluster table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_identify.h" line="52" column="9" bodyfile="include/zigbee/zcl_identify.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

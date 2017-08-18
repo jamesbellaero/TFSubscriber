@@ -1,0 +1,105 @@
+\hypertarget{platform__dos_8h}{}\section{include/xbee/platform\+\_\+dos.h File Reference}
+\label{platform__dos_8h}\index{include/xbee/platform\+\_\+dos.\+h@{include/xbee/platform\+\_\+dos.\+h}}
+
+
+Header for D\+OS platform (using Watcom C cross compiler).  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$dos.\+h$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}~\+\_\+\+Packed struct
+\item 
+\#define {\bfseries \+\_\+f\+\_\+memcpy}~memcpy
+\item 
+\#define {\bfseries \+\_\+f\+\_\+memset}~memset
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+}~\char`\"{}\char`\"{}
+\item 
+\#define {\bfseries L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}~1234
+\item 
+\#define {\bfseries B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}~4321
+\item 
+\#define {\bfseries B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}~L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN
+\item 
+\#define {\bfseries F\+AR}
+\item 
+\#define {\bfseries I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~\+\_\+enable()
+\item 
+\#define {\bfseries I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~\+\_\+disable()
+\item 
+\#define {\bfseries X\+S\+T\+\_\+\+I\+N\+I\+T\+\_\+\+OK}~0x0001
+\item 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+DR}~0x01
+\item 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+OE}~0x02
+\item 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+PE}~0x04
+\item 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+FE}~0x08
+\item 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+BI}~0x10
+\item 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+T\+H\+RE}~0x20
+\item 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+T\+E\+MT}~0x40
+\item 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+F\+I\+F\+OE}~0x80
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+D\+E\+L\+TA}~\hyperlink{group__hal_ga735b0974380a73e9d7a12a1f199a5921}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+D\+E\+L\+T\+A\+\_\+1970}
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+M\+S\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}~(1000 / C\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+S\+EC)
+\item 
+\#define {\bfseries W\+P\+A\+N\+\_\+\+M\+A\+X\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+NS}~6
+\item 
+\#define {\bfseries W\+P\+A\+N\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT}~15
+\item 
+\#define {\bfseries gotoxy00}(x,  y)~gotoxy((x)+1, (y)+1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned short {\bfseries uint\+\_\+fast8\+\_\+t}
+\item 
+typedef signed short {\bfseries int\+\_\+fast8\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries gotoxy\+\_\+ansi} (int col, int row)
+\item 
+void {\bfseries clrscr\+\_\+ansi} (void)
+\end{DoxyCompactItemize}
+\subsection*{platform\+\_\+stdint}
+\label{_amgrpd25616584cb4ee40080d217a7b385214}%
+Types typically defined in $<$stdint.\+h$>$, define manually if stdint.\+h is not available on this platform. \begin{DoxyCompactItemize}
+\item 
+typedef signed char \hyperlink{group__hal__dos_ga20c38cc5aac7cc6b0a3c6ab05428436d}{int8\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 8-\/bit signed integer \end{DoxyCompactList}\item 
+typedef unsigned char \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 8-\/bit unsigned integer \end{DoxyCompactList}\item 
+typedef short \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 16-\/bit signed integer \end{DoxyCompactList}\item 
+typedef unsigned short \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 16-\/bit unsigned integer \end{DoxyCompactList}\item 
+typedef long \hyperlink{group__hal__dos_gafd12020da5a235dfcf0c3c748fb5baed}{int32\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 32-\/bit signed integer \end{DoxyCompactList}\item 
+typedef unsigned long \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 32-\/bit unsigned integer \end{DoxyCompactList}\item 
+typedef int \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Variable that can hold 0 or 1, may be an {\ttfamily int} for speed purporses or {\ttfamily uint8\+\_\+t} for size optimization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header for D\+OS platform (using Watcom C cross compiler). 
+
+This file is automatically included by \hyperlink{platform_8h}{xbee/platform.\+h}. 

@@ -1,0 +1,203 @@
+\hypertarget{xbee__serial__hcs08_8c}{}\section{src/hcs08/xbee\+\_\+serial\+\_\+hcs08.c File Reference}
+\label{xbee__serial__hcs08_8c}\index{src/hcs08/xbee\+\_\+serial\+\_\+hcs08.\+c@{src/hcs08/xbee\+\_\+serial\+\_\+hcs08.\+c}}
+
+
+Serial Interface for Programmable X\+Bee Module (Freescale H\+C\+S08 Platform).  
+
+
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/serial.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/cbuf.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries R\+T\+S\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+B\+Y\+T\+ES}~8
+\item 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+OW}(x)~(x)
+\item 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+R\+TS}(x)~(x $<$$<$ 2)
+\item 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+O\+W\+\_\+\+H\+O\+ST}~\+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+OW(1)
+\item 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+O\+W\+\_\+\+E\+M\+B\+ER}~\+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+OW(2)
+\item 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+R\+T\+S\+\_\+\+H\+O\+ST}~\+\_\+\+F\+L\+A\+G\+\_\+\+R\+TS(1)
+\item 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+R\+T\+S\+\_\+\+E\+M\+B\+ER}~\+\_\+\+F\+L\+A\+G\+\_\+\+R\+TS(2)
+\item 
+\#define {\bfseries L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+O\+FF}~(0$\ast$S\+C\+I1\+C1\+\_\+\+L\+O\+O\+P\+S\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+ON}~(1$\ast$S\+C\+I1\+C1\+\_\+\+L\+O\+O\+P\+S\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+O\+F\+F\+\_\+\+D\+U\+R\+I\+N\+G\+\_\+\+W\+A\+IT}~(1$\ast$S\+C\+I1\+C1\+\_\+\+S\+C\+I\+S\+W\+A\+I\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+O\+N\+\_\+\+D\+U\+R\+I\+N\+G\+\_\+\+W\+A\+IT}~(0$\ast$S\+C\+I1\+C1\+\_\+\+S\+C\+I\+S\+W\+A\+I\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+T\+W\+O\+\_\+\+W\+I\+RE}~(0$\ast$S\+C\+I1\+C1\+\_\+\+R\+S\+R\+C\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+O\+N\+E\+\_\+\+W\+I\+RE}~(1$\ast$S\+C\+I1\+C1\+\_\+\+R\+S\+R\+C\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+8\+B\+IT}~(0$\ast$S\+C\+I1\+C1\+\_\+\+M\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+9\+B\+IT}~(1$\ast$S\+C\+I1\+C1\+\_\+\+M\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries W\+A\+K\+E\+U\+P\+\_\+\+I\+D\+L\+E\+\_\+\+L\+I\+NE}~(0$\ast$S\+C\+I1\+C1\+\_\+\+W\+A\+K\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries W\+A\+K\+E\+U\+P\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+M\+A\+RK}~(1$\ast$S\+C\+I1\+C1\+\_\+\+W\+A\+K\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries I\+D\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+A\+F\+T\+E\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+IT}~(0$\ast$S\+C\+I1\+C1\+\_\+\+I\+L\+T\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries I\+D\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+A\+F\+T\+E\+R\+\_\+\+S\+T\+O\+P\+\_\+\+B\+IT}~(1$\ast$S\+C\+I1\+C1\+\_\+\+I\+L\+T\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries P\+A\+R\+I\+T\+Y\+\_\+\+O\+FF}~(0$\ast$S\+C\+I1\+C1\+\_\+\+P\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries P\+A\+R\+I\+T\+Y\+\_\+\+ON}~(1$\ast$S\+C\+I1\+C1\+\_\+\+P\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN}~(0$\ast$S\+C\+I1\+C1\+\_\+\+P\+T\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD}~(1$\ast$S\+C\+I1\+C1\+\_\+\+P\+T\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+O\+FF}~(0$\ast$S\+C\+I1\+C2\+\_\+\+R\+W\+U\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+ON}~(1$\ast$S\+C\+I1\+C2\+\_\+\+R\+W\+U\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+R\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+R\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries T\+X\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+T\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries T\+X\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+T\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries I\+D\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+I\+L\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries I\+D\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+I\+L\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+R\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+R\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+T\+C\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+T\+C\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C3\+\_\+\+P\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C3\+\_\+\+P\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C3\+\_\+\+F\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C3\+\_\+\+F\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+N\+O\+I\+S\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C3\+\_\+\+N\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+N\+O\+I\+S\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C3\+\_\+\+N\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+O\+V\+E\+R\+R\+U\+N\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C3\+\_\+\+O\+R\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+O\+V\+E\+R\+R\+U\+N\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C3\+\_\+\+O\+R\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries T\+X\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+R\+M\+AL}~(0$\ast$S\+C\+I1\+C3\+\_\+\+T\+X\+I\+N\+V\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries T\+X\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+V\+E\+R\+T\+ED}~(1$\ast$S\+C\+I1\+C3\+\_\+\+T\+X\+I\+N\+V\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries O\+N\+E\+\_\+\+W\+I\+R\+E\+\_\+\+R\+X\+\_\+\+M\+O\+DE}~(0$\ast$S\+C\+I1\+C3\+\_\+\+T\+X\+D\+I\+R\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries O\+N\+E\+\_\+\+W\+I\+R\+E\+\_\+\+T\+X\+\_\+\+M\+O\+DE}~(1$\ast$S\+C\+I1\+C3\+\_\+\+T\+X\+D\+I\+R\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+B\+R\+E\+A\+K\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+10\+\_\+\+B\+I\+TS}~(0$\ast$S\+C\+I1\+S2\+\_\+\+L\+B\+K\+D\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+B\+R\+E\+A\+K\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+11\+\_\+\+B\+I\+TS}~(1$\ast$S\+C\+I1\+S2\+\_\+\+L\+B\+K\+D\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries T\+X\+\_\+\+B\+R\+E\+A\+K\+\_\+10\+\_\+\+B\+I\+TS}~(0$\ast$S\+C\+I1\+S2\+\_\+\+B\+R\+K13\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries T\+X\+\_\+\+B\+R\+E\+A\+K\+\_\+13\+\_\+\+B\+I\+TS}~(1$\ast$S\+C\+I1\+S2\+\_\+\+B\+R\+K13\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+I\+D\+L\+E\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+O\+FF}~(0$\ast$S\+C\+I1\+S2\+\_\+\+R\+W\+U\+I\+D\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+I\+D\+L\+E\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+ON}~(1$\ast$S\+C\+I1\+S2\+\_\+\+R\+W\+U\+I\+D\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+V\+E\+R\+T\+ED}~(1$\ast$S\+C\+I1\+S2\+\_\+\+R\+X\+I\+N\+V\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries R\+X\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+R\+M\+AL}~(0$\ast$S\+C\+I1\+S2\+\_\+\+R\+X\+I\+N\+V\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+CK}(ptr)
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+TS}(s)
+\item 
+\#define {\bfseries S\+C\+Ix\+C1\+\_\+\+D\+E\+F\+A\+U\+LT}
+\item 
+\#define {\bfseries S\+C\+Ix\+C3\+\_\+\+D\+E\+F\+A\+U\+LT}
+\item 
+\#define {\bfseries S\+C\+Ix\+S2\+\_\+\+D\+E\+F\+A\+U\+LT}
+\item 
+\#define {\bfseries S\+C\+Ix\+C2\+\_\+\+D\+E\+F\+A\+U\+LT}
+\item 
+\#define {\bfseries \+\_\+\+I\+S\+R\+\_\+\+R\+TS}(port,  pin)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} \hyperlink{group__hal__hcs08_ga9bf21a5b024e4919bbe8b605c8f45351}{xbee\+\_\+ser\+\_\+invalid} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Helper function used by other xbee\+\_\+serial functions to validate the {\itshape serial} parameter. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__hal__hcs08_ga898057d1b7645785e7f3d6256828d039}{xbee\+\_\+ser\+\_\+portname} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns a human-\/readable string describing the serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Transmits {\itshape length} bytes from {\itshape buffer} to the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, int bufsize)
+\begin{DoxyCompactList}\small\item\em Reads up to {\itshape bufsize} bytes from X\+Bee serial port {\itshape serial} and into {\itshape buffer}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga86fea2345efb8bf9424228f0979b1849}{xbee\+\_\+ser\+\_\+putchar} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} ch)
+\begin{DoxyCompactList}\small\item\em Transmits a single character, {\itshape ch}, to the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Reads a single character from the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of bytes of unused space in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of queued bytes in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Flushes (i.\+e., deletes and does not transmit) characters in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of bytes of unused space in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of queued bytes in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Deletes all characters in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gab3c12543a07e0669b672c5cab54b0926}{xbee\+\_\+ser\+\_\+baudrate} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} baudrate)
+\begin{DoxyCompactList}\small\item\em Change the baud rate of X\+Bee serial port {\itshape serial} to {\itshape baudrate} bits/second. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} baudrate)
+\begin{DoxyCompactList}\small\item\em Opens the serial port connected to X\+Bee serial port {\itshape serial} at {\itshape baudrate} bits/second. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Close the serial port attached to X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} enabled)
+\begin{DoxyCompactList}\small\item\em Disable the serial transmit pin and pull it low to send a break to the X\+Bee serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga33229d0d63ff1442f23b0739794d3afb}{xbee\+\_\+ser\+\_\+flowcontrol} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable hardware flow control (C\+T\+S/\+R\+TS) on the serial port for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}{xbee\+\_\+ser\+\_\+set\+\_\+rts} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} asserted)
+\begin{DoxyCompactList}\small\item\em Disable hardware flow control and manually set the R\+TS (ready to send) pin on the X\+Bee device\textquotesingle{}s serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga894f6fadc890b5ba5ce32338f0acd217}{xbee\+\_\+ser\+\_\+get\+\_\+cts} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Read the status of the /\+C\+TS (clear to send) pin on the serial port connected to X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__hcs08_gac4c834cc0ad3ee43af562f658833a6d5}{xbee\+\_\+cbuf\+\_\+putch} (E\+M\+B\+E\+R\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T.\+rxbuf, S\+C\+I2D)
+\begin{DoxyCompactList}\small\item\em This is the I\+SR for receiving data on the S\+C\+I2 serial port, which is connected to the Ember radio on the Programmable X\+Bee. \end{DoxyCompactList}\item 
+{\bfseries \+\_\+\+I\+S\+R\+\_\+\+R\+TS} (E\+M\+B\+ER, P\+T\+C\+D\+\_\+\+P\+T\+C\+D1)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} {\bfseries H\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+RT} = \{ 0, S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+S\+C\+I1 \}
+\item 
+\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} {\bfseries E\+M\+B\+E\+R\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+RT} = \{ 0, S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+S\+C\+I2 \}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries \+\_\+flags} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Serial Interface for Programmable X\+Bee Module (Freescale H\+C\+S08 Platform). 
+

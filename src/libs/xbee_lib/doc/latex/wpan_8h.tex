@@ -1,0 +1,193 @@
+\hypertarget{wpan_8h}{}\section{include/xbee/wpan.h File Reference}
+\label{wpan_8h}\index{include/xbee/wpan.\+h@{include/xbee/wpan.\+h}}
+{\ttfamily \#include \char`\"{}xbee/device.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wpan/types.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+R\+X\+\_\+\+E\+X\+P\+L\+I\+C\+IT}~\{ \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a8f80b5fa338b8bf34888ffcbfd260a54}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+X\+P\+L\+I\+C\+IT}, 0, \hyperlink{group__xbee__wpan_ga8cb1973677412a2c5627a77009a8f283}{\+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit}, N\+U\+LL \}
+\item 
+\#define \hyperlink{group__xbee__wpan_ga4f363736032969f338cfd4e335e9be50}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+A\+CK}~0x01
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Disable A\+CK \mbox{[}Zig\+Bee and Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__wpan_ga6a2846b0ca6b15ad7bdd7e4503fe5c30}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+D\+I\+SC}~0x02
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Disable Route Discovery \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__wpan_ga8e8ed1a92da23af9d12c15a72a37795c}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+U\+N\+I\+C\+A\+S\+T\+\_\+\+N\+A\+CK}~0x04
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Enable Unicast N\+A\+CK messages \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__wpan_ga44452074ba3205f9860d4d16e339aba1}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+U\+N\+I\+C\+A\+S\+T\+\_\+\+T\+R\+A\+CE}~0x08
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Enable Unicast Trace Route messages \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__wpan_ga0a9bf2b58851b7d8db5359aefef3cfe0}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+A\+P\+S\+\_\+\+E\+N\+C\+R\+Y\+PT}~0x20
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Enable A\+PS encryption (if EE=1) \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__wpan_ga60a1c57a93cd57570fb73bae97535fcb}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+T\+I\+M\+E\+O\+UT}~0x40
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Use extended timeout for this destination. \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__wpan_gab96b311d46a70649710385c64dde72f2}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+M\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+M\+U\+L\+T\+I\+P\+O\+I\+NT}~(1$<$$<$6)
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Point-\/\+Multipoint \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__wpan_ga53517f5071a4aa5943b52a9c3574a77b}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+P\+E\+A\+T\+ER}~(2$<$$<$6)
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Repeater mode (directed broadcast) \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__wpan_ga14d141b74c47cb6b0dfbd3563d4b097c}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+G\+I\+M\+E\+SH}~(3$<$$<$6)
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Digi\+Mesh (not available on 10k product) \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a86953d9ad40bc07c889aac0afcdac965}\label{wpan_8h_a86953d9ad40bc07c889aac0afcdac965}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+X\+\_\+\+S\+T\+A\+T\+US}~\{ \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9aab7dc62b855e81a5be4cd5515e5f75bb}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+T\+A\+T\+US}, 0, \hyperlink{group__xbee__wpan_ga56d68291ceee384fbd8a5833eb91182c}{\+\_\+xbee\+\_\+handle\+\_\+transmit\+\_\+status}, N\+U\+LL \}
+\item 
+\mbox{\Hypertarget{wpan_8h_a607cf0696a8bc634ee8993f45200297b}\label{wpan_8h_a607cf0696a8bc634ee8993f45200297b}} 
+\#define \hyperlink{wpan_8h_a607cf0696a8bc634ee8993f45200297b}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+E\+B\+UG}~\{ \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9aab7dc62b855e81a5be4cd5515e5f75bb}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+T\+A\+T\+US}, 0, \hyperlink{group__xbee__wpan_gaa750c530910a7d8324ba5579ee7fcb57}{xbee\+\_\+frame\+\_\+dump\+\_\+transmit\+\_\+status}, N\+U\+LL \}
+\begin{DoxyCompactList}\small\item\em Add this macro to the list of X\+Bee frame handlers to have transmit status frames dumped to S\+T\+D\+O\+UT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__wpan_gad36b64f2e729281d8b7704f6e9906e82}{xbee\+\_\+frame\+\_\+receive\+\_\+explicit\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Format of X\+Bee A\+PI frame type 0x91 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a8f80b5fa338b8bf34888ffcbfd260a54}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+X\+P\+L\+I\+C\+IT}); received from X\+Bee by host. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__wpan_ga02e02911588cbafc0befb9b9da8961e6}{xbee\+\_\+header\+\_\+transmit\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Format of X\+Bee A\+PI frame type 0x10 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a5215c258e8db6c292b9e52ca26011ed1}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+IT}); sent from host to X\+Bee. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__wpan_gac2df4f67492506916726d8002ca5f2bd}{xbee\+\_\+header\+\_\+transmit\+\_\+explicit\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Format of X\+Bee A\+PI frame type 0x11 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9aa673474f9f3597929def38ad4cf7d63e}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+IT}); sent from host to X\+Bee. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries xbee\+\_\+frame\+\_\+transmit\+\_\+status\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+xbee\+\_\+wpan\+\_\+debug int \hyperlink{group__xbee__wpan_ga6b3d55dddb48e31d3f975f2afb4c9977}{xbee\+\_\+wpan\+\_\+init} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const \hyperlink{structwpan__endpoint__table__entry__t}{wpan\+\_\+endpoint\+\_\+table\+\_\+entry\+\_\+t} $\ast$ep\+\_\+table)
+\begin{DoxyCompactList}\small\item\em Configure \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} for A\+P\+S-\/layer (endpoint/cluster) networking. \end{DoxyCompactList}\item 
+xbee\+\_\+wpan\+\_\+debug int \hyperlink{group__xbee__wpan_ga8cb1973677412a2c5627a77009a8f283}{\+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Process X\+Bee \char`\"{}\+Receive Explicit\char`\"{} frames (type 0x91) and hand off to \hyperlink{group__wpan__aps_gae84eafd10f51de6cdac4732b8948606d}{wpan\+\_\+envelope\+\_\+dispatch()} for further processing. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__wpan_ga56d68291ceee384fbd8a5833eb91182c}{\+\_\+xbee\+\_\+handle\+\_\+transmit\+\_\+status} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$frame, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\item 
+int \hyperlink{group__xbee__wpan_gaa750c530910a7d8324ba5579ee7fcb57}{xbee\+\_\+frame\+\_\+dump\+\_\+transmit\+\_\+status} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$frame, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Frame handler for 0x8B (X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+T\+A\+T\+US) frames -- dumps transmit status to S\+T\+D\+O\+UT for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal_ga336bff4f4a6012aacc4468132bbd3d7f}{X\+B\+E\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS} typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__wpan_ga0d1e37574952bdf60cda7f1351b41a9e}{xbee\+\_\+frame\+\_\+receive\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Format of X\+Bee A\+PI frame type 0x90 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9ab6fa3650abecfac4645c5d4ccdf857fd}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+C\+E\+I\+VE}); received from X\+Bee by host. \end{DoxyCompactList}\item 
+\hyperlink{unionaddr64}{addr64} {\bfseries ieee\+\_\+address}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries network\+\_\+address\+\_\+be}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__wpan_gaace3d640c8d449b8db1162993d259d3f}{options}
+\begin{DoxyCompactList}\small\item\em bitfield, see X\+B\+E\+E\+\_\+\+R\+X\+\_\+\+O\+P\+T\+\_\+xxx macros \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__wpan_gae6f5e79770e3e599bf8154eac1a2f3fe}{payload} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em multi-\/byte payload \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries source\+\_\+endpoint}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries dest\+\_\+endpoint}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries cluster\+\_\+id\+\_\+be}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries profile\+\_\+id\+\_\+be}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries frame\+\_\+id}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__wpan_ga490a3948b7a9e6ded7f35e810366f85f}{broadcast\+\_\+radius}
+\begin{DoxyCompactList}\small\item\em set to 0 for maximum hop value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a458ee314eb40ab7e0c913a036333cc0d}\label{wpan_8h_a458ee314eb40ab7e0c913a036333cc0d}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries retries}
+\item 
+\mbox{\Hypertarget{wpan_8h_ac5b0f479384a1e83158db3fa86b526ef}\label{wpan_8h_ac5b0f479384a1e83158db3fa86b526ef}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries delivery}
+\item 
+\mbox{\Hypertarget{wpan_8h_aee499d1d523e8046d1ad2e065692fd67}\label{wpan_8h_aee499d1d523e8046d1ad2e065692fd67}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries discovery}
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+Values for {\ttfamily delivery} member of xbee\+\_\+frame\+\_\+transmit\+\_\+status\+\_\+t. \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{wpan_8h_a2257390380f57aaa4dd3ed684b384bf1}\label{wpan_8h_a2257390380f57aaa4dd3ed684b384bf1}} 
+\#define \hyperlink{wpan_8h_a2257390380f57aaa4dd3ed684b384bf1}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+U\+C\+C\+E\+SS}~0x00
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Success \mbox{[}Zig\+Bee, Digi\+Mesh, Wi-\/\+Fi\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_ae3f6fa50b5b2d7e74572b98388a9955d}\label{wpan_8h_ae3f6fa50b5b2d7e74572b98388a9955d}} 
+\#define \hyperlink{wpan_8h_ae3f6fa50b5b2d7e74572b98388a9955d}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+M\+A\+C\+\_\+\+A\+C\+K\+\_\+\+F\+A\+IL}~0x01
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: M\+AC A\+CK Failure \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a30289cee3e38221b363e27de5b72c5db}\label{wpan_8h_a30289cee3e38221b363e27de5b72c5db}} 
+\#define \hyperlink{wpan_8h_a30289cee3e38221b363e27de5b72c5db}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+C\+C\+A\+\_\+\+F\+A\+IL}~0x02
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: C\+CA Failure \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a8063939572d0cbbf4848c02d0dbaf391}\label{wpan_8h_a8063939572d0cbbf4848c02d0dbaf391}} 
+\#define \hyperlink{wpan_8h_a8063939572d0cbbf4848c02d0dbaf391}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+L\+B\+T\+\_\+\+F\+A\+IL}~0x02
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: L\+BT Failure \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a11d2eebb419eec21e8fdc68e7c634eff}\label{wpan_8h_a11d2eebb419eec21e8fdc68e7c634eff}} 
+\#define \hyperlink{wpan_8h_a11d2eebb419eec21e8fdc68e7c634eff}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+N\+O\+\_\+\+S\+P\+E\+C\+T\+R\+UM}~0x03
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: No Spectrum Available \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_ac7bef06a40ca407a127fe3a6780f4eff}\label{wpan_8h_ac7bef06a40ca407a127fe3a6780f4eff}} 
+\#define \hyperlink{wpan_8h_ac7bef06a40ca407a127fe3a6780f4eff}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+T\+A\+C\+K\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+DY}~0x03
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Transmission purged; stack not ready \mbox{[}Wi-\/\+Fi\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a2a25c017cf3fffa923acc908f66b9f61}\label{wpan_8h_a2a25c017cf3fffa923acc908f66b9f61}} 
+\#define \hyperlink{wpan_8h_a2a25c017cf3fffa923acc908f66b9f61}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+E\+R\+R\+OR}~0x04
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Physical error with transceiver \mbox{[}Wi-\/\+Fi\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_afb6c5e8e611fee17eeccfdbd4f20d83b}\label{wpan_8h_afb6c5e8e611fee17eeccfdbd4f20d83b}} 
+\#define \hyperlink{wpan_8h_afb6c5e8e611fee17eeccfdbd4f20d83b}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+B\+A\+D\+\_\+\+D\+E\+S\+T\+\_\+\+EP}~0x15
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Invalid Destination Endpoint \mbox{[}Zig\+Bee, Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a6a2562768c6d4d459971c489d35e9d48}\label{wpan_8h_a6a2562768c6d4d459971c489d35e9d48}} 
+\#define \hyperlink{wpan_8h_a6a2562768c6d4d459971c489d35e9d48}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+N\+O\+\_\+\+B\+U\+F\+F\+E\+RS}~0x18
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: No Buffers \mbox{[}Smart Energy\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a9b48994214bd5c84d684945d87136a2f}\label{wpan_8h_a9b48994214bd5c84d684945d87136a2f}} 
+\#define \hyperlink{wpan_8h_a9b48994214bd5c84d684945d87136a2f}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+N\+E\+T\+\_\+\+A\+C\+K\+\_\+\+F\+A\+IL}~0x21
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Network A\+CK Failure \mbox{[}Zig\+Bee, Digi\+Mesh, Wi-\/\+Fi\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a13b8d0d4ddd48f9c3abf15dbc0dfaf49}\label{wpan_8h_a13b8d0d4ddd48f9c3abf15dbc0dfaf49}} 
+\#define \hyperlink{wpan_8h_a13b8d0d4ddd48f9c3abf15dbc0dfaf49}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+N\+O\+T\+\_\+\+J\+O\+I\+N\+ED}~0x22
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Not Joined to Network \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_ad814cff0e075fa651eafec26fd480781}\label{wpan_8h_ad814cff0e075fa651eafec26fd480781}} 
+\#define \hyperlink{wpan_8h_ad814cff0e075fa651eafec26fd480781}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+E\+L\+F\+\_\+\+A\+D\+D\+R\+E\+S\+S\+ED}~0x23
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Self-\/addressed \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a23d5282f76b1d38d001b22f49e3b9412}\label{wpan_8h_a23d5282f76b1d38d001b22f49e3b9412}} 
+\#define \hyperlink{wpan_8h_a23d5282f76b1d38d001b22f49e3b9412}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}~0x24
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Address Not Found \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a589a22ef272d7cb6145329a5f47c69da}\label{wpan_8h_a589a22ef272d7cb6145329a5f47c69da}} 
+\#define \hyperlink{wpan_8h_a589a22ef272d7cb6145329a5f47c69da}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+R\+O\+U\+T\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}~0x25
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Route Not Found \mbox{[}Zig\+Bee, Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a331fa87675665567009a0f9182e3f744}\label{wpan_8h_a331fa87675665567009a0f9182e3f744}} 
+\#define \hyperlink{wpan_8h_a331fa87675665567009a0f9182e3f744}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+N\+O\+T\+\_\+\+H\+E\+A\+RD}~0x26
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Relay of Broadcast not heard \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_af18152575dbfceea83fafd8d06d30c27}\label{wpan_8h_af18152575dbfceea83fafd8d06d30c27}} 
+\#define \hyperlink{wpan_8h_af18152575dbfceea83fafd8d06d30c27}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+B\+I\+N\+D\+I\+N\+G\+\_\+\+I\+N\+D\+EX}~0x2B
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Invalid Binding Table Index \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a6afdfecc2f2756dcee7b0caa15956966}\label{wpan_8h_a6afdfecc2f2756dcee7b0caa15956966}} 
+\#define \hyperlink{wpan_8h_a6afdfecc2f2756dcee7b0caa15956966}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+EP}~0x2C
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Invalid Endpoint \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a0d198486a767b96c1fedc9423e2f0c22}\label{wpan_8h_a0d198486a767b96c1fedc9423e2f0c22}} 
+\#define \hyperlink{wpan_8h_a0d198486a767b96c1fedc9423e2f0c22}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+A\+PS}~0x2D
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Attempted Broadcast with A\+PS encryption \mbox{[}Smart Energy\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a6520f40733b8b5ad8f8458122bb4a79b}\label{wpan_8h_a6520f40733b8b5ad8f8458122bb4a79b}} 
+\#define \hyperlink{wpan_8h_a6520f40733b8b5ad8f8458122bb4a79b}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}~0x2E
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Attempted Unicast with A\+PS encryption but EE=0 \mbox{[}Smart Energy\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a37233b97f90614d737206cb7479e8276}\label{wpan_8h_a37233b97f90614d737206cb7479e8276}} 
+\#define \hyperlink{wpan_8h_a37233b97f90614d737206cb7479e8276}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+E\+R\+R\+OR}~0x32
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Resource error (lack of buffers, timers, etc.) \mbox{[}Zig\+Bee, Wi-\/\+Fi\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a539c4bc8936921fdc045eb4ae6f54afe}\label{wpan_8h_a539c4bc8936921fdc045eb4ae6f54afe}} 
+\#define \hyperlink{wpan_8h_a539c4bc8936921fdc045eb4ae6f54afe}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+T\+O\+O\+\_\+\+B\+IG}~0x74
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Data payload too large \mbox{[}Zig\+Bee, Wi-\/\+Fi\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a1f50fd46e430a0f3f67ca495e11c8311}\label{wpan_8h_a1f50fd46e430a0f3f67ca495e11c8311}} 
+\#define \hyperlink{wpan_8h_a1f50fd46e430a0f3f67ca495e11c8311}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+N\+O\+T\+\_\+\+R\+EQ}~0x75
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Indirect message unrequested \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a481981826e32d177f471f32cea433c1d}\label{wpan_8h_a481981826e32d177f471f32cea433c1d}} 
+\#define \hyperlink{wpan_8h_a481981826e32d177f471f32cea433c1d}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+C\+R\+E\+A\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED}~0x76
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Failure creating client socket \mbox{[}Wi-\/\+Fi\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a23181da7976eb273e144cf917b6368b1}\label{wpan_8h_a23181da7976eb273e144cf917b6368b1}} 
+\#define \hyperlink{wpan_8h_a23181da7976eb273e144cf917b6368b1}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+E\+L\+I\+V\+E\+R\+Y\+\_\+\+K\+E\+Y\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+ED}~0x\+BB
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Delivery Status\+: Key not authorized \mbox{[}Smart Energy\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+Values for {\ttfamily discovery} member of xbee\+\_\+frame\+\_\+transmit\+\_\+status\+\_\+t. \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{wpan_8h_a407efbf85c359a336a6fe28df9e81a63}\label{wpan_8h_a407efbf85c359a336a6fe28df9e81a63}} 
+\#define \hyperlink{wpan_8h_a407efbf85c359a336a6fe28df9e81a63}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+Y\+\_\+\+N\+O\+NE}~0x00
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Discovery Status\+: No Discovery Overhead \mbox{[}Zig\+Bee, Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_aeb9750e55371082088e83350d0714db3}\label{wpan_8h_aeb9750e55371082088e83350d0714db3}} 
+\#define \hyperlink{wpan_8h_aeb9750e55371082088e83350d0714db3}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+Y\+\_\+\+A\+D\+D\+R\+E\+SS}~0x01
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Discovery Status\+: Address Discovery \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a89bf843d33f50380ad6b52448ece4406}\label{wpan_8h_a89bf843d33f50380ad6b52448ece4406}} 
+\#define \hyperlink{wpan_8h_a89bf843d33f50380ad6b52448ece4406}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+Y\+\_\+\+R\+O\+U\+TE}~0x02
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Discovery Status\+: Route Discovery \mbox{[}Zig\+Bee, Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{wpan_8h_a8232b3130b56e88e9743b00f5a24223a}\label{wpan_8h_a8232b3130b56e88e9743b00f5a24223a}} 
+\#define \hyperlink{wpan_8h_a8232b3130b56e88e9743b00f5a24223a}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+Y\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+T\+I\+M\+E\+O\+UT}~0x40
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Discovery Status\+: Extended Timeout Discovery \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{wpan_8h_aa528a8527b5a31664fb204151f598df5}\label{wpan_8h_aa528a8527b5a31664fb204151f598df5}} 
+\index{wpan.\+h@{wpan.\+h}!xbee\+\_\+frame\+\_\+transmit\+\_\+status\+\_\+t@{xbee\+\_\+frame\+\_\+transmit\+\_\+status\+\_\+t}}
+\index{xbee\+\_\+frame\+\_\+transmit\+\_\+status\+\_\+t@{xbee\+\_\+frame\+\_\+transmit\+\_\+status\+\_\+t}!wpan.\+h@{wpan.\+h}}
+\subsubsection{\texorpdfstring{xbee\+\_\+frame\+\_\+transmit\+\_\+status\+\_\+t}{xbee\_frame\_transmit\_status\_t}}
+{\footnotesize\ttfamily xbee\+\_\+frame\+\_\+transmit\+\_\+status\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}       frame\_type
+\end{DoxyCode}

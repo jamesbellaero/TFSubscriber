@@ -1,0 +1,1059 @@
+\hypertarget{group__hal__dos}{}\section{D\+O\+S16/\+Open\+Watcom}
+\label{group__hal__dos}\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{xbee__platform__dos_8c}{xbee\+\_\+platform\+\_\+dos.\+c}
+\begin{DoxyCompactList}\small\item\em Platform-\/specific functions for use by the X\+Bee Driver on D\+OS target. \end{DoxyCompactList}\item 
+file \hyperlink{xbee__serial__dos_8c}{xbee\+\_\+serial\+\_\+dos.\+c}
+\begin{DoxyCompactList}\small\item\em Serial Interface for X\+Bee Module (D\+OS Platform) \end{DoxyCompactList}\item 
+file \hyperlink{platform__dos_8h}{platform\+\_\+dos.\+h}
+\begin{DoxyCompactList}\small\item\em Header for D\+OS platform (using Watcom C cross compiler). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga029adc5ad3f556e4c5671b21529c0dd1}\label{group__hal__dos_ga029adc5ad3f556e4c5671b21529c0dd1}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+R\+E\+A\+D\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+IT}~0
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaa3a6d3307bf92060ea7c2664dc9e7b6b}\label{group__hal__dos_gaa3a6d3307bf92060ea7c2664dc9e7b6b}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+R\+E\+A\+D\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T\+\_\+\+L\+I\+NE}~1
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga5eb45373870b820af1c6c5d2918ee9c1}\label{group__hal__dos_ga5eb45373870b820af1c6c5d2918ee9c1}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+R\+E\+A\+D\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+L\+I\+NE}~2
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga3eb7d5a767dae7774aa2b4be28e20a7e}\label{group__hal__dos_ga3eb7d5a767dae7774aa2b4be28e20a7e}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+R\+BR}~0
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga7a676f075475e46d27eb878977b867ec}\label{group__hal__dos_ga7a676f075475e46d27eb878977b867ec}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+T\+HR}~0
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga7ff21e0cfc73a2db80c3907c5cac5a61}\label{group__hal__dos_ga7ff21e0cfc73a2db80c3907c5cac5a61}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+D\+LL}~0
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaaf7aaa372e86b3aa99e6c78242be2722}\label{group__hal__dos_gaaf7aaa372e86b3aa99e6c78242be2722}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+I\+ER}~1
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga63f95172026aa533407e357e73b04551}\label{group__hal__dos_ga63f95172026aa533407e357e73b04551}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+D\+LM}~1
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga16add7e6b9f91a6698c5910704111b68}\label{group__hal__dos_ga16add7e6b9f91a6698c5910704111b68}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+I\+IR}~2
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga220a678f91ca8244b30fe813200c26c1}\label{group__hal__dos_ga220a678f91ca8244b30fe813200c26c1}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+F\+CR}~2
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga36c30861e332468c7f1998648e706740}\label{group__hal__dos_ga36c30861e332468c7f1998648e706740}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+L\+CR}~3
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga8ef39bc0942ddd0411d87001d12224f4}\label{group__hal__dos_ga8ef39bc0942ddd0411d87001d12224f4}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+M\+CR}~4
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga0f8ac527073d763bac90daba987361c6}\label{group__hal__dos_ga0f8ac527073d763bac90daba987361c6}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+L\+SR}~5
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga71067c48bdde7dc6c5d0a1c56746e776}\label{group__hal__dos_ga71067c48bdde7dc6c5d0a1c56746e776}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+M\+SR}~6
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga0aca402a154875f36d38e4ebc5c8f043}\label{group__hal__dos_ga0aca402a154875f36d38e4ebc5c8f043}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+S\+CR}~7
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga2c43b3d54061de2d1a40c11a0dc36d99}\label{group__hal__dos_ga2c43b3d54061de2d1a40c11a0dc36d99}} 
+\#define {\bfseries I\+E\+R\+\_\+\+N\+O\+NE}~0
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga06339c8fac453ce9078d90d59d1d5833}\label{group__hal__dos_ga06339c8fac453ce9078d90d59d1d5833}} 
+\#define {\bfseries I\+E\+R\+\_\+\+R\+X\+\_\+\+D\+A\+TA}~(1$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga3b5355c5845bf4e5f9900dae4977fc65}\label{group__hal__dos_ga3b5355c5845bf4e5f9900dae4977fc65}} 
+\#define {\bfseries I\+E\+R\+\_\+\+T\+X\+\_\+\+E\+M\+P\+TY}~(1$<$$<$1)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga8fdda855b9a7ec12dccdb44f0e985af5}\label{group__hal__dos_ga8fdda855b9a7ec12dccdb44f0e985af5}} 
+\#define {\bfseries I\+E\+R\+\_\+\+L\+S\+R\+\_\+\+C\+H\+A\+N\+GE}~(1$<$$<$2)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaf722d4c4e6617d62b6a2ea4f8fcdc7a3}\label{group__hal__dos_gaf722d4c4e6617d62b6a2ea4f8fcdc7a3}} 
+\#define {\bfseries I\+E\+R\+\_\+\+M\+S\+R\+\_\+\+C\+H\+A\+N\+GE}~(1$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga90f46b37cc5f1208e83a0a027e83f2c8}\label{group__hal__dos_ga90f46b37cc5f1208e83a0a027e83f2c8}} 
+\#define {\bfseries I\+E\+R\+\_\+\+D\+E\+F\+A\+U\+LT}~(I\+E\+R\+\_\+\+R\+X\+\_\+\+D\+A\+TA $\vert$ I\+E\+R\+\_\+\+T\+X\+\_\+\+E\+M\+P\+TY $\vert$ I\+E\+R\+\_\+\+L\+S\+R\+\_\+\+C\+H\+A\+N\+GE)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga50ff8e2789f5f8485ad903fa36cb5ff4}\label{group__hal__dos_ga50ff8e2789f5f8485ad903fa36cb5ff4}} 
+\#define {\bfseries F\+C\+R\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+F\+I\+F\+OS}~(0$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gacbbf96e0ad7b0c0ce83ded2a69b7edd6}\label{group__hal__dos_gacbbf96e0ad7b0c0ce83ded2a69b7edd6}} 
+\#define {\bfseries F\+C\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+F\+I\+F\+OS}~(1$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaab7aea2b0a8ad9fbaf3e59d3f069c38c}\label{group__hal__dos_gaab7aea2b0a8ad9fbaf3e59d3f069c38c}} 
+\#define {\bfseries F\+C\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+R\+X\+\_\+\+F\+I\+FO}~(1$<$$<$1)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga37c91cd823b315b67cb9d1bbf902feb4}\label{group__hal__dos_ga37c91cd823b315b67cb9d1bbf902feb4}} 
+\#define {\bfseries F\+C\+R\+\_\+\+C\+L\+E\+A\+R\+\_\+\+T\+X\+\_\+\+F\+I\+FO}~(1$<$$<$2)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gae6161db9bf7143fe70cf25f70998c9c0}\label{group__hal__dos_gae6161db9bf7143fe70cf25f70998c9c0}} 
+\#define {\bfseries F\+C\+R\+\_\+\+D\+M\+A\+\_\+\+M\+O\+D\+E\+\_\+0}~(0$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gac313793a646e3df0162722cb7ae49ef1}\label{group__hal__dos_gac313793a646e3df0162722cb7ae49ef1}} 
+\#define {\bfseries F\+C\+R\+\_\+\+D\+M\+A\+\_\+\+M\+O\+D\+E\+\_\+1}~(1$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gafc8e8e20ec7621118f93a5bf7bc81c4b}\label{group__hal__dos_gafc8e8e20ec7621118f93a5bf7bc81c4b}} 
+\#define {\bfseries F\+C\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+64\+B\+Y\+TE}~(1$<$$<$5)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gafb61755694cecd05881690c0c3f3654f}\label{group__hal__dos_gafb61755694cecd05881690c0c3f3654f}} 
+\#define {\bfseries F\+C\+R\+\_\+\+I\+N\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+1\+B\+Y\+TE}~(0$<$$<$6)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaa16e7c8893fa44bb53381f93cbc2ba27}\label{group__hal__dos_gaa16e7c8893fa44bb53381f93cbc2ba27}} 
+\#define {\bfseries F\+C\+R\+\_\+\+I\+N\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+4\+B\+Y\+TE}~(1$<$$<$6)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gabeabe9b8e7dd748b99ffa6472fe0b3ef}\label{group__hal__dos_gabeabe9b8e7dd748b99ffa6472fe0b3ef}} 
+\#define {\bfseries F\+C\+R\+\_\+\+I\+N\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+8\+B\+Y\+TE}~(2$<$$<$6)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaed94cd04e976b03515a43d6b8cbf805d}\label{group__hal__dos_gaed94cd04e976b03515a43d6b8cbf805d}} 
+\#define {\bfseries F\+C\+R\+\_\+\+I\+N\+T\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+14\+B\+Y\+TE}~(3$<$$<$6)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga733e75579da0032be20c7fd6ac33944e}\label{group__hal__dos_ga733e75579da0032be20c7fd6ac33944e}} 
+\#define {\bfseries F\+C\+R\+\_\+\+D\+E\+F\+A\+U\+LT}~(F\+C\+R\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+F\+I\+F\+OS $\vert$ F\+C\+R\+\_\+\+D\+M\+A\+\_\+\+M\+O\+D\+E\+\_\+0)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga4f14e7d3fd79b40ca1405245e0242f3b}\label{group__hal__dos_ga4f14e7d3fd79b40ca1405245e0242f3b}} 
+\#define {\bfseries L\+C\+R\+\_\+5\+B\+IT}~(0$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga28e5afbb0dd71482c103d76ba8ccdda6}\label{group__hal__dos_ga28e5afbb0dd71482c103d76ba8ccdda6}} 
+\#define {\bfseries L\+C\+R\+\_\+6\+B\+IT}~(1$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga9578b66996a3790b53955c9a42ef43ab}\label{group__hal__dos_ga9578b66996a3790b53955c9a42ef43ab}} 
+\#define {\bfseries L\+C\+R\+\_\+7\+B\+IT}~(2$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga11849794cd90dedfc1d211cf948b0a3f}\label{group__hal__dos_ga11849794cd90dedfc1d211cf948b0a3f}} 
+\#define {\bfseries L\+C\+R\+\_\+8\+B\+IT}~(3$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga766df9edd07ffee6d4c425be00765c14}\label{group__hal__dos_ga766df9edd07ffee6d4c425be00765c14}} 
+\#define {\bfseries L\+C\+R\+\_\+1\+S\+T\+OP}~(0$<$$<$2)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gace2deeea42a791b868d540cf107da914}\label{group__hal__dos_gace2deeea42a791b868d540cf107da914}} 
+\#define {\bfseries L\+C\+R\+\_\+2\+S\+T\+OP}~(1$<$$<$2)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga0a9c31abffbc2246670b81b11937db50}\label{group__hal__dos_ga0a9c31abffbc2246670b81b11937db50}} 
+\#define {\bfseries L\+C\+R\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE}~(0$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga8153311f90845501a4dd0befc8e21574}\label{group__hal__dos_ga8153311f90845501a4dd0befc8e21574}} 
+\#define {\bfseries L\+C\+R\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD}~(1$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gacda2ab112fb4dbffec4246609d3c1345}\label{group__hal__dos_gacda2ab112fb4dbffec4246609d3c1345}} 
+\#define {\bfseries L\+C\+R\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN}~(3$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga25d8154ba512821b3da064c25f5eae42}\label{group__hal__dos_ga25d8154ba512821b3da064c25f5eae42}} 
+\#define {\bfseries L\+C\+R\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+M\+A\+RK}~(5$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gad37b540b9daa8a535548dff47ef92f72}\label{group__hal__dos_gad37b540b9daa8a535548dff47ef92f72}} 
+\#define {\bfseries L\+C\+R\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+S\+P\+A\+CE}~(7$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga7c9aedd8591754a50e93d26d93b72fc8}\label{group__hal__dos_ga7c9aedd8591754a50e93d26d93b72fc8}} 
+\#define {\bfseries L\+C\+R\+\_\+\+B\+R\+E\+A\+K\+\_\+\+E\+N\+A\+B\+LE}~(1$<$$<$6)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga4357ee6d0bdd480b29fa7616d7571f45}\label{group__hal__dos_ga4357ee6d0bdd480b29fa7616d7571f45}} 
+\#define {\bfseries L\+C\+R\+\_\+\+D\+I\+V\+I\+S\+O\+R\+\_\+\+L\+A\+T\+CH}~(1$<$$<$7)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaf3256e1cdd81ee02b9b694c3e45f8d33}\label{group__hal__dos_gaf3256e1cdd81ee02b9b694c3e45f8d33}} 
+\#define {\bfseries L\+C\+R\+\_\+\+D\+E\+F\+A\+U\+LT}~(L\+C\+R\+\_\+8\+B\+IT $\vert$ L\+C\+R\+\_\+1\+S\+T\+OP $\vert$ L\+C\+R\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+NE)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gad313b1aec7d507ae1ca1e9c372d52454}\label{group__hal__dos_gad313b1aec7d507ae1ca1e9c372d52454}} 
+\#define {\bfseries M\+C\+R\+\_\+\+N\+O\+NE}~0
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga213d57e849bb18388f24d65874af6325}\label{group__hal__dos_ga213d57e849bb18388f24d65874af6325}} 
+\#define {\bfseries M\+C\+R\+\_\+\+D\+TR}~(1$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaed27b96a2b261695692cfdec8bf8b1c5}\label{group__hal__dos_gaed27b96a2b261695692cfdec8bf8b1c5}} 
+\#define {\bfseries M\+C\+R\+\_\+\+R\+TS}~(1$<$$<$1)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga2628a4fa8d48830ccea7fab2ef08c5d9}\label{group__hal__dos_ga2628a4fa8d48830ccea7fab2ef08c5d9}} 
+\#define {\bfseries M\+C\+R\+\_\+\+O\+U\+T1}~(1$<$$<$2)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga3469b6cce183c5fee697856acc404952}\label{group__hal__dos_ga3469b6cce183c5fee697856acc404952}} 
+\#define {\bfseries M\+C\+R\+\_\+\+O\+U\+T2}~(1$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga95592ff726b61e0780b0d4c7c7c26fcb}\label{group__hal__dos_ga95592ff726b61e0780b0d4c7c7c26fcb}} 
+\#define {\bfseries M\+C\+R\+\_\+\+L\+O\+O\+P\+B\+A\+CK}~(1$<$$<$4)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gadaf99d8ba6dea7d12c2551f9ba0d000a}\label{group__hal__dos_gadaf99d8ba6dea7d12c2551f9ba0d000a}} 
+\#define {\bfseries M\+C\+R\+\_\+\+A\+U\+T\+O\+F\+L\+OW}~(1$<$$<$5)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga3041367c1e3b71ea438e88b68d90d725}\label{group__hal__dos_ga3041367c1e3b71ea438e88b68d90d725}} 
+\#define {\bfseries M\+C\+R\+\_\+\+D\+E\+F\+A\+U\+LT}~(M\+C\+R\+\_\+\+D\+TR $\vert$ M\+C\+R\+\_\+\+R\+TS $\vert$ M\+C\+R\+\_\+\+O\+U\+T2)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaf5024a0b85987ce1b19e46609a4023c6}\label{group__hal__dos_gaf5024a0b85987ce1b19e46609a4023c6}} 
+\#define {\bfseries M\+S\+R\+\_\+\+C\+T\+S\+\_\+\+C\+H\+A\+N\+G\+ED}~(1$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga856f1438337659d52d03fee4e37675e9}\label{group__hal__dos_ga856f1438337659d52d03fee4e37675e9}} 
+\#define {\bfseries M\+S\+R\+\_\+\+D\+S\+R\+\_\+\+C\+H\+A\+N\+G\+ED}~(1$<$$<$1)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga89a8c65c6f184a528b8efc3762ed7ea8}\label{group__hal__dos_ga89a8c65c6f184a528b8efc3762ed7ea8}} 
+\#define {\bfseries M\+S\+R\+\_\+\+R\+I\+\_\+\+E\+D\+GE}~(1$<$$<$2)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gacaf7caab8fffc95e513e9e65cef46c97}\label{group__hal__dos_gacaf7caab8fffc95e513e9e65cef46c97}} 
+\#define {\bfseries M\+S\+R\+\_\+\+C\+D\+\_\+\+C\+H\+A\+N\+G\+ED}~(1$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga99bfd5dadd350f9bd1901282bc88bc35}\label{group__hal__dos_ga99bfd5dadd350f9bd1901282bc88bc35}} 
+\#define {\bfseries M\+S\+R\+\_\+\+C\+TS}~(1$<$$<$4)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gabefbb7ce73e57a43abd7351c33dd81dd}\label{group__hal__dos_gabefbb7ce73e57a43abd7351c33dd81dd}} 
+\#define {\bfseries M\+S\+R\+\_\+\+D\+SR}~(1$<$$<$5)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga0960208e3de952801488883144eae96b}\label{group__hal__dos_ga0960208e3de952801488883144eae96b}} 
+\#define {\bfseries M\+S\+R\+\_\+\+RI}~(1$<$$<$6)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gac94b8604b9ebea796f84bfa89cf79a01}\label{group__hal__dos_gac94b8604b9ebea796f84bfa89cf79a01}} 
+\#define {\bfseries M\+S\+R\+\_\+\+CD}~(1$<$$<$7)
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga755b7e850db6200a6f43b741c678ae53}\label{group__hal__dos_ga755b7e850db6200a6f43b741c678ae53}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+CK}(ptr)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gae5ad24619d6c5bd6073b2f566f6fc266}\label{group__hal__dos_gae5ad24619d6c5bd6073b2f566f6fc266}} 
+\#define {\bfseries C\+B\+U\+F\+\_\+\+S\+I\+ZE}~255
+\item 
+\mbox{\Hypertarget{group__hal__dos_gafa9179779c676eed926a35c4ab5fe5b5}\label{group__hal__dos_gafa9179779c676eed926a35c4ab5fe5b5}} 
+\#define {\bfseries P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}~\+\_\+\+Packed struct
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga3ee5b5bde5321e97420753cf13ce9c1b}\label{group__hal__dos_ga3ee5b5bde5321e97420753cf13ce9c1b}} 
+\#define {\bfseries \+\_\+f\+\_\+memcpy}~memcpy
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga210604a4d70c1421599afca049c8dc55}\label{group__hal__dos_ga210604a4d70c1421599afca049c8dc55}} 
+\#define {\bfseries \+\_\+f\+\_\+memset}~memset
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga828bb1dfda1afd67ca795075903d227d}\label{group__hal__dos_ga828bb1dfda1afd67ca795075903d227d}} 
+\#define {\bfseries \+\_\+\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+}~\char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga8782a401fbf55261460863fc2f8df1ce}\label{group__hal__dos_ga8782a401fbf55261460863fc2f8df1ce}} 
+\#define {\bfseries L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}~1234
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga23eb5e058a210efdde3d64e69679fafa}\label{group__hal__dos_ga23eb5e058a210efdde3d64e69679fafa}} 
+\#define {\bfseries B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}~4321
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga1771b7fb65ee640524d0052f229768c3}\label{group__hal__dos_ga1771b7fb65ee640524d0052f229768c3}} 
+\#define {\bfseries B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}~L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaef060b3456fdcc093a7210a762d5f2ed}\label{group__hal__dos_gaef060b3456fdcc093a7210a762d5f2ed}} 
+\#define {\bfseries F\+AR}
+\item 
+\mbox{\Hypertarget{group__hal__dos_gacf43057fc38f77d20456c074909ba772}\label{group__hal__dos_gacf43057fc38f77d20456c074909ba772}} 
+\#define {\bfseries I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~\+\_\+enable()
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga658c3ad175b50000ac44b3b9ea836d1a}\label{group__hal__dos_ga658c3ad175b50000ac44b3b9ea836d1a}} 
+\#define {\bfseries I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~\+\_\+disable()
+\item 
+\mbox{\Hypertarget{group__hal__dos_gac0bb5dfc7862723940463fc4f534a2c6}\label{group__hal__dos_gac0bb5dfc7862723940463fc4f534a2c6}} 
+\#define {\bfseries X\+S\+T\+\_\+\+I\+N\+I\+T\+\_\+\+OK}~0x0001
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga4a10627ecbaf4dd77aae7f9edb4a54f4}\label{group__hal__dos_ga4a10627ecbaf4dd77aae7f9edb4a54f4}} 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+DR}~0x01
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaacce3cb69756eab817972ff8facdda96}\label{group__hal__dos_gaacce3cb69756eab817972ff8facdda96}} 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+OE}~0x02
+\item 
+\mbox{\Hypertarget{group__hal__dos_gab800504524b4de7eea0d273db77f6156}\label{group__hal__dos_gab800504524b4de7eea0d273db77f6156}} 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+PE}~0x04
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaff4d8f56c8de5ecfdba8ded318c2717e}\label{group__hal__dos_gaff4d8f56c8de5ecfdba8ded318c2717e}} 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+FE}~0x08
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga0ca1fda9d4b7f78e3e5a6d4cc3f6ae85}\label{group__hal__dos_ga0ca1fda9d4b7f78e3e5a6d4cc3f6ae85}} 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+BI}~0x10
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga50f54b3db3391cfe1d6eced271e265e9}\label{group__hal__dos_ga50f54b3db3391cfe1d6eced271e265e9}} 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+T\+H\+RE}~0x20
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga82f8805477291e063bd3f555f9916cba}\label{group__hal__dos_ga82f8805477291e063bd3f555f9916cba}} 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+T\+E\+MT}~0x40
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga646ea2f68b9f1418a33cd38384576cc9}\label{group__hal__dos_ga646ea2f68b9f1418a33cd38384576cc9}} 
+\#define {\bfseries X\+S\+T\+\_\+\+M\+A\+S\+K\+\_\+\+F\+I\+F\+OE}~0x80
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga503caf44f78cc52dc196c413cd6c78ab}\label{group__hal__dos_ga503caf44f78cc52dc196c413cd6c78ab}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+D\+E\+L\+TA}~\hyperlink{group__hal_ga735b0974380a73e9d7a12a1f199a5921}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+D\+E\+L\+T\+A\+\_\+1970}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga5cbeea4d9344138b657f78ad38813584}\label{group__hal__dos_ga5cbeea4d9344138b657f78ad38813584}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+M\+S\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}~(1000 / C\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+S\+EC)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gae34b1efc8ba99add17fcd767852197d4}\label{group__hal__dos_gae34b1efc8ba99add17fcd767852197d4}} 
+\#define {\bfseries W\+P\+A\+N\+\_\+\+M\+A\+X\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+NS}~6
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaaa330f432d7a6bccdb393a656ddfe4d3}\label{group__hal__dos_gaaa330f432d7a6bccdb393a656ddfe4d3}} 
+\#define {\bfseries W\+P\+A\+N\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT}~15
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga47eb4ad5b4e00af034717327c7fa909d}\label{group__hal__dos_ga47eb4ad5b4e00af034717327c7fa909d}} 
+\#define {\bfseries gotoxy00}(x,  y)~gotoxy((x)+1, (y)+1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__dos_gacce279dbc21c640ea1412e405c569887}\label{group__hal__dos_gacce279dbc21c640ea1412e405c569887}} 
+typedef unsigned short {\bfseries uint\+\_\+fast8\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__hal__dos_gaa301edfd56a74118dc796a2f1aa67f20}\label{group__hal__dos_gaa301edfd56a74118dc796a2f1aa67f20}} 
+typedef signed short {\bfseries int\+\_\+fast8\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__hal__dos_gad66d00b144089426f04db771be5baa8b}{xbee\+\_\+seconds\+\_\+timer} ()
+\begin{DoxyCompactList}\small\item\em Platform-\/specific function to return the number of elapsed seconds. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__hal__dos_ga63bb246b86f72e88fa8ddc7a429c0e67}{xbee\+\_\+millisecond\+\_\+timer} ()
+\begin{DoxyCompactList}\small\item\em Platform-\/specific function to return the number of elapsed milliseconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__dos_gaf18bb6d8ede135a0bc5c13b7737be755}\label{group__hal__dos_gaf18bb6d8ede135a0bc5c13b7737be755}} 
+void {\bfseries gotoxy\+\_\+ansi} (int col, int row)
+\item 
+\mbox{\Hypertarget{group__hal__dos_gacb897f5c3c3f8fc84b84851f496371a6}\label{group__hal__dos_gacb897f5c3c3f8fc84b84851f496371a6}} 
+void {\bfseries clrscr\+\_\+ansi} (void)
+\item 
+int \hyperlink{group__hal__dos_ga8c0c80b64f63d395e718172190b21fcc}{xbee\+\_\+readline} (char $\ast$buffer, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em This function is a non-\/blocking version of gets(), used to read a line of input from the user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__dos_ga2d4d704dafd7a589a4305575192fb012}\label{group__hal__dos_ga2d4d704dafd7a589a4305575192fb012}} 
+void \+\_\+\+\_\+interrupt \+\_\+\+\_\+far {\bfseries xbee\+\_\+ser\+\_\+isr} ()
+\item 
+int \hyperlink{group__hal__dos_ga3c79f6b72b6cfc3cc5c4524450f661b9}{xbee\+\_\+ser\+\_\+invalid} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Helper function used by other xbee\+\_\+serial functions to validate the {\itshape serial} parameter. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__hal__dos_ga898057d1b7645785e7f3d6256828d039}{xbee\+\_\+ser\+\_\+portname} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns a human-\/readable string describing the serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Transmits {\itshape length} bytes from {\itshape buffer} to the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, int bufsize)
+\begin{DoxyCompactList}\small\item\em Reads up to {\itshape bufsize} bytes from X\+Bee serial port {\itshape serial} and into {\itshape buffer}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga86fea2345efb8bf9424228f0979b1849}{xbee\+\_\+ser\+\_\+putchar} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} ch)
+\begin{DoxyCompactList}\small\item\em Transmits a single character, {\itshape ch}, to the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Reads a single character from the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of bytes of unused space in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of queued bytes in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Flushes (i.\+e., deletes and does not transmit) characters in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of bytes of unused space in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of queued bytes in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Deletes all characters in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_gab3c12543a07e0669b672c5cab54b0926}{xbee\+\_\+ser\+\_\+baudrate} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} baudrate)
+\begin{DoxyCompactList}\small\item\em Change the baud rate of X\+Bee serial port {\itshape serial} to {\itshape baudrate} bits/second. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} baudrate)
+\begin{DoxyCompactList}\small\item\em Opens the serial port connected to X\+Bee serial port {\itshape serial} at {\itshape baudrate} bits/second. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Close the serial port attached to X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga6ae89792415a7ac8b45b56188eb9eeb4}{xbee\+\_\+ser\+\_\+break} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, int enabled)
+\begin{DoxyCompactList}\small\item\em Disable the serial transmit pin and pull it low to send a break to the X\+Bee serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga1f5f72ffdfbfb45ac523640db32296ff}{xbee\+\_\+ser\+\_\+flowcontrol} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, int enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable hardware flow control (C\+T\+S/\+R\+TS) on the serial port for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga731188d8cf41d3d749bc84d51b672535}{xbee\+\_\+ser\+\_\+set\+\_\+rts} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, int asserted)
+\begin{DoxyCompactList}\small\item\em Disable hardware flow control and manually set the R\+TS (ready to send) pin on the X\+Bee device\textquotesingle{}s serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__dos_ga894f6fadc890b5ba5ce32338f0acd217}{xbee\+\_\+ser\+\_\+get\+\_\+cts} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Read the status of the /\+C\+TS (clear to send) pin on the serial port connected to X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__dos_ga475b2e273ce4aad9558201d41b6f4459}\label{group__hal__dos_ga475b2e273ce4aad9558201d41b6f4459}} 
+{\bfseries void} (\+\_\+\+\_\+interrupt \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$prev\+\_\+int)()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__dos_gac4f06ea26ed6bd7ae83b92d64ac10b78}\label{group__hal__dos_gac4f06ea26ed6bd7ae83b92d64ac10b78}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries baudrate}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga1e87af3c18a2fd36c61faf89949bdc3f}\label{group__hal__dos_ga1e87af3c18a2fd36c61faf89949bdc3f}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries flags}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga0b4f70bb619f70229e3332ca583501fa}\label{group__hal__dos_ga0b4f70bb619f70229e3332ca583501fa}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries comport}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga8e0798404bf2cf5dabb84c5ba9a4f236}\label{group__hal__dos_ga8e0798404bf2cf5dabb84c5ba9a4f236}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries port}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga82781a1012b61cf73381d0e9cc5dbbbb}\label{group__hal__dos_ga82781a1012b61cf73381d0e9cc5dbbbb}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries intvec}
+\item 
+\mbox{\Hypertarget{group__hal__dos_gae7cbe64213a893a9b20210be34e3c0b9}\label{group__hal__dos_gae7cbe64213a893a9b20210be34e3c0b9}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries picmask}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga2dca5da6a3c4e6654c1fe9a3507aa4a8}\label{group__hal__dos_ga2dca5da6a3c4e6654c1fe9a3507aa4a8}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries lsr\+\_\+mask}
+\item 
+\mbox{\Hypertarget{group__hal__dos_gab84caebde2cbbf628c6b121ab1479657}\label{group__hal__dos_gab84caebde2cbbf628c6b121ab1479657}} 
+struct \hyperlink{structxbee__cbuf__t}{xbee\+\_\+cbuf\+\_\+t} $\ast$ {\bfseries txbuf}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga240ac56bdef04d1201432e8fbbd701a7}\label{group__hal__dos_ga240ac56bdef04d1201432e8fbbd701a7}} 
+struct \hyperlink{structxbee__cbuf__t}{xbee\+\_\+cbuf\+\_\+t} $\ast$ {\bfseries rxbuf}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga39ae4f38dd4106e5ad471dea876ea044}\label{group__hal__dos_ga39ae4f38dd4106e5ad471dea876ea044}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries isr\+\_\+count}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga035e778219e705696ae1de6010c79f55}\label{group__hal__dos_ga035e778219e705696ae1de6010c79f55}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries isr\+\_\+rent}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga044661106248e3b88b7367a25564e017}\label{group__hal__dos_ga044661106248e3b88b7367a25564e017}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries oe}
+\item 
+\mbox{\Hypertarget{group__hal__dos_gac386d9b4162d246079f9d095ff3b3138}\label{group__hal__dos_gac386d9b4162d246079f9d095ff3b3138}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries pe}
+\item 
+\mbox{\Hypertarget{group__hal__dos_gae1b2c519587a252d68482e46a9664571}\label{group__hal__dos_gae1b2c519587a252d68482e46a9664571}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries fe}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga580a572991f81c74d0cf88bdccc3db88}\label{group__hal__dos_ga580a572991f81c74d0cf88bdccc3db88}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries bi}
+\end{DoxyCompactItemize}
+\subsection*{platform\+\_\+stdint}
+\label{_amgrpd25616584cb4ee40080d217a7b385214}%
+Types typically defined in $<$stdint.\+h$>$, define manually if stdint.\+h is not available on this platform. \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__dos_ga20c38cc5aac7cc6b0a3c6ab05428436d}\label{group__hal__dos_ga20c38cc5aac7cc6b0a3c6ab05428436d}} 
+typedef signed char \hyperlink{group__hal__dos_ga20c38cc5aac7cc6b0a3c6ab05428436d}{int8\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 8-\/bit signed integer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}\label{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}} 
+typedef unsigned char \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 8-\/bit unsigned integer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}\label{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}} 
+typedef short \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 16-\/bit signed integer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}\label{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}} 
+typedef unsigned short \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 16-\/bit unsigned integer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__dos_gafd12020da5a235dfcf0c3c748fb5baed}\label{group__hal__dos_gafd12020da5a235dfcf0c3c748fb5baed}} 
+typedef long \hyperlink{group__hal__dos_gafd12020da5a235dfcf0c3c748fb5baed}{int32\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 32-\/bit signed integer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}\label{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}} 
+typedef unsigned long \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}
+\begin{DoxyCompactList}\small\item\em 32-\/bit unsigned integer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}\label{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}} 
+typedef int \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Variable that can hold 0 or 1, may be an {\ttfamily int} for speed purporses or {\ttfamily uint8\+\_\+t} for size optimization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__hal__dos_ga63bb246b86f72e88fa8ddc7a429c0e67}\label{group__hal__dos_ga63bb246b86f72e88fa8ddc7a429c0e67}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+millisecond\+\_\+timer@{xbee\+\_\+millisecond\+\_\+timer}}
+\index{xbee\+\_\+millisecond\+\_\+timer@{xbee\+\_\+millisecond\+\_\+timer}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+millisecond\+\_\+timer()}{xbee\_millisecond\_timer()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} xbee\+\_\+millisecond\+\_\+timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Platform-\/specific function to return the number of elapsed milliseconds. 
+
+OK for this counter to rollover. Used for timing and should have a resolution of at least 60ms.
+
+
+\begin{DoxyItemize}
+\item Rabbit has 1ms resolution.
+\item H\+C\+S08 has 4ms resolution.
+\item D\+OS has 18 ticks/second (55.\+55ms resolution)
+\end{DoxyItemize}
+
+(Function name wrapped in parentheses so platforms can use a macro function of the same name.)
+
+\begin{DoxyReturn}{Returns}
+Number of elapsed milliseconds.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+X\+B\+E\+E\+\_\+\+M\+S\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga8c0c80b64f63d395e718172190b21fcc}\label{group__hal__dos_ga8c0c80b64f63d395e718172190b21fcc}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+readline@{xbee\+\_\+readline}}
+\index{xbee\+\_\+readline@{xbee\+\_\+readline}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+readline()}{xbee\_readline()}}
+{\footnotesize\ttfamily int xbee\+\_\+readline (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+This function is a non-\/blocking version of gets(), used to read a line of input from the user. 
+
+It waits for a string from stdin terminated by a return. It should be called repeatedly, until it returns a value other than -\/\+E\+A\+G\+A\+IN. The input string, stored in {\itshape buffer} is null-\/terminated without the return.
+
+The user should make sure only one process calls this function at a time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em buffer} & buffer to store input from user \\
+\hline
+\mbox{\tt in}  & {\em length} & size of {\itshape buffer} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & User ended the input with a newline, return value is number of bytes written. \\
+\hline
+{\em -\/\+E\+A\+G\+A\+IN} & User has not completed a line. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & N\+U\+LL buffer or length is less than 1. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__hal__dos_gad66d00b144089426f04db771be5baa8b}\label{group__hal__dos_gad66d00b144089426f04db771be5baa8b}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+seconds\+\_\+timer@{xbee\+\_\+seconds\+\_\+timer}}
+\index{xbee\+\_\+seconds\+\_\+timer@{xbee\+\_\+seconds\+\_\+timer}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+seconds\+\_\+timer()}{xbee\_seconds\_timer()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} xbee\+\_\+seconds\+\_\+timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Platform-\/specific function to return the number of elapsed seconds. 
+
+On some platforms, this is the equivalent of an \char`\"{}uptime\char`\"{}.
+
+On other platforms, it may reflect the value of the R\+TC, which might not be synchronized with a time server and might include leap seconds.
+
+Regardless, it should consistently report elapsed time and not jump on clock synchronization.
+
+In addition to determining timeouts, the \hyperlink{group__zcl__time}{Z\+CL Time Cluster} makes use of it to report current time.
+
+(Function name wrapped in parentheses so platforms can use a macro function of the same name.)
+
+\begin{DoxyReturn}{Returns}
+Number of elapsed seconds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__hal__dos_gab3c12543a07e0669b672c5cab54b0926}\label{group__hal__dos_gab3c12543a07e0669b672c5cab54b0926}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+baudrate@{xbee\+\_\+ser\+\_\+baudrate}}
+\index{xbee\+\_\+ser\+\_\+baudrate@{xbee\+\_\+ser\+\_\+baudrate}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+baudrate()}{xbee\_ser\_baudrate()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+baudrate (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Change the baud rate of X\+Bee serial port {\itshape serial} to {\itshape baudrate} bits/second. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em baudrate} & Bits per second of serial data transfer speed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Opened serial port within 5\% of requested baudrate. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & Can\textquotesingle{}t open serial port within 5\% of requested baudrate.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open()}, \hyperlink{group__xbee__serial_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close()}, \hyperlink{group__xbee__serial_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga6ae89792415a7ac8b45b56188eb9eeb4}\label{group__hal__dos_ga6ae89792415a7ac8b45b56188eb9eeb4}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+break@{xbee\+\_\+ser\+\_\+break}}
+\index{xbee\+\_\+ser\+\_\+break@{xbee\+\_\+ser\+\_\+break}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+break()}{xbee\_ser\_break()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+break (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Disable the serial transmit pin and pull it low to send a break to the X\+Bee serial port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em enabled} & Set to 1 to start the break or 0 to end the break (and resume transmitting).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open()}, \hyperlink{group__xbee__serial_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga48b9d743a446074ea6abacd0de24044d}\label{group__hal__dos_ga48b9d743a446074ea6abacd0de24044d}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+close@{xbee\+\_\+ser\+\_\+close}}
+\index{xbee\+\_\+ser\+\_\+close@{xbee\+\_\+ser\+\_\+close}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+close()}{xbee\_ser\_close()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+close (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Close the serial port attached to X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & closed serial port \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open()}, \hyperlink{group__xbee__serial_gab3c12543a07e0669b672c5cab54b0926}{xbee\+\_\+ser\+\_\+baudrate()}, \hyperlink{group__xbee__serial_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga1f5f72ffdfbfb45ac523640db32296ff}\label{group__hal__dos_ga1f5f72ffdfbfb45ac523640db32296ff}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+flowcontrol@{xbee\+\_\+ser\+\_\+flowcontrol}}
+\index{xbee\+\_\+ser\+\_\+flowcontrol@{xbee\+\_\+ser\+\_\+flowcontrol}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+flowcontrol()}{xbee\_ser\_flowcontrol()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+flowcontrol (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable or disable hardware flow control (C\+T\+S/\+R\+TS) on the serial port for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em enabled} & Set to 0 to disable flow control or non-\/zero to enable flow control.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}{xbee\+\_\+ser\+\_\+set\+\_\+rts()}, \hyperlink{group__xbee__serial_ga894f6fadc890b5ba5ce32338f0acd217}{xbee\+\_\+ser\+\_\+get\+\_\+cts()} 
+\end{DoxySeeAlso}
+
+
+Referenced by xbee\+\_\+dev\+\_\+init().
+
+\mbox{\Hypertarget{group__hal__dos_ga894f6fadc890b5ba5ce32338f0acd217}\label{group__hal__dos_ga894f6fadc890b5ba5ce32338f0acd217}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+get\+\_\+cts@{xbee\+\_\+ser\+\_\+get\+\_\+cts}}
+\index{xbee\+\_\+ser\+\_\+get\+\_\+cts@{xbee\+\_\+ser\+\_\+get\+\_\+cts}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+get\+\_\+cts()}{xbee\_ser\_get\_cts()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+get\+\_\+cts (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Read the status of the /\+C\+TS (clear to send) pin on the serial port connected to X\+Bee serial port {\itshape serial}. 
+
+Note that this function doesn\textquotesingle{}t return the value of the pin -- it returns whether it\textquotesingle{}s asserted (i.\+e., clear to send to the X\+Bee serial port) or not.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & it\textquotesingle{}s clear to send \\
+\hline
+{\em 0} & it\textquotesingle{}s not clear to send \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga33229d0d63ff1442f23b0739794d3afb}{xbee\+\_\+ser\+\_\+flowcontrol()}, \hyperlink{group__xbee__serial_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}{xbee\+\_\+ser\+\_\+set\+\_\+rts()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_gaeeb38154313a44f86146cdcfe08e7d08}\label{group__hal__dos_gaeeb38154313a44f86146cdcfe08e7d08}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+getchar@{xbee\+\_\+ser\+\_\+getchar}}
+\index{xbee\+\_\+ser\+\_\+getchar@{xbee\+\_\+ser\+\_\+getchar}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+getchar()}{xbee\_ser\_getchar()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+getchar (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Reads a single character from the X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0-\/255} & character read from X\+Bee serial port \\
+\hline
+{\em -\/\+E\+N\+O\+D\+A\+TA} & There aren\textquotesingle{}t any characters in the read buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read()}, \hyperlink{group__xbee__serial_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga3c79f6b72b6cfc3cc5c4524450f661b9}\label{group__hal__dos_ga3c79f6b72b6cfc3cc5c4524450f661b9}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+invalid@{xbee\+\_\+ser\+\_\+invalid}}
+\index{xbee\+\_\+ser\+\_\+invalid@{xbee\+\_\+ser\+\_\+invalid}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+invalid()}{xbee\_ser\_invalid()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+invalid (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Helper function used by other xbee\+\_\+serial functions to validate the {\itshape serial} parameter. 
+
+Confirms that it is non-\/{\ttfamily N\+U\+LL} and is set to a valid port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & {\itshape serial} is not a valid X\+Bee serial port \\
+\hline
+{\em 0} & {\itshape serial} is a valid X\+Bee serial port \\
+\hline
+\end{DoxyRetVals}
+
+
+Referenced by \+\_\+xbee\+\_\+frame\+\_\+load().
+
+\mbox{\Hypertarget{group__hal__dos_gaa615a221dd69c17ee2989c281f2bf04a}\label{group__hal__dos_gaa615a221dd69c17ee2989c281f2bf04a}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+open@{xbee\+\_\+ser\+\_\+open}}
+\index{xbee\+\_\+ser\+\_\+open@{xbee\+\_\+ser\+\_\+open}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+open()}{xbee\_ser\_open()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Opens the serial port connected to X\+Bee serial port {\itshape serial} at {\itshape baudrate} bits/second. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em baudrate} & Bits per second of serial data transfer speed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Opened serial port within 5\% of requested baudrate. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & Can\textquotesingle{}t open serial port within 5\% of requested baudrate.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gab3c12543a07e0669b672c5cab54b0926}{xbee\+\_\+ser\+\_\+baudrate()}, \hyperlink{group__xbee__serial_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close()}, \hyperlink{group__xbee__serial_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break()} 
+\end{DoxySeeAlso}
+
+
+Referenced by xbee\+\_\+dev\+\_\+init().
+
+\mbox{\Hypertarget{group__hal__dos_ga898057d1b7645785e7f3d6256828d039}\label{group__hal__dos_ga898057d1b7645785e7f3d6256828d039}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+portname@{xbee\+\_\+ser\+\_\+portname}}
+\index{xbee\+\_\+ser\+\_\+portname@{xbee\+\_\+ser\+\_\+portname}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+portname()}{xbee\_ser\_portname()}}
+{\footnotesize\ttfamily const char$\ast$ xbee\+\_\+ser\+\_\+portname (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns a human-\/readable string describing the serial port. 
+
+For example, on a Windows machine this will be \char`\"{}\+C\+O\+M1\char`\"{} or \char`\"{}\+C\+O\+M999\char`\"{}. On a Rabbit, it will be a single letter, \char`\"{}\+A\char`\"{} through \char`\"{}\+F\char`\"{}. On Freescale H\+C\+S08, it will be something like \char`\"{}\+S\+C\+I1\char`\"{} or \char`\"{}\+S\+C\+I2\char`\"{}. On P\+O\+S\+IX, the name of the device (e.\+g., \char`\"{}/dev/tty\+S0\char`\"{})
+
+Returns \char`\"{}(invalid)\char`\"{} if {\itshape serial} is invalid or not configured.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & port\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null-\/terminated string describing the serial port 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__hal__dos_ga86fea2345efb8bf9424228f0979b1849}\label{group__hal__dos_ga86fea2345efb8bf9424228f0979b1849}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+putchar@{xbee\+\_\+ser\+\_\+putchar}}
+\index{xbee\+\_\+ser\+\_\+putchar@{xbee\+\_\+ser\+\_\+putchar}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+putchar()}{xbee\_ser\_putchar()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+putchar (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}}]{ch }\end{DoxyParamCaption})}
+
+
+
+Transmits a single character, {\itshape ch}, to the X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em ch} & character to send\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Successfully sent (queued) character. \\
+\hline
+{\em -\/\+E\+N\+O\+S\+PC} & The write buffer is full and the character wasn\textquotesingle{}t sent. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read()}, \hyperlink{group__xbee__serial_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga8263312373c03a79a718142e051b3342}\label{group__hal__dos_ga8263312373c03a79a718142e051b3342}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+read@{xbee\+\_\+ser\+\_\+read}}
+\index{xbee\+\_\+ser\+\_\+read@{xbee\+\_\+ser\+\_\+read}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+read()}{xbee\_ser\_read()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+read (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{int}]{bufsize }\end{DoxyParamCaption})}
+
+
+
+Reads up to {\itshape bufsize} bytes from X\+Bee serial port {\itshape serial} and into {\itshape buffer}. 
+
+If there is no data available when the function is called, it will return immediately.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt out}  & {\em buffer} & buffer to hold bytes read from X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em bufsize} & maximum number of bytes to read\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & The number of bytes read from X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & I/O error attempting to write to serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write()}, \hyperlink{group__xbee__serial_ga86fea2345efb8bf9424228f0979b1849}{xbee\+\_\+ser\+\_\+putchar()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+
+
+Referenced by xbee\+\_\+ser\+\_\+getchar().
+
+\mbox{\Hypertarget{group__hal__dos_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}\label{group__hal__dos_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+rx\+\_\+flush@{xbee\+\_\+ser\+\_\+rx\+\_\+flush}}
+\index{xbee\+\_\+ser\+\_\+rx\+\_\+flush@{xbee\+\_\+ser\+\_\+rx\+\_\+flush}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}{xbee\_ser\_rx\_flush()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+rx\+\_\+flush (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Deletes all characters in the serial receive buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga16fb431a1e66861439518e562431821f}\label{group__hal__dos_ga16fb431a1e66861439518e562431821f}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+rx\+\_\+free@{xbee\+\_\+ser\+\_\+rx\+\_\+free}}
+\index{xbee\+\_\+ser\+\_\+rx\+\_\+free@{xbee\+\_\+ser\+\_\+rx\+\_\+free}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+rx\+\_\+free()}{xbee\_ser\_rx\_free()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+rx\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of bytes of unused space in the serial receive buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em I\+N\+T\+\_\+\+M\+AX} & The buffer size is unlimited (or unknown). \\
+\hline
+{\em $>$=0} & The number of bytes it would take to fill the X\+Bee serial port\textquotesingle{}s serial receive buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga43b8322771cc16b4130fa5330ad2242b}\label{group__hal__dos_ga43b8322771cc16b4130fa5330ad2242b}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+rx\+\_\+used@{xbee\+\_\+ser\+\_\+rx\+\_\+used}}
+\index{xbee\+\_\+ser\+\_\+rx\+\_\+used@{xbee\+\_\+ser\+\_\+rx\+\_\+used}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+rx\+\_\+used()}{xbee\_ser\_rx\_used()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+rx\+\_\+used (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of queued bytes in the serial receive buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & The number of bytes queued in the X\+Bee serial port\textquotesingle{}s serial transmit buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Unlike \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, this function M\+U\+ST return the number of bytes available. Some layers of the library wait until enough bytes are ready before continuing.
+\end{DoxyNote}
+We may expand on or replace this A\+PI. On some platforms (like Win32) we have to do some of our own buffering in order to peek at data in the serial receive buffer. Most of the driver only requires a check to see if some number of bytes are available or not. Consider changing the A\+PI to something like\+:
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} xbee\_ser\_rx\_avail( \hyperlink{structxbee__serial__t}{xbee\_serial\_t} *serial, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} count)
+\end{DoxyCode}
+ returns T\+R\+UE if {\ttfamily count} bytes are available, F\+A\+L\+SE otherwise. \mbox{\Hypertarget{group__hal__dos_ga731188d8cf41d3d749bc84d51b672535}\label{group__hal__dos_ga731188d8cf41d3d749bc84d51b672535}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+set\+\_\+rts@{xbee\+\_\+ser\+\_\+set\+\_\+rts}}
+\index{xbee\+\_\+ser\+\_\+set\+\_\+rts@{xbee\+\_\+ser\+\_\+set\+\_\+rts}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+set\+\_\+rts()}{xbee\_ser\_set\_rts()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+set\+\_\+rts (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{asserted }\end{DoxyParamCaption})}
+
+
+
+Disable hardware flow control and manually set the R\+TS (ready to send) pin on the X\+Bee device\textquotesingle{}s serial port. 
+
+Typically used to enter the X\+Bee device\textquotesingle{}s boot loader and initiate a firmware update.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em asserted} & Set to 1 to assert R\+TS (ok for X\+Bee to send to us) or 0 to deassert R\+TS (tell X\+Bee not to send to us).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga33229d0d63ff1442f23b0739794d3afb}{xbee\+\_\+ser\+\_\+flowcontrol()}, \hyperlink{group__xbee__serial_ga894f6fadc890b5ba5ce32338f0acd217}{xbee\+\_\+ser\+\_\+get\+\_\+cts()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga05308d37301d27715f1e1308b7189220}\label{group__hal__dos_ga05308d37301d27715f1e1308b7189220}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+tx\+\_\+flush@{xbee\+\_\+ser\+\_\+tx\+\_\+flush}}
+\index{xbee\+\_\+ser\+\_\+tx\+\_\+flush@{xbee\+\_\+ser\+\_\+tx\+\_\+flush}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}{xbee\_ser\_tx\_flush()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+tx\+\_\+flush (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Flushes (i.\+e., deletes and does not transmit) characters in the serial transmit buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga3ad8f378b572d6fec982f1086bd3b94f}\label{group__hal__dos_ga3ad8f378b572d6fec982f1086bd3b94f}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+tx\+\_\+free@{xbee\+\_\+ser\+\_\+tx\+\_\+free}}
+\index{xbee\+\_\+ser\+\_\+tx\+\_\+free@{xbee\+\_\+ser\+\_\+tx\+\_\+free}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+tx\+\_\+free()}{xbee\_ser\_tx\_free()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+tx\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of bytes of unused space in the serial transmit buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em I\+N\+T\+\_\+\+M\+AX} & The buffer size is unlimited (or unknown). \\
+\hline
+{\em $>$=0} & The number of bytes it would take to fill the X\+Bee serial port\textquotesingle{}s serial transmit buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_gaabf70934d186354cde4ac14ed27d1bd2}\label{group__hal__dos_gaabf70934d186354cde4ac14ed27d1bd2}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+tx\+\_\+used@{xbee\+\_\+ser\+\_\+tx\+\_\+used}}
+\index{xbee\+\_\+ser\+\_\+tx\+\_\+used@{xbee\+\_\+ser\+\_\+tx\+\_\+used}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+tx\+\_\+used()}{xbee\_ser\_tx\_used()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+tx\+\_\+used (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of queued bytes in the serial transmit buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & The buffer size is unlimited (or space used is unknown). \\
+\hline
+{\em $>$0} & The number of bytes queued in the X\+Bee serial port\textquotesingle{}s serial transmit buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__dos_ga2ca4e60c9d642084afa52dff9e1f6be4}\label{group__hal__dos_ga2ca4e60c9d642084afa52dff9e1f6be4}} 
+\index{D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}!xbee\+\_\+ser\+\_\+write@{xbee\+\_\+ser\+\_\+write}}
+\index{xbee\+\_\+ser\+\_\+write@{xbee\+\_\+ser\+\_\+write}!D\+O\+S16/\+Open\+Watcom@{D\+O\+S16/\+Open\+Watcom}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+write()}{xbee\_ser\_write()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+write (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Transmits {\itshape length} bytes from {\itshape buffer} to the X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em buffer} & source of bytes to send\\
+\hline
+\mbox{\tt in}  & {\em length} & number of bytes to write\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & The number of bytes successfully written to X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & I/O error attempting to write to serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read()}, \hyperlink{group__xbee__serial_ga86fea2345efb8bf9424228f0979b1849}{xbee\+\_\+ser\+\_\+putchar()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+
+
+Referenced by xbee\+\_\+ser\+\_\+putchar().
+

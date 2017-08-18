@@ -1,0 +1,27 @@
+\hypertarget{atmode_8h}{}\section{include/xbee/atmode.h File Reference}
+\label{atmode_8h}\index{include/xbee/atmode.\+h@{include/xbee/atmode.\+h}}
+
+
+Header for working with X\+Bee modules in AT command mode instead of A\+PI mode.  
+
+
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/device.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal_ga336bff4f4a6012aacc4468132bbd3d7f}{X\+B\+E\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS} int {\bfseries xbee\+\_\+atmode\+\_\+enter} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\item 
+int {\bfseries xbee\+\_\+atmode\+\_\+exit} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\item 
+int {\bfseries xbee\+\_\+atmode\+\_\+tick} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\item 
+int {\bfseries xbee\+\_\+atmode\+\_\+send\+\_\+request} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$\hyperlink{group__xbee__atcmd_ga1a5aaa930940857f68f245eeb89506b5}{command})
+\item 
+int {\bfseries xbee\+\_\+atmode\+\_\+read\+\_\+response} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, int resp\+\_\+size, int \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$bytesread)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header for working with X\+Bee modules in AT command mode instead of A\+PI mode. 
+

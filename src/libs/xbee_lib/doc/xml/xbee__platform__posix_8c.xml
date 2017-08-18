@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="xbee__platform__posix_8c" kind="file" language="C++">
+    <compoundname>xbee_platform_posix.c</compoundname>
+    <includes local="no">time.h</includes>
+    <includes local="no">sys/time.h</includes>
+    <includes refid="platform_8h" local="yes">xbee/platform.h</includes>
+    <incdepgraph>
+      <node id="1113">
+        <label>errno.h</label>
+      </node>
+      <node id="1115">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="1116" relation="include">
+        </childnode>
+      </node>
+      <node id="1114">
+        <label>stddef.h</label>
+      </node>
+      <node id="1109">
+        <label>src/posix/xbee_platform_posix.c</label>
+        <link refid="xbee__platform__posix_8c"/>
+        <childnode refid="1110" relation="include">
+        </childnode>
+        <childnode refid="1111" relation="include">
+        </childnode>
+        <childnode refid="1112" relation="include">
+        </childnode>
+      </node>
+      <node id="1112">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="1113" relation="include">
+        </childnode>
+        <childnode refid="1114" relation="include">
+        </childnode>
+        <childnode refid="1115" relation="include">
+        </childnode>
+      </node>
+      <node id="1110">
+        <label>time.h</label>
+      </node>
+      <node id="1111">
+        <label>sys/time.h</label>
+      </node>
+      <node id="1116">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__hal__posix_1gad66d00b144089426f04db771be5baa8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t xbee_seconds_timer</definition>
+        <argsstring>()</argsstring>
+        <name>xbee_seconds_timer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Platform-specific function to return the number of elapsed seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>On some platforms, this is the equivalent of an &quot;uptime&quot;.</para><para>On other platforms, it may reflect the value of the RTC, which might not be synchronized with a time server and might include leap seconds.</para><para>Regardless, it should consistently report elapsed time and not jump on clock synchronization.</para><para>In addition to determining timeouts, the <ref refid="group__zcl__time" kindref="compound">ZCL Time Cluster</ref> makes use of it to report current time.</para><para>(Function name wrapped in parentheses so platforms can use a macro function of the same name.)</para><para><simplesect kind="return"><para>Number of elapsed seconds. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/posix/xbee_platform_posix.c" line="27" column="1" bodyfile="src/posix/xbee_platform_posix.c" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__posix_1ga63bb246b86f72e88fa8ddc7a429c0e67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t xbee_millisecond_timer</definition>
+        <argsstring>()</argsstring>
+        <name>xbee_millisecond_timer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Platform-specific function to return the number of elapsed milliseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>OK for this counter to rollover. Used for timing and should have a resolution of at least 60ms.</para><para><itemizedlist>
+<listitem><para>Rabbit has 1ms resolution.</para></listitem><listitem><para>HCS08 has 4ms resolution.</para></listitem><listitem><para>DOS has 18 ticks/second (55.55ms resolution)</para></listitem></itemizedlist>
+</para><para>(Function name wrapped in parentheses so platforms can use a macro function of the same name.)</para><para><simplesect kind="return"><para>Number of elapsed milliseconds.</para></simplesect>
+<simplesect kind="see"><para>XBEE_MS_TIMER_RESOLUTION </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/posix/xbee_platform_posix.c" line="34" column="1" bodyfile="src/posix/xbee_platform_posix.c" bodystart="34" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Platform-specific functions for use by the XBee Driver on POSIX platform. </para>    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>Create a platform unit test, one that can verify that the millisecond timer doesn&apos;t run backwards and that it matches up accurately with the seconds timer (base it on the HCS08 regression). </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="group__hal__posix_1gad66d00b144089426f04db771be5baa8b" refkind="member"><highlight class="normal"><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/><ref refid="group__hal__posix_1gad66d00b144089426f04db771be5baa8b" kindref="member">xbee_seconds_timer</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>BSD<sp/>OSes,<sp/>time<sp/>can<sp/>include<sp/>leap<sp/>seconds.<sp/><sp/>That&apos;s<sp/>OK,<sp/>because<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>function<sp/>is<sp/>only<sp/>used<sp/>to<sp/>track<sp/>elapsed<sp/>time,<sp/>not<sp/>determine<sp/>time-of-day.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>time(<sp/>NULL);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="group__hal__posix_1ga63bb246b86f72e88fa8ddc7a429c0e67" refkind="member"><highlight class="normal"><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/><ref refid="group__hal__posix_1ga63bb246b86f72e88fa8ddc7a429c0e67" kindref="member">xbee_millisecond_timer</ref>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>t;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>gettimeofday(<sp/>&amp;t,<sp/>NULL);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref>)<sp/>(t.tv_sec<sp/>*<sp/>1000<sp/>+<sp/>t.tv_usec<sp/>/<sp/>1000);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/posix/xbee_platform_posix.c"/>
+  </compounddef>
+</doxygen>

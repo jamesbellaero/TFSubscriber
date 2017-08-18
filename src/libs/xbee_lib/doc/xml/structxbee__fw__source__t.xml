@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structxbee__fw__source__t" kind="struct" language="C++" prot="public">
+    <compoundname>xbee_fw_source_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__xbee__firmware_1ga79f0c368a2efd172b3779a2ef3a26706" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+        <definition>xbee_dev_t* xbee</definition>
+        <argsstring></argsstring>
+        <name>xbee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="45" column="1" bodyfile="include/xbee/firmware.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1ga89f234133d3efe315836311cbf21c64b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="46" column="1" bodyfile="include/xbee/firmware.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1gac0c302bc97f010b7f5965faa07b00354" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int next_state</definition>
+        <argsstring></argsstring>
+        <name>next_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="47" column="1" bodyfile="include/xbee/firmware.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1ga04cecf6708b77deed43900afdf14e8d9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tries</definition>
+        <argsstring></argsstring>
+        <name>tries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="48" column="1" bodyfile="include/xbee/firmware.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1ga95a0af7504758aa320186c647c2f1602" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char bootloader_cmd</definition>
+        <argsstring></argsstring>
+        <name>bootloader_cmd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="49" column="1" bodyfile="include/xbee/firmware.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1ga0d88807102c8d96e37cb4751f0d5a7d3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="50" column="1" bodyfile="include/xbee/firmware.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1ga198adacee7500d0135a88d6ecc591bf5" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__xmodem__state__t" kindref="compound">xbee_xmodem_state_t</ref></type>
+        <definition>xbee_xmodem_state_t xbxm</definition>
+        <argsstring></argsstring>
+        <name>xbxm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="52" column="1" bodyfile="include/xbee/firmware.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1ga40c4f6007648eeb338136914b8d2502f" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__fw__oem__state__t" kindref="compound">xbee_fw_oem_state_t</ref></type>
+        <definition>xbee_fw_oem_state_t oem</definition>
+        <argsstring></argsstring>
+        <name>oem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="53" column="1" bodyfile="include/xbee/firmware.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1ga6c2fd23dccaff7ddb24daa9daeef8bbb" prot="public" static="no" mutable="no">
+        <type>union xbee_fw_source_t::@5</type>
+        <definition>union xbee_fw_source_t::@5  u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1gac45b1c32b0ad4fba20266476ed30eba8" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char buffer[128+5]</definition>
+        <argsstring>[128+5]</argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="55" column="1" bodyfile="include/xbee/firmware.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1ga30ee257aa91c265b0afee3124c2a218a" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* seek) (void FAR *context, uint32_t offset)</definition>
+        <argsstring>)(void FAR *context, uint32_t offset)</argsstring>
+        <name>seek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="57" column="1" bodyfile="include/xbee/firmware.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1gaa8a1e862580632a934923c7643607fa0" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* read) (void FAR *context, void FAR *buffer, int16_t bytes)</definition>
+        <argsstring>)(void FAR *context, void FAR *buffer, int16_t bytes)</argsstring>
+        <name>read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="58" column="1" bodyfile="include/xbee/firmware.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1gaa91f8e864e06077c354e5f5216547758" prot="public" static="no" mutable="no">
+        <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>void FAR* context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="59" column="1" bodyfile="include/xbee/firmware.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="231">
+        <label>wpan_envelope_t</label>
+        <link refid="structwpan__envelope__t"/>
+        <childnode refid="228" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="230" relation="usage">
+          <edgelabel>ieee_address</edgelabel>
+        </childnode>
+      </node>
+      <node id="224">
+        <label>xbee_dev_t</label>
+        <link refid="structxbee__dev__t"/>
+        <childnode refid="225" relation="usage">
+          <edgelabel>rx</edgelabel>
+        </childnode>
+        <childnode refid="224" relation="usage">
+          <edgelabel>is_awake</edgelabel>
+          <edgelabel>reset</edgelabel>
+          <edgelabel>node_id_handler</edgelabel>
+        </childnode>
+        <childnode refid="226" relation="usage">
+          <edgelabel>serport</edgelabel>
+        </childnode>
+        <childnode refid="228" relation="usage">
+          <edgelabel>wpan_dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="229">
+        <label>wpan_address_t</label>
+        <link refid="structwpan__address__t"/>
+        <childnode refid="230" relation="usage">
+          <edgelabel>ieee</edgelabel>
+        </childnode>
+      </node>
+      <node id="222">
+        <label>xbee_fw_source_t</label>
+        <link refid="structxbee__fw__source__t"/>
+        <childnode refid="223" relation="usage">
+          <edgelabel>xbxm</edgelabel>
+        </childnode>
+        <childnode refid="224" relation="usage">
+          <edgelabel>xbee</edgelabel>
+        </childnode>
+        <childnode refid="236" relation="usage">
+          <edgelabel>oem</edgelabel>
+        </childnode>
+      </node>
+      <node id="227">
+        <label>xbee_cbuf_t</label>
+        <link refid="structxbee__cbuf__t"/>
+      </node>
+      <node id="223">
+        <label>xbee_xmodem_state_t</label>
+        <link refid="structxbee__xmodem__state__t"/>
+      </node>
+      <node id="235">
+        <label>wpan_cluster_table_entry_t</label>
+        <link refid="structwpan__cluster__table__entry__t"/>
+        <childnode refid="231" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="232">
+        <label>wpan_endpoint_table_entry_t</label>
+        <link refid="structwpan__endpoint__table__entry__t"/>
+        <childnode refid="231" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+        <childnode refid="233" relation="usage">
+          <edgelabel>ep_state</edgelabel>
+        </childnode>
+        <childnode refid="235" relation="usage">
+          <edgelabel>cluster_table</edgelabel>
+        </childnode>
+      </node>
+      <node id="236">
+        <label>xbee_fw_oem_state_t</label>
+        <link refid="structxbee__fw__oem__state__t"/>
+      </node>
+      <node id="225">
+        <label>rx</label>
+        <link refid="structxbee__dev__t_1_1rx"/>
+      </node>
+      <node id="230">
+        <label>addr64</label>
+        <link refid="unionaddr64"/>
+      </node>
+      <node id="233">
+        <label>wpan_ep_state_t</label>
+        <link refid="structwpan__ep__state__t"/>
+        <childnode refid="234" relation="usage">
+          <edgelabel>conversations</edgelabel>
+        </childnode>
+      </node>
+      <node id="234">
+        <label>wpan_conversation_t</label>
+        <link refid="structwpan__conversation__t"/>
+        <childnode refid="234" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="228">
+        <label>wpan_dev_t</label>
+        <link refid="structwpan__dev__t"/>
+        <childnode refid="229" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="231" relation="usage">
+          <edgelabel>endpoint_send</edgelabel>
+        </childnode>
+        <childnode refid="232" relation="usage">
+          <edgelabel>endpoint_table</edgelabel>
+          <edgelabel>endpoint_get_next</edgelabel>
+        </childnode>
+        <childnode refid="228" relation="usage">
+          <edgelabel>tick</edgelabel>
+        </childnode>
+      </node>
+      <node id="226">
+        <label>xbee_serial_t</label>
+        <link refid="structxbee__serial__t"/>
+        <childnode refid="227" relation="usage">
+          <edgelabel>rxbuf</edgelabel>
+          <edgelabel>txbuf</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xbee/firmware.h" line="44" column="1" bodyfile="include/xbee/firmware.h" bodystart="43" bodyend="60"/>
+    <listofallmembers>
+      <member refid="group__xbee__firmware_1ga95a0af7504758aa320186c647c2f1602" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>bootloader_cmd</name></member>
+      <member refid="group__xbee__firmware_1gac45b1c32b0ad4fba20266476ed30eba8" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>buffer</name></member>
+      <member refid="group__xbee__firmware_1gaa91f8e864e06077c354e5f5216547758" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>context</name></member>
+      <member refid="group__xbee__firmware_1gac0c302bc97f010b7f5965faa07b00354" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>next_state</name></member>
+      <member refid="group__xbee__firmware_1ga40c4f6007648eeb338136914b8d2502f" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>oem</name></member>
+      <member refid="group__xbee__firmware_1gaa8a1e862580632a934923c7643607fa0" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>read</name></member>
+      <member refid="group__xbee__firmware_1ga30ee257aa91c265b0afee3124c2a218a" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>seek</name></member>
+      <member refid="group__xbee__firmware_1ga89f234133d3efe315836311cbf21c64b" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>state</name></member>
+      <member refid="group__xbee__firmware_1ga0d88807102c8d96e37cb4751f0d5a7d3" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>timer</name></member>
+      <member refid="group__xbee__firmware_1ga04cecf6708b77deed43900afdf14e8d9" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>tries</name></member>
+      <member refid="group__xbee__firmware_1ga6c2fd23dccaff7ddb24daa9daeef8bbb" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>u</name></member>
+      <member refid="group__xbee__firmware_1ga79f0c368a2efd172b3779a2ef3a26706" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>xbee</name></member>
+      <member refid="group__xbee__firmware_1ga198adacee7500d0135a88d6ecc591bf5" prot="public" virt="non-virtual"><scope>xbee_fw_source_t</scope><name>xbxm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

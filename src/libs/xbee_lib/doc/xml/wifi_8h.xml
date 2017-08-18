@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="wifi_8h" kind="file" language="C++">
+    <compoundname>wifi.h</compoundname>
+    <includes refid="platform_8h" local="yes">xbee/platform.h</includes>
+    <includedby refid="xbee__wifi_8c" local="yes">src/xbee/xbee_wifi.c</includedby>
+    <incdepgraph>
+      <node id="780">
+        <label>include/xbee/wifi.h</label>
+        <link refid="wifi_8h"/>
+        <childnode refid="781" relation="include">
+        </childnode>
+      </node>
+      <node id="782">
+        <label>errno.h</label>
+      </node>
+      <node id="784">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="785" relation="include">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>stddef.h</label>
+      </node>
+      <node id="781">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="782" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+      </node>
+      <node id="785">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="786">
+        <label>include/xbee/wifi.h</label>
+        <link refid="wifi_8h"/>
+        <childnode refid="787" relation="include">
+        </childnode>
+      </node>
+      <node id="787">
+        <label>src/xbee/xbee_wifi.c</label>
+        <link refid="xbee__wifi_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__xbee__wifi_1ga104a5fe57f8926732bec0367054329e9" prot="public" static="no">
+        <name>XBEE_WIFI_ENCRYPTION_OPEN</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/wifi.h" line="27" column="9" bodyfile="include/xbee/wifi.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__wifi_1ga0f5c18d63177a1d9954d78e23a2ba4ec" prot="public" static="no">
+        <name>XBEE_WIFI_ENCRYPTION_WPA</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/wifi.h" line="28" column="9" bodyfile="include/xbee/wifi.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__wifi_1gacc89bffb8885dfdb038788f58ab7e0d6" prot="public" static="no">
+        <name>XBEE_WIFI_ENCRYPTION_WPA2</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/wifi.h" line="29" column="9" bodyfile="include/xbee/wifi.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__wifi_1ga32639145bf765415024cd31ef7bbda1b" prot="public" static="no">
+        <name>XBEE_WIFI_ENCRYPTION_WEP</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/wifi.h" line="30" column="9" bodyfile="include/xbee/wifi.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__wifi_1gadfbb4dcc42302b264f6b3d291ca4a8eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * xbee_wifi_encryption_name</definition>
+        <argsstring>(uint8_t type)</argsstring>
+        <name>xbee_wifi_encryption_name</name>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_wifi.c" line="24" column="1" bodyfile="src/xbee/xbee_wifi.c" bodystart="24" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Features related to the Wi-Fi XBee module (S6B). </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2008-2013<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!<sp/>XBEE_WIFI_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#error<sp/>&quot;You<sp/>must<sp/>define<sp/>XBEE_WIFI_ENABLED<sp/>to<sp/>use<sp/>this<sp/>header.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Values<sp/>for<sp/>ATEE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_WIFI_ENCRYPTION_OPEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_WIFI_ENCRYPTION_WPA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_WIFI_ENCRYPTION_WPA2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_WIFI_ENCRYPTION_WEP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xbee_wifi_encryption_name(<sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>);</highlight></codeline>
+    </programlisting>
+    <location file="include/xbee/wifi.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structzcl__struct__element__t" kind="struct" language="C++" prot="public">
+    <compoundname>zcl_struct_element_t</compoundname>
+    <includes refid="zcl_8h" local="yes">zigbee/zcl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__zcl_1ga6934aa0a5db19737df5eec9c2fdeb997" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t zcl_type</definition>
+        <argsstring></argsstring>
+        <name>zcl_type</name>
+        <briefdescription>
+<para>ZCL data type of element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="829" column="1" bodyfile="include/zigbee/zcl.h" bodystart="829" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1gac681806181c80437cfab37335f62ff39" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+<para>offset into structure </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="830" column="1" bodyfile="include/zigbee/zcl.h" bodystart="830" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="structzcl__struct__t" kindref="compound">zcl_struct_t</ref> contains an array of these elements, describing each element in the structure and its offset from the <ref refid="group__zcl_1ga2c4fcaeccedd1b62207f9bb03a26fdf1" kindref="member">zcl_struct_t.base_address</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/zigbee/zcl.h" line="828" column="1" bodyfile="include/zigbee/zcl.h" bodystart="827" bodyend="831"/>
+    <listofallmembers>
+      <member refid="group__zcl_1gac681806181c80437cfab37335f62ff39" prot="public" virt="non-virtual"><scope>zcl_struct_element_t</scope><name>offset</name></member>
+      <member refid="group__zcl_1ga6934aa0a5db19737df5eec9c2fdeb997" prot="public" virt="non-virtual"><scope>zcl_struct_element_t</scope><name>zcl_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

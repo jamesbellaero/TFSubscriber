@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerdir refid="dir_1ee52104a2b273c6010c7bc9f8ba3020">src/dos</innerdir>
+    <innerdir refid="dir_81b068977579f15ef399ea99043c7c5d">src/hcs08</innerdir>
+    <innerdir refid="dir_7d23794a1004e949b1005876c21d9b85">src/mbed</innerdir>
+    <innerdir refid="dir_6887e9b46a560cfc03709f52ff768643">src/posix</innerdir>
+    <innerdir refid="dir_1a0b8b68e354bc4e6cdf833f29d8ce2d">src/rabbit</innerdir>
+    <innerdir refid="dir_b7878ad5ecbf2506f4125b9d34c97e45">src/util</innerdir>
+    <innerdir refid="dir_7dc28ed10c1e0aa99689948e6211576b">src/win32</innerdir>
+    <innerdir refid="dir_0b178283d2f5669718b5a5289ffba26a">src/wpan</innerdir>
+    <innerdir refid="dir_7b3d079087e587fa22c0f02bb9ab59a2">src/xbee</innerdir>
+    <innerdir refid="dir_db2053ddb5ee855fb785fdffadde00e6">src/zigbee</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

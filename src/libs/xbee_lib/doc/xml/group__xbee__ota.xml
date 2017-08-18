@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__xbee__ota" kind="group">
+    <compoundname>xbee_ota</compoundname>
+    <title>Over-The-Air Firmware Update Cluster</title>
+    <innergroup refid="group__xbee__ota__server">Server</innergroup>
+    <innergroup refid="group__xbee__ota__client">Client</innergroup>
+    <briefdescription>
+<para><verbatim>  Support code for performing over-the-air firmware updates on a
+  Programmable XBee module.</verbatim> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,68 @@
+\hypertarget{types_8h}{}\section{include/wpan/types.h File Reference}
+\label{types_8h}\index{include/wpan/types.\+h@{include/wpan/types.\+h}}
+
+
+W\+P\+AN datatypes and support functions, valid for Zig\+Bee and Digi\+Mesh.  
+
+
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionaddr64}{addr64}
+\begin{DoxyCompactList}\small\item\em Typedef used to hold a 64-\/bit I\+E\+EE address, represented as 8 bytes, 4 16-\/bit values or 2 32-\/bit values. \end{DoxyCompactList}\item 
+struct \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Single structure to hold an 802.\+15.\+4 device\textquotesingle{}s 64-\/bit I\+E\+E\+E/\+M\+AC address and 16-\/bit network address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__wpan__types_ga806a2554dd5d8a154d23b13b9cf72141}{A\+D\+D\+R64\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}~\textquotesingle{}-\/\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Separator used by \hyperlink{group__wpan__types_ga448782f4aed0821758969b47221417ed}{addr64\+\_\+format()}, defaults to \textquotesingle{}-\/\textquotesingle{} unless specified at compile time. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__wpan__types_gac468b40b060897498f923923654c3d4a}{A\+D\+D\+R64\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH}~(8 $\ast$ 2 + 7 + 1)
+\begin{DoxyCompactList}\small\item\em Size of character buffer to pass to \hyperlink{group__wpan__types_ga448782f4aed0821758969b47221417ed}{addr64\+\_\+format()} (8 2-\/character bytes, 7 separators and 1 null). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__wpan__types_ga448782f4aed0821758969b47221417ed}{addr64\+\_\+format} (char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Format a 64-\/bit address as a null-\/terminated, printable string (e.\+g., \char`\"{}00-\/13-\/\+A2-\/01-\/23-\/45-\/67\char`\"{}). \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} \hyperlink{group__wpan__types_ga2f0706c06dc9bdcb918b55635dcd9b6f}{addr64\+\_\+equal} (const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$addr1, const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$addr2)
+\begin{DoxyCompactList}\small\item\em Compare two 64-\/bit addresses for equality. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} \hyperlink{group__wpan__types_ga9795dea7f415ceb7502f39a78ebadfc1}{addr64\+\_\+is\+\_\+zero} (const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$addr)
+\begin{DoxyCompactList}\small\item\em Test a 64-\/bit address for zero. \end{DoxyCompactList}\item 
+int \hyperlink{group__wpan__types_ga500b175732df9779b3670e2ba1402530}{addr64\+\_\+parse} (\hyperlink{unionaddr64}{addr64} $\ast$address\+\_\+be, const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$str)
+\begin{DoxyCompactList}\small\item\em Parse a text string into a 64-\/bit I\+E\+EE address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Reserved/\+Special W\+P\+AN network (16-\/bit) addresses}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__wpan__types_ga6865088a83d5dbd67d9185fbe0d25063}{W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+B\+C\+A\+S\+T\+\_\+\+A\+L\+L\+\_\+\+N\+O\+D\+ES}~0x\+F\+F\+FF
+\begin{DoxyCompactList}\small\item\em network broadcast address for all nodes \end{DoxyCompactList}\item 
+\#define \hyperlink{group__wpan__types_ga08ec03f67d0d74ba6f98da543baee129}{W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+B\+C\+A\+S\+T\+\_\+\+N\+O\+T\+\_\+\+A\+S\+L\+E\+EP}~0x\+F\+F\+FD
+\begin{DoxyCompactList}\small\item\em network broadcast address for non-\/sleeping devices \end{DoxyCompactList}\item 
+\#define \hyperlink{group__wpan__types_gabc1252917f345a50aa97f991bb7a3685}{W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+B\+C\+A\+S\+T\+\_\+\+R\+O\+U\+T\+E\+RS}~0x\+F\+F\+FC
+\begin{DoxyCompactList}\small\item\em network broadcast address for all routers (and coordinators) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__wpan__types_ga1674d7b825e528a482725d1c06b02c10}{W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED}~0x\+F\+F\+FE
+\begin{DoxyCompactList}\small\item\em used to indicate 64-\/bit addressing (16-\/bit address is ignored) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__wpan__types_ga5158cbab6c4139bd77d1d3f80d9071b2}{W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+O\+R\+D\+I\+N\+A\+T\+OR}~0x0000
+\begin{DoxyCompactList}\small\item\em network coordinator always uses network address 0x0000 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Reserved/\+Special W\+P\+AN M\+AC (64-\/bit) addresses}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__wpan__types_ga09e965ef6cfbfd48312d86bb011f125b}{W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED}~(\&\hyperlink{group__wpan__types_gaaa2d876b00a2f300e24f1077e17dcb76}{\+\_\+\+W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED})
+\begin{DoxyCompactList}\small\item\em Pointer to {\ttfamily \hyperlink{unionaddr64}{addr64}} representing an undefined I\+E\+EE address (all ones). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__wpan__types_gaced36f5538c5bb2da4f60a90313f1674}{W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST}~(\&\hyperlink{group__wpan__types_ga83c0da7da25848a435da46b80fb70933}{\+\_\+\+W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST})
+\begin{DoxyCompactList}\small\item\em Pointer to {\ttfamily \hyperlink{unionaddr64}{addr64}} representing the broadcast I\+E\+EE address. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__wpan__types_ga816199ef85ef801e07ae48350664034d}{W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+O\+R\+D\+I\+N\+A\+T\+OR}~(\&\hyperlink{group__wpan__types_gac6bb0830c58428d2789507a23ab9fcdd}{\+\_\+\+W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+O\+R\+D\+I\+N\+A\+T\+OR})
+\begin{DoxyCompactList}\small\item\em Pointer to {\ttfamily \hyperlink{unionaddr64}{addr64}} representing the coordinator\textquotesingle{}s I\+E\+EE adddress (all zeros). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__wpan__types_ga014f9d0857312b6a7f80ee10ecfd0935}{W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+A\+L\+L\+\_\+\+Z\+E\+R\+OS}~(\&\hyperlink{group__wpan__types_gac6bb0830c58428d2789507a23ab9fcdd}{\+\_\+\+W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+O\+R\+D\+I\+N\+A\+T\+OR})
+\begin{DoxyCompactList}\small\item\em Pointer to {\ttfamily \hyperlink{unionaddr64}{addr64}} of all zeros. \end{DoxyCompactList}\item 
+const \hyperlink{unionaddr64}{addr64} \hyperlink{group__wpan__types_gaaa2d876b00a2f300e24f1077e17dcb76}{\+\_\+\+W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED}
+\item 
+const \hyperlink{unionaddr64}{addr64} \hyperlink{group__wpan__types_ga83c0da7da25848a435da46b80fb70933}{\+\_\+\+W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST}
+\item 
+const \hyperlink{unionaddr64}{addr64} \hyperlink{group__wpan__types_gac6bb0830c58428d2789507a23ab9fcdd}{\+\_\+\+W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+O\+R\+D\+I\+N\+A\+T\+OR}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+W\+P\+AN datatypes and support functions, valid for Zig\+Bee and Digi\+Mesh. 
+

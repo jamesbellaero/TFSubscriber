@@ -1,0 +1,629 @@
+\hypertarget{group__xbee__firmware}{}\section{Firmware Updates}
+\label{group__xbee__firmware}\index{Firmware Updates@{Firmware Updates}}
+
+
+This layer makes use of lower layers to perform updates on X\+Bee modules.  
+
+
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{xbee__firmware_8c}{xbee\+\_\+firmware.\+c}
+\begin{DoxyCompactList}\small\item\em A\+PI related to updating X\+Bee firmware on the local X\+Bee module. \end{DoxyCompactList}\item 
+file \hyperlink{firmware_8h}{firmware.\+h}
+\begin{DoxyCompactList}\small\item\em Driver layer for performing X\+Bee firmware updates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structxbee__fw__oem__state__t}{xbee\+\_\+fw\+\_\+oem\+\_\+state\+\_\+t}
+\item 
+struct \hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t}
+\item 
+struct \hyperlink{structxbee__fw__buffer__t}{xbee\+\_\+fw\+\_\+buffer\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga67178b0dd7b917c4416789c1b17931c0}\label{group__xbee__firmware_ga67178b0dd7b917c4416789c1b17931c0}} 
+\#define {\bfseries \+\_\+xbee\+\_\+firmware\+\_\+debug}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga89e5bb5d965f258c48d9cea25e67ebd9}\label{group__xbee__firmware_ga89e5bb5d965f258c48d9cea25e67ebd9}} 
+\#define {\bfseries \+\_\+\+T\+I\+M\+E\+\_\+\+E\+L\+A\+P\+S\+ED}(x)~(\hyperlink{group__hal_ga22b4e3df788254ca5f8530e9aee58515}{xbee\+\_\+millisecond\+\_\+timer}() -\/ source-\/$>$timer $>$ (x))
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga89e5bb5d965f258c48d9cea25e67ebd9}\label{group__xbee__firmware_ga89e5bb5d965f258c48d9cea25e67ebd9}} 
+\#define {\bfseries \+\_\+\+T\+I\+M\+E\+\_\+\+E\+L\+A\+P\+S\+ED}(x)~(\hyperlink{group__hal_ga22b4e3df788254ca5f8530e9aee58515}{xbee\+\_\+millisecond\+\_\+timer}() -\/ source-\/$>$timer $>$ (x))
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gacc2d97a3340a997e4ac2df44e42d3220}\label{group__xbee__firmware_gacc2d97a3340a997e4ac2df44e42d3220}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+E\+M\+\_\+\+M\+A\+G\+I\+C\+\_\+\+N\+U\+M\+B\+ER}~0x93\+FD
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gab7b27e58766348f7ee11552e19a3dc80}\label{group__xbee__firmware_gab7b27e58766348f7ee11552e19a3dc80}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+E\+M\+\_\+\+O\+F\+S\+\_\+\+M\+A\+G\+I\+C\+\_\+\+N\+U\+M\+B\+ER}~0
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga61fbda32638ce4b34b34f9be4e323f69}\label{group__xbee__firmware_ga61fbda32638ce4b34b34f9be4e323f69}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+E\+M\+\_\+\+O\+F\+S\+\_\+\+C\+H\+E\+C\+K\+S\+UM}~2
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga30791d99a3f412a18712b68f42f913be}\label{group__xbee__firmware_ga30791d99a3f412a18712b68f42f913be}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+E\+M\+\_\+\+O\+F\+S\+\_\+\+I\+M\+A\+G\+E\+\_\+\+L\+EN}~4
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gab7cea8c88aa786bdc27e3e2a14f52278}\label{group__xbee__firmware_gab7cea8c88aa786bdc27e3e2a14f52278}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+E\+M\+\_\+\+O\+F\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+EN}~8
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga9819ebdc24e69594a3f511caa46a7ea9}\label{group__xbee__firmware_ga9819ebdc24e69594a3f511caa46a7ea9}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+E\+M\+\_\+\+O\+F\+S\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+ID}~10
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga36a4d3918b8dce95c49f64a66a60c940}\label{group__xbee__firmware_ga36a4d3918b8dce95c49f64a66a60c940}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+E\+M\+\_\+\+O\+F\+S\+\_\+\+S\+W\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+L\+E\+V\+EL}~11
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga08c3c592ffffa1278d96c33fda285b87}\label{group__xbee__firmware_ga08c3c592ffffa1278d96c33fda285b87}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+E\+M\+\_\+\+O\+F\+S\+\_\+\+F\+W\+\_\+\+V\+E\+R\+S\+I\+ON}~12
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gab7cbb4f6b1f3bb08d85a092921689c57}\label{group__xbee__firmware_gab7cbb4f6b1f3bb08d85a092921689c57}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R\+\_\+\+A\+CK}~\textquotesingle{}U\textquotesingle{}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga4a6c559672de2516d8d86335f1753715}\label{group__xbee__firmware_ga4a6c559672de2516d8d86335f1753715}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+E\+R\+\_\+\+N\+AK}~0x11
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga01933f6abed1e3799566a284d24af8b3}\label{group__xbee__firmware_ga01933f6abed1e3799566a284d24af8b3}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+E\+M\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE}~0x0000
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga28fca9c70673cb50a5103c8685e1af36}\label{group__xbee__firmware_ga28fca9c70673cb50a5103c8685e1af36}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+E\+M\+\_\+\+F\+L\+A\+G\+\_\+\+F\+O\+R\+C\+E\+U\+P\+D\+A\+TE}~0x0001
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gab8438d198ddcd31a879433fe582a7b7c}\label{group__xbee__firmware_gab8438d198ddcd31a879433fe582a7b7c}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+L\+O\+A\+D\+\_\+\+T\+I\+M\+E\+O\+UT}~5000
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gae475cea6680670df9180ef1ce2603fb6}\label{group__xbee__firmware_gae475cea6680670df9180ef1ce2603fb6}} 
+\#define \hyperlink{group__xbee__firmware_gae475cea6680670df9180ef1ce2603fb6}{xbee\+\_\+fw\+\_\+install\+\_\+hcs08\+\_\+state}(source)~\hyperlink{group__xbee__firmware_ga8590708a38ac57ace8c816cc7cfd0859}{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state}( source)
+\begin{DoxyCompactList}\small\item\em See documentation for \hyperlink{group__xbee__firmware_ga8590708a38ac57ace8c816cc7cfd0859}{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state()}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga8fb52237a7a070f5e2c56ef410c5f0f3}\label{group__xbee__firmware_ga8fb52237a7a070f5e2c56ef410c5f0f3}} 
+\#define \hyperlink{group__xbee__firmware_ga8fb52237a7a070f5e2c56ef410c5f0f3}{xbee\+\_\+fw\+\_\+status\+\_\+hcs08}(source,  buff)~\hyperlink{group__xbee__firmware_ga8bee6e4bb7564c51bb38129e97a12e99}{xbee\+\_\+fw\+\_\+status\+\_\+ebl}( source, buff)
+\begin{DoxyCompactList}\small\item\em See documentation for \hyperlink{group__xbee__firmware_ga8bee6e4bb7564c51bb38129e97a12e99}{xbee\+\_\+fw\+\_\+status\+\_\+ebl()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries \+\_\+xbee\+\_\+oem\+\_\+header}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga99fb83031ce9923c84392b4e92f956b5}\label{group__xbee__firmware_ga99fb83031ce9923c84392b4e92f956b5}} 
+enum \{ \newline
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+IT}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+S\+ET}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+O\+G\+G\+LE}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+R\+E\+AK}, 
+\newline
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+M\+PT}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+X\+M\+O\+D\+E\+M\+\_\+\+W\+A\+IT}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+X\+M\+O\+D\+E\+M\+\_\+\+S\+E\+ND}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+X\+M\+O\+D\+E\+M\+\_\+\+D\+O\+NE}, 
+\newline
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+F\+I\+N\+A\+L\+\_\+\+P\+R\+O\+M\+PT}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+M\+D\+\_\+\+P\+E\+N\+D\+I\+NG}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+MD}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+A\+R\+S\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE}, 
+\newline
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+M\+D\+\_\+\+HV}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+M\+D\+\_\+\+C\+O\+M\+P\+AT}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+M\+D\+\_\+\+VR}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+M\+D\+\_\+\+C\+F1}, 
+\newline
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+M\+D\+\_\+\+SL}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+M\+D\+\_\+\+P\+R\+OG}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+M\+D\+\_\+\+FR}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+O\+T\+L\+O\+A\+D\+ER}, 
+\newline
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+S\+T\+A\+RT}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+X\+\_\+\+B\+L\+O\+CK}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+S\+E\+N\+D\+I\+NG}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+B\+L\+O\+CK}, 
+\newline
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+X\+\_\+\+F\+A\+IL}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+O\+NE}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+F\+A\+I\+L\+U\+RE}, 
+{\bfseries X\+B\+E\+E\+\_\+\+F\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+S\+U\+C\+C\+E\+SS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug int \hyperlink{group__xbee__firmware_ga3ea95570f7d7366e42b0ee6ba21a1c41}{xbee\+\_\+fw\+\_\+install\+\_\+init} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$target, \hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source)
+\begin{DoxyCompactList}\small\item\em \begin{DoxyVerb}        Prepare to install new firmware on an attached XBee module.\end{DoxyVerb}
+ \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug unsigned int \hyperlink{group__xbee__firmware_ga8590708a38ac57ace8c816cc7cfd0859}{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source)
+\begin{DoxyCompactList}\small\item\em Returns a unique value indicating the state of the .E\+BL install process. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug int \hyperlink{group__xbee__firmware_ga00113850eb74d0cb2928c9530d253381}{xbee\+\_\+fw\+\_\+install\+\_\+hcs08\+\_\+tick} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source)
+\begin{DoxyCompactList}\small\item\em Drive the firmware update process for the H\+C\+S08 application on Programmable X\+Bee modules. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug int \hyperlink{group__xbee__firmware_gaae62252a2e1331127c9df86b6ebfc4e8}{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+tick} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source)
+\begin{DoxyCompactList}\small\item\em Drive the firmware update process for boards that use .E\+BL files to store their firmware. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__xbee__firmware_ga8bee6e4bb7564c51bb38129e97a12e99}{xbee\+\_\+fw\+\_\+status\+\_\+ebl} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source, char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em \begin{DoxyVerb}  Update \a buffer with the current install status of \a source.\end{DoxyVerb}
+ \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug int \hyperlink{group__xbee__firmware_ga279def556401f533d798bb3896302ced}{xbee\+\_\+fw\+\_\+read\+\_\+byte} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source)
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga746388cd011a0d01a71d8165f218ac0c}\label{group__xbee__firmware_ga746388cd011a0d01a71d8165f218ac0c}} 
+\+\_\+xbee\+\_\+firmware\+\_\+debug \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries xbee\+\_\+fw\+\_\+read\+\_\+uint16} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source)
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gac6ee0eef9cb2fad06cdb35e7efbfa4b7}\label{group__xbee__firmware_gac6ee0eef9cb2fad06cdb35e7efbfa4b7}} 
+\+\_\+xbee\+\_\+firmware\+\_\+debug \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries xbee\+\_\+fw\+\_\+read\+\_\+uint32} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source)
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga435d274639214c2d05e85602bb5753b0}\label{group__xbee__firmware_ga435d274639214c2d05e85602bb5753b0}} 
+\+\_\+xbee\+\_\+firmware\+\_\+debug \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries xbee\+\_\+fw\+\_\+hex2word} (const char $\ast$p\+String)
+\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug int \hyperlink{group__xbee__firmware_ga06368ad0d6cc0d4e92dbf36f8b233f90}{\+\_\+xbee\+\_\+oem\+\_\+verify} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source)
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga2ab185ce19159e57ca4666300be1a94b}\label{group__xbee__firmware_ga2ab185ce19159e57ca4666300be1a94b}} 
+\+\_\+xbee\+\_\+firmware\+\_\+debug int {\bfseries \+\_\+xbee\+\_\+fw\+\_\+send\+\_\+request} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source, const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} char $\ast$request, int next\+\_\+state)
+\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug int \hyperlink{group__xbee__firmware_gaea52642560ef68878fbca44e81df2be8}{xbee\+\_\+fw\+\_\+install\+\_\+oem\+\_\+tick} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source)
+\begin{DoxyCompactList}\small\item\em Install the firmware image stored in {\itshape source}. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__xbee__firmware_ga0198db687345929eece03335ea1c7701}{xbee\+\_\+fw\+\_\+status\+\_\+oem} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source, char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Update {\itshape buffer} with the current install status of {\itshape source}. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug int \hyperlink{group__xbee__firmware_ga86a474f683ca3239ddea7b6414a6c555}{\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+seek} (void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} offset)
+\begin{DoxyCompactList}\small\item\em Helper function used when the source firmware image is entirely held in a buffer. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug int \hyperlink{group__xbee__firmware_ga3e528e574ae73a5f8bbc8b2783f04c4f}{\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+read} (void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} bytes)
+\begin{DoxyCompactList}\small\item\em Helper function used when the source firmware image is entirely held in a buffer. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+firmware\+\_\+debug int \hyperlink{group__xbee__firmware_ga8ac2a394778a985657db3c7f08b12692}{xbee\+\_\+fw\+\_\+buffer\+\_\+init} (\hyperlink{structxbee__fw__buffer__t}{xbee\+\_\+fw\+\_\+buffer\+\_\+t} $\ast$fw, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Helper function for setting up an \hyperlink{structxbee__fw__buffer__t}{xbee\+\_\+fw\+\_\+buffer\+\_\+t} for use with a source firmware image held entirely in a buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga6796c847bbd16253ce2538754c250bd6}\label{group__xbee__firmware_ga6796c847bbd16253ce2538754c250bd6}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries checksum}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga4de969ee47deaf3562bc7175ce46d8d6}\label{group__xbee__firmware_ga4de969ee47deaf3562bc7175ce46d8d6}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries image\+\_\+len}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gaf377dbe5982b0f6ee2f3f01826aaed5e}\label{group__xbee__firmware_gaf377dbe5982b0f6ee2f3f01826aaed5e}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries header\+\_\+len}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga68ff5f6cab8d5a337f7caa2bd0a8f5da}\label{group__xbee__firmware_ga68ff5f6cab8d5a337f7caa2bd0a8f5da}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries module\+\_\+id}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga53f7e683f3ff948b2ed5debd6e76a43b}\label{group__xbee__firmware_ga53f7e683f3ff948b2ed5debd6e76a43b}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries software\+\_\+id}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gac9da2c457e0aecd27ecabc42941c8c37}\label{group__xbee__firmware_gac9da2c457e0aecd27ecabc42941c8c37}} 
+{\bfseries xbee\+\_\+oem\+\_\+header\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gaaf993ea8576712b7e3f946ee716a1aa3}\label{group__xbee__firmware_gaaf993ea8576712b7e3f946ee716a1aa3}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries firmware\+\_\+length}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gaf563348d7d0afde1c7df0262979e78c5}\label{group__xbee__firmware_gaf563348d7d0afde1c7df0262979e78c5}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries block\+\_\+offset}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gaaff24a22c5321fbbc3715b1642e1bd26}\label{group__xbee__firmware_gaaff24a22c5321fbbc3715b1642e1bd26}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries cur\+\_\+offset}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga697415db67a165624b2b440418635e68}\label{group__xbee__firmware_ga697415db67a165624b2b440418635e68}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries block\+\_\+length}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga79f0c368a2efd172b3779a2ef3a26706}\label{group__xbee__firmware_ga79f0c368a2efd172b3779a2ef3a26706}} 
+\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$ {\bfseries xbee}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga89f234133d3efe315836311cbf21c64b}\label{group__xbee__firmware_ga89f234133d3efe315836311cbf21c64b}} 
+int {\bfseries state}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gac0c302bc97f010b7f5965faa07b00354}\label{group__xbee__firmware_gac0c302bc97f010b7f5965faa07b00354}} 
+int {\bfseries next\+\_\+state}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga04cecf6708b77deed43900afdf14e8d9}\label{group__xbee__firmware_ga04cecf6708b77deed43900afdf14e8d9}} 
+int {\bfseries tries}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga95a0af7504758aa320186c647c2f1602}\label{group__xbee__firmware_ga95a0af7504758aa320186c647c2f1602}} 
+char {\bfseries bootloader\+\_\+cmd}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga0d88807102c8d96e37cb4751f0d5a7d3}\label{group__xbee__firmware_ga0d88807102c8d96e37cb4751f0d5a7d3}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries timer}
+\item 
+\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} {\bfseries xbxm}
+\item 
+\hyperlink{structxbee__fw__oem__state__t}{xbee\+\_\+fw\+\_\+oem\+\_\+state\+\_\+t} {\bfseries oem}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga6c2fd23dccaff7ddb24daa9daeef8bbb}\label{group__xbee__firmware_ga6c2fd23dccaff7ddb24daa9daeef8bbb}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{structxbee__xmodem__state__t}{xbee\_xmodem\_state\_t} {\bfseries xbxm}\\
+\>\hyperlink{structxbee__fw__oem__state__t}{xbee\_fw\_oem\_state\_t} {\bfseries oem}\\
+\} {\bfseries u}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{group__xbee__firmware_gac45b1c32b0ad4fba20266476ed30eba8}\label{group__xbee__firmware_gac45b1c32b0ad4fba20266476ed30eba8}} 
+char {\bfseries buffer} \mbox{[}128+5\mbox{]}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga30ee257aa91c265b0afee3124c2a218a}\label{group__xbee__firmware_ga30ee257aa91c265b0afee3124c2a218a}} 
+int($\ast$ {\bfseries seek} )(void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} offset)
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gaa8a1e862580632a934923c7643607fa0}\label{group__xbee__firmware_gaa8a1e862580632a934923c7643607fa0}} 
+int($\ast$ {\bfseries read} )(void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} bytes)
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gaa91f8e864e06077c354e5f5216547758}\label{group__xbee__firmware_gaa91f8e864e06077c354e5f5216547758}} 
+void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries context}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga6de9d84924d5c74f1b9021b1637ecf50}\label{group__xbee__firmware_ga6de9d84924d5c74f1b9021b1637ecf50}} 
+\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} {\bfseries source}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gaebb70c2aab3407a9f05334c47131a43b}\label{group__xbee__firmware_gaebb70c2aab3407a9f05334c47131a43b}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries length}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_gad13231c128c8fc0014133ee29ccdf9f8}\label{group__xbee__firmware_gad13231c128c8fc0014133ee29ccdf9f8}} 
+const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries address}
+\item 
+\mbox{\Hypertarget{group__xbee__firmware_ga894bdfa2d603d8343f8ef01dda6fcd23}\label{group__xbee__firmware_ga894bdfa2d603d8343f8ef01dda6fcd23}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries offset}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This layer makes use of lower layers to perform updates on X\+Bee modules. 
+
+Both file formats are supported -- .ebl (Z\+Net, Zig\+Bee, Smart Energy) and .oem (Digi\+Mesh). 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__xbee__firmware_gadac4f2ab2bea98ef37c8f49b61817ae5}\label{group__xbee__firmware_gadac4f2ab2bea98ef37c8f49b61817ae5}} 
+\index{Firmware Updates@{Firmware Updates}!\+\_\+xbee\+\_\+oem\+\_\+header@{\+\_\+xbee\+\_\+oem\+\_\+header}}
+\index{\+\_\+xbee\+\_\+oem\+\_\+header@{\+\_\+xbee\+\_\+oem\+\_\+header}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+oem\+\_\+header}{\_xbee\_oem\_header}}
+{\footnotesize\ttfamily typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \+\_\+xbee\+\_\+oem\+\_\+header}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t}        magic
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__xbee__firmware_ga3e528e574ae73a5f8bbc8b2783f04c4f}\label{group__xbee__firmware_ga3e528e574ae73a5f8bbc8b2783f04c4f}} 
+\index{Firmware Updates@{Firmware Updates}!\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+read@{\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+read}}
+\index{\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+read@{\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+read}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+read()}{\_xbee\_fw\_buffer\_read()}}
+{\footnotesize\ttfamily \+\_\+xbee\+\_\+firmware\+\_\+debug int \+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+read (\begin{DoxyParamCaption}\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Helper function used when the source firmware image is entirely held in a buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em context} & address of \hyperlink{structxbee__fw__buffer__t}{xbee\+\_\+fw\+\_\+buffer\+\_\+t} object \\
+\hline
+\mbox{\tt out}  & {\em buffer} & destination buffer to read bytes into \\
+\hline
+\mbox{\tt in}  & {\em bytes} & number of bytes to read\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/\+E\+N\+O\+D\+A\+TA} & no more bytes available to read \\
+\hline
+{\em 0-\/bytes} & number of bytes read \\
+\hline
+\end{DoxyRetVals}
+
+
+References F\+AR.
+
+
+
+Referenced by xbee\+\_\+fw\+\_\+buffer\+\_\+init().
+
+\mbox{\Hypertarget{group__xbee__firmware_ga86a474f683ca3239ddea7b6414a6c555}\label{group__xbee__firmware_ga86a474f683ca3239ddea7b6414a6c555}} 
+\index{Firmware Updates@{Firmware Updates}!\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+seek@{\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+seek}}
+\index{\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+seek@{\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+seek}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+seek()}{\_xbee\_fw\_buffer\_seek()}}
+{\footnotesize\ttfamily \+\_\+xbee\+\_\+firmware\+\_\+debug int \+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+seek (\begin{DoxyParamCaption}\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context,  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{offset }\end{DoxyParamCaption})}
+
+
+
+Helper function used when the source firmware image is entirely held in a buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em context} & address of \hyperlink{structxbee__fw__buffer__t}{xbee\+\_\+fw\+\_\+buffer\+\_\+t} object \\
+\hline
+\mbox{\tt in}  & {\em offset} & offset to new position\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/\+E\+I\+N\+V\+AL} & offset greater than length of file \\
+\hline
+{\em 0} & seek successful \\
+\hline
+\end{DoxyRetVals}
+
+
+References F\+AR.
+
+
+
+Referenced by xbee\+\_\+fw\+\_\+buffer\+\_\+init().
+
+\mbox{\Hypertarget{group__xbee__firmware_ga06368ad0d6cc0d4e92dbf36f8b233f90}\label{group__xbee__firmware_ga06368ad0d6cc0d4e92dbf36f8b233f90}} 
+\index{Firmware Updates@{Firmware Updates}!\+\_\+xbee\+\_\+oem\+\_\+verify@{\+\_\+xbee\+\_\+oem\+\_\+verify}}
+\index{\+\_\+xbee\+\_\+oem\+\_\+verify@{\+\_\+xbee\+\_\+oem\+\_\+verify}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+oem\+\_\+verify()}{\_xbee\_oem\_verify()}}
+{\footnotesize\ttfamily \+\_\+xbee\+\_\+firmware\+\_\+debug int \+\_\+xbee\+\_\+oem\+\_\+verify (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$}]{source }\end{DoxyParamCaption})}
+
+Validate the firmware image stored in {\ttfamily source}. Checks the header, length and checksum.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & Firmware source initialized with {\ttfamily seek} and {\ttfamily read} functions.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Source contains a valid firmware image. \\
+\hline
+{\em -\/\+E\+I\+L\+S\+EQ} & Source does not contain a valid firmware image. \\
+\hline
+{\em -\/\+E\+IO} & I/O error reading from firmware image \\
+\hline
+{\em -\/\+E\+B\+A\+D\+M\+SG} & Firmware checksum failed, image is bad. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__xbee__firmware_ga8ac2a394778a985657db3c7f08b12692}\label{group__xbee__firmware_ga8ac2a394778a985657db3c7f08b12692}} 
+\index{Firmware Updates@{Firmware Updates}!xbee\+\_\+fw\+\_\+buffer\+\_\+init@{xbee\+\_\+fw\+\_\+buffer\+\_\+init}}
+\index{xbee\+\_\+fw\+\_\+buffer\+\_\+init@{xbee\+\_\+fw\+\_\+buffer\+\_\+init}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{xbee\+\_\+fw\+\_\+buffer\+\_\+init()}{xbee\_fw\_buffer\_init()}}
+{\footnotesize\ttfamily int xbee\+\_\+fw\+\_\+buffer\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__fw__buffer__t}{xbee\+\_\+fw\+\_\+buffer\+\_\+t} $\ast$}]{fw,  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{length,  }\item[{const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Helper function for setting up an \hyperlink{structxbee__fw__buffer__t}{xbee\+\_\+fw\+\_\+buffer\+\_\+t} for use with a source firmware image held entirely in a buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em fw} & structure to configure for reading firmware from a buffer \\
+\hline
+\mbox{\tt in}  & {\em length} & number of bytes in firmware image \\
+\hline
+\mbox{\tt in}  & {\em address} & address of buffer containing firmware\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter \\
+\hline
+\end{DoxyRetVals}
+
+
+References \+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+read(), \+\_\+xbee\+\_\+fw\+\_\+buffer\+\_\+seek(), E\+I\+N\+V\+AL, F\+AR, and length.
+
+\mbox{\Hypertarget{group__xbee__firmware_ga8590708a38ac57ace8c816cc7cfd0859}\label{group__xbee__firmware_ga8590708a38ac57ace8c816cc7cfd0859}} 
+\index{Firmware Updates@{Firmware Updates}!xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state@{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state}}
+\index{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state@{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state()}{xbee\_fw\_install\_ebl\_state()}}
+{\footnotesize\ttfamily unsigned int xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$}]{source }\end{DoxyParamCaption})}
+
+
+
+Returns a unique value indicating the state of the .E\+BL install process. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & object used to track state of transfer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unique value that changes whenever the transfer state changes
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__firmware_ga8bee6e4bb7564c51bb38129e97a12e99}{xbee\+\_\+fw\+\_\+status\+\_\+ebl} 
+\end{DoxySeeAlso}
+
+
+References xbee\+\_\+xmodem\+\_\+state\+\_\+t\+::packet\+\_\+num.
+
+\mbox{\Hypertarget{group__xbee__firmware_gaae62252a2e1331127c9df86b6ebfc4e8}\label{group__xbee__firmware_gaae62252a2e1331127c9df86b6ebfc4e8}} 
+\index{Firmware Updates@{Firmware Updates}!xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+tick@{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+tick}}
+\index{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+tick@{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+tick}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+tick()}{xbee\_fw\_install\_ebl\_tick()}}
+{\footnotesize\ttfamily int xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+tick (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$}]{source }\end{DoxyParamCaption})}
+
+
+
+Drive the firmware update process for boards that use .E\+BL files to store their firmware. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em source} & object used to track state of transfer\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & update is in progress \\
+\hline
+{\em 1} & update completed successfully \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape source} is invalid \\
+\hline
+{\em -\/\+E\+IO} & general failure \\
+\hline
+{\em -\/\+E\+T\+I\+M\+E\+D\+O\+UT} & connection timed out waiting for data from target\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__firmware_ga3ea95570f7d7366e42b0ee6ba21a1c41}{xbee\+\_\+fw\+\_\+install\+\_\+init}, \hyperlink{group__xbee__firmware_ga8590708a38ac57ace8c816cc7cfd0859}{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state}, \hyperlink{group__xbee__firmware_ga8bee6e4bb7564c51bb38129e97a12e99}{xbee\+\_\+fw\+\_\+status\+\_\+ebl} 
+\end{DoxySeeAlso}
+
+
+References E\+I\+N\+V\+AL, and xbee\+\_\+dev\+\_\+t\+::serport.
+
+\mbox{\Hypertarget{group__xbee__firmware_ga00113850eb74d0cb2928c9530d253381}\label{group__xbee__firmware_ga00113850eb74d0cb2928c9530d253381}} 
+\index{Firmware Updates@{Firmware Updates}!xbee\+\_\+fw\+\_\+install\+\_\+hcs08\+\_\+tick@{xbee\+\_\+fw\+\_\+install\+\_\+hcs08\+\_\+tick}}
+\index{xbee\+\_\+fw\+\_\+install\+\_\+hcs08\+\_\+tick@{xbee\+\_\+fw\+\_\+install\+\_\+hcs08\+\_\+tick}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{xbee\+\_\+fw\+\_\+install\+\_\+hcs08\+\_\+tick()}{xbee\_fw\_install\_hcs08\_tick()}}
+{\footnotesize\ttfamily int xbee\+\_\+fw\+\_\+install\+\_\+hcs08\+\_\+tick (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$}]{source }\end{DoxyParamCaption})}
+
+
+
+Drive the firmware update process for the H\+C\+S08 application on Programmable X\+Bee modules. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em source} & object used to track state of transfer\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & update is in progress \\
+\hline
+{\em 1} & update completed successfully \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape source} is invalid \\
+\hline
+{\em -\/\+E\+IO} & general failure \\
+\hline
+{\em -\/\+E\+T\+I\+M\+E\+D\+O\+UT} & connection timed out waiting for data from target\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__firmware_ga3ea95570f7d7366e42b0ee6ba21a1c41}{xbee\+\_\+fw\+\_\+install\+\_\+init}, \hyperlink{group__xbee__firmware_ga8590708a38ac57ace8c816cc7cfd0859}{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state}, \hyperlink{group__xbee__firmware_ga8bee6e4bb7564c51bb38129e97a12e99}{xbee\+\_\+fw\+\_\+status\+\_\+ebl} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__firmware_ga3ea95570f7d7366e42b0ee6ba21a1c41}\label{group__xbee__firmware_ga3ea95570f7d7366e42b0ee6ba21a1c41}} 
+\index{Firmware Updates@{Firmware Updates}!xbee\+\_\+fw\+\_\+install\+\_\+init@{xbee\+\_\+fw\+\_\+install\+\_\+init}}
+\index{xbee\+\_\+fw\+\_\+install\+\_\+init@{xbee\+\_\+fw\+\_\+install\+\_\+init}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{xbee\+\_\+fw\+\_\+install\+\_\+init()}{xbee\_fw\_install\_init()}}
+{\footnotesize\ttfamily int xbee\+\_\+fw\+\_\+install\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{target,  }\item[{\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$}]{source }\end{DoxyParamCaption})}
+
+
+
+\begin{DoxyVerb}        Prepare to install new firmware on an attached XBee module.\end{DoxyVerb}
+ 
+
+The host must be able to control the reset pin of the X\+Bee module.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & X\+Bee device to install firmware on. Must have been set up with \hyperlink{group__xbee__device_ga550d7c865e75d3fc1df0e64cb880cf3d}{xbee\+\_\+dev\+\_\+init()}.\\
+\hline
+\mbox{\tt in}  & {\em target} & The current version of this library can only update the local X\+Bee module, so this parameter should always be N\+U\+LL. When over-\/the-\/air (O\+TA) updating is supported, this paramter will be the address of a remote module to update.\\
+\hline
+\mbox{\tt in}  & {\em source} & Structure with function pointers for seeking and reading from the new firmware image.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+\textcolor{comment}{// Function prototypes for functions that will provide firmware}
+\textcolor{comment}{// bytes when called by xbee\_fw\_install\_tick().}
+\textcolor{keywordtype}{int} my\_firmware\_seek( \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\_t} offset);
+\textcolor{keywordtype}{int} my\_firmware\_read( \textcolor{keywordtype}{void} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{FAR} *buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\_t} bytes);
+
+\hyperlink{structxbee__fw__source__t}{xbee\_fw\_source\_t}  fw;
+\hyperlink{structxbee__dev__t}{xbee\_dev\_t}        xbee;
+
+fw.seek = &my\_firmware\_seek;
+fw.read = &my\_firmware\_read;
+
+\hyperlink{group__xbee__device_ga550d7c865e75d3fc1df0e64cb880cf3d}{xbee\_dev\_init}( &xbee, ...);
+\hyperlink{group__xbee__firmware_ga3ea95570f7d7366e42b0ee6ba21a1c41}{xbee\_fw\_install\_init}( &xbee, &fw);
+\end{DoxyCode}
+
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & N\+U\+LL parameter passed to function \\
+\hline
+{\em -\/\+E\+IO} & X\+Bee device passed to function doesn\textquotesingle{}t have a callback for controlling the reset pin on the X\+Bee module. \\
+\hline
+\end{DoxyRetVals}
+
+
+References E\+I\+N\+V\+AL.
+
+\mbox{\Hypertarget{group__xbee__firmware_gaea52642560ef68878fbca44e81df2be8}\label{group__xbee__firmware_gaea52642560ef68878fbca44e81df2be8}} 
+\index{Firmware Updates@{Firmware Updates}!xbee\+\_\+fw\+\_\+install\+\_\+oem\+\_\+tick@{xbee\+\_\+fw\+\_\+install\+\_\+oem\+\_\+tick}}
+\index{xbee\+\_\+fw\+\_\+install\+\_\+oem\+\_\+tick@{xbee\+\_\+fw\+\_\+install\+\_\+oem\+\_\+tick}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{xbee\+\_\+fw\+\_\+install\+\_\+oem\+\_\+tick()}{xbee\_fw\_install\_oem\_tick()}}
+{\footnotesize\ttfamily int xbee\+\_\+fw\+\_\+install\+\_\+oem\+\_\+tick (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$}]{source }\end{DoxyParamCaption})}
+
+
+
+Install the firmware image stored in {\itshape source}. 
+
+You must call \hyperlink{group__xbee__firmware_ga3ea95570f7d7366e42b0ee6ba21a1c41}{xbee\+\_\+fw\+\_\+install\+\_\+init()} on the source before calling this tick function.
+
+If successful, X\+Bee will be running the new firmware at 115,200 baud.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & Firmware source initialized with seek and read functions.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & Successfully installed new firmware. \\
+\hline
+{\em 0} & Firmware installation in progress (incomplete). \\
+\hline
+{\em -\/\+E\+I\+L\+S\+EQ} & {\itshape firmware} does not contain a valid firmware image. \\
+\hline
+{\em -\/\+E\+B\+A\+D\+M\+SG} & Firmware checksum failed, image is bad. \\
+\hline
+{\em -\/\+E\+IO} & Couldn\textquotesingle{}t establish communications with X\+Bee module. \\
+\hline
+{\em -\/\+E\+N\+O\+T\+S\+UP} & Firmware is not compatible with this hardware. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__xbee__firmware_ga279def556401f533d798bb3896302ced}\label{group__xbee__firmware_ga279def556401f533d798bb3896302ced}} 
+\index{Firmware Updates@{Firmware Updates}!xbee\+\_\+fw\+\_\+read\+\_\+byte@{xbee\+\_\+fw\+\_\+read\+\_\+byte}}
+\index{xbee\+\_\+fw\+\_\+read\+\_\+byte@{xbee\+\_\+fw\+\_\+read\+\_\+byte}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{xbee\+\_\+fw\+\_\+read\+\_\+byte()}{xbee\_fw\_read\_byte()}}
+{\footnotesize\ttfamily \+\_\+xbee\+\_\+firmware\+\_\+debug int xbee\+\_\+fw\+\_\+read\+\_\+byte (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$}]{source }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000011}{Todo}]check return value of source-\/$>$read here and in \+\_\+uint16 and \+\_\+uint32? \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__xbee__firmware_ga8bee6e4bb7564c51bb38129e97a12e99}\label{group__xbee__firmware_ga8bee6e4bb7564c51bb38129e97a12e99}} 
+\index{Firmware Updates@{Firmware Updates}!xbee\+\_\+fw\+\_\+status\+\_\+ebl@{xbee\+\_\+fw\+\_\+status\+\_\+ebl}}
+\index{xbee\+\_\+fw\+\_\+status\+\_\+ebl@{xbee\+\_\+fw\+\_\+status\+\_\+ebl}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{xbee\+\_\+fw\+\_\+status\+\_\+ebl()}{xbee\_fw\_status\_ebl()}}
+{\footnotesize\ttfamily char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ xbee\+\_\+fw\+\_\+status\+\_\+ebl (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$}]{source,  }\item[{char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+\begin{DoxyVerb}  Update \a buffer with the current install status of \a source.\end{DoxyVerb}
+ 
+
+Note that this string will only change if the return value of \hyperlink{group__xbee__firmware_ga8590708a38ac57ace8c816cc7cfd0859}{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state()} has changed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & State variable to generate status string for.\\
+\hline
+\mbox{\tt out}  & {\em buffer} & Buffer (at least 80 bytes) to receive dynamic status string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns parameter 2 or a pointer to a fixed status string.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__firmware_ga8590708a38ac57ace8c816cc7cfd0859}{xbee\+\_\+fw\+\_\+install\+\_\+ebl\+\_\+state} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__firmware_ga0198db687345929eece03335ea1c7701}\label{group__xbee__firmware_ga0198db687345929eece03335ea1c7701}} 
+\index{Firmware Updates@{Firmware Updates}!xbee\+\_\+fw\+\_\+status\+\_\+oem@{xbee\+\_\+fw\+\_\+status\+\_\+oem}}
+\index{xbee\+\_\+fw\+\_\+status\+\_\+oem@{xbee\+\_\+fw\+\_\+status\+\_\+oem}!Firmware Updates@{Firmware Updates}}
+\subsubsection{\texorpdfstring{xbee\+\_\+fw\+\_\+status\+\_\+oem()}{xbee\_fw\_status\_oem()}}
+{\footnotesize\ttfamily char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ xbee\+\_\+fw\+\_\+status\+\_\+oem (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$}]{source,  }\item[{char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Update {\itshape buffer} with the current install status of {\itshape source}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & State variable to generate status string for.\\
+\hline
+\mbox{\tt out}  & {\em buffer} & Buffer (at least 80 bytes) to receive dynamic status string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns parameter 2 or a pointer to a fixed status string. 
+\end{DoxyReturn}

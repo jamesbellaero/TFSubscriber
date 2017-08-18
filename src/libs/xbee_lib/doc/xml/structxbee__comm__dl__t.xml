@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structxbee__comm__dl__t" kind="struct" language="C++" prot="public">
+    <compoundname>xbee_comm_dl_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__xbee__commissioning_1ga9428f4229e2203fa643916ca52a3e663" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t b0</definition>
+        <argsstring></argsstring>
+        <name>b0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="111" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__commissioning_1gac252074002fd2018498430cf078d3c48" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t b1</definition>
+        <argsstring></argsstring>
+        <name>b1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="112" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__commissioning_1gaf1d156a71c42f5c2c5b2554084b0b6de" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t b2</definition>
+        <argsstring></argsstring>
+        <name>b2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="113" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__commissioning_1ga959afae272eb1d7a12fad05cb5e55ec7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t startup_control</definition>
+        <argsstring></argsstring>
+        <name>startup_control</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="114" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/xbee/xbee_commissioning.c" line="110" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="110" bodyend="115"/>
+    <listofallmembers>
+      <member refid="group__xbee__commissioning_1ga9428f4229e2203fa643916ca52a3e663" prot="public" virt="non-virtual"><scope>xbee_comm_dl_t</scope><name>b0</name></member>
+      <member refid="group__xbee__commissioning_1gac252074002fd2018498430cf078d3c48" prot="public" virt="non-virtual"><scope>xbee_comm_dl_t</scope><name>b1</name></member>
+      <member refid="group__xbee__commissioning_1gaf1d156a71c42f5c2c5b2554084b0b6de" prot="public" virt="non-virtual"><scope>xbee_comm_dl_t</scope><name>b2</name></member>
+      <member refid="group__xbee__commissioning_1ga959afae272eb1d7a12fad05cb5e55ec7" prot="public" virt="non-virtual"><scope>xbee_comm_dl_t</scope><name>startup_control</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
