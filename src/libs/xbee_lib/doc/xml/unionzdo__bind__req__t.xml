@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="unionzdo__bind__req__t" kind="union" language="C++" prot="public">
+    <compoundname>zdo_bind_req_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__zdo_1ga5a520a3fd94801faed2b25261d8cf244" prot="public" static="no" mutable="no">
+        <type>zdo_bind_req_header_t</type>
+        <definition>zdo_bind_req_header_t header</definition>
+        <argsstring></argsstring>
+        <name>header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zdo.h" line="598" column="1" bodyfile="include/zigbee/zdo.h" bodystart="598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zdo_1gabb9332f3f72154b4e8aa79f4cd615dbf" prot="public" static="no" mutable="no">
+        <type><ref refid="group__zdo_1ga41ab3318ee2bd538e044d6d6e101f376" kindref="member">zdo_bind_group_req_t</ref></type>
+        <definition>zdo_bind_group_req_t group</definition>
+        <argsstring></argsstring>
+        <name>group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zdo.h" line="599" column="1" bodyfile="include/zigbee/zdo.h" bodystart="599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zdo_1gaeb044cdc1535cba42db0c32a6b116ad2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__zdo_1ga68c283a043714a9e40d3674146dd6239" kindref="member">zdo_bind_address_req_t</ref></type>
+        <definition>zdo_bind_address_req_t address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zdo.h" line="600" column="1" bodyfile="include/zigbee/zdo.h" bodystart="600" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/zigbee/zdo.h" line="597" column="1" bodyfile="include/zigbee/zdo.h" bodystart="597" bodyend="601"/>
+    <listofallmembers>
+      <member refid="group__zdo_1gaeb044cdc1535cba42db0c32a6b116ad2" prot="public" virt="non-virtual"><scope>zdo_bind_req_t</scope><name>address</name></member>
+      <member refid="group__zdo_1gabb9332f3f72154b4e8aa79f4cd615dbf" prot="public" virt="non-virtual"><scope>zdo_bind_req_t</scope><name>group</name></member>
+      <member refid="group__zdo_1ga5a520a3fd94801faed2b25261d8cf244" prot="public" virt="non-virtual"><scope>zdo_bind_req_t</scope><name>header</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

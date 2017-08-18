@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="zcl__onoff_8h" kind="file" language="C++">
+    <compoundname>zcl_onoff.h</compoundname>
+    <includedby refid="zcl__onoff_8c" local="yes">src/zigbee/zcl_onoff.c</includedby>
+    <invincdepgraph>
+      <node id="987">
+        <label>include/zigbee/zcl_onoff.h</label>
+        <link refid="zcl__onoff_8h"/>
+        <childnode refid="988" relation="include">
+        </childnode>
+      </node>
+      <node id="988">
+        <label>src/zigbee/zcl_onoff.c</label>
+        <link refid="zcl__onoff_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__zcl__onoff_1gacead5607fb8cc864c55906e350a64bd1" prot="public" static="no">
+        <name>ZCL_ONOFF_ATTR_ONOFF</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+<para>OnOff attribute, Boolean, Read only, Mandatory; Shall be reported. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="39" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1gaecb7161f8e345f46eb152712ad013076" prot="public" static="no">
+        <name>ZCL_ONOFF_ON</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="40" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1gafb283aacc97d39a5dce2e5f43861794c" prot="public" static="no">
+        <name>ZCL_ONOFF_OFF</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="41" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1gae399574a77084fc410cbd12cd30ff10d" prot="public" static="no">
+        <name>ZCL_ONOFF_CMD_OFF</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>Off command, Mandatory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="46" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1gab3ebd17876bb8a4ac892665a7093cd22" prot="public" static="no">
+        <name>ZCL_ONOFF_CMD_ON</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>On command, Mandatory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="49" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1ga03727593ce0b9deea2e9c6c24077a27c" prot="public" static="no">
+        <name>ZCL_ONOFF_CMD_TOGGLE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>Toggle command, Mandatory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="52" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1ga515413fcce31bf79d2bd46fb28c93a2e" prot="public" static="no">
+        <name>ZCL_SWITCH_ATTR_SWITCH_TYPE</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+<para>SwitchType, 8-bit Enumeration, Read only, Mandatory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="57" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1ga046e143f5f7685aff4cd2a25ae626bbf" prot="public" static="no">
+        <name>ZCL_SWITCH_TYPE_TOGGLE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="60" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1ga567b4d099adf0574a0cf616a763528f3" prot="public" static="no">
+        <name>ZCL_SWITCH_TYPE_MOMENTARY</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="61" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1ga2ca3d5c19e5422fe71c9389045603a9d" prot="public" static="no">
+        <name>ZCL_SWITCH_ATTR_SWITCH_ACTIONS</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+<para>SwitchActions, 8-bit Enumeration, Read/Write, Mandatory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="64" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1gaf7aebb04ff54e953ad6fab425b59b82c" prot="public" static="no">
+        <name>ZCL_SWITCH_ACTION_ONOFF</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="67" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1gac32f070ae508e84d80d0d389d24fe5cf" prot="public" static="no">
+        <name>ZCL_SWITCH_ACTION_OFFON</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="68" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__onoff_1ga5924f219a203d07537f949e44842dd60" prot="public" static="no">
+        <name>ZCL_SWITCH_ACTION_TOGGLE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_onoff.h" line="69" column="9" bodyfile="include/zigbee/zcl_onoff.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>On/Off Cluster: Attributes and commands for switching devices between &apos;On&apos; and &apos;Off&apos; states. </para>    </briefdescription>
+    <detaileddescription>
+<para>ZCL General Specification, Section 3.8</para><para>On/Off Switch Configuration Cluster: Attributes and commands for configuring On/Off switching devices.</para><para>ZCL General Specification, Section 3.9</para><para><xrefsect id="todo_1_todo000034"><xreftitle>Todo</xreftitle><xrefdescription><para>Write code to support OnOff commands. Create sample program demonstrating use of these clusters (perhaps using LEDs and switches of XBIB-U-DEV board). REQUIRES: need to have reporting in place before this cluster is really useful. Devices need to receive updates whenever switch status changes. </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor">#ifndef<sp/>ZIGBEE_ZCL_ONOFF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZIGBEE_ZCL_ONOFF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="group__zcl__onoff_1gacead5607fb8cc864c55906e350a64bd1" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_ONOFF_ATTR_ONOFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_ONOFF_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_ONOFF_OFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Commands<sp/>Received</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="group__zcl__onoff_1gae399574a77084fc410cbd12cd30ff10d" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_ONOFF_CMD_OFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="group__zcl__onoff_1gab3ebd17876bb8a4ac892665a7093cd22" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_ONOFF_CMD_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="group__zcl__onoff_1ga03727593ce0b9deea2e9c6c24077a27c" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_ONOFF_CMD_TOGGLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="group__zcl__onoff_1ga515413fcce31bf79d2bd46fb28c93a2e" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_SWITCH_ATTR_SWITCH_TYPE<sp/><sp/><sp/><sp/>0x0000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>values<sp/>for<sp/>SwitchType</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_SWITCH_TYPE_TOGGLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_SWITCH_TYPE_MOMENTARY<sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="group__zcl__onoff_1ga2ca3d5c19e5422fe71c9389045603a9d" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_SWITCH_ATTR_SWITCH_ACTIONS<sp/>0x0010</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>values<sp/>for<sp/>SwitchActions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_SWITCH_ACTION_ONOFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>default</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_SWITCH_ACTION_OFFON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_SWITCH_ACTION_TOGGLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>ZIGBEE_ZCL_ONOFF_H<sp/>defined</highlight></codeline>
+    </programlisting>
+    <location file="include/zigbee/zcl_onoff.h"/>
+  </compounddef>
+</doxygen>

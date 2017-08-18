@@ -1,0 +1,36 @@
+\hypertarget{structxbee__command__list__context__t}{}\section{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t Struct Reference}
+\label{structxbee__command__list__context__t}\index{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t@{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t}}
+
+
+Context data passed to command list processor.  
+
+
+
+
+{\ttfamily \#include \char`\"{}xbee/atcmd.\+h\char`\"{}}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structxbee__command__list__context__t_a9bc069d8644766973622e77bb1091440}\label{structxbee__command__list__context__t_a9bc069d8644766973622e77bb1091440}} 
+const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{structxbee__command__list__context__t_a9bc069d8644766973622e77bb1091440}{list}
+\begin{DoxyCompactList}\small\item\em Pointer to start of command list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structxbee__command__list__context__t_ae7bcc11b5181c49ed31113d5beb67c3c}\label{structxbee__command__list__context__t_ae7bcc11b5181c49ed31113d5beb67c3c}} 
+void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{structxbee__command__list__context__t_ae7bcc11b5181c49ed31113d5beb67c3c}{base}
+\begin{DoxyCompactList}\small\item\em Pointer to base address of data to populate with command responses. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structxbee__command__list__context__t_aa870726aac9643f0e8fa42ba9df544ca}\label{structxbee__command__list__context__t_aa870726aac9643f0e8fa42ba9df544ca}} 
+enum \hyperlink{group__xbee__atcmd_ga3ec63530d743d1c91126c67493c3245d}{xbee\+\_\+command\+\_\+list\+\_\+status} \hyperlink{structxbee__command__list__context__t_aa870726aac9643f0e8fa42ba9df544ca}{status}
+\begin{DoxyCompactList}\small\item\em Execution status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structxbee__command__list__context__t_a852b86a2eaee9852ada7a43e61e311a2}\label{structxbee__command__list__context__t_a852b86a2eaee9852ada7a43e61e311a2}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{structxbee__command__list__context__t_a852b86a2eaee9852ada7a43e61e311a2}{index}
+\begin{DoxyCompactList}\small\item\em Where we are in the command list (index of last entry submitted). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Context data passed to command list processor. 
+
+This struct (or another struct with this as its first member) must be used as the context for the command list processor. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/xbee/\hyperlink{atcmd_8h}{atcmd.\+h}\end{DoxyCompactItemize}

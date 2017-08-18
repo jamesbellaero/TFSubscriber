@@ -1,0 +1,232 @@
+\hypertarget{group__zcl__identify}{}\section{Identify Cluster}
+\label{group__zcl__identify}\index{Identify Cluster@{Identify Cluster}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{zcl__identify_8c}{zcl\+\_\+identify.\+c}
+\begin{DoxyCompactList}\small\item\em Server code to implement the Zig\+Bee Identify Cluster (Z\+CL Spec section 3.\+5). \end{DoxyCompactList}\item 
+file \hyperlink{zcl__identify_8h}{zcl\+\_\+identify.\+h}
+\begin{DoxyCompactList}\small\item\em Header for implementation of the Zig\+Bee Identify Cluster (Z\+CL Spec section 3.\+5). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl__identify_ga7df877a02f273adc190aa24ad0aff4c9}\label{group__zcl__identify_ga7df877a02f273adc190aa24ad0aff4c9}} 
+\#define \hyperlink{group__zcl__identify_ga7df877a02f273adc190aa24ad0aff4c9}{Z\+C\+L\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+A\+T\+T\+R\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+T\+I\+ME}~0x0000
+\begin{DoxyCompactList}\small\item\em 3.\+5.\+2.\+2, Identify\+Time Attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__identify_ga40368a52613d3ef210919d39a8e5d046}\label{group__zcl__identify_ga40368a52613d3ef210919d39a8e5d046}} 
+\#define \hyperlink{group__zcl__identify_ga40368a52613d3ef210919d39a8e5d046}{Z\+C\+L\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+M\+D\+\_\+\+I\+D\+E\+N\+T\+I\+FY}~0x00
+\begin{DoxyCompactList}\small\item\em 3.\+5.\+2.\+3.\+1, Identify Command \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__identify_ga47774d9c6e213ee27738493dcf6e3f23}\label{group__zcl__identify_ga47774d9c6e213ee27738493dcf6e3f23}} 
+\#define \hyperlink{group__zcl__identify_ga47774d9c6e213ee27738493dcf6e3f23}{Z\+C\+L\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+M\+D\+\_\+\+Q\+U\+E\+RY}~0x01
+\begin{DoxyCompactList}\small\item\em 3.\+5.\+2.\+3.\+2, Identify Query Command \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__identify_ga19fdbf2dca0a6d6fc36021c51d31214c}\label{group__zcl__identify_ga19fdbf2dca0a6d6fc36021c51d31214c}} 
+\#define \hyperlink{group__zcl__identify_ga19fdbf2dca0a6d6fc36021c51d31214c}{Z\+C\+L\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+M\+D\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+S\+P\+O\+N\+SE}~0x00
+\begin{DoxyCompactList}\small\item\em 3.\+5.\+2.\+4.\+1, Identify Query Response Command \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__identify_gaeae5b3a460629b095247d160235ec586}{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+ER}
+\begin{DoxyCompactList}\small\item\em Macro to add an Identify Server cluster to an endpoint\textquotesingle{}s cluster table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl__identify_ga95b00d55b861c1ea6033c16794ae818d}{zcl\+\_\+identify\+\_\+isactive} (void)
+\begin{DoxyCompactList}\small\item\em Used by main program to see if a device is in \char`\"{}\+Identification mode\char`\"{}. \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl__identify_ga40470468c9c1fe4ebfb52612234710b0}{\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+set} (const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$attribute, \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$rec)
+\begin{DoxyCompactList}\small\item\em Function registered to \hyperlink{group__zcl__identify_ga7df877a02f273adc190aa24ad0aff4c9}{Z\+C\+L\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+A\+T\+T\+R\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+T\+I\+ME} attribute of Identify Cluster. \end{DoxyCompactList}\item 
+uint\+\_\+fast8\+\_\+t \hyperlink{group__zcl__identify_ga7cde47425d0a779f5aff87985ea01951}{\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+get} (const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$attribute)
+\begin{DoxyCompactList}\small\item\em Function registered to \hyperlink{group__zcl__identify_ga7df877a02f273adc190aa24ad0aff4c9}{Z\+C\+L\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+A\+T\+T\+R\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+T\+I\+ME} attribute of Identify Cluster and called to refresh the Identify\+Time attribute. \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl__identify_ga94a1fe7c8892b55e0ffd3e2795139b1d}{zcl\+\_\+identify\+\_\+command} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Handler for Z\+CL Identify Server Commands (Identify, Identify\+Query). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl__identify_ga2cb1b23d3ccb08ae200e797358694d51}\label{group__zcl__identify_ga2cb1b23d3ccb08ae200e797358694d51}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl__identify_ga2cb1b23d3ccb08ae200e797358694d51}{zcl\+\_\+identify\+\_\+time} = 0
+\begin{DoxyCompactList}\small\item\em Private variable for tracking amount of \char`\"{}\+Identification mode\char`\"{} time left. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__zcl__identify_ga467ad1e40ea8475b4e49865436883e94}{zcl\+\_\+identify\+\_\+end} = 0
+\begin{DoxyCompactList}\small\item\em Private variable for tracking value of xbee\+\_\+seconds\+\_\+timer() that \char`\"{}\+Idenfication mode\char`\"{} should end. \end{DoxyCompactList}\item 
+\hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} {\bfseries identify\+\_\+time}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries end\+\_\+of\+\_\+list}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{structzcl__attribute__full__t}{zcl\_attribute\_full\_t} {\bfseries identify\_time}\\
+\>\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t} {\bfseries end\_of\_list}\\
+\} \hyperlink{group__zcl__identify_ga794a6ffcf3d47884c65a8a2c9e60851b}{zcl\_identify\_attr}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em Standard attribute list for the Identify Server Cluster. \end{DoxyCompactList}\item 
+const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} {\bfseries zcl\+\_\+identify\+\_\+attribute\+\_\+tree} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{group__zcl__identify_ga8a328e26487840e24d43449775060b16}\label{group__zcl__identify_ga8a328e26487840e24d43449775060b16}} 
+\hyperlink{group__hal_ga336bff4f4a6012aacc4468132bbd3d7f}{X\+B\+E\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS} const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} {\bfseries zcl\+\_\+identify\+\_\+attribute\+\_\+tree} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__zcl__identify_gaeae5b3a460629b095247d160235ec586}\label{group__zcl__identify_gaeae5b3a460629b095247d160235ec586}} 
+\index{Identify Cluster@{Identify Cluster}!Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+ER@{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+ER}}
+\index{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+ER@{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+ER}!Identify Cluster@{Identify Cluster}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+ER}{ZCL\_CLUST\_ENTRY\_IDENTIFY\_SERVER}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+ER}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ ZCL\_CLUST\_IDENTIFY,                  \(\backslash\)
+      &\hyperlink{group__zcl__identify_ga94a1fe7c8892b55e0ffd3e2795139b1d}{zcl\_identify\_command},               \(\backslash\)
+      zcl\_identify\_attribute\_tree,        \(\backslash\)
+      WPAN\_CLUST\_FLAG\_SERVER \}
+\end{DoxyCode}
+
+
+Macro to add an Identify Server cluster to an endpoint\textquotesingle{}s cluster table. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__zcl__identify_ga7cde47425d0a779f5aff87985ea01951}\label{group__zcl__identify_ga7cde47425d0a779f5aff87985ea01951}} 
+\index{Identify Cluster@{Identify Cluster}!\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+get@{\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+get}}
+\index{\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+get@{\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+get}!Identify Cluster@{Identify Cluster}}
+\subsubsection{\texorpdfstring{\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+get()}{\_zcl\_identify\_time\_get()}}
+{\footnotesize\ttfamily uint\+\_\+fast8\+\_\+t \+\_\+zcl\+\_\+identify\+\_\+time\+\_\+get (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{attribute }\end{DoxyParamCaption})}
+
+
+
+Function registered to \hyperlink{group__zcl__identify_ga7df877a02f273adc190aa24ad0aff4c9}{Z\+C\+L\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+A\+T\+T\+R\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+T\+I\+ME} attribute of Identify Cluster and called to refresh the Identify\+Time attribute. 
+
+See \hyperlink{group__zcl_gace94cfc3f22379fa08a5b8de8c6977f6}{zcl\+\_\+attribute\+\_\+update\+\_\+fn()} for calling convention. 
+
+References X\+B\+E\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER, and zcl\+\_\+identify\+\_\+isactive().
+
+\mbox{\Hypertarget{group__zcl__identify_ga40470468c9c1fe4ebfb52612234710b0}\label{group__zcl__identify_ga40470468c9c1fe4ebfb52612234710b0}} 
+\index{Identify Cluster@{Identify Cluster}!\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+set@{\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+set}}
+\index{\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+set@{\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+set}!Identify Cluster@{Identify Cluster}}
+\subsubsection{\texorpdfstring{\+\_\+zcl\+\_\+identify\+\_\+time\+\_\+set()}{\_zcl\_identify\_time\_set()}}
+{\footnotesize\ttfamily int \+\_\+zcl\+\_\+identify\+\_\+time\+\_\+set (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{attribute,  }\item[{\hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$}]{rec }\end{DoxyParamCaption})}
+
+
+
+Function registered to \hyperlink{group__zcl__identify_ga7df877a02f273adc190aa24ad0aff4c9}{Z\+C\+L\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+A\+T\+T\+R\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+T\+I\+ME} attribute of Identify Cluster. 
+
+Responsible for updating the Identify\+Time attribute, and also for determining when identify mode should end.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em attribute} & ignored; assumed to point to zcl\+\_\+identify\+\_\+time \\
+\hline
+\mbox{\tt in,out}  & {\em rec} & value from write request or N\+U\+LL to update the time when identify mode should end (used by the Identify cluster command).\\
+\hline
+\end{DoxyParams}
+See \hyperlink{group__zcl_ga70fa1740c517a1e49c700cba7cf6b339}{zcl\+\_\+attribute\+\_\+write\+\_\+fn()} for calling convention. 
+
+References zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t\+::flags, Z\+C\+L\+\_\+\+A\+T\+T\+R\+\_\+\+W\+R\+I\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+A\+S\+S\+I\+GN, zcl\+\_\+decode\+\_\+attribute(), and zcl\+\_\+identify\+\_\+end.
+
+\mbox{\Hypertarget{group__zcl__identify_ga94a1fe7c8892b55e0ffd3e2795139b1d}\label{group__zcl__identify_ga94a1fe7c8892b55e0ffd3e2795139b1d}} 
+\index{Identify Cluster@{Identify Cluster}!zcl\+\_\+identify\+\_\+command@{zcl\+\_\+identify\+\_\+command}}
+\index{zcl\+\_\+identify\+\_\+command@{zcl\+\_\+identify\+\_\+command}!Identify Cluster@{Identify Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+identify\+\_\+command()}{zcl\_identify\_command()}}
+{\footnotesize\ttfamily int zcl\+\_\+identify\+\_\+command (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Handler for Z\+CL Identify Server Commands (Identify, Identify\+Query). 
+
+Used in the \#\+Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+I\+D\+E\+N\+T\+I\+FY cluster entry for an endpoint.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & envelope from received message \\
+\hline
+\mbox{\tt in}  & {\em context} & pointer to attribute list for cluster (typically passed in via endpoint dispatcher)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & command was processed, including sending a possible Identify Query Response \\
+\hline
+{\em !0} & error sending response or processing command \\
+\hline
+\end{DoxyRetVals}
+
+
+References zcl\+\_\+command\+\_\+t\+::frame\+\_\+control, P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT, Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+M\+A\+T\+CH, and zcl\+\_\+command\+\_\+build().
+
+\mbox{\Hypertarget{group__zcl__identify_ga95b00d55b861c1ea6033c16794ae818d}\label{group__zcl__identify_ga95b00d55b861c1ea6033c16794ae818d}} 
+\index{Identify Cluster@{Identify Cluster}!zcl\+\_\+identify\+\_\+isactive@{zcl\+\_\+identify\+\_\+isactive}}
+\index{zcl\+\_\+identify\+\_\+isactive@{zcl\+\_\+identify\+\_\+isactive}!Identify Cluster@{Identify Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+identify\+\_\+isactive()}{zcl\_identify\_isactive()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} zcl\+\_\+identify\+\_\+isactive (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Used by main program to see if a device is in \char`\"{}\+Identification mode\char`\"{}. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & Number of seconds of \char`\"{}\+Identification mode\char`\"{} left. \\
+\hline
+{\em 0} & Device is not in \char`\"{}\+Identification mode\char`\"{}. \\
+\hline
+\end{DoxyRetVals}
+
+
+References zcl\+\_\+identify\+\_\+end, and zcl\+\_\+identify\+\_\+time.
+
+
+
+Referenced by \+\_\+zcl\+\_\+identify\+\_\+time\+\_\+get().
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__zcl__identify_ga794a6ffcf3d47884c65a8a2c9e60851b}\label{group__zcl__identify_ga794a6ffcf3d47884c65a8a2c9e60851b}} 
+\index{Identify Cluster@{Identify Cluster}!zcl\+\_\+identify\+\_\+attr@{zcl\+\_\+identify\+\_\+attr}}
+\index{zcl\+\_\+identify\+\_\+attr@{zcl\+\_\+identify\+\_\+attr}!Identify Cluster@{Identify Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+identify\+\_\+attr}{zcl\_identify\_attr}}
+{\footnotesize\ttfamily const \{ ... \}   zcl\+\_\+identify\+\_\+attr}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+
+   \{ \{ \hyperlink{group__zcl__identify_ga7df877a02f273adc190aa24ad0aff4c9}{ZCL\_IDENTIFY\_ATTR\_IDENTIFY\_TIME},
+      \hyperlink{group__zcl_ga40104652d30fa17b7ea5dde9e8b788b8}{ZCL\_ATTRIB\_FLAG\_FULL},
+      ZCL\_TYPE\_UNSIGNED\_16BIT,
+      &\hyperlink{group__zcl__identify_ga2cb1b23d3ccb08ae200e797358694d51}{zcl\_identify\_time} \},
+      \{ 0 \}, \{ 0 \},
+      &\hyperlink{group__zcl__identify_ga7cde47425d0a779f5aff87985ea01951}{\_zcl\_identify\_time\_get}, &\hyperlink{group__zcl__identify_ga40470468c9c1fe4ebfb52612234710b0}{\_zcl\_identify\_time\_set} \},
+   \hyperlink{group__zcl_gab05da20cf1dfaef97e20dfca2fd26d14}{ZCL\_ATTRIBUTE\_END\_OF\_LIST}
+\}
+\end{DoxyCode}
+
+
+Standard attribute list for the Identify Server Cluster. 
+
+\mbox{\Hypertarget{group__zcl__identify_gadebf533d91e359185eb3c0e1e7f044d7}\label{group__zcl__identify_gadebf533d91e359185eb3c0e1e7f044d7}} 
+\index{Identify Cluster@{Identify Cluster}!zcl\+\_\+identify\+\_\+attribute\+\_\+tree@{zcl\+\_\+identify\+\_\+attribute\+\_\+tree}}
+\index{zcl\+\_\+identify\+\_\+attribute\+\_\+tree@{zcl\+\_\+identify\+\_\+attribute\+\_\+tree}!Identify Cluster@{Identify Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+identify\+\_\+attribute\+\_\+tree}{zcl\_identify\_attribute\_tree}}
+{\footnotesize\ttfamily const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} zcl\+\_\+identify\+\_\+attribute\+\_\+tree\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+      \{ \{ ZCL\_MFG\_NONE, &\hyperlink{group__zcl__identify_ga794a6ffcf3d47884c65a8a2c9e60851b}{zcl\_identify\_attr}.identify\_time.base, NULL \} \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl__identify_ga467ad1e40ea8475b4e49865436883e94}\label{group__zcl__identify_ga467ad1e40ea8475b4e49865436883e94}} 
+\index{Identify Cluster@{Identify Cluster}!zcl\+\_\+identify\+\_\+end@{zcl\+\_\+identify\+\_\+end}}
+\index{zcl\+\_\+identify\+\_\+end@{zcl\+\_\+identify\+\_\+end}!Identify Cluster@{Identify Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+identify\+\_\+end}{zcl\_identify\_end}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} zcl\+\_\+identify\+\_\+end = 0}
+
+
+
+Private variable for tracking value of xbee\+\_\+seconds\+\_\+timer() that \char`\"{}\+Idenfication mode\char`\"{} should end. 
+
+
+
+Referenced by \+\_\+zcl\+\_\+identify\+\_\+time\+\_\+set(), and zcl\+\_\+identify\+\_\+isactive().
+

@@ -1,0 +1,62 @@
+\hypertarget{structsxa__cached__group__t}{}\section{sxa\+\_\+cached\+\_\+group\+\_\+t Struct Reference}
+\label{structsxa__cached__group__t}\index{sxa\+\_\+cached\+\_\+group\+\_\+t@{sxa\+\_\+cached\+\_\+group\+\_\+t}}
+
+
+Cached register group value.  
+
+
+
+
+{\ttfamily \#include \char`\"{}xbee/sxa.\+h\char`\"{}}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsxa__cached__group__t_a4fc3a0c58dfbd1e68224521185cb9384}\label{structsxa__cached__group__t_a4fc3a0c58dfbd1e68224521185cb9384}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{structsxa__cached__group__t_a4fc3a0c58dfbd1e68224521185cb9384}{id}
+\begin{DoxyCompactList}\small\item\em Arbitrary numeric ID of this group (see \hyperlink{group___s_x_a_ggabed82baf7f470b522273a3e37c24c600a8d6b7f78660e6b7da06d0fa99dfb6df6}{S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+N\+O\+D\+E\+\_\+\+ID} etc.) \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{structsxa__cached__group__t_a384f3d44ddc76275447a4027f7d7dc11}{flags\+\_\+offs}
+\begin{DoxyCompactList}\small\item\em Offset (within \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t}) of cache group status flags (\hyperlink{group___s_x_a_gga0411cd49bb5b71852cecd93bcbf0ca2da54498f64b3ad7c2be423d32b45deac04}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+OK} etc.) This field is zero to indicate end of array of \hyperlink{structsxa__cached__group__t}{sxa\+\_\+cached\+\_\+group\+\_\+t}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structsxa__cached__group__t_a74693ee122171373c13f53dd39a0997e}\label{structsxa__cached__group__t_a74693ee122171373c13f53dd39a0997e}} 
+const \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{structsxa__cached__group__t_a74693ee122171373c13f53dd39a0997e}{get\+\_\+list}
+\begin{DoxyCompactList}\small\item\em If not N\+U\+LL, is a command list used to update all cached values in the group. \end{DoxyCompactList}\item 
+\hyperlink{group___s_x_a_gaaeb2977fc8c351b3edcf007c1effc374}{sxa\+\_\+cache\+\_\+upd\+\_\+fn} \hyperlink{structsxa__cached__group__t_aa73aae7aa31e051678e55ca4025a2d3a}{get\+\_\+fn}
+\begin{DoxyCompactList}\small\item\em If not N\+U\+LL, is a function to call (after get\+\_\+list, if any) in order to perform any necessary post processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cached register group value. 
+
+This struct is used to manage related groups of registers. A group is used when registers are almost always used together or when special actions need to be taken on updates or queries.
+
+\begin{DoxyNote}{Note}
+There is a static (const) array of these set up for the standard groups (\+\_\+sxa\+\_\+default\+\_\+cache\+\_\+groups). In sxa\+\_\+node\+\_\+t.\+groups points to this array by default.
+\end{DoxyNote}
+The function \+\_\+sxa\+\_\+cache\+\_\+group\+\_\+by\+\_\+id() returns one of the default cached groups by looking up its ID. 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structsxa__cached__group__t_a384f3d44ddc76275447a4027f7d7dc11}\label{structsxa__cached__group__t_a384f3d44ddc76275447a4027f7d7dc11}} 
+\index{sxa\+\_\+cached\+\_\+group\+\_\+t@{sxa\+\_\+cached\+\_\+group\+\_\+t}!flags\+\_\+offs@{flags\+\_\+offs}}
+\index{flags\+\_\+offs@{flags\+\_\+offs}!sxa\+\_\+cached\+\_\+group\+\_\+t@{sxa\+\_\+cached\+\_\+group\+\_\+t}}
+\subsubsection{\texorpdfstring{flags\+\_\+offs}{flags\_offs}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags\+\_\+offs}
+
+
+
+Offset (within \hyperlink{structsxa__node__t}{sxa\+\_\+node\+\_\+t}) of cache group status flags (\hyperlink{group___s_x_a_gga0411cd49bb5b71852cecd93bcbf0ca2da54498f64b3ad7c2be423d32b45deac04}{\+\_\+\+S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+OK} etc.) This field is zero to indicate end of array of \hyperlink{structsxa__cached__group__t}{sxa\+\_\+cached\+\_\+group\+\_\+t}. 
+
+\mbox{\Hypertarget{structsxa__cached__group__t_aa73aae7aa31e051678e55ca4025a2d3a}\label{structsxa__cached__group__t_aa73aae7aa31e051678e55ca4025a2d3a}} 
+\index{sxa\+\_\+cached\+\_\+group\+\_\+t@{sxa\+\_\+cached\+\_\+group\+\_\+t}!get\+\_\+fn@{get\+\_\+fn}}
+\index{get\+\_\+fn@{get\+\_\+fn}!sxa\+\_\+cached\+\_\+group\+\_\+t@{sxa\+\_\+cached\+\_\+group\+\_\+t}}
+\subsubsection{\texorpdfstring{get\+\_\+fn}{get\_fn}}
+{\footnotesize\ttfamily \hyperlink{group___s_x_a_gaaeb2977fc8c351b3edcf007c1effc374}{sxa\+\_\+cache\+\_\+upd\+\_\+fn} get\+\_\+fn}
+
+
+
+If not N\+U\+LL, is a function to call (after get\+\_\+list, if any) in order to perform any necessary post processing. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/xbee/\hyperlink{sxa_8h}{sxa.\+h}\end{DoxyCompactItemize}

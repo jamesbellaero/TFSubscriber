@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_40bb792c505fe318d267b2ef59d7f8a1" kind="dir">
+    <compoundname>src/xbee/CMakeFiles/3.5.1</compoundname>
+    <innerdir refid="dir_523eb3750590978d6a7e30bf6384b696">src/xbee/CMakeFiles/3.5.1/CompilerIdC</innerdir>
+    <innerdir refid="dir_243dd7dee8b363107c15c92b8d5b5654">src/xbee/CMakeFiles/3.5.1/CompilerIdCXX</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/xbee/CMakeFiles/3.5.1/"/>
+  </compounddef>
+</doxygen>

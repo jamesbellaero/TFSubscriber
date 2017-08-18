@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structwpan__endpoint__table__entry__t" kind="struct" language="C++" prot="public">
+    <compoundname>wpan_endpoint_table_entry_t</compoundname>
+    <includes refid="aps_8h" local="yes">wpan/aps.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__wpan__aps_1ga7d397493728da2bca8d55b2d61c4ec5d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t endpoint</definition>
+        <argsstring></argsstring>
+        <name>endpoint</name>
+        <briefdescription>
+<para>Endpoint ID, 0 to 254. 255 (0xFF) is used as an end-of-table marker. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="252" column="1" bodyfile="include/wpan/aps.h" bodystart="252" bodyend="-1"/>
+        <referencedby refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" compoundref="wpan__aps_8c" startline="105" endline="132">wpan_endpoint_get_next</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t profile_id</definition>
+        <argsstring></argsstring>
+        <name>profile_id</name>
+        <briefdescription>
+<para>This endpoint&apos;s profile ID. </para>        </briefdescription>
+        <detaileddescription>
+<para>See WPAN_PROFILE_* macros for some known profile IDs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="256" column="1" bodyfile="include/wpan/aps.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1ga4835da0b636ce07eedbf92aa2779a761" prot="public" static="no" mutable="no">
+        <type><ref refid="group__wpan__aps_1ga23d4e0e2f2137c75700dfec73b2cc80f" kindref="member">wpan_ep_handler_fn</ref></type>
+        <definition>wpan_ep_handler_fn handler</definition>
+        <argsstring></argsstring>
+        <name>handler</name>
+        <briefdescription>
+<para>Function to receive all frames for invalid clusters, or clusters with a <computeroutput>NULL</computeroutput> handler. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="260" column="1" bodyfile="include/wpan/aps.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1ga389966cb276b33004b14ee698c270347" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>struct wpan_ep_state_t FAR* ep_state</definition>
+        <argsstring></argsstring>
+        <name>ep_state</name>
+        <briefdescription>
+<para>Structure used to track transactions and conversations on ZDO/ZDP and ZCL endpoints. </para>        </briefdescription>
+        <detaileddescription>
+<para>Should be NULL for other types of endpoints. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="264" column="1" bodyfile="include/wpan/aps.h" bodystart="264" bodyend="-1"/>
+        <referencedby refid="group__wpan__aps_1gaf56e4d0e52462b5cf41c5fa5f23ea952" compoundref="wpan__aps_8c" startline="427" endline="481">wpan_conversation_response</referencedby>
+        <referencedby refid="group__wpan__aps_1gaab1c77ccbd237270f11499fb6411599c" compoundref="wpan__aps_8c" startline="493" endline="500">wpan_endpoint_next_trans</referencedby>
+        <referencedby refid="group__wpan__aps_1ga1254464011d2d98c13db7b0b3d41c25b" compoundref="wpan__aps_8c" startline="860" endline="881">wpan_tick</referencedby>
+        <referencedby refid="group__zdo_1gaaf992619b06595291c2aead8a3d4dba1" compoundref="zigbee__zdo_8c" startline="82" endline="89">zdo_endpoint_state</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1gadc401e0e7465eda38f9444eeb6169a10" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t device_id</definition>
+        <argsstring></argsstring>
+        <name>device_id</name>
+        <briefdescription>
+<para>This endpoint&apos;s device ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="267" column="1" bodyfile="include/wpan/aps.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1ga0b8f4e315b56b3e3c53dea801ce92104" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t device_version</definition>
+        <argsstring></argsstring>
+        <name>device_version</name>
+        <briefdescription>
+<para>Lower 4 bits are used, upper 4 are reserved and should be 0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="270" column="1" bodyfile="include/wpan/aps.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1gac7944498524739a9becec626bf9bcb15" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref> *</type>
+        <definition>const wpan_cluster_table_entry_t* cluster_table</definition>
+        <argsstring></argsstring>
+        <name>cluster_table</name>
+        <briefdescription>
+<para>Pointers to a list of clusters that ends with WPAN_CLUST_ENTRY_LIST_END. </para>        </briefdescription>
+        <detaileddescription>
+<para>Maximum of 255 input and 255 output clusters (Simple Descriptor uses 8-bit fields for input cluster count and output cluster count). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="275" column="1" bodyfile="include/wpan/aps.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Information on each endpoint on this device. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="79">
+        <label>wpan_envelope_t</label>
+        <link refid="structwpan__envelope__t"/>
+        <childnode refid="80" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="82" relation="usage">
+          <edgelabel>ieee_address</edgelabel>
+        </childnode>
+      </node>
+      <node id="81">
+        <label>wpan_address_t</label>
+        <link refid="structwpan__address__t"/>
+        <childnode refid="82" relation="usage">
+          <edgelabel>ieee</edgelabel>
+        </childnode>
+      </node>
+      <node id="85">
+        <label>wpan_cluster_table_entry_t</label>
+        <link refid="structwpan__cluster__table__entry__t"/>
+        <childnode refid="79" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="78">
+        <label>wpan_endpoint_table_entry_t</label>
+        <link refid="structwpan__endpoint__table__entry__t"/>
+        <childnode refid="79" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+        <childnode refid="83" relation="usage">
+          <edgelabel>ep_state</edgelabel>
+        </childnode>
+        <childnode refid="85" relation="usage">
+          <edgelabel>cluster_table</edgelabel>
+        </childnode>
+      </node>
+      <node id="82">
+        <label>addr64</label>
+        <link refid="unionaddr64"/>
+      </node>
+      <node id="83">
+        <label>wpan_ep_state_t</label>
+        <link refid="structwpan__ep__state__t"/>
+        <childnode refid="84" relation="usage">
+          <edgelabel>conversations</edgelabel>
+        </childnode>
+      </node>
+      <node id="84">
+        <label>wpan_conversation_t</label>
+        <link refid="structwpan__conversation__t"/>
+        <childnode refid="84" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="80">
+        <label>wpan_dev_t</label>
+        <link refid="structwpan__dev__t"/>
+        <childnode refid="81" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="79" relation="usage">
+          <edgelabel>endpoint_send</edgelabel>
+        </childnode>
+        <childnode refid="78" relation="usage">
+          <edgelabel>endpoint_table</edgelabel>
+          <edgelabel>endpoint_get_next</edgelabel>
+        </childnode>
+        <childnode refid="80" relation="usage">
+          <edgelabel>tick</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/wpan/aps.h" line="250" column="1" bodyfile="include/wpan/aps.h" bodystart="249" bodyend="276"/>
+    <listofallmembers>
+      <member refid="group__wpan__aps_1gac7944498524739a9becec626bf9bcb15" prot="public" virt="non-virtual"><scope>wpan_endpoint_table_entry_t</scope><name>cluster_table</name></member>
+      <member refid="group__wpan__aps_1gadc401e0e7465eda38f9444eeb6169a10" prot="public" virt="non-virtual"><scope>wpan_endpoint_table_entry_t</scope><name>device_id</name></member>
+      <member refid="group__wpan__aps_1ga0b8f4e315b56b3e3c53dea801ce92104" prot="public" virt="non-virtual"><scope>wpan_endpoint_table_entry_t</scope><name>device_version</name></member>
+      <member refid="group__wpan__aps_1ga7d397493728da2bca8d55b2d61c4ec5d" prot="public" virt="non-virtual"><scope>wpan_endpoint_table_entry_t</scope><name>endpoint</name></member>
+      <member refid="group__wpan__aps_1ga389966cb276b33004b14ee698c270347" prot="public" virt="non-virtual"><scope>wpan_endpoint_table_entry_t</scope><name>ep_state</name></member>
+      <member refid="group__wpan__aps_1ga4835da0b636ce07eedbf92aa2779a761" prot="public" virt="non-virtual"><scope>wpan_endpoint_table_entry_t</scope><name>handler</name></member>
+      <member refid="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" prot="public" virt="non-virtual"><scope>wpan_endpoint_table_entry_t</scope><name>profile_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

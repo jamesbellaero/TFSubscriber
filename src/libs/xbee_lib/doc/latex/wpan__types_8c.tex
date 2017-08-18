@@ -1,0 +1,35 @@
+\hypertarget{wpan__types_8c}{}\section{src/wpan/wpan\+\_\+types.c File Reference}
+\label{wpan__types_8c}\index{src/wpan/wpan\+\_\+types.\+c@{src/wpan/wpan\+\_\+types.\+c}}
+
+
+Data types and macros used by all W\+P\+AN (802.\+15.\+4) devices.  
+
+
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}wpan/types.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__wpan__types_ga448782f4aed0821758969b47221417ed}{addr64\+\_\+format} (char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Format a 64-\/bit address as a null-\/terminated, printable string (e.\+g., \char`\"{}00-\/13-\/\+A2-\/01-\/23-\/45-\/67\char`\"{}). \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} \hyperlink{group__wpan__types_ga2f0706c06dc9bdcb918b55635dcd9b6f}{addr64\+\_\+equal} (const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$addr1, const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$addr2)
+\begin{DoxyCompactList}\small\item\em Compare two 64-\/bit addresses for equality. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} \hyperlink{group__wpan__types_ga9795dea7f415ceb7502f39a78ebadfc1}{addr64\+\_\+is\+\_\+zero} (const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$addr)
+\begin{DoxyCompactList}\small\item\em Test a 64-\/bit address for zero. \end{DoxyCompactList}\item 
+int \hyperlink{group__wpan__types_ga500b175732df9779b3670e2ba1402530}{addr64\+\_\+parse} (\hyperlink{unionaddr64}{addr64} $\ast$address\+\_\+be, const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$str)
+\begin{DoxyCompactList}\small\item\em Parse a text string into a 64-\/bit I\+E\+EE address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{unionaddr64}{addr64} \hyperlink{group__wpan__types_gaaa2d876b00a2f300e24f1077e17dcb76}{\+\_\+\+W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED}
+\item 
+const \hyperlink{unionaddr64}{addr64} \hyperlink{group__wpan__types_ga83c0da7da25848a435da46b80fb70933}{\+\_\+\+W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST}
+\item 
+const \hyperlink{unionaddr64}{addr64} \hyperlink{group__wpan__types_gac6bb0830c58428d2789507a23ab9fcdd}{\+\_\+\+W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+O\+R\+D\+I\+N\+A\+T\+OR}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data types and macros used by all W\+P\+AN (802.\+15.\+4) devices. 
+

@@ -1,0 +1,51 @@
+\hypertarget{xbee__device_8c}{}\section{src/xbee/xbee\+\_\+device.c File Reference}
+\label{xbee__device_8c}\index{src/xbee/xbee\+\_\+device.\+c@{src/xbee/xbee\+\_\+device.\+c}}
+
+
+Code related to processing X\+Bee Frames.  
+
+
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/device.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/serial.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wpan/aps.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/byteorder.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__device_ga9faca10d7a960dcd3c0c3ad9c0d59cab}{xbee\+\_\+next\+\_\+frame\+\_\+id} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\begin{DoxyCompactList}\small\item\em Increment and return current frame ID for a given X\+Bee device. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__device_ga550d7c865e75d3fc1df0e64cb880cf3d}{xbee\+\_\+dev\+\_\+init} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const \hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serport, \hyperlink{group__xbee__device_ga47d67ee70583d9a2a0cf7ae1eb672af8}{xbee\+\_\+is\+\_\+awake\+\_\+fn} is\+\_\+awake, \hyperlink{group__xbee__device_gaa6b2701f8516c2947424178c4bacab83}{xbee\+\_\+reset\+\_\+fn} reset)
+\begin{DoxyCompactList}\small\item\em Initialize the X\+Bee device structure and open a serial connection to a local, serially-\/attached X\+Bee module. \end{DoxyCompactList}\item 
+void \hyperlink{group__xbee__device_ga75bfe1292b8af0588e0e322a42d3d2dc}{xbee\+\_\+dev\+\_\+flowcontrol} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} enabled)
+\begin{DoxyCompactList}\small\item\em Control whether \hyperlink{group__xbee__device_ga51f281b72bffcc99eec0e8c7f65a5f3f}{xbee\+\_\+frame\+\_\+write()} checks the X\+Bee C\+TS signal before sending frames. \end{DoxyCompactList}\item 
+void \hyperlink{group__xbee__device_ga96267a6b36d9a1b1d59b16cc60a2b09a}{xbee\+\_\+dev\+\_\+dump\+\_\+settings} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Print information to stdout about the X\+Bee device. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__device_gad312efa700cca7ca044cddf364cc51f5}{xbee\+\_\+dev\+\_\+reset} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\begin{DoxyCompactList}\small\item\em Toggles the reset line of the X\+Bee device. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__device_gaf16e8e532b1eb587794b60222c3a0cce}{xbee\+\_\+dev\+\_\+tick} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\begin{DoxyCompactList}\small\item\em Check for newly received frames on an X\+Bee device and dispatch them to registered frame handlers. \end{DoxyCompactList}\item 
+void \hyperlink{group__xbee__device_gac7c192386ffce72242c2c8494b261491}{\+\_\+xbee\+\_\+dispatch\+\_\+table\+\_\+dump} (const \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}() \hyperlink{group__xbee__device_gae8a32665036083d3a236fcde4359cc79}{\+\_\+xbee\+\_\+checksum} (const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$bytes, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, uint\+\_\+fast8\+\_\+t initial)
+\begin{DoxyCompactList}\small\item\em Calculate the checksum for an X\+Bee frame. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__device_ga51f281b72bffcc99eec0e8c7f65a5f3f}{xbee\+\_\+frame\+\_\+write} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$header, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} headerlen, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$\hyperlink{group__xbee__io_gac5955aa1e44ff234e6d78a19cf68f25c}{data}, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} datalen, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Copies a frame into the transmit serial buffer to send to an X\+Bee module. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__device_gac0874f9422c6588062a4b6205e989fc6}{\+\_\+xbee\+\_\+frame\+\_\+load} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\begin{DoxyCompactList}\small\item\em Check X\+Bee\textquotesingle{}s serial buffer for complete frames and pass them off to the dispatcher. \end{DoxyCompactList}\item 
+void \hyperlink{group__xbee__device_gaa9c3bed7ca20dbb2cf4646811c59fe97}{\+\_\+xbee\+\_\+dev\+\_\+modem\+\_\+status} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$wpan, uint\+\_\+fast8\+\_\+t \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status})
+\begin{DoxyCompactList}\small\item\em Receive modem status frames and update flags/state of \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t}. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__device_gab386cd9e1afe784ab79b3139fe8fc5c8}{\+\_\+xbee\+\_\+frame\+\_\+dispatch} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$frame, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Function called by \hyperlink{group__xbee__device_gac0874f9422c6588062a4b6205e989fc6}{\+\_\+xbee\+\_\+frame\+\_\+load()} to dispatch any frames read. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__device_gae54cdc832021172ae535a449856450b7}{xbee\+\_\+frame\+\_\+dump\+\_\+modem\+\_\+status} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$frame, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Frame handler for 0x8A (X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+M\+O\+D\+E\+M\+\_\+\+S\+T\+A\+T\+US) frames -- dumps modem status to S\+T\+D\+O\+UT for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Code related to processing X\+Bee Frames. 
+
+Need to update xbee\+\_\+send and xbee\+\_\+send\+\_\+endpoint to accept a callback function and context. The transmit\+\_\+status message will dispatch a message to that function and callback (and then automatically delete the callback). 

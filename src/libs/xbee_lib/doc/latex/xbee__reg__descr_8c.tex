@@ -1,0 +1,55 @@
+\hypertarget{xbee__reg__descr_8c}{}\section{src/xbee/xbee\+\_\+reg\+\_\+descr.c File Reference}
+\label{xbee__reg__descr_8c}\index{src/xbee/xbee\+\_\+reg\+\_\+descr.\+c@{src/xbee/xbee\+\_\+reg\+\_\+descr.\+c}}
+
+
+Code related to the register descriptor table.  
+
+
+{\ttfamily \#include \char`\"{}xbee/reg\+\_\+descr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/sxa.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries \+\_\+\+X\+R\+T\+\_\+\+E\+N\+T\+RY}(state,  tag,  at,  cxv,  desc,  units,  min,  max,  rci\+\_\+type,  sxa\+\_\+field,  group)
+\item 
+\#define {\bfseries F8}~0x0002
+\item 
+\#define {\bfseries EZ}~0x0004
+\item 
+\#define {\bfseries ZB}~0x0408
+\item 
+\#define {\bfseries X9}~0x0010
+\item 
+\#define {\bfseries X2}~0x0020
+\item 
+\#define {\bfseries X8}~0x0040
+\item 
+\#define {\bfseries DP}~0x0080
+\item 
+\#define {\bfseries FZ}~0x0001
+\item 
+\#define {\bfseries SE}~0x0100
+\item 
+\#define {\bfseries A\+LL}~0x07ff
+\item 
+\#define {\bfseries GW}~0x8000
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{group___s_x_a_ga62238d483c628f8c996664ff0f47ccef}{\+\_\+xbee\+\_\+rci\+\_\+types} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table to map \+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t to R\+CI type string. \end{DoxyCompactList}\item 
+const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t} {\bfseries \+\_\+xbee\+\_\+reg\+\_\+table} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Code related to the register descriptor table. 
+
+The X\+Bee register descriptor table is initialized here.
+
+\begin{DoxyNote}{Note}
+\hyperlink{sxa_8h}{sxa.\+h} needs to be included before including this header.
+
+This header is sensitive to the macro I\+D\+I\+G\+I\+\_\+\+U\+S\+E\+\_\+\+X\+B\+EE. If defined, then extra fields are included in the table in order to support i\+Digi. Otherwise, the fields are omitted so as to save storage. 
+\end{DoxyNote}

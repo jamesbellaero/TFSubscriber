@@ -1,0 +1,1538 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="zcl64_8h" kind="file" language="C++">
+    <compoundname>zcl64.h</compoundname>
+    <includes refid="platform_8h" local="yes">xbee/platform.h</includes>
+    <includedby refid="zcl__types_8h" local="yes">include/zigbee/zcl_types.h</includedby>
+    <incdepgraph>
+      <node id="865">
+        <label>errno.h</label>
+      </node>
+      <node id="867">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="868" relation="include">
+        </childnode>
+      </node>
+      <node id="866">
+        <label>stddef.h</label>
+      </node>
+      <node id="864">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="865" relation="include">
+        </childnode>
+        <childnode refid="866" relation="include">
+        </childnode>
+        <childnode refid="867" relation="include">
+        </childnode>
+      </node>
+      <node id="863">
+        <label>include/zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="864" relation="include">
+        </childnode>
+      </node>
+      <node id="868">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="886">
+        <label>src/zigbee/zcl_time.c</label>
+        <link refid="zcl__time_8c"/>
+      </node>
+      <node id="889">
+        <label>src/zigbee/zcl_commissioning.c</label>
+        <link refid="zcl__commissioning_8c"/>
+      </node>
+      <node id="888">
+        <label>src/xbee/xbee_commissioning.c</label>
+        <link refid="xbee__commissioning_8c"/>
+      </node>
+      <node id="872">
+        <label>src/zigbee/zigbee_zcl.c</label>
+        <link refid="zigbee__zcl_8c"/>
+      </node>
+      <node id="871">
+        <label>src/zigbee/zcl_types.c</label>
+        <link refid="zcl__types_8c"/>
+      </node>
+      <node id="880">
+        <label>include/xbee/ota_server.h</label>
+        <link refid="ota__server_8h"/>
+        <childnode refid="881" relation="include">
+        </childnode>
+      </node>
+      <node id="877">
+        <label>src/zigbee/zcl_client.c</label>
+        <link refid="zcl__client_8c"/>
+      </node>
+      <node id="881">
+        <label>src/xbee/xbee_ota_server.c</label>
+        <link refid="xbee__ota__server_8c"/>
+      </node>
+      <node id="876">
+        <label>src/zigbee/zcl_basic.c</label>
+        <link refid="zcl__basic_8c"/>
+      </node>
+      <node id="885">
+        <label>include/zigbee/zcl_client.h</label>
+        <link refid="zcl__client_8h"/>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="886" relation="include">
+        </childnode>
+      </node>
+      <node id="891">
+        <label>include/zigbee/zcl_identify.h</label>
+        <link refid="zcl__identify_8h"/>
+        <childnode refid="878" relation="include">
+        </childnode>
+      </node>
+      <node id="873">
+        <label>include/zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="874" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+        <childnode refid="876" relation="include">
+        </childnode>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="878" relation="include">
+        </childnode>
+        <childnode refid="879" relation="include">
+        </childnode>
+        <childnode refid="872" relation="include">
+        </childnode>
+        <childnode refid="880" relation="include">
+        </childnode>
+        <childnode refid="882" relation="include">
+        </childnode>
+        <childnode refid="883" relation="include">
+        </childnode>
+        <childnode refid="885" relation="include">
+        </childnode>
+        <childnode refid="887" relation="include">
+        </childnode>
+        <childnode refid="891" relation="include">
+        </childnode>
+        <childnode refid="892" relation="include">
+        </childnode>
+      </node>
+      <node id="887">
+        <label>include/zigbee/zcl_commissioning.h</label>
+        <link refid="zcl__commissioning_8h"/>
+        <childnode refid="888" relation="include">
+        </childnode>
+        <childnode refid="889" relation="include">
+        </childnode>
+        <childnode refid="890" relation="include">
+        </childnode>
+      </node>
+      <node id="875">
+        <label>src/xbee/xbee_wpan.c</label>
+        <link refid="xbee__wpan_8c"/>
+      </node>
+      <node id="892">
+        <label>include/zigbee/zcl_time.h</label>
+        <link refid="zcl__time_8h"/>
+        <childnode refid="886" relation="include">
+        </childnode>
+      </node>
+      <node id="870">
+        <label>include/zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="871" relation="include">
+        </childnode>
+        <childnode refid="872" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="887" relation="include">
+        </childnode>
+      </node>
+      <node id="869">
+        <label>include/zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="870" relation="include">
+        </childnode>
+      </node>
+      <node id="878">
+        <label>src/zigbee/zcl_identify.c</label>
+        <link refid="zcl__identify_8c"/>
+      </node>
+      <node id="874">
+        <label>src/wpan/wpan_aps.c</label>
+        <link refid="wpan__aps_8c"/>
+      </node>
+      <node id="890">
+        <label>include/xbee/commissioning.h</label>
+        <link refid="commissioning_8h"/>
+        <childnode refid="888" relation="include">
+        </childnode>
+      </node>
+      <node id="883">
+        <label>include/zigbee/zcl_basic.h</label>
+        <link refid="zcl__basic_8h"/>
+        <childnode refid="876" relation="include">
+        </childnode>
+        <childnode refid="884" relation="include">
+        </childnode>
+      </node>
+      <node id="879">
+        <label>src/zigbee/zcl_onoff.c</label>
+        <link refid="zcl__onoff_8c"/>
+      </node>
+      <node id="882">
+        <label>include/zigbee/zcl_bacnet.h</label>
+        <link refid="zcl__bacnet_8h"/>
+      </node>
+      <node id="884">
+        <label>include/zigbee/zcl_basic_attributes.h</label>
+        <link refid="zcl__basic__attributes_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__zcl__64_1ga8e855e53988a32f4428ceacce4f9870c" prot="public" static="no">
+        <name>ZCL64_INIT</name>
+        <param><defname>hi</defname></param>
+        <param><defname>lo</defname></param>
+        <initializer>JSLL_INIT(hi, lo)</initializer>
+        <briefdescription>
+<para>Initialize a zcl64_t variable with two literal 32-bit values. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that this macro is only valid as an initializer in a variable declaration. Use ZCL64_LOAD in general program statements.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">hi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper 32 bits </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">lo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lower 32 bits</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an initializer for a zcl64_t variable</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga899413577d0a7e9b641cc5c309b08aeb" kindref="member">ZCL64_LOAD</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="57" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga899413577d0a7e9b641cc5c309b08aeb" prot="public" static="no">
+        <name>ZCL64_LOAD</name>
+        <param><defname>r</defname></param>
+        <param><defname>hi32</defname></param>
+        <param><defname>lo32</defname></param>
+        <initializer>((r).hi = (hi32), (r).lo = (lo32))</initializer>
+        <briefdescription>
+<para>Load a zcl64_t variable with two 32-bit values (high and low). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (hi &lt;&lt; 32 + lo) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hi32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper 32 bits to load into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">lo32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lower 32 bits to load into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga8e855e53988a32f4428ceacce4f9870c" kindref="member">ZCL64_INIT</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="70" column="11" bodyfile="include/zigbee/zcl64.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gad0e4c484d689dee3c5f1302fc80aef3e" prot="public" static="no">
+        <name>ZCL64_IS_ZERO</name>
+        <param><defname>a</defname></param>
+        <initializer>JSLL_IS_ZERO(a)</initializer>
+        <briefdescription>
+<para>Compare a zcl64_t variable to zero. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(a == 0)</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga329900843c1e59c30b4bdff95ee594bd" kindref="member">ZCL64_EQ</ref>, <ref refid="group__zcl__64_1gaffa76b2bdfb8bc021db06efe331a2e5f" kindref="member">ZCL64_NE</ref>, <ref refid="group__zcl__64_1ga524b42ba2596f4c0392780c540f5d5b6" kindref="member">ZCL64_GE_ZERO</ref>, ZCL64_CMP, ZCL64_UCMP </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="81" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga329900843c1e59c30b4bdff95ee594bd" prot="public" static="no">
+        <name>ZCL64_EQ</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_EQ(a, b)</initializer>
+        <briefdescription>
+<para>Compare two zcl64_t variables for equality. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(a == b)</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gad0e4c484d689dee3c5f1302fc80aef3e" kindref="member">ZCL64_IS_ZERO</ref>, <ref refid="group__zcl__64_1gaffa76b2bdfb8bc021db06efe331a2e5f" kindref="member">ZCL64_NE</ref>, <ref refid="group__zcl__64_1ga524b42ba2596f4c0392780c540f5d5b6" kindref="member">ZCL64_GE_ZERO</ref>, ZCL64_CMP, ZCL64_UCMP </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="92" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gaffa76b2bdfb8bc021db06efe331a2e5f" prot="public" static="no">
+        <name>ZCL64_NE</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_NE(a, b)</initializer>
+        <briefdescription>
+<para>Compare two zcl64_t variables for inequality. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(a != b)</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gad0e4c484d689dee3c5f1302fc80aef3e" kindref="member">ZCL64_IS_ZERO</ref>, <ref refid="group__zcl__64_1ga329900843c1e59c30b4bdff95ee594bd" kindref="member">ZCL64_EQ</ref>, <ref refid="group__zcl__64_1ga524b42ba2596f4c0392780c540f5d5b6" kindref="member">ZCL64_GE_ZERO</ref>, ZCL64_CMP, ZCL64_UCMP </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="103" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga524b42ba2596f4c0392780c540f5d5b6" prot="public" static="no">
+        <name>ZCL64_GE_ZERO</name>
+        <param><defname>a</defname></param>
+        <initializer>JSLL_GE_ZERO(a)</initializer>
+        <briefdescription>
+<para>Compare a signed zcl64_t variable to 0. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(a &gt;= 0)</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gad0e4c484d689dee3c5f1302fc80aef3e" kindref="member">ZCL64_IS_ZERO</ref>, <ref refid="group__zcl__64_1ga329900843c1e59c30b4bdff95ee594bd" kindref="member">ZCL64_EQ</ref>, <ref refid="group__zcl__64_1gaffa76b2bdfb8bc021db06efe331a2e5f" kindref="member">ZCL64_NE</ref>, ZCL64_CMP, ZCL64_UCMP </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="113" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga3ec91495319f42f4ba341768a10a77b7" prot="public" static="no">
+        <name>ZCL64_LT</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_REAL_CMP(a, &lt;, b)</initializer>
+        <briefdescription>
+<para>Compare two zcl64_t variables (signed less-than comparison) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(a &lt; b)</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gad0e4c484d689dee3c5f1302fc80aef3e" kindref="member">ZCL64_IS_ZERO</ref>, <ref refid="group__zcl__64_1ga329900843c1e59c30b4bdff95ee594bd" kindref="member">ZCL64_EQ</ref>, <ref refid="group__zcl__64_1gaffa76b2bdfb8bc021db06efe331a2e5f" kindref="member">ZCL64_NE</ref>, <ref refid="group__zcl__64_1ga524b42ba2596f4c0392780c540f5d5b6" kindref="member">ZCL64_GE_ZERO</ref>, <ref refid="group__zcl__64_1ga3ec91495319f42f4ba341768a10a77b7" kindref="member">ZCL64_LT</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="123" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gaa6db62833f3681442d99ef64ef0ab61e" prot="public" static="no">
+        <name>ZCL64_LTU</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_REAL_UCMP(a, &lt;, b)</initializer>
+        <briefdescription>
+<para>Compare two zcl64_t variables (unsigned less-than comparison) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(a &lt; b)</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gad0e4c484d689dee3c5f1302fc80aef3e" kindref="member">ZCL64_IS_ZERO</ref>, <ref refid="group__zcl__64_1ga329900843c1e59c30b4bdff95ee594bd" kindref="member">ZCL64_EQ</ref>, <ref refid="group__zcl__64_1gaffa76b2bdfb8bc021db06efe331a2e5f" kindref="member">ZCL64_NE</ref>, <ref refid="group__zcl__64_1ga524b42ba2596f4c0392780c540f5d5b6" kindref="member">ZCL64_GE_ZERO</ref>, <ref refid="group__zcl__64_1gaa6db62833f3681442d99ef64ef0ab61e" kindref="member">ZCL64_LTU</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="133" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga6f960291ee8e41a8a45421b0b27b62b9" prot="public" static="no">
+        <name>ZCL64_AND</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_AND(r, a, b)</initializer>
+        <briefdescription>
+<para>Perform a bitwise AND of two zcl64_t variables. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (a &amp; b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaa6e4aa82c20efd4b30cf9af31672d867" kindref="member">ZCL64_OR</ref>, <ref refid="group__zcl__64_1gaa6a22393c0d8c9d674b8a90d316413d3" kindref="member">ZCL64_XOR</ref>, <ref refid="group__zcl__64_1ga181c9c94509aa64c1c3c3ed74d6d3c0e" kindref="member">ZCL64_NOT</ref>, <ref refid="group__zcl__64_1gab197c8668c0287b8190982177e03a257" kindref="member">ZCL64_NEG</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="142" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gaa6e4aa82c20efd4b30cf9af31672d867" prot="public" static="no">
+        <name>ZCL64_OR</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_OR(r, a, b)</initializer>
+        <briefdescription>
+<para>Perform a bitwise OR of two zcl64_t variables. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (a | b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga6f960291ee8e41a8a45421b0b27b62b9" kindref="member">ZCL64_AND</ref>, <ref refid="group__zcl__64_1gaa6a22393c0d8c9d674b8a90d316413d3" kindref="member">ZCL64_XOR</ref>, <ref refid="group__zcl__64_1ga181c9c94509aa64c1c3c3ed74d6d3c0e" kindref="member">ZCL64_NOT</ref>, <ref refid="group__zcl__64_1gab197c8668c0287b8190982177e03a257" kindref="member">ZCL64_NEG</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="151" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gaa6a22393c0d8c9d674b8a90d316413d3" prot="public" static="no">
+        <name>ZCL64_XOR</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_XOR(r, a, b)</initializer>
+        <briefdescription>
+<para>Perform a bitwise XOR of two zcl64_t variables. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (a ^ b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga6f960291ee8e41a8a45421b0b27b62b9" kindref="member">ZCL64_AND</ref>, <ref refid="group__zcl__64_1gaa6e4aa82c20efd4b30cf9af31672d867" kindref="member">ZCL64_OR</ref>, <ref refid="group__zcl__64_1ga181c9c94509aa64c1c3c3ed74d6d3c0e" kindref="member">ZCL64_NOT</ref>, <ref refid="group__zcl__64_1gab197c8668c0287b8190982177e03a257" kindref="member">ZCL64_NEG</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="160" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga181c9c94509aa64c1c3c3ed74d6d3c0e" prot="public" static="no">
+        <name>ZCL64_NOT</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <initializer>JSLL_NOT(r, a)</initializer>
+        <briefdescription>
+<para>Perform a bitwise NOT of a zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (~a) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga6f960291ee8e41a8a45421b0b27b62b9" kindref="member">ZCL64_AND</ref>, <ref refid="group__zcl__64_1gaa6e4aa82c20efd4b30cf9af31672d867" kindref="member">ZCL64_OR</ref>, <ref refid="group__zcl__64_1gaa6a22393c0d8c9d674b8a90d316413d3" kindref="member">ZCL64_XOR</ref>, <ref refid="group__zcl__64_1gab197c8668c0287b8190982177e03a257" kindref="member">ZCL64_NEG</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="168" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gab197c8668c0287b8190982177e03a257" prot="public" static="no">
+        <name>ZCL64_NEG</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <initializer>JSLL_NEG(r, a)</initializer>
+        <briefdescription>
+<para>Negate a zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (-a) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga6f960291ee8e41a8a45421b0b27b62b9" kindref="member">ZCL64_AND</ref>, <ref refid="group__zcl__64_1gaa6e4aa82c20efd4b30cf9af31672d867" kindref="member">ZCL64_OR</ref>, <ref refid="group__zcl__64_1gaa6a22393c0d8c9d674b8a90d316413d3" kindref="member">ZCL64_XOR</ref>, <ref refid="group__zcl__64_1ga181c9c94509aa64c1c3c3ed74d6d3c0e" kindref="member">ZCL64_NOT</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="176" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gaa0b854087abee42e1bf908a133385f8d" prot="public" static="no">
+        <name>ZCL64_ADD</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_ADD(r, a, b)</initializer>
+        <briefdescription>
+<para>Add two zcl64_t variables. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (a + b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga949d0b35ec1e4bf3a9e8a422b0eae4e5" kindref="member">ZCL64_SUB</ref>, <ref refid="group__zcl__64_1ga3f163bcb1ecddc543b3a4f3bdbc1d413" kindref="member">ZCL64_MUL</ref>, <ref refid="group__zcl__64_1gadb0e1566e403716d94868b45bb8c63bb" kindref="member">ZCL64_MUL32</ref>, <ref refid="group__zcl__64_1ga6d2d3e13f94ca7fba869dbc6479ae0e1" kindref="member">ZCL64_UDIVMOD</ref>, <ref refid="group__zcl__64_1gada2c215933ee366c11da80a44c2b27c7" kindref="member">ZCL64_DIV</ref>, <ref refid="group__zcl__64_1ga8137418ffd91d5aae3b41a0143d27070" kindref="member">ZCL64_MOD</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="185" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga949d0b35ec1e4bf3a9e8a422b0eae4e5" prot="public" static="no">
+        <name>ZCL64_SUB</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_SUB(r, a, b)</initializer>
+        <briefdescription>
+<para>Subtract two zcl64_t variables. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (a - b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaa0b854087abee42e1bf908a133385f8d" kindref="member">ZCL64_ADD</ref>, <ref refid="group__zcl__64_1ga3f163bcb1ecddc543b3a4f3bdbc1d413" kindref="member">ZCL64_MUL</ref>, <ref refid="group__zcl__64_1gadb0e1566e403716d94868b45bb8c63bb" kindref="member">ZCL64_MUL32</ref>, <ref refid="group__zcl__64_1ga6d2d3e13f94ca7fba869dbc6479ae0e1" kindref="member">ZCL64_UDIVMOD</ref>, <ref refid="group__zcl__64_1gada2c215933ee366c11da80a44c2b27c7" kindref="member">ZCL64_DIV</ref>, <ref refid="group__zcl__64_1ga8137418ffd91d5aae3b41a0143d27070" kindref="member">ZCL64_MOD</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="194" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga3f163bcb1ecddc543b3a4f3bdbc1d413" prot="public" static="no">
+        <name>ZCL64_MUL</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_MUL(r, a, b)</initializer>
+        <briefdescription>
+<para>Multiply two zcl64_t variables. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (a * b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaa0b854087abee42e1bf908a133385f8d" kindref="member">ZCL64_ADD</ref>, <ref refid="group__zcl__64_1ga949d0b35ec1e4bf3a9e8a422b0eae4e5" kindref="member">ZCL64_SUB</ref>, <ref refid="group__zcl__64_1gadb0e1566e403716d94868b45bb8c63bb" kindref="member">ZCL64_MUL32</ref>, <ref refid="group__zcl__64_1ga6d2d3e13f94ca7fba869dbc6479ae0e1" kindref="member">ZCL64_UDIVMOD</ref>, <ref refid="group__zcl__64_1gada2c215933ee366c11da80a44c2b27c7" kindref="member">ZCL64_DIV</ref>, <ref refid="group__zcl__64_1ga8137418ffd91d5aae3b41a0143d27070" kindref="member">ZCL64_MOD</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="203" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gadb0e1566e403716d94868b45bb8c63bb" prot="public" static="no">
+        <name>ZCL64_MUL32</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_MUL32(r, a, b)</initializer>
+        <briefdescription>
+<para>Multiply two 32-bit variables (int32_t or uint32_t) and store the result in a zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (a * b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>uint32_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>uint32_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaa0b854087abee42e1bf908a133385f8d" kindref="member">ZCL64_ADD</ref>, <ref refid="group__zcl__64_1ga949d0b35ec1e4bf3a9e8a422b0eae4e5" kindref="member">ZCL64_SUB</ref>, <ref refid="group__zcl__64_1ga3f163bcb1ecddc543b3a4f3bdbc1d413" kindref="member">ZCL64_MUL</ref>, <ref refid="group__zcl__64_1ga6d2d3e13f94ca7fba869dbc6479ae0e1" kindref="member">ZCL64_UDIVMOD</ref>, <ref refid="group__zcl__64_1gada2c215933ee366c11da80a44c2b27c7" kindref="member">ZCL64_DIV</ref>, <ref refid="group__zcl__64_1ga8137418ffd91d5aae3b41a0143d27070" kindref="member">ZCL64_MOD</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="214" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga6d2d3e13f94ca7fba869dbc6479ae0e1" prot="public" static="no">
+        <name>ZCL64_UDIVMOD</name>
+        <param><defname>qp</defname></param>
+        <param><defname>rp</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_UDIVMOD(qp, rp, a, b)</initializer>
+        <briefdescription>
+<para>Divide an unsigned zcl64_t variable by another unsigned zcl64_t variable and store the 64-bit quotient and remainder. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">qp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL to ignore the quotient, or address of a zcl64_t variable to assign (a / b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">rp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL to ignore the remainder, or address of a zcl64_t variable to assign (a % b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaa0b854087abee42e1bf908a133385f8d" kindref="member">ZCL64_ADD</ref>, <ref refid="group__zcl__64_1ga949d0b35ec1e4bf3a9e8a422b0eae4e5" kindref="member">ZCL64_SUB</ref>, <ref refid="group__zcl__64_1ga3f163bcb1ecddc543b3a4f3bdbc1d413" kindref="member">ZCL64_MUL</ref>, <ref refid="group__zcl__64_1gadb0e1566e403716d94868b45bb8c63bb" kindref="member">ZCL64_MUL32</ref>, <ref refid="group__zcl__64_1gada2c215933ee366c11da80a44c2b27c7" kindref="member">ZCL64_DIV</ref>, <ref refid="group__zcl__64_1ga8137418ffd91d5aae3b41a0143d27070" kindref="member">ZCL64_MOD</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="228" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gada2c215933ee366c11da80a44c2b27c7" prot="public" static="no">
+        <name>ZCL64_DIV</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_DIV(r, a, b)</initializer>
+        <briefdescription>
+<para>Perform signed division of two zcl64_t variables and store the quotient. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable to assign (a / b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaa0b854087abee42e1bf908a133385f8d" kindref="member">ZCL64_ADD</ref>, <ref refid="group__zcl__64_1ga949d0b35ec1e4bf3a9e8a422b0eae4e5" kindref="member">ZCL64_SUB</ref>, <ref refid="group__zcl__64_1ga3f163bcb1ecddc543b3a4f3bdbc1d413" kindref="member">ZCL64_MUL</ref>, <ref refid="group__zcl__64_1gadb0e1566e403716d94868b45bb8c63bb" kindref="member">ZCL64_MUL32</ref>, <ref refid="group__zcl__64_1ga6d2d3e13f94ca7fba869dbc6479ae0e1" kindref="member">ZCL64_UDIVMOD</ref>, <ref refid="group__zcl__64_1ga8137418ffd91d5aae3b41a0143d27070" kindref="member">ZCL64_MOD</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="243" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga8137418ffd91d5aae3b41a0143d27070" prot="public" static="no">
+        <name>ZCL64_MOD</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_MOD(r, a, b)</initializer>
+        <briefdescription>
+<para>Perform signed division of two zcl64_t variables and store the remainder. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (a + b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaa0b854087abee42e1bf908a133385f8d" kindref="member">ZCL64_ADD</ref>, <ref refid="group__zcl__64_1ga949d0b35ec1e4bf3a9e8a422b0eae4e5" kindref="member">ZCL64_SUB</ref>, <ref refid="group__zcl__64_1ga3f163bcb1ecddc543b3a4f3bdbc1d413" kindref="member">ZCL64_MUL</ref>, <ref refid="group__zcl__64_1gadb0e1566e403716d94868b45bb8c63bb" kindref="member">ZCL64_MUL32</ref>, <ref refid="group__zcl__64_1ga6d2d3e13f94ca7fba869dbc6479ae0e1" kindref="member">ZCL64_UDIVMOD</ref>, <ref refid="group__zcl__64_1gada2c215933ee366c11da80a44c2b27c7" kindref="member">ZCL64_DIV</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="253" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga1a1bb5cd5b871acf8dd49621073cbd41" prot="public" static="no">
+        <name>ZCL64_ASL</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_SHL(r, a, b)</initializer>
+        <briefdescription>
+<para>Arithmetic Shift Left of a zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>Shifts bits of <computeroutput>a</computeroutput> left by <bold>positions</bold>, inserting zeros on the right. Equivalent to ZCL64_LSL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (a &lt;&lt; b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integral value from 0 to 63</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga6cc9903e90f4c3e3af0d5e4eef7c89a4" kindref="member">ZCL64_LSL</ref>, <ref refid="group__zcl__64_1gaffe142c28a6ecbe29416c4e0ba5f6a04" kindref="member">ZCL64_ASR</ref>, <ref refid="group__zcl__64_1ga389dd5298bd8f8574f55aa6a687f41a8" kindref="member">ZCL64_LSR</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="264" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga6cc9903e90f4c3e3af0d5e4eef7c89a4" prot="public" static="no">
+        <name>ZCL64_LSL</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>ZCL64_SLA(r, a, b)</initializer>
+        <briefdescription>
+<para>Logical Shift Left of a zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>Shifts bits of <computeroutput>a</computeroutput> left by <bold>positions</bold>, inserting zeros on the right. Equivalent to ZCL64_ASL. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to assign (a &lt;&lt; b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integral value from 0 to 63</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga1a1bb5cd5b871acf8dd49621073cbd41" kindref="member">ZCL64_ASL</ref>, <ref refid="group__zcl__64_1gaffe142c28a6ecbe29416c4e0ba5f6a04" kindref="member">ZCL64_ASR</ref>, <ref refid="group__zcl__64_1ga389dd5298bd8f8574f55aa6a687f41a8" kindref="member">ZCL64_LSR</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="275" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gaffe142c28a6ecbe29416c4e0ba5f6a04" prot="public" static="no">
+        <name>ZCL64_ASR</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_SHR(r, a, b)</initializer>
+        <briefdescription>
+<para>Arithmetic Shift Right of a signed zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>Shifts bits of <computeroutput>a</computeroutput> right by <bold>positions</bold>, extending the sign bit on the left. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable to assign (a &gt;&gt; b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integral value from 0 to 63</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga1a1bb5cd5b871acf8dd49621073cbd41" kindref="member">ZCL64_ASL</ref>, <ref refid="group__zcl__64_1ga6cc9903e90f4c3e3af0d5e4eef7c89a4" kindref="member">ZCL64_LSL</ref>, <ref refid="group__zcl__64_1ga389dd5298bd8f8574f55aa6a687f41a8" kindref="member">ZCL64_LSR</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="286" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga389dd5298bd8f8574f55aa6a687f41a8" prot="public" static="no">
+        <name>ZCL64_LSR</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_USHR(r, a, b)</initializer>
+        <briefdescription>
+<para>Logical Shift Right of an unsigned zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>Shifts bits of <computeroutput>a</computeroutput> right by <bold>positions</bold>, inserting zeros on the left. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned zcl64_t variable to assign (a &gt;&gt; b) to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned zcl64_t variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integral value from 0 to 63</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga1a1bb5cd5b871acf8dd49621073cbd41" kindref="member">ZCL64_ASL</ref>, <ref refid="group__zcl__64_1ga6cc9903e90f4c3e3af0d5e4eef7c89a4" kindref="member">ZCL64_LSL</ref>, <ref refid="group__zcl__64_1gaffe142c28a6ecbe29416c4e0ba5f6a04" kindref="member">ZCL64_ASR</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="297" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gaceb8fdf41f4dc532f6028bab90521d3e" prot="public" static="no">
+        <name>ZCL64_TO_INT32</name>
+        <param><defname>i32</defname></param>
+        <param><defname>i64</defname></param>
+        <initializer>JSLL_L2I(i32, i64)</initializer>
+        <briefdescription>
+<para>Cast a signed zcl64_t variable down to a signed 32-bit integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">i32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int32_t variable to cast <computeroutput>i64</computeroutput> into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">i64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga628915c271405b5eaeb673089f0df6ba" kindref="member">ZCL64_TO_UINT32</ref>, <ref refid="group__zcl__64_1ga3f09d28af6abe1a4a5c427ea93686ea1" kindref="member">ZCL64_TO_FLOAT</ref>, <ref refid="group__zcl__64_1ga3cca4ebbc7fafb30919421d7cd0a2d73" kindref="member">ZCL64_TO_DOUBLE</ref>, <ref refid="group__zcl__64_1gafe6c7cf76cbba5ac7fb5329fd0801278" kindref="member">ZCL64_FROM_INT32</ref>, <ref refid="group__zcl__64_1gaae113edcbf898afca39e88d742c27f8d" kindref="member">ZCL64_FROM_UINT32</ref>, <ref refid="group__zcl__64_1gaae1ff05a93a54da4e06bbca682d2c548" kindref="member">ZCL64_FROM_FLOAT</ref>, <ref refid="group__zcl__64_1ga1899e4fdd99e7f07bf5044997a40e248" kindref="member">ZCL64_FROM_DOUBLE</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="309" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga628915c271405b5eaeb673089f0df6ba" prot="public" static="no">
+        <name>ZCL64_TO_UINT32</name>
+        <param><defname>u32</defname></param>
+        <param><defname>u64</defname></param>
+        <initializer>JSLL_L2UI(u32, u64)</initializer>
+        <briefdescription>
+<para>Cast an unsigned zcl64_t variable down to an unsigned 32-bit integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">u32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>uint32_t variable to cast <computeroutput>u64</computeroutput> into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">u64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaceb8fdf41f4dc532f6028bab90521d3e" kindref="member">ZCL64_TO_INT32</ref>, <ref refid="group__zcl__64_1ga3f09d28af6abe1a4a5c427ea93686ea1" kindref="member">ZCL64_TO_FLOAT</ref>, <ref refid="group__zcl__64_1ga3cca4ebbc7fafb30919421d7cd0a2d73" kindref="member">ZCL64_TO_DOUBLE</ref>, <ref refid="group__zcl__64_1gafe6c7cf76cbba5ac7fb5329fd0801278" kindref="member">ZCL64_FROM_INT32</ref>, <ref refid="group__zcl__64_1gaae113edcbf898afca39e88d742c27f8d" kindref="member">ZCL64_FROM_UINT32</ref>, <ref refid="group__zcl__64_1gaae1ff05a93a54da4e06bbca682d2c548" kindref="member">ZCL64_FROM_FLOAT</ref>, <ref refid="group__zcl__64_1ga1899e4fdd99e7f07bf5044997a40e248" kindref="member">ZCL64_FROM_DOUBLE</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="318" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gafa2d05dfa497827d3f232698f5f47c2b" prot="public" static="no">
+        <name>ZCL64_LOW32</name>
+        <param><defname>u64</defname></param>
+        <initializer>((u64).lo)</initializer>
+        <briefdescription>
+<para>The lower-32 bits of a ZCL64 value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">u64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned zcl64_t variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="327" column="11" bodyfile="include/zigbee/zcl64.h" bodystart="327" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga6a24898481f0fe419858c8b51cafda3e" prot="public" static="no">
+        <name>ZCL64_HIGH32</name>
+        <param><defname>u64</defname></param>
+        <initializer>((u64).hi)</initializer>
+        <briefdescription>
+<para>The upper-32 bits of a ZCL64 value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">u64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned zcl64_t variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="337" column="11" bodyfile="include/zigbee/zcl64.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga3f09d28af6abe1a4a5c427ea93686ea1" prot="public" static="no">
+        <name>ZCL64_TO_FLOAT</name>
+        <param><defname>f</defname></param>
+        <param><defname>i64</defname></param>
+        <initializer>JSLL_L2F(f, i64)</initializer>
+        <briefdescription>
+<para>Cast a signed zcl64_t variable to a <computeroutput>float</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>float variable to cast <computeroutput>i64</computeroutput> into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">i64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaceb8fdf41f4dc532f6028bab90521d3e" kindref="member">ZCL64_TO_INT32</ref>, <ref refid="group__zcl__64_1ga628915c271405b5eaeb673089f0df6ba" kindref="member">ZCL64_TO_UINT32</ref>, <ref refid="group__zcl__64_1ga3cca4ebbc7fafb30919421d7cd0a2d73" kindref="member">ZCL64_TO_DOUBLE</ref>, <ref refid="group__zcl__64_1gafe6c7cf76cbba5ac7fb5329fd0801278" kindref="member">ZCL64_FROM_INT32</ref>, <ref refid="group__zcl__64_1gaae113edcbf898afca39e88d742c27f8d" kindref="member">ZCL64_FROM_UINT32</ref>, <ref refid="group__zcl__64_1gaae1ff05a93a54da4e06bbca682d2c548" kindref="member">ZCL64_FROM_FLOAT</ref>, <ref refid="group__zcl__64_1ga1899e4fdd99e7f07bf5044997a40e248" kindref="member">ZCL64_FROM_DOUBLE</ref>, </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="347" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga3cca4ebbc7fafb30919421d7cd0a2d73" prot="public" static="no">
+        <name>ZCL64_TO_DOUBLE</name>
+        <param><defname>d</defname></param>
+        <param><defname>i64</defname></param>
+        <initializer>JSLL_L2D(d, i64)</initializer>
+        <briefdescription>
+<para>Cast a signed zcl64_t variable to a <computeroutput>double</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double variable to cast <computeroutput>i64</computeroutput> into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">i64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaceb8fdf41f4dc532f6028bab90521d3e" kindref="member">ZCL64_TO_INT32</ref>, <ref refid="group__zcl__64_1ga628915c271405b5eaeb673089f0df6ba" kindref="member">ZCL64_TO_UINT32</ref>, <ref refid="group__zcl__64_1ga3f09d28af6abe1a4a5c427ea93686ea1" kindref="member">ZCL64_TO_FLOAT</ref>, <ref refid="group__zcl__64_1gafe6c7cf76cbba5ac7fb5329fd0801278" kindref="member">ZCL64_FROM_INT32</ref>, <ref refid="group__zcl__64_1gaae113edcbf898afca39e88d742c27f8d" kindref="member">ZCL64_FROM_UINT32</ref>, <ref refid="group__zcl__64_1gaae1ff05a93a54da4e06bbca682d2c548" kindref="member">ZCL64_FROM_FLOAT</ref>, <ref refid="group__zcl__64_1ga1899e4fdd99e7f07bf5044997a40e248" kindref="member">ZCL64_FROM_DOUBLE</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="356" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gafe6c7cf76cbba5ac7fb5329fd0801278" prot="public" static="no">
+        <name>ZCL64_FROM_INT32</name>
+        <param><defname>i64</defname></param>
+        <param><defname>i32</defname></param>
+        <initializer>JSLL_I2L(i64, i32)</initializer>
+        <briefdescription>
+<para>Cast a signed 32-bit integer up to a zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">i64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable to cast <computeroutput>i32</computeroutput> into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">i32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int32_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaceb8fdf41f4dc532f6028bab90521d3e" kindref="member">ZCL64_TO_INT32</ref>, <ref refid="group__zcl__64_1ga628915c271405b5eaeb673089f0df6ba" kindref="member">ZCL64_TO_UINT32</ref>, <ref refid="group__zcl__64_1ga3f09d28af6abe1a4a5c427ea93686ea1" kindref="member">ZCL64_TO_FLOAT</ref>, <ref refid="group__zcl__64_1ga3cca4ebbc7fafb30919421d7cd0a2d73" kindref="member">ZCL64_TO_DOUBLE</ref>, <ref refid="group__zcl__64_1gaae113edcbf898afca39e88d742c27f8d" kindref="member">ZCL64_FROM_UINT32</ref>, <ref refid="group__zcl__64_1gaae1ff05a93a54da4e06bbca682d2c548" kindref="member">ZCL64_FROM_FLOAT</ref>, <ref refid="group__zcl__64_1ga1899e4fdd99e7f07bf5044997a40e248" kindref="member">ZCL64_FROM_DOUBLE</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="366" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gaae113edcbf898afca39e88d742c27f8d" prot="public" static="no">
+        <name>ZCL64_FROM_UINT32</name>
+        <param><defname>u64</defname></param>
+        <param><defname>u32</defname></param>
+        <initializer>JSLL_UI2L(u64, u32)</initializer>
+        <briefdescription>
+<para>Cast an unsigned 32-bit integer up to a zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">u64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned zcl64_t variable to cast <computeroutput>u32</computeroutput> into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">u32</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>uint32_t variable</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaceb8fdf41f4dc532f6028bab90521d3e" kindref="member">ZCL64_TO_INT32</ref>, <ref refid="group__zcl__64_1ga628915c271405b5eaeb673089f0df6ba" kindref="member">ZCL64_TO_UINT32</ref>, <ref refid="group__zcl__64_1ga3f09d28af6abe1a4a5c427ea93686ea1" kindref="member">ZCL64_TO_FLOAT</ref>, <ref refid="group__zcl__64_1ga3cca4ebbc7fafb30919421d7cd0a2d73" kindref="member">ZCL64_TO_DOUBLE</ref>, <ref refid="group__zcl__64_1gafe6c7cf76cbba5ac7fb5329fd0801278" kindref="member">ZCL64_FROM_INT32</ref>, <ref refid="group__zcl__64_1gaae1ff05a93a54da4e06bbca682d2c548" kindref="member">ZCL64_FROM_FLOAT</ref>, <ref refid="group__zcl__64_1ga1899e4fdd99e7f07bf5044997a40e248" kindref="member">ZCL64_FROM_DOUBLE</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="375" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gaae1ff05a93a54da4e06bbca682d2c548" prot="public" static="no">
+        <name>ZCL64_FROM_FLOAT</name>
+        <param><defname>i64</defname></param>
+        <param><defname>f</defname></param>
+        <initializer>JSLL_F2L(i64, f)</initializer>
+        <briefdescription>
+<para>Cast a <computeroutput>double</computeroutput> into a signed zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">i64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable to cast <computeroutput>f</computeroutput> into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>float variable/value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaceb8fdf41f4dc532f6028bab90521d3e" kindref="member">ZCL64_TO_INT32</ref>, <ref refid="group__zcl__64_1ga628915c271405b5eaeb673089f0df6ba" kindref="member">ZCL64_TO_UINT32</ref>, <ref refid="group__zcl__64_1ga3f09d28af6abe1a4a5c427ea93686ea1" kindref="member">ZCL64_TO_FLOAT</ref>, <ref refid="group__zcl__64_1ga3cca4ebbc7fafb30919421d7cd0a2d73" kindref="member">ZCL64_TO_DOUBLE</ref>, <ref refid="group__zcl__64_1gafe6c7cf76cbba5ac7fb5329fd0801278" kindref="member">ZCL64_FROM_INT32</ref>, <ref refid="group__zcl__64_1gaae113edcbf898afca39e88d742c27f8d" kindref="member">ZCL64_FROM_UINT32</ref>, <ref refid="group__zcl__64_1ga1899e4fdd99e7f07bf5044997a40e248" kindref="member">ZCL64_FROM_DOUBLE</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="384" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga1899e4fdd99e7f07bf5044997a40e248" prot="public" static="no">
+        <name>ZCL64_FROM_DOUBLE</name>
+        <param><defname>i64</defname></param>
+        <param><defname>d</defname></param>
+        <initializer>JSLL_D2L(i64, d)</initializer>
+        <briefdescription>
+<para>Cast a <computeroutput>float</computeroutput> into a signed zcl64_t variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">i64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable to cast <computeroutput>d</computeroutput> into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double variable/value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gaceb8fdf41f4dc532f6028bab90521d3e" kindref="member">ZCL64_TO_INT32</ref>, <ref refid="group__zcl__64_1ga628915c271405b5eaeb673089f0df6ba" kindref="member">ZCL64_TO_UINT32</ref>, <ref refid="group__zcl__64_1ga3f09d28af6abe1a4a5c427ea93686ea1" kindref="member">ZCL64_TO_FLOAT</ref>, <ref refid="group__zcl__64_1ga3cca4ebbc7fafb30919421d7cd0a2d73" kindref="member">ZCL64_TO_DOUBLE</ref>, <ref refid="group__zcl__64_1gafe6c7cf76cbba5ac7fb5329fd0801278" kindref="member">ZCL64_FROM_INT32</ref>, <ref refid="group__zcl__64_1gaae113edcbf898afca39e88d742c27f8d" kindref="member">ZCL64_FROM_UINT32</ref>, <ref refid="group__zcl__64_1gaae1ff05a93a54da4e06bbca682d2c548" kindref="member">ZCL64_FROM_FLOAT</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="393" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1ga24b0de907d96815f51558733e99792d3" prot="public" static="no">
+        <name>ZCL64_TO_HEXSTR</name>
+        <param><defname>buffer</defname></param>
+        <param><defname>var</defname></param>
+        <initializer>JSLL_HEXSTR(buffer, var)</initializer>
+        <briefdescription>
+<para>Convert a zcl64_t variable to a 16-character printable hexadecimal string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>17-character buffer to hold hexadecimal string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl64_t variable to stringify</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>16</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this function always returns 16, the number of characters written to <computeroutput>buffer</computeroutput> (in addition to the null terminator)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1gae93bf21431b64dcc3d9bcd67296ff0ed" kindref="member">ZCL64_TO_DECSTR</ref>, <ref refid="group__zcl__64_1gae094f7c19dcfd18917b426a9e43aa427" kindref="member">ZCL64_TO_UDECSTR</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="408" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gae93bf21431b64dcc3d9bcd67296ff0ed" prot="public" static="no">
+        <name>ZCL64_TO_DECSTR</name>
+        <param><defname>buffer</defname></param>
+        <param><defname>var</defname></param>
+        <initializer>JSLL_DECSTR(buffer, var)</initializer>
+        <briefdescription>
+<para>Convert a signed zcl64_t variable to a 20-character printable decimal string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>21-character buffer to hold hexadecimal string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signed zcl64_t variable to stringify</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of characters written to <computeroutput>buffer</computeroutput> (1 to 20), in addition to the null terminator</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga24b0de907d96815f51558733e99792d3" kindref="member">ZCL64_TO_HEXSTR</ref>, <ref refid="group__zcl__64_1gae094f7c19dcfd18917b426a9e43aa427" kindref="member">ZCL64_TO_UDECSTR</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="421" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__64_1gae094f7c19dcfd18917b426a9e43aa427" prot="public" static="no">
+        <name>ZCL64_TO_UDECSTR</name>
+        <param><defname>buffer</defname></param>
+        <param><defname>var</defname></param>
+        <initializer>JSLL_UDECSTR(buffer, var)</initializer>
+        <briefdescription>
+<para>Convert an unsigned zcl64_t variable to a 20-character printable decimal string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>21-character buffer to hold hexadecimal string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unsigned zcl64_t variable to stringify</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of characters written to <computeroutput>buffer</computeroutput> (1 to 20), in addition to the null terminator</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__zcl__64_1ga24b0de907d96815f51558733e99792d3" kindref="member">ZCL64_TO_HEXSTR</ref>, <ref refid="group__zcl__64_1gae93bf21431b64dcc3d9bcd67296ff0ed" kindref="member">ZCL64_TO_DECSTR</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="434" column="9" bodyfile="include/zigbee/zcl64.h" bodystart="434" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__zcl__64_1ga2e906cb47fc172ae60da5178075dd3c7" prot="public" static="no">
+        <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref></type>
+        <definition>typedef JSUint64 zcl64_t</definition>
+        <argsstring></argsstring>
+        <name>zcl64_t</name>
+        <briefdescription>
+<para>64-bit integer in host-byte-order Use for 56-bit values as well <ndash/> ZCL layer will make sure top byte is sign-extended. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000032"><xreftitle>Todo</xreftitle><xrefdescription><para>Actually code up support for 56-bit values like we did for 24 bit. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl64.h" line="42" column="1" bodyfile="include/zigbee/zcl64.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Macros for working with 64-bit integers via the zcl64_t datatype. </para>    </briefdescription>
+    <detaileddescription>
+<para>Makes use of the <ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref> type and support functions included in the platform support code (<ref refid="jslong_8h_source" kindref="compound">jslong.h</ref>, <ref refid="jslong_8c" kindref="compound">jslong.c</ref>).</para><para>On some platforms (Win32), zcl64_t is simply a uint64_t. Most embedded platforms represent a zcl64_t value as a structure. Because of that difference, you can&apos;t just write &quot;c = a + b&quot; or &quot;a.lo = ~a.lo, a.hi = ~a.hi&quot; <ndash/> neither statement is portable to the other platform type.</para><para>Therefore, it is necessary to use the macro functions in this file to manipulate zcl64_t variables.</para><para><xrefsect id="todo_1_todo000031"><xreftitle>Todo</xreftitle><xrefdescription><para>add a ZCL64_SPLIT macro to split zcl64_t into high and low halves </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#ifndef<sp/>ZIGBEE_ZCL64_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZIGBEE_ZCL64_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="group__zcl__64_1ga2e906cb47fc172ae60da5178075dd3c7" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/><ref refid="group__zcl__64_1ga2e906cb47fc172ae60da5178075dd3c7" kindref="member">zcl64_t</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="group__zcl__64_1ga8e855e53988a32f4428ceacce4f9870c" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_INIT(hi,<sp/>lo)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_INIT(hi,<sp/>lo)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor">#ifdef<sp/>XBEE_NATIVE_64BIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>ZCL64_LOAD(r,<sp/>hi32,<sp/>lo32)<sp/><sp/><sp/>r<sp/>=<sp/>(((uint64_t)(hi32)<sp/>&lt;&lt;<sp/>32)<sp/>+<sp/>lo32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="group__zcl__64_1ga899413577d0a7e9b641cc5c309b08aeb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>ZCL64_LOAD(r,<sp/>hi32,<sp/>lo32)<sp/><sp/><sp/>((r).hi<sp/>=<sp/>(hi32),<sp/>(r).lo<sp/>=<sp/>(lo32))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="group__zcl__64_1gad0e4c484d689dee3c5f1302fc80aef3e" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_IS_ZERO(a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_IS_ZERO(a)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="group__zcl__64_1ga329900843c1e59c30b4bdff95ee594bd" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_EQ(a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_EQ(a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="group__zcl__64_1gaffa76b2bdfb8bc021db06efe331a2e5f" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_NE(a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_NE(a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="group__zcl__64_1ga524b42ba2596f4c0392780c540f5d5b6" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_GE_ZERO(a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_GE_ZERO(a)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="group__zcl__64_1ga3ec91495319f42f4ba341768a10a77b7" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_LT(a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_REAL_CMP(a,<sp/>&lt;,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="group__zcl__64_1gaa6db62833f3681442d99ef64ef0ab61e" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_LTU(a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_REAL_UCMP(a,<sp/>&lt;,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="group__zcl__64_1ga6f960291ee8e41a8a45421b0b27b62b9" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_AND(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_AND(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="group__zcl__64_1gaa6e4aa82c20efd4b30cf9af31672d867" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_OR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_OR(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="group__zcl__64_1gaa6a22393c0d8c9d674b8a90d316413d3" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_XOR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_XOR(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="group__zcl__64_1ga181c9c94509aa64c1c3c3ed74d6d3c0e" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_NOT(r,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_NOT(r,<sp/>a)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="group__zcl__64_1gab197c8668c0287b8190982177e03a257" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_NEG(r,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_NEG(r,<sp/>a)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="group__zcl__64_1gaa0b854087abee42e1bf908a133385f8d" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_ADD(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_ADD(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="group__zcl__64_1ga949d0b35ec1e4bf3a9e8a422b0eae4e5" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_SUB(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_SUB(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="group__zcl__64_1ga3f163bcb1ecddc543b3a4f3bdbc1d413" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_MUL(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_MUL(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="group__zcl__64_1gadb0e1566e403716d94868b45bb8c63bb" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_MUL32(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_MUL32(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="group__zcl__64_1ga6d2d3e13f94ca7fba869dbc6479ae0e1" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_UDIVMOD(qp,<sp/>rp,<sp/>a,<sp/>b)<sp/>JSLL_UDIVMOD(qp,<sp/>rp,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Is<sp/>there<sp/>a<sp/>need<sp/>for<sp/>a<sp/>signed<sp/>divmod,<sp/>based<sp/>on<sp/>JSLL_DIV<sp/>and<sp/>JSLL_MOD?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Would<sp/>need<sp/>to<sp/>store<sp/>two<sp/>negate<sp/>flags,<sp/>one<sp/>for<sp/>quotient<sp/>and<sp/>one<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="comment">//<sp/>remainder.<sp/><sp/>Remainder<sp/>only<sp/>negative<sp/>if<sp/>a<sp/>is<sp/>negative,<sp/>quotient<sp/>is<sp/>negative</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="comment">//<sp/>if<sp/>sign<sp/>of<sp/>a<sp/>and<sp/>b<sp/>differ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="group__zcl__64_1gada2c215933ee366c11da80a44c2b27c7" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_DIV(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_DIV(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="group__zcl__64_1ga8137418ffd91d5aae3b41a0143d27070" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_MOD(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_MOD(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="group__zcl__64_1ga1a1bb5cd5b871acf8dd49621073cbd41" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_ASL(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_SHL(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="group__zcl__64_1ga6cc9903e90f4c3e3af0d5e4eef7c89a4" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_LSL(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZCL64_SLA(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="group__zcl__64_1gaffe142c28a6ecbe29416c4e0ba5f6a04" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_ASR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_SHR(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="group__zcl__64_1ga389dd5298bd8f8574f55aa6a687f41a8" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_LSR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_USHR(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>a<sp/>is<sp/>an<sp/>JSInt32,<sp/>b<sp/>is<sp/>JSInt32,<sp/>r<sp/>is<sp/>JSInt64<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>JSLL_ISHL(r,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="group__zcl__64_1gaceb8fdf41f4dc532f6028bab90521d3e" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_TO_INT32(i32,<sp/>i64)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_L2I(i32,<sp/>i64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="group__zcl__64_1ga628915c271405b5eaeb673089f0df6ba" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_TO_UINT32(u32,<sp/>u64)<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_L2UI(u32,<sp/>u64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="preprocessor">#ifdef<sp/>XBEE_NATIVE_64BIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>ZCL64_LOW32(u64)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)(u64))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327" refid="group__zcl__64_1gafa2d05dfa497827d3f232698f5f47c2b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>ZCL64_LOW32(u64)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((u64).lo)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="preprocessor">#ifdef<sp/>XBEE_NATIVE_64BIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>ZCL64_HIGH32(u64)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)(u64<sp/>&gt;&gt;<sp/>32))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337" refid="group__zcl__64_1ga6a24898481f0fe419858c8b51cafda3e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>ZCL64_HIGH32(u64)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((u64).hi)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347" refid="group__zcl__64_1ga3f09d28af6abe1a4a5c427ea93686ea1" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_TO_FLOAT(f,<sp/>i64)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_L2F(f,<sp/>i64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356" refid="group__zcl__64_1ga3cca4ebbc7fafb30919421d7cd0a2d73" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_TO_DOUBLE(d,<sp/>i64)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_L2D(d,<sp/>i64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366" refid="group__zcl__64_1gafe6c7cf76cbba5ac7fb5329fd0801278" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_FROM_INT32(i64,<sp/>i32)<sp/><sp/><sp/><sp/><sp/>JSLL_I2L(i64,<sp/>i32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375" refid="group__zcl__64_1gaae113edcbf898afca39e88d742c27f8d" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_FROM_UINT32(u64,<sp/>u32)<sp/><sp/><sp/><sp/>JSLL_UI2L(u64,<sp/>u32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384" refid="group__zcl__64_1gaae1ff05a93a54da4e06bbca682d2c548" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_FROM_FLOAT(i64,<sp/>f)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_F2L(i64,<sp/>f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393" refid="group__zcl__64_1ga1899e4fdd99e7f07bf5044997a40e248" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_FROM_DOUBLE(i64,<sp/>d)<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_D2L(i64,<sp/>d)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408" refid="group__zcl__64_1ga24b0de907d96815f51558733e99792d3" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_TO_HEXSTR(buffer,<sp/>var)<sp/><sp/><sp/>JSLL_HEXSTR(buffer,<sp/>var)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421" refid="group__zcl__64_1gae93bf21431b64dcc3d9bcd67296ff0ed" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_TO_DECSTR(buffer,<sp/>var)<sp/><sp/><sp/>JSLL_DECSTR(buffer,<sp/>var)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434" refid="group__zcl__64_1gae094f7c19dcfd18917b426a9e43aa427" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL64_TO_UDECSTR(buffer,<sp/>var)<sp/><sp/>JSLL_UDECSTR(buffer,<sp/>var)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/zigbee/zcl64.h"/>
+  </compounddef>
+</doxygen>

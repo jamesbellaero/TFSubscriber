@@ -1,0 +1,596 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="platform__dos_8h" kind="file" language="C++">
+    <compoundname>platform_dos.h</compoundname>
+    <includes local="no">time.h</includes>
+    <includes local="no">dos.h</includes>
+    <includes local="no">conio.h</includes>
+    <includes local="no">stddef.h</includes>
+    <incdepgraph>
+      <node id="625">
+        <label>conio.h</label>
+      </node>
+      <node id="626">
+        <label>stddef.h</label>
+      </node>
+      <node id="622">
+        <label>include/xbee/platform_dos.h</label>
+        <link refid="platform__dos_8h"/>
+        <childnode refid="623" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+      </node>
+      <node id="623">
+        <label>time.h</label>
+      </node>
+      <node id="624">
+        <label>dos.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structxbee__serial__t" prot="public">xbee_serial_t</innerclass>
+      <sectiondef kind="user-defined">
+      <header>platform_stdint</header>
+      <description><para>Types typically defined in &lt;stdint.h&gt;, define manually if stdint.h is not available on this platform. </para></description>
+      <memberdef kind="typedef" id="group__hal__dos_1ga20c38cc5aac7cc6b0a3c6ab05428436d" prot="public" static="no">
+        <type>signed char</type>
+        <definition>int8_t</definition>
+        <argsstring></argsstring>
+        <name>int8_t</name>
+        <briefdescription>
+<para>8-bit signed integer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="35" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>uint8_t</definition>
+        <argsstring></argsstring>
+        <name>uint8_t</name>
+        <briefdescription>
+<para>8-bit unsigned integer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="36" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" prot="public" static="no">
+        <type>short</type>
+        <definition>int16_t</definition>
+        <argsstring></argsstring>
+        <name>int16_t</name>
+        <briefdescription>
+<para>16-bit signed integer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="37" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>uint16_t</definition>
+        <argsstring></argsstring>
+        <name>uint16_t</name>
+        <briefdescription>
+<para>16-bit unsigned integer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="38" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__hal__dos_1gafd12020da5a235dfcf0c3c748fb5baed" prot="public" static="no">
+        <type>long</type>
+        <definition>int32_t</definition>
+        <argsstring></argsstring>
+        <name>int32_t</name>
+        <briefdescription>
+<para>32-bit signed integer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="39" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" prot="public" static="no">
+        <type>unsigned long</type>
+        <definition>uint32_t</definition>
+        <argsstring></argsstring>
+        <name>uint32_t</name>
+        <briefdescription>
+<para>32-bit unsigned integer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="40" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" prot="public" static="no">
+        <type>int</type>
+        <definition>bool_t</definition>
+        <argsstring></argsstring>
+        <name>bool_t</name>
+        <briefdescription>
+<para>Variable that can hold 0 or 1, may be an <computeroutput>int</computeroutput> for speed purporses or <computeroutput>uint8_t</computeroutput> for size optimization. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="48" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__hal__dos_1gafa9179779c676eed926a35c4ab5fe5b5" prot="public" static="no">
+        <name>PACKED_STRUCT</name>
+        <initializer>_Packed struct</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="26" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga3ee5b5bde5321e97420753cf13ce9c1b" prot="public" static="no">
+        <name>_f_memcpy</name>
+        <initializer>memcpy</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="28" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga210604a4d70c1421599afca049c8dc55" prot="public" static="no">
+        <name>_f_memset</name>
+        <initializer>memset</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="29" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga828bb1dfda1afd67ca795075903d227d" prot="public" static="no">
+        <name>__FUNCTION__</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="45" column="11" bodyfile="include/xbee/platform_dos.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga8782a401fbf55261460863fc2f8df1ce" prot="public" static="no">
+        <name>LITTLE_ENDIAN</name>
+        <initializer>1234</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="53" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga23eb5e058a210efdde3d64e69679fafa" prot="public" static="no">
+        <name>BIG_ENDIAN</name>
+        <initializer>4321</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="54" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga1771b7fb65ee640524d0052f229768c3" prot="public" static="no">
+        <name>BYTE_ORDER</name>
+        <initializer>LITTLE_ENDIAN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="56" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1gaef060b3456fdcc093a7210a762d5f2ed" prot="public" static="no">
+        <name>FAR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="61" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1gacf43057fc38f77d20456c074909ba772" prot="public" static="no">
+        <name>INTERRUPT_ENABLE</name>
+        <initializer>_enable()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="63" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga658c3ad175b50000ac44b3b9ea836d1a" prot="public" static="no">
+        <name>INTERRUPT_DISABLE</name>
+        <initializer>_disable()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="64" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1gac0bb5dfc7862723940463fc4f534a2c6" prot="public" static="no">
+        <name>XST_INIT_OK</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="71" column="11" bodyfile="include/xbee/platform_dos.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga4a10627ecbaf4dd77aae7f9edb4a54f4" prot="public" static="no">
+        <name>XST_MASK_DR</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="79" column="11" bodyfile="include/xbee/platform_dos.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1gaacce3cb69756eab817972ff8facdda96" prot="public" static="no">
+        <name>XST_MASK_OE</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="80" column="11" bodyfile="include/xbee/platform_dos.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1gab800504524b4de7eea0d273db77f6156" prot="public" static="no">
+        <name>XST_MASK_PE</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="81" column="11" bodyfile="include/xbee/platform_dos.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1gaff4d8f56c8de5ecfdba8ded318c2717e" prot="public" static="no">
+        <name>XST_MASK_FE</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="82" column="11" bodyfile="include/xbee/platform_dos.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga0ca1fda9d4b7f78e3e5a6d4cc3f6ae85" prot="public" static="no">
+        <name>XST_MASK_BI</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="83" column="11" bodyfile="include/xbee/platform_dos.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga50f54b3db3391cfe1d6eced271e265e9" prot="public" static="no">
+        <name>XST_MASK_THRE</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="84" column="11" bodyfile="include/xbee/platform_dos.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga82f8805477291e063bd3f555f9916cba" prot="public" static="no">
+        <name>XST_MASK_TEMT</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="85" column="11" bodyfile="include/xbee/platform_dos.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga646ea2f68b9f1418a33cd38384576cc9" prot="public" static="no">
+        <name>XST_MASK_FIFOE</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="86" column="11" bodyfile="include/xbee/platform_dos.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga503caf44f78cc52dc196c413cd6c78ab" prot="public" static="no">
+        <name>ZCL_TIME_EPOCH_DELTA</name>
+        <initializer><ref refid="group__hal_1ga735b0974380a73e9d7a12a1f199a5921" kindref="member">ZCL_TIME_EPOCH_DELTA_1970</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="98" column="9" bodyfile="include/xbee/platform_dos.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga5cbeea4d9344138b657f78ad38813584" prot="public" static="no">
+        <name>XBEE_MS_TIMER_RESOLUTION</name>
+        <initializer>(1000 / CLOCKS_PER_SEC)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="102" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1gae34b1efc8ba99add17fcd767852197d4" prot="public" static="no">
+        <name>WPAN_MAX_CONVERSATIONS</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="104" column="9" bodyfile="include/xbee/platform_dos.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1gaaa330f432d7a6bccdb393a656ddfe4d3" prot="public" static="no">
+        <name>WPAN_CONVERSATION_TIMEOUT</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="105" column="9" bodyfile="include/xbee/platform_dos.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__dos_1ga47eb4ad5b4e00af034717327c7fa909d" prot="public" static="no">
+        <name>gotoxy00</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>gotoxy((x)+1, (y)+1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="128" column="10" bodyfile="include/xbee/platform_dos.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__hal__dos_1gacce279dbc21c640ea1412e405c569887" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short uint_fast8_t</definition>
+        <argsstring></argsstring>
+        <name>uint_fast8_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="42" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__hal__dos_1gaa301edfd56a74118dc796a2f1aa67f20" prot="public" static="no">
+        <type>signed short</type>
+        <definition>typedef signed short int_fast8_t</definition>
+        <argsstring></argsstring>
+        <name>int_fast8_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="43" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__hal__dos_1gaf18bb6d8ede135a0bc5c13b7737be755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gotoxy_ansi</definition>
+        <argsstring>(int col, int row)</argsstring>
+        <name>gotoxy_ansi</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dos/xbee_platform_dos.c" line="89" column="1" bodyfile="src/dos/xbee_platform_dos.c" bodystart="89" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__dos_1gacb897f5c3c3f8fc84b84851f496371a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clrscr_ansi</definition>
+        <argsstring>(void)</argsstring>
+        <name>clrscr_ansi</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dos/xbee_platform_dos.c" line="95" column="1" bodyfile="src/dos/xbee_platform_dos.c" bodystart="95" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header for DOS platform (using Watcom C cross compiler). </para>    </briefdescription>
+    <detaileddescription>
+<para>This file is automatically included by <ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor">#ifndef<sp/>__XBEE_PLATFORM_DOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__XBEE_PLATFORM_DOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>macro<sp/>used<sp/>to<sp/>declare<sp/>a<sp/>packed<sp/>structure<sp/>(no<sp/>alignment<sp/>of<sp/>elements)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>PACKED_STRUCT<sp/><sp/><sp/><sp/><sp/><sp/>_Packed<sp/>struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>_f_memcpy<sp/><sp/><sp/><sp/>memcpy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>_f_memset<sp/><sp/><sp/><sp/>memset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stdint.h<sp/>for<sp/>int8_t,<sp/>uint8_t,<sp/>int16_t,<sp/>etc.<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#ifdef<sp/>__WATCOMC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="group__hal__dos_1ga20c38cc5aac7cc6b0a3c6ab05428436d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga20c38cc5aac7cc6b0a3c6ab05428436d" kindref="member">int8_t</ref>;</highlight></codeline>
+<codeline lineno="36" refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>;</highlight></codeline>
+<codeline lineno="37" refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref>;</highlight></codeline>
+<codeline lineno="38" refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref>;</highlight></codeline>
+<codeline lineno="39" refid="group__hal__dos_1gafd12020da5a235dfcf0c3c748fb5baed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gafd12020da5a235dfcf0c3c748fb5baed" kindref="member">int32_t</ref>;</highlight></codeline>
+<codeline lineno="40" refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/>uint_fast8_t;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>int_fast8_t;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>__FUNCTION__<sp/><sp/><sp/><sp/>&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>type<sp/>isn&apos;t<sp/>in<sp/>stdint.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>platform&apos;s<sp/>endian<sp/>header<sp/>to<sp/>learn<sp/>whether<sp/>we&apos;re<sp/>big<sp/>or<sp/>little.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//#include<sp/>&lt;endian.h&gt;<sp/><sp/><sp/>//<sp/>Not<sp/>available<sp/>on<sp/>Watcom<sp/>DOS,<sp/>so<sp/>do<sp/>manually:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>LITTLE_ENDIAN<sp/><sp/><sp/>1234</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>BIG_ENDIAN<sp/><sp/><sp/><sp/><sp/><sp/>4321</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>BYTE_ORDER<sp/><sp/><sp/><sp/><sp/><sp/>LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>On<sp/>the<sp/>DOS<sp/>platform,<sp/>some<sp/>pointers<sp/>are<sp/>&quot;far&quot;.<sp/><sp/>Many<sp/>platforms<sp/>just<sp/>have</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>single<sp/>pointer<sp/>type<sp/>and<sp/>will<sp/>define<sp/>FAR<sp/>to<sp/>nothing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>now,<sp/>don&apos;t<sp/>need<sp/>far<sp/>data,<sp/>so<sp/>use<sp/>small<sp/>or<sp/>medium<sp/>memory<sp/>model.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>FAR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>INTERRUPT_ENABLE<sp/><sp/><sp/><sp/><sp/><sp/>_enable()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>INTERRUPT_DISABLE<sp/><sp/><sp/><sp/><sp/>_disable()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Elements<sp/>needed<sp/>to<sp/>keep<sp/>track<sp/>of<sp/>serial<sp/>port<sp/>settings.<sp/><sp/>Must<sp/>have<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>baudrate<sp/>memember,<sp/>other<sp/>fields<sp/>are<sp/>platform-specific.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structxbee__serial__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/><sp/><sp/><sp/>baudrate;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>flags;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>XST_INIT_OK<sp/><sp/>0x0001<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Ser<sp/>port<sp/>initialized<sp/>OK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>comport;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1<sp/>=<sp/>COM1,<sp/>2<sp/>=<sp/>COM2<sp/>etc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>port;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>I/O<sp/>address<sp/>of<sp/>UART:<sp/>COM1<sp/>=<sp/>0x3F8<sp/>etc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/>void<sp/>(__interrupt<sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*prev_int)();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Previous<sp/>COM<sp/>port<sp/>interrupt<sp/>handler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>intvec;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Interrupt<sp/>vector<sp/>number:<sp/>0x0C<sp/>for<sp/>COM1<sp/>etc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>picmask;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PIC<sp/>mask<sp/>bit<sp/>(corresponding<sp/>to<sp/>IRQ):<sp/>1&lt;&lt;4<sp/>for<sp/>IRQ4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>lsr_mask;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mask<sp/>of<sp/>line<sp/>status<sp/>conditions<sp/>that<sp/>are<sp/>enabled.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>determined<sp/>by<sp/>UART<sp/>hardware...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/><sp/>XST_MASK_DR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Data<sp/>Ready</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/><sp/>XST_MASK_OE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Overrun<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/><sp/>XST_MASK_PE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Parity<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/><sp/>XST_MASK_FE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Frame<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/><sp/>XST_MASK_BI<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Break<sp/>interrupt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/><sp/>XST_MASK_THRE<sp/><sp/><sp/><sp/><sp/>0x20<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Tx<sp/>holding<sp/>reg<sp/>empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/><sp/>XST_MASK_TEMT<sp/><sp/><sp/><sp/><sp/>0x40<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Tx<sp/>shift<sp/>register<sp/>empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/><sp/>XST_MASK_FIFOE<sp/><sp/><sp/><sp/>0x80<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Rx<sp/>FIFO<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structxbee__cbuf__t" kindref="compound">xbee_cbuf_t</ref><sp/>*<sp/>txbuf;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Transmit<sp/>circular<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structxbee__cbuf__t" kindref="compound">xbee_cbuf_t</ref><sp/>*<sp/>rxbuf;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Receive<sp/>circular<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>isr_count;<sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>debug<sp/>-<sp/>count<sp/>UART<sp/>interrupts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>isr_rent;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>debug<sp/>-<sp/>count<sp/>ISR<sp/>reentry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>oe;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Overrun<sp/>error<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>pe;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parity<sp/>error<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>fe;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Frame<sp/>error<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>bi;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Break<sp/>interrupt<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DOS<sp/>epoch<sp/>is<sp/>1/1/1970</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TIME_EPOCH_DELTA<sp/><sp/>ZCL_TIME_EPOCH_DELTA_1970</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/>our<sp/>millisecond<sp/>timer<sp/>has<sp/>a<sp/>?ms<sp/>resolution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_MS_TIMER_RESOLUTION<sp/>(1000<sp/>/<sp/>CLOCKS_PER_SEC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_MAX_CONVERSATIONS<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_CONVERSATION_TIMEOUT<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dos.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;conio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/>console<sp/>using<sp/>ANSI.SYS<sp/>escape<sp/>codes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gotoxy_ansi(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clrscr_ansi(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__WATCOMC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>console<sp/>using<sp/>BIOS<sp/>calls</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gotoxy00_bios(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getxy_bios(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*col,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*row);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clrscr_bios(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gotoxy<sp/>is<sp/>commonly<sp/>1-based,<sp/>but<sp/>BIOS<sp/>calls<sp/>in<sp/>gotoxy00()<sp/>are<sp/>0-based</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>gotoxy00(x,y)<sp/><sp/><sp/>gotoxy00_bios(x,y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>gotoxy(x,y)<sp/><sp/><sp/><sp/><sp/>gotoxy00_bios((x)-1,<sp/>(y)-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>getxy(x,y)<sp/><sp/><sp/><sp/><sp/><sp/>getxy_bios(x,y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>clrscr()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clrscr_bios()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Borland<sp/>C<sp/>is<sp/>1&apos;s<sp/>based,<sp/>but<sp/>we<sp/>assume<sp/>0&apos;s<sp/>based.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>gotoxy00(x,y)<sp/>gotoxy((x)+1,<sp/>(y)+1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>__XBEE_PLATFORM_DOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/xbee/platform_dos.h"/>
+  </compounddef>
+</doxygen>

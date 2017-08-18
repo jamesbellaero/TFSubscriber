@@ -1,0 +1,906 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__xbee__discovery" kind="group">
+    <compoundname>xbee_discovery</compoundname>
+    <title>Node Discovery</title>
+    <innerfile refid="xbee__discovery_8c">xbee_discovery.c</innerfile>
+    <innerfile refid="discovery_8h">discovery.h</innerfile>
+    <innerclass refid="structxbee__node__id__t" prot="public">xbee_node_id_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__xbee__discovery_1gaf00a7a98eff47e084bf5f8741bf41220" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>xbee_node_id1_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_node_id1_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref>			network_addr_be</initializer>
+        <briefdescription>
+<para>ATMY value [0xFFFE on DigiMesh]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="81" column="1" bodyfile="include/xbee/discovery.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__discovery_1ga4c7c2f1049e4dc4bb4552269077cf4fc" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>xbee_node_id2_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_node_id2_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref>			parent_addr_be</initializer>
+        <briefdescription>
+<para>ATMP value [0xFFFE on DigiMesh]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="89" column="1" bodyfile="include/xbee/discovery.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__discovery_1ga6343d5dfdcee86d1d294b1bafb8d6f23" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>xbee_frame_node_id_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_frame_node_id_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>				frame_type</initializer>
+        <briefdescription>
+<para>format of 0x95 frames received from XBee </para>        </briefdescription>
+        <detaileddescription>
+<para>XBEE_FRAME_NODE_ID (0x95) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="114" column="1" bodyfile="include/xbee/discovery.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__xbee__discovery_1ga719f89263ecae9f127dc655c1c14fdac" prot="public" static="no" mutable="no">
+        <type><ref refid="unionaddr64" kindref="compound">addr64</ref></type>
+        <definition>addr64 ieee_addr_be</definition>
+        <argsstring></argsstring>
+        <name>ieee_addr_be</name>
+        <briefdescription>
+<para>ATSH and ATSL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="83" column="1" bodyfile="include/xbee/discovery.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1gaa667bab3abb953bc14d9f5bcc36644b8" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char node_info[XBEE_DISC_MAX_NODEID_LEN+1]</definition>
+        <argsstring>[XBEE_DISC_MAX_NODEID_LEN+1]</argsstring>
+        <name>node_info</name>
+        <briefdescription>
+<para>null-terminated ATNI value (variable length) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="85" column="1" bodyfile="include/xbee/discovery.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" compoundref="xbee__discovery_8c" startline="39" endline="74">xbee_disc_nd_parse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1gab9c960832b7e834e6657e0c6ab4c3d8a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t device_type</definition>
+        <argsstring></argsstring>
+        <name>device_type</name>
+        <briefdescription>
+<para>one of XBEE_ND_DEVICE_* macro values </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="92" column="1" bodyfile="include/xbee/discovery.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1ga0fb7817a87e8f275a4313c6629d189c7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t source_event</definition>
+        <argsstring></argsstring>
+        <name>source_event</name>
+        <briefdescription>
+<para>event that generated the ND frame </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="97" column="1" bodyfile="include/xbee/discovery.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1ga4de8649ccb3a83bd14fc5702328bb667" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t profile_be</definition>
+        <argsstring></argsstring>
+        <name>profile_be</name>
+        <briefdescription>
+<para>Digi Profile ID (0xC105) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="103" column="1" bodyfile="include/xbee/discovery.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1ga35abb56c1328cf62dfa8e54bc700ed19" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t manufacturer_be</definition>
+        <argsstring></argsstring>
+        <name>manufacturer_be</name>
+        <briefdescription>
+<para>Manufacturer ID (0x101E) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="104" column="1" bodyfile="include/xbee/discovery.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1ga7c278740875f8ad1696c446db22e3407" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t device_id_be</definition>
+        <argsstring></argsstring>
+        <name>device_id_be</name>
+        <briefdescription>
+<para>ATDD of remote device [optional field enabled with ATNO on DigiMesh]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="107" column="1" bodyfile="include/xbee/discovery.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1gafb67d818cd76cce8057affabcb1979a6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t rssi</definition>
+        <argsstring></argsstring>
+        <name>rssi</name>
+        <briefdescription>
+<para>RSSI of packet [optional field enabled with ATNO on DigiMesh]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="110" column="1" bodyfile="include/xbee/discovery.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1ga231e348f98931de7fde1d09f64264afc" prot="public" static="no" mutable="no">
+        <type><ref refid="unionaddr64" kindref="compound">addr64</ref></type>
+        <definition>addr64 ieee_address_be</definition>
+        <argsstring></argsstring>
+        <name>ieee_address_be</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="116" column="1" bodyfile="include/xbee/discovery.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1ga73d48563eb05cd5fcc4add79d226a3b8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t network_address_be</definition>
+        <argsstring></argsstring>
+        <name>network_address_be</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="117" column="1" bodyfile="include/xbee/discovery.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1gaace3d640c8d449b8db1162993d259d3f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="118" column="1" bodyfile="include/xbee/discovery.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1ga85b75c5bbcd6d39fb6e2802f35f926ff" prot="public" static="no" mutable="no">
+        <type><ref refid="group__xbee__discovery_1gaf00a7a98eff47e084bf5f8741bf41220" kindref="member">xbee_node_id1_t</ref></type>
+        <definition>xbee_node_id1_t node_data</definition>
+        <argsstring></argsstring>
+        <name>node_data</name>
+        <briefdescription>
+<para>variable-length data, parsed with <ref refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" kindref="member">xbee_disc_nd_parse()</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="120" column="1" bodyfile="include/xbee/discovery.h" bodystart="120" bodyend="-1"/>
+        <referencedby refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" compoundref="xbee__discovery_8c" startline="133" endline="148">xbee_disc_remove_node_id_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" compoundref="xbee__discovery_8c" startline="251" endline="265">xbee_disc_nodeid_frame_handler</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1ga719f89263ecae9f127dc655c1c14fdac" prot="public" static="no" mutable="no">
+        <type><ref refid="unionaddr64" kindref="compound">addr64</ref></type>
+        <definition>addr64 ieee_addr_be</definition>
+        <argsstring></argsstring>
+        <name>ieee_addr_be</name>
+        <briefdescription>
+<para>ATSH and ATSL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="126" column="1" bodyfile="include/xbee/discovery.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1gac1fa8be8752da585fe6a567d4732c147" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t network_addr</definition>
+        <argsstring></argsstring>
+        <name>network_addr</name>
+        <briefdescription>
+<para>ATMY value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="127" column="1" bodyfile="include/xbee/discovery.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1ga300e014f0c31d08adc1145613e0b0f72" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t parent_addr</definition>
+        <argsstring></argsstring>
+        <name>parent_addr</name>
+        <briefdescription>
+<para>ATMP. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="128" column="1" bodyfile="include/xbee/discovery.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1gab9c960832b7e834e6657e0c6ab4c3d8a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t device_type</definition>
+        <argsstring></argsstring>
+        <name>device_type</name>
+        <briefdescription>
+<para>one of XBEE_ND_DEVICE_TYPE_COORD, _ROUTER or _ENDDEV </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="130" column="1" bodyfile="include/xbee/discovery.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__discovery_1gaa667bab3abb953bc14d9f5bcc36644b8" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char node_info[XBEE_DISC_MAX_NODEID_LEN+1]</definition>
+        <argsstring>[XBEE_DISC_MAX_NODEID_LEN+1]</argsstring>
+        <name>node_info</name>
+        <briefdescription>
+<para>ATNI value (variable length, null-terminated) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="132" column="1" bodyfile="include/xbee/discovery.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_nd_parse</definition>
+        <argsstring>(xbee_node_id_t FAR *parsed, const void FAR *source, int source_length)</argsstring>
+        <name>xbee_disc_nd_parse</name>
+        <param>
+          <type><ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>parsed</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>source_length</declname>
+        </param>
+        <briefdescription>
+<para>Parse a Node Discovery response and store it in an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">parsed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to hold parsed Node ID message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source of Node ID message, starting with the 16-bit network address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">source_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes in source of Node ID message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node ID message parsed and stored in /a parsed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter passed to function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBADMSG</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error parsing Node ID message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="39" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="39" bodyend="74"/>
+        <references refid="group__util__byteorder_1gabb9b3120f6457dc04471c134fee1d221" compoundref="byteorder_8h" startline="131">be16toh</references>
+        <references refid="group__hal_1ga251e9b536ed96ccb16aa28ca2d5bd656" compoundref="platform_8h" startline="116">EBADMSG</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__xbee__discovery_1gaa667bab3abb953bc14d9f5bcc36644b8" compoundref="discovery_8h" startline="85">node_info</references>
+        <references refid="group__xbee__discovery_1ga0df6e63d6ccca22fcf154b6f0be46da6" compoundref="discovery_8h" startline="79">XBEE_DISC_MAX_NODEID_LEN</references>
+        <referencedby refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" compoundref="xbee__discovery_8c" startline="172" endline="185">_xbee_disc_parse_and_pass</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga8eb851e497917304412328f434af7c95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * xbee_disc_device_type_str</definition>
+        <argsstring>(uint8_t device_type)</argsstring>
+        <name>xbee_disc_device_type_str</name>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>device_type</declname>
+        </param>
+        <briefdescription>
+<para>Return a string (&quot;Coord&quot;, &quot;Router&quot;, &quot;EndDev&quot;, or &quot;???&quot;) description for the &quot;Device Type&quot; field of a Node ID message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the device_type field from a Node ID message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to a string describing the type, or &quot;???&quot; if <emphasis>device_type</emphasis> is invalid</para></simplesect>
+<simplesect kind="see"><para><ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="80" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="80" bodyend="90"/>
+        <referencedby refid="group__xbee__discovery_1gab155a485a9aa4870a45dd86d1d468c52" compoundref="xbee__discovery_8c" startline="96" endline="107">xbee_disc_node_id_dump</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1gab155a485a9aa4870a45dd86d1d468c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_disc_node_id_dump</definition>
+        <argsstring>(const xbee_node_id_t FAR *ni)</argsstring>
+        <name>xbee_disc_node_id_dump</name>
+        <param>
+          <type>const <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>ni</declname>
+        </param>
+        <briefdescription>
+<para>Debugging function used to dump an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure to stdout. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ni</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="96" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="96" bodyend="107"/>
+        <references refid="group__util__byteorder_1ga6acac399720b3a57d9050420aa0aac41" compoundref="byteorder_8h" startline="132">be32toh</references>
+        <references refid="group__hal_1ga379022d2cd3136d8f3500c88658056b7" compoundref="platform_8h" startline="406">PRIsFAR</references>
+        <references refid="group__hal_1ga80ca66bcc9e366733f02c90ed4b0838c" compoundref="platform_8h" startline="427">PRIx32</references>
+        <references refid="group__xbee__discovery_1ga8eb851e497917304412328f434af7c95" compoundref="xbee__discovery_8c" startline="80" endline="90">xbee_disc_device_type_str</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_add_node_id_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, xbee_disc_node_id_fn fn)</argsstring>
+        <name>xbee_disc_add_node_id_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="group__xbee__device_1ga64bf72cf58030a080f12f8916cd7d2a2" kindref="member">xbee_disc_node_id_fn</ref></type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+<para>Designate a function to receive parsed Node ID messages on a given XBee device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device to monitor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function to receive parsed Node ID messages</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function assigned </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter passed to function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSPC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can&apos;t assign handler to device</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" kindref="member">xbee_disc_remove_node_id_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="113" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="113" bodyend="127"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1ga088abe8bad2df798edad3053d719b937" compoundref="platform_8h" startline="107">ENOSPC</references>
+        <references refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" compoundref="device_8h" startline="371">xbee_dev_t::node_id_handler</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_remove_node_id_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, xbee_disc_node_id_fn fn)</argsstring>
+        <name>xbee_disc_remove_node_id_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="group__xbee__device_1ga64bf72cf58030a080f12f8916cd7d2a2" kindref="member">xbee_disc_node_id_fn</ref></type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+<para>Remove a function registered to receive parsed Node ID messages on a given XBee device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device to monitor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function to receive parsed Node ID messages</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function removed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter passed to function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOENT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function isn&apos;t assigned to this XBee module</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" kindref="member">xbee_disc_remove_node_id_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="133" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="133" bodyend="148"/>
+        <references refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" compoundref="xbee__discovery_8c" startline="172" endline="185">_xbee_disc_parse_and_pass</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1ga03e689f378f643d16ea7537918528a48" compoundref="platform_8h" startline="110">ENOENT</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" compoundref="zdo_8h" startline="410">length</references>
+        <references refid="group__xbee__discovery_1ga85b75c5bbcd6d39fb6e2802f35f926ff" compoundref="discovery_8h" startline="120">node_data</references>
+        <references refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" compoundref="device_8h" startline="371">xbee_dev_t::node_id_handler</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _xbee_disc_parse_and_pass</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *node_data, int length)</argsstring>
+        <name>_xbee_disc_parse_and_pass</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>node_data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Common function used to parse Node ID messages from various sources, and then pass them on to registered receivers. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device that received the message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">node_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to raw Node ID message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of Node ID message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node ID message parsed and passed on to any registered receivers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter passed to function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBADMSG</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error parsing Node ID message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" kindref="member">xbee_disc_nd_parse</ref>, <ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler</ref>, <ref refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" kindref="member">xbee_disc_remove_node_id_handler</ref> </para></simplesect>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="152" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="172" bodyend="185"/>
+        <references refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" compoundref="device_8h" startline="371">xbee_dev_t::node_id_handler</references>
+        <references refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" compoundref="xbee__discovery_8c" startline="39" endline="74">xbee_disc_nd_parse</references>
+        <referencedby refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" compoundref="xbee__discovery_8c" startline="191" endline="205">xbee_disc_nodeid_cluster_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" compoundref="xbee__discovery_8c" startline="251" endline="265">xbee_disc_nodeid_frame_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" compoundref="xbee__discovery_8c" startline="133" endline="148">xbee_disc_remove_node_id_handler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_nodeid_cluster_handler</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, void FAR *context)</argsstring>
+        <name>xbee_disc_nodeid_cluster_handler</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Process messages sent to the Node ID Message cluster (0x0095) of the Digi Data endpoint (0xE8) when ATAO != 0. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function parses the frame and then passes an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure on to Node ID handlers configured with <ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler()</ref>.</para><para>Do not call this function directly, it should be included in the Cluster table of the Digi Data endpoint by using the macro XBEE_DISC_DIGI_DATA_CLUSTER_ENTRY.</para><para>Hosts communicating to XBee modules running with ATAO set to zero do not need to use this handler.</para><para>See the function help for <ref refid="group__wpan__aps_1ga8575b0db762a5fbb858d4994c9b657e3" kindref="member">wpan_aps_handler_fn()</ref> for full documentation on this function&apos;s API.</para><para><simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga8f678e29b22812632df7d3fa3d0f951a" kindref="member">XBEE_DISC_DIGI_DATA_CLUSTER_ENTRY</ref>, <ref refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" kindref="member">xbee_disc_nodeid_frame_handler</ref>, <ref refid="group__xbee__discovery_1ga6d1190133ded980a4eeca2034508c8a5" kindref="member">xbee_disc_atnd_response_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="191" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="191" bodyend="205"/>
+        <references refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" compoundref="xbee__discovery_8c" startline="172" endline="185">_xbee_disc_parse_and_pass</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" compoundref="platform_8h" startline="399">XBEE_UNUSED_PARAMETER</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga6d1190133ded980a4eeca2034508c8a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_atnd_response_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>xbee_disc_atnd_response_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Process AT Command Response frames (type 0x88), looking for ATND responses to parse and pass to Node ID handlers. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function parses the frame and then passes an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure on to Node ID handlers configured with <ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler()</ref>. If the ATND command fails or returns a timeout, it passes a NULL <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> to the functions.</para><para>Do not call this function directly, it should be included in the XBee Frame Handlers table by using the macro XBEE_FRAME_HANDLE_ATND_RESPONSE.</para><para>See the function help for <ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> for full documentation on this function&apos;s API.</para><para><simplesect kind="see"><para><ref refid="group__xbee__discovery_1gadfed4daf7748e615dedf036d94d9fee9" kindref="member">XBEE_FRAME_HANDLE_ATND_RESPONSE</ref>, <ref refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" kindref="member">xbee_disc_nodeid_frame_handler</ref>, <ref refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" kindref="member">xbee_disc_nodeid_cluster_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="211" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="211" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_nodeid_frame_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>xbee_disc_nodeid_frame_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Process Node Identification frames (type 0x95), sent when ATAO = 0. </para>        </briefdescription>
+        <detaileddescription>
+<para>These frames are sent to the host when ATAO is set to 0 and a remote node:<itemizedlist>
+<listitem><para>Has ATD0 set to 1, and someone presses the commissioning button once.</para></listitem><listitem><para>Has ATJN set to 1, and has joined the network.</para></listitem></itemizedlist>
+</para><para>This function parses a the frame and then passes an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure on to Node ID handlers configured with <ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler()</ref>.</para><para>Do not call this function directly, it should be included in the XBee Frame Handlers table by using the macro XBEE_FRAME_HANDLE_AO0_NODEID. Hosts communicating to XBee modules running with ATAO set to a non-zero value do not need to use this handler.</para><para>See the function help for <ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> for full documentation on this function&apos;s API.</para><para><simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" kindref="member">xbee_disc_nodeid_cluster_handler</ref>, <ref refid="group__xbee__discovery_1ga6d1190133ded980a4eeca2034508c8a5" kindref="member">xbee_disc_atnd_response_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="251" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="251" bodyend="265"/>
+        <references refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" compoundref="xbee__discovery_8c" startline="172" endline="185">_xbee_disc_parse_and_pass</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__xbee__discovery_1ga85b75c5bbcd6d39fb6e2802f35f926ff" compoundref="discovery_8h" startline="120">node_data</references>
+        <references refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" compoundref="platform_8h" startline="399">XBEE_UNUSED_PARAMETER</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga12d6a10c8348cf5eb9636bbf02420dd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_discover_nodes</definition>
+        <argsstring>(xbee_dev_t *xbee, const char *identifier)</argsstring>
+        <name>xbee_disc_discover_nodes</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>identifier</declname>
+        </param>
+        <briefdescription>
+<para>Send an ATND command to the XBee, initiating node discovery for all nodes or a specific node&apos;s &quot;node identification&quot; (ATNI) string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Responses from remote nodes are parsed and then passed on to Node ID handlers configured with <ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device to use as the target </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ATNI (node identification) string of a device on the network, or NULL to discover all devices</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an invalid parameter was passed to the function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBUSY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transmit serial buffer is full, or XBee is not accepting serial data (deasserting /CTS signal).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler</ref>, <ref refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" kindref="member">xbee_disc_remove_node_id_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="271" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="271" bodyend="283"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__xbee__atcmd_1ga19d16fbaf1da1cc581fbedcb36f7263f" compoundref="xbee__atcmd_8c" startline="1825" endline="1842">xbee_cmd_execute</references>
+        <references refid="group__xbee__discovery_1ga0df6e63d6ccca22fcf154b6f0be46da6" compoundref="discovery_8h" startline="79">XBEE_DISC_MAX_NODEID_LEN</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__xbee__discovery_1ga0df6e63d6ccca22fcf154b6f0be46da6" prot="public" static="no">
+        <name>XBEE_DISC_MAX_NODEID_LEN</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para>Maximum length of a Node ID string (ATNI value) (excludes null terminator). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="79" column="9" bodyfile="include/xbee/discovery.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" compoundref="xbee__discovery_8c" startline="39" endline="74">xbee_disc_nd_parse</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga12d6a10c8348cf5eb9636bbf02420dd3" compoundref="xbee__discovery_8c" startline="271" endline="283">xbee_disc_discover_nodes</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__discovery_1gad01a0deb6da2cfa51bf893b93c33145b" prot="public" static="no">
+        <name>XBEE_ND_DEVICE_TYPE_COORD</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="93" column="11" bodyfile="include/xbee/discovery.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__discovery_1ga7b5f045986178759d39b922d9671ef58" prot="public" static="no">
+        <name>XBEE_ND_DEVICE_TYPE_ROUTER</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="94" column="11" bodyfile="include/xbee/discovery.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__discovery_1ga1d539a23a1b7f387256a706825b2ba01" prot="public" static="no">
+        <name>XBEE_ND_DEVICE_TYPE_ENDDEV</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="95" column="11" bodyfile="include/xbee/discovery.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__discovery_1ga65247596c3705407f5f2eb73497ef5ca" prot="public" static="no">
+        <name>XBEE_ND_SOURCE_EVENT_NONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="98" column="11" bodyfile="include/xbee/discovery.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__discovery_1gafe8894115d7013fb820444fa2c77a12a" prot="public" static="no">
+        <name>XBEE_ND_SOURCE_EVENT_PUSHBUTTON</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="99" column="11" bodyfile="include/xbee/discovery.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__discovery_1gad3637e6febeec639fd9750c40a6e7a7f" prot="public" static="no">
+        <name>XBEE_ND_SOURCE_EVENT_JOINED</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="100" column="11" bodyfile="include/xbee/discovery.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__discovery_1ga0e1a51031fe5f18aa5b2c5ad02bbb329" prot="public" static="no">
+        <name>XBEE_ND_SOURCE_EVENT_POWER_CYCLE</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="101" column="11" bodyfile="include/xbee/discovery.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__discovery_1ga8f678e29b22812632df7d3fa3d0f951a" prot="public" static="no">
+        <name>XBEE_DISC_DIGI_DATA_CLUSTER_ENTRY</name>
+        <initializer>{ <ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ad19431fd18576cc8463e8ac362a8579c" kindref="member">DIGI_CLUST_NODEID_MESSAGE</ref>, <ref refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" kindref="member">xbee_disc_nodeid_cluster_handler</ref>, NULL,	\
+		<ref refid="group__wpan__aps_1ga2024b5d21c6f8c2f151cc2b0576c08f4" kindref="member">WPAN_CLUST_FLAG_INPUT</ref> | <ref refid="group__wpan__aps_1gacb0e365a8c5e72ee90be503513e7e630" kindref="member">WPAN_CLUST_FLAG_NOT_ZCL</ref>}</initializer>
+        <briefdescription>
+<para>Include xbee_disc_nodeid_cluster_handler in the cluster table for the the Digi Data endpoint. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="199" column="9" bodyfile="include/xbee/discovery.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__discovery_1gadfed4daf7748e615dedf036d94d9fee9" prot="public" static="no">
+        <name>XBEE_FRAME_HANDLE_ATND_RESPONSE</name>
+        <initializer>{ <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9ae66771334070219cd098c8201936cf4a" kindref="member">XBEE_FRAME_LOCAL_AT_RESPONSE</ref>, 0, <ref refid="group__xbee__discovery_1ga6d1190133ded980a4eeca2034508c8a5" kindref="member">xbee_disc_atnd_response_handler</ref>, NULL }</initializer>
+        <briefdescription>
+<para>Include xbee_disc_atnd_response_handler in xbee_frame_handlers[]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="225" column="9" bodyfile="include/xbee/discovery.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__discovery_1ga11002dcf6525c8a0d1144215bebbc774" prot="public" static="no">
+        <name>XBEE_FRAME_HANDLE_AO0_NODEID</name>
+        <initializer>{ <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9a5b572839c3123f1059ec2ced643cf5d2" kindref="member">XBEE_FRAME_NODE_ID</ref>, 0, <ref refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" kindref="member">xbee_disc_nodeid_frame_handler</ref>, NULL }</initializer>
+        <briefdescription>
+<para>Include xbee_disc_nodeid_frame_handler in xbee_frame_handlers[] (only necessary if ATAO is set to 0). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/discovery.h" line="254" column="9" bodyfile="include/xbee/discovery.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This layer manages ATND responses and 0x95 frames related to proprietary (XBee-only) node discovery methods used in ZigBee firmware (not supported in Smart Energy firmware builds). </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

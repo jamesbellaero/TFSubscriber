@@ -1,0 +1,685 @@
+\hypertarget{group__hal__kl25}{}\section{Hal\+\_\+kl25}
+\label{group__hal__kl25}\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga7889b9b27287ecd3ab94ba0e08eb209e}\label{group__hal__kl25_ga7889b9b27287ecd3ab94ba0e08eb209e}} 
+\#define {\bfseries M\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}~127
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga7c3a985c27600619d2bc4db511aff598}\label{group__hal__kl25_ga7c3a985c27600619d2bc4db511aff598}} 
+\#define {\bfseries R\+T\+S\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+B\+Y\+T\+ES}~8
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga755b7e850db6200a6f43b741c678ae53}\label{group__hal__kl25_ga755b7e850db6200a6f43b741c678ae53}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+CK}(ptr)
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga7e9a5ad096612667f1abe02fe20e3a25}\label{group__hal__kl25_ga7e9a5ad096612667f1abe02fe20e3a25}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+W\+I\+F\+I\+\_\+\+E\+N\+A\+B\+LE}
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga61c9dcca11a638f39e74b9992aacf82c}\label{group__hal__kl25_ga61c9dcca11a638f39e74b9992aacf82c}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+A\+T\+M\+O\+DE}
+\item 
+\mbox{\Hypertarget{group__hal__kl25_gacf1a32c487efc5306d57219a57d57b60}\label{group__hal__kl25_gacf1a32c487efc5306d57219a57d57b60}} 
+\#define {\bfseries strcmpi}~strcasecmp
+\item 
+\mbox{\Hypertarget{group__hal__kl25_gad3a1fdce8f91caabe3b9aaa93cb69044}\label{group__hal__kl25_gad3a1fdce8f91caabe3b9aaa93cb69044}} 
+\#define {\bfseries strncmpi}~strncasecmp
+\item 
+\mbox{\Hypertarget{group__hal__kl25_gafa9179779c676eed926a35c4ab5fe5b5}\label{group__hal__kl25_gafa9179779c676eed926a35c4ab5fe5b5}} 
+\#define {\bfseries P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}~struct \+\_\+\+\_\+attribute\+\_\+\+\_\+ ((\+\_\+\+\_\+packed\+\_\+\+\_\+))
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga3ee5b5bde5321e97420753cf13ce9c1b}\label{group__hal__kl25_ga3ee5b5bde5321e97420753cf13ce9c1b}} 
+\#define {\bfseries \+\_\+f\+\_\+memcpy}~memcpy
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga210604a4d70c1421599afca049c8dc55}\label{group__hal__kl25_ga210604a4d70c1421599afca049c8dc55}} 
+\#define {\bfseries \+\_\+f\+\_\+memset}~memset
+\item 
+\mbox{\Hypertarget{group__hal__kl25_gaef060b3456fdcc093a7210a762d5f2ed}\label{group__hal__kl25_gaef060b3456fdcc093a7210a762d5f2ed}} 
+\#define {\bfseries F\+AR}
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga503caf44f78cc52dc196c413cd6c78ab}\label{group__hal__kl25_ga503caf44f78cc52dc196c413cd6c78ab}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+D\+E\+L\+TA}~0
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga5cbeea4d9344138b657f78ad38813584}\label{group__hal__kl25_ga5cbeea4d9344138b657f78ad38813584}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+M\+S\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}~1
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga844d3ad124d3502c66cac1ce2f86ca72}\label{group__hal__kl25_ga844d3ad124d3502c66cac1ce2f86ca72}} 
+\#define {\bfseries xbee\+\_\+get\+\_\+unaligned16}(p)~\+\_\+xbee\+\_\+get\+\_\+unaligned16( p)
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga05636feff360b2e024a0db267aedf104}\label{group__hal__kl25_ga05636feff360b2e024a0db267aedf104}} 
+\#define {\bfseries xbee\+\_\+get\+\_\+unaligned32}(p)~\+\_\+xbee\+\_\+get\+\_\+unaligned32( p)
+\item 
+\mbox{\Hypertarget{group__hal__kl25_gae93bd4533f7f7e0dd4cbc54d2760030e}\label{group__hal__kl25_gae93bd4533f7f7e0dd4cbc54d2760030e}} 
+\#define {\bfseries xbee\+\_\+set\+\_\+unaligned16}(p,  v)~\+\_\+xbee\+\_\+set\+\_\+unaligned16( p, v)
+\item 
+\mbox{\Hypertarget{group__hal__kl25_gac083bd862aa3f6258437adba422de4ce}\label{group__hal__kl25_gac083bd862aa3f6258437adba422de4ce}} 
+\#define {\bfseries xbee\+\_\+set\+\_\+unaligned32}(p,  v)~\+\_\+xbee\+\_\+set\+\_\+unaligned32( p, v)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga812d16e5494522586b3784e55d479912}\label{group__hal__kl25_ga812d16e5494522586b3784e55d479912}} 
+typedef int {\bfseries bool\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga2db648c8306d8b82c5e548096738428f}\label{group__hal__kl25_ga2db648c8306d8b82c5e548096738428f}} 
+Serial {\bfseries xbee\+\_\+ser} (P\+T\+D3, P\+T\+D2)
+\item 
+\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} \hyperlink{group__hal__kl25_ga9bf21a5b024e4919bbe8b605c8f45351}{xbee\+\_\+ser\+\_\+invalid} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Helper function used by other xbee\+\_\+serial functions to validate the {\itshape serial} parameter. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__hal__kl25_ga898057d1b7645785e7f3d6256828d039}{xbee\+\_\+ser\+\_\+portname} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns a human-\/readable string describing the serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Transmits {\itshape length} bytes from {\itshape buffer} to the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, int bufsize)
+\begin{DoxyCompactList}\small\item\em Reads up to {\itshape bufsize} bytes from X\+Bee serial port {\itshape serial} and into {\itshape buffer}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga86fea2345efb8bf9424228f0979b1849}{xbee\+\_\+ser\+\_\+putchar} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} ch)
+\begin{DoxyCompactList}\small\item\em Transmits a single character, {\itshape ch}, to the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Reads a single character from the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of bytes of unused space in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of queued bytes in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Flushes (i.\+e., deletes and does not transmit) characters in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of bytes of unused space in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of queued bytes in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Deletes all characters in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_gab3c12543a07e0669b672c5cab54b0926}{xbee\+\_\+ser\+\_\+baudrate} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} baudrate)
+\begin{DoxyCompactList}\small\item\em Change the baud rate of X\+Bee serial port {\itshape serial} to {\itshape baudrate} bits/second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__kl25_ga408b9fa24c27c261b6fd6fd67944fb8b}\label{group__hal__kl25_ga408b9fa24c27c261b6fd6fd67944fb8b}} 
+void {\bfseries xbee\+\_\+ser\+\_\+rx\+\_\+isr} (void)
+\item 
+int \hyperlink{group__hal__kl25_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} baudrate)
+\begin{DoxyCompactList}\small\item\em Opens the serial port connected to X\+Bee serial port {\itshape serial} at {\itshape baudrate} bits/second. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Close the serial port attached to X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} enabled)
+\begin{DoxyCompactList}\small\item\em Disable the serial transmit pin and pull it low to send a break to the X\+Bee serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga33229d0d63ff1442f23b0739794d3afb}{xbee\+\_\+ser\+\_\+flowcontrol} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable hardware flow control (C\+T\+S/\+R\+TS) on the serial port for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}{xbee\+\_\+ser\+\_\+set\+\_\+rts} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} asserted)
+\begin{DoxyCompactList}\small\item\em Disable hardware flow control and manually set the R\+TS (ready to send) pin on the X\+Bee device\textquotesingle{}s serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__kl25_ga894f6fadc890b5ba5ce32338f0acd217}{xbee\+\_\+ser\+\_\+get\+\_\+cts} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Read the status of the /\+C\+TS (clear to send) pin on the serial port connected to X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__kl25_ga3c28867722588bbce19f48619a686aa5}\label{group__hal__kl25_ga3c28867722588bbce19f48619a686aa5}} 
+\hyperlink{group__hal_ga336bff4f4a6012aacc4468132bbd3d7f}{X\+B\+E\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS} \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries \+\_\+xbee\+\_\+get\+\_\+unaligned16} (const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$p)
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga3cc521904fd5767c0507d3ba1edf7fa9}\label{group__hal__kl25_ga3cc521904fd5767c0507d3ba1edf7fa9}} 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries \+\_\+xbee\+\_\+get\+\_\+unaligned32} (const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$p)
+\item 
+\mbox{\Hypertarget{group__hal__kl25_gaeb0e009ab2cb29eecfcc690abc65aabd}\label{group__hal__kl25_gaeb0e009ab2cb29eecfcc690abc65aabd}} 
+void {\bfseries \+\_\+xbee\+\_\+set\+\_\+unaligned16} (void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$p, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value})
+\item 
+\mbox{\Hypertarget{group__hal__kl25_gaae24dc98d36feec7a17aad989a9bf91f}\label{group__hal__kl25_gaae24dc98d36feec7a17aad989a9bf91f}} 
+void {\bfseries \+\_\+xbee\+\_\+set\+\_\+unaligned32} (void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$p, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value})
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga4bbae3bd7c4c424b964b8db9448127fd}\label{group__hal__kl25_ga4bbae3bd7c4c424b964b8db9448127fd}} 
+void {\bfseries xbee\+\_\+platform\+\_\+init} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__kl25_ga3d695999a45f7807b27e4cf1d949727e}\label{group__hal__kl25_ga3d695999a45f7807b27e4cf1d949727e}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{structxbee__cbuf__t}{xbee\_cbuf\_t} {\bfseries cbuf}\\
+\>char {\bfseries buf\_space} \mbox{[}MY\_BUF\_SIZE\mbox{]}\\
+\} {\bfseries xbee\_buf}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__hal__kl25_gab3c12543a07e0669b672c5cab54b0926}\label{group__hal__kl25_gab3c12543a07e0669b672c5cab54b0926}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+baudrate@{xbee\+\_\+ser\+\_\+baudrate}}
+\index{xbee\+\_\+ser\+\_\+baudrate@{xbee\+\_\+ser\+\_\+baudrate}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+baudrate()}{xbee\_ser\_baudrate()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+baudrate (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Change the baud rate of X\+Bee serial port {\itshape serial} to {\itshape baudrate} bits/second. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em baudrate} & Bits per second of serial data transfer speed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Opened serial port within 5\% of requested baudrate. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & Can\textquotesingle{}t open serial port within 5\% of requested baudrate.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open()}, \hyperlink{group__xbee__serial_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close()}, \hyperlink{group__xbee__serial_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_gae19aa61eec588d1b935d267b0a982319}\label{group__hal__kl25_gae19aa61eec588d1b935d267b0a982319}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+break@{xbee\+\_\+ser\+\_\+break}}
+\index{xbee\+\_\+ser\+\_\+break@{xbee\+\_\+ser\+\_\+break}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+break()}{xbee\_ser\_break()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+break (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Disable the serial transmit pin and pull it low to send a break to the X\+Bee serial port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em enabled} & Set to 1 to start the break or 0 to end the break (and resume transmitting).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open()}, \hyperlink{group__xbee__serial_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga48b9d743a446074ea6abacd0de24044d}\label{group__hal__kl25_ga48b9d743a446074ea6abacd0de24044d}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+close@{xbee\+\_\+ser\+\_\+close}}
+\index{xbee\+\_\+ser\+\_\+close@{xbee\+\_\+ser\+\_\+close}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+close()}{xbee\_ser\_close()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+close (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Close the serial port attached to X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & closed serial port \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open()}, \hyperlink{group__xbee__serial_gab3c12543a07e0669b672c5cab54b0926}{xbee\+\_\+ser\+\_\+baudrate()}, \hyperlink{group__xbee__serial_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga33229d0d63ff1442f23b0739794d3afb}\label{group__hal__kl25_ga33229d0d63ff1442f23b0739794d3afb}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+flowcontrol@{xbee\+\_\+ser\+\_\+flowcontrol}}
+\index{xbee\+\_\+ser\+\_\+flowcontrol@{xbee\+\_\+ser\+\_\+flowcontrol}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+flowcontrol()}{xbee\_ser\_flowcontrol()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+flowcontrol (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable or disable hardware flow control (C\+T\+S/\+R\+TS) on the serial port for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em enabled} & Set to 0 to disable flow control or non-\/zero to enable flow control.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}{xbee\+\_\+ser\+\_\+set\+\_\+rts()}, \hyperlink{group__xbee__serial_ga894f6fadc890b5ba5ce32338f0acd217}{xbee\+\_\+ser\+\_\+get\+\_\+cts()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga894f6fadc890b5ba5ce32338f0acd217}\label{group__hal__kl25_ga894f6fadc890b5ba5ce32338f0acd217}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+get\+\_\+cts@{xbee\+\_\+ser\+\_\+get\+\_\+cts}}
+\index{xbee\+\_\+ser\+\_\+get\+\_\+cts@{xbee\+\_\+ser\+\_\+get\+\_\+cts}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+get\+\_\+cts()}{xbee\_ser\_get\_cts()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+get\+\_\+cts (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Read the status of the /\+C\+TS (clear to send) pin on the serial port connected to X\+Bee serial port {\itshape serial}. 
+
+Note that this function doesn\textquotesingle{}t return the value of the pin -- it returns whether it\textquotesingle{}s asserted (i.\+e., clear to send to the X\+Bee serial port) or not.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & it\textquotesingle{}s clear to send \\
+\hline
+{\em 0} & it\textquotesingle{}s not clear to send \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga33229d0d63ff1442f23b0739794d3afb}{xbee\+\_\+ser\+\_\+flowcontrol()}, \hyperlink{group__xbee__serial_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}{xbee\+\_\+ser\+\_\+set\+\_\+rts()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_gaeeb38154313a44f86146cdcfe08e7d08}\label{group__hal__kl25_gaeeb38154313a44f86146cdcfe08e7d08}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+getchar@{xbee\+\_\+ser\+\_\+getchar}}
+\index{xbee\+\_\+ser\+\_\+getchar@{xbee\+\_\+ser\+\_\+getchar}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+getchar()}{xbee\_ser\_getchar()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+getchar (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Reads a single character from the X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0-\/255} & character read from X\+Bee serial port \\
+\hline
+{\em -\/\+E\+N\+O\+D\+A\+TA} & There aren\textquotesingle{}t any characters in the read buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read()}, \hyperlink{group__xbee__serial_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga9bf21a5b024e4919bbe8b605c8f45351}\label{group__hal__kl25_ga9bf21a5b024e4919bbe8b605c8f45351}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+invalid@{xbee\+\_\+ser\+\_\+invalid}}
+\index{xbee\+\_\+ser\+\_\+invalid@{xbee\+\_\+ser\+\_\+invalid}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+invalid()}{xbee\_ser\_invalid()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} xbee\+\_\+ser\+\_\+invalid (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Helper function used by other xbee\+\_\+serial functions to validate the {\itshape serial} parameter. 
+
+Confirms that it is non-\/{\ttfamily N\+U\+LL} and is set to a valid port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & {\itshape serial} is not a valid X\+Bee serial port \\
+\hline
+{\em 0} & {\itshape serial} is a valid X\+Bee serial port \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__hal__kl25_gaa615a221dd69c17ee2989c281f2bf04a}\label{group__hal__kl25_gaa615a221dd69c17ee2989c281f2bf04a}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+open@{xbee\+\_\+ser\+\_\+open}}
+\index{xbee\+\_\+ser\+\_\+open@{xbee\+\_\+ser\+\_\+open}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+open()}{xbee\_ser\_open()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Opens the serial port connected to X\+Bee serial port {\itshape serial} at {\itshape baudrate} bits/second. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em baudrate} & Bits per second of serial data transfer speed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Opened serial port within 5\% of requested baudrate. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & Can\textquotesingle{}t open serial port within 5\% of requested baudrate.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gab3c12543a07e0669b672c5cab54b0926}{xbee\+\_\+ser\+\_\+baudrate()}, \hyperlink{group__xbee__serial_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close()}, \hyperlink{group__xbee__serial_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga898057d1b7645785e7f3d6256828d039}\label{group__hal__kl25_ga898057d1b7645785e7f3d6256828d039}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+portname@{xbee\+\_\+ser\+\_\+portname}}
+\index{xbee\+\_\+ser\+\_\+portname@{xbee\+\_\+ser\+\_\+portname}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+portname()}{xbee\_ser\_portname()}}
+{\footnotesize\ttfamily const char$\ast$ xbee\+\_\+ser\+\_\+portname (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns a human-\/readable string describing the serial port. 
+
+For example, on a Windows machine this will be \char`\"{}\+C\+O\+M1\char`\"{} or \char`\"{}\+C\+O\+M999\char`\"{}. On a Rabbit, it will be a single letter, \char`\"{}\+A\char`\"{} through \char`\"{}\+F\char`\"{}. On Freescale H\+C\+S08, it will be something like \char`\"{}\+S\+C\+I1\char`\"{} or \char`\"{}\+S\+C\+I2\char`\"{}. On P\+O\+S\+IX, the name of the device (e.\+g., \char`\"{}/dev/tty\+S0\char`\"{})
+
+Returns \char`\"{}(invalid)\char`\"{} if {\itshape serial} is invalid or not configured.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & port\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null-\/terminated string describing the serial port 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__hal__kl25_ga86fea2345efb8bf9424228f0979b1849}\label{group__hal__kl25_ga86fea2345efb8bf9424228f0979b1849}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+putchar@{xbee\+\_\+ser\+\_\+putchar}}
+\index{xbee\+\_\+ser\+\_\+putchar@{xbee\+\_\+ser\+\_\+putchar}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+putchar()}{xbee\_ser\_putchar()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+putchar (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}}]{ch }\end{DoxyParamCaption})}
+
+
+
+Transmits a single character, {\itshape ch}, to the X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em ch} & character to send\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Successfully sent (queued) character. \\
+\hline
+{\em -\/\+E\+N\+O\+S\+PC} & The write buffer is full and the character wasn\textquotesingle{}t sent. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read()}, \hyperlink{group__xbee__serial_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+
+
+References E\+N\+O\+S\+PC, and xbee\+\_\+ser\+\_\+write().
+
+\mbox{\Hypertarget{group__hal__kl25_ga8263312373c03a79a718142e051b3342}\label{group__hal__kl25_ga8263312373c03a79a718142e051b3342}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+read@{xbee\+\_\+ser\+\_\+read}}
+\index{xbee\+\_\+ser\+\_\+read@{xbee\+\_\+ser\+\_\+read}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+read()}{xbee\_ser\_read()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+read (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{int}]{bufsize }\end{DoxyParamCaption})}
+
+
+
+Reads up to {\itshape bufsize} bytes from X\+Bee serial port {\itshape serial} and into {\itshape buffer}. 
+
+If there is no data available when the function is called, it will return immediately.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt out}  & {\em buffer} & buffer to hold bytes read from X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em bufsize} & maximum number of bytes to read\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & The number of bytes read from X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & I/O error attempting to write to serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write()}, \hyperlink{group__xbee__serial_ga86fea2345efb8bf9424228f0979b1849}{xbee\+\_\+ser\+\_\+putchar()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}\label{group__hal__kl25_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+rx\+\_\+flush@{xbee\+\_\+ser\+\_\+rx\+\_\+flush}}
+\index{xbee\+\_\+ser\+\_\+rx\+\_\+flush@{xbee\+\_\+ser\+\_\+rx\+\_\+flush}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}{xbee\_ser\_rx\_flush()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+rx\+\_\+flush (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Deletes all characters in the serial receive buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga16fb431a1e66861439518e562431821f}\label{group__hal__kl25_ga16fb431a1e66861439518e562431821f}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+rx\+\_\+free@{xbee\+\_\+ser\+\_\+rx\+\_\+free}}
+\index{xbee\+\_\+ser\+\_\+rx\+\_\+free@{xbee\+\_\+ser\+\_\+rx\+\_\+free}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+rx\+\_\+free()}{xbee\_ser\_rx\_free()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+rx\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of bytes of unused space in the serial receive buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em I\+N\+T\+\_\+\+M\+AX} & The buffer size is unlimited (or unknown). \\
+\hline
+{\em $>$=0} & The number of bytes it would take to fill the X\+Bee serial port\textquotesingle{}s serial receive buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga43b8322771cc16b4130fa5330ad2242b}\label{group__hal__kl25_ga43b8322771cc16b4130fa5330ad2242b}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+rx\+\_\+used@{xbee\+\_\+ser\+\_\+rx\+\_\+used}}
+\index{xbee\+\_\+ser\+\_\+rx\+\_\+used@{xbee\+\_\+ser\+\_\+rx\+\_\+used}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+rx\+\_\+used()}{xbee\_ser\_rx\_used()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+rx\+\_\+used (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of queued bytes in the serial receive buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & The number of bytes queued in the X\+Bee serial port\textquotesingle{}s serial transmit buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Unlike \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, this function M\+U\+ST return the number of bytes available. Some layers of the library wait until enough bytes are ready before continuing.
+\end{DoxyNote}
+We may expand on or replace this A\+PI. On some platforms (like Win32) we have to do some of our own buffering in order to peek at data in the serial receive buffer. Most of the driver only requires a check to see if some number of bytes are available or not. Consider changing the A\+PI to something like\+:
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} xbee\_ser\_rx\_avail( \hyperlink{structxbee__serial__t}{xbee\_serial\_t} *serial, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} count)
+\end{DoxyCode}
+ returns T\+R\+UE if {\ttfamily count} bytes are available, F\+A\+L\+SE otherwise. \mbox{\Hypertarget{group__hal__kl25_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}\label{group__hal__kl25_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+set\+\_\+rts@{xbee\+\_\+ser\+\_\+set\+\_\+rts}}
+\index{xbee\+\_\+ser\+\_\+set\+\_\+rts@{xbee\+\_\+ser\+\_\+set\+\_\+rts}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+set\+\_\+rts()}{xbee\_ser\_set\_rts()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+set\+\_\+rts (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{asserted }\end{DoxyParamCaption})}
+
+
+
+Disable hardware flow control and manually set the R\+TS (ready to send) pin on the X\+Bee device\textquotesingle{}s serial port. 
+
+Typically used to enter the X\+Bee device\textquotesingle{}s boot loader and initiate a firmware update.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em asserted} & Set to 1 to assert R\+TS (ok for X\+Bee to send to us) or 0 to deassert R\+TS (tell X\+Bee not to send to us).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga33229d0d63ff1442f23b0739794d3afb}{xbee\+\_\+ser\+\_\+flowcontrol()}, \hyperlink{group__xbee__serial_ga894f6fadc890b5ba5ce32338f0acd217}{xbee\+\_\+ser\+\_\+get\+\_\+cts()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga05308d37301d27715f1e1308b7189220}\label{group__hal__kl25_ga05308d37301d27715f1e1308b7189220}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+tx\+\_\+flush@{xbee\+\_\+ser\+\_\+tx\+\_\+flush}}
+\index{xbee\+\_\+ser\+\_\+tx\+\_\+flush@{xbee\+\_\+ser\+\_\+tx\+\_\+flush}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}{xbee\_ser\_tx\_flush()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+tx\+\_\+flush (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Flushes (i.\+e., deletes and does not transmit) characters in the serial transmit buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga3ad8f378b572d6fec982f1086bd3b94f}\label{group__hal__kl25_ga3ad8f378b572d6fec982f1086bd3b94f}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+tx\+\_\+free@{xbee\+\_\+ser\+\_\+tx\+\_\+free}}
+\index{xbee\+\_\+ser\+\_\+tx\+\_\+free@{xbee\+\_\+ser\+\_\+tx\+\_\+free}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+tx\+\_\+free()}{xbee\_ser\_tx\_free()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+tx\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of bytes of unused space in the serial transmit buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em I\+N\+T\+\_\+\+M\+AX} & The buffer size is unlimited (or unknown). \\
+\hline
+{\em $>$=0} & The number of bytes it would take to fill the X\+Bee serial port\textquotesingle{}s serial transmit buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_gaabf70934d186354cde4ac14ed27d1bd2}\label{group__hal__kl25_gaabf70934d186354cde4ac14ed27d1bd2}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+tx\+\_\+used@{xbee\+\_\+ser\+\_\+tx\+\_\+used}}
+\index{xbee\+\_\+ser\+\_\+tx\+\_\+used@{xbee\+\_\+ser\+\_\+tx\+\_\+used}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+tx\+\_\+used()}{xbee\_ser\_tx\_used()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+tx\+\_\+used (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of queued bytes in the serial transmit buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & The buffer size is unlimited (or space used is unknown). \\
+\hline
+{\em $>$0} & The number of bytes queued in the X\+Bee serial port\textquotesingle{}s serial transmit buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__kl25_ga2ca4e60c9d642084afa52dff9e1f6be4}\label{group__hal__kl25_ga2ca4e60c9d642084afa52dff9e1f6be4}} 
+\index{Hal\+\_\+kl25@{Hal\+\_\+kl25}!xbee\+\_\+ser\+\_\+write@{xbee\+\_\+ser\+\_\+write}}
+\index{xbee\+\_\+ser\+\_\+write@{xbee\+\_\+ser\+\_\+write}!Hal\+\_\+kl25@{Hal\+\_\+kl25}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+write()}{xbee\_ser\_write()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+write (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Transmits {\itshape length} bytes from {\itshape buffer} to the X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em buffer} & source of bytes to send\\
+\hline
+\mbox{\tt in}  & {\em length} & number of bytes to write\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & The number of bytes successfully written to X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & I/O error attempting to write to serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read()}, \hyperlink{group__xbee__serial_ga86fea2345efb8bf9424228f0979b1849}{xbee\+\_\+ser\+\_\+putchar()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+
+
+References F\+AR, and length.
+
+
+
+Referenced by xbee\+\_\+ser\+\_\+putchar().
+

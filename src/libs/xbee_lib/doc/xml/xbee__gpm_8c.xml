@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="xbee__gpm_8c" kind="file" language="C++">
+    <compoundname>xbee_gpm.c</compoundname>
+    <includes refid="byteorder_8h" local="yes">xbee/byteorder.h</includes>
+    <includes refid="gpm_8h" local="yes">xbee/gpm.h</includes>
+    <incdepgraph>
+      <node id="1399">
+        <label>xbee/device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="1393" relation="include">
+        </childnode>
+        <childnode refid="1400" relation="include">
+        </childnode>
+        <childnode refid="1401" relation="include">
+        </childnode>
+        <childnode refid="1402" relation="include">
+        </childnode>
+      </node>
+      <node id="1390">
+        <label>src/xbee/xbee_gpm.c</label>
+        <link refid="xbee__gpm_8c"/>
+        <childnode refid="1391" relation="include">
+        </childnode>
+        <childnode refid="1398" relation="include">
+        </childnode>
+      </node>
+      <node id="1394">
+        <label>errno.h</label>
+      </node>
+      <node id="1398">
+        <label>xbee/gpm.h</label>
+        <link refid="gpm_8h"/>
+        <childnode refid="1393" relation="include">
+        </childnode>
+        <childnode refid="1399" relation="include">
+        </childnode>
+        <childnode refid="1402" relation="include">
+        </childnode>
+      </node>
+      <node id="1396">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="1397" relation="include">
+        </childnode>
+      </node>
+      <node id="1395">
+        <label>stddef.h</label>
+      </node>
+      <node id="1402">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="1401" relation="include">
+        </childnode>
+      </node>
+      <node id="1391">
+        <label>xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="1392" relation="include">
+        </childnode>
+        <childnode refid="1393" relation="include">
+        </childnode>
+      </node>
+      <node id="1392">
+        <label>string.h</label>
+      </node>
+      <node id="1401">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="1393" relation="include">
+        </childnode>
+      </node>
+      <node id="1393">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="1394" relation="include">
+        </childnode>
+        <childnode refid="1395" relation="include">
+        </childnode>
+        <childnode refid="1396" relation="include">
+        </childnode>
+      </node>
+      <node id="1400">
+        <label>xbee/serial.h</label>
+        <link refid="serial_8h"/>
+        <childnode refid="1393" relation="include">
+        </childnode>
+      </node>
+      <node id="1397">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="xbee__gpm_8c_1a775b47f3e0c84e5166f516a6f04147ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_gpm_envelope_create</definition>
+        <argsstring>(wpan_envelope_t FAR *envelope, wpan_dev_t *dev, const addr64 FAR *ieee)</argsstring>
+        <name>xbee_gpm_envelope_create</name>
+        <param>
+          <type><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>const <ref refid="unionaddr64" kindref="compound">addr64</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>ieee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="21" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="21" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1ab592759baf106bbbd584cce72a450d7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_gpm_envelope_local</definition>
+        <argsstring>(wpan_envelope_t *envelope, wpan_dev_t *dev)</argsstring>
+        <name>xbee_gpm_envelope_local</name>
+        <param>
+          <type><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="37" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1ae8fc9ef818f12d12d47da95a90bd33c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _xbee_gpm_parameterless_command</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, uint8_t command)</argsstring>
+        <name>_xbee_gpm_parameterless_command</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="42" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="42" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1ac685b5b9cf3acf595f151308bbf3e691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_gpm_get_flash_info</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope)</argsstring>
+        <name>xbee_gpm_get_flash_info</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="62" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1a466acd68587b0dc29e8926bd71627cba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_gpm_erase_block</definition>
+        <argsstring>(const wpan_envelope_t *envelope, uint16_t block_num, uint16_t block_size)</argsstring>
+        <name>xbee_gpm_erase_block</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>block_num</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>block_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="68" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="68" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1a835eb8e60c3546b2ec7fe6f821900547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t xbee_gpm_max_write</definition>
+        <argsstring>(const wpan_dev_t *dev)</argsstring>
+        <name>xbee_gpm_max_write</name>
+        <param>
+          <type>const <ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="90" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="90" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1a8728fef51737f1c6989576a62ca34860" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _xbee_gpm_write</definition>
+        <argsstring>(const wpan_envelope_t *envelope, uint16_t block_num, uint16_t byte_offset, uint16_t byte_count, const void FAR *data, bool_t erase_first)</argsstring>
+        <name>_xbee_gpm_write</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>block_num</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>byte_offset</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>byte_count</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref></type>
+          <declname>erase_first</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="108" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="108" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1aba4e14e1ec7f39ad1308f144ab433906" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_gpm_write</definition>
+        <argsstring>(const wpan_envelope_t *envelope, uint16_t block_num, uint16_t byte_offset, uint16_t byte_count, const void FAR *data)</argsstring>
+        <name>xbee_gpm_write</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>block_num</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>byte_offset</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>byte_count</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="143" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="143" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1a7fe15555b89635c6cb569c3af7ea1069" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_gpm_erase_then_write</definition>
+        <argsstring>(const wpan_envelope_t *envelope, uint16_t block_num, uint16_t byte_offset, uint16_t byte_count, const void FAR *data)</argsstring>
+        <name>xbee_gpm_erase_then_write</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>block_num</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>byte_offset</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>byte_count</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="150" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="150" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1ab36f71a726d0d51559eba76e5f86abf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_gpm_read</definition>
+        <argsstring>(const wpan_envelope_t *envelope, uint16_t block_num, uint16_t byte_offset, uint16_t byte_count)</argsstring>
+        <name>xbee_gpm_read</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>block_num</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>byte_offset</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>byte_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="158" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="158" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1a2b2bcabcf3402d000cc9d346b01c93be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_gpm_firmware_verify</definition>
+        <argsstring>(const wpan_envelope_t *envelope)</argsstring>
+        <name>xbee_gpm_firmware_verify</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="190" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="190" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="xbee__gpm_8c_1a13a366da58780dd464cb19364a75e9a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_gpm_firmware_install</definition>
+        <argsstring>(const wpan_envelope_t *envelope)</argsstring>
+        <name>xbee_gpm_firmware_install</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_gpm.c" line="196" column="1" bodyfile="src/xbee/xbee_gpm.c" bodystart="196" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>General Purpose Memory interface, used on multiple module types (900HP, 868LP, Wi-Fi). </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009-2013<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="byteorder_8h" kindref="compound">xbee/byteorder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gpm_8h" kindref="compound">xbee/gpm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_gpm_envelope_create(<sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,<sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*dev,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionaddr64" kindref="compound">addr64</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*ieee)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(envelope<sp/>==<sp/>NULL<sp/>||<sp/>dev<sp/>==<sp/>NULL<sp/>||<sp/>ieee<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga95e2bb4e4c546191c059f54179064fc3" kindref="member">wpan_envelope_create</ref>(<sp/>envelope,<sp/>dev,<sp/>ieee,<sp/><ref refid="group__wpan__types_1ga1674d7b825e528a482725d1c06b02c10" kindref="member">WPAN_NET_ADDR_UNDEFINED</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/>envelope-&gt;profile_id<sp/>=<sp/><ref refid="group__wpan__aps_1gaa90d7d1301c7de503f39113eb83e93e5" kindref="member">WPAN_PROFILE_DIGI</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/>envelope-&gt;cluster_id<sp/>=<sp/>DIGI_CLUST_MEMORY_ACCESS;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/>envelope-&gt;source_endpoint<sp/>=</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>envelope-&gt;dest_endpoint<sp/>=<sp/>WPAN_ENDPOINT_DIGI_DEVICE;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_gpm_envelope_local(<sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*envelope,<sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*dev)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>xbee_gpm_envelope_create(<sp/>envelope,<sp/>dev,<sp/>&amp;dev-&gt;<ref refid="group__wpan__aps_1ga66a58a737aee9733019399e2eceabf4a" kindref="member">address</ref>.ieee);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_xbee_gpm_parameterless_command(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__xbee__atcmd_1ga1a5aaa930940857f68f245eeb89506b5" kindref="member">command</ref>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpm_envelope;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/>xbee_gpm_request_header_t<sp/><sp/>header;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(envelope<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/>memset(<sp/>&amp;header,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>header);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/>header.cmd_id<sp/>=<sp/><ref refid="group__xbee__atcmd_1ga1a5aaa930940857f68f245eeb89506b5" kindref="member">command</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope<sp/>=<sp/>*envelope;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope.<ref refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" kindref="member">payload</ref><sp/>=<sp/>&amp;header;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope.<ref refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref><sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>header;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1ga06f1e9e86b74ef807ded44b79b13e283" kindref="member">wpan_envelope_send</ref>(<sp/>&amp;gpm_envelope);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_gpm_get_flash_info(<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_xbee_gpm_parameterless_command(<sp/>envelope,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XBEE_GPM_CMD_PLATFORM_INFO_REQ);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_gpm_erase_block(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>block_num,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>block_size)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpm_envelope;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/>xbee_gpm_request_header_t<sp/><sp/>header;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(envelope<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/>memset(<sp/>&amp;header,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>header);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/>header.cmd_id<sp/>=<sp/>XBEE_GPM_CMD_ERASE_REQ;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/>header.block_num_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>block_num);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/>header.byte_count_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>block_size);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope<sp/>=<sp/>*envelope;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope.<ref refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" kindref="member">payload</ref><sp/>=<sp/>&amp;header;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope.<ref refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref><sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>header;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1ga06f1e9e86b74ef807ded44b79b13e283" kindref="member">wpan_envelope_send</ref>(<sp/>&amp;gpm_envelope);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>xbee_gpm_max_write(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*dev)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>max_bytes;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dev<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/>max_bytes<sp/>=<sp/>dev-&gt;<ref refid="group__wpan__aps_1ga27ab4ae0aba390adfd9907aeebd88b9c" kindref="member">payload</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(max_bytes<sp/>&gt;<sp/><ref refid="group__xbee__device_1gaea0dcde46961aae6f1cf5949be02d1a6" kindref="member">XBEE_MAX_RFPAYLOAD</ref>)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>max_bytes<sp/>=<sp/><ref refid="group__xbee__device_1gaea0dcde46961aae6f1cf5949be02d1a6" kindref="member">XBEE_MAX_RFPAYLOAD</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>max_bytes<sp/>-<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(xbee_gpm_request_header_t);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_xbee_gpm_write(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*envelope,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>block_num,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>byte_offset,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>byte_count,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="group__xbee__io_1gac5955aa1e44ff234e6d78a19cf68f25c" kindref="member">data</ref>,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref><sp/>erase_first)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpm_envelope;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>xbee_gpm_request_header_t<sp/><sp/>header;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[<ref refid="group__xbee__device_1gaea0dcde46961aae6f1cf5949be02d1a6" kindref="member">XBEE_MAX_RFPAYLOAD</ref>];</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/>}<sp/>frame;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(envelope<sp/>==<sp/>NULL<sp/>||<sp/>data<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(byte_count<sp/>&gt;<sp/>xbee_gpm_max_write(<sp/>envelope-&gt;<ref refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" kindref="member">dev</ref>))</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1gae37becfaa095a9df5c5c788bce5aa06f" kindref="member">EMSGSIZE</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/>memset(<sp/>&amp;frame.header,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>frame.header);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/>frame.header.cmd_id<sp/>=<sp/>erase_first<sp/>?<sp/>XBEE_GPM_CMD_ERASE_THEN_WRITE_REQ</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>XBEE_GPM_CMD_WRITE_REQ;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/>frame.header.block_num_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>block_num);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/>frame.header.start_index_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>byte_offset);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/>frame.header.byte_count_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>byte_count);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/>memcpy(<sp/>frame.data,<sp/>data,<sp/>byte_count);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope<sp/>=<sp/>*envelope;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope.<ref refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" kindref="member">payload</ref><sp/>=<sp/>&amp;frame;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope.<ref refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref><sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>frame.header<sp/>+<sp/>byte_count;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1ga06f1e9e86b74ef807ded44b79b13e283" kindref="member">wpan_envelope_send</ref>(<sp/>&amp;gpm_envelope);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_gpm_write(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*envelope,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>block_num,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>byte_offset,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>byte_count,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*data)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_xbee_gpm_write(<sp/>envelope,<sp/>block_num,<sp/>byte_offset,<sp/>byte_count,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data,<sp/>FALSE);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_gpm_erase_then_write(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>block_num,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>byte_offset,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>byte_count,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*data)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_xbee_gpm_write(<sp/>envelope,<sp/>block_num,<sp/>byte_offset,<sp/>byte_count,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_gpm_read(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*envelope,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>block_num,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>byte_offset,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>byte_count)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpm_envelope;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/>xbee_gpm_request_header_t<sp/><sp/>header;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(envelope<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(byte_count<sp/>&gt;<sp/>envelope-&gt;<ref refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" kindref="member">dev</ref>-&gt;<ref refid="group__wpan__aps_1ga27ab4ae0aba390adfd9907aeebd88b9c" kindref="member">payload</ref><sp/>||<sp/>byte_count<sp/>&gt;<sp/><ref refid="group__xbee__device_1gaea0dcde46961aae6f1cf5949be02d1a6" kindref="member">XBEE_MAX_RFPAYLOAD</ref>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1gae37becfaa095a9df5c5c788bce5aa06f" kindref="member">EMSGSIZE</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/>memset(<sp/>&amp;header,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>header);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/>header.cmd_id<sp/>=<sp/>XBEE_GPM_CMD_READ_REQ;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/>header.block_num_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>block_num);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/>header.start_index_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>byte_offset);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/>header.byte_count_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>byte_count);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope<sp/>=<sp/>*envelope;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope.<ref refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" kindref="member">payload</ref><sp/>=<sp/>&amp;header;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/>gpm_envelope.<ref refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref><sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>header;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1ga06f1e9e86b74ef807ded44b79b13e283" kindref="member">wpan_envelope_send</ref>(<sp/>&amp;gpm_envelope);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>possibly<sp/>move<sp/>the<sp/>firmware<sp/>commands<sp/>to<sp/>a<sp/>gpm_firmware<sp/>layer,<sp/>in<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>device<sp/>just<sp/>wants<sp/>GPM<sp/>access<sp/>and<sp/>doesn&apos;t<sp/>need<sp/>the<sp/>extra<sp/>functionality<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">//<sp/>doing<sp/>firmware<sp/>updates.<sp/><sp/>Base<sp/>the<sp/>API<sp/>for<sp/>gpm_firmware<sp/>on<sp/>the<sp/>existing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">//<sp/>xbee_firmware<sp/>API,<sp/>with<sp/>callbacks<sp/>to<sp/>read<sp/>the<sp/>firmware<sp/>image.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_gpm_firmware_verify(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*envelope)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_xbee_gpm_parameterless_command(<sp/>envelope,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XBEE_GPM_CMD_FIRMWARE_VERIFY_REQ);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_gpm_firmware_install(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*envelope)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_xbee_gpm_parameterless_command(<sp/>envelope,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XBEE_GPM_CMD_FIRMWARE_INSTALL_REQ);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/xbee/xbee_gpm.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,480 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="route_8h" kind="file" language="C++">
+    <compoundname>route.h</compoundname>
+    <includes refid="device_8h" local="yes">xbee/device.h</includes>
+    <includedby refid="xbee__route_8c" local="yes">src/xbee/xbee_route.c</includedby>
+    <incdepgraph>
+      <node id="666">
+        <label>xbee/device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="667" relation="include">
+        </childnode>
+        <childnode refid="672" relation="include">
+        </childnode>
+        <childnode refid="673" relation="include">
+        </childnode>
+        <childnode refid="674" relation="include">
+        </childnode>
+      </node>
+      <node id="668">
+        <label>errno.h</label>
+      </node>
+      <node id="670">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="671" relation="include">
+        </childnode>
+      </node>
+      <node id="669">
+        <label>stddef.h</label>
+      </node>
+      <node id="674">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="673" relation="include">
+        </childnode>
+      </node>
+      <node id="665">
+        <label>include/xbee/route.h</label>
+        <link refid="route_8h"/>
+        <childnode refid="666" relation="include">
+        </childnode>
+      </node>
+      <node id="673">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="667" relation="include">
+        </childnode>
+      </node>
+      <node id="667">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="668" relation="include">
+        </childnode>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="670" relation="include">
+        </childnode>
+      </node>
+      <node id="672">
+        <label>xbee/serial.h</label>
+        <link refid="serial_8h"/>
+        <childnode refid="667" relation="include">
+        </childnode>
+      </node>
+      <node id="671">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="675">
+        <label>include/xbee/route.h</label>
+        <link refid="route_8h"/>
+        <childnode refid="676" relation="include">
+        </childnode>
+      </node>
+      <node id="676">
+        <label>src/xbee/xbee_route.c</label>
+        <link refid="xbee__route_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__xbee__route_1ga41b7c2f8ef5f6e4912572871790611d2" prot="public" static="no">
+        <name>XBEE_ROUTE_MAX_ADDRESS_COUNT</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para>Number of addresses that can appear in a Create Source Route request or a Route Record Indicator frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="29" column="9" bodyfile="include/xbee/route.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__route_1ga02ffd9f293667654c35729ed10f8fd9e" prot="public" static="no">
+        <name>XBEE_FRAME_CREATE_SOURCE_ROUTE</name>
+        <initializer>0x21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="31" column="9" bodyfile="include/xbee/route.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__route_1ga81c8e8cbc36d6ba3448196796f442ac7" prot="public" static="no">
+        <name>XBEE_ROUTE_OPTIONS_NONE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="48" column="11" bodyfile="include/xbee/route.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__route_1ga0167412988c6533938c3a0f9db200054" prot="public" static="no">
+        <name>XBEE_FRAME_ROUTE_RECORD_INDICATOR</name>
+        <initializer>0xA1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="60" column="9" bodyfile="include/xbee/route.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__route_1ga47ed8d34bae2282e8397becffbe212fb" prot="public" static="no">
+        <name>XBEE_ROUTE_DUMP_RECORD_INDICATOR</name>
+        <initializer>{	XBEE_FRAME_ROUTE_RECORD_INDICATOR, 0, \
+		xbee_route_dump_record_indicator, NULL }</initializer>
+        <briefdescription>
+<para>Add this macro to the list of XBee frame handlers to have route record indicators dumped to STDOUT. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="91" column="9" bodyfile="include/xbee/route.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__route_1ga7769894d4361b0c0f2025f0a6bee70ae" prot="public" static="no">
+        <name>XBEE_FRAME_ROUTE_MANY_TO_ONE_REQ</name>
+        <initializer>0xA3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="96" column="9" bodyfile="include/xbee/route.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__route_1gab9293f39692e0bc50896eed12ef89d4e" prot="public" static="no">
+        <name>XBEE_ROUTE_DUMP_MANY_TO_ONE_REQ</name>
+        <initializer>{	XBEE_FRAME_ROUTE_MANY_TO_ONE_REQ, 0, \
+		xbee_route_dump_many_to_one_req, NULL }</initializer>
+        <briefdescription>
+<para>Add this macro to the list of XBee frame handlers to have route record indicators dumped to STDOUT. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="121" column="9" bodyfile="include/xbee/route.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__xbee__route_1gaa778ab3d89227051a2e7da507d4802bd" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>xbee_frame_create_source_route_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_frame_create_source_route_t</name>
+        <initializer>{
+	
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>				frame_type</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="32" column="1" bodyfile="include/xbee/route.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__route_1gac3b91f492a4301331d6c0c39c2516b0e" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>xbee_frame_route_record_indicator_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_frame_route_record_indicator_t</name>
+        <initializer>{
+	
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>				frame_type</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="61" column="1" bodyfile="include/xbee/route.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__xbee__route_1gafc3f728061ea39f21f16bc8ac5d443bd" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>xbee_frame_route_many_to_one_req_t</definition>
+        <argsstring></argsstring>
+        <name>xbee_frame_route_many_to_one_req_t</name>
+        <initializer>{
+	
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>				frame_type</initializer>
+        <briefdescription>
+<para>The many-to-one route request indicator frame is sent out the serial port whenever a many-to-one route request is received. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="99" column="1" bodyfile="include/xbee/route.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__xbee__route_1ga03c1016ac46b9df250b994f242cf956a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t frame_id</definition>
+        <argsstring></argsstring>
+        <name>frame_id</name>
+        <briefdescription>
+<para>ID, always set to 0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="38" column="1" bodyfile="include/xbee/route.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__route_1ga2549f921e25a72dfa05a2154a792e2bf" prot="public" static="no" mutable="no">
+        <type><ref refid="unionaddr64" kindref="compound">addr64</ref></type>
+        <definition>addr64 ieee_address</definition>
+        <argsstring></argsstring>
+        <name>ieee_address</name>
+        <briefdescription>
+<para>64-bit IEEE address (big-endian) of destination. </para>        </briefdescription>
+        <detaileddescription>
+<para>64-bit IEEE address (big-endian) of source. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="41" column="1" bodyfile="include/xbee/route.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__route_1ga73d48563eb05cd5fcc4add79d226a3b8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t network_address_be</definition>
+        <argsstring></argsstring>
+        <name>network_address_be</name>
+        <briefdescription>
+<para>16-bit network address (big-endian) of destination. </para>        </briefdescription>
+        <detaileddescription>
+<para>16-bit network address (big-endian) of source. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="44" column="1" bodyfile="include/xbee/route.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__route_1gad1af5d8a8f1c2531c591cc5fdd7bff8d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t route_options</definition>
+        <argsstring></argsstring>
+        <name>route_options</name>
+        <briefdescription>
+<para>Always set to XBEE_ROUTE_OPTIONS_NONE. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="47" column="1" bodyfile="include/xbee/route.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__route_1ga568b7e68dfcb5aabdbcf38de26f1b63d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t address_count</definition>
+        <argsstring></argsstring>
+        <name>address_count</name>
+        <briefdescription>
+<para>Number of addresses in route, excluding source and destination. </para>        </briefdescription>
+        <detaileddescription>
+<para>Must be between 1 and XBEE_ROUTE_MAX_ADDRESS_COUNT. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="52" column="1" bodyfile="include/xbee/route.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__route_1ga943070c7e317d394725c1e65ef4efd04" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t route_address_be</definition>
+        <argsstring>[XBEE_ROUTE_MAX_ADDRESS_COUNT]</argsstring>
+        <name>route_address_be</name>
+        <briefdescription>
+<para>Network addresses of nodes in route, starting next to destination and ending with node next to source (us). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="56" column="1" bodyfile="include/xbee/route.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__route_1gabf2f34f6b8fa4870cb757aa844335a4f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t receive_options</definition>
+        <argsstring></argsstring>
+        <name>receive_options</name>
+        <briefdescription>
+<para>Combination of XBEE_RX_OPT_XXX macro values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="73" column="1" bodyfile="include/xbee/route.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__route_1gacb7bc06bed6f6408d719334fc41698c7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t reserved</definition>
+        <argsstring></argsstring>
+        <name>reserved</name>
+        <briefdescription>
+<para>Reserved field always set to 0. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/route.h" line="111" column="1" bodyfile="include/xbee/route.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__route_1ga8559adb8f9d26e32597bd6b5d23d4935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_route_dump_record_indicator</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *frame, uint16_t length, void FAR *context)</argsstring>
+        <name>xbee_route_dump_record_indicator</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_route.c" line="28" column="1" bodyfile="src/xbee/xbee_route.c" bodystart="28" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__route_1ga73e95bc53a68ff57892795a9b65a2e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_route_dump_many_to_one_req</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *frame, uint16_t length, void FAR *context)</argsstring>
+        <name>xbee_route_dump_many_to_one_req</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_route.c" line="79" column="1" bodyfile="src/xbee/xbee_route.c" bodystart="79" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Receive inbound route records, and send &quot;Create Source Route&quot; frames. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#ifndef<sp/>XBEE_ROUTE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_ROUTE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="device_8h" kindref="compound">xbee/device.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="group__xbee__route_1ga41b7c2f8ef5f6e4912572871790611d2" refkind="member"><highlight class="preprocessor">#define<sp/>XBEE_ROUTE_MAX_ADDRESS_COUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_FRAME_CREATE_SOURCE_ROUTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/>xbee_frame_create_source_route_t</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame_type;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="group__xbee__route_1ga03c1016ac46b9df250b994f242cf956a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga03c1016ac46b9df250b994f242cf956a" kindref="member">frame_id</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="group__xbee__route_1ga2549f921e25a72dfa05a2154a792e2bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="unionaddr64" kindref="compound">addr64</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga2549f921e25a72dfa05a2154a792e2bf" kindref="member">ieee_address</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="group__xbee__route_1ga73d48563eb05cd5fcc4add79d226a3b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga73d48563eb05cd5fcc4add79d226a3b8" kindref="member">network_address_be</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="group__xbee__route_1gad1af5d8a8f1c2531c591cc5fdd7bff8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1gad1af5d8a8f1c2531c591cc5fdd7bff8d" kindref="member">route_options</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>XBEE_ROUTE_OPTIONS_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="group__xbee__route_1ga568b7e68dfcb5aabdbcf38de26f1b63d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga568b7e68dfcb5aabdbcf38de26f1b63d" kindref="member">address_count</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="group__xbee__route_1ga943070c7e317d394725c1e65ef4efd04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga943070c7e317d394725c1e65ef4efd04" kindref="member">route_address_be</ref>[<ref refid="group__xbee__route_1ga41b7c2f8ef5f6e4912572871790611d2" kindref="member">XBEE_ROUTE_MAX_ADDRESS_COUNT</ref>];</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}<sp/>xbee_frame_create_source_route_t;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_FRAME_ROUTE_RECORD_INDICATOR<sp/><sp/><sp/><sp/>0xA1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/>xbee_frame_route_record_indicator_t</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame_type;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><ref refid="unionaddr64" kindref="compound">addr64</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga2549f921e25a72dfa05a2154a792e2bf" kindref="member">ieee_address</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga73d48563eb05cd5fcc4add79d226a3b8" kindref="member">network_address_be</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="group__xbee__route_1gabf2f34f6b8fa4870cb757aa844335a4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1gabf2f34f6b8fa4870cb757aa844335a4f" kindref="member">receive_options</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga568b7e68dfcb5aabdbcf38de26f1b63d" kindref="member">address_count</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga943070c7e317d394725c1e65ef4efd04" kindref="member">route_address_be</ref>[<ref refid="group__xbee__route_1ga41b7c2f8ef5f6e4912572871790611d2" kindref="member">XBEE_ROUTE_MAX_ADDRESS_COUNT</ref>];</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/>xbee_frame_route_record_indicator_t;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_route_dump_record_indicator(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*frame,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="group__xbee__route_1ga47ed8d34bae2282e8397becffbe212fb" refkind="member"><highlight class="preprocessor">#define<sp/>XBEE_ROUTE_DUMP_RECORD_INDICATOR<sp/><sp/>\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/>{<sp/><sp/>XBEE_FRAME_ROUTE_RECORD_INDICATOR,<sp/>0,<sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>xbee_route_dump_record_indicator,<sp/>NULL<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_FRAME_ROUTE_MANY_TO_ONE_REQ<sp/><sp/><sp/><sp/><sp/>0xA3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/><ref refid="group__xbee__route_1gafc3f728061ea39f21f16bc8ac5d443bd" kindref="member">xbee_frame_route_many_to_one_req_t</ref></highlight></codeline>
+<codeline lineno="100" refid="group__xbee__route_1gafc3f728061ea39f21f16bc8ac5d443bd" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame_type;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><ref refid="unionaddr64" kindref="compound">addr64</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga2549f921e25a72dfa05a2154a792e2bf" kindref="member">ieee_address</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1ga73d48563eb05cd5fcc4add79d226a3b8" kindref="member">network_address_be</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="group__xbee__route_1gacb7bc06bed6f6408d719334fc41698c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__route_1gacb7bc06bed6f6408d719334fc41698c7" kindref="member">reserved</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}<sp/><ref refid="group__xbee__route_1gafc3f728061ea39f21f16bc8ac5d443bd" kindref="member">xbee_frame_route_many_to_one_req_t</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_route_dump_many_to_one_req(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*frame,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="group__xbee__route_1gab9293f39692e0bc50896eed12ef89d4e" refkind="member"><highlight class="preprocessor">#define<sp/>XBEE_ROUTE_DUMP_MANY_TO_ONE_REQ<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"><sp/><sp/><sp/>{<sp/><sp/>XBEE_FRAME_ROUTE_MANY_TO_ONE_REQ,<sp/>0,<sp/>\</highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>xbee_route_dump_many_to_one_req,<sp/>NULL<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><ref refid="group__hal_1ga8d7f5a691878e9ffb7da396899581062" kindref="member">XBEE_END_DECLS</ref></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>compiling<sp/>in<sp/>Dynamic<sp/>C,<sp/>automatically<sp/>#use<sp/>the<sp/>appropriate<sp/>C<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__DC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#use<sp/>&quot;xbee_route.c&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/xbee/route.h"/>
+  </compounddef>
+</doxygen>

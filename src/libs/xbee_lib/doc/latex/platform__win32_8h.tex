@@ -1,0 +1,48 @@
+\hypertarget{platform__win32_8h}{}\section{include/xbee/platform\+\_\+win32.h File Reference}
+\label{platform__win32_8h}\index{include/xbee/platform\+\_\+win32.\+h@{include/xbee/platform\+\_\+win32.\+h}}
+
+
+Header for 32-\/bit Windows (Win32) platform (using cygwin and gcc).  
+
+
+{\ttfamily \#include $<$endian.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}~struct \+\_\+\+\_\+attribute\+\_\+\+\_\+ ((\+\_\+\+\_\+packed\+\_\+\+\_\+, \+\_\+\+\_\+gcc\+\_\+struct\+\_\+\+\_\+))
+\item 
+\#define {\bfseries \+\_\+f\+\_\+memcpy}~memcpy
+\item 
+\#define {\bfseries \+\_\+f\+\_\+memset}~memset
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+W\+I\+F\+I\+\_\+\+E\+N\+A\+B\+LE}
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+N\+A\+T\+I\+V\+E\+\_\+64\+B\+IT}
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+T\+X\+\_\+\+B\+U\+F\+S\+I\+ZE}~2048
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+R\+X\+\_\+\+B\+U\+F\+S\+I\+ZE}~4096
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+D\+E\+L\+TA}~\hyperlink{group__hal_ga735b0974380a73e9d7a12a1f199a5921}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+D\+E\+L\+T\+A\+\_\+1970}
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+M\+S\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}~16
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int {\bfseries bool\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header for 32-\/bit Windows (Win32) platform (using cygwin and gcc). 
+
+This file is automatically included by \hyperlink{platform_8h}{xbee/platform.\+h}. 

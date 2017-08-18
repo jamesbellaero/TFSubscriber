@@ -1,0 +1,32 @@
+\hypertarget{unionaddr64}{}\section{addr64 Union Reference}
+\label{unionaddr64}\index{addr64@{addr64}}
+
+
+Typedef used to hold a 64-\/bit I\+E\+EE address, represented as 8 bytes, 4 16-\/bit values or 2 32-\/bit values.  
+
+
+
+
+{\ttfamily \#include \char`\"{}wpan/types.\+h\char`\"{}}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries b} \mbox{[}8\mbox{]}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries u} \mbox{[}4\mbox{]}
+\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} {\bfseries l} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Typedef used to hold a 64-\/bit I\+E\+EE address, represented as 8 bytes, 4 16-\/bit values or 2 32-\/bit values. 
+
+Note that (for now) all \hyperlink{unionaddr64}{addr64} elements are stored M\+S\+B-\/first (the order used in X\+Bee frames). \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000026}{Todo}]update all \hyperlink{unionaddr64}{addr64} variables and structure elements to end in \+\_\+be (big-\/endian) or \+\_\+le (little-\/endian) where appropriate. Add functions to convert 64-\/bit values between host byte order and big/little endian. \end{DoxyRefDesc}
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/wpan/\hyperlink{types_8h}{types.\+h}\end{DoxyCompactItemize}

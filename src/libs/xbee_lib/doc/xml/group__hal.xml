@@ -1,0 +1,1220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__hal" kind="group">
+    <compoundname>hal</compoundname>
+    <title>Hardware Abstraction Layer (HAL)</title>
+    <innerfile refid="platform_8h">platform.h</innerfile>
+    <innergroup refid="group__hal__rabbit">Rabbit/Dynamic C</innergroup>
+    <innergroup refid="group__hal__win32">Win32/cygwin/gcc</innergroup>
+    <innergroup refid="group__hal__freescale">Freescale/Codewarrior (Programmable XBee)</innergroup>
+    <innergroup refid="group__hal__dos">DOS16/OpenWatcom</innergroup>
+      <sectiondef kind="user-defined">
+      <description><para>These error names are used throughout the library.</para><para>Some platforms don&apos;t define them in errno.h, so we define them here using arbitrary values. </para></description>
+      <memberdef kind="define" id="group__hal_1gaba8481985c201ff726f349d7f2d09895" prot="public" static="no">
+        <name>E2BIG</name>
+        <initializer>20007</initializer>
+        <briefdescription>
+<para>argument list too long (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="113" column="10" bodyfile="include/xbee/platform.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gac2a2e9fa555401f94478f74e01868032" prot="public" static="no">
+        <name>EACCES</name>
+        <initializer>20016</initializer>
+        <briefdescription>
+<para>permission denied (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="134" column="10" bodyfile="include/xbee/platform.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gaf0fac1cea1165b4debec7f686edf3313" prot="public" static="no">
+        <name>EAGAIN</name>
+        <initializer>20014</initializer>
+        <briefdescription>
+<para>resource temporarily unavailable (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="128" column="10" bodyfile="include/xbee/platform.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga251e9b536ed96ccb16aa28ca2d5bd656" prot="public" static="no">
+        <name>EBADMSG</name>
+        <initializer>20010</initializer>
+        <briefdescription>
+<para>bad message (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="116" column="10" bodyfile="include/xbee/platform.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" compoundref="xbee__discovery_8c" startline="39" endline="74">xbee_disc_nd_parse</referencedby>
+        <referencedby refid="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" compoundref="xbee__wpan_8c" startline="54" endline="93">_xbee_handle_receive_explicit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga8368025077a0385849d6817b2007c095" prot="public" static="no">
+        <name>EBUSY</name>
+        <initializer>20003</initializer>
+        <briefdescription>
+<para>device or resource busy (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="101" column="10" bodyfile="include/xbee/platform.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="group__xbee__device_1gaf16e8e532b1eb587794b60222c3a0cce" compoundref="xbee__device_8c" startline="309" endline="337">xbee_dev_tick</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga9532d840ef91fd8e1ecc5d7ca7cbf212" prot="public" static="no">
+        <name>ECANCELED</name>
+        <initializer>20017</initializer>
+        <briefdescription>
+<para>operation canceled (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="137" column="10" bodyfile="include/xbee/platform.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga0a3bef9e5c47e42917692b5dae3b5498" prot="public" static="no">
+        <name>EEXIST</name>
+        <initializer>20004</initializer>
+        <briefdescription>
+<para>file exists (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="104" column="10" bodyfile="include/xbee/platform.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gac6c071293826a4e66a717bb38db7794d" prot="public" static="no">
+        <name>EILSEQ</name>
+        <initializer>20013</initializer>
+        <briefdescription>
+<para>illegal byte sequence (POSIX.1, C99) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="125" column="10" bodyfile="include/xbee/platform.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" prot="public" static="no">
+        <name>EINVAL</name>
+        <initializer>20001</initializer>
+        <briefdescription>
+<para>invalid argument (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="95" column="10" bodyfile="include/xbee/platform.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="group__hal__win32_1gab3c12543a07e0669b672c5cab54b0926" compoundref="xbee__serial__win32_8c" startline="228" endline="264">xbee_ser_baudrate</referencedby>
+        <referencedby refid="group__wpan__aps_1gae5f88ed40bd334d963e261947b77b980" compoundref="wpan__aps_8c" startline="299" endline="339">wpan_conversation_register</referencedby>
+        <referencedby refid="group__wpan__aps_1gaf56e4d0e52462b5cf41c5fa5f23ea952" compoundref="wpan__aps_8c" startline="427" endline="481">wpan_conversation_response</referencedby>
+        <referencedby refid="group__wpan__aps_1gaaaee02ff456d4f6103a5e94c2ba106c5" compoundref="wpan__aps_8c" startline="752" endline="776">wpan_envelope_reply</referencedby>
+        <referencedby refid="group__wpan__aps_1ga1254464011d2d98c13db7b0b3d41c25b" compoundref="wpan__aps_8c" startline="860" endline="881">wpan_tick</referencedby>
+        <referencedby refid="group__wpan__types_1ga500b175732df9779b3670e2ba1402530" compoundref="wpan__types_8c" startline="186" endline="229">addr64_parse</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga1cc803f821ed44e27e404d38349f53c7" compoundref="xbee__atcmd_8c" startline="549" endline="573">xbee_cmd_init_device</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga12317255ca84c2539b7d7a58816eccab" compoundref="xbee__atcmd_8c" startline="764" endline="808">xbee_cmd_query_device</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga83f36dfc3c3cd2c4046719ea6e9cc53c" compoundref="xbee__atcmd_8c" startline="825" endline="835">xbee_cmd_query_status</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga899d5ef84ca5790c3c76b965f88874e0" compoundref="xbee__atcmd_8c" startline="956" endline="967">_xbee_cmd_release_request</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" compoundref="xbee__atcmd_8c" startline="1009" endline="1022">xbee_cmd_set_command</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" compoundref="xbee__atcmd_8c" startline="1057" endline="1072">xbee_cmd_set_callback</referencedby>
+        <referencedby refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" compoundref="xbee__atcmd_8c" startline="1115" endline="1143">xbee_cmd_set_target</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" compoundref="xbee__atcmd_8c" startline="1272" endline="1285">xbee_cmd_set_param</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" compoundref="xbee__atcmd_8c" startline="1404" endline="1485">xbee_cmd_send</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga9b0ddf7aae7599dc334304f2b642f05f" compoundref="xbee__atcmd_8c" startline="1702" endline="1739">_xbee_cmd_modem_status</referencedby>
+        <referencedby refid="group__util__cbuf_1gabf58cafa9f3e989b433a14c23a94cebb" compoundref="xbee__cbuf_8c" startline="31" endline="42">xbee_cbuf_init</referencedby>
+        <referencedby refid="group__xbee__device_1ga550d7c865e75d3fc1df0e64cb880cf3d" compoundref="xbee__device_8c" startline="125" endline="169">xbee_dev_init</referencedby>
+        <referencedby refid="group__xbee__device_1gad312efa700cca7ca044cddf364cc51f5" compoundref="xbee__device_8c" startline="255" endline="281">xbee_dev_reset</referencedby>
+        <referencedby refid="group__xbee__device_1gaf16e8e532b1eb587794b60222c3a0cce" compoundref="xbee__device_8c" startline="309" endline="337">xbee_dev_tick</referencedby>
+        <referencedby refid="group__xbee__device_1gab386cd9e1afe784ab79b3139fe8fc5c8" compoundref="xbee__device_8c" startline="890" endline="948">_xbee_frame_dispatch</referencedby>
+        <referencedby refid="group__xbee__device_1gae54cdc832021172ae535a449856450b7" compoundref="xbee__device_8c" startline="956" endline="1048">xbee_frame_dump_modem_status</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" compoundref="xbee__discovery_8c" startline="39" endline="74">xbee_disc_nd_parse</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" compoundref="xbee__discovery_8c" startline="113" endline="127">xbee_disc_add_node_id_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" compoundref="xbee__discovery_8c" startline="133" endline="148">xbee_disc_remove_node_id_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" compoundref="xbee__discovery_8c" startline="191" endline="205">xbee_disc_nodeid_cluster_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" compoundref="xbee__discovery_8c" startline="251" endline="265">xbee_disc_nodeid_frame_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga12d6a10c8348cf5eb9636bbf02420dd3" compoundref="xbee__discovery_8c" startline="271" endline="283">xbee_disc_discover_nodes</referencedby>
+        <referencedby refid="group__xbee__firmware_1ga3ea95570f7d7366e42b0ee6ba21a1c41" compoundref="xbee__firmware_8c" startline="131" endline="161">xbee_fw_install_init</referencedby>
+        <referencedby refid="group__xbee__firmware_1gaae62252a2e1331127c9df86b6ebfc4e8" compoundref="xbee__firmware_8c" startline="247" endline="428">xbee_fw_install_ebl_tick</referencedby>
+        <referencedby refid="group__xbee__firmware_1ga8ac2a394778a985657db3c7f08b12692" compoundref="xbee__firmware_8c" startline="1358" endline="1375">xbee_fw_buffer_init</referencedby>
+        <referencedby refid="group__xbee__io_1ga49aae35ec2a46306bf2ad593cecbcf26" compoundref="xbee__io_8c" startline="63" endline="109">xbee_io_response_parse</referencedby>
+        <referencedby refid="group__xbee__io_1ga6a1e9ccca3a6d97f1b583e76f1193dca" compoundref="xbee__io_8c" startline="538" endline="586">xbee_io_set_options</referencedby>
+        <referencedby refid="group__xbee__io_1gad253478285335c84b310aafb13aa1b21" compoundref="xbee__io_8c" startline="779" endline="789">xbee_io_query_status</referencedby>
+        <referencedby refid="group__xbee__ota__client_1ga1e29a78ac03e3450859847d4a5e3b73b" compoundref="xbee__ota__client_8c" startline="90" endline="103">_xbee_ota_xmodem_read</referencedby>
+        <referencedby refid="group__xbee__ota__client_1ga88905a78517417dd42f6356038717d01" compoundref="xbee__ota__client_8c" startline="119" endline="154">_xbee_ota_xmodem_write</referencedby>
+        <referencedby refid="group__xbee__ota__client_1ga4805b029d840b86133ef62d64866c6af" compoundref="xbee__ota__client_8c" startline="157" endline="211">xbee_ota_init</referencedby>
+        <referencedby refid="group__xbee__ota__server_1ga22cb77be06faba4020a4f5e0daf48f4f" compoundref="xbee__ota__server_8c" startline="30" endline="77">xbee_ota_server_cmd</referencedby>
+        <referencedby refid="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" compoundref="xbee__wpan_8c" startline="54" endline="93">_xbee_handle_receive_explicit</referencedby>
+        <referencedby refid="group__xbee__wpan_1ga6b3d55dddb48e31d3f975f2afb4c9977" compoundref="xbee__wpan_8c" startline="182" endline="196">xbee_wpan_init</referencedby>
+        <referencedby refid="group__util__xmodem_1ga3153bea635e130326e96720fe354852d" compoundref="xbee__xmodem_8c" startline="79" endline="100">xbee_xmodem_set_stream</referencedby>
+        <referencedby refid="group__util__xmodem_1gaa71f0823f6fc8db3f7c556819079b225" compoundref="xbee__xmodem_8c" startline="106" endline="122">xbee_xmodem_set_source</referencedby>
+        <referencedby refid="group__util__xmodem_1ga1de6d8cc3628767d877e854f92ab2b0e" compoundref="xbee__xmodem_8c" startline="296" endline="550">xbee_xmodem_tx_tick</referencedby>
+        <referencedby refid="group__zcl__client_1ga4c75937cc0fa5c70c63f30b59a4ddebc" compoundref="zcl__client_8c" startline="334" endline="402">zdo_send_match_desc</referencedby>
+        <referencedby refid="group__zcl__client_1ga4e831f4977e3c0eb5ad556a991b7da5f" compoundref="zcl__client_8c" startline="617" endline="654">zcl_print_array_value</referencedby>
+        <referencedby refid="group__zcl__client_1gadd1b745da67ffd49ec948ff56ec218fa" compoundref="zcl__client_8c" startline="678" endline="717">zcl_print_struct_value</referencedby>
+        <referencedby refid="group__zdo_1ga5746efffb4b90718eb973796f2b4bb41" compoundref="zigbee__zdo_8c" startline="247" endline="292">zdo_match_desc_request</referencedby>
+        <referencedby refid="group__zdo_1gafbbece379bc09af360099d1e0825d507" compoundref="zigbee__zdo_8c" startline="422" endline="464">zdo_simple_desc_request</referencedby>
+        <referencedby refid="group__zdo_1gaa70aa4bcb14a98c69e7a54a9971ea194" compoundref="zigbee__zdo_8c" startline="526" endline="637">_zdo_simple_desc_respond</referencedby>
+        <referencedby refid="group__zdo_1ga2e4465da8204d6c9a67edc3a6f210c1d" compoundref="zigbee__zdo_8c" startline="731" endline="833">zdo_handler</referencedby>
+        <referencedby refid="group__zdo_1gab02e4c1584594c0a96d05399bd69bffa" compoundref="zigbee__zdo_8c" startline="839" endline="885">zdo_send_bind_req</referencedby>
+        <referencedby refid="group__zdo_1gac842062e5e1a60d25cddf16ec22ef601" compoundref="zigbee__zdo_8c" startline="925" endline="969">zdo_send_descriptor_req</referencedby>
+        <referencedby refid="group__zdo_1ga40f076c190ab2390836687b8e1f705eb" compoundref="zigbee__zdo_8c" startline="1028" endline="1070">zdo_send_nwk_addr_req</referencedby>
+        <referencedby refid="group__zdo_1ga4af5f8d70054f7883dbc1305e3a3f181" compoundref="zigbee__zdo_8c" startline="1134" endline="1173">zdo_send_ieee_addr_req</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga70979f50f9c83e5aebab3d6a1bd4cf35" prot="public" static="no">
+        <name>EIO</name>
+        <initializer>20002</initializer>
+        <briefdescription>
+<para>input/output error (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="98" column="10" bodyfile="include/xbee/platform.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="group__xbee__device_1gad312efa700cca7ca044cddf364cc51f5" compoundref="xbee__device_8c" startline="255" endline="281">xbee_dev_reset</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gae37becfaa095a9df5c5c788bce5aa06f" prot="public" static="no">
+        <name>EMSGSIZE</name>
+        <initializer>20018</initializer>
+        <briefdescription>
+<para>message too long (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="140" column="10" bodyfile="include/xbee/platform.h" bodystart="140" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga5b69459e7c47be384c9add2921e507e0" compoundref="xbee__atcmd_8c" startline="1367" endline="1380">xbee_cmd_set_param_str</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga0030614bc864d1b24eaedd71585acc27" prot="public" static="no">
+        <name>ENODATA</name>
+        <initializer>20000</initializer>
+        <briefdescription>
+<para>no message is available on the STREAM head read queue (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="92" column="10" bodyfile="include/xbee/platform.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" compoundref="xbee__serial__dos_8c" startline="332" endline="344">xbee_ser_getchar</referencedby>
+        <referencedby refid="group__util__xmodem_1gac01df75671906e590a9ed9b0a4644ba1" compoundref="xbee__xmodem_8c" startline="139" endline="151">_xbee_xmodem_getchar</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga03e689f378f643d16ea7537918528a48" prot="public" static="no">
+        <name>ENOENT</name>
+        <initializer>20006</initializer>
+        <briefdescription>
+<para>no such file or directory (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="110" column="10" bodyfile="include/xbee/platform.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="group__wpan__aps_1gae84eafd10f51de6cdac4732b8948606d" compoundref="wpan__aps_8c" startline="622" endline="676">wpan_envelope_dispatch</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" compoundref="xbee__discovery_8c" startline="133" endline="148">xbee_disc_remove_node_id_handler</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga088abe8bad2df798edad3053d719b937" prot="public" static="no">
+        <name>ENOSPC</name>
+        <initializer>20005</initializer>
+        <briefdescription>
+<para>no space left on device (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="107" column="10" bodyfile="include/xbee/platform.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="group__xbee__serial_1ga86fea2345efb8bf9424228f0979b1849" compoundref="xbee__serial__dos_8c" startline="312" endline="329">xbee_ser_putchar</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" compoundref="xbee__discovery_8c" startline="113" endline="127">xbee_disc_add_node_id_handler</referencedby>
+        <referencedby refid="group__util__xmodem_1ga0cc061cd92dfa4eba4720b2839698545" compoundref="xbee__xmodem_8c" startline="165" endline="182">_xbee_xmodem_putchar</referencedby>
+        <referencedby refid="group__zdo_1ga1a65d88af9f0c9906d548aa1ff2586f7" compoundref="zigbee__zdo_8c" startline="199" endline="221">_match_desc_cluster_list</referencedby>
+        <referencedby refid="group__zdo_1ga5746efffb4b90718eb973796f2b4bb41" compoundref="zigbee__zdo_8c" startline="247" endline="292">zdo_match_desc_request</referencedby>
+        <referencedby refid="group__zdo_1ga558539813d6a9c8813eeae855e77385f" compoundref="zigbee__zdo_8c" startline="483" endline="509">_simple_desc_cluster_list</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga43785b9969e0bd1af532dbde06c5540b" prot="public" static="no">
+        <name>ENOSYS</name>
+        <initializer>20015</initializer>
+        <briefdescription>
+<para>function not implemented (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="131" column="10" bodyfile="include/xbee/platform.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" compoundref="xbee__atcmd_8c" startline="1115" endline="1143">xbee_cmd_set_target</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga91457bbf35f0f1085619a99423bb1f33" prot="public" static="no">
+        <name>ENOTSUP</name>
+        <initializer>20011</initializer>
+        <briefdescription>
+<para>operation not supported (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="119" column="10" bodyfile="include/xbee/platform.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gadd669d31505a077f769cff8e66c780b3" prot="public" static="no">
+        <name>EPERM</name>
+        <initializer>20019</initializer>
+        <briefdescription>
+<para>operation not permitted (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="143" column="10" bodyfile="include/xbee/platform.h" bodystart="143" bodyend="-1"/>
+        <referencedby refid="group__xbee__io_1ga6a1e9ccca3a6d97f1b583e76f1193dca" compoundref="xbee__io_8c" startline="538" endline="586">xbee_io_set_options</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga597718e59a8fc9c4d4ab63f5a34e28b1" prot="public" static="no">
+        <name>ETIMEDOUT</name>
+        <initializer>20012</initializer>
+        <briefdescription>
+<para>connection timed out (POSIX.1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="122" column="10" bodyfile="include/xbee/platform.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="group__util__xmodem_1ga1de6d8cc3628767d877e854f92ab2b0e" compoundref="xbee__xmodem_8c" startline="296" endline="550">xbee_xmodem_tx_tick</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="define" id="group__hal_1gae29ba672a9f69330a8e16a73a1a11053" prot="public" static="no">
+        <name>XBEE_PLATFORM_INIT</name>
+        <param></param>
+        <initializer>xbee_platform_init()</initializer>
+        <briefdescription>
+<para>Optional macro, defined to the name of a parameter-less function that returns void. </para>        </briefdescription>
+        <detaileddescription>
+<para>If defined, called by <ref refid="group__xbee__device_1ga550d7c865e75d3fc1df0e64cb880cf3d" kindref="member">xbee_dev_init()</ref> before setting up the <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> structure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_mbed.h" line="71" column="13" bodyfile="include/xbee/platform_mbed.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="group__xbee__device_1ga550d7c865e75d3fc1df0e64cb880cf3d" compoundref="xbee__device_8c" startline="125" endline="169">xbee_dev_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" prot="public" static="no">
+        <name>XBEE_UNUSED_PARAMETER</name>
+        <param><defname>p</defname></param>
+        <initializer>(void) p</initializer>
+        <briefdescription>
+<para>Functions with unused parameters (common due to the use of function pointers) can use this macro to dismiss compiler warnings about unused parameters. </para>        </briefdescription>
+        <detaileddescription>
+<para>Defaults to [ (void) p ]. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="399" column="10" bodyfile="include/xbee/platform.h" bodystart="399" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga9b0ddf7aae7599dc334304f2b642f05f" compoundref="xbee__atcmd_8c" startline="1702" endline="1739">_xbee_cmd_modem_status</referencedby>
+        <referencedby refid="group__xbee__device_1gac7c192386ffce72242c2c8494b261491" compoundref="xbee__device_8c" startline="350" endline="379">_xbee_dispatch_table_dump</referencedby>
+        <referencedby refid="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" compoundref="xbee__wpan_8c" startline="54" endline="93">_xbee_handle_receive_explicit</referencedby>
+        <referencedby refid="group__xbee__wpan_1ga56d68291ceee384fbd8a5833eb91182c" compoundref="xbee__wpan_8c" startline="203" endline="216">_xbee_handle_transmit_status</referencedby>
+        <referencedby refid="group__zcl__identify_1ga7cde47425d0a779f5aff87985ea01951" compoundref="zcl__identify_8c" startline="134" endline="142">_zcl_identify_time_get</referencedby>
+        <referencedby refid="group__zcl__time_1ga9c0749b71318a4f7fd28d9112ffd5462" compoundref="zcl__time_8c" startline="124" endline="149">_zcl_time_time_get</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" compoundref="xbee__discovery_8c" startline="191" endline="205">xbee_disc_nodeid_cluster_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" compoundref="xbee__discovery_8c" startline="251" endline="265">xbee_disc_nodeid_frame_handler</referencedby>
+        <referencedby refid="group__xbee__device_1gae54cdc832021172ae535a449856450b7" compoundref="xbee__device_8c" startline="956" endline="1048">xbee_frame_dump_modem_status</referencedby>
+        <referencedby refid="group__xbee__wpan_1gaa750c530910a7d8324ba5579ee7fcb57" compoundref="xbee__wpan_8c" startline="220" endline="236">xbee_frame_dump_transmit_status</referencedby>
+        <referencedby refid="group__zcl_1ga23e4657d006b8b39ac54f0ee61786910" compoundref="zigbee__zcl_8c" startline="1702" endline="1723">zcl_invalid_cluster</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga4233297bd31be5c273d4fb0758cc54d7" prot="public" static="no">
+        <name>PACKED_STRUCT</name>
+        <initializer>struct</initializer>
+        <briefdescription>
+<para>A replacement for [struct] when defining a packed structure where the elements are not aligned based on type. </para>        </briefdescription>
+        <detaileddescription>
+<para>Cached extended address register value.</para><para>Cached uint32_t register value.</para><para>Cached uint16_t register value.</para><para>Cached uint8_t register value.</para><para>The offsetof any given element will always be the offsetof plus sizeof the previous element. On platforms with gcc, it&apos;s defined as [struct <bold>attribute</bold> ((<bold>packed</bold>))]. Defaults to just [struct]</para><para>Cache status flags (<ref refid="group___s_x_a_1gga0411cd49bb5b71852cecd93bcbf0ca2da54498f64b3ad7c2be423d32b45deac04" kindref="member">_SXA_CACHED_OK</ref> etc.) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="351" column="10" bodyfile="include/xbee/platform.h" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga658c3ad175b50000ac44b3b9ea836d1a" prot="public" static="no">
+        <name>INTERRUPT_DISABLE</name>
+        <briefdescription>
+<para>Disable CPU interrupts (at the level of the serial port driver, at least). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="381" column="10" bodyfile="include/xbee/platform.h" bodystart="381" bodyend="-1"/>
+        <referencedby refid="group__xbee__device_1gaf16e8e532b1eb587794b60222c3a0cce" compoundref="xbee__device_8c" startline="309" endline="337">xbee_dev_tick</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gacf43057fc38f77d20456c074909ba772" prot="public" static="no">
+        <name>INTERRUPT_ENABLE</name>
+        <briefdescription>
+<para>Enable CPU interrupts (at the level of the serial port driver, at least). </para>        </briefdescription>
+        <detaileddescription>
+<para>INTERRUPT_DISABLE/INTERRUPT_ENABLE are used without nesting in the library, so these can be low-level functions or in-line assembler. Note that uses of these macros add a semicolon. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="377" column="10" bodyfile="include/xbee/platform.h" bodystart="377" bodyend="-1"/>
+        <referencedby refid="group__xbee__device_1gaf16e8e532b1eb587794b60222c3a0cce" compoundref="xbee__device_8c" startline="309" endline="337">xbee_dev_tick</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga3847c218bf0c9d56e1a01b87ae7c1900" prot="public" static="no">
+        <name>XBEE_WIFI_ENABLED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>Defined by the platform as either 0 or 1, depending on whether code for the Wi-Fi XBee Module should be compiled in or not. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="387" column="11" bodyfile="include/xbee/platform.h" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>platform_far</header>
+      <description><para>Macros related to supporting far (&gt;16-bit) pointers. </para></description>
+      <memberdef kind="define" id="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" prot="public" static="no">
+        <name>FAR</name>
+        <briefdescription>
+<para>On platforms with &quot;far&quot; pointers, define to the proper keyword; empty definition if not required. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="370" column="10" bodyfile="include/xbee/platform.h" bodystart="370" bodyend="-1"/>
+        <referencedby refid="group__hal__kl25_1ga2ca4e60c9d642084afa52dff9e1f6be4" compoundref="xbee__serial__mbed_8cpp" startline="66" endline="89">xbee_ser_write</referencedby>
+        <referencedby refid="group__hal_1gaae7cb3384b4bbd83726511ccfbd747d3" compoundref="memcheck_8c" startline="21" endline="35">memcheck</referencedby>
+        <referencedby refid="group__util__byteorder_1ga23fd4d4005a80a26ff3c6ba23a4af560" compoundref="swapcpy_8c" startline="24" endline="36">_swapcpy</referencedby>
+        <referencedby refid="group__util__xmodem_1ga48b65051c5461be6d016802e2eb8a138" compoundref="xmodem__crc16_8c" startline="82" endline="91">crc16_calc</referencedby>
+        <referencedby refid="group__wpan__aps_1gae5f88ed40bd334d963e261947b77b980" compoundref="wpan__aps_8c" startline="299" endline="339">wpan_conversation_register</referencedby>
+        <referencedby refid="group__wpan__aps_1gad55133545fcf6ebc2d630057abf5ad48" compoundref="wpan__aps_8c" startline="368" endline="400">_wpan_endpoint_expire_conversations</referencedby>
+        <referencedby refid="group__wpan__aps_1gaf56e4d0e52462b5cf41c5fa5f23ea952" compoundref="wpan__aps_8c" startline="427" endline="481">wpan_conversation_response</referencedby>
+        <referencedby refid="group__wpan__types_1ga448782f4aed0821758969b47221417ed" compoundref="wpan__types_8c" startline="77" endline="111">addr64_format</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga7ef08f6771da8c18234bbffca2be4ff3" compoundref="xbee__atcmd_8c" startline="81" endline="150">xbee_cmd_tick</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga710b2223cda09c52a8518c964da88347" compoundref="xbee__atcmd_8c" startline="170" endline="187">_xbee_cmd_handle_to_address</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga4931ffe3ba31eaf16eee72ac0a95015b" compoundref="xbee__atcmd_8c" startline="197" endline="266">_xbee_cmd_issue_list</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga9f1bad1621dfd1d13b6f1102fc592d13" compoundref="xbee__atcmd_8c" startline="284" endline="448">_xbee_cmd_list_callback</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga06181e54a87d90c30108360d6b433323" compoundref="xbee__atcmd_8c" startline="1009" endline="1022">xbee_cmd_set_command</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga0a5d2e2e87743061c46abd53e379e014" compoundref="xbee__atcmd_8c" startline="1057" endline="1072">xbee_cmd_set_callback</referencedby>
+        <referencedby refid="group__xbee__atcmd_1gae478cb2ea9bb07ade86009a65e6d121f" compoundref="xbee__atcmd_8c" startline="1115" endline="1143">xbee_cmd_set_target</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga4295dde3673b07f41e569e333abd9730" compoundref="xbee__atcmd_8c" startline="1272" endline="1285">xbee_cmd_set_param</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga6bd558a2d03eafe29b176f598d76ffd6" compoundref="xbee__atcmd_8c" startline="1310" endline="1341">xbee_cmd_set_param_bytes</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" compoundref="xbee__atcmd_8c" startline="1404" endline="1485">xbee_cmd_send</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga3b4559f4e729b1c96f5c0d9e4476aa7d" compoundref="xbee__atcmd_8c" startline="1505" endline="1686">_xbee_cmd_handle_response</referencedby>
+        <referencedby refid="group__xbee__atcmd_1ga9b0ddf7aae7599dc334304f2b642f05f" compoundref="xbee__atcmd_8c" startline="1702" endline="1739">_xbee_cmd_modem_status</referencedby>
+        <referencedby refid="group__util__cbuf_1gad3d314f23c6c7c6fc31c9b65ce61eee1" compoundref="xbee__cbuf_8c" startline="102" endline="127">xbee_cbuf_put</referencedby>
+        <referencedby refid="group__util__cbuf_1ga98b2d80239319b2a9875772c28a7630a" compoundref="xbee__cbuf_8c" startline="131" endline="154">xbee_cbuf_get</referencedby>
+        <referencedby refid="group__xbee__device_1gab386cd9e1afe784ab79b3139fe8fc5c8" compoundref="xbee__device_8c" startline="890" endline="948">_xbee_frame_dispatch</referencedby>
+        <referencedby refid="group__xbee__device_1gae54cdc832021172ae535a449856450b7" compoundref="xbee__device_8c" startline="956" endline="1048">xbee_frame_dump_modem_status</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" compoundref="xbee__discovery_8c" startline="39" endline="74">xbee_disc_nd_parse</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" compoundref="xbee__discovery_8c" startline="133" endline="148">xbee_disc_remove_node_id_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" compoundref="xbee__discovery_8c" startline="251" endline="265">xbee_disc_nodeid_frame_handler</referencedby>
+        <referencedby refid="group__xbee__firmware_1ga86a474f683ca3239ddea7b6414a6c555" compoundref="xbee__firmware_8c" startline="1276" endline="1297">_xbee_fw_buffer_seek</referencedby>
+        <referencedby refid="group__xbee__firmware_1ga3e528e574ae73a5f8bbc8b2783f04c4f" compoundref="xbee__firmware_8c" startline="1312" endline="1343">_xbee_fw_buffer_read</referencedby>
+        <referencedby refid="group__xbee__firmware_1ga8ac2a394778a985657db3c7f08b12692" compoundref="xbee__firmware_8c" startline="1358" endline="1375">xbee_fw_buffer_init</referencedby>
+        <referencedby refid="group__xbee__io_1ga49aae35ec2a46306bf2ad593cecbcf26" compoundref="xbee__io_8c" startline="63" endline="109">xbee_io_response_parse</referencedby>
+        <referencedby refid="group__xbee__ota__client_1ga8d196639e5234b3a56eb5c00ae730261" compoundref="xbee__ota__client_8c" startline="47" endline="73">_xbee_ota_transparent_rx</referencedby>
+        <referencedby refid="group__xbee__ota__client_1ga1e29a78ac03e3450859847d4a5e3b73b" compoundref="xbee__ota__client_8c" startline="90" endline="103">_xbee_ota_xmodem_read</referencedby>
+        <referencedby refid="group__xbee__ota__client_1ga88905a78517417dd42f6356038717d01" compoundref="xbee__ota__client_8c" startline="119" endline="154">_xbee_ota_xmodem_write</referencedby>
+        <referencedby refid="group___s_x_a_1ga9ae9421a9cd885d2299aabb74251cb48" compoundref="xbee__sxa_8c" startline="311" endline="352">_sxa_disc_process_node_data</referencedby>
+        <referencedby refid="group___s_x_a_1gadd7b9ea8d43a02a15c22957b936c8a71" compoundref="xbee__sxa_8c" startline="400" endline="410">_sxa_disc_handle_frame_0x95</referencedby>
+        <referencedby refid="group___s_x_a_1ga8b7ff9c6ba3a7223a6061b8ec52e195e" compoundref="xbee__sxa_8c" startline="652" endline="682">_sxa_io_process_response</referencedby>
+        <referencedby refid="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" compoundref="xbee__wpan_8c" startline="54" endline="93">_xbee_handle_receive_explicit</referencedby>
+        <referencedby refid="group__xbee__wpan_1gaa750c530910a7d8324ba5579ee7fcb57" compoundref="xbee__wpan_8c" startline="220" endline="236">xbee_frame_dump_transmit_status</referencedby>
+        <referencedby refid="group__util__xmodem_1ga3153bea635e130326e96720fe354852d" compoundref="xbee__xmodem_8c" startline="79" endline="100">xbee_xmodem_set_stream</referencedby>
+        <referencedby refid="group__util__xmodem_1gaa71f0823f6fc8db3f7c556819079b225" compoundref="xbee__xmodem_8c" startline="106" endline="122">xbee_xmodem_set_source</referencedby>
+        <referencedby refid="group__zcl__client_1gae0892d22ee69940130d1111960401339" compoundref="zcl__client_8c" startline="60" endline="84">zcl_process_read_attr_response</referencedby>
+        <referencedby refid="group__zcl__client_1ga24a7c15cdfe484aff260848694fccae2" compoundref="zcl__client_8c" startline="103" endline="152">zcl_client_read_attributes</referencedby>
+        <referencedby refid="group__zcl__client_1ga15f191f3166c71f3f436b2a32d108a9f" compoundref="zcl__client_8c" startline="182" endline="278">_zcl_send_read_from_zdo_match</referencedby>
+        <referencedby refid="group__zcl__client_1ga11f72950e4467286ef18468fbcb4bed4" compoundref="zcl__client_8c" startline="426" endline="465">zcl_create_attribute_records</referencedby>
+        <referencedby refid="group__zcl__commissioning_1ga57f9aaf3da6dc9b513f7f9ccbb473a0b" compoundref="zcl__commissioning_8c" startline="265" endline="295">zcl_comm_response</referencedby>
+        <referencedby refid="group__zcl__time_1ga2c66ee215547beae5b5dde4f23cc8e00" compoundref="zcl__time_8c" startline="291" endline="392">zcl_time_client</referencedby>
+        <referencedby refid="group__zcl_1ga87ee4a8117e0420786a109b1f590ddc5" compoundref="zigbee__zcl_8c" startline="326" endline="415">zcl_check_minmax</referencedby>
+        <referencedby refid="group__zcl_1ga9f9ac99001185554fe24dc7b09c0b0b0" compoundref="zigbee__zcl_8c" startline="437" endline="596">zcl_parse_attribute_record</referencedby>
+        <referencedby refid="group__zcl_1ga405e1c70b6278aae3a307971433c9229" compoundref="zigbee__zcl_8c" startline="613" endline="636">zcl_convert_24bit</referencedby>
+        <referencedby refid="group__zcl_1ga15bf36dadccd7a045bad7d6f0842e25a" compoundref="zigbee__zcl_8c" startline="652" endline="817">zcl_decode_attribute</referencedby>
+        <referencedby refid="group__zcl_1ga4387e5f016fb26d1ac43b24f78aa066a" compoundref="zigbee__zcl_8c" startline="953" endline="998">_zcl_encode_struct_value</referencedby>
+        <referencedby refid="group__zcl_1gaae79107724236347a5e22612869df2bf" compoundref="zigbee__zcl_8c" startline="1022" endline="1063">_zcl_encode_array_value</referencedby>
+        <referencedby refid="group__zcl_1gae3f7f58d3b08caf95aa11f90e3995397" compoundref="zigbee__zcl_8c" startline="1087" endline="1223">zcl_encode_attribute_value</referencedby>
+        <referencedby refid="group__zcl_1gaa34c917bf05a57503e63553efcb77dc9" compoundref="zigbee__zcl_8c" startline="1240" endline="1344">_zcl_read_attributes</referencedby>
+        <referencedby refid="group__zcl_1ga385c41594437cdf661bfb518f11ee0fc" compoundref="zigbee__zcl_8c" startline="1361" endline="1447">_zcl_discover_attributes</referencedby>
+        <referencedby refid="group__zcl_1gadeb35ab493fffec9ba1c33f658929136" compoundref="zigbee__zcl_8c" startline="1474" endline="1545">zcl_command_build</referencedby>
+        <referencedby refid="group__zcl_1gaca5c04dd787b041bf40f3b2a4463bb70" compoundref="zigbee__zcl_8c" startline="1560" endline="1650">zcl_command_dump</referencedby>
+        <referencedby refid="group__zdo_1ga5746efffb4b90718eb973796f2b4bb41" compoundref="zigbee__zdo_8c" startline="247" endline="292">zdo_match_desc_request</referencedby>
+        <referencedby refid="group__zdo_1ga41d93e5e12d9ed4e18d092fe3af779a2" compoundref="zigbee__zdo_8c" startline="316" endline="412">_zdo_match_desc_respond</referencedby>
+        <referencedby refid="group__zdo_1gafbbece379bc09af360099d1e0825d507" compoundref="zigbee__zdo_8c" startline="422" endline="464">zdo_simple_desc_request</referencedby>
+        <referencedby refid="group__zdo_1gaa70aa4bcb14a98c69e7a54a9971ea194" compoundref="zigbee__zdo_8c" startline="526" endline="637">_zdo_simple_desc_respond</referencedby>
+        <referencedby refid="group__zdo_1ga2e4465da8204d6c9a67edc3a6f210c1d" compoundref="zigbee__zdo_8c" startline="731" endline="833">zdo_handler</referencedby>
+        <referencedby refid="group__zdo_1ga9c1afb2178cc3e3b515373c7e351fc02" compoundref="zigbee__zdo_8c" startline="982" endline="1024">_zdo_process_nwk_addr_resp</referencedby>
+        <referencedby refid="group__zdo_1gad723bd899ccda9ec96f6226893c1335b" compoundref="zigbee__zdo_8c" startline="1083" endline="1130">_zdo_process_ieee_addr_resp</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga0220c5cb877cc5718402ab41b91b7252" prot="public" static="no">
+        <name>CAST_FAR_TO_NEAR</name>
+        <param><defname>p</defname></param>
+        <initializer>(p)</initializer>
+        <briefdescription>
+<para>On platforms with &quot;far&quot; pointers, define to a series of explicit casts to convert a &quot;far&quot; pointer back to &quot;near&quot;. </para>        </briefdescription>
+        <detaileddescription>
+<para>Only appropriate for pointers that are known to be near. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="374" column="10" bodyfile="include/xbee/platform.h" bodystart="374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga379022d2cd3136d8f3500c88658056b7" prot="public" static="no">
+        <name>PRIsFAR</name>
+        <initializer>&quot;s&quot;</initializer>
+        <briefdescription>
+<para>Literal string format specifier for printing a far string, typically <computeroutput>&quot;s&quot;</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="406" column="10" bodyfile="include/xbee/platform.h" bodystart="406" bodyend="-1"/>
+        <referencedby refid="group__wpan__aps_1ga2a4e8b3e2022e55e6607243a5feb25cd" compoundref="wpan__aps_8c" startline="823" endline="841">wpan_envelope_dump</referencedby>
+        <referencedby refid="group__xbee__discovery_1gab155a485a9aa4870a45dd86d1d468c52" compoundref="xbee__discovery_8c" startline="96" endline="107">xbee_disc_node_id_dump</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga8429a3beb3448b89cb7c3877b8909369" prot="public" static="no">
+        <name>PRIpFAR</name>
+        <initializer>&quot;p&quot;</initializer>
+        <briefdescription>
+<para>Literal string format specifier for printing a far pointer, typically <computeroutput>&quot;p&quot;</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="409" column="10" bodyfile="include/xbee/platform.h" bodystart="409" bodyend="-1"/>
+        <referencedby refid="group__xbee__device_1gac7c192386ffce72242c2c8494b261491" compoundref="xbee__device_8c" startline="350" endline="379">_xbee_dispatch_table_dump</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>platform_inttypes</header>
+      <description><para>Macros typically defined in &lt;inttypes.h&gt;, define manually if inttypes.h is not available on this platform. </para></description>
+      <memberdef kind="define" id="group__hal_1ga86bc00ee87e8e40787e0681fc34c576a" prot="public" static="no">
+        <name>PRIu16</name>
+        <initializer>&quot;hu&quot;</initializer>
+        <briefdescription>
+<para>Format specifier for 16-bit unsigned (usually <computeroutput>&quot;u&quot;</computeroutput> or <computeroutput>&quot;hu&quot;</computeroutput>) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="418" column="10" bodyfile="include/xbee/platform.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gaaf2af4a10f0bd308e9c349c8382382be" prot="public" static="no">
+        <name>PRIu32</name>
+        <initializer>&quot;lu&quot;</initializer>
+        <briefdescription>
+<para>Format specifier for 32-bit unsigned (usually <computeroutput>&quot;lu&quot;</computeroutput> or <computeroutput>&quot;u&quot;</computeroutput>) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="421" column="10" bodyfile="include/xbee/platform.h" bodystart="421" bodyend="-1"/>
+        <referencedby refid="group__xbee__serial_1gab3c12543a07e0669b672c5cab54b0926" compoundref="xbee__serial__dos_8c" startline="411" endline="446">xbee_ser_baudrate</referencedby>
+        <referencedby refid="group__xbee__serial_1gaa615a221dd69c17ee2989c281f2bf04a" compoundref="xbee__serial__dos_8c" startline="449" endline="545">xbee_ser_open</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga70f5e38b517f714518c970a4da37bef1" prot="public" static="no">
+        <name>PRIx16</name>
+        <initializer>&quot;hx&quot;</initializer>
+        <briefdescription>
+<para>Format specifier for 16-bit lowercase hex (usually <computeroutput>&quot;x&quot;</computeroutput> or <computeroutput>&quot;hx&quot;</computeroutput>) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="424" column="10" bodyfile="include/xbee/platform.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga80ca66bcc9e366733f02c90ed4b0838c" prot="public" static="no">
+        <name>PRIx32</name>
+        <initializer>&quot;lx&quot;</initializer>
+        <briefdescription>
+<para>Format specifier for 32-bit lowercase hex (usually <computeroutput>&quot;lx&quot;</computeroutput> or <computeroutput>&quot;x&quot;</computeroutput>) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="427" column="10" bodyfile="include/xbee/platform.h" bodystart="427" bodyend="-1"/>
+        <referencedby refid="group__xbee__discovery_1gab155a485a9aa4870a45dd86d1d468c52" compoundref="xbee__discovery_8c" startline="96" endline="107">xbee_disc_node_id_dump</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga570ca9af5087023f75fc8a1a602d26ab" prot="public" static="no">
+        <name>PRIX16</name>
+        <initializer>&quot;hX&quot;</initializer>
+        <briefdescription>
+<para>Format specifier for 16-bit uppercase hex (usually <computeroutput>&quot;X&quot;</computeroutput> or <computeroutput>&quot;hX&quot;</computeroutput>) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="430" column="10" bodyfile="include/xbee/platform.h" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga32b0c8a04aae5d4454d15e6cbe109f64" prot="public" static="no">
+        <name>PRIX32</name>
+        <initializer>&quot;lX&quot;</initializer>
+        <briefdescription>
+<para>Format specifier for 32-bit uppercase hex (usually <computeroutput>&quot;lX&quot;</computeroutput> or <computeroutput>&quot;X&quot;</computeroutput>) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="433" column="10" bodyfile="include/xbee/platform.h" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para>Flags to pass to <ref refid="group__util_1gaa321236a0cb6f4e0dad592fdf1b550d2" kindref="member">hex_dump()</ref>. </para></description>
+      <memberdef kind="define" id="group__hal_1gae60f842ae8bc3cc952cdeece611670d5" prot="public" static="no">
+        <name>HEX_DUMP_FLAG_NONE</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+<para>Default settings (no prefix). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="545" column="9" bodyfile="include/xbee/platform.h" bodystart="545" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gaec79525addd1a70fda55b1ea11534832" prot="public" static="no">
+        <name>HEX_DUMP_FLAG_OFFSET</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>Prefix each line with the memory offset (0000: xx xx xx). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="547" column="9" bodyfile="include/xbee/platform.h" bodystart="547" bodyend="-1"/>
+        <referencedby refid="group__wpan__aps_1ga2a4e8b3e2022e55e6607243a5feb25cd" compoundref="wpan__aps_8c" startline="823" endline="841">wpan_envelope_dump</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga967137c51c026d68d03d1668402ec12b" prot="public" static="no">
+        <name>HEX_DUMP_FLAG_ADDRESS</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+<para>Prefix each line with the address (uses p specifier) (000000: xx xx xx). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="549" column="9" bodyfile="include/xbee/platform.h" bodystart="549" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga696f6553e33cbd20eda34e220ec9939a" prot="public" static="no">
+        <name>HEX_DUMP_FLAG_TAB</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+<para>Prefix each line with a tab character. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="551" column="9" bodyfile="include/xbee/platform.h" bodystart="551" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__hal_1ga5c1a8bccd41acf1d7264a75698077749" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref> <ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref>()</type>
+        <definition>XBEE_BEGIN_DECLS uint32_t() xbee_seconds_timer</definition>
+        <argsstring>(void)</argsstring>
+        <name>xbee_seconds_timer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Platform-specific function to return the number of elapsed seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>On some platforms, this is the equivalent of an &quot;uptime&quot;.</para><para>On other platforms, it may reflect the value of the RTC, which might not be synchronized with a time server and might include leap seconds.</para><para>Regardless, it should consistently report elapsed time and not jump on clock synchronization.</para><para>In addition to determining timeouts, the <ref refid="group__zcl__time" kindref="compound">ZCL Time Cluster</ref> makes use of it to report current time.</para><para>(Function name wrapped in parentheses so platforms can use a macro function of the same name.)</para><para><simplesect kind="return"><para>Number of elapsed seconds. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="462" column="1" bodyfile="src/dos/xbee_platform_dos.c" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal_1ga22b4e3df788254ca5f8530e9aee58515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref>()</type>
+        <definition>uint32_t() xbee_millisecond_timer</definition>
+        <argsstring>(void)</argsstring>
+        <name>xbee_millisecond_timer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Platform-specific function to return the number of elapsed milliseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>OK for this counter to rollover. Used for timing and should have a resolution of at least 60ms.</para><para><itemizedlist>
+<listitem><para>Rabbit has 1ms resolution.</para></listitem><listitem><para>HCS08 has 4ms resolution.</para></listitem><listitem><para>DOS has 18 ticks/second (55.55ms resolution)</para></listitem></itemizedlist>
+</para><para>(Function name wrapped in parentheses so platforms can use a macro function of the same name.)</para><para><simplesect kind="return"><para>Number of elapsed milliseconds.</para></simplesect>
+<simplesect kind="see"><para>XBEE_MS_TIMER_RESOLUTION </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="482" column="1" bodyfile="src/dos/xbee_platform_dos.c" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal_1ga519e5ae2049b59689a474a8c48fee353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hexstrtobyte</definition>
+        <argsstring>(const char FAR *p)</argsstring>
+        <name>hexstrtobyte</name>
+        <param>
+          <type>const char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Converts two hex characters (0-9A-Fa-f) to a byte. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String of hex characters to convert.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>-1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Error (invalid character or string less than 2 bytes). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0-255</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte represented by the first two characters of <emphasis>p</emphasis>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Examples</title><para><itemizedlist>
+<listitem><para>hexstrtobyte(&quot;FF&quot;) returns 255</para></listitem><listitem><para>hexstrtobyte(&quot;0&quot;) returns -1 (error because &lt; 2 characters)</para></listitem><listitem><para>hexstrtobyte(&quot;ABCDEF&quot;) returns 0xAB (ignores additional chars) </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="499" column="1"/>
+        <referencedby refid="group__wpan__types_1ga500b175732df9779b3670e2ba1402530" compoundref="wpan__types_8c" startline="186" endline="229">addr64_parse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__hal_1ga8c0c80b64f63d395e718172190b21fcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_readline</definition>
+        <argsstring>(char *buffer, int length)</argsstring>
+        <name>xbee_readline</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>This function is a non-blocking version of gets(), used to read a line of input from the user. </para>        </briefdescription>
+        <detaileddescription>
+<para>It waits for a string from stdin terminated by a return. It should be called repeatedly, until it returns a value other than -EAGAIN. The input string, stored in <emphasis>buffer</emphasis> is null-terminated without the return.</para><para>The user should make sure only one process calls this function at a time.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to store input from user </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of <emphasis>buffer</emphasis> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User ended the input with a newline, return value is number of bytes written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EAGAIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User has not completed a line. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL buffer or length is less than 1. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="521" column="1" bodyfile="src/dos/xbee_platform_dos.c" bodystart="107" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal_1gaa321236a0cb6f4e0dad592fdf1b550d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hex_dump</definition>
+        <argsstring>(const void FAR *address, uint16_t length, uint16_t flags)</argsstring>
+        <name>hex_dump</name>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for printing a hex dump of memory to stdout. </para>        </briefdescription>
+        <detaileddescription>
+<para>A reference implementation is provided in as <ref refid="hexdump_8c" kindref="compound">util/hexdump.c</ref>. Dumps data in hex/printable format, 16 bytes to a line, to stdout.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of data to dump.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to dump.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of<itemizedlist>
+<listitem><para><ref refid="group__hal_1gae60f842ae8bc3cc952cdeece611670d5" kindref="member">HEX_DUMP_FLAG_NONE</ref></para></listitem><listitem><para><ref refid="group__hal_1gaec79525addd1a70fda55b1ea11534832" kindref="member">HEX_DUMP_FLAG_OFFSET</ref></para></listitem><listitem><para><ref refid="group__hal_1ga967137c51c026d68d03d1668402ec12b" kindref="member">HEX_DUMP_FLAG_ADDRESS</ref></para></listitem><listitem><para><ref refid="group__hal_1ga696f6553e33cbd20eda34e220ec9939a" kindref="member">HEX_DUMP_FLAG_TAB</ref> </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="538" column="1" bodyfile="src/util/hexdump.c" bodystart="28" bodyend="91"/>
+        <referencedby refid="group__wpan__aps_1ga2a4e8b3e2022e55e6607243a5feb25cd" compoundref="wpan__aps_8c" startline="823" endline="841">wpan_envelope_dump</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__hal_1gaae7cb3384b4bbd83726511ccfbd747d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int memcheck</definition>
+        <argsstring>(const void FAR *src, int c, size_t length)</argsstring>
+        <name>memcheck</name>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Test whether a block of memory is set to a single byte value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>starting address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to compare each byte to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to compare</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>length</emphasis> bytes from <emphasis>src</emphasis> are set to <emphasis>c</emphasis> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&lt;0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>length</emphasis> bytes from <emphasis>src</emphasis> would sort before <emphasis>length</emphasis> bytes of <emphasis>c</emphasis> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>length</emphasis> bytes from <emphasis>src</emphasis> would sort before <emphasis>length</emphasis> bytes of <emphasis>c</emphasis> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>memcmp, memset </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="570" column="1" bodyfile="src/util/memcheck.c" bodystart="21" bodyend="35"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" prot="public" static="no">
+        <name>XBEE_BEGIN_DECLS</name>
+        <briefdescription>
+<para>Macro defined to. </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">extern<sp/>&quot;C&quot;<sp/>{<sp/></highlight></codeline>
+</programlisting> when used by a C++ compiler. Used (along with XBEE_END_DECLS) for header file declarations to allow linking C-compiled code into C++ projects. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="41" column="11" bodyfile="include/xbee/platform.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga8d7f5a691878e9ffb7da396899581062" prot="public" static="no">
+        <name>XBEE_END_DECLS</name>
+        <briefdescription>
+<para>Macro defined to. </para>        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">}<sp/></highlight></codeline>
+</programlisting> when used by a C++ compiler. Used (along with XBEE_BEGIN_DECLS) for header file declarations to allow linking C-compiled code into C++ projects. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="42" column="10" bodyfile="include/xbee/platform.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gaa1c89a351daab5e3d33a2dc48f85f9a4" prot="public" static="no">
+        <name>ZCL_TIME_EPOCH_DELTA_1980</name>
+        <initializer>((UINT32_C(20) * 365 + 5) * 24 * 60 * 60)</initializer>
+        <briefdescription>
+<para>For 1/1/1980 epoch (Rabbit), add 20 years, plus 5 leap days (1980, 1984, 1988, 1992, 1996) to get to ZigBee epoch of 1/1/2000. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="317" column="9" bodyfile="include/xbee/platform.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga735b0974380a73e9d7a12a1f199a5921" prot="public" static="no">
+        <name>ZCL_TIME_EPOCH_DELTA_1970</name>
+        <initializer>((UINT32_C(30) * 365 + 7) * 24 * 60 * 60)</initializer>
+        <briefdescription>
+<para>For 1/1/1970 epoch (Win32, Unix), add 30 years, plus 7 leap days (1972, 1976, 1980, 1984, 1988, 1992, 1996) to get to ZigBee epoch of 1/1/2000. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="321" column="9" bodyfile="include/xbee/platform.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gaa8cecfc5c5c054d2875c03e77b7be15d" prot="public" static="no">
+        <name>TRUE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="344" column="10" bodyfile="include/xbee/platform.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gaa93f0eb578d23995850d61f7d61c55c1" prot="public" static="no">
+        <name>FALSE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="347" column="10" bodyfile="include/xbee/platform.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga844d3ad124d3502c66cac1ce2f86ca72" prot="public" static="no">
+        <name>xbee_get_unaligned16</name>
+        <param><defname>p</defname></param>
+        <initializer>(*(<ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *)(p))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="356" column="10" bodyfile="include/xbee/platform.h" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga05636feff360b2e024a0db267aedf104" prot="public" static="no">
+        <name>xbee_get_unaligned32</name>
+        <param><defname>p</defname></param>
+        <initializer>(*(<ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *)(p))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="359" column="10" bodyfile="include/xbee/platform.h" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gae93bd4533f7f7e0dd4cbc54d2760030e" prot="public" static="no">
+        <name>xbee_set_unaligned16</name>
+        <param><defname>p</defname></param>
+        <param><defname>v</defname></param>
+        <initializer>*(<ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *)(p) = (v)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="362" column="10" bodyfile="include/xbee/platform.h" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gac083bd862aa3f6258437adba422de4ce" prot="public" static="no">
+        <name>xbee_set_unaligned32</name>
+        <param><defname>p</defname></param>
+        <param><defname>v</defname></param>
+        <initializer>*(<ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *)(p) = (v)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="365" column="10" bodyfile="include/xbee/platform.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga9bc39fa696de31976b60b54c9b8e62aa" prot="public" static="no">
+        <name>XBEE_SERIAL_POLLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="392" column="9" bodyfile="include/xbee/platform.h" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga087e50fe0283aacc71d7138d13e91939" prot="public" static="no">
+        <name>PRId16</name>
+        <initializer>&quot;hd&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="412" column="10" bodyfile="include/xbee/platform.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga6d94d1417e1b35c53aee6306590de72b" prot="public" static="no">
+        <name>PRId32</name>
+        <initializer>&quot;ld&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="415" column="10" bodyfile="include/xbee/platform.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga2fb602f8a5b3533a57c2c4b92f248569" prot="public" static="no">
+        <name>_TABLE_ENTRIES</name>
+        <param><defname>array</defname></param>
+        <initializer>((sizeof (array)) / (sizeof (*array)))</initializer>
+        <briefdescription>
+<para>Helper macro for calculating the number of entries in an array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="438" column="9" bodyfile="include/xbee/platform.h" bodystart="438" bodyend="-1"/>
+        <referencedby refid="group__zcl_1gaca5c04dd787b041bf40f3b2a4463bb70" compoundref="zigbee__zcl_8c" startline="1560" endline="1650">zcl_command_dump</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga9a3ee9eece1e3ee1c6fbaa27bc0928d3" prot="public" static="no">
+        <name>XBEE_TIMER_COMPARE</name>
+        <param><defname>a</defname></param>
+        <param><defname>op</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>( ((<ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref>)((<ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref>)(a) - (<ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref>)(b))) op 0 )</initializer>
+        <briefdescription>
+<para>Compare two uint16_t timer values, with proper handling of rollover (e.g., 0xFFFF &lt; 0x0000). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first timer value (cast to uint16_t) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>operand (&gt; or &lt;) to use when comparing two timers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>second timer value (cast to uint16_t)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The equivalent to &quot;a op b&quot;.</para></simplesect>
+Note that when using the millisecond timer, you can only compare times within 32 seconds of each other.</para><para><programlisting><codeline><highlight class="normal">uint16_t<sp/>t0;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">t0<sp/>=<sp/>(uint16_t)<sp/>xbee_millisecond_timer();</highlight></codeline>
+<codeline><highlight class="normal">do<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>some_stuff_here();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>delay<sp/>=<sp/>update_delay();</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>while<sp/>(XBEE_TIMER_COMPARE(<sp/>t0<sp/>+<sp/>delay,<sp/>&gt;,<sp/>xbee_millisecond_timer()));</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="595" column="9" bodyfile="include/xbee/platform.h" bodystart="595" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga848a9903fa7859d84cb22aeddde4c42f" prot="public" static="no">
+        <name>XBEE_SET_TIMEOUT_MS</name>
+        <param><defname>delay</defname></param>
+        <initializer>((<ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref>)<ref refid="group__hal_1ga22b4e3df788254ca5f8530e9aee58515" kindref="member">xbee_millisecond_timer</ref>() + (delay))</initializer>
+        <briefdescription>
+<para>Macro used to load a variable with an expiration time, later used with <ref refid="group__hal_1gac3485c3c34a50a5a35d553cc743d163e" kindref="member">XBEE_CHECK_TIMEOUT_MS()</ref> macro. </para>        </briefdescription>
+        <detaileddescription>
+<para>For timeouts longer than 32767 milliseconds (with less accuracy), use <ref refid="group__hal_1ga6adb5c9e19c84a261c569ff4d77d1170" kindref="member">XBEE_SET_TIMEOUT_SEC()</ref>/XBEE_CHECK_TIMEOUT_SEC().</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timeout in milliseconds, from 1 to 32767.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value to assign to an unsigned 16-bit variable (uint16_t) for use with CHECK_TIMEOUT_MS().</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__hal_1gac3485c3c34a50a5a35d553cc743d163e" kindref="member">XBEE_CHECK_TIMEOUT_MS()</ref>, <ref refid="group__hal_1ga6adb5c9e19c84a261c569ff4d77d1170" kindref="member">XBEE_SET_TIMEOUT_SEC()</ref>, <ref refid="group__hal_1ga858c3c1caa899efd6af9ee8a0fe09246" kindref="member">XBEE_CHECK_TIMEOUT_SEC()</ref></para></simplesect>
+<programlisting><codeline><highlight class="normal">uint16_t<sp/>t;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">t<sp/>=<sp/>XBEE_SET_TIMEOUT_MS(5000);<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>5<sp/>second<sp/>timeout</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>(;;)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//<sp/>do<sp/>stuff<sp/>or<sp/>wait<sp/>for<sp/>something<sp/>to<sp/>happen</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>if<sp/>(XBEE_CHECK_TIMEOUT_MS(t))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>5<sp/>seconds<sp/>elapsed</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="627" column="9" bodyfile="include/xbee/platform.h" bodystart="627" bodyend="-1"/>
+        <referencedby refid="group__xbee__device_1gad312efa700cca7ca044cddf364cc51f5" compoundref="xbee__device_8c" startline="255" endline="281">xbee_dev_reset</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1gac3485c3c34a50a5a35d553cc743d163e" prot="public" static="no">
+        <name>XBEE_CHECK_TIMEOUT_MS</name>
+        <param><defname>timer</defname></param>
+        <initializer>((<ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref>)((<ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref>)<ref refid="group__hal_1ga22b4e3df788254ca5f8530e9aee58515" kindref="member">xbee_millisecond_timer</ref>() - (timer)) &gt;= 0)</initializer>
+        <briefdescription>
+<para>Macro used to check a timer set by <ref refid="group__hal_1ga848a9903fa7859d84cb22aeddde4c42f" kindref="member">XBEE_SET_TIMEOUT_MS()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>See the documentation for <ref refid="group__hal_1ga848a9903fa7859d84cb22aeddde4c42f" kindref="member">XBEE_SET_TIMEOUT_MS()</ref> for a code example on proper use of this macro.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16-bit variable set by <ref refid="group__hal_1ga848a9903fa7859d84cb22aeddde4c42f" kindref="member">XBEE_SET_TIMEOUT_MS()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>TRUE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time specified in call to <ref refid="group__hal_1ga848a9903fa7859d84cb22aeddde4c42f" kindref="member">XBEE_SET_TIMEOUT_MS()</ref> has elapsed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FALSE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time specified has not yet elapsed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__hal_1ga848a9903fa7859d84cb22aeddde4c42f" kindref="member">XBEE_SET_TIMEOUT_MS()</ref>, <ref refid="group__hal_1ga6adb5c9e19c84a261c569ff4d77d1170" kindref="member">XBEE_SET_TIMEOUT_SEC()</ref>, <ref refid="group__hal_1ga858c3c1caa899efd6af9ee8a0fe09246" kindref="member">XBEE_CHECK_TIMEOUT_SEC()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="643" column="9" bodyfile="include/xbee/platform.h" bodystart="643" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga6adb5c9e19c84a261c569ff4d77d1170" prot="public" static="no">
+        <name>XBEE_SET_TIMEOUT_SEC</name>
+        <param><defname>delay</defname></param>
+        <initializer>((<ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref>)<ref refid="group__hal_1ga5c1a8bccd41acf1d7264a75698077749" kindref="member">xbee_seconds_timer</ref>() + (delay))</initializer>
+        <briefdescription>
+<para>Macro used to load a variable with an expiration time, later used with <ref refid="group__hal_1ga858c3c1caa899efd6af9ee8a0fe09246" kindref="member">XBEE_CHECK_TIMEOUT_SEC()</ref> macro. </para>        </briefdescription>
+        <detaileddescription>
+<para>For a more precise timeout, for values of 30 seconds or less, use <ref refid="group__hal_1ga848a9903fa7859d84cb22aeddde4c42f" kindref="member">XBEE_SET_TIMEOUT_MS()</ref>/XBEE_CHECK_TIMEOUT_MS() instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timeout in seconds, from 1 to 32767.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value to assign to an unsigned 16-bit variable (uint16_t) for use with <ref refid="group__hal_1ga858c3c1caa899efd6af9ee8a0fe09246" kindref="member">XBEE_CHECK_TIMEOUT_SEC()</ref>.</para></simplesect>
+<simplesect kind="see"><para><ref refid="group__hal_1ga858c3c1caa899efd6af9ee8a0fe09246" kindref="member">XBEE_CHECK_TIMEOUT_SEC()</ref>, <ref refid="group__hal_1ga848a9903fa7859d84cb22aeddde4c42f" kindref="member">XBEE_SET_TIMEOUT_MS()</ref>, <ref refid="group__hal_1gac3485c3c34a50a5a35d553cc743d163e" kindref="member">XBEE_CHECK_TIMEOUT_MS()</ref></para></simplesect>
+<programlisting><codeline><highlight class="normal">uint16_t<sp/>t;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">t<sp/>=<sp/>XBEE_SET_TIMEOUT_SEC(600);<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>10<sp/>minute<sp/>timeout</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>(;;)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//<sp/>do<sp/>stuff<sp/>or<sp/>wait<sp/>for<sp/>something<sp/>to<sp/>happen</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>if<sp/>(XBEE_CHECK_TIMEOUT_SEC(t))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>10<sp/>minutes<sp/>elapsed</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="676" column="9" bodyfile="include/xbee/platform.h" bodystart="676" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal_1ga858c3c1caa899efd6af9ee8a0fe09246" prot="public" static="no">
+        <name>XBEE_CHECK_TIMEOUT_SEC</name>
+        <param><defname>timer</defname></param>
+        <initializer>((<ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref>)((<ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref>)<ref refid="group__hal_1ga5c1a8bccd41acf1d7264a75698077749" kindref="member">xbee_seconds_timer</ref>() - (timer)) &gt;= 0)</initializer>
+        <briefdescription>
+<para>Macro used to check a timer set by <ref refid="group__hal_1ga6adb5c9e19c84a261c569ff4d77d1170" kindref="member">XBEE_SET_TIMEOUT_SEC()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>See the documentation for <ref refid="group__hal_1ga6adb5c9e19c84a261c569ff4d77d1170" kindref="member">XBEE_SET_TIMEOUT_SEC()</ref> for a code example on proper use of this macro.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16-bit variable set by <ref refid="group__hal_1ga6adb5c9e19c84a261c569ff4d77d1170" kindref="member">XBEE_SET_TIMEOUT_SEC()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>TRUE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time specified in call to <ref refid="group__hal_1ga6adb5c9e19c84a261c569ff4d77d1170" kindref="member">XBEE_SET_TIMEOUT_SEC()</ref> has elapsed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FALSE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time specified has not yet elapsed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__hal_1ga6adb5c9e19c84a261c569ff4d77d1170" kindref="member">XBEE_SET_TIMEOUT_SEC()</ref>, <ref refid="group__hal_1ga848a9903fa7859d84cb22aeddde4c42f" kindref="member">XBEE_SET_TIMEOUT_MS()</ref>, <ref refid="group__hal_1gac3485c3c34a50a5a35d553cc743d163e" kindref="member">XBEE_CHECK_TIMEOUT_MS()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform.h" line="691" column="9" bodyfile="include/xbee/platform.h" bodystart="691" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

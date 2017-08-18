@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structzcl__binary__output__attr__t" kind="struct" language="C++" prot="public">
+    <compoundname>zcl_binary_output_attr_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structzcl__binary__output__attr__t_1a553fa88586bb1363dab7de87542fc2eb" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref></type>
+        <definition>zcl_attribute_base_t active_text</definition>
+        <argsstring></argsstring>
+        <name>active_text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="93" column="1" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structzcl__binary__output__attr__t_1a182d10de1c0759d95a8a660af1cc8680" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref></type>
+        <definition>zcl_attribute_base_t description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="94" column="1" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structzcl__binary__output__attr__t_1a98d315857b484ac9b45c0d63a2ad3f3f" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref></type>
+        <definition>zcl_attribute_base_t inactive_text</definition>
+        <argsstring></argsstring>
+        <name>inactive_text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="95" column="1" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structzcl__binary__output__attr__t_1a5973642ae212fd359977211923a6875b" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref></type>
+        <definition>zcl_attribute_base_t out_of_service</definition>
+        <argsstring></argsstring>
+        <name>out_of_service</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="96" column="1" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structzcl__binary__output__attr__t_1a4b3f698bcaa87726019c831614021664" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref></type>
+        <definition>zcl_attribute_full_t present_value</definition>
+        <argsstring></argsstring>
+        <name>present_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="97" column="1" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structzcl__binary__output__attr__t_1a231d8fff6a85e7824504bfd8d83de174" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref></type>
+        <definition>zcl_attribute_full_t status_flags</definition>
+        <argsstring></argsstring>
+        <name>status_flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="98" column="1" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structzcl__binary__output__attr__t_1a2066d4a3853d4b0d8de8b162f829e10f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t end_of_list</definition>
+        <argsstring></argsstring>
+        <name>end_of_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_bacnet.h" line="99" column="1" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="305">
+        <label>zcl_attribute_minmax_t</label>
+        <link refid="unionzcl__attribute__minmax__t"/>
+      </node>
+      <node id="304">
+        <label>zcl_attribute_full_t</label>
+        <link refid="structzcl__attribute__full__t"/>
+        <childnode refid="304" relation="usage">
+          <edgelabel>read</edgelabel>
+          <edgelabel>write</edgelabel>
+        </childnode>
+        <childnode refid="305" relation="usage">
+          <edgelabel>min</edgelabel>
+          <edgelabel>max</edgelabel>
+        </childnode>
+        <childnode refid="306" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="306">
+        <label>zcl_attribute_base_t</label>
+        <link refid="structzcl__attribute__base__t"/>
+      </node>
+      <node id="303">
+        <label>zcl_binary_output_attr_t</label>
+        <link refid="structzcl__binary__output__attr__t"/>
+        <childnode refid="304" relation="usage">
+          <edgelabel>status_flags</edgelabel>
+          <edgelabel>present_value</edgelabel>
+        </childnode>
+        <childnode refid="306" relation="usage">
+          <edgelabel>inactive_text</edgelabel>
+          <edgelabel>out_of_service</edgelabel>
+          <edgelabel>active_text</edgelabel>
+          <edgelabel>description</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/zigbee/zcl_bacnet.h" line="92" column="1" bodyfile="include/zigbee/zcl_bacnet.h" bodystart="92" bodyend="100"/>
+    <listofallmembers>
+      <member refid="structzcl__binary__output__attr__t_1a553fa88586bb1363dab7de87542fc2eb" prot="public" virt="non-virtual"><scope>zcl_binary_output_attr_t</scope><name>active_text</name></member>
+      <member refid="structzcl__binary__output__attr__t_1a182d10de1c0759d95a8a660af1cc8680" prot="public" virt="non-virtual"><scope>zcl_binary_output_attr_t</scope><name>description</name></member>
+      <member refid="structzcl__binary__output__attr__t_1a2066d4a3853d4b0d8de8b162f829e10f" prot="public" virt="non-virtual"><scope>zcl_binary_output_attr_t</scope><name>end_of_list</name></member>
+      <member refid="structzcl__binary__output__attr__t_1a98d315857b484ac9b45c0d63a2ad3f3f" prot="public" virt="non-virtual"><scope>zcl_binary_output_attr_t</scope><name>inactive_text</name></member>
+      <member refid="structzcl__binary__output__attr__t_1a5973642ae212fd359977211923a6875b" prot="public" virt="non-virtual"><scope>zcl_binary_output_attr_t</scope><name>out_of_service</name></member>
+      <member refid="structzcl__binary__output__attr__t_1a4b3f698bcaa87726019c831614021664" prot="public" virt="non-virtual"><scope>zcl_binary_output_attr_t</scope><name>present_value</name></member>
+      <member refid="structzcl__binary__output__attr__t_1a231d8fff6a85e7824504bfd8d83de174" prot="public" virt="non-virtual"><scope>zcl_binary_output_attr_t</scope><name>status_flags</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

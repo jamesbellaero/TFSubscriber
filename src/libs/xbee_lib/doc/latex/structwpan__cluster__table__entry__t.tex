@@ -1,0 +1,30 @@
+\hypertarget{structwpan__cluster__table__entry__t}{}\section{wpan\+\_\+cluster\+\_\+table\+\_\+entry\+\_\+t Struct Reference}
+\label{structwpan__cluster__table__entry__t}\index{wpan\+\_\+cluster\+\_\+table\+\_\+entry\+\_\+t@{wpan\+\_\+cluster\+\_\+table\+\_\+entry\+\_\+t}}
+
+
+Information on each cluster associated with an endpoint.  
+
+
+
+
+{\ttfamily \#include \char`\"{}wpan/aps.\+h\char`\"{}}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__wpan__aps_ga262a92f94287e77cb56350951893bae2}{cluster\+\_\+id}
+\begin{DoxyCompactList}\small\item\em 16-\/bit cluster id, in host byte order. \end{DoxyCompactList}\item 
+\hyperlink{group__wpan__aps_ga8575b0db762a5fbb858d4994c9b657e3}{wpan\+\_\+aps\+\_\+handler\+\_\+fn} \hyperlink{group__wpan__aps_gab0c5e32241c4c2860c728aeab4b6f253}{handler}
+\begin{DoxyCompactList}\small\item\em Function to receive all frames for this cluster, or N\+U\+LL to have endpoint\textquotesingle{}s handler process the frame. \end{DoxyCompactList}\item 
+const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__wpan__aps_gad58378484a15ab673f5eb1613114330e}{context}
+\begin{DoxyCompactList}\small\item\em Declared {\ttfamily const} so initializers can use {\ttfamily const} or non-\/{\ttfamily const} pointers. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__wpan__aps_gaa2585d779da0ab21273a8d92de9a0ebe}{flags}
+\begin{DoxyCompactList}\small\item\em flags that apply to this cluster, see W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+\_\+\+F\+L\+A\+G\+\_\+$\ast$ macros \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Information on each cluster associated with an endpoint. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/wpan/\hyperlink{aps_8h}{aps.\+h}\end{DoxyCompactItemize}

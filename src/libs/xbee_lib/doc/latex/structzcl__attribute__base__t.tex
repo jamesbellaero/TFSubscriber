@@ -1,0 +1,37 @@
+\hypertarget{structzcl__attribute__base__t}{}\section{zcl\+\_\+attribute\+\_\+base\+\_\+t Struct Reference}
+\label{structzcl__attribute__base__t}\index{zcl\+\_\+attribute\+\_\+base\+\_\+t@{zcl\+\_\+attribute\+\_\+base\+\_\+t}}
+
+
+Basic structure for storing a list of attributes in a cluster.  
+
+
+
+
+{\ttfamily \#include \char`\"{}zigbee/zcl.\+h\char`\"{}}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries id}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries flags}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}
+\begin{DoxyCompactList}\small\item\em The Z\+CL Attribute Type, should be one of the Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+$\ast$ macros defined in \hyperlink{zcl__types_8h}{zigbee/zcl\+\_\+types.\+h}. \end{DoxyCompactList}\item 
+const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zcl_gaaaa0b89997c57cfca2dfae40f46e702d}{value}
+\begin{DoxyCompactList}\small\item\em Pointer to global variable of correct type, set as {\ttfamily const} to allow for both const and non-\/const values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic structure for storing a list of attributes in a cluster. 
+
+If .min and .max are both set to 0, there isn\textquotesingle{}t a limit
+
+\begin{DoxyNote}{Note}
+Consider putting type after id -- it would then be possible to have macros for attributes that include the id A\+ND type. 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/zigbee/\hyperlink{zcl_8h}{zcl.\+h}\end{DoxyCompactItemize}

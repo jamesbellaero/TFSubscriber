@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct_j_s_int64" kind="struct" language="C++" prot="public">
+    <compoundname>JSInt64</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_j_s_int64_1af696b3c873ee8212d81d86659e59bcc6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t lo</definition>
+        <argsstring></argsstring>
+        <name>lo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong_glue.h" line="32" column="1" bodyfile="include/xbee/jslong_glue.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_j_s_int64_1aa824c8f5bb758efbe41747a4005e7456" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t hi</definition>
+        <argsstring></argsstring>
+        <name>hi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong_glue.h" line="32" column="1" bodyfile="include/xbee/jslong_glue.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xbee/jslong_glue.h" line="30" column="1" bodyfile="include/xbee/jslong_glue.h" bodystart="30" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct_j_s_int64_1aa824c8f5bb758efbe41747a4005e7456" prot="public" virt="non-virtual"><scope>JSInt64</scope><name>hi</name></member>
+      <member refid="struct_j_s_int64_1af696b3c873ee8212d81d86659e59bcc6" prot="public" virt="non-virtual"><scope>JSInt64</scope><name>lo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

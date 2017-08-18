@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="unionzcl__attribute__minmax__t" kind="union" language="C++" prot="public">
+    <compoundname>zcl_attribute_minmax_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__zcl_1gaf6243ea4edbb271f4a04dbd17bd4e1ec" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gafd12020da5a235dfcf0c3c748fb5baed" kindref="member">int32_t</ref></type>
+        <definition>int32_t _signed</definition>
+        <argsstring></argsstring>
+        <name>_signed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="652" column="1" bodyfile="include/zigbee/zcl.h" bodystart="652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga39d687d8e7bab88e70fd8f84213c18ab" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t _unsigned</definition>
+        <argsstring></argsstring>
+        <name>_unsigned</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="653" column="1" bodyfile="include/zigbee/zcl.h" bodystart="653" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga552109c4aeafc45875faff0313ae8202" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _float</definition>
+        <argsstring></argsstring>
+        <name>_float</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="654" column="1" bodyfile="include/zigbee/zcl.h" bodystart="654" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/zigbee/zcl.h" line="651" column="1" bodyfile="include/zigbee/zcl.h" bodystart="651" bodyend="655"/>
+    <listofallmembers>
+      <member refid="group__zcl_1ga552109c4aeafc45875faff0313ae8202" prot="public" virt="non-virtual"><scope>zcl_attribute_minmax_t</scope><name>_float</name></member>
+      <member refid="group__zcl_1gaf6243ea4edbb271f4a04dbd17bd4e1ec" prot="public" virt="non-virtual"><scope>zcl_attribute_minmax_t</scope><name>_signed</name></member>
+      <member refid="group__zcl_1ga39d687d8e7bab88e70fd8f84213c18ab" prot="public" virt="non-virtual"><scope>zcl_attribute_minmax_t</scope><name>_unsigned</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

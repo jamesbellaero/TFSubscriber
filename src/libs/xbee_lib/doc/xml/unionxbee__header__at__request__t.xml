@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="unionxbee__header__at__request__t" kind="union" language="C++" prot="public">
+    <compoundname>xbee_header_at_request_t</compoundname>
+    <includes refid="atcmd_8h" local="yes">xbee/atcmd.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionxbee__header__at__request__t_1afa34d393db5fa915716b483011415ddc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t frame_type</definition>
+        <argsstring></argsstring>
+        <name>frame_type</name>
+        <briefdescription>
+<para>First byte of header determines type (local or remote). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="283" column="1" bodyfile="include/xbee/atcmd.h" bodystart="283" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" compoundref="xbee__atcmd_8c" startline="1404" endline="1485">xbee_cmd_send</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="unionxbee__header__at__request__t_1aae9b1a9bf279fa1932c6222e3d4b5da2" prot="public" static="no" mutable="no">
+        <type>xbee_header_local_at_req_t</type>
+        <definition>xbee_header_local_at_req_t local</definition>
+        <argsstring></argsstring>
+        <name>local</name>
+        <briefdescription>
+<para>Use if .frame_type is <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9a540fdafbf3dbb8b5d07be5888e3573ee" kindref="member">XBEE_FRAME_LOCAL_AT_CMD</ref> or <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9a4dccc9c3f9859247218c0d0a93e2582a" kindref="member">XBEE_FRAME_LOCAL_AT_CMD_Q</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="287" column="1" bodyfile="include/xbee/atcmd.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionxbee__header__at__request__t_1afaac4d50b8627529565a1d55950c44f6" prot="public" static="no" mutable="no">
+        <type>xbee_header_remote_at_req_t</type>
+        <definition>xbee_header_remote_at_req_t remote</definition>
+        <argsstring></argsstring>
+        <name>remote</name>
+        <briefdescription>
+<para>Use if .frame_type is <ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9a44cc0afd79605edfc1f4d5cbb7ed62a2" kindref="member">XBEE_FRAME_REMOTE_AT_CMD</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atcmd.h" line="290" column="1" bodyfile="include/xbee/atcmd.h" bodystart="290" bodyend="-1"/>
+        <referencedby refid="group__xbee__atcmd_1ga2c58eedef60b41dd30ae1f6b475606a8" compoundref="xbee__atcmd_8c" startline="1404" endline="1485">xbee_cmd_send</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Useful typedef to create either a local or remote request frame. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xbee/atcmd.h" line="281" column="1" bodyfile="include/xbee/atcmd.h" bodystart="281" bodyend="291"/>
+    <listofallmembers>
+      <member refid="unionxbee__header__at__request__t_1afa34d393db5fa915716b483011415ddc" prot="public" virt="non-virtual"><scope>xbee_header_at_request_t</scope><name>frame_type</name></member>
+      <member refid="unionxbee__header__at__request__t_1aae9b1a9bf279fa1932c6222e3d4b5da2" prot="public" virt="non-virtual"><scope>xbee_header_at_request_t</scope><name>local</name></member>
+      <member refid="unionxbee__header__at__request__t_1afaac4d50b8627529565a1d55950c44f6" prot="public" virt="non-virtual"><scope>xbee_header_at_request_t</scope><name>remote</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

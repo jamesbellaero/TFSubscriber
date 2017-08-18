@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="unionaddr64" kind="union" language="C++" prot="public">
+    <compoundname>addr64</compoundname>
+    <includes refid="types_8h" local="yes">wpan/types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__wpan__types_1ga4892413ffe70d9782fc226d3512c6cd1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t b[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/types.h" line="35" column="1" bodyfile="include/wpan/types.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__types_1ga14b257b19e277f41d86cef4c28a5a9b9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t u[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/types.h" line="36" column="1" bodyfile="include/wpan/types.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__types_1ga190ad535f282ae870446f52f11bb8e8c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t l[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>l</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/types.h" line="37" column="1" bodyfile="include/wpan/types.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Typedef used to hold a 64-bit IEEE address, represented as 8 bytes, 4 16-bit values or 2 32-bit values. </para>    </briefdescription>
+    <detaileddescription>
+<para>Note that (for now) all <ref refid="unionaddr64" kindref="compound">addr64</ref> elements are stored MSB-first (the order used in XBee frames). <xrefsect id="todo_1_todo000026"><xreftitle>Todo</xreftitle><xrefdescription><para>update all <ref refid="unionaddr64" kindref="compound">addr64</ref> variables and structure elements to end in _be (big-endian) or _le (little-endian) where appropriate. Add functions to convert 64-bit values between host byte order and big/little endian. </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <location file="include/wpan/types.h" line="34" column="1" bodyfile="include/wpan/types.h" bodystart="34" bodyend="38"/>
+    <listofallmembers>
+      <member refid="group__wpan__types_1ga4892413ffe70d9782fc226d3512c6cd1" prot="public" virt="non-virtual"><scope>addr64</scope><name>b</name></member>
+      <member refid="group__wpan__types_1ga190ad535f282ae870446f52f11bb8e8c" prot="public" virt="non-virtual"><scope>addr64</scope><name>l</name></member>
+      <member refid="group__wpan__types_1ga14b257b19e277f41d86cef4c28a5a9b9" prot="public" virt="non-virtual"><scope>addr64</scope><name>u</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

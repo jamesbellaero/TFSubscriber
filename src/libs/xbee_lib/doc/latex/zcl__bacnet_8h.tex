@@ -1,0 +1,260 @@
+\hypertarget{zcl__bacnet_8h}{}\section{include/zigbee/zcl\+\_\+bacnet.h File Reference}
+\label{zcl__bacnet_8h}\index{include/zigbee/zcl\+\_\+bacnet.\+h@{include/zigbee/zcl\+\_\+bacnet.\+h}}
+
+
+Macros associated with supporting B\+A\+Cnet under Zig\+Bee.  
+
+
+{\ttfamily \#include \char`\"{}wpan/aps.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}zigbee/zcl.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structzcl__binary__output__attr__t}{zcl\+\_\+binary\+\_\+output\+\_\+attr\+\_\+t}
+\item 
+struct \hyperlink{structzcl__binary__output__t}{zcl\+\_\+binary\+\_\+output\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a178d4887e3139eac3bba5bd92073fae0}\label{zcl__bacnet_8h_a178d4887e3139eac3bba5bd92073fae0}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+P\+R\+O\+F\+I\+LE}~0x0105
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a0a68b01c7434f2238331aeca82fa8710}\label{zcl__bacnet_8h_a0a68b01c7434f2238331aeca82fa8710}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+D\+E\+V\+\_\+\+C\+O\+N\+S\+T\+R\+U\+C\+T\+ED}~0x000A
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_ad3fcd8d31c226e82ceaab75758f72b20}\label{zcl__bacnet_8h_ad3fcd8d31c226e82ceaab75758f72b20}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+D\+E\+V\+\_\+\+T\+U\+N\+N\+E\+L\+ED}~0x000B
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_ac306b2a7407e8bbde59b6253a45d9893}\label{zcl__bacnet_8h_ac306b2a7407e8bbde59b6253a45d9893}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+K\+E\+D\+\_\+\+T\+R\+A\+N\+S\+I\+T\+I\+O\+NS}~0x0000
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_af01f02cb5d3576e1d902bd7347207760}\label{zcl__bacnet_8h_af01f02cb5d3576e1d902bd7347207760}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+T\+E\+XT}~0x0004
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_ab4c3e0fe51515b08eda1cf4ae585cac0}\label{zcl__bacnet_8h_ab4c3e0fe51515b08eda1cf4ae585cac0}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+L\+A\+R\+M\+\_\+\+V\+A\+L\+UE}~0x0006
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a01615fb08c0e478acfee79cf45fc5398}\label{zcl__bacnet_8h_a01615fb08c0e478acfee79cf45fc5398}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+E\+XT}~0x000E
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_aa18a993ad1122be29a56841dd26384ec}\label{zcl__bacnet_8h_aa18a993ad1122be29a56841dd26384ec}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+O\+U\+NT}~0x000F
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a52d2b98917f481e0607c1b21cb02dc16}\label{zcl__bacnet_8h_a52d2b98917f481e0607c1b21cb02dc16}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+ME}~0x0010
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_acef8512a94b91813d07b3635f9f1c0dc}\label{zcl__bacnet_8h_acef8512a94b91813d07b3635f9f1c0dc}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+L\+A\+SS}~0x0011
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a30f98d4272b5cc96797cc37623e282aa}\label{zcl__bacnet_8h_a30f98d4272b5cc96797cc37623e282aa}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+C\+O\+V\+\_\+\+I\+N\+C\+R\+E\+M\+E\+NT}~0x0016
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a2527a6bb60f01226c9f36b9850c46021}\label{zcl__bacnet_8h_a2527a6bb60f01226c9f36b9850c46021}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+A\+D\+B\+A\+ND}~0x0019
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_afabe4ee20a5eb4ff29067ea637f2886f}\label{zcl__bacnet_8h_afabe4ee20a5eb4ff29067ea637f2886f}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}~0x001C
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_aeb2196851522d8afb2a9841c570a64a4}\label{zcl__bacnet_8h_aeb2196851522d8afb2a9841c570a64a4}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE}~0x001F
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a2a66ad65f2745b9b41a97ba2cfae7b21}\label{zcl__bacnet_8h_a2a66ad65f2745b9b41a97ba2cfae7b21}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+E\+L\+A\+P\+S\+E\+D\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+T\+I\+ME}~0x0021
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_acea3151083299e57cedc535ed5c7ae6a}\label{zcl__bacnet_8h_acea3151083299e57cedc535ed5c7ae6a}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+E\+V\+E\+N\+T\+\_\+\+E\+N\+A\+B\+LE}~0x0023
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_ab61c2e36657fb7e592d153301ca12b75}\label{zcl__bacnet_8h_ab61c2e36657fb7e592d153301ca12b75}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+A\+TE}~0x0024
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a69bcd451a05551f4dce8a6fef4bfa1d3}\label{zcl__bacnet_8h_a69bcd451a05551f4dce8a6fef4bfa1d3}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+F\+A\+U\+L\+T\+\_\+\+V\+A\+L\+U\+ES}~0x0025
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a073250573ec2afc72cca9f9d2080203b}\label{zcl__bacnet_8h_a073250573ec2afc72cca9f9d2080203b}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+F\+E\+E\+D\+B\+A\+C\+K\+\_\+\+V\+A\+L\+UE}~0x0028
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_ada6be370ea9b951c22529a42a8302894}\label{zcl__bacnet_8h_ada6be370ea9b951c22529a42a8302894}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+H\+I\+G\+H\+\_\+\+L\+I\+M\+IT}~0x002D
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a5f3c3ff61349aae0a9d813c57a94b288}\label{zcl__bacnet_8h_a5f3c3ff61349aae0a9d813c57a94b288}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+I\+N\+A\+C\+T\+I\+V\+E\+\_\+\+T\+E\+XT}~0x002E
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_aa565b436dfc19a32f20714772580b8f8}\label{zcl__bacnet_8h_aa565b436dfc19a32f20714772580b8f8}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+L\+I\+M\+I\+T\+\_\+\+E\+N\+A\+B\+LE}~0x0034
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_ae508d4cfa1c29e469880b1cc19ee2626}\label{zcl__bacnet_8h_ae508d4cfa1c29e469880b1cc19ee2626}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+L\+O\+W\+\_\+\+L\+I\+M\+IT}~0x003B
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_aa2267d03cb7d3dc9f8e35a0aba53d7da}\label{zcl__bacnet_8h_aa2267d03cb7d3dc9f8e35a0aba53d7da}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+M\+A\+X\+\_\+\+P\+R\+E\+S\+E\+N\+T\+\_\+\+V\+A\+L\+UE}~0x0041
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a923009533d4b3c26d76583941a7b43fa}\label{zcl__bacnet_8h_a923009533d4b3c26d76583941a7b43fa}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+O\+F\+F\+\_\+\+T\+I\+ME}~0x0042
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a502c30e73bfc5150630b323ffc5e31f8}\label{zcl__bacnet_8h_a502c30e73bfc5150630b323ffc5e31f8}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+O\+N\+\_\+\+T\+I\+ME}~0x0043
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_ac7a52e03d803216b1ad40d1020d64b31}\label{zcl__bacnet_8h_ac7a52e03d803216b1ad40d1020d64b31}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+M\+I\+N\+\_\+\+P\+R\+E\+S\+E\+N\+T\+\_\+\+V\+A\+L\+UE}~0x0045
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a2ef725764dcfd43fa64a9de6e8303e92}\label{zcl__bacnet_8h_a2ef725764dcfd43fa64a9de6e8303e92}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+N\+O\+T\+I\+F\+Y\+\_\+\+T\+Y\+PE}~0x0048
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_abe101e8c77c4087c20800507c9cfd1ad}\label{zcl__bacnet_8h_abe101e8c77c4087c20800507c9cfd1ad}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+ES}~0x004A
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a34b2d332475183f1f52fb9119c478883}\label{zcl__bacnet_8h_a34b2d332475183f1f52fb9119c478883}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}~0x004B
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_ac42ec66010a84ce8bbc1110ba073df62}\label{zcl__bacnet_8h_ac42ec66010a84ce8bbc1110ba073df62}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+N\+A\+ME}~0x004D
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_abdcb9e19452638a6e1d016c5d5cbad04}\label{zcl__bacnet_8h_abdcb9e19452638a6e1d016c5d5cbad04}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+PE}~0x004F
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_afef7eb641f6cff2889f20388d85dfee1}\label{zcl__bacnet_8h_afef7eb641f6cff2889f20388d85dfee1}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+S\+E\+R\+V\+I\+CE}~0x0051
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a21bd8af9856a654c8eb898a0a11d464e}\label{zcl__bacnet_8h_a21bd8af9856a654c8eb898a0a11d464e}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+P\+O\+L\+A\+R\+I\+TY}~0x0054
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a44e23154e0cddf73856fe5401eeaade5}\label{zcl__bacnet_8h_a44e23154e0cddf73856fe5401eeaade5}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+P\+R\+E\+S\+E\+N\+T\+\_\+\+V\+A\+L\+UE}~0x0055
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a118351445733b0528f5679efc9c4e80d}\label{zcl__bacnet_8h_a118351445733b0528f5679efc9c4e80d}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+A\+R\+R\+AY}~0x0057
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a1690b528e1f97428c0113188c2628afd}\label{zcl__bacnet_8h_a1690b528e1f97428c0113188c2628afd}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+L\+I\+A\+B\+I\+L\+I\+TY}~0x0067
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a21e0396bbba28cb7898111c118bc5812}\label{zcl__bacnet_8h_a21e0396bbba28cb7898111c118bc5812}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+L\+I\+N\+Q\+U\+I\+S\+H\+\_\+\+D\+E\+F\+A\+U\+LT}~0x0068
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_adaf3011f1a147addae7a7428fd23f813}\label{zcl__bacnet_8h_adaf3011f1a147addae7a7428fd23f813}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}~0x006A
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_aae13851d70f1b3ea2dc0a3cd6ac8c0c6}\label{zcl__bacnet_8h_aae13851d70f1b3ea2dc0a3cd6ac8c0c6}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+GS}~0x006F
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a27ce6d09ba1e0cc3968d2b8693c9a93b}\label{zcl__bacnet_8h_a27ce6d09ba1e0cc3968d2b8693c9a93b}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+M\+E\+\_\+\+D\+E\+L\+AY}~0x0071
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a70945d061b887457f2116ac625211a60}\label{zcl__bacnet_8h_a70945d061b887457f2116ac625211a60}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+M\+E\+\_\+\+O\+F\+\_\+\+A\+T\+\_\+\+R\+E\+S\+ET}~0x0072
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_aa065b143b3a6ed0c14d526f1a958982d}\label{zcl__bacnet_8h_aa065b143b3a6ed0c14d526f1a958982d}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+M\+E\+\_\+\+O\+F\+\_\+\+S\+C\+\_\+\+R\+E\+S\+ET}~0x0073
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_af5995a83c826e27f5d42e1cc9d7a402f}\label{zcl__bacnet_8h_af5995a83c826e27f5d42e1cc9d7a402f}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+E\+N\+G\+I\+N\+E\+E\+R\+I\+N\+G\+\_\+\+U\+N\+I\+TS}~0x0075
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_ac4c64dce73ede268aab30d909366c8d9}\label{zcl__bacnet_8h_ac4c64dce73ede268aab30d909366c8d9}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL}~0x0076
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a4919abe642ba1791003c5e4cb0e3ed1f}\label{zcl__bacnet_8h_a4919abe642ba1791003c5e4cb0e3ed1f}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+M\+PS}~0x0082
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a1790a45075948b04da20d9e8ed37a2a8}\label{zcl__bacnet_8h_a1790a45075948b04da20d9e8ed37a2a8}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+N\+A\+ME}~0x00\+A8
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a37bbc53c8ba67e8f8d406a308a8ef721}\label{zcl__bacnet_8h_a37bbc53c8ba67e8f8d406a308a8ef721}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}~0x0100
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a59eaed35a8b5019fa0d97d199df165d7}\label{zcl__bacnet_8h_a59eaed35a8b5019fa0d97d199df165d7}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+\_\+\+A\+L\+A\+RM}~(1$<$$<$0)
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a3acad3e6d1e6cbb2498c8d2d3fa74f46}\label{zcl__bacnet_8h_a3acad3e6d1e6cbb2498c8d2d3fa74f46}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+F\+A\+U\+LT}~(1$<$$<$1)
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_af36b4c442bb646e82042a90176a83fd8}\label{zcl__bacnet_8h_af36b4c442bb646e82042a90176a83fd8}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+O\+V\+E\+R\+R\+I\+D\+D\+EN}~(1$<$$<$2)
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a3781df564bd91f0b0e881a0eaf799db0}\label{zcl__bacnet_8h_a3781df564bd91f0b0e881a0eaf799db0}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+S\+E\+R\+V\+I\+CE}~(1$<$$<$3)
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a18a3a1e45624300c6f3169fd6e158c36}\label{zcl__bacnet_8h_a18a3a1e45624300c6f3169fd6e158c36}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+P\+O\+L\+A\+R\+I\+T\+Y\+\_\+\+N\+O\+R\+M\+AL}~0
+\item 
+\mbox{\Hypertarget{zcl__bacnet_8h_a11f4ef65f7c5d24f052aeeca97816d69}\label{zcl__bacnet_8h_a11f4ef65f7c5d24f052aeeca97816d69}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+P\+O\+L\+A\+R\+I\+T\+Y\+\_\+\+R\+E\+V\+E\+R\+SE}~1
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+RS}(var,  desc,  zbot,  value\+\_\+write,  status\+\_\+read)
+\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+T\+E\+RN}(var)
+\item 
+\#define \hyperlink{zcl__bacnet_8h_a468f0eb8b1aadc22cd9ffb2aff52cf4b}{Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+N\+D\+P\+O\+I\+NT}(id,  profile,  name)
+\begin{DoxyCompactList}\small\item\em Create an entry in the endpoint table for a constructed B\+A\+Cnet device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Macros associated with supporting B\+A\+Cnet under Zig\+Bee. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{zcl__bacnet_8h_a468f0eb8b1aadc22cd9ffb2aff52cf4b}\label{zcl__bacnet_8h_a468f0eb8b1aadc22cd9ffb2aff52cf4b}} 
+\index{zcl\+\_\+bacnet.\+h@{zcl\+\_\+bacnet.\+h}!Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+N\+D\+P\+O\+I\+NT@{Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+N\+D\+P\+O\+I\+NT}}
+\index{Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+N\+D\+P\+O\+I\+NT@{Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+N\+D\+P\+O\+I\+NT}!zcl\+\_\+bacnet.\+h@{zcl\+\_\+bacnet.\+h}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+N\+D\+P\+O\+I\+NT}{ZCL\_BACNET\_ENDPOINT}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+B\+A\+C\+N\+E\+T\+\_\+\+E\+N\+D\+P\+O\+I\+NT(\begin{DoxyParamCaption}\item[{}]{id,  }\item[{}]{profile,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{  id, profile, \hyperlink{group__zcl_ga23e4657d006b8b39ac54f0ee61786910}{zcl\_invalid\_cluster}, &name ## \_ep\_state, \(\backslash\)
+      ZCL\_BACNET\_DEV\_CONSTRUCTED, 0x00, name ## \_cluster\_table \}
+\end{DoxyCode}
+
+
+Create an entry in the endpoint table for a constructed B\+A\+Cnet device. 
+
+Parameter {\ttfamily name} should refer to a \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} global (named \{name\}\+\_\+ep\+\_\+state) and a const array of \hyperlink{structwpan__cluster__table__entry__t}{wpan\+\_\+cluster\+\_\+table\+\_\+entry\+\_\+t} (named \{name\}\+\_\+cluster\+\_\+table). \mbox{\Hypertarget{zcl__bacnet_8h_ac3a3e1830faa100d40aa95453f33431e}\label{zcl__bacnet_8h_ac3a3e1830faa100d40aa95453f33431e}} 
+\index{zcl\+\_\+bacnet.\+h@{zcl\+\_\+bacnet.\+h}!Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+T\+E\+RN@{Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+T\+E\+RN}}
+\index{Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+T\+E\+RN@{Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+T\+E\+RN}!zcl\+\_\+bacnet.\+h@{zcl\+\_\+bacnet.\+h}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+T\+E\+RN}{ZCL\_BINARY\_OUTPUT\_EXTERN}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+T\+E\+RN(\begin{DoxyParamCaption}\item[{}]{var }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \hyperlink{structwpan__ep__state__t}{wpan\_ep\_state\_t} var ## \_ep\_state;                             \(\backslash\)
+   extern \textcolor{keyword}{const} \hyperlink{structwpan__cluster__table__entry__t}{wpan\_cluster\_table\_entry\_t} var ## \_cluster\_table[]
+\end{DoxyCode}
+\mbox{\Hypertarget{zcl__bacnet_8h_a5b67169d1c0756d7fb635211f5019861}\label{zcl__bacnet_8h_a5b67169d1c0756d7fb635211f5019861}} 
+\index{zcl\+\_\+bacnet.\+h@{zcl\+\_\+bacnet.\+h}!Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+RS@{Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+RS}}
+\index{Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+RS@{Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+RS}!zcl\+\_\+bacnet.\+h@{zcl\+\_\+bacnet.\+h}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+RS}{ZCL\_BINARY\_OUTPUT\_VARS}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+RS(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{desc,  }\item[{}]{zbot,  }\item[{}]{value\+\_\+write,  }\item[{}]{status\+\_\+read }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{const} \hyperlink{structzcl__binary__output__attr__t}{zcl\_binary\_output\_attr\_t} var ## \_attr = \{                         \(\backslash\)
+      \{  ZCL\_BACNET\_ATTR\_ACTIVE\_TEXT,     ZCL\_ATTRIB\_FLAG\_READONLY,        \(\backslash\)
+         ZCL\_TYPE\_STRING\_CHAR,            desc \textcolor{stringliteral}{" ON"} \},                    \(\backslash\)
+      \{  ZCL\_BACNET\_ATTR\_DESCRIPTION,     ZCL\_ATTRIB\_FLAG\_READONLY,        \(\backslash\)
+         ZCL\_TYPE\_STRING\_CHAR,            desc \},                          \(\backslash\)
+      \{  ZCL\_BACNET\_ATTR\_INACTIVE\_TEXT,   ZCL\_ATTRIB\_FLAG\_READONLY,        \(\backslash\)
+         ZCL\_TYPE\_STRING\_CHAR,            desc \textcolor{stringliteral}{" OFF"} \},                   \(\backslash\)
+      \{  ZCL\_BACNET\_ATTR\_OUT\_OF\_SERVICE,  ZCL\_ATTRIB\_FLAG\_READONLY,        \(\backslash\)
+         ZCL\_TYPE\_LOGICAL\_BOOLEAN,        &zbot.out\_of\_service \},          \(\backslash\)
+      \{  \{  ZCL\_BACNET\_ATTR\_PRESENT\_VALUE,   \hyperlink{group__zcl_ga40104652d30fa17b7ea5dde9e8b788b8}{ZCL\_ATTRIB\_FLAG\_FULL},       \(\backslash\)
+            ZCL\_TYPE\_LOGICAL\_BOOLEAN,     &zbot.present\_value              \(\backslash\)
+         \}, 0, 0, NULL, value\_write \},                                     \(\backslash\)
+      \{  \{  ZCL\_BACNET\_ATTR\_STATUS\_FLAGS,                                  \(\backslash\)
+            ZCL\_ATTRIB\_FLAG\_FULL | ZCL\_ATTRIB\_FLAG\_READONLY,               \(\backslash\)
+            ZCL\_TYPE\_BITMAP\_8BIT,         &zbot.status\_flags               \(\backslash\)
+         \}, 0, 0, status\_read, NULL \},                                     \(\backslash\)
+      ZCL\_ATTRIBUTE\_END\_OF\_LIST \};                                         \(\backslash\)
+   const \hyperlink{structzcl__attribute__tree__t}{zcl\_attribute\_tree\_t} var ## \_tree[] =                              \(\backslash\)
+      \{ \{ ZCL\_MFG\_NONE, &var ## \_attr.active\_text, NULL \} \};               \(\backslash\)
+   const \hyperlink{structwpan__cluster__table__entry__t}{wpan\_cluster\_table\_entry\_t} var ## \_cluster\_table[] =               \(\backslash\)
+      \{  \hyperlink{group__zcl__basic_gad8336fcfc2729c8deb86eda7f125f271}{ZCL\_CLUST\_ENTRY\_BASIC\_SERVER},                                    \(\backslash\)
+         ZCL\_CLUST\_ENTRY\_IDENTIFY\_SERVER,                                  \(\backslash\)
+         \{  ZCL\_CLUST\_BINARY\_OUT,                                          \(\backslash\)
+            &\hyperlink{group__zcl_gac3849121e93e777ce9a7510d24517b9b}{zcl\_general\_command},                                         \(\backslash\)
+            var ## \_tree,                                                  \(\backslash\)
+            WPAN\_CLUST\_FLAG\_SERVER                                         \(\backslash\)
+         \},                                                                \(\backslash\)
+         \{ \hyperlink{group__wpan__aps_ga55a7fbd8adf019d268f17b6ede90fe0f}{WPAN\_CLUST\_ENTRY\_LIST\_END} \}                                       \(\backslash\)
+      \};                                                                   \(\backslash\)
+   wpan\_ep\_state\_t var ## \_ep\_state;
+\end{DoxyCode}

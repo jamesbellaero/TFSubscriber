@@ -1,0 +1,1505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="zcl__commissioning_8h" kind="file" language="C++">
+    <compoundname>zcl_commissioning.h</compoundname>
+    <includes refid="platform_8h" local="yes">xbee/platform.h</includes>
+    <includes refid="types_8h" local="yes">wpan/types.h</includes>
+    <includes refid="zcl_8h" local="yes">zigbee/zcl.h</includes>
+    <includes refid="zcl__types_8h" local="yes">zigbee/zcl_types.h</includes>
+    <includedby refid="xbee__commissioning_8c" local="yes">src/xbee/xbee_commissioning.c</includedby>
+    <includedby refid="zcl__commissioning_8c" local="yes">src/zigbee/zcl_commissioning.c</includedby>
+    <includedby refid="commissioning_8h" local="yes">include/xbee/commissioning.h</includedby>
+    <incdepgraph>
+      <node id="956">
+        <label>errno.h</label>
+      </node>
+      <node id="958">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="959" relation="include">
+        </childnode>
+      </node>
+      <node id="957">
+        <label>stddef.h</label>
+      </node>
+      <node id="962">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="960" relation="include">
+        </childnode>
+      </node>
+      <node id="964">
+        <label>xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="965" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+      </node>
+      <node id="961">
+        <label>zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="955" relation="include">
+        </childnode>
+        <childnode refid="962" relation="include">
+        </childnode>
+        <childnode refid="963" relation="include">
+        </childnode>
+      </node>
+      <node id="954">
+        <label>include/zigbee/zcl_commissioning.h</label>
+        <link refid="zcl__commissioning_8h"/>
+        <childnode refid="955" relation="include">
+        </childnode>
+        <childnode refid="960" relation="include">
+        </childnode>
+        <childnode refid="961" relation="include">
+        </childnode>
+        <childnode refid="963" relation="include">
+        </childnode>
+      </node>
+      <node id="965">
+        <label>string.h</label>
+      </node>
+      <node id="960">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="955" relation="include">
+        </childnode>
+      </node>
+      <node id="955">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="956" relation="include">
+        </childnode>
+        <childnode refid="957" relation="include">
+        </childnode>
+        <childnode refid="958" relation="include">
+        </childnode>
+      </node>
+      <node id="963">
+        <label>zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="955" relation="include">
+        </childnode>
+        <childnode refid="964" relation="include">
+        </childnode>
+        <childnode refid="966" relation="include">
+        </childnode>
+      </node>
+      <node id="966">
+        <label>zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="955" relation="include">
+        </childnode>
+      </node>
+      <node id="959">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="969">
+        <label>src/zigbee/zcl_commissioning.c</label>
+        <link refid="zcl__commissioning_8c"/>
+      </node>
+      <node id="968">
+        <label>src/xbee/xbee_commissioning.c</label>
+        <link refid="xbee__commissioning_8c"/>
+      </node>
+      <node id="967">
+        <label>include/zigbee/zcl_commissioning.h</label>
+        <link refid="zcl__commissioning_8h"/>
+        <childnode refid="968" relation="include">
+        </childnode>
+        <childnode refid="969" relation="include">
+        </childnode>
+        <childnode refid="970" relation="include">
+        </childnode>
+      </node>
+      <node id="970">
+        <label>include/xbee/commissioning.h</label>
+        <link refid="commissioning_8h"/>
+        <childnode refid="968" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structzcl__comm__startup__param__t" prot="public">zcl_comm_startup_param_t</innerclass>
+    <innerclass refid="structzcl__comm__state__t" prot="public">zcl_comm_state_t</innerclass>
+    <innerclass refid="structzcl__comm__startup__attr__t" prot="public">zcl_comm_startup_attr_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__zcl__commissioning_1ga547cd138961d72d75ec09224e7777ed7" prot="public" static="no">
+        <name>ZCL_CLUST_COMMISSIONING</name>
+        <initializer>0x0015</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="31" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga8a70de40b168fafcee8c9888ea34819d" prot="public" static="no">
+        <name>ZCL_CLUST_ENTRY_COMMISSIONING_SERVER</name>
+        <initializer>{	ZCL_CLUST_COMMISSIONING, &amp;zcl_comm_clust_handler,	\
+		zcl_comm_startup_attribute_tree, <ref refid="group__wpan__aps_1ga9e0a1a0abf5594d8fa5a38b1ca40b3bc" kindref="member">WPAN_CLUST_FLAG_SERVER</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="33" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga7e7f7c1abfa0734e79a0e1dbfc053faa" prot="public" static="no">
+        <name>ZCL_COMM_GLOBAL_EPID</name>
+        <initializer><ref refid="group__zcl__64_1ga8e855e53988a32f4428ceacce4f9870c" kindref="member">ZCL64_INIT</ref>( 0x0050C277, 0x10000000 )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="38" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga65e717b887be7667a9c003fd3dfffcdd" prot="public" static="no">
+        <name>ZCL_COMM_STARTUP_JOINED</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="50" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gadd01d1d0543cc7329332fe06ceba4e48" prot="public" static="no">
+        <name>ZCL_COMM_STARTUP_COORDINATOR</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="51" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gac6430290e70952064a72a9cbd5136081" prot="public" static="no">
+        <name>ZCL_COMM_STARTUP_REJOIN</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="52" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gaa3914948a2024dab2b0ae5f3ff8ae5e7" prot="public" static="no">
+        <name>ZCL_COMM_STARTUP_FROM_SCRATCH</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="53" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gad7f5d4706a3fa18605030c3811076c29" prot="public" static="no">
+        <name>ZCL_COMM_KEY_TYPE_STANDARD</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="64" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga46d75e146e6b77f3c568e86f8fb81b72" prot="public" static="no">
+        <name>ZCL_COMM_KEY_TYPE_HIGH_SECURITY</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="65" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga59f8071f92e78712954832b5d5d73cb2" prot="public" static="no">
+        <name>ZCL_COMM_SCAN_ATTEMPTS_DEFAULT</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="69" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga0e146d73ad21faec4d9338470a0267d6" prot="public" static="no">
+        <name>ZCL_COMM_TIME_BETWEEN_SCANS_DEFAULT</name>
+        <initializer>0x0064</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="71" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gac94f1c5753e8b1e71475cfcda4011150" prot="public" static="no">
+        <name>ZCL_COMM_REJOIN_INTERVAL_DEFAULT</name>
+        <initializer>0x003c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="73" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga9c45d709d61ef3f0dba6f9f139d9bc16" prot="public" static="no">
+        <name>ZCL_COMM_MAX_REJOIN_INTERVAL_DEFAULT</name>
+        <initializer>0x0e10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="75" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga4f551f972a8e6ec65cf90a888fe80758" prot="public" static="no">
+        <name>ZCL_COMM_CONCENTRATOR_RADIUS_DEFAULT</name>
+        <initializer>0x0F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="80" column="12" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga83365bb85e2b264c1741d75e8522a754" prot="public" static="no">
+        <name>ZCL_COMM_FLAG_SAVE_ON_JOIN</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>if radio successfully joins a network, commit changes to NVRAM </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="90" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gaa56ed48c4587dd4c657a1e69f7e2fba7" prot="public" static="no">
+        <name>ZCL_COMM_FLAG_DELAYED_RESTART</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>there is a delayed action to perform </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="92" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga31a1726685fa4acfd6e27a00ba715e5d" prot="public" static="no">
+        <name>ZCL_COMM_FLAG_COORDINATOR_OK</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+<para>this device can be a coordinator </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="94" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga3f21ae380281a600718338c090dd7176" prot="public" static="no">
+        <name>ZCL_COMM_FLAG_ROUTER_OK</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+<para>this device can be a router </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="96" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gaccf2d6e723514ff49e123264a3cbde5a" prot="public" static="no">
+        <name>ZCL_COMM_FLAG_ENDDEV_OK</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+<para>this device can be a end device </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="98" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga656e9fbebbb767dd47a59363944a0ee4" prot="public" static="no">
+        <name>ZCL_COMM_FLAG_FACTORY_RESET</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+<para>reset to factory SAS at the delayed restart </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="100" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gaf041a27755c9719134f8a2ad59f124e3" prot="public" static="no">
+        <name>ZCL_COMM_FLAG_INSTALL</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+<para>install the current SAS at the delayed restart </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="102" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gabf17d49005afcefa60714a10c1c54c74" prot="public" static="no">
+        <name>ZCL_COMM_STATE_INIT</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>startup state </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="108" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga44abce1dcc61c33053dffe8641e4b167" prot="public" static="no">
+        <name>ZCL_COMM_STATE_LOADING</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>loading structure </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="110" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga03c5eb470ac12387be9e3e48953750f5" prot="public" static="no">
+        <name>ZCL_COMM_STATE_STARTUP</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>xbee_commissioning_tick() can process startup_control </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="112" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga60e0581b929ae09262680136205a2516" prot="public" static="no">
+        <name>ZCL_COMM_STATE_UNJOINED</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+<para>radio is not joined to a network </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="114" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gae9523cf195068a92283ba0d44424e105" prot="public" static="no">
+        <name>ZCL_COMM_STATE_REFRESH</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+<para>radio has joined a network and we&apos;re refreshing the structure </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="116" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga4d8a61e021ef1c4826b18d6eb356c96e" prot="public" static="no">
+        <name>ZCL_COMM_STATE_JOINED</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+<para>radio is joined to a network </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="118" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gaab7f9cfea2353bff92f5aeb2594ca8e3" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_SHORT_ADDRESS</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="159" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga9a4892bd6e84796fe6bf8ace85c642cb" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_EXTENDED_PANID</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="160" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga0349ff92388b56a9c5ca0d9cf5f77b4e" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_PANID</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="161" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gada5c0da80bfed9dfd9d5acc79f59c020" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_CHANNEL_MASK</name>
+        <initializer>0x0003</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="162" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga0172ac434f01431ecc87395a87b129e7" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_PROTOCOL_VERSION</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="163" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gad1b877a35188554b95bf9b2a89a57f8e" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_STACK_PROFILE</name>
+        <initializer>0x0005</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="164" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga3fc4f9a3de48e3981e1a431fb890cfb6" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_STARTUP_CONTROL</name>
+        <initializer>0x0006</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="165" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga2b419dd89f6e6772c5cdb61153e127ba" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_TRUST_CTR_ADDR</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="168" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga8f40f278173d0b1133f6696649bd4041" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_TRUST_CTR_MASTER_KEY</name>
+        <initializer>0x0011</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="169" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gae25bcf9c8637bcc14c05fb30d6b4240e" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_NETWORK_KEY</name>
+        <initializer>0x0012</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="170" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gad50561cfc5d52d9a1efad90ef9599527" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_USE_INSECURE_JOIN</name>
+        <initializer>0x0013</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="171" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gaf160e476884cd49d2155b236b2dc3c71" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_PRECONFIG_LINK_KEY</name>
+        <initializer>0x0014</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="172" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga46aa2ae4df74769780e5fdcb9024ae1a" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_NETWORK_KEY_SEQ_NUM</name>
+        <initializer>0x0015</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="173" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga2a0adae89092d9dc34bfcffb04b63a6a" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_NETWORK_KEY_TYPE</name>
+        <initializer>0x0016</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="174" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga0230f3f6ddeb8d847ec5595bb988ed67" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_NETWORK_MGR_ADDR</name>
+        <initializer>0x0017</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="175" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga0337c6309978b8f91597fd5e61e887ed" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_SCAN_ATTEMPTS</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="178" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga3eddf67a9cc62af2c22cd24f659f1b18" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_TIME_BTWN_SCANS</name>
+        <initializer>0x0021</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="179" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga9e0d16cb6839223fe1dca2a1d3703c7b" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_REJOIN_INTERVAL</name>
+        <initializer>0x0022</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="180" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gab193b58cf6028a80b575eb9037d5bc38" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_MAX_REJOIN_INTERVAL</name>
+        <initializer>0x0023</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="181" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gaf6b67081eaae4edd85f9293536b90469" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_INDIRECT_POLL_RATE</name>
+        <initializer>0x0030</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="184" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gad7e7b7d1a9f1102424c4a82679d48f77" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_PARENT_RETRY_THRESHOLD</name>
+        <initializer>0x0031</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="185" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga3d1ceb746a83fbc926d1c2a64719118f" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_CONCENTRATOR_FLAG</name>
+        <initializer>0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="188" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga081f4edeaf02e6acb2054e8159189583" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_CONCENTRATOR_RADIUS</name>
+        <initializer>0x0041</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="189" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga9501301017651a7119ed616c272c7b15" prot="public" static="no">
+        <name>ZCL_COMM_ATTR_CONCENTRATOR_DISC_TIME</name>
+        <initializer>0x0042</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="190" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga89b4de1f951e6ed93f14a4eddc5ecc01" prot="public" static="no">
+        <name>ZCL_COMM_CMD_RESTART_DEVICE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="193" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga3ee979d4f3b6acea58c3c89a04aae67f" prot="public" static="no">
+        <name>ZCL_COMM_RESTART_OPT_MODE_MASK</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="197" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga49df6eb7433e8acc414f4b945fbc68e0" prot="public" static="no">
+        <name>ZCL_COMM_RESTART_OPT_MODE_SAVE_CHANGES</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="198" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga2243f4b499f9e3aeaa02d370a1e2e01c" prot="public" static="no">
+        <name>ZCL_COMM_RESTART_OPT_MODE_NO_CHANGES</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="199" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga817f8447ac8d34320148d87d29083eb9" prot="public" static="no">
+        <name>ZCL_COMM_RESTART_OPT_IMMEDIATE</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="200" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga99c15c34e5e1845ed2d8fb4285509b21" prot="public" static="no">
+        <name>ZCL_COMM_RESTART_OPT_RESERVED_MASK</name>
+        <initializer>0xF0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="201" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga55f8c0b2f1ff543e2db57d0d0061d378" prot="public" static="no">
+        <name>ZCL_COMM_CMD_SAVE_STARTUP_PARAM</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="206" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gae26e4c1daf77b1b227a34ec10f8fbca0" prot="public" static="no">
+        <name>ZCL_COMM_CMD_RESTORE_STARTUP_PARAM</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="213" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gabba1a2fe6591ee8038fec2e191eca9b8" prot="public" static="no">
+        <name>ZCL_COMM_CMD_RESET_STARTUP_PARAM</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="220" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga087ee46259b56cfcf97b32e7d1e1452b" prot="public" static="no">
+        <name>ZCL_COMM_RESET_OPT_CURRENT</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="224" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga5079436c4ae18d83818e6b0b60547950" prot="public" static="no">
+        <name>ZCL_COMM_RESET_OPT_ALL</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="225" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga63e2335a40e97cd04926ac430068a672" prot="public" static="no">
+        <name>ZCL_COMM_RESET_OPT_ERASE_INDEX</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="226" column="11" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gaaa66ad63e343d1e240de1c7ddb756252" prot="public" static="no">
+        <name>ZCL_COMM_CMD_RESTART_DEVICE_RESP</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="232" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1ga8fe85768360779f35242575201dee3a1" prot="public" static="no">
+        <name>ZCL_COMM_CMD_SAVE_STARTUP_PARAM_RESP</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="233" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gab63c0df9d3243bd75d1672e635de781e" prot="public" static="no">
+        <name>ZCL_COMM_CMD_RESTORE_STARTUP_PARAM_RESP</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="234" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__commissioning_1gaf1e51dad8a536ed567cf7e15bd30d6c9" prot="public" static="no">
+        <name>ZCL_COMM_CMD_RESET_STARTUP_PARAM_RESP</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="235" column="9" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__zcl__commissioning_1gaa87e8d0852e86c694732fa1fb4ecec37" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>zcl_comm_restart_device_cmd_t</definition>
+        <argsstring></argsstring>
+        <name>zcl_comm_restart_device_cmd_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>		<ref refid="group__xbee__wpan_1gaace3d640c8d449b8db1162993d259d3f" kindref="member">options</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="194" column="1" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__zcl__commissioning_1ga54948835520b59b78317db2829ffd078" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>zcl_comm_save_startup_param_t</definition>
+        <argsstring></argsstring>
+        <name>zcl_comm_save_startup_param_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>		<ref refid="group__xbee__wpan_1gaace3d640c8d449b8db1162993d259d3f" kindref="member">options</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="207" column="1" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__zcl__commissioning_1ga776e162ca7b30671d7770cfc7666da39" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>zcl_comm_restore_startup_param_t</definition>
+        <argsstring></argsstring>
+        <name>zcl_comm_restore_startup_param_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>		<ref refid="group__xbee__wpan_1gaace3d640c8d449b8db1162993d259d3f" kindref="member">options</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="214" column="1" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__zcl__commissioning_1ga2f1f60b2dd7b63f02cbf3fe07fc8471f" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>zcl_comm_reset_startup_param_t</definition>
+        <argsstring></argsstring>
+        <name>zcl_comm_reset_startup_param_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>		<ref refid="group__xbee__wpan_1gaace3d640c8d449b8db1162993d259d3f" kindref="member">options</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="221" column="1" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__zcl__commissioning_1gaf8ec8c74f3638336b9a1a23e2b88a7ba" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__zcl__64_1ga2e906cb47fc172ae60da5178075dd3c7" kindref="member">zcl64_t</ref></type>
+        <definition>const zcl64_t zcl_comm_global_epid</definition>
+        <argsstring></argsstring>
+        <name>zcl_comm_global_epid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="40" column="1" bodyfile="src/zigbee/zcl_commissioning.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__commissioning_1ga19d5f58d61bf7ad0d29386bc11aa48ae" prot="public" static="no" mutable="no">
+        <type><ref refid="structzcl__comm__state__t" kindref="compound">zcl_comm_state_t</ref></type>
+        <definition>zcl_comm_state_t zcl_comm_state</definition>
+        <argsstring></argsstring>
+        <name>zcl_comm_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="149" column="1" bodyfile="src/zigbee/zcl_commissioning.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__commissioning_1gac264b7287d217a88553dd4c9b032ab65" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref></type>
+        <definition>const zcl_comm_startup_param_t zcl_comm_default_sas</definition>
+        <argsstring></argsstring>
+        <name>zcl_comm_default_sas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__commissioning_1gaa88e1b649cac11f8c31f63305ad3ca2d" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structzcl__comm__startup__attr__t" kindref="compound">zcl_comm_startup_attr_t</ref></type>
+        <definition>const zcl_comm_startup_attr_t zcl_comm_startup_attributes</definition>
+        <argsstring></argsstring>
+        <name>zcl_comm_startup_attributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="155" column="1" bodyfile="src/zigbee/zcl_commissioning.c" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__commissioning_1ga730f27745b94d4b42586f78b880ee65f" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structzcl__attribute__tree__t" kindref="compound">zcl_attribute_tree_t</ref></type>
+        <definition>const zcl_attribute_tree_t zcl_comm_startup_attribute_tree[]</definition>
+        <argsstring>[]</argsstring>
+        <name>zcl_comm_startup_attribute_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="156" column="1" bodyfile="src/zigbee/zcl_commissioning.c" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__commissioning_1ga70fbd315df33bf9039e036725b569e7f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t delay</definition>
+        <argsstring></argsstring>
+        <name>delay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="202" column="1" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__commissioning_1gadf513be840f5d188d2adcd3045bff65c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t jitter</definition>
+        <argsstring></argsstring>
+        <name>jitter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="203" column="1" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__commissioning_1gaae5a12e607d0f782506d9e6ec6179c64" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_commissioning.h" line="210" column="1" bodyfile="include/zigbee/zcl_commissioning.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__zcl__commissioning_1ga57f9aaf3da6dc9b513f7f9ccbb473a0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int zcl_comm_response</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, uint_fast8_t status)</argsstring>
+        <name>zcl_comm_response</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>uint_fast8_t</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Send response to a Commissioning Server Cluster request. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_commissioning.c" line="265" column="1" bodyfile="src/zigbee/zcl_commissioning.c" bodystart="265" bodyend="295"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" compoundref="sxa_8h" startline="70">PACKED_STRUCT</references>
+        <references refid="group__xbee__atcmd_1gade818037fd6c985038ff29656089758d" compoundref="atcmd_8h" startline="328">status</references>
+        <references refid="group__wpan__aps_1gaaaee02ff456d4f6103a5e94c2ba106c5" compoundref="wpan__aps_8c" startline="752" endline="776">wpan_envelope_reply</references>
+        <references refid="group__zcl_1gac173779e7c48817dbd79042d7a189524" compoundref="zcl_8h" startline="233">ZCL_FRAME_SERVER_TO_CLIENT</references>
+        <references refid="group__zcl_1ga080b9f73f48767fc6af9b5da27d30d70" compoundref="zcl_8h" startline="236">ZCL_FRAME_DISABLE_DEF_RESP</references>
+        <references refid="group__zcl_1ga75efeedff171558e183dbf8d646ea5dd" compoundref="zcl_8h" startline="219">ZCL_FRAME_TYPE_CLUSTER</references>
+        <references refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" compoundref="aps_8h" startline="61">wpan_envelope_t::payload</references>
+        <references refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" compoundref="aps_8h" startline="62">wpan_envelope_t::length</references>
+        <references refid="group__wpan__aps_1ga06f1e9e86b74ef807ded44b79b13e283" compoundref="wpan__aps_8c" startline="790" endline="810">wpan_envelope_send</references>
+        <references refid="group__zcl__commissioning_1ga0eeed24c2ca26aa030876addc4caf67d" compoundref="zcl__commissioning_8c" startline="311" endline="359">_zcl_comm_command_build</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__commissioning_1ga891e67720dee8334b805756597a62607" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int zcl_comm_restart_device</definition>
+        <argsstring>(wpan_envelope_t FAR *envelope, const zcl_comm_restart_device_cmd_t *parameters)</argsstring>
+        <name>zcl_comm_restart_device</name>
+        <param>
+          <type><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>const zcl_comm_restart_device_cmd_t *</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Send a &quot;Restart Device&quot; command to the ZCL Commissioning Cluster. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Partial envelope used to send the request. Caller must set <computeroutput>dev</computeroutput>, <computeroutput>ieee_address</computeroutput>, <computeroutput>network_address</computeroutput>, <computeroutput>profile_id</computeroutput>, <computeroutput>source_endpoint</computeroutput>, <computeroutput>dest_endpoint</computeroutput> and (optionally) <computeroutput>options</computeroutput>. On return, <computeroutput>payload</computeroutput> and <computeroutput>length</computeroutput> are cleared, and <computeroutput>cluster_id</computeroutput> is set to ZCL_CLUST_COMMISSIONING.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+If <computeroutput>source_endpoint</computeroutput> is 0, function will search the endpoint table for a Commissioning Client Cluster and set the envelope&apos;s <computeroutput>source_endpoint</computeroutput> and <computeroutput>profile_id</computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters for the Restart Device command or NULL for default settings (save changes and restart without delay/jitter).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>couldn&apos;t find source endpoint in endpoint table, or some other error in parameter passed to function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error trying to send request </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_commissioning.c" line="409" column="1" bodyfile="src/zigbee/zcl_commissioning.c" bodystart="409" bodyend="437"/>
+        <references refid="group__zcl__commissioning_1ga0eeed24c2ca26aa030876addc4caf67d" compoundref="zcl__commissioning_8c" startline="311" endline="359">_zcl_comm_command_build</references>
+        <references refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" compoundref="sxa_8h" startline="70">PACKED_STRUCT</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__commissioning_1ga3d73d7ef453da4940c923d7d7663f8d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int zcl_comm_reset_parameters</definition>
+        <argsstring>(wpan_envelope_t FAR *envelope, const zcl_comm_reset_startup_param_t *parameters)</argsstring>
+        <name>zcl_comm_reset_parameters</name>
+        <param>
+          <type><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>const zcl_comm_reset_startup_param_t *</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Send a &quot;Reset Startup Parameters&quot; command to the ZCL Commissioning Cluster. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Partial envelope used to send the request. Caller must set <computeroutput>dev</computeroutput>, <computeroutput>ieee_address</computeroutput>, <computeroutput>network_address</computeroutput>, <computeroutput>profile_id</computeroutput>, <computeroutput>source_endpoint</computeroutput>, <computeroutput>dest_endpoint</computeroutput> and (optionally) <computeroutput>options</computeroutput>. On return, <computeroutput>payload</computeroutput> and <computeroutput>length</computeroutput> are cleared, and <computeroutput>cluster_id</computeroutput> is set to ZCL_CLUST_COMMISSIONING.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+If <computeroutput>source_endpoint</computeroutput> is 0, function will search the endpoint table for a Commissioning Client Cluster and set the envelope&apos;s <computeroutput>source_endpoint</computeroutput> and <computeroutput>profile_id</computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters for the Reset Startup Parameters command or NULL for default settings (reset current parameters only).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>couldn&apos;t find source endpoint in endpoint table, or some other error in parameter passed to function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error trying to send request </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_commissioning.c" line="464" column="1" bodyfile="src/zigbee/zcl_commissioning.c" bodystart="464" bodyend="493"/>
+        <references refid="group__zcl__commissioning_1ga0eeed24c2ca26aa030876addc4caf67d" compoundref="zcl__commissioning_8c" startline="311" endline="359">_zcl_comm_command_build</references>
+        <references refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" compoundref="sxa_8h" startline="70">PACKED_STRUCT</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__commissioning_1gae85ac833a5eaf6f4a8cb6a5a9e6bb49e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void zcl_comm_sas_init</definition>
+        <argsstring>(zcl_comm_startup_param_t *p)</argsstring>
+        <name>zcl_comm_sas_init</name>
+        <param>
+          <type><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_commissioning.c" line="703" column="1" bodyfile="src/zigbee/zcl_commissioning.c" bodystart="703" bodyend="714"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__commissioning_1ga07258712d6ad21e9ddb96069bb08c896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int zcl_comm_clust_handler</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, void FAR *context)</argsstring>
+        <name>zcl_comm_clust_handler</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_commissioning.c" line="604" column="1" bodyfile="src/zigbee/zcl_commissioning.c" bodystart="604" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__commissioning_1ga1fb799391c7d917facd792d57e3db0fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void zcl_comm_factory_reset</definition>
+        <argsstring>(uint16_t ms_delay)</argsstring>
+        <name>zcl_comm_factory_reset</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>ms_delay</declname>
+        </param>
+        <briefdescription>
+<para>Perform a locally-triggered factory reset to default SAS. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ms_delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>initiate reset after <computeroutput>ms_delay</computeroutput> milliseconds </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_commissioning.c" line="723" column="1" bodyfile="src/zigbee/zcl_commissioning.c" bodystart="723" bodyend="728"/>
+        <references refid="group__zcl__commissioning_1ga54811501883a7b2225b1a3111f86b760" compoundref="zcl__commissioning_8h" startline="104">zcl_comm_state_t::restart_ms</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header for ZCL Commissioning Cluster. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor">#ifndef<sp/>ZCL_COMMISSIONING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMMISSIONING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">wpan/types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zcl_8h" kindref="compound">zigbee/zcl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zcl__types_8h" kindref="compound">zigbee/zcl_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_CLUST_COMMISSIONING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0015</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_CLUST_ENTRY_COMMISSIONING_SERVER<sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/>{<sp/><sp/>ZCL_CLUST_COMMISSIONING,<sp/>&amp;zcl_comm_clust_handler,<sp/><sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>zcl_comm_startup_attribute_tree,<sp/>WPAN_CLUST_FLAG_SERVER<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Global<sp/>commissioning<sp/>EPID<sp/>for<sp/>use<sp/>in<sp/>defining<sp/>zcl_comm_default_sas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_GLOBAL_EPID<sp/><sp/><sp/><sp/><sp/>ZCL64_INIT(<sp/>0x0050C277,<sp/>0x10000000<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_s_int64" kindref="compound">zcl64_t</ref><sp/>zcl_comm_global_epid;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structzcl__comm__startup__param__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Must<sp/>start<sp/>with<sp/>short_address<sp/>so<sp/>cluster<sp/>handler<sp/>can<sp/>use<sp/>the<sp/>attribute</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tree<sp/>to<sp/>find<sp/>this<sp/>structure.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>short_address;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><ref refid="struct_j_s_int64" kindref="compound">zcl64_t</ref><sp/><sp/><sp/><sp/><sp/>extended_panid;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>panid;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/><sp/><sp/><sp/>channel_mask;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>startup_control;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_STARTUP_JOINED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_STARTUP_COORDINATOR<sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_STARTUP_REJOIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_STARTUP_FROM_SCRATCH<sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/>addr64<sp/><sp/><sp/><sp/><sp/><sp/>trust_ctr_addr;</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/>trust_ctr_master_key_le[16];</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>network_key_le[16];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>use_insecure_join;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>preconfig_link_key_le[16];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>network_key_seq_num;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>network_key_type;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_KEY_TYPE_STANDARD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_KEY_TYPE_HIGH_SECURITY<sp/><sp/><sp/>0x05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>network_mgr_addr;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>scan_attempts;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_SCAN_ATTEMPTS_DEFAULT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>time_between_scans;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_TIME_BETWEEN_SCANS_DEFAULT<sp/><sp/>0x0064</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>rejoin_interval;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_REJOIN_INTERVAL_DEFAULT<sp/><sp/><sp/><sp/><sp/>0x003c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>max_rejoin_interval;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_MAX_REJOIN_INTERVAL_DEFAULT<sp/>0x0e10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref><sp/><sp/><sp/><sp/><sp/><sp/>flag;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>radius;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_CONCENTRATOR_RADIUS_DEFAULT<sp/><sp/><sp/><sp/>0x0F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>discovery_time;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/>}<sp/>concentrator;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}<sp/><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="structzcl__comm__state__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structzcl__comm__state__t" kindref="compound">zcl_comm_state_t</ref></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref><sp/><sp/><sp/>sas;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>flags;</highlight></codeline>
+<codeline lineno="90" refid="group__zcl__commissioning_1ga83365bb85e2b264c1741d75e8522a754" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_FLAG_SAVE_ON_JOIN<sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_FLAG_DELAYED_RESTART<sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_FLAG_COORDINATOR_OK<sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_FLAG_ROUTER_OK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_FLAG_ENDDEV_OK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_FLAG_FACTORY_RESET<sp/><sp/><sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_FLAG_INSTALL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/><sp/><sp/><sp/>restart_ms;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>state;</highlight></codeline>
+<codeline lineno="108" refid="group__zcl__commissioning_1gabf17d49005afcefa60714a10c1c54c74" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_STATE_INIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_STATE_LOADING<sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_STATE_STARTUP<sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_STATE_UNJOINED<sp/><sp/><sp/><sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_STATE_REFRESH<sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_STATE_JOINED<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}<sp/><ref refid="structzcl__comm__state__t" kindref="compound">zcl_comm_state_t</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>attribute<sp/>list<sp/>of<sp/>startup<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="structzcl__comm__startup__attr__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structzcl__comm__startup__attr__t" kindref="compound">zcl_comm_startup_attr_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>short_address;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>extended_panid;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>panid;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>channel_mask;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><sp/><sp/><sp/>startup_control;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>limited<sp/>range<sp/>of<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>trust_ctr_addr;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>trust_ctr_master_key;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>network_key;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>use_insecure_join;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>preconfig_link_key;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>network_key_seq_num;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>network_key_type;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>network_mgr_addr;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><sp/><sp/><sp/>scan_attempts;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><sp/><sp/><sp/>time_between_scans;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><sp/><sp/><sp/>rejoin_interval;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><ref refid="structzcl__attribute__full__t" kindref="compound">zcl_attribute_full_t</ref><sp/><sp/><sp/><sp/>max_rejoin_interval;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>flag;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>radius;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><sp/><sp/><sp/>discovery_time;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/>}<sp/>concentrator;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>end_of_list;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}<sp/><ref refid="structzcl__comm__startup__attr__t" kindref="compound">zcl_comm_startup_attr_t</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">//<sp/>current<sp/>startup<sp/>attributes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structzcl__comm__state__t" kindref="compound">zcl_comm_state_t</ref><sp/>zcl_comm_state;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">//<sp/>defaults,<sp/>provided<sp/>by<sp/>the<sp/>application</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref><sp/>zcl_comm_default_sas;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">//<sp/>structures<sp/>for<sp/>the<sp/>actual<sp/>cluster</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__comm__startup__attr__t" kindref="compound">zcl_comm_startup_attr_t</ref><sp/>zcl_comm_startup_attributes;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__attribute__tree__t" kindref="compound">zcl_attribute_tree_t</ref><sp/>zcl_comm_startup_attribute_tree[];</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Startup<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_SHORT_ADDRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0000<sp/><sp/><sp/>//<sp/>UINT16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_EXTENDED_PANID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0001<sp/><sp/><sp/>//<sp/>IEEE<sp/>Addr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_PANID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0002<sp/><sp/><sp/>//<sp/>UINT16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_CHANNEL_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0003<sp/><sp/><sp/>//<sp/>BITMAP32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_PROTOCOL_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0004<sp/><sp/><sp/>//<sp/>UINT8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_STACK_PROFILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0005<sp/><sp/><sp/>//<sp/>UINT8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_STARTUP_CONTROL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0006<sp/><sp/><sp/>//<sp/>ENUM8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Startup<sp/>Parameters<sp/>(Security)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_TRUST_CTR_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0010<sp/><sp/><sp/>//<sp/>IEEE<sp/>Addr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_TRUST_CTR_MASTER_KEY<sp/><sp/><sp/>0x0011<sp/><sp/><sp/>//<sp/>Security<sp/>Key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_NETWORK_KEY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0012<sp/><sp/><sp/>//<sp/>Security<sp/>Key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_USE_INSECURE_JOIN<sp/><sp/><sp/><sp/><sp/><sp/>0x0013<sp/><sp/><sp/>//<sp/>Boolean</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_PRECONFIG_LINK_KEY<sp/><sp/><sp/><sp/><sp/>0x0014<sp/><sp/><sp/>//<sp/>Security<sp/>Key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_NETWORK_KEY_SEQ_NUM<sp/><sp/><sp/><sp/>0x0015<sp/><sp/><sp/>//<sp/>UINT8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_NETWORK_KEY_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0016<sp/><sp/><sp/>//<sp/>ENUM8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_NETWORK_MGR_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0017<sp/><sp/><sp/>//<sp/>UINT16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Join<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_SCAN_ATTEMPTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0020<sp/><sp/><sp/>//<sp/>UINT8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_TIME_BTWN_SCANS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0021<sp/><sp/><sp/>//<sp/>UINT16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_REJOIN_INTERVAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0022<sp/><sp/><sp/>//<sp/>UINT16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_MAX_REJOIN_INTERVAL<sp/><sp/><sp/><sp/>0x0023<sp/><sp/><sp/>//<sp/>UINT16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>Device<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_INDIRECT_POLL_RATE<sp/><sp/><sp/><sp/><sp/>0x0030<sp/><sp/><sp/>//<sp/>UINT16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_PARENT_RETRY_THRESHOLD<sp/>0x0031<sp/><sp/><sp/>//<sp/>UINT8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Concentrator<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_CONCENTRATOR_FLAG<sp/><sp/><sp/><sp/><sp/><sp/>0x0040<sp/><sp/><sp/>//<sp/>Boolean</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_CONCENTRATOR_RADIUS<sp/><sp/><sp/><sp/>0x0041<sp/><sp/><sp/>//<sp/>UINT8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_ATTR_CONCENTRATOR_DISC_TIME<sp/>0x0042<sp/><sp/><sp/>//<sp/>UINT8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Client-generated<sp/>commands</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_CMD_RESTART_DEVICE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/>zcl_comm_restart_device_cmd_t</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__atcmd_1gaace3d640c8d449b8db1162993d259d3f" kindref="member">options</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_RESTART_OPT_MODE_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x07</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_RESTART_OPT_MODE_SAVE_CHANGES<sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_RESTART_OPT_MODE_NO_CHANGES<sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_RESTART_OPT_IMMEDIATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_RESTART_OPT_RESERVED_MASK<sp/><sp/><sp/><sp/><sp/><sp/>0xF0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>delay;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delay<sp/>in<sp/>seconds<sp/>before<sp/>restarting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>jitter;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>RAND(jitter<sp/>*<sp/>80)<sp/>ms<sp/>to<sp/>delay</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}<sp/>zcl_comm_restart_device_cmd_t;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_CMD_SAVE_STARTUP_PARAM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/>zcl_comm_save_startup_param_t</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__atcmd_1gaace3d640c8d449b8db1162993d259d3f" kindref="member">options</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>index;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}<sp/>zcl_comm_save_startup_param_t;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_CMD_RESTORE_STARTUP_PARAM<sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/>zcl_comm_restore_startup_param_t</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__atcmd_1gaace3d640c8d449b8db1162993d259d3f" kindref="member">options</ref>;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>index;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}<sp/>zcl_comm_restore_startup_param_t;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_CMD_RESET_STARTUP_PARAM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/>zcl_comm_reset_startup_param_t</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__atcmd_1gaace3d640c8d449b8db1162993d259d3f" kindref="member">options</ref>;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_RESET_OPT_CURRENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_RESET_OPT_ALL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>ZCL_COMM_RESET_OPT_ERASE_INDEX<sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>index;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">}<sp/>zcl_comm_reset_startup_param_t;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Server-generated<sp/>commands</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_CMD_RESTART_DEVICE_RESP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_CMD_SAVE_STARTUP_PARAM_RESP<sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_CMD_RESTORE_STARTUP_PARAM_RESP<sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_COMM_CMD_RESET_STARTUP_PARAM_RESP<sp/><sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zcl__commissioning_1ga57f9aaf3da6dc9b513f7f9ccbb473a0b" kindref="member">zcl_comm_response</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint_fast8_t<sp/><ref refid="group__xbee__atcmd_1gade818037fd6c985038ff29656089758d" kindref="member">status</ref>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Send<sp/>commands<sp/>from<sp/>client<sp/>to<sp/>server</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zcl__commissioning_1ga891e67720dee8334b805756597a62607" kindref="member">zcl_comm_restart_device</ref>(<sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>zcl_comm_restart_device_cmd_t<sp/>*parameters);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zcl__commissioning_1ga3d73d7ef453da4940c923d7d7663f8d9" kindref="member">zcl_comm_reset_parameters</ref>(<sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>zcl_comm_reset_startup_param_t<sp/>*parameters);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Commissioning<sp/>Server<sp/>support<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>zcl_comm_sas_init(<sp/><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref><sp/>*parameters);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>zcl_comm_clust_handler(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__zcl__commissioning_1ga1fb799391c7d917facd792d57e3db0fe" kindref="member">zcl_comm_factory_reset</ref>(<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>ms_delay);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><ref refid="group__hal_1ga8d7f5a691878e9ffb7da396899581062" kindref="member">XBEE_END_DECLS</ref></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>compiling<sp/>in<sp/>Dynamic<sp/>C,<sp/>automatically<sp/>#use<sp/>the<sp/>appropriate<sp/>C<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__DC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#use<sp/>&quot;zcl_commissioning.c&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/>//<sp/>ZCL_COMMISSIONING_H<sp/>defined</highlight></codeline>
+    </programlisting>
+    <location file="include/zigbee/zcl_commissioning.h"/>
+  </compounddef>
+</doxygen>

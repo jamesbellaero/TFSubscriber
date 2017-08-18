@@ -1,0 +1,40 @@
+\hypertarget{reg__descr_8h}{}\section{include/xbee/reg\+\_\+descr.h File Reference}
+\label{reg__descr_8h}\index{include/xbee/reg\+\_\+descr.\+h@{include/xbee/reg\+\_\+descr.\+h}}
+
+
+Header for X\+Bee register descriptors.  
+
+
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__xbee__atcmd_gaa874b4a291f79f2e80f867ce71fccea5}{\+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t} \{ \newline
+{\bfseries X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T32}, 
+{\bfseries X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+E\+X32}, 
+{\bfseries X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG}, 
+{\bfseries X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+IN}, 
+\newline
+{\bfseries X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+D\+D\+R64}
+ \}\begin{DoxyCompactList}\small\item\em i\+Digi R\+CI type names used by do\+\_\+command type=zigbee. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{group__xbee__atcmd_ga62238d483c628f8c996664ff0f47ccef}{\+\_\+xbee\+\_\+rci\+\_\+types} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table to map \+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t to R\+CI type string. \end{DoxyCompactList}\item 
+const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t} {\bfseries \+\_\+xbee\+\_\+reg\+\_\+table} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header for X\+Bee register descriptors. 
+
+\begin{DoxyNote}{Note}
+This header is sensitive to the value of the macro I\+D\+I\+G\+I\+\_\+\+U\+S\+E\+\_\+\+X\+B\+EE. If this macro is defined, some additional fields in the register descriptor structure are defined (and initialized). This data is required for i\+Digi support to be included. 
+\end{DoxyNote}

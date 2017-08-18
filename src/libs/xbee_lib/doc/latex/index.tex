@@ -1,0 +1,77 @@
+The driver is broken up into multiple layers, with well-\/defined interfaces between each layer.\+The two parts of the driver are similar to an Ethernet N\+IC driver and a T\+C\+P/\+IP networking stack. In our case, the \hyperlink{group__xbee}{X\+Bee Driver} handles all serial communication with and configuration of the attached X\+Bee device, the \hyperlink{group__wpan}{Wireless Personal Networking} layer provides generic 802.\+15.\+4 networking support (endpoints and clusters), and the \hyperlink{group__zigbee}{Zig\+Bee Networking Stack} layer provides support for the Zig\+Bee networking protocols.
+
+These layers make use of a \hyperlink{group__hal}{Hardware Abstraction Layer} that must be created for each hardware/compiler platform.
+
+See the \hyperlink{}{Modules } section for a full outline of the A\+PI layers.\hypertarget{index_wpan_overview}{}\section{W\+P\+A\+N Overview}\label{index_wpan_overview}
+\begin{DoxyParagraph}{Endpoint Table}
+The endpoint table is a complex data structure that describes all endpoints, clusters, Z\+CL attributes and manufacturer-\/specific command handlers for a given device. The structure of the table is as follows (note that not all members of each object are listed)\+:
+\begin{DoxyItemize}
+\item Each D\+E\+V\+I\+CE (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t}) corresponds to a local, serially-\/connected X\+Bee module. This D\+E\+V\+I\+CE has multiple E\+N\+D\+P\+O\+I\+N\+Ts.
+\item Each E\+N\+D\+P\+O\+I\+NT (\hyperlink{structwpan__endpoint__table__entry__t}{wpan\+\_\+endpoint\+\_\+table\+\_\+entry\+\_\+t}) has
+\begin{DoxyItemize}
+\item An E\+N\+D\+P\+O\+I\+NT ID (0 to 254), P\+R\+O\+F\+I\+LE ID, D\+E\+V\+I\+CE ID and D\+E\+V\+I\+CE V\+E\+R\+S\+I\+ON.
+\item Multiple C\+L\+U\+S\+T\+E\+Rs. The Z\+DP endpoint handler currently uses a switch to handle frames for each cluster, but could be updated to let the endpoint dispatcher hand frames off to each cluster\textquotesingle{}s handler.
+\item A H\+A\+N\+D\+L\+ER to process frames for C\+L\+U\+S\+T\+E\+Rs without their own H\+A\+N\+D\+L\+ER, or C\+L\+U\+S\+T\+E\+Rs that aren\textquotesingle{}t in the table.
+\item A pointer to an E\+N\+D\+P\+O\+I\+NT S\+T\+A\+TE (\hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t}) structure.
+\end{DoxyItemize}
+\item Each C\+L\+U\+S\+T\+ER (\hyperlink{structwpan__cluster__table__entry__t}{wpan\+\_\+cluster\+\_\+table\+\_\+entry\+\_\+t}) has
+\begin{DoxyItemize}
+\item F\+L\+A\+Gs indicating whether it is an input or output cluster (or both), and whether packets sent to/from the cluster require A\+P\+S-\/layer encryption.
+\item A H\+A\+N\+D\+L\+ER to process frames for that cluster.
+\item A C\+O\+N\+T\+E\+XT pointer that is passed to the H\+A\+N\+D\+L\+ER. For a Z\+CL endpoint, the C\+O\+N\+T\+E\+XT points to an A\+T\+T\+R\+I\+B\+U\+TE T\+R\+EE.
+\end{DoxyItemize}
+\item On Z\+CL endpoints, each entry in the A\+T\+T\+R\+I\+B\+U\+TE T\+R\+EE (\hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t}) has
+\begin{DoxyItemize}
+\item A manufacturer ID with Z\+C\+L\+\_\+\+M\+F\+G\+\_\+\+N\+O\+NE (0) representing the general attributes for the cluster.
+\item Pointers to a list of S\+E\+R\+V\+ER and C\+L\+I\+E\+NT cluster A\+T\+T\+R\+I\+B\+U\+T\+Es.
+\end{DoxyItemize}
+\item Each A\+T\+T\+R\+I\+B\+U\+TE is either a B\+A\+SE A\+T\+T\+R\+I\+B\+U\+TE (\hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t}) with
+\begin{DoxyItemize}
+\item A 16-\/bit ID.
+\item F\+L\+A\+GS indicating whether the attribute is read-\/only, is a full attribute (see below), has a minimum or maximum limit and is reportable.
+\item A Z\+CL T\+Y\+PE.
+\item A pointer to the A\+T\+T\+R\+I\+B\+U\+TE\textquotesingle{}s V\+A\+L\+UE.
+\end{DoxyItemize}
+\item ... or a F\+U\+LL A\+T\+T\+R\+I\+B\+U\+TE (\hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t}) which has
+\begin{DoxyItemize}
+\item A B\+A\+SE A\+T\+T\+R\+I\+B\+U\+TE structure (so both B\+A\+SE and F\+U\+LL attributes start with the same structure elements).
+\item Optional M\+I\+N\+I\+M\+UM and M\+A\+X\+I\+M\+UM (\hyperlink{unionzcl__attribute__minmax__t}{zcl\+\_\+attribute\+\_\+minmax\+\_\+t}) values.
+\item A R\+E\+AD function (zcl\+\_\+attribute\+\_\+update\+\_\+fn) to refresh the A\+T\+T\+R\+I\+B\+U\+TE\textquotesingle{}s V\+A\+L\+UE.
+\item A W\+R\+I\+TE function (zcl\+\_\+attribute\+\_\+write\+\_\+fn) to process a Z\+CL Write Attributes request if the attribute requires additional processing over what the standard function, zcl\+\_\+decode\+\_\+attribute, does.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Endpoint Dispatching}
+The endpoint dispatcher searches the endpoint table to find a handler for a given frame, based on its destination endpoint and cluster ID.
+\end{DoxyParagraph}
+\hypertarget{index_zigbee_overview}{}\section{Zig\+Bee Overview}\label{index_zigbee_overview}
+\begin{DoxyParagraph}{Z\+D\+O/\+Z\+DP (Zig\+Bee Device Object/\+Profile) Command Processing}
+The Z\+DO endpoint handler (registered to endpoint 0) walks the endpoint table to respond to requests. It needs to know about all endpoints and their input clusters and output clusters. It walks the endpoint table but stops at the context elements. Therefore, all information required by the Z\+DO layer must exist outside of the context elements of the endpoint table.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Z\+CL (Zig\+Bee Cluster Library) Command Processing}
+Consider a theoretical cluster with manufacturer-\/specific attributes and commands for more than one manufacturer ID. The handler registered to that cluster would check the frame type and manufacturer-\/specific bits and hand any G\+E\+N\+E\+R\+A\+L/\+P\+R\+O\+F\+I\+LE or M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R-\/\+S\+P\+E\+C\+I\+F\+IC commands off to the Z\+CL General Command Handler (zcl\+\_\+general\+\_\+command).
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Z\+CL General Command Handler}
+This handler will see frames from the endpoint dispatcher for
+\begin{DoxyItemize}
+\item Clusters that aren\textquotesingle{}t in the cluster table for the endpoint (invalid clusters).
+\item Clusters that don\textquotesingle{}t have their own handler (no cluster commands).
+\end{DoxyItemize}
+\end{DoxyParagraph}
+It also receives frames from clusters with handlers for cluster-\/specific commands that are passing on a general or manufacturer-\/specific command frame.
+
+The Z\+CL General Command handler finds the correct attribute list from the attribute tree (general vs. manufacturer-\/specific, server vs. client cluster), and then
+\begin{DoxyItemize}
+\item If the frame is marked C\+L\+U\+S\+T\+ER \& M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R-\/\+S\+P\+E\+C\+I\+F\+IC, it passes the frame on to the handler for that M\+FG ID (stored in the attribute tree).
+\item If it is marked C\+L\+U\+S\+T\+E\+R-\/\+S\+P\+E\+C\+I\+F\+IC but G\+E\+N\+E\+R\+AL, it generates an error.
+\item If it is marked P\+R\+O\+F\+I\+L\+E-\/\+S\+P\+E\+C\+I\+F\+IC and G\+E\+N\+E\+R\+AL, it processes the frame as a general command, using the attribute list it retreived from the tree.
+\end{DoxyItemize}
+
+\begin{DoxyParagraph}{Summary of Z\+CL handlers}
+
+\begin{DoxyItemize}
+\item Z\+CL General Command handler registered to the endpoint to process frames for invalid clusters or clusters without cluster-\/specific commands (i.\+e., clusters with a N\+U\+LL command handler).
+\item Cluster-\/specific, general command handler registered to each cluster.
+\item Cluster-\/specific, manufacturer-\/specific command handler(s) listed in the attribute tree (stored in the cluster structure\textquotesingle{}s context member) under the appropriate manufacturer ID. 
+\end{DoxyItemize}
+\end{DoxyParagraph}

@@ -1,0 +1,1385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="xbee__serial__mbed_8cpp" kind="file" language="C++">
+    <compoundname>xbee_serial_mbed.cpp</compoundname>
+    <includes local="no">limits.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="yes">xbee_platform.h</includes>
+    <includes local="yes">xbee_serial.h</includes>
+    <includes local="yes">xbee_cbuf.h</includes>
+    <includes local="yes">mbed.h</includes>
+    <incdepgraph>
+      <node id="1104">
+        <label>xbee_platform.h</label>
+      </node>
+      <node id="1106">
+        <label>xbee_cbuf.h</label>
+      </node>
+      <node id="1105">
+        <label>xbee_serial.h</label>
+      </node>
+      <node id="1102">
+        <label>errno.h</label>
+      </node>
+      <node id="1101">
+        <label>limits.h</label>
+      </node>
+      <node id="1107">
+        <label>mbed.h</label>
+      </node>
+      <node id="1100">
+        <label>src/mbed/xbee_serial_mbed.cpp</label>
+        <link refid="xbee__serial__mbed_8cpp"/>
+        <childnode refid="1101" relation="include">
+        </childnode>
+        <childnode refid="1102" relation="include">
+        </childnode>
+        <childnode refid="1103" relation="include">
+        </childnode>
+        <childnode refid="1104" relation="include">
+        </childnode>
+        <childnode refid="1105" relation="include">
+        </childnode>
+        <childnode refid="1106" relation="include">
+        </childnode>
+        <childnode refid="1107" relation="include">
+        </childnode>
+      </node>
+      <node id="1103">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__hal__kl25_1ga7889b9b27287ecd3ab94ba0e08eb209e" prot="public" static="no">
+        <name>MY_BUF_SIZE</name>
+        <initializer>127</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="31" column="9" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__kl25_1ga7c3a985c27600619d2bc4db511aff598" prot="public" static="no">
+        <name>RTS_ASSERT_BYTES</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="38" column="9" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__kl25_1ga755b7e850db6200a6f43b741c678ae53" prot="public" static="no">
+        <name>XBEE_SER_CHECK</name>
+        <param><defname>ptr</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="45" column="14" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="xbee__serial__mbed_8cpp_1aa86751bccf68cd96c559cd1947e455c9" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__cbuf__t" kindref="compound">xbee_cbuf_t</ref></type>
+        <definition>xbee_cbuf_t cbuf</definition>
+        <argsstring></argsstring>
+        <name>cbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="33" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="xbee__serial__mbed_8cpp_1af4b700c0063768535d276340419d643c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char buf_space[MY_BUF_SIZE]</definition>
+        <argsstring>[MY_BUF_SIZE]</argsstring>
+        <name>buf_space</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="34" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__kl25_1ga3d695999a45f7807b27e4cf1d949727e" prot="public" static="no" mutable="no">
+        <type>struct @1</type>
+        <definition>struct @1  xbee_buf</definition>
+        <argsstring></argsstring>
+        <name>xbee_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="35" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__hal__kl25_1ga2db648c8306d8b82c5e548096738428f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Serial</type>
+        <definition>Serial xbee_ser</definition>
+        <argsstring>(PTD3, PTD2)</argsstring>
+        <name>xbee_ser</name>
+        <param>
+          <type>PTD3</type>
+        </param>
+        <param>
+          <type>PTD2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga9bf21a5b024e4919bbe8b605c8f45351" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref></type>
+        <definition>bool_t xbee_ser_invalid</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_invalid</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Helper function used by other xbee_serial functions to validate the <emphasis>serial</emphasis> parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para>Confirms that it is non-<computeroutput>NULL</computeroutput> and is set to a valid port.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is a valid XBee serial port </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="48" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga898057d1b7645785e7f3d6256828d039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* xbee_ser_portname</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_portname</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Returns a human-readable string describing the serial port. </para>        </briefdescription>
+        <detaileddescription>
+<para>For example, on a Windows machine this will be &quot;COM1&quot; or &quot;COM999&quot;. On a Rabbit, it will be a single letter, &quot;A&quot; through &quot;F&quot;. On Freescale HCS08, it will be something like &quot;SCI1&quot; or &quot;SCI2&quot;. On POSIX, the name of the device (e.g., &quot;/dev/ttyS0&quot;)</para><para>Returns &quot;(invalid)&quot; if <emphasis>serial</emphasis> is invalid or not configured.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null-terminated string describing the serial port </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="54" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="54" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga2ca4e60c9d642084afa52dff9e1f6be4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_write</definition>
+        <argsstring>(xbee_serial_t *serial, const void FAR *buffer, int length)</argsstring>
+        <name>xbee_ser_write</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Transmits <emphasis>length</emphasis> bytes from <emphasis>buffer</emphasis> to the XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source of bytes to send</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes successfully written to XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EIO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I/O error attempting to write to serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga8263312373c03a79a718142e051b3342" kindref="member">xbee_ser_read()</ref>, <ref refid="group__xbee__serial_1ga86fea2345efb8bf9424228f0979b1849" kindref="member">xbee_ser_putchar()</ref>, <ref refid="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" kindref="member">xbee_ser_getchar()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="66" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="66" bodyend="89"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" compoundref="zdo_8h" startline="410">length</references>
+        <referencedby refid="group__hal__kl25_1ga86fea2345efb8bf9424228f0979b1849" compoundref="xbee__serial__mbed_8cpp" startline="121" endline="139">xbee_ser_putchar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga8263312373c03a79a718142e051b3342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_read</definition>
+        <argsstring>(xbee_serial_t *serial, void FAR *buffer, int bufsize)</argsstring>
+        <name>xbee_ser_read</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bufsize</declname>
+        </param>
+        <briefdescription>
+<para>Reads up to <emphasis>bufsize</emphasis> bytes from XBee serial port <emphasis>serial</emphasis> and into <emphasis>buffer</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If there is no data available when the function is called, it will return immediately.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to hold bytes read from XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bufsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of bytes to read</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes read from XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EIO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I/O error attempting to write to serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga2ca4e60c9d642084afa52dff9e1f6be4" kindref="member">xbee_ser_write()</ref>, <ref refid="group__xbee__serial_1ga86fea2345efb8bf9424228f0979b1849" kindref="member">xbee_ser_putchar()</ref>, <ref refid="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" kindref="member">xbee_ser_getchar()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="91" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="91" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga86fea2345efb8bf9424228f0979b1849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_putchar</definition>
+        <argsstring>(xbee_serial_t *serial, uint8_t ch)</argsstring>
+        <name>xbee_ser_putchar</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para>Transmits a single character, <emphasis>ch</emphasis>, to the XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character to send</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Successfully sent (queued) character. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSPC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The write buffer is full and the character wasn&apos;t sent. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga8263312373c03a79a718142e051b3342" kindref="member">xbee_ser_read()</ref>, <ref refid="group__xbee__serial_1ga2ca4e60c9d642084afa52dff9e1f6be4" kindref="member">xbee_ser_write()</ref>, <ref refid="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" kindref="member">xbee_ser_getchar()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="121" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="121" bodyend="139"/>
+        <references refid="group__hal_1ga088abe8bad2df798edad3053d719b937" compoundref="platform_8h" startline="107">ENOSPC</references>
+        <references refid="group__hal__kl25_1ga2ca4e60c9d642084afa52dff9e1f6be4" compoundref="xbee__serial__mbed_8cpp" startline="66" endline="89">xbee_ser_write</references>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1gaeeb38154313a44f86146cdcfe08e7d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_getchar</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_getchar</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Reads a single character from the XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0-255</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character read from XBee serial port </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENODATA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>There aren&apos;t any characters in the read buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga8263312373c03a79a718142e051b3342" kindref="member">xbee_ser_read()</ref>, <ref refid="group__xbee__serial_1ga2ca4e60c9d642084afa52dff9e1f6be4" kindref="member">xbee_ser_write()</ref>, <ref refid="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" kindref="member">xbee_ser_getchar()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="142" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="142" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga3ad8f378b572d6fec982f1086bd3b94f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_tx_free</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_tx_free</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of bytes of unused space in the serial transmit buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>INT_MAX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer size is unlimited (or unknown). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes it would take to fill the XBee serial port&apos;s serial transmit buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free()</ref>, <ref refid="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used()</ref>, <ref refid="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush()</ref>, <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref>, <ref refid="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="162" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="162" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1gaabf70934d186354cde4ac14ed27d1bd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_tx_used</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_tx_used</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of queued bytes in the serial transmit buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer size is unlimited (or space used is unknown). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes queued in the XBee serial port&apos;s serial transmit buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free()</ref>, <ref refid="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used()</ref>, <ref refid="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush()</ref>, <ref refid="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free()</ref>, <ref refid="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="167" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="167" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga05308d37301d27715f1e1308b7189220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_tx_flush</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_tx_flush</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Flushes (i.e., deletes and does not transmit) characters in the serial transmit buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free()</ref>, <ref refid="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used()</ref>, <ref refid="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush()</ref>, <ref refid="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free()</ref>, <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="174" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="174" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga16fb431a1e66861439518e562431821f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_rx_free</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_rx_free</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of bytes of unused space in the serial receive buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>INT_MAX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer size is unlimited (or unknown). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes it would take to fill the XBee serial port&apos;s serial receive buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free()</ref>, <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref>, <ref refid="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush()</ref>, <ref refid="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used()</ref>, <ref refid="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="181" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="181" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga43b8322771cc16b4130fa5330ad2242b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_rx_used</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_rx_used</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of queued bytes in the serial receive buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes queued in the XBee serial port&apos;s serial transmit buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free()</ref>, <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref>, <ref refid="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush()</ref>, <ref refid="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free()</ref>, <ref refid="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush()</ref></para></simplesect>
+<simplesect kind="note"><para>Unlike <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref>, this function MUST return the number of bytes available. Some layers of the library wait until enough bytes are ready before continuing.</para></simplesect>
+We may expand on or replace this API. On some platforms (like Win32) we have to do some of our own buffering in order to peek at data in the serial receive buffer. Most of the driver only requires a check to see if some number of bytes are available or not. Consider changing the API to something like:</para><para><programlisting><codeline><highlight class="normal">int<sp/>xbee_ser_rx_avail(<sp/>xbee_serial_t<sp/>*serial,<sp/>uint8_t<sp/>count)</highlight></codeline>
+</programlisting> returns TRUE if <computeroutput>count</computeroutput> bytes are available, FALSE otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="188" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="188" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_rx_flush</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_rx_flush</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Deletes all characters in the serial receive buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free()</ref>, <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref>, <ref refid="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush()</ref>, <ref refid="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free()</ref>, <ref refid="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="195" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="195" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1gab3c12543a07e0669b672c5cab54b0926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_baudrate</definition>
+        <argsstring>(xbee_serial_t *serial, uint32_t baudrate)</argsstring>
+        <name>xbee_ser_baudrate</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+          <declname>baudrate</declname>
+        </param>
+        <briefdescription>
+<para>Change the baud rate of XBee serial port <emphasis>serial</emphasis> to <emphasis>baudrate</emphasis> bits/second. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">baudrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bits per second of serial data transfer speed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Opened serial port within 5% of requested baudrate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EIO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can&apos;t open serial port within 5% of requested baudrate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1gaa615a221dd69c17ee2989c281f2bf04a" kindref="member">xbee_ser_open()</ref>, <ref refid="group__xbee__serial_1ga48b9d743a446074ea6abacd0de24044d" kindref="member">xbee_ser_close()</ref>, <ref refid="group__xbee__serial_1gae19aa61eec588d1b935d267b0a982319" kindref="member">xbee_ser_break()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="203" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="203" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga408b9fa24c27c261b6fd6fd67944fb8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_ser_rx_isr</definition>
+        <argsstring>(void)</argsstring>
+        <name>xbee_ser_rx_isr</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="213" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="213" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1gaa615a221dd69c17ee2989c281f2bf04a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_open</definition>
+        <argsstring>(xbee_serial_t *serial, uint32_t baudrate)</argsstring>
+        <name>xbee_ser_open</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+          <declname>baudrate</declname>
+        </param>
+        <briefdescription>
+<para>Opens the serial port connected to XBee serial port <emphasis>serial</emphasis> at <emphasis>baudrate</emphasis> bits/second. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">baudrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bits per second of serial data transfer speed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Opened serial port within 5% of requested baudrate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EIO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can&apos;t open serial port within 5% of requested baudrate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1gab3c12543a07e0669b672c5cab54b0926" kindref="member">xbee_ser_baudrate()</ref>, <ref refid="group__xbee__serial_1ga48b9d743a446074ea6abacd0de24044d" kindref="member">xbee_ser_close()</ref>, <ref refid="group__xbee__serial_1gae19aa61eec588d1b935d267b0a982319" kindref="member">xbee_ser_break()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="218" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="218" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga48b9d743a446074ea6abacd0de24044d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_close</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_close</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Close the serial port attached to XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>closed serial port </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1gaa615a221dd69c17ee2989c281f2bf04a" kindref="member">xbee_ser_open()</ref>, <ref refid="group__xbee__serial_1gab3c12543a07e0669b672c5cab54b0926" kindref="member">xbee_ser_baudrate()</ref>, <ref refid="group__xbee__serial_1gae19aa61eec588d1b935d267b0a982319" kindref="member">xbee_ser_break()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="230" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="230" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1gae19aa61eec588d1b935d267b0a982319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_break</definition>
+        <argsstring>(xbee_serial_t *serial, bool_t enabled)</argsstring>
+        <name>xbee_ser_break</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref></type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Disable the serial transmit pin and pull it low to send a break to the XBee serial port. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to 1 to start the break or 0 to end the break (and resume transmitting).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1gaa615a221dd69c17ee2989c281f2bf04a" kindref="member">xbee_ser_open()</ref>, <ref refid="group__xbee__serial_1ga48b9d743a446074ea6abacd0de24044d" kindref="member">xbee_ser_close()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="238" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="238" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga33229d0d63ff1442f23b0739794d3afb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_flowcontrol</definition>
+        <argsstring>(xbee_serial_t *serial, bool_t enabled)</argsstring>
+        <name>xbee_ser_flowcontrol</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref></type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Enable or disable hardware flow control (CTS/RTS) on the serial port for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to 0 to disable flow control or non-zero to enable flow control.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1gad1b1f9f42e58d8299ddcca1c9cb3c5e8" kindref="member">xbee_ser_set_rts()</ref>, <ref refid="group__xbee__serial_1ga894f6fadc890b5ba5ce32338f0acd217" kindref="member">xbee_ser_get_cts()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="246" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="246" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1gad1b1f9f42e58d8299ddcca1c9cb3c5e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_set_rts</definition>
+        <argsstring>(xbee_serial_t *serial, bool_t asserted)</argsstring>
+        <name>xbee_ser_set_rts</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref></type>
+          <declname>asserted</declname>
+        </param>
+        <briefdescription>
+<para>Disable hardware flow control and manually set the RTS (ready to send) pin on the XBee device&apos;s serial port. </para>        </briefdescription>
+        <detaileddescription>
+<para>Typically used to enter the XBee device&apos;s boot loader and initiate a firmware update.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">asserted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to 1 to assert RTS (ok for XBee to send to us) or 0 to deassert RTS (tell XBee not to send to us).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga33229d0d63ff1442f23b0739794d3afb" kindref="member">xbee_ser_flowcontrol()</ref>, <ref refid="group__xbee__serial_1ga894f6fadc890b5ba5ce32338f0acd217" kindref="member">xbee_ser_get_cts()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="253" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="253" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hal__kl25_1ga894f6fadc890b5ba5ce32338f0acd217" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_get_cts</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_get_cts</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Read the status of the /CTS (clear to send) pin on the serial port connected to XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that this function doesn&apos;t return the value of the pin <ndash/> it returns whether it&apos;s asserted (i.e., clear to send to the XBee serial port) or not.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>it&apos;s clear to send </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>it&apos;s not clear to send </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga33229d0d63ff1442f23b0739794d3afb" kindref="member">xbee_ser_flowcontrol()</ref>, <ref refid="group__xbee__serial_1gad1b1f9f42e58d8299ddcca1c9cb3c5e8" kindref="member">xbee_ser_set_rts()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mbed/xbee_serial_mbed.cpp" line="261" column="1" bodyfile="src/mbed/xbee_serial_mbed.cpp" bodystart="261" bodyend="266"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">//<sp/>NOTE:<sp/>Documentation<sp/>for<sp/>these<sp/>functions<sp/>can<sp/>be<sp/>found<sp/>in<sp/>xbee/serial.h.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xbee_platform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xbee_serial.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xbee_cbuf.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbed.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">Serial<sp/>xbee_ser(PTD3,<sp/>PTD2);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MY_BUF_SIZE<sp/>127</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxbee__cbuf__t" kindref="compound">xbee_cbuf_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cbuf;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf_space[MY_BUF_SIZE];</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/>xbee_buf;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>minimum<sp/>number<sp/>of<sp/>uint8_t<sp/>free<sp/>in<sp/>serial<sp/>buffer<sp/>to<sp/>assert<sp/>RTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTS_ASSERT_BYTES<sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Could<sp/>change<sp/>XBEE_SER_CHECK<sp/>to<sp/>an<sp/>assert,<sp/>or<sp/>even<sp/>ignore<sp/>it<sp/>if<sp/>not<sp/>in<sp/>debug.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>XBEE_SERIAL_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>XBEE_SER_CHECK(ptr)<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do<sp/>{<sp/>if<sp/>(xbee_ser_invalid(ptr))<sp/>return<sp/>-EINVAL;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>XBEE_SER_CHECK(ptr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="group__hal__kl25_1ga9bf21a5b024e4919bbe8b605c8f45351" refkind="member"><highlight class="normal"><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref><sp/><ref refid="group__hal__kl25_1ga9bf21a5b024e4919bbe8b605c8f45351" kindref="member">xbee_ser_invalid</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(serial<sp/>==<sp/>NULL);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="group__hal__kl25_1ga898057d1b7645785e7f3d6256828d039" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__hal__kl25_1ga898057d1b7645785e7f3d6256828d039" kindref="member">xbee_ser_portname</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>probably<sp/>some<sp/>way<sp/>to<sp/>access<sp/>the<sp/>name<sp/>passed<sp/>into<sp/>the<sp/>Serial<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(serial<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;(unknown)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;(invalid)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="group__hal__kl25_1ga2ca4e60c9d642084afa52dff9e1f6be4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga2ca4e60c9d642084afa52dff9e1f6be4" kindref="member">xbee_ser_write</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*buffer,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wrote<sp/>=<sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*b<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*)<sp/>buffer;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(length<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(length--)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<sp/>xbee_ser.writeable())</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>does<sp/>KL25<sp/>on<sp/>mbed<sp/>have<sp/>a<sp/>watchdog?<sp/><sp/>If<sp/>so,<sp/>hit<sp/>it<sp/>here...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xbee_ser.putc(<sp/>*b++);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>wrote;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="group__hal__kl25_1ga8263312373c03a79a718142e051b3342" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga8263312373c03a79a718142e051b3342" kindref="member">xbee_ser_read</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bufsize)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bufsize<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bufsize<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>retval<sp/>=<sp/><ref refid="group__util__cbuf_1ga98b2d80239319b2a9875772c28a7630a" kindref="member">xbee_cbuf_get</ref>(<sp/>&amp;xbee_buf.cbuf,<sp/>buffer,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(bufsize<sp/>&gt;<sp/>255)<sp/>?<sp/>255<sp/>:<sp/>(<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>)<sp/>bufsize);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>XBEE_SERIAL_VERBOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retval<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(<sp/></highlight><highlight class="stringliteral">&quot;read<sp/>%d<sp/>bytes\n&quot;</highlight><highlight class="normal">,<sp/>retval);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__util_1gaa321236a0cb6f4e0dad592fdf1b550d2" kindref="member">hex_dump</ref>(<sp/>buffer,<sp/>retval,<sp/><ref refid="group__hal_1gae60f842ae8bc3cc952cdeece611670d5" kindref="member">HEX_DUMP_FLAG_NONE</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="group__hal__kl25_1ga86fea2345efb8bf9424228f0979b1849" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga86fea2345efb8bf9424228f0979b1849" kindref="member">xbee_ser_putchar</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial,<sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/>ch)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>call<sp/>to<sp/>xbee_ser_write()<sp/>does<sp/>XBEE_SER_CHECK()<sp/>for<sp/>us</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>retval<sp/>=<sp/><ref refid="group__hal__kl25_1ga2ca4e60c9d642084afa52dff9e1f6be4" kindref="member">xbee_ser_write</ref>(<sp/>serial,<sp/>&amp;ch,<sp/>1);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retval<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retval<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga088abe8bad2df798edad3053d719b937" kindref="member">ENOSPC</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="group__hal__kl25_1gaeeb38154313a44f86146cdcfe08e7d08" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1gaeeb38154313a44f86146cdcfe08e7d08" kindref="member">xbee_ser_getchar</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>retval<sp/>=<sp/><ref refid="group__util__cbuf_1gaf78d1608008ebde71b57a6bf34e6a3e1" kindref="member">xbee_cbuf_getch</ref>(<sp/>&amp;xbee_buf.cbuf);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retval<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga0030614bc864d1b24eaedd71585acc27" kindref="member">ENODATA</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Since<sp/>we&apos;re<sp/>using<sp/>blocking<sp/>transmit,<sp/>there<sp/>isn&apos;t<sp/>a<sp/>transmit<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Therefore,<sp/>have<sp/>xbee_ser_tx_free()<sp/>and<sp/>xbee_ser_tx_used()<sp/>imply<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">//<sp/>we<sp/>have<sp/>an<sp/>empty<sp/>buffer<sp/>that<sp/>can<sp/>hold<sp/>an<sp/>unlimited<sp/>amount<sp/>of<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="group__hal__kl25_1ga3ad8f378b572d6fec982f1086bd3b94f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>INT_MAX;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167" refid="group__hal__kl25_1gaabf70934d186354cde4ac14ed27d1bd2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="group__hal__kl25_1ga05308d37301d27715f1e1308b7189220" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="group__hal__kl25_1ga16fb431a1e66861439518e562431821f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__util__cbuf_1ga9a2eeedf642bdf31dba98aacdc5a7d75" kindref="member">xbee_cbuf_free</ref>(<sp/>&amp;xbee_buf.cbuf);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="group__hal__kl25_1ga43b8322771cc16b4130fa5330ad2242b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__util__cbuf_1gaf3ac1a430fe9dbe3498e96c3b96bb0f7" kindref="member">xbee_cbuf_used</ref>(<sp/>&amp;xbee_buf.cbuf);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="group__hal__kl25_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__util__cbuf_1gaf0cf797a0e4ee8c9e518e0d8b9554b10" kindref="member">xbee_cbuf_flush</ref>(<sp/>&amp;xbee_buf.cbuf);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="group__hal__kl25_1gab3c12543a07e0669b672c5cab54b0926" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1gab3c12543a07e0669b672c5cab54b0926" kindref="member">xbee_ser_baudrate</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial,<sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/>baudrate)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>xbee_ser.baud(<sp/>baudrate);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>serial-&gt;baudrate<sp/>=<sp/>baudrate;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>xbee_ser_rx_isr(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__hal__hcs08_1gac4c834cc0ad3ee43af562f658833a6d5" kindref="member">xbee_cbuf_putch</ref>(<sp/>&amp;xbee_buf.cbuf,<sp/>xbee_ser.getc());</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="group__hal__kl25_1gaa615a221dd69c17ee2989c281f2bf04a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1gaa615a221dd69c17ee2989c281f2bf04a" kindref="member">xbee_ser_open</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial,<sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/>baudrate)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__util__cbuf_1gabf58cafa9f3e989b433a14c23a94cebb" kindref="member">xbee_cbuf_init</ref>(<sp/>&amp;xbee_buf.cbuf,<sp/>MY_BUF_SIZE);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>need<sp/>to<sp/>attach<sp/>a<sp/>function<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>xbee_ser.attach(<sp/>&amp;xbee_ser_rx_isr);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1gab3c12543a07e0669b672c5cab54b0926" kindref="member">xbee_ser_baudrate</ref>(<sp/>serial,<sp/>baudrate);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="group__hal__kl25_1ga48b9d743a446074ea6abacd0de24044d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga48b9d743a446074ea6abacd0de24044d" kindref="member">xbee_ser_close</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="group__hal__kl25_1gae19aa61eec588d1b935d267b0a982319" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1gae19aa61eec588d1b935d267b0a982319" kindref="member">xbee_ser_break</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial,<sp/><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref><sp/>enabled)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="group__hal__kl25_1ga33229d0d63ff1442f23b0739794d3afb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga33229d0d63ff1442f23b0739794d3afb" kindref="member">xbee_ser_flowcontrol</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial,<sp/><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref><sp/>enabled)</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="group__hal__kl25_1gad1b1f9f42e58d8299ddcca1c9cb3c5e8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1gad1b1f9f42e58d8299ddcca1c9cb3c5e8" kindref="member">xbee_ser_set_rts</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial,<sp/><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref><sp/>asserted)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="group__hal__kl25_1ga894f6fadc890b5ba5ce32338f0acd217" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__kl25_1ga894f6fadc890b5ba5ce32338f0acd217" kindref="member">xbee_ser_get_cts</ref>(<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>*serial)</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>XBEE_SER_CHECK(<sp/>serial);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/mbed/xbee_serial_mbed.cpp"/>
+  </compounddef>
+</doxygen>

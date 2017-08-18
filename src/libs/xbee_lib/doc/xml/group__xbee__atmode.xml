@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__xbee__atmode" kind="group">
+    <compoundname>xbee_atmode</compoundname>
+    <title>AT Mode</title>
+    <innerfile refid="xbee__atmode_8c">xbee_atmode.c</innerfile>
+    <innerfile refid="atmode_8h">atmode.h</innerfile>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__atmode_1ga3955ec8593c4a78108e20050f03a071d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref> int</type>
+        <definition>XBEE_BEGIN_DECLS int xbee_atmode_enter</definition>
+        <argsstring>(xbee_dev_t *xbee)</argsstring>
+        <name>xbee_atmode_enter</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atmode.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atmode_1ga3588aa398a61e724b20112486d9437be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_atmode_exit</definition>
+        <argsstring>(xbee_dev_t *xbee)</argsstring>
+        <name>xbee_atmode_exit</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atmode.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atmode_1ga3c075890a2c8cdbd94d47ed0418f10c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_atmode_tick</definition>
+        <argsstring>(xbee_dev_t *xbee)</argsstring>
+        <name>xbee_atmode_tick</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atmode.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atmode_1gac814f6775234b54771cf51acd381c1a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_atmode_send_request</definition>
+        <argsstring>(xbee_dev_t *xbee, const char FAR *command)</argsstring>
+        <name>xbee_atmode_send_request</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atmode.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__atmode_1gaba5dc9011c35a28b078fab86e99d24da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_atmode_read_response</definition>
+        <argsstring>(xbee_dev_t *xbee, char FAR *response, int resp_size, int FAR *bytesread)</argsstring>
+        <name>xbee_atmode_read_response</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>char <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>response</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>resp_size</declname>
+        </param>
+        <param>
+          <type>int <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>bytesread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/atmode.h" line="33" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This network stack was designed for use with XBee modules in API mode, but it is sometimes necessary to work with a module in AT mode (for example, performing DigiMesh firmware updates). </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

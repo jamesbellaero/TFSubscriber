@@ -1,0 +1,61 @@
+\hypertarget{zcl__basic__attributes_8h}{}\section{include/zigbee/zcl\+\_\+basic\+\_\+attributes.h File Reference}
+\label{zcl__basic__attributes_8h}\index{include/zigbee/zcl\+\_\+basic\+\_\+attributes.\+h@{include/zigbee/zcl\+\_\+basic\+\_\+attributes.\+h}}
+{\ttfamily \#include \char`\"{}zigbee/zcl\+\_\+basic.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structzcl__basic__dev__info}{zcl\+\_\+basic\+\_\+dev\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Global used to hold values referenced by \hyperlink{group__zcl__basic_ga721ebe2f6ae346632475cf178671d150}{zcl\+\_\+basic\+\_\+attributes}\mbox{[}\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const struct \hyperlink{structzcl__basic__dev__info}{zcl\+\_\+basic\+\_\+dev\+\_\+info} {\bfseries zcl\+\_\+basic\+\_\+dev\+\_\+info}
+\item 
+const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{group__zcl__basic_ga721ebe2f6ae346632475cf178671d150}{zcl\+\_\+basic\+\_\+attributes} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table of attributes for the Basic Cluster Server. \end{DoxyCompactList}\item 
+const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} {\bfseries zcl\+\_\+basic\+\_\+attribute\+\_\+tree} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{zcl__basic__attributes_8h_zcl_basic}{}\subsection{Z\+C\+L Basic Cluster Overview}\label{zcl__basic__attributes_8h_zcl_basic}
+This header should be included from the main .C file (after defining the macros described below) to add the globals \hyperlink{structzcl__basic__dev__info}{zcl\+\_\+basic\+\_\+dev\+\_\+info} and \hyperlink{group__zcl__basic_ga721ebe2f6ae346632475cf178671d150}{zcl\+\_\+basic\+\_\+attributes}\mbox{[}\mbox{]} to the program.
+
+It makes use of the following optional macros\+:
+\begin{DoxyItemize}
+\item Z\+C\+L\+\_\+\+A\+P\+P\+\_\+\+V\+E\+R\+S\+I\+ON (8-\/bit)
+\item Z\+C\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON (8-\/bit)
+\item Z\+C\+L\+\_\+\+H\+W\+\_\+\+V\+E\+R\+S\+I\+ON (8-\/bit)
+\item Z\+C\+L\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+N\+A\+ME (32-\/char null-\/terminated string)
+\item Z\+C\+L\+\_\+\+M\+O\+D\+E\+L\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER (32-\/char null-\/terminated string)
+\item Z\+C\+L\+\_\+\+D\+A\+T\+E\+\_\+\+C\+O\+DE (16-\/char null-\/terminated string, starting with Y\+Y\+Y\+Y\+M\+M\+DD)
+\item Z\+C\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+T\+\_\+\+FN (function pointer)
+\end{DoxyItemize}
+
+And one required macro\+:
+\begin{DoxyItemize}
+\item Z\+C\+L\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+CE (8-\/bit) set to one of the following, optionally O\+Red with \hyperlink{group__zcl__basic_ga41f5febaea65227af827ca59f30a422b}{Z\+C\+L\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+S\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+B\+A\+C\+K\+UP}.
+\begin{DoxyItemize}
+\item \hyperlink{group__zcl__basic_ga98e9e01925bb6c52e1d8ff837a32116d}{Z\+C\+L\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+S\+\_\+\+U\+N\+K\+N\+O\+WN}
+\item \hyperlink{group__zcl__basic_ga66eab175cd2834dbed155d4fa086e4d7}{Z\+C\+L\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+S\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P\+H\+A\+SE}
+\item \hyperlink{group__zcl__basic_gacd2c65021e4ac4544bfe2419697d2407}{Z\+C\+L\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+S\+\_\+\+T\+H\+R\+E\+E\+\_\+\+P\+H\+A\+SE}
+\item \hyperlink{group__zcl__basic_ga9002aa7599325d8b9ef74743dc77eb4e}{Z\+C\+L\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+S\+\_\+\+B\+A\+T\+T\+E\+RY}
+\item \hyperlink{group__zcl__basic_ga528fdcef318ec276618896c7cbfec618}{Z\+C\+L\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+S\+\_\+\+DC}
+\item \hyperlink{group__zcl__basic_gacdadf5dfcbe4d7435e1f718c9ce9d275}{Z\+C\+L\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+S\+\_\+\+E\+M\+E\+R\+G\+E\+N\+C\+Y\+\_\+\+C\+O\+N\+ST}
+\item \hyperlink{group__zcl__basic_ga6a1e540c72d5ec1df8acc904c83f4bc9}{Z\+C\+L\+\_\+\+B\+A\+S\+I\+C\+\_\+\+P\+S\+\_\+\+E\+M\+E\+R\+G\+E\+N\+C\+Y\+\_\+\+S\+W\+I\+T\+CH}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+For example\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{zcl__basic_8h}{zigbee/zcl\_basic.h}"}
+\textcolor{preprocessor}{#define ZCL\_APP\_VERSION       0x12}
+\textcolor{preprocessor}{#define ZCL\_MANUFACTURER\_NAME "Digi International"}
+\textcolor{preprocessor}{#define ZCL\_MODEL\_IDENTIFIER  "Win32"}
+\textcolor{preprocessor}{#define ZCL\_DATE\_CODE         "20100601 dev"}
+\textcolor{preprocessor}{#define ZCL\_POWER\_SOURCE      ZCL\_BASIC\_PS\_SINGLE\_PHASE}
+\textcolor{preprocessor}{#include "\hyperlink{zcl__basic__attributes_8h}{zigbee/zcl\_basic\_attributes.h}"}
+
+\textcolor{comment}{// Can now use ZCL\_CLUST\_ENTRY\_BASIC\_SERVER in an endpoint's cluster table.}
+\end{DoxyCode}
+ 

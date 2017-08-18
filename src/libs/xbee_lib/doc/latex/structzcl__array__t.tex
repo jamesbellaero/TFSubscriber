@@ -1,0 +1,38 @@
+\hypertarget{structzcl__array__t}{}\section{zcl\+\_\+array\+\_\+t Struct Reference}
+\label{structzcl__array__t}\index{zcl\+\_\+array\+\_\+t@{zcl\+\_\+array\+\_\+t}}
+
+
+If a \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} has a type of Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+R\+R\+AY, its .value points to this structure.  
+
+
+
+
+{\ttfamily \#include \char`\"{}zigbee/zcl.\+h\char`\"{}}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga7b50573c335728800d65f3fb5479f9bc}{max\+\_\+count}
+\begin{DoxyCompactList}\small\item\em maximum number of elements to store \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_gaf83468db7e4fc12ef11ded6f62ffe7f8}{current\+\_\+count}
+\begin{DoxyCompactList}\small\item\em current number of elements \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga16152e39a199182441f04a3360c45657}{element\+\_\+size}
+\begin{DoxyCompactList}\small\item\em number of bytes in each element \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}
+\begin{DoxyCompactList}\small\item\em type of data stored in array \end{DoxyCompactList}\item 
+const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ {\bfseries value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+If a \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} has a type of Z\+C\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+R\+R\+AY, its .value points to this structure. 
+
+It\textquotesingle{}s possible to read and write values of the array by accessing 
+\begin{DoxyCode}
+(\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{FAR} *)arr->value + index * arr->element\_size 
+\end{DoxyCode}
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/zigbee/\hyperlink{zcl_8h}{zcl.\+h}\end{DoxyCompactItemize}

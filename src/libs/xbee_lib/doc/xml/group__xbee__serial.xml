@@ -1,0 +1,975 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__xbee__serial" kind="group">
+    <compoundname>xbee_serial</compoundname>
+    <title>Serial Interface</title>
+    <innerfile refid="serial_8h">serial.h</innerfile>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__serial_1gae7f838b59f553507bf81a86042fe9cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref> <ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref></type>
+        <definition>XBEE_BEGIN_DECLS bool_t xbee_ser_invalid</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_invalid</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Helper function used by other xbee_serial functions to validate the <emphasis>serial</emphasis> parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para>Confirms that it is non-<computeroutput>NULL</computeroutput> and is set to a valid port.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is a valid XBee serial port </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="78" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="207" bodyend="215"/>
+        <referencedby refid="group__xbee__device_1gac0874f9422c6588062a4b6205e989fc6" compoundref="xbee__device_8c" startline="625" endline="805">_xbee_frame_load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga898057d1b7645785e7f3d6256828d039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* xbee_ser_portname</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_portname</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Returns a human-readable string describing the serial port. </para>        </briefdescription>
+        <detaileddescription>
+<para>For example, on a Windows machine this will be &quot;COM1&quot; or &quot;COM999&quot;. On a Rabbit, it will be a single letter, &quot;A&quot; through &quot;F&quot;. On Freescale HCS08, it will be something like &quot;SCI1&quot; or &quot;SCI2&quot;. On POSIX, the name of the device (e.g., &quot;/dev/ttyS0&quot;)</para><para>Returns &quot;(invalid)&quot; if <emphasis>serial</emphasis> is invalid or not configured.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null-terminated string describing the serial port </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="96" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="218" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga2ca4e60c9d642084afa52dff9e1f6be4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_write</definition>
+        <argsstring>(xbee_serial_t *serial, const void FAR *buffer, int length)</argsstring>
+        <name>xbee_ser_write</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Transmits <emphasis>length</emphasis> bytes from <emphasis>buffer</emphasis> to the XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source of bytes to send</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to write</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes successfully written to XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EIO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I/O error attempting to write to serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga8263312373c03a79a718142e051b3342" kindref="member">xbee_ser_read()</ref>, <ref refid="group__xbee__serial_1ga86fea2345efb8bf9424228f0979b1849" kindref="member">xbee_ser_putchar()</ref>, <ref refid="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" kindref="member">xbee_ser_getchar()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="117" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="232" bodyend="281"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" compoundref="zdo_8h" startline="410">length</references>
+        <referencedby refid="group__xbee__serial_1ga86fea2345efb8bf9424228f0979b1849" compoundref="xbee__serial__dos_8c" startline="312" endline="329">xbee_ser_putchar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga8263312373c03a79a718142e051b3342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_read</definition>
+        <argsstring>(xbee_serial_t *serial, void FAR *buffer, int bufsize)</argsstring>
+        <name>xbee_ser_read</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bufsize</declname>
+        </param>
+        <briefdescription>
+<para>Reads up to <emphasis>bufsize</emphasis> bytes from XBee serial port <emphasis>serial</emphasis> and into <emphasis>buffer</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If there is no data available when the function is called, it will return immediately.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to hold bytes read from XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bufsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of bytes to read</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes read from XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EIO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I/O error attempting to write to serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga2ca4e60c9d642084afa52dff9e1f6be4" kindref="member">xbee_ser_write()</ref>, <ref refid="group__xbee__serial_1ga86fea2345efb8bf9424228f0979b1849" kindref="member">xbee_ser_putchar()</ref>, <ref refid="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" kindref="member">xbee_ser_getchar()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="141" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="283" bodyend="309"/>
+        <referencedby refid="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" compoundref="xbee__serial__dos_8c" startline="332" endline="344">xbee_ser_getchar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga86fea2345efb8bf9424228f0979b1849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_putchar</definition>
+        <argsstring>(xbee_serial_t *serial, uint8_t ch)</argsstring>
+        <name>xbee_ser_putchar</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para>Transmits a single character, <emphasis>ch</emphasis>, to the XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character to send</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Successfully sent (queued) character. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSPC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The write buffer is full and the character wasn&apos;t sent. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga8263312373c03a79a718142e051b3342" kindref="member">xbee_ser_read()</ref>, <ref refid="group__xbee__serial_1ga2ca4e60c9d642084afa52dff9e1f6be4" kindref="member">xbee_ser_write()</ref>, <ref refid="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" kindref="member">xbee_ser_getchar()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="159" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="312" bodyend="329"/>
+        <references refid="group__hal_1ga088abe8bad2df798edad3053d719b937" compoundref="platform_8h" startline="107">ENOSPC</references>
+        <references refid="group__hal__dos_1ga2ca4e60c9d642084afa52dff9e1f6be4" compoundref="xbee__serial__dos_8c" startline="232" endline="281">xbee_ser_write</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_getchar</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_getchar</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Reads a single character from the XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0-255</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character read from XBee serial port </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENODATA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>There aren&apos;t any characters in the read buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga8263312373c03a79a718142e051b3342" kindref="member">xbee_ser_read()</ref>, <ref refid="group__xbee__serial_1ga2ca4e60c9d642084afa52dff9e1f6be4" kindref="member">xbee_ser_write()</ref>, <ref refid="group__xbee__serial_1gaeeb38154313a44f86146cdcfe08e7d08" kindref="member">xbee_ser_getchar()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="174" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="332" bodyend="344"/>
+        <references refid="group__hal_1ga0030614bc864d1b24eaedd71585acc27" compoundref="platform_8h" startline="92">ENODATA</references>
+        <references refid="group__hal__dos_1ga8263312373c03a79a718142e051b3342" compoundref="xbee__serial__dos_8c" startline="283" endline="309">xbee_ser_read</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_tx_free</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_tx_free</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of bytes of unused space in the serial transmit buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>INT_MAX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer size is unlimited (or unknown). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes it would take to fill the XBee serial port&apos;s serial transmit buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free()</ref>, <ref refid="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used()</ref>, <ref refid="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush()</ref>, <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref>, <ref refid="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="192" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="347" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_tx_used</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_tx_used</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of queued bytes in the serial transmit buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer size is unlimited (or space used is unknown). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes queued in the XBee serial port&apos;s serial transmit buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free()</ref>, <ref refid="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used()</ref>, <ref refid="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush()</ref>, <ref refid="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free()</ref>, <ref refid="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="210" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="355" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_tx_flush</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_tx_flush</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Flushes (i.e., deletes and does not transmit) characters in the serial transmit buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free()</ref>, <ref refid="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used()</ref>, <ref refid="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush()</ref>, <ref refid="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free()</ref>, <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="226" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="362" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_rx_free</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_rx_free</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of bytes of unused space in the serial receive buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>INT_MAX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer size is unlimited (or unknown). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes it would take to fill the XBee serial port&apos;s serial receive buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free()</ref>, <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref>, <ref refid="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush()</ref>, <ref refid="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used()</ref>, <ref refid="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="244" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="379" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_rx_used</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_rx_used</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Returns the number of queued bytes in the serial receive buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes queued in the XBee serial port&apos;s serial transmit buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free()</ref>, <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref>, <ref refid="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush()</ref>, <ref refid="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free()</ref>, <ref refid="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" kindref="member">xbee_ser_rx_flush()</ref></para></simplesect>
+<simplesect kind="note"><para>Unlike <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref>, this function MUST return the number of bytes available. Some layers of the library wait until enough bytes are ready before continuing.</para></simplesect>
+We may expand on or replace this API. On some platforms (like Win32) we have to do some of our own buffering in order to peek at data in the serial receive buffer. Most of the driver only requires a check to see if some number of bytes are available or not. Consider changing the API to something like:</para><para><programlisting><codeline><highlight class="normal">int<sp/>xbee_ser_rx_avail(<sp/>xbee_serial_t<sp/>*serial,<sp/>uint8_t<sp/>count)</highlight></codeline>
+</programlisting> returns TRUE if <computeroutput>count</computeroutput> bytes are available, FALSE otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="275" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="386" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga98a6d5ceb5e1445e8ef82ccaa65a8c15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_rx_flush</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_rx_flush</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Deletes all characters in the serial receive buffer for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga3ad8f378b572d6fec982f1086bd3b94f" kindref="member">xbee_ser_tx_free()</ref>, <ref refid="group__xbee__serial_1gaabf70934d186354cde4ac14ed27d1bd2" kindref="member">xbee_ser_tx_used()</ref>, <ref refid="group__xbee__serial_1ga05308d37301d27715f1e1308b7189220" kindref="member">xbee_ser_tx_flush()</ref>, <ref refid="group__xbee__serial_1ga16fb431a1e66861439518e562431821f" kindref="member">xbee_ser_rx_free()</ref>, <ref refid="group__xbee__serial_1ga43b8322771cc16b4130fa5330ad2242b" kindref="member">xbee_ser_rx_used()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="291" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="393" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1gaa615a221dd69c17ee2989c281f2bf04a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_open</definition>
+        <argsstring>(xbee_serial_t *serial, uint32_t baudrate)</argsstring>
+        <name>xbee_ser_open</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+          <declname>baudrate</declname>
+        </param>
+        <briefdescription>
+<para>Opens the serial port connected to XBee serial port <emphasis>serial</emphasis> at <emphasis>baudrate</emphasis> bits/second. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">baudrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bits per second of serial data transfer speed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Opened serial port within 5% of requested baudrate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EIO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can&apos;t open serial port within 5% of requested baudrate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1gab3c12543a07e0669b672c5cab54b0926" kindref="member">xbee_ser_baudrate()</ref>, <ref refid="group__xbee__serial_1ga48b9d743a446074ea6abacd0de24044d" kindref="member">xbee_ser_close()</ref>, <ref refid="group__xbee__serial_1gae19aa61eec588d1b935d267b0a982319" kindref="member">xbee_ser_break()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="309" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="449" bodyend="545"/>
+        <references refid="group__hal_1gaaf2af4a10f0bd308e9c349c8382382be" compoundref="platform_8h" startline="421">PRIu32</references>
+        <referencedby refid="group__xbee__device_1ga550d7c865e75d3fc1df0e64cb880cf3d" compoundref="xbee__device_8c" startline="125" endline="169">xbee_dev_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1gab3c12543a07e0669b672c5cab54b0926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_baudrate</definition>
+        <argsstring>(xbee_serial_t *serial, uint32_t baudrate)</argsstring>
+        <name>xbee_ser_baudrate</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+          <declname>baudrate</declname>
+        </param>
+        <briefdescription>
+<para>Change the baud rate of XBee serial port <emphasis>serial</emphasis> to <emphasis>baudrate</emphasis> bits/second. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">baudrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bits per second of serial data transfer speed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Opened serial port within 5% of requested baudrate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EIO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can&apos;t open serial port within 5% of requested baudrate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1gaa615a221dd69c17ee2989c281f2bf04a" kindref="member">xbee_ser_open()</ref>, <ref refid="group__xbee__serial_1ga48b9d743a446074ea6abacd0de24044d" kindref="member">xbee_ser_close()</ref>, <ref refid="group__xbee__serial_1gae19aa61eec588d1b935d267b0a982319" kindref="member">xbee_ser_break()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="327" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="411" bodyend="446"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaaf2af4a10f0bd308e9c349c8382382be" compoundref="platform_8h" startline="421">PRIu32</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga48b9d743a446074ea6abacd0de24044d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_close</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_close</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Close the serial port attached to XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>closed serial port </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1gaa615a221dd69c17ee2989c281f2bf04a" kindref="member">xbee_ser_open()</ref>, <ref refid="group__xbee__serial_1gab3c12543a07e0669b672c5cab54b0926" kindref="member">xbee_ser_baudrate()</ref>, <ref refid="group__xbee__serial_1gae19aa61eec588d1b935d267b0a982319" kindref="member">xbee_ser_break()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="341" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="548" bodyend="560"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1gae19aa61eec588d1b935d267b0a982319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_break</definition>
+        <argsstring>(xbee_serial_t *serial, bool_t enabled)</argsstring>
+        <name>xbee_ser_break</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref></type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Disable the serial transmit pin and pull it low to send a break to the XBee serial port. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to 1 to start the break or 0 to end the break (and resume transmitting).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1gaa615a221dd69c17ee2989c281f2bf04a" kindref="member">xbee_ser_open()</ref>, <ref refid="group__xbee__serial_1ga48b9d743a446074ea6abacd0de24044d" kindref="member">xbee_ser_close()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="359" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="563" bodyend="580"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga33229d0d63ff1442f23b0739794d3afb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_flowcontrol</definition>
+        <argsstring>(xbee_serial_t *serial, bool_t enabled)</argsstring>
+        <name>xbee_ser_flowcontrol</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref></type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Enable or disable hardware flow control (CTS/RTS) on the serial port for XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to 0 to disable flow control or non-zero to enable flow control.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1gad1b1f9f42e58d8299ddcca1c9cb3c5e8" kindref="member">xbee_ser_set_rts()</ref>, <ref refid="group__xbee__serial_1ga894f6fadc890b5ba5ce32338f0acd217" kindref="member">xbee_ser_get_cts()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="378" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="583" bodyend="591"/>
+        <referencedby refid="group__xbee__device_1ga550d7c865e75d3fc1df0e64cb880cf3d" compoundref="xbee__device_8c" startline="125" endline="169">xbee_dev_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1gad1b1f9f42e58d8299ddcca1c9cb3c5e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_set_rts</definition>
+        <argsstring>(xbee_serial_t *serial, bool_t asserted)</argsstring>
+        <name>xbee_ser_set_rts</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref></type>
+          <declname>asserted</declname>
+        </param>
+        <briefdescription>
+<para>Disable hardware flow control and manually set the RTS (ready to send) pin on the XBee device&apos;s serial port. </para>        </briefdescription>
+        <detaileddescription>
+<para>Typically used to enter the XBee device&apos;s boot loader and initiate a firmware update.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">asserted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to 1 to assert RTS (ok for XBee to send to us) or 0 to deassert RTS (tell XBee not to send to us).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga33229d0d63ff1442f23b0739794d3afb" kindref="member">xbee_ser_flowcontrol()</ref>, <ref refid="group__xbee__serial_1ga894f6fadc890b5ba5ce32338f0acd217" kindref="member">xbee_ser_get_cts()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="399" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="594" bodyend="607"/>
+        <references refid="group__xbee__atcmd_1gade818037fd6c985038ff29656089758d" compoundref="atcmd_8h" startline="328">status</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__serial_1ga894f6fadc890b5ba5ce32338f0acd217" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_ser_get_cts</definition>
+        <argsstring>(xbee_serial_t *serial)</argsstring>
+        <name>xbee_ser_get_cts</name>
+        <param>
+          <type><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref> *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Read the status of the /CTS (clear to send) pin on the serial port connected to XBee serial port <emphasis>serial</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that this function doesn&apos;t return the value of the pin <ndash/> it returns whether it&apos;s asserted (i.e., clear to send to the XBee serial port) or not.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee serial port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>it&apos;s clear to send </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>it&apos;s not clear to send </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>serial</emphasis> is not a valid XBee serial port.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__serial_1ga33229d0d63ff1442f23b0739794d3afb" kindref="member">xbee_ser_flowcontrol()</ref>, <ref refid="group__xbee__serial_1gad1b1f9f42e58d8299ddcca1c9cb3c5e8" kindref="member">xbee_ser_set_rts()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/serial.h" line="420" column="1" bodyfile="src/dos/xbee_serial_dos.c" bodystart="610" bodyend="619"/>
+        <references refid="group__xbee__atcmd_1gade818037fd6c985038ff29656089758d" compoundref="atcmd_8h" startline="328">status</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

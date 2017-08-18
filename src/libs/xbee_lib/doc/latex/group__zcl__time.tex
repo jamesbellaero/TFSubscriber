@@ -1,0 +1,411 @@
+\hypertarget{group__zcl__time}{}\section{Time Cluster}
+\label{group__zcl__time}\index{Time Cluster@{Time Cluster}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{zcl__time_8c}{zcl\+\_\+time.\+c}
+\begin{DoxyCompactList}\small\item\em Client and server code to implement the Zig\+Bee Time Cluster. \end{DoxyCompactList}\item 
+file \hyperlink{zcl__time_8h}{zcl\+\_\+time.\+h}
+\begin{DoxyCompactList}\small\item\em Header for implementation of Zig\+Bee Time Cluster (Z\+CL Spec section 3.\+12). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl__time_ga5d1d038f66ada681b4430b29f7dc4cda}\label{group__zcl__time_ga5d1d038f66ada681b4430b29f7dc4cda}} 
+\#define {\bfseries \+\_\+zcl\+\_\+time\+\_\+debug}
+\item 
+\mbox{\Hypertarget{group__zcl__time_ga838affe8c53b76cc63f8113a6f4ca3d4}\label{group__zcl__time_ga838affe8c53b76cc63f8113a6f4ca3d4}} 
+\#define {\bfseries zcl\+\_\+gmtime}(tm,  timestamp)~xbee\+\_\+gmtime( tm, timestamp)
+\item 
+\mbox{\Hypertarget{group__zcl__time_ga55a19a11c22e852cb463f73e28a6e608}\label{group__zcl__time_ga55a19a11c22e852cb463f73e28a6e608}} 
+\#define {\bfseries zcl\+\_\+mktime}(tm)~xbee\+\_\+mktime( tm)
+\item 
+\#define \hyperlink{group__zcl__time_gaa45500dbe82c2beea426914014e26fff}{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+B\+O\+TH}
+\begin{DoxyCompactList}\small\item\em Macro for inserting a standard Time Server (and Client) into an endpoint\textquotesingle{}s cluster list. \end{DoxyCompactList}\item 
+\#define {\bfseries Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+R\+V\+ER}
+\item 
+\#define \hyperlink{group__zcl__time_gac043586e4bfcfa93f631aa144158a17c}{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+C\+L\+I\+E\+NT}
+\begin{DoxyCompactList}\small\item\em Macro for inserting a standard Time Client (no Server) into an endpoint\textquotesingle{}s cluster list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__zcl__time_ga052b988d6d2448af6640028b45ee1f68}{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+set} (const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$attribute, \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$rec)
+\begin{DoxyCompactList}\small\item\em Function registered to \hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME} attribute of Time Cluster and called to modify the attribute. Also called internally to update the zcl\+\_\+time\+\_\+skew global. \end{DoxyCompactList}\item 
+uint\+\_\+fast8\+\_\+t \hyperlink{group__zcl__time_ga9c0749b71318a4f7fd28d9112ffd5462}{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+get} (const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$attribute)
+\begin{DoxyCompactList}\small\item\em Function registered to \hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME} attribute of Time Cluster and called to refresh the Time attribute (global zcl\+\_\+time\+\_\+time). \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl__time_ga1b55e2dc0a4e0752c92dda9b65d349d2}{\+\_\+zcl\+\_\+time\+\_\+timestatus\+\_\+set} (const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$attribute, \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$rec)
+\begin{DoxyCompactList}\small\item\em Special code for setting bitfield of Time\+Status attribute. \end{DoxyCompactList}\item 
+zcl\+\_\+utctime\+\_\+t \hyperlink{group__zcl__time_gad56f618c84b428540c5ffcb60095462c}{zcl\+\_\+time\+\_\+now} (void)
+\begin{DoxyCompactList}\small\item\em Returns the current date/time, using the Z\+CL epoch of January 1, 2000. \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl__time_ga2c66ee215547beae5b5dde4f23cc8e00}{zcl\+\_\+time\+\_\+client} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Handle Read Attribute Responses to requests sent as part of the \hyperlink{group__zcl__time_ga32a901048d0bf5b6c6cf9a1cf7fb1e28}{zcl\+\_\+time\+\_\+find\+\_\+servers()} process. \end{DoxyCompactList}\item 
+int \hyperlink{group__zcl__time_ga32a901048d0bf5b6c6cf9a1cf7fb1e28}{zcl\+\_\+time\+\_\+find\+\_\+servers} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} profile\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Find Time Servers on the network, query them for the current time and then synchronize this device\textquotesingle{}s clock to that time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+zcl\+\_\+utctime\+\_\+t \hyperlink{group__zcl__time_ga4e1da84a7e72ee1626d6328252fd621a}{zcl\+\_\+time\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Current value of Time Attribute (\hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME}), start value doesn\textquotesingle{}t matter since it is set by \hyperlink{group__zcl__time_ga9c0749b71318a4f7fd28d9112ffd5462}{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+get()}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__time_ga76f465fead960f138224d8e2a9a59469}\label{group__zcl__time_ga76f465fead960f138224d8e2a9a59469}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zcl__time_ga76f465fead960f138224d8e2a9a59469}{zcl\+\_\+time\+\_\+timestatus} = 0
+\begin{DoxyCompactList}\small\item\em Current value of Time\+Status Attribute (\hyperlink{group__zcl__time_ga5931aa648c777cb21c8337249b6e1699}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+US}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__time_ga999cc34fc0c4c1eb840543f1e8237d29}\label{group__zcl__time_ga999cc34fc0c4c1eb840543f1e8237d29}} 
+\hyperlink{group__hal__dos_gafd12020da5a235dfcf0c3c748fb5baed}{int32\+\_\+t} \hyperlink{group__zcl__time_ga999cc34fc0c4c1eb840543f1e8237d29}{zcl\+\_\+time\+\_\+skew} = 0
+\begin{DoxyCompactList}\small\item\em difference between xbee\+\_\+seconds\+\_\+timer() and actual calendar time \end{DoxyCompactList}\item 
+\hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} {\bfseries time}
+\item 
+\hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} {\bfseries time\+\_\+status}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries end\+\_\+of\+\_\+list}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{structzcl__attribute__full__t}{zcl\_attribute\_full\_t} {\bfseries time}\\
+\>\hyperlink{structzcl__attribute__full__t}{zcl\_attribute\_full\_t} {\bfseries time\_status}\\
+\>\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t} {\bfseries end\_of\_list}\\
+\} \hyperlink{group__zcl__time_gad6a3c9d4f109933785ddc31101dabdc1}{zcl\_time\_attr}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em Global attribute list used in \#\+Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+R\+V\+ER and for adding a Time Cluster Server to an endpoint. \end{DoxyCompactList}\item 
+const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} {\bfseries zcl\+\_\+time\+\_\+attribute\+\_\+tree} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{group__zcl__time_ga926f1bfd80ed5a894abfc872a292c556}\label{group__zcl__time_ga926f1bfd80ed5a894abfc872a292c556}} 
+\hyperlink{group__hal_ga336bff4f4a6012aacc4468132bbd3d7f}{X\+B\+E\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS} const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} {\bfseries zcl\+\_\+time\+\_\+attribute\+\_\+tree} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+Attributes of Z\+CL Time Cluster \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}\label{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}} 
+\#define \hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME}~0x0000
+\begin{DoxyCompactList}\small\item\em 3.\+12.\+2.\+2.\+1 Time Attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__time_ga5931aa648c777cb21c8337249b6e1699}\label{group__zcl__time_ga5931aa648c777cb21c8337249b6e1699}} 
+\#define \hyperlink{group__zcl__time_ga5931aa648c777cb21c8337249b6e1699}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+US}~0x0001
+\begin{DoxyCompactList}\small\item\em 3.\+12.\+2.\+2.\+2 Time\+Status Attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__time_ga28b3510bbe09eed7e47fe5b4f24c5bad}\label{group__zcl__time_ga28b3510bbe09eed7e47fe5b4f24c5bad}} 
+\#define \hyperlink{group__zcl__time_ga28b3510bbe09eed7e47fe5b4f24c5bad}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+M\+E\+\_\+\+Z\+O\+NE}~0x0002
+\begin{DoxyCompactList}\small\item\em 3.\+12.\+2.\+2.\+3 Time\+Zone Attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__time_gaaf1e36f36654ae9f4d1c453cdf9b526b}\label{group__zcl__time_gaaf1e36f36654ae9f4d1c453cdf9b526b}} 
+\#define \hyperlink{group__zcl__time_gaaf1e36f36654ae9f4d1c453cdf9b526b}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+RT}~0x0003
+\begin{DoxyCompactList}\small\item\em 3.\+12.\+2.\+2.\+4 Dst\+Start Attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__time_ga05ac335a9f642b671514517d8f4c4a16}\label{group__zcl__time_ga05ac335a9f642b671514517d8f4c4a16}} 
+\#define \hyperlink{group__zcl__time_ga05ac335a9f642b671514517d8f4c4a16}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+D\+S\+T\+\_\+\+E\+ND}~0x0004
+\begin{DoxyCompactList}\small\item\em 3.\+12.\+2.\+2.\+5 Dst\+End Attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__time_ga62da9f7b4065ce9e96b0f818a4b9bb5c}\label{group__zcl__time_ga62da9f7b4065ce9e96b0f818a4b9bb5c}} 
+\#define \hyperlink{group__zcl__time_ga62da9f7b4065ce9e96b0f818a4b9bb5c}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+D\+S\+T\+\_\+\+S\+H\+I\+FT}~0x0005
+\begin{DoxyCompactList}\small\item\em 3.\+12.\+2.\+2.\+6 Dst\+Shift Attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__time_gac2ab06404c97ad9c24f6e53297966d06}\label{group__zcl__time_gac2ab06404c97ad9c24f6e53297966d06}} 
+\#define \hyperlink{group__zcl__time_gac2ab06404c97ad9c24f6e53297966d06}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+T\+I\+ME}~0x0006
+\begin{DoxyCompactList}\small\item\em 3.\+12.\+2.\+2.\+7 Standard\+Time Attribute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zcl__time_gad734cb8827c2307184fd74f1f1336c4f}\label{group__zcl__time_gad734cb8827c2307184fd74f1f1336c4f}} 
+\#define \hyperlink{group__zcl__time_gad734cb8827c2307184fd74f1f1336c4f}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+I\+ME}~0x0007
+\begin{DoxyCompactList}\small\item\em 3.\+12.\+2.\+2.\+8 Local\+Time Attribute \end{DoxyCompactList}\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+Bitfields for attribute \hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME}, Time\+Status.
+
+Bits 3-\/7 are reserved.
+
+Per Section 3.\+12.\+2.\+2.\+2 of the Z\+CL spec\+:
+\begin{DoxyItemize}
+\item If the Master bit is 1, the value of \mbox{[}the Synchronized bit\mbox{]} is 0.
+\item If both the Master and Synchronized bits are 0, the real time clock has no defined relationship to the time standard. 
+\end{DoxyItemize}\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__zcl__time_gabf057b123b136f20ade3faf065dcb298}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+ER}~0x01
+\begin{DoxyCompactList}\small\item\em The R\+TC corresponding to the Time attribute is internally set to the time standard. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__time_ga07fc4fc7df3e8b1b44817bcaa50b7170}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED}~0x02
+\begin{DoxyCompactList}\small\item\em The Synchronized bit specifies whether Time has been set over the \mbox{[}Zig\+Bee\mbox{]} network to synchronize it (as close as may be practical) to the time standard (see 3.\+12.\+1). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zcl__time_ga76367e10cd6d032aad80cdd4786c1eca}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+E\+R\+Z\+O\+N\+E\+D\+ST}~0x04
+\begin{DoxyCompactList}\small\item\em The Master\+Zone\+Dst bit specifies whether the Time\+Zone, Dst\+Start, Dst\+End and Dst\+Shift attributes are set internally to correct values for the location of the clock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__zcl__time_gaa45500dbe82c2beea426914014e26fff}\label{group__zcl__time_gaa45500dbe82c2beea426914014e26fff}} 
+\index{Time Cluster@{Time Cluster}!Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+B\+O\+TH@{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+B\+O\+TH}}
+\index{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+B\+O\+TH@{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+B\+O\+TH}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+B\+O\+TH}{ZCL\_CLUST\_ENTRY\_TIME\_BOTH}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+B\+O\+TH}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ ZCL\_CLUST\_TIME,                \(\backslash\)
+         &\hyperlink{group__zcl__time_ga2c66ee215547beae5b5dde4f23cc8e00}{zcl\_time\_client},             \(\backslash\)
+         zcl\_time\_attribute\_tree,      \(\backslash\)
+         WPAN\_CLUST\_FLAG\_INOUT | \hyperlink{group__wpan__aps_ga1eafd87038a2134da7a1f72e6801d23b}{WPAN\_CLUST\_FLAG\_ENCRYPT} \}
+\end{DoxyCode}
+
+
+Macro for inserting a standard Time Server (and Client) into an endpoint\textquotesingle{}s cluster list. 
+
+\mbox{\Hypertarget{group__zcl__time_gac043586e4bfcfa93f631aa144158a17c}\label{group__zcl__time_gac043586e4bfcfa93f631aa144158a17c}} 
+\index{Time Cluster@{Time Cluster}!Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+C\+L\+I\+E\+NT@{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+C\+L\+I\+E\+NT}}
+\index{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+C\+L\+I\+E\+NT@{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+C\+L\+I\+E\+NT}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+C\+L\+I\+E\+NT}{ZCL\_CLUST\_ENTRY\_TIME\_CLIENT}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+C\+L\+I\+E\+NT}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ ZCL\_CLUST\_TIME,                \(\backslash\)
+         &\hyperlink{group__zcl__time_ga2c66ee215547beae5b5dde4f23cc8e00}{zcl\_time\_client},             \(\backslash\)
+         zcl\_attributes\_none,          \(\backslash\)
+         WPAN\_CLUST\_FLAG\_CLIENT | \hyperlink{group__wpan__aps_ga1eafd87038a2134da7a1f72e6801d23b}{WPAN\_CLUST\_FLAG\_ENCRYPT} \}
+\end{DoxyCode}
+
+
+Macro for inserting a standard Time Client (no Server) into an endpoint\textquotesingle{}s cluster list. 
+
+\mbox{\Hypertarget{group__zcl__time_ga452ea03450fe395765c348b1154d6cf9}\label{group__zcl__time_ga452ea03450fe395765c348b1154d6cf9}} 
+\index{Time Cluster@{Time Cluster}!Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+R\+V\+ER@{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+R\+V\+ER}}
+\index{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+R\+V\+ER@{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+R\+V\+ER}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+R\+V\+ER}{ZCL\_CLUST\_ENTRY\_TIME\_SERVER}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+R\+V\+ER}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ ZCL\_CLUST\_TIME,                \(\backslash\)
+         &\hyperlink{group__zcl_gac3849121e93e777ce9a7510d24517b9b}{zcl\_general\_command},                          \(\backslash\)
+         zcl\_time\_attribute\_tree,      \(\backslash\)
+         WPAN\_CLUST\_FLAG\_SERVER | \hyperlink{group__wpan__aps_ga1eafd87038a2134da7a1f72e6801d23b}{WPAN\_CLUST\_FLAG\_ENCRYPT} \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl__time_gabf057b123b136f20ade3faf065dcb298}\label{group__zcl__time_gabf057b123b136f20ade3faf065dcb298}} 
+\index{Time Cluster@{Time Cluster}!Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+ER@{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+ER}}
+\index{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+ER@{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+ER}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+ER}{ZCL\_TIME\_STATUS\_MASTER}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+ER~0x01}
+
+
+
+The R\+TC corresponding to the Time attribute is internally set to the time standard. 
+
+This bit should only be set if the host has reliably set its R\+TC. 
+
+Referenced by \+\_\+zcl\+\_\+time\+\_\+time\+\_\+set(), and zcl\+\_\+time\+\_\+now().
+
+\mbox{\Hypertarget{group__zcl__time_ga76367e10cd6d032aad80cdd4786c1eca}\label{group__zcl__time_ga76367e10cd6d032aad80cdd4786c1eca}} 
+\index{Time Cluster@{Time Cluster}!Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+E\+R\+Z\+O\+N\+E\+D\+ST@{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+E\+R\+Z\+O\+N\+E\+D\+ST}}
+\index{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+E\+R\+Z\+O\+N\+E\+D\+ST@{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+E\+R\+Z\+O\+N\+E\+D\+ST}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+E\+R\+Z\+O\+N\+E\+D\+ST}{ZCL\_TIME\_STATUS\_MASTERZONEDST}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+E\+R\+Z\+O\+N\+E\+D\+ST~0x04}
+
+
+
+The Master\+Zone\+Dst bit specifies whether the Time\+Zone, Dst\+Start, Dst\+End and Dst\+Shift attributes are set internally to correct values for the location of the clock. 
+
+\mbox{\Hypertarget{group__zcl__time_ga07fc4fc7df3e8b1b44817bcaa50b7170}\label{group__zcl__time_ga07fc4fc7df3e8b1b44817bcaa50b7170}} 
+\index{Time Cluster@{Time Cluster}!Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED@{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED}}
+\index{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED@{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED}{ZCL\_TIME\_STATUS\_SYNCHRONIZED}}
+{\footnotesize\ttfamily \#define Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED~0x02}
+
+
+
+The Synchronized bit specifies whether Time has been set over the \mbox{[}Zig\+Bee\mbox{]} network to synchronize it (as close as may be practical) to the time standard (see 3.\+12.\+1). 
+
+
+
+Referenced by zcl\+\_\+time\+\_\+now().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__zcl__time_ga9c0749b71318a4f7fd28d9112ffd5462}\label{group__zcl__time_ga9c0749b71318a4f7fd28d9112ffd5462}} 
+\index{Time Cluster@{Time Cluster}!\+\_\+zcl\+\_\+time\+\_\+time\+\_\+get@{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+get}}
+\index{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+get@{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+get}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+get()}{\_zcl\_time\_time\_get()}}
+{\footnotesize\ttfamily uint\+\_\+fast8\+\_\+t \+\_\+zcl\+\_\+time\+\_\+time\+\_\+get (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{attribute }\end{DoxyParamCaption})}
+
+
+
+Function registered to \hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME} attribute of Time Cluster and called to refresh the Time attribute (global zcl\+\_\+time\+\_\+time). 
+
+See \hyperlink{group__zcl_gace94cfc3f22379fa08a5b8de8c6977f6}{zcl\+\_\+attribute\+\_\+update\+\_\+fn()} for calling convention. 
+
+References X\+B\+E\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER, and zcl\+\_\+time\+\_\+skew.
+
+
+
+Referenced by zcl\+\_\+time\+\_\+now().
+
+\mbox{\Hypertarget{group__zcl__time_ga052b988d6d2448af6640028b45ee1f68}\label{group__zcl__time_ga052b988d6d2448af6640028b45ee1f68}} 
+\index{Time Cluster@{Time Cluster}!\+\_\+zcl\+\_\+time\+\_\+time\+\_\+set@{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+set}}
+\index{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+set@{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+set}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+set()}{\_zcl\_time\_time\_set()}}
+{\footnotesize\ttfamily int \+\_\+zcl\+\_\+time\+\_\+time\+\_\+set (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{attribute,  }\item[{\hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$}]{rec }\end{DoxyParamCaption})}
+
+
+
+Function registered to \hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME} attribute of Time Cluster and called to modify the attribute. Also called internally to update the zcl\+\_\+time\+\_\+skew global. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em attribute} & ignored; assumed to point to zcl\+\_\+time\+\_\+time \\
+\hline
+\mbox{\tt in,out}  & {\em rec} & if N\+U\+LL, function was called internally to update zcl\+\_\+time\+\_\+skew only\\
+\hline
+\end{DoxyParams}
+See \hyperlink{group__zcl_ga70fa1740c517a1e49c700cba7cf6b339}{zcl\+\_\+attribute\+\_\+write\+\_\+fn()} for calling convention. 
+
+References zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t\+::status, Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+ER, and zcl\+\_\+time\+\_\+timestatus.
+
+\mbox{\Hypertarget{group__zcl__time_ga1b55e2dc0a4e0752c92dda9b65d349d2}\label{group__zcl__time_ga1b55e2dc0a4e0752c92dda9b65d349d2}} 
+\index{Time Cluster@{Time Cluster}!\+\_\+zcl\+\_\+time\+\_\+timestatus\+\_\+set@{\+\_\+zcl\+\_\+time\+\_\+timestatus\+\_\+set}}
+\index{\+\_\+zcl\+\_\+time\+\_\+timestatus\+\_\+set@{\+\_\+zcl\+\_\+time\+\_\+timestatus\+\_\+set}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{\+\_\+zcl\+\_\+time\+\_\+timestatus\+\_\+set()}{\_zcl\_time\_timestatus\_set()}}
+{\footnotesize\ttfamily int \+\_\+zcl\+\_\+time\+\_\+timestatus\+\_\+set (\begin{DoxyParamCaption}\item[{const \hyperlink{structzcl__attribute__full__t}{zcl\+\_\+attribute\+\_\+full\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{attribute,  }\item[{\hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$}]{rec }\end{DoxyParamCaption})}
+
+
+
+Special code for setting bitfield of Time\+Status attribute. 
+
+See Z\+CL Spec section 3.\+12.\+2.\+2.\+2 for rules on setting values in this field.
+
+Only used if device has a Time Server. \mbox{\Hypertarget{group__zcl__time_ga2c66ee215547beae5b5dde4f23cc8e00}\label{group__zcl__time_ga2c66ee215547beae5b5dde4f23cc8e00}} 
+\index{Time Cluster@{Time Cluster}!zcl\+\_\+time\+\_\+client@{zcl\+\_\+time\+\_\+client}}
+\index{zcl\+\_\+time\+\_\+client@{zcl\+\_\+time\+\_\+client}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+time\+\_\+client()}{zcl\_time\_client()}}
+{\footnotesize\ttfamily int zcl\+\_\+time\+\_\+client (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Handle Read Attribute Responses to requests sent as part of the \hyperlink{group__zcl__time_ga32a901048d0bf5b6c6cf9a1cf7fb1e28}{zcl\+\_\+time\+\_\+find\+\_\+servers()} process. 
+
+This function expects to receive \char`\"{}read attribute response\char`\"{} packets O\+N\+LY for reads of Time and Time\+Status.
+
+If responding device is a master or is synchronized with one, use it\textquotesingle{}s Time value to update a \char`\"{}skew\char`\"{} global used to track the offset between system time (which may just be \char`\"{}seconds of uptime\char`\"{}) and calendar time.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & envelope from received message \\
+\hline
+\mbox{\tt in}  & {\em context} & pointer to attribute list for cluster (typically passed in via endpoint dispatcher)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Command was processed and default response (with either success or error status) was sent.\\
+\hline
+{\em !0} & Error sending default response; time may or may not have been set. \\
+\hline
+\end{DoxyRetVals}
+
+
+References zcl\+\_\+command\+\_\+t\+::command, F\+AR, zcl\+\_\+command\+\_\+t\+::frame\+\_\+control, Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+M\+A\+T\+CH, Z\+C\+L\+\_\+\+C\+M\+D\+\_\+\+R\+E\+A\+D\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+R\+E\+SP, and zcl\+\_\+command\+\_\+build().
+
+\mbox{\Hypertarget{group__zcl__time_ga32a901048d0bf5b6c6cf9a1cf7fb1e28}\label{group__zcl__time_ga32a901048d0bf5b6c6cf9a1cf7fb1e28}} 
+\index{Time Cluster@{Time Cluster}!zcl\+\_\+time\+\_\+find\+\_\+servers@{zcl\+\_\+time\+\_\+find\+\_\+servers}}
+\index{zcl\+\_\+time\+\_\+find\+\_\+servers@{zcl\+\_\+time\+\_\+find\+\_\+servers}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+time\+\_\+find\+\_\+servers()}{zcl\_time\_find\_servers()}}
+{\footnotesize\ttfamily int zcl\+\_\+time\+\_\+find\+\_\+servers (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$}]{dev,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{profile\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Find Time Servers on the network, query them for the current time and then synchronize this device\textquotesingle{}s clock to that time. 
+
+\begin{DoxyNote}{Note}
+This function uses a static buffer to hold context information for the Z\+DO responder that generates the Z\+CL Read Attributes request. Wait at least 60 seconds between calls to allow for earlier requests to time out.
+
+This function will only work correctly if the Time Cluster Client in your endpoint table is using the \hyperlink{group__zcl__time_ga2c66ee215547beae5b5dde4f23cc8e00}{zcl\+\_\+time\+\_\+client()} function as its callback handler. If you use the Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+C\+L\+I\+E\+NT or Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+B\+O\+TH macro, the client cluster is set up correctly.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dev} & device to send query on \\
+\hline
+\mbox{\tt in}  & {\em profile\+\_\+id} & profile ID to match in endpoint table or \#\+W\+P\+A\+N\+\_\+\+A\+P\+S\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+A\+NY to use the first endpoint with a Time Cluster Client\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Successfully issued Z\+DO Match Descriptor Request to find Time Cluster Servers on the network. No guarantee that we\textquotesingle{}ll get a response. \\
+\hline
+{\em !0} & Some sort of error occurred in generating or sending the Z\+DO Match Descriptor Request. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & Couldn\textquotesingle{}t find a Time Cluster Client with {\ttfamily profile\+\_\+id} in the endpoint table of {\ttfamily dev}. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__zcl__time_gad56f618c84b428540c5ffcb60095462c}\label{group__zcl__time_gad56f618c84b428540c5ffcb60095462c}} 
+\index{Time Cluster@{Time Cluster}!zcl\+\_\+time\+\_\+now@{zcl\+\_\+time\+\_\+now}}
+\index{zcl\+\_\+time\+\_\+now@{zcl\+\_\+time\+\_\+now}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+time\+\_\+now()}{zcl\_time\_now()}}
+{\footnotesize\ttfamily zcl\+\_\+utctime\+\_\+t zcl\+\_\+time\+\_\+now (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current date/time, using the Z\+CL epoch of January 1, 2000. 
+
+Assumes that device has connected to a time server and updated its clock accordingly. Returns Z\+C\+L\+\_\+\+U\+T\+C\+T\+I\+M\+E\+\_\+\+I\+N\+V\+A\+L\+ID if the device has not synchronized its clock.
+
+Do not use this value for tracking elapsed time -- use xbee\+\_\+seconds\+\_\+timer() or xbee\+\_\+millisecond\+\_\+timer() instead. The value may jump forward (or even backward) when the device decides to synchronize with a time server.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Z\+C\+L\+\_\+\+U\+T\+C\+T\+I\+M\+E\+\_\+\+I\+N\+V\+A\+L\+ID} & Clock not synchronized to a time source. \\
+\hline
+{\em 0-\/0x\+F\+F\+F\+F\+F\+F\+FE} & Number of elapsed seconds since midnight U\+TC on January 1, 2000.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__hal_ga5c1a8bccd41acf1d7264a75698077749}{xbee\+\_\+seconds\+\_\+timer}, \hyperlink{group__hal_ga22b4e3df788254ca5f8530e9aee58515}{xbee\+\_\+millisecond\+\_\+timer} 
+\end{DoxySeeAlso}
+
+
+References \+\_\+zcl\+\_\+time\+\_\+time\+\_\+get(), Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+S\+T\+ER, Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+ED, zcl\+\_\+time\+\_\+time, and zcl\+\_\+time\+\_\+timestatus.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__zcl__time_gad6a3c9d4f109933785ddc31101dabdc1}\label{group__zcl__time_gad6a3c9d4f109933785ddc31101dabdc1}} 
+\index{Time Cluster@{Time Cluster}!zcl\+\_\+time\+\_\+attr@{zcl\+\_\+time\+\_\+attr}}
+\index{zcl\+\_\+time\+\_\+attr@{zcl\+\_\+time\+\_\+attr}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+time\+\_\+attr}{zcl\_time\_attr}}
+{\footnotesize\ttfamily const \{ ... \}   zcl\+\_\+time\+\_\+attr}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+
+   \{ \{ \hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{ZCL\_TIME\_ATTR\_TIME},
+      \hyperlink{group__zcl_ga40104652d30fa17b7ea5dde9e8b788b8}{ZCL\_ATTRIB\_FLAG\_FULL},
+      \hyperlink{group__zcl__types_ga8f678e97557cb052c0df4be97e9f1e82}{ZCL\_TYPE\_TIME\_UTCTIME},
+      &\hyperlink{group__zcl__time_ga4e1da84a7e72ee1626d6328252fd621a}{zcl\_time\_time} \},
+      \{ 0 \}, \{ 0 \},
+      &\hyperlink{group__zcl__time_ga9c0749b71318a4f7fd28d9112ffd5462}{\_zcl\_time\_time\_get}, &\hyperlink{group__zcl__time_ga052b988d6d2448af6640028b45ee1f68}{\_zcl\_time\_time\_set} \},
+   \{ \{ \hyperlink{group__zcl__time_ga5931aa648c777cb21c8337249b6e1699}{ZCL\_TIME\_ATTR\_TIME\_STATUS},
+      \hyperlink{group__zcl_ga40104652d30fa17b7ea5dde9e8b788b8}{ZCL\_ATTRIB\_FLAG\_FULL},
+      ZCL\_TYPE\_BITMAP\_8BIT,
+      &\hyperlink{group__zcl__time_ga76f465fead960f138224d8e2a9a59469}{zcl\_time\_timestatus} \},
+      \{ 0 \}, \{ 0 \},
+      NULL, &\hyperlink{group__zcl__time_ga1b55e2dc0a4e0752c92dda9b65d349d2}{\_zcl\_time\_timestatus\_set} \},
+   \hyperlink{group__zcl_gab05da20cf1dfaef97e20dfca2fd26d14}{ZCL\_ATTRIBUTE\_END\_OF\_LIST}
+\}
+\end{DoxyCode}
+
+
+Global attribute list used in \#\+Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+R\+V\+ER and for adding a Time Cluster Server to an endpoint. 
+
+The Time Cluster Client does not have any attributes. \mbox{\Hypertarget{group__zcl__time_gabd8e3bd6481f3841825a7596bc131b2f}\label{group__zcl__time_gabd8e3bd6481f3841825a7596bc131b2f}} 
+\index{Time Cluster@{Time Cluster}!zcl\+\_\+time\+\_\+attribute\+\_\+tree@{zcl\+\_\+time\+\_\+attribute\+\_\+tree}}
+\index{zcl\+\_\+time\+\_\+attribute\+\_\+tree@{zcl\+\_\+time\+\_\+attribute\+\_\+tree}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+time\+\_\+attribute\+\_\+tree}{zcl\_time\_attribute\_tree}}
+{\footnotesize\ttfamily const \hyperlink{structzcl__attribute__tree__t}{zcl\+\_\+attribute\+\_\+tree\+\_\+t} zcl\+\_\+time\+\_\+attribute\+\_\+tree\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+      \{ \{ ZCL\_MFG\_NONE, &\hyperlink{group__zcl__time_gad6a3c9d4f109933785ddc31101dabdc1}{zcl\_time\_attr}.time.base, NULL \} \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zcl__time_ga4e1da84a7e72ee1626d6328252fd621a}\label{group__zcl__time_ga4e1da84a7e72ee1626d6328252fd621a}} 
+\index{Time Cluster@{Time Cluster}!zcl\+\_\+time\+\_\+time@{zcl\+\_\+time\+\_\+time}}
+\index{zcl\+\_\+time\+\_\+time@{zcl\+\_\+time\+\_\+time}!Time Cluster@{Time Cluster}}
+\subsubsection{\texorpdfstring{zcl\+\_\+time\+\_\+time}{zcl\_time\_time}}
+{\footnotesize\ttfamily zcl\+\_\+utctime\+\_\+t zcl\+\_\+time\+\_\+time}
+
+
+
+Current value of Time Attribute (\hyperlink{group__zcl__time_ga6abf0e2cc70ac533ebe153a40185be63}{Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+T\+T\+R\+\_\+\+T\+I\+ME}), start value doesn\textquotesingle{}t matter since it is set by \hyperlink{group__zcl__time_ga9c0749b71318a4f7fd28d9112ffd5462}{\+\_\+zcl\+\_\+time\+\_\+time\+\_\+get()}. 
+
+
+
+Referenced by zcl\+\_\+time\+\_\+now().
+

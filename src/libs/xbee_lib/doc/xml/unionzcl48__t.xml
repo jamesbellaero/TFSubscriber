@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="unionzcl48__t" kind="union" language="C++" prot="public">
+    <compoundname>zcl48_t</compoundname>
+    <includes refid="zcl__types_8h" local="yes">zigbee/zcl_types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__zcl__types_1ga0989b828fcba5b50454c134bb08c46ac" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t u8[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>u8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="339" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga41b61059ce2e09f103fbd64c9abe5bff" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t u16[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>u16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="340" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga5d86508e715769ce35a4845ed5f8f252" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>PACKED_STRUCT</definition>
+        <argsstring></argsstring>
+        <name>PACKED_STRUCT</name>
+        <initializer>{
+
+			<ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref>	low32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="341" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga8496547ebd48f63b4a6d8a8bd059c89e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t high16</definition>
+        <argsstring></argsstring>
+        <name>high16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="344" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga1c5d0403e0a7a57d3778e56e8798faa8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>mixed</definition>
+        <argsstring></argsstring>
+        <name>mixed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="349" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>48-bit unsigned in host-byte-order </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/zigbee/zcl_types.h" line="338" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="338" bodyend="350"/>
+    <listofallmembers>
+      <member refid="group__zcl__types_1ga8496547ebd48f63b4a6d8a8bd059c89e" prot="public" virt="non-virtual"><scope>zcl48_t</scope><name>high16</name></member>
+      <member refid="group__zcl__types_1ga1c5d0403e0a7a57d3778e56e8798faa8" prot="public" virt="non-virtual"><scope>zcl48_t</scope><name>mixed</name></member>
+      <member refid="group__zcl__types_1ga5d86508e715769ce35a4845ed5f8f252" prot="public" virt="non-virtual"><scope>zcl48_t</scope><name>PACKED_STRUCT</name></member>
+      <member refid="group__zcl__types_1ga41b61059ce2e09f103fbd64c9abe5bff" prot="public" virt="non-virtual"><scope>zcl48_t</scope><name>u16</name></member>
+      <member refid="group__zcl__types_1ga0989b828fcba5b50454c134bb08c46ac" prot="public" virt="non-virtual"><scope>zcl48_t</scope><name>u8</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

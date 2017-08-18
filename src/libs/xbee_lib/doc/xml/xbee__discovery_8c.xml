@@ -1,0 +1,876 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="xbee__discovery_8c" kind="file" language="C++">
+    <compoundname>xbee_discovery.c</compoundname>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="platform_8h" local="yes">xbee/platform.h</includes>
+    <includes refid="atcmd_8h" local="yes">xbee/atcmd.h</includes>
+    <includes refid="byteorder_8h" local="yes">xbee/byteorder.h</includes>
+    <includes refid="discovery_8h" local="yes">xbee/discovery.h</includes>
+    <incdepgraph>
+      <node id="1366">
+        <label>xbee/device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="1361" relation="include">
+        </childnode>
+        <childnode refid="1367" relation="include">
+        </childnode>
+        <childnode refid="1368" relation="include">
+        </childnode>
+        <childnode refid="1369" relation="include">
+        </childnode>
+      </node>
+      <node id="1371">
+        <label>xbee/discovery.h</label>
+        <link refid="discovery_8h"/>
+        <childnode refid="1361" relation="include">
+        </childnode>
+        <childnode refid="1366" relation="include">
+        </childnode>
+        <childnode refid="1368" relation="include">
+        </childnode>
+      </node>
+      <node id="1362">
+        <label>errno.h</label>
+      </node>
+      <node id="1363">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="1364" relation="include">
+        </childnode>
+      </node>
+      <node id="1358">
+        <label>stddef.h</label>
+      </node>
+      <node id="1369">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="1368" relation="include">
+        </childnode>
+      </node>
+      <node id="1370">
+        <label>xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="1360" relation="include">
+        </childnode>
+        <childnode refid="1361" relation="include">
+        </childnode>
+      </node>
+      <node id="1360">
+        <label>string.h</label>
+      </node>
+      <node id="1368">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="1361" relation="include">
+        </childnode>
+      </node>
+      <node id="1361">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="1362" relation="include">
+        </childnode>
+        <childnode refid="1358" relation="include">
+        </childnode>
+        <childnode refid="1363" relation="include">
+        </childnode>
+      </node>
+      <node id="1365">
+        <label>xbee/atcmd.h</label>
+        <link refid="atcmd_8h"/>
+        <childnode refid="1366" relation="include">
+        </childnode>
+      </node>
+      <node id="1367">
+        <label>xbee/serial.h</label>
+        <link refid="serial_8h"/>
+        <childnode refid="1361" relation="include">
+        </childnode>
+      </node>
+      <node id="1364">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+      <node id="1359">
+        <label>stdio.h</label>
+      </node>
+      <node id="1357">
+        <label>src/xbee/xbee_discovery.c</label>
+        <link refid="xbee__discovery_8c"/>
+        <childnode refid="1358" relation="include">
+        </childnode>
+        <childnode refid="1359" relation="include">
+        </childnode>
+        <childnode refid="1360" relation="include">
+        </childnode>
+        <childnode refid="1361" relation="include">
+        </childnode>
+        <childnode refid="1365" relation="include">
+        </childnode>
+        <childnode refid="1370" relation="include">
+        </childnode>
+        <childnode refid="1371" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_nd_parse</definition>
+        <argsstring>(xbee_node_id_t FAR *parsed, const void FAR *source, int source_length)</argsstring>
+        <name>xbee_disc_nd_parse</name>
+        <param>
+          <type><ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>parsed</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>source_length</declname>
+        </param>
+        <briefdescription>
+<para>Parse a Node Discovery response and store it in an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">parsed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to hold parsed Node ID message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source of Node ID message, starting with the 16-bit network address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">source_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes in source of Node ID message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node ID message parsed and stored in /a parsed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter passed to function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBADMSG</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error parsing Node ID message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="39" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="39" bodyend="74"/>
+        <references refid="group__util__byteorder_1gabb9b3120f6457dc04471c134fee1d221" compoundref="byteorder_8h" startline="131">be16toh</references>
+        <references refid="group__hal_1ga251e9b536ed96ccb16aa28ca2d5bd656" compoundref="platform_8h" startline="116">EBADMSG</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__xbee__discovery_1gaa667bab3abb953bc14d9f5bcc36644b8" compoundref="discovery_8h" startline="85">node_info</references>
+        <references refid="group__xbee__discovery_1ga0df6e63d6ccca22fcf154b6f0be46da6" compoundref="discovery_8h" startline="79">XBEE_DISC_MAX_NODEID_LEN</references>
+        <referencedby refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" compoundref="xbee__discovery_8c" startline="172" endline="185">_xbee_disc_parse_and_pass</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga8eb851e497917304412328f434af7c95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * xbee_disc_device_type_str</definition>
+        <argsstring>(uint8_t device_type)</argsstring>
+        <name>xbee_disc_device_type_str</name>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>device_type</declname>
+        </param>
+        <briefdescription>
+<para>Return a string (&quot;Coord&quot;, &quot;Router&quot;, &quot;EndDev&quot;, or &quot;???&quot;) description for the &quot;Device Type&quot; field of a Node ID message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the device_type field from a Node ID message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to a string describing the type, or &quot;???&quot; if <emphasis>device_type</emphasis> is invalid</para></simplesect>
+<simplesect kind="see"><para><ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="80" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="80" bodyend="90"/>
+        <referencedby refid="group__xbee__discovery_1gab155a485a9aa4870a45dd86d1d468c52" compoundref="xbee__discovery_8c" startline="96" endline="107">xbee_disc_node_id_dump</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1gab155a485a9aa4870a45dd86d1d468c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_disc_node_id_dump</definition>
+        <argsstring>(const xbee_node_id_t FAR *ni)</argsstring>
+        <name>xbee_disc_node_id_dump</name>
+        <param>
+          <type>const <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>ni</declname>
+        </param>
+        <briefdescription>
+<para>Debugging function used to dump an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure to stdout. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ni</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="96" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="96" bodyend="107"/>
+        <references refid="group__util__byteorder_1ga6acac399720b3a57d9050420aa0aac41" compoundref="byteorder_8h" startline="132">be32toh</references>
+        <references refid="group__hal_1ga379022d2cd3136d8f3500c88658056b7" compoundref="platform_8h" startline="406">PRIsFAR</references>
+        <references refid="group__hal_1ga80ca66bcc9e366733f02c90ed4b0838c" compoundref="platform_8h" startline="427">PRIx32</references>
+        <references refid="group__xbee__discovery_1ga8eb851e497917304412328f434af7c95" compoundref="xbee__discovery_8c" startline="80" endline="90">xbee_disc_device_type_str</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_add_node_id_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, xbee_disc_node_id_fn fn)</argsstring>
+        <name>xbee_disc_add_node_id_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="group__xbee__device_1ga64bf72cf58030a080f12f8916cd7d2a2" kindref="member">xbee_disc_node_id_fn</ref></type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+<para>Designate a function to receive parsed Node ID messages on a given XBee device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device to monitor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function to receive parsed Node ID messages</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function assigned </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter passed to function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSPC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can&apos;t assign handler to device</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" kindref="member">xbee_disc_remove_node_id_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="113" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="113" bodyend="127"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1ga088abe8bad2df798edad3053d719b937" compoundref="platform_8h" startline="107">ENOSPC</references>
+        <references refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" compoundref="device_8h" startline="371">xbee_dev_t::node_id_handler</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_remove_node_id_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, xbee_disc_node_id_fn fn)</argsstring>
+        <name>xbee_disc_remove_node_id_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="group__xbee__device_1ga64bf72cf58030a080f12f8916cd7d2a2" kindref="member">xbee_disc_node_id_fn</ref></type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+<para>Remove a function registered to receive parsed Node ID messages on a given XBee device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device to monitor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function to receive parsed Node ID messages</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function removed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter passed to function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOENT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function isn&apos;t assigned to this XBee module</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" kindref="member">xbee_disc_remove_node_id_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="133" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="133" bodyend="148"/>
+        <references refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" compoundref="xbee__discovery_8c" startline="172" endline="185">_xbee_disc_parse_and_pass</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1ga03e689f378f643d16ea7537918528a48" compoundref="platform_8h" startline="110">ENOENT</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" compoundref="zdo_8h" startline="410">length</references>
+        <references refid="group__xbee__discovery_1ga85b75c5bbcd6d39fb6e2802f35f926ff" compoundref="discovery_8h" startline="120">node_data</references>
+        <references refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" compoundref="device_8h" startline="371">xbee_dev_t::node_id_handler</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _xbee_disc_parse_and_pass</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *node_data, int length)</argsstring>
+        <name>_xbee_disc_parse_and_pass</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>node_data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Common function used to parse Node ID messages from various sources, and then pass them on to registered receivers. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device that received the message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">node_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to raw Node ID message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of Node ID message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node ID message parsed and passed on to any registered receivers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter passed to function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBADMSG</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error parsing Node ID message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" kindref="member">xbee_disc_nd_parse</ref>, <ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler</ref>, <ref refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" kindref="member">xbee_disc_remove_node_id_handler</ref> </para></simplesect>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="152" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="172" bodyend="185"/>
+        <references refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" compoundref="device_8h" startline="371">xbee_dev_t::node_id_handler</references>
+        <references refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" compoundref="xbee__discovery_8c" startline="39" endline="74">xbee_disc_nd_parse</references>
+        <referencedby refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" compoundref="xbee__discovery_8c" startline="191" endline="205">xbee_disc_nodeid_cluster_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" compoundref="xbee__discovery_8c" startline="251" endline="265">xbee_disc_nodeid_frame_handler</referencedby>
+        <referencedby refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" compoundref="xbee__discovery_8c" startline="133" endline="148">xbee_disc_remove_node_id_handler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_nodeid_cluster_handler</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, void FAR *context)</argsstring>
+        <name>xbee_disc_nodeid_cluster_handler</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Process messages sent to the Node ID Message cluster (0x0095) of the Digi Data endpoint (0xE8) when ATAO != 0. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function parses the frame and then passes an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure on to Node ID handlers configured with <ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler()</ref>.</para><para>Do not call this function directly, it should be included in the Cluster table of the Digi Data endpoint by using the macro XBEE_DISC_DIGI_DATA_CLUSTER_ENTRY.</para><para>Hosts communicating to XBee modules running with ATAO set to zero do not need to use this handler.</para><para>See the function help for <ref refid="group__wpan__aps_1ga8575b0db762a5fbb858d4994c9b657e3" kindref="member">wpan_aps_handler_fn()</ref> for full documentation on this function&apos;s API.</para><para><simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga8f678e29b22812632df7d3fa3d0f951a" kindref="member">XBEE_DISC_DIGI_DATA_CLUSTER_ENTRY</ref>, <ref refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" kindref="member">xbee_disc_nodeid_frame_handler</ref>, <ref refid="group__xbee__discovery_1ga6d1190133ded980a4eeca2034508c8a5" kindref="member">xbee_disc_atnd_response_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="191" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="191" bodyend="205"/>
+        <references refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" compoundref="xbee__discovery_8c" startline="172" endline="185">_xbee_disc_parse_and_pass</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" compoundref="platform_8h" startline="399">XBEE_UNUSED_PARAMETER</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga6d1190133ded980a4eeca2034508c8a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_atnd_response_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>xbee_disc_atnd_response_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Process AT Command Response frames (type 0x88), looking for ATND responses to parse and pass to Node ID handlers. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function parses the frame and then passes an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure on to Node ID handlers configured with <ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler()</ref>. If the ATND command fails or returns a timeout, it passes a NULL <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> to the functions.</para><para>Do not call this function directly, it should be included in the XBee Frame Handlers table by using the macro XBEE_FRAME_HANDLE_ATND_RESPONSE.</para><para>See the function help for <ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> for full documentation on this function&apos;s API.</para><para><simplesect kind="see"><para><ref refid="group__xbee__discovery_1gadfed4daf7748e615dedf036d94d9fee9" kindref="member">XBEE_FRAME_HANDLE_ATND_RESPONSE</ref>, <ref refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" kindref="member">xbee_disc_nodeid_frame_handler</ref>, <ref refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" kindref="member">xbee_disc_nodeid_cluster_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="211" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="211" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_nodeid_frame_handler</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>xbee_disc_nodeid_frame_handler</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Process Node Identification frames (type 0x95), sent when ATAO = 0. </para>        </briefdescription>
+        <detaileddescription>
+<para>These frames are sent to the host when ATAO is set to 0 and a remote node:<itemizedlist>
+<listitem><para>Has ATD0 set to 1, and someone presses the commissioning button once.</para></listitem><listitem><para>Has ATJN set to 1, and has joined the network.</para></listitem></itemizedlist>
+</para><para>This function parses a the frame and then passes an <ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref> structure on to Node ID handlers configured with <ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler()</ref>.</para><para>Do not call this function directly, it should be included in the XBee Frame Handlers table by using the macro XBEE_FRAME_HANDLE_AO0_NODEID. Hosts communicating to XBee modules running with ATAO set to a non-zero value do not need to use this handler.</para><para>See the function help for <ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> for full documentation on this function&apos;s API.</para><para><simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" kindref="member">xbee_disc_nodeid_cluster_handler</ref>, <ref refid="group__xbee__discovery_1ga6d1190133ded980a4eeca2034508c8a5" kindref="member">xbee_disc_atnd_response_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="251" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="251" bodyend="265"/>
+        <references refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" compoundref="xbee__discovery_8c" startline="172" endline="185">_xbee_disc_parse_and_pass</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__xbee__discovery_1ga85b75c5bbcd6d39fb6e2802f35f926ff" compoundref="discovery_8h" startline="120">node_data</references>
+        <references refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" compoundref="platform_8h" startline="399">XBEE_UNUSED_PARAMETER</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__discovery_1ga12d6a10c8348cf5eb9636bbf02420dd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_disc_discover_nodes</definition>
+        <argsstring>(xbee_dev_t *xbee, const char *identifier)</argsstring>
+        <name>xbee_disc_discover_nodes</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>identifier</declname>
+        </param>
+        <briefdescription>
+<para>Send an ATND command to the XBee, initiating node discovery for all nodes or a specific node&apos;s &quot;node identification&quot; (ATNI) string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Responses from remote nodes are parsed and then passed on to Node ID handlers configured with <ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XBee device to use as the target </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ATNI (node identification) string of a device on the network, or NULL to discover all devices</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>command sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an invalid parameter was passed to the function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EBUSY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transmit serial buffer is full, or XBee is not accepting serial data (deasserting /CTS signal).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler</ref>, <ref refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" kindref="member">xbee_disc_remove_node_id_handler</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_discovery.c" line="271" column="1" bodyfile="src/xbee/xbee_discovery.c" bodystart="271" bodyend="283"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__xbee__atcmd_1ga19d16fbaf1da1cc581fbedcb36f7263f" compoundref="xbee__atcmd_8c" startline="1825" endline="1842">xbee_cmd_execute</references>
+        <references refid="group__xbee__discovery_1ga0df6e63d6ccca22fcf154b6f0be46da6" compoundref="discovery_8h" startline="79">XBEE_DISC_MAX_NODEID_LEN</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Code related to &quot;Node Discovery&quot; (the ATND command, 0x95 frames). </para>    </briefdescription>
+    <detaileddescription>
+<para>See full documentation in <ref refid="discovery_8h" kindref="compound">xbee/discovery.h</ref>. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">/***<sp/>BeginHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="atcmd_8h" kindref="compound">xbee/atcmd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="byteorder_8h" kindref="compound">xbee/byteorder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="discovery_8h" kindref="compound">xbee/discovery.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_disc_nd_parse<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>xbee/discovery.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>@todo<sp/>make<sp/>use<sp/>of<sp/>the<sp/>source_length<sp/>parameter<sp/>and<sp/>return<sp/>-EBADMSG<sp/>if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>it<sp/>isn&apos;t<sp/>long<sp/>enough<sp/>(ensure<sp/>it&apos;s<sp/>long<sp/>enough<sp/>to<sp/>include<sp/>the<sp/>device_type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>field)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" kindref="member">xbee_disc_nd_parse</ref>(<sp/><ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*parsed,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*source,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>source_length)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ni_len;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1gaf00a7a98eff47e084bf5f8741bf41220" kindref="member">xbee_node_id1_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*id1;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga4c7c2f1049e4dc4bb4552269077cf4fc" kindref="member">xbee_node_id2_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*id2;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parsed<sp/>==<sp/>NULL<sp/>||<sp/>source<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(source_length<sp/>&lt;<sp/>offsetof(<sp/><ref refid="group__xbee__discovery_1gaf00a7a98eff47e084bf5f8741bf41220" kindref="member">xbee_node_id1_t</ref>,<sp/><ref refid="group__xbee__discovery_1gaa667bab3abb953bc14d9f5bcc36644b8" kindref="member">node_info</ref>))</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga251e9b536ed96ccb16aa28ca2d5bd656" kindref="member">EBADMSG</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/>id1<sp/>=<sp/>source;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/>ni_len<sp/>=<sp/>strlen(<sp/>id1-&gt;node_info);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ni_len<sp/>&gt;<sp/><ref refid="group__xbee__discovery_1ga0df6e63d6ccca22fcf154b6f0be46da6" kindref="member">XBEE_DISC_MAX_NODEID_LEN</ref>)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga251e9b536ed96ccb16aa28ca2d5bd656" kindref="member">EBADMSG</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>xbee_node_id2_t<sp/>structure<sp/>follows<sp/>null<sp/>terminator<sp/>of<sp/>id1-&gt;node_info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/>id2<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga4c7c2f1049e4dc4bb4552269077cf4fc" kindref="member">xbee_node_id2_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*)<sp/>&amp;id1-&gt;node_info[ni_len<sp/>+<sp/>1];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/>parsed-&gt;ieee_addr_be<sp/>=<sp/>id1-&gt;ieee_addr_be;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/>parsed-&gt;network_addr<sp/>=<sp/><ref refid="group__util__byteorder_1gabb9b3120f6457dc04471c134fee1d221" kindref="member">be16toh</ref>(<sp/>id1-&gt;network_addr_be);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/>parsed-&gt;parent_addr<sp/>=<sp/><ref refid="group__util__byteorder_1gabb9b3120f6457dc04471c134fee1d221" kindref="member">be16toh</ref>(<sp/>id2-&gt;parent_addr_be);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/>parsed-&gt;device_type<sp/>=<sp/>id2-&gt;device_type;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/>_f_memcpy(<sp/>parsed-&gt;node_info,<sp/>id1-&gt;node_info,<sp/>ni_len);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>null<sp/>terminate<sp/>node_info<sp/>and<sp/>clear<sp/>any<sp/>other<sp/>unused<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/>_f_memset(<sp/>parsed-&gt;node_info<sp/>+<sp/>ni_len,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>parsed-&gt;node_info<sp/>-<sp/>ni_len);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_disc_device_type_str<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>xbee/discovery.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="group__xbee__discovery_1ga8eb851e497917304412328f434af7c95" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__xbee__discovery_1ga8eb851e497917304412328f434af7c95" kindref="member">xbee_disc_device_type_str</ref>(<sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__xbee__discovery_1gab9c960832b7e834e6657e0c6ab4c3d8a" kindref="member">device_type</ref>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*_xbee_disc_device_type[]<sp/>=</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;Coord&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Router&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;EndDev&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;???&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(device_type<sp/>&gt;<sp/>XBEE_ND_DEVICE_TYPE_ENDDEV)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>device_type<sp/>=<sp/>XBEE_ND_DEVICE_TYPE_ENDDEV<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_xbee_disc_device_type[<ref refid="group__xbee__discovery_1gab9c960832b7e834e6657e0c6ab4c3d8a" kindref="member">device_type</ref>];</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_disc_node_id_dump<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>xbee/discovery.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="group__xbee__discovery_1gab155a485a9aa4870a45dd86d1d468c52" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1gab155a485a9aa4870a45dd86d1d468c52" kindref="member">xbee_disc_node_id_dump</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*ni)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ni<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(<sp/></highlight><highlight class="stringliteral">&quot;Address:%08&quot;</highlight><highlight class="normal"><sp/><ref refid="group__hal_1ga80ca66bcc9e366733f02c90ed4b0838c" kindref="member">PRIx32</ref><sp/></highlight><highlight class="stringliteral">&quot;-%08&quot;</highlight><highlight class="normal"><sp/><ref refid="group__hal_1ga80ca66bcc9e366733f02c90ed4b0838c" kindref="member">PRIx32</ref><sp/></highlight><highlight class="stringliteral">&quot;<sp/>0x%04x<sp/><sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;PARENT:0x%04x<sp/><sp/>%6s<sp/><sp/>NI:[%&quot;</highlight><highlight class="normal"><sp/><ref refid="group__hal_1ga379022d2cd3136d8f3500c88658056b7" kindref="member">PRIsFAR</ref><sp/></highlight><highlight class="stringliteral">&quot;]\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__util__byteorder_1ga6acac399720b3a57d9050420aa0aac41" kindref="member">be32toh</ref>(<sp/>ni-&gt;ieee_addr_be.l[0]),<sp/><ref refid="group__util__byteorder_1ga6acac399720b3a57d9050420aa0aac41" kindref="member">be32toh</ref>(<sp/>ni-&gt;ieee_addr_be.l[1]),</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ni-&gt;network_addr,<sp/>ni-&gt;parent_addr,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__discovery_1ga8eb851e497917304412328f434af7c95" kindref="member">xbee_disc_device_type_str</ref>(<sp/>ni-&gt;device_type),<sp/>ni-&gt;node_info);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_disc_add_node_id_handler<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>xbee/discovery.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga59a0294fbcb1b9f43b8436d4ec3a5a9e" kindref="member">xbee_disc_add_node_id_handler</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,<sp/><ref refid="group__xbee__device_1ga64bf72cf58030a080f12f8916cd7d2a2" kindref="member">xbee_disc_node_id_fn</ref><sp/>fn)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xbee<sp/>==<sp/>NULL<sp/>||<sp/>fn<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xbee-&gt;<ref refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" kindref="member">node_id_handler</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga088abe8bad2df798edad3053d719b937" kindref="member">ENOSPC</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/>xbee-&gt;<ref refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" kindref="member">node_id_handler</ref><sp/>=<sp/>fn;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_disc_remove_node_id_handler<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>xbee/discovery.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga091ae347ddae0bd1b54948714e9d6933" kindref="member">xbee_disc_remove_node_id_handler</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__device_1ga64bf72cf58030a080f12f8916cd7d2a2" kindref="member">xbee_disc_node_id_fn</ref><sp/>fn)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xbee<sp/>==<sp/>NULL<sp/>||<sp/>fn<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xbee-&gt;<ref refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" kindref="member">node_id_handler</ref><sp/>!=<sp/>fn)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga03e689f378f643d16ea7537918528a48" kindref="member">ENOENT</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/>xbee-&gt;<ref refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" kindref="member">node_id_handler</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>_xbee_disc_parse_and_pass<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" kindref="member">_xbee_disc_parse_and_pass</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="group__xbee__discovery_1ga85b75c5bbcd6d39fb6e2802f35f926ff" kindref="member">node_data</ref>,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight></codeline>
+<codeline lineno="172" refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" kindref="member">_xbee_disc_parse_and_pass</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="group__xbee__discovery_1ga85b75c5bbcd6d39fb6e2802f35f926ff" kindref="member">node_data</ref>,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref><sp/>node_id;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/>retval<sp/>=<sp/><ref refid="group__xbee__discovery_1ga1efd48449a49119fc19ab9843af5ef6c" kindref="member">xbee_disc_nd_parse</ref>(<sp/>&amp;node_id,<sp/>node_data,<sp/>length);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retval<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>xbee<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>xbee-&gt;<ref refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" kindref="member">node_id_handler</ref><sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>xbee-&gt;<ref refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" kindref="member">node_id_handler</ref>(<sp/>xbee,<sp/>&amp;node_id);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_disc_nodeid_cluster_handler<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>xbee/discovery.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga20bc82e8efc243e295c99c23948bed3b" kindref="member">xbee_disc_nodeid_cluster_handler</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>context);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(envelope<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Safe<sp/>to<sp/>cast<sp/>the<sp/>wpan_dev_t<sp/>back<sp/>to<sp/>xbee_dev_t,<sp/>since<sp/>it&apos;s<sp/>the<sp/>first</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>member<sp/>of<sp/>the<sp/>xbee_dev_t<sp/>structure.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" kindref="member">_xbee_disc_parse_and_pass</ref>(<sp/>(<ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*)<sp/>envelope-&gt;dev,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>envelope-&gt;payload,<sp/>envelope-&gt;length);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_disc_atnd_response_handler<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>xbee/discovery.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="group__xbee__discovery_1ga6d1190133ded980a4eeca2034508c8a5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga6d1190133ded980a4eeca2034508c8a5" kindref="member">xbee_disc_atnd_response_handler</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*raw,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionxbee__at__cmd__t" kindref="compound">xbee_at_cmd_t</ref><sp/>nd<sp/>=<sp/>{{</highlight><highlight class="charliteral">&apos;N&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">}};</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>xbee_frame_local_at_resp_t<sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*resp<sp/>=<sp/>raw;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>context);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(resp<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(resp-&gt;header.command.w<sp/>==<sp/>nd.w)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__xbee__atcmd_1ga4dc292cd07dfd93bbfb2b8632b580949" kindref="member">XBEE_AT_RESP_STATUS</ref>(<sp/>resp-&gt;header.status)<sp/>==<sp/>XBEE_AT_RESP_SUCCESS)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>a<sp/>successful<sp/>ATND<sp/>response,<sp/>parse<sp/>the<sp/>response</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>add<sp/>the<sp/>discovered<sp/>node<sp/>to<sp/>our<sp/>node<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" kindref="member">_xbee_disc_parse_and_pass</ref>(<sp/>xbee,<sp/>resp-&gt;value,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length<sp/>-<sp/>offsetof(<sp/>xbee_frame_local_at_resp_t,<sp/><ref refid="group__xbee__atcmd_1ga5bf2410fa8ec37f47f8afeba8dcc7f1b" kindref="member">value</ref>));</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__xbee__atcmd_1ga4dc292cd07dfd93bbfb2b8632b580949" kindref="member">XBEE_AT_RESP_STATUS</ref>(<sp/>resp-&gt;header.status)<sp/>==<sp/>XBEE_AT_RESP_ERROR)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>an<sp/>unsuccessful<sp/>ATND<sp/>response,<sp/>pass<sp/>a<sp/>NULL<sp/>node_id<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>indicate<sp/>that<sp/>the<sp/>NI<sp/>request<sp/>timed<sp/>out.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xbee<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>xbee-&gt;<ref refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" kindref="member">node_id_handler</ref><sp/>!=<sp/>NULL)<sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xbee-&gt;<ref refid="group__xbee__device_1ga4952189ed8b46b133b5298b4fce75ab8" kindref="member">node_id_handler</ref>(<sp/>xbee,<sp/>NULL);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_disc_nodeid_frame_handler<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>xbee/discovery.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1gac15854e05ef3f80d6ddae653065c0a40" kindref="member">xbee_disc_nodeid_frame_handler</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*raw,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga6343d5dfdcee86d1d294b1bafb8d6f23" kindref="member">xbee_frame_node_id_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*frame<sp/>=<sp/>raw;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>context);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(frame<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga8db9bd798e5fb2f6c75037e0e9d3faff" kindref="member">_xbee_disc_parse_and_pass</ref>(<sp/>xbee,<sp/>&amp;frame-&gt;node_data,</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length<sp/>-<sp/>offsetof(<sp/><ref refid="group__xbee__discovery_1ga6343d5dfdcee86d1d294b1bafb8d6f23" kindref="member">xbee_frame_node_id_t</ref>,<sp/><ref refid="group__xbee__discovery_1ga85b75c5bbcd6d39fb6e2802f35f926ff" kindref="member">node_data</ref>));</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_disc_discover_nodes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>xbee/discovery.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="group__xbee__discovery_1ga12d6a10c8348cf5eb9636bbf02420dd3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__discovery_1ga12d6a10c8348cf5eb9636bbf02420dd3" kindref="member">xbee_disc_discover_nodes</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*identifier)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ni_len;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/>ni_len<sp/>=<sp/>(identifier<sp/>==<sp/>NULL)<sp/>?<sp/>0<sp/>:<sp/>strlen(<sp/>identifier);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ni_len<sp/>&gt;<sp/><ref refid="group__xbee__discovery_1ga0df6e63d6ccca22fcf154b6f0be46da6" kindref="member">XBEE_DISC_MAX_NODEID_LEN</ref>)</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>don&apos;t<sp/>have<sp/>to<sp/>check<sp/>(xbee<sp/>==<sp/>NULL)<sp/>since<sp/>xbee_cmd_execute()<sp/>does<sp/>so.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__xbee__atcmd_1ga19d16fbaf1da1cc581fbedcb36f7263f" kindref="member">xbee_cmd_execute</ref>(<sp/>xbee,<sp/></highlight><highlight class="stringliteral">&quot;ND&quot;</highlight><highlight class="normal">,<sp/>identifier,<sp/>(<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>)<sp/>ni_len);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/xbee/xbee_discovery.c"/>
+  </compounddef>
+</doxygen>

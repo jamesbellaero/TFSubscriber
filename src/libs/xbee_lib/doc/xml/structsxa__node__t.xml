@@ -1,0 +1,1746 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsxa__node__t" kind="struct" language="C++" prot="public">
+    <compoundname>sxa_node_t</compoundname>
+    <includes refid="sxa_8h" local="yes">xbee/sxa.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsxa__node__t_1a10a0382c260b61c11040f1ea8853abd5" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>struct sxa_node_t FAR* next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+<para>Next in linked list (or NULL) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="271" column="1" bodyfile="include/xbee/sxa.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1aba67917f7787a4106c8c066621db9bea" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>struct sxa_node_t FAR* next_local</definition>
+        <argsstring></argsstring>
+        <name>next_local</name>
+        <briefdescription>
+<para>Next in linked list of local devices (or NULL) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="273" column="1" bodyfile="include/xbee/sxa.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a8411ba20cacdddb520e6c1358291c9ba" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+        <definition>int16_t index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+<para>Index (order of discovery: 0, 1, 2...) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="275" column="1" bodyfile="include/xbee/sxa.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a79f0c368a2efd172b3779a2ef3a26706" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+        <definition>xbee_dev_t* xbee</definition>
+        <argsstring></argsstring>
+        <name>xbee</name>
+        <briefdescription>
+<para>Local device through which discovered. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="276" column="1" bodyfile="include/xbee/sxa.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ac543485164457c0eefd43dcee04c82c6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t stamp</definition>
+        <argsstring></argsstring>
+        <name>stamp</name>
+        <briefdescription>
+<para>Time stamp of last received message from xbee_seconds_timer(). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="277" column="1" bodyfile="include/xbee/sxa.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a6d8abccf90f28f0ea0a3423eaffacc7e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t caps</definition>
+        <argsstring></argsstring>
+        <name>caps</name>
+        <briefdescription>
+<para>Capabilites bitmask (ZB_CAP_*) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="279" column="1" bodyfile="include/xbee/sxa.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a65028dacab709b3d58f37d40d9c1b572" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__node__id__t" kindref="compound">xbee_node_id_t</ref></type>
+        <definition>xbee_node_id_t id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>Instance of basic node addressing and identification info. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="280" column="1" bodyfile="include/xbee/sxa.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ae22454fb2324ac2f3c9ddc07fe24ae35" prot="public" static="no" mutable="no">
+        <type><ref refid="structwpan__address__t" kindref="compound">wpan_address_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>wpan_address_t FAR* addr_ptr</definition>
+        <argsstring></argsstring>
+        <name>addr_ptr</name>
+        <briefdescription>
+<para>Either NULL (for local device) or points to next field. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is for convenience with functions which take NULL address to indicate the local device. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="285" column="1" bodyfile="include/xbee/sxa.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a66a58a737aee9733019399e2eceabf4a" prot="public" static="no" mutable="no">
+        <type><ref refid="structwpan__address__t" kindref="compound">wpan_address_t</ref></type>
+        <definition>wpan_address_t address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <briefdescription>
+<para>IEEE and network addresses (for remote devices, else N/A) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="287" column="1" bodyfile="include/xbee/sxa.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a8de35431542d2c2508bb17ac8fa48a84" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t nqueued</definition>
+        <argsstring></argsstring>
+        <name>nqueued</name>
+        <briefdescription>
+<para>Cached register value handling: number of entries in .queued Range [0..<ref refid="sxa_8h_1a9e47d5fe0e89846d0bc2b3f1584382ae" kindref="member">_SXA_MAX_QUEUED</ref>]. </para>        </briefdescription>
+        <detaileddescription>
+<para>Requests in excess of the maximum will not be queued and the application will need to try again later. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="292" column="1" bodyfile="include/xbee/sxa.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a17615250f94d830781403db708cd68d3" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="struct__xbee__reg__descr__t" kindref="compound">_xbee_reg_descr_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *<ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const struct _xbee_reg_descr_t FAR* FAR* queued</definition>
+        <argsstring></argsstring>
+        <name>queued</name>
+        <briefdescription>
+<para>Cached register value handling: list of queued updates. </para>        </briefdescription>
+        <detaileddescription>
+<para>This may be NULL if there are no outstanding updates. The list is allocated only when being used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="300" column="1" bodyfile="include/xbee/sxa.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a8aa02a31241baba968d2892c98971c65" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t q_index</definition>
+        <argsstring></argsstring>
+        <name>q_index</name>
+        <briefdescription>
+<para>Cached register value handling: current update (index into .queued) If &gt;= .nqueued, then no current update is being processed, so scan list for next update (if any). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="304" column="1" bodyfile="include/xbee/sxa.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ae825a2809f705ef65c961e8bfe3e98cc" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref></type>
+        <definition>xbee_atcmd_reg_t misc_reg[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>misc_reg</name>
+        <briefdescription>
+<para>Cached register value handling: Single entry command list for single register (miscellaneous) updates. </para>        </briefdescription>
+        <detaileddescription>
+<para>2 elements used because 2nd must terminate the list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="308" column="1" bodyfile="include/xbee/sxa.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a41aeca059e6fef32cb611359925a0c5c" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structsxa__cached__group__t" kindref="compound">sxa_cached_group_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const sxa_cached_group_t FAR* groups</definition>
+        <argsstring></argsstring>
+        <name>groups</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="323" column="1" bodyfile="include/xbee/sxa.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ab2dff3a5f503f07dec32ae1e59c85898" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structsxa__cached__group__t" kindref="compound">sxa_cached_group_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const sxa_cached_group_t FAR* doing_group</definition>
+        <argsstring></argsstring>
+        <name>doing_group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="324" column="1" bodyfile="include/xbee/sxa.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ac2acdbe4009c4fc763c6ac93bc0056eb" prot="public" static="no" mutable="no">
+        <type><ref refid="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" kindref="member">sxa_cache_flags_t</ref></type>
+        <definition>sxa_cache_flags_t node_id_cf</definition>
+        <argsstring></argsstring>
+        <name>node_id_cf</name>
+        <briefdescription>
+<para>Cache flags for node_id group. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="327" column="1" bodyfile="include/xbee/sxa.h" bodystart="327" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a8b839f7ad17e883aa9ef2532b2be929a" prot="public" static="no" mutable="no">
+        <type><ref refid="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" kindref="member">sxa_cache_flags_t</ref></type>
+        <definition>sxa_cache_flags_t io_config_cf</definition>
+        <argsstring></argsstring>
+        <name>io_config_cf</name>
+        <briefdescription>
+<para>Cache flags for I/O configuration group. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="330" column="1" bodyfile="include/xbee/sxa.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a87711fd12194e90fe58291cf2ea6e30f" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__io__t" kindref="compound">xbee_io_t</ref></type>
+        <definition>xbee_io_t io</definition>
+        <argsstring></argsstring>
+        <name>io</name>
+        <briefdescription>
+<para>I/O shadow state and configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para>This contains a CLC which is used for the other queries as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="333" column="1" bodyfile="include/xbee/sxa.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a02af329d146957380b2ca7ffaae5bd83" prot="public" static="no" mutable="no">
+        <type><ref refid="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" kindref="member">sxa_cache_flags_t</ref></type>
+        <definition>sxa_cache_flags_t device_info_cf</definition>
+        <argsstring></argsstring>
+        <name>device_info_cf</name>
+        <briefdescription>
+<para>Cache flags for device info group. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="337" column="1" bodyfile="include/xbee/sxa.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a4f850621475e7b60aa5aee84dda81a8f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t ao</definition>
+        <argsstring></argsstring>
+        <name>ao</name>
+        <briefdescription>
+<para>Value of XBee module&apos;s AO (API options) register. </para>        </briefdescription>
+        <detaileddescription>
+<para>Also sets value 0xFF if the AO command is not supported (fails to read). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="340" column="1" bodyfile="include/xbee/sxa.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ad4c7c16c071f95965e2e506752b450fe" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t hardware_version</definition>
+        <argsstring></argsstring>
+        <name>hardware_version</name>
+        <briefdescription>
+<para>Value of XBee module&apos;s HV register. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="343" column="1" bodyfile="include/xbee/sxa.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ac8e0f35fdeff288dd1a7b4f49754c9b2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t firmware_version</definition>
+        <argsstring></argsstring>
+        <name>firmware_version</name>
+        <briefdescription>
+<para>Value of XBee module&apos;s VR register (4-bytes on some devices) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="345" column="1" bodyfile="include/xbee/sxa.h" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a296bccce81453e35d3726ac1476101eb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t dd</definition>
+        <argsstring></argsstring>
+        <name>dd</name>
+        <briefdescription>
+<para>Value of XBee module&apos;s DD register (device type) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="347" column="1" bodyfile="include/xbee/sxa.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1adff7949139ea5500a94ee6fbedad3087" prot="public" static="no" mutable="no">
+        <type><ref refid="group___s_x_a_1ga21b45e50d83fcc1363c4239313e88c06" kindref="member">sxa_cache_flags_t</ref></type>
+        <definition>sxa_cache_flags_t dhdl_cf</definition>
+        <argsstring></argsstring>
+        <name>dhdl_cf</name>
+        <briefdescription>
+<para>Cache flags for DH/DL (destination address) group. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="365" column="1" bodyfile="include/xbee/sxa.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1abb357ccdd72453fd6f4ee76e18fde30c" prot="public" static="no" mutable="no">
+        <type><ref refid="unionaddr64" kindref="compound">addr64</ref></type>
+        <definition>addr64 dest_addr</definition>
+        <argsstring></argsstring>
+        <name>dest_addr</name>
+        <briefdescription>
+<para>Value of DH and DL registers, combined into a single logical field. </para>        </briefdescription>
+        <detaileddescription>
+<para>You always want both, so there is a command list to get them. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="368" column="1" bodyfile="include/xbee/sxa.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1addae4971fe88bef06542be6b2de54ea3" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t aggregation</definition>
+        <argsstring></argsstring>
+        <name>aggregation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="374" column="1" bodyfile="include/xbee/sxa.h" bodystart="374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a4857814d272d7c236f20217036eadaa7" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t assoc_led</definition>
+        <argsstring></argsstring>
+        <name>assoc_led</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="375" column="1" bodyfile="include/xbee/sxa.h" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1afbbaf03169e6357fcc78463452c5f473" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t beacon_response</definition>
+        <argsstring></argsstring>
+        <name>beacon_response</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="376" column="1" bodyfile="include/xbee/sxa.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a2fe0610672454f943a5a01ade84e7180" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t broadcast_hops</definition>
+        <argsstring></argsstring>
+        <name>broadcast_hops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="377" column="1" bodyfile="include/xbee/sxa.h" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a9b601d4ed7a3ec9b0e05528390e78cdd" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t cca_threshold</definition>
+        <argsstring></argsstring>
+        <name>cca_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="378" column="1" bodyfile="include/xbee/sxa.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a1f6b05bef57db1f1cbb4740a78914b5f" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t channel</definition>
+        <argsstring></argsstring>
+        <name>channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="379" column="1" bodyfile="include/xbee/sxa.h" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a112bc7028dd0dd7833eff63333fae9bb" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t cluster_id</definition>
+        <argsstring></argsstring>
+        <name>cluster_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="381" column="1" bodyfile="include/xbee/sxa.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a46cab60ad63ab8babe24c5ce86516638" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t command_timeout</definition>
+        <argsstring></argsstring>
+        <name>command_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="382" column="1" bodyfile="include/xbee/sxa.h" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a7a94e7e4b3817846d70454a9ab66da8b" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t coord_assoc</definition>
+        <argsstring></argsstring>
+        <name>coord_assoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="383" column="1" bodyfile="include/xbee/sxa.h" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ad3fce2599083f4ebf5f888b8330d504a" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t coord_enable</definition>
+        <argsstring></argsstring>
+        <name>coord_enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="384" column="1" bodyfile="include/xbee/sxa.h" bodystart="384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ab9f0e8453527234d22e536993a78456d" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t delay_slots</definition>
+        <argsstring></argsstring>
+        <name>delay_slots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="385" column="1" bodyfile="include/xbee/sxa.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a689242fa5061f19e077a70301de98059" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t dest_endpoint</definition>
+        <argsstring></argsstring>
+        <name>dest_endpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="386" column="1" bodyfile="include/xbee/sxa.h" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ac9f368083274bb195986b50252588f7b" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t device_options</definition>
+        <argsstring></argsstring>
+        <name>device_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="387" column="1" bodyfile="include/xbee/sxa.h" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a0a42004e700f2c03e6129a8147e95d97" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t discover_timeout</definition>
+        <argsstring></argsstring>
+        <name>discover_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="388" column="1" bodyfile="include/xbee/sxa.h" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a00ffdb170ca6e037cd0173021ef8e4c7" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t encrypt_enable</definition>
+        <argsstring></argsstring>
+        <name>encrypt_enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="389" column="1" bodyfile="include/xbee/sxa.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ae49cea8f0239bc780cf483678c71128f" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t encrypt_options</definition>
+        <argsstring></argsstring>
+        <name>encrypt_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="390" column="1" bodyfile="include/xbee/sxa.h" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a23a460f331135e1dc1a5eb78119a4371" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t end_assoc</definition>
+        <argsstring></argsstring>
+        <name>end_assoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="391" column="1" bodyfile="include/xbee/sxa.h" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ac58d8910a5f2c760b01eac5ad38a7f16" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t flow_threshold</definition>
+        <argsstring></argsstring>
+        <name>flow_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="393" column="1" bodyfile="include/xbee/sxa.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a31a81247489c58560b3127236c6b7af4" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t guard_times</definition>
+        <argsstring></argsstring>
+        <name>guard_times</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="394" column="1" bodyfile="include/xbee/sxa.h" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a44d133b35c0be116fac508f07a528eae" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t hop_sequence</definition>
+        <argsstring></argsstring>
+        <name>hop_sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="395" column="1" bodyfile="include/xbee/sxa.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a644deb9891fae6db24eb3f7ef5870965" prot="public" static="no" mutable="no">
+        <type>sxa_cached_addr64</type>
+        <definition>sxa_cached_addr64 io_address</definition>
+        <argsstring></argsstring>
+        <name>io_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="396" column="1" bodyfile="include/xbee/sxa.h" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1abc455e4cec44f0633172562200c876ca" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t io_enable</definition>
+        <argsstring></argsstring>
+        <name>io_enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="397" column="1" bodyfile="include/xbee/sxa.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a2e3166588ffbe8aea29b921e2c3fc6d3" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t initial_pan_id</definition>
+        <argsstring></argsstring>
+        <name>initial_pan_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="398" column="1" bodyfile="include/xbee/sxa.h" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1abc833d46789693278bb0217a1fa08315" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t join_time</definition>
+        <argsstring></argsstring>
+        <name>join_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="399" column="1" bodyfile="include/xbee/sxa.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a7cc47c55ea75a6b3a18415bbde2d8a0a" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t join_notification</definition>
+        <argsstring></argsstring>
+        <name>join_notification</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="400" column="1" bodyfile="include/xbee/sxa.h" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a23899e347d6c43d4242065204cfa0939" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t join_verification</definition>
+        <argsstring></argsstring>
+        <name>join_verification</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="401" column="1" bodyfile="include/xbee/sxa.h" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a72d79130c22c9fd91a190ef41b011fce" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t mac_mode</definition>
+        <argsstring></argsstring>
+        <name>mac_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="403" column="1" bodyfile="include/xbee/sxa.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a7cdc48529cf2caa8c23e4d1587c5dcbb" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t mac_retries</definition>
+        <argsstring></argsstring>
+        <name>mac_retries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="404" column="1" bodyfile="include/xbee/sxa.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1aff8f109f646d13ad739b8a1968cd448c" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t max_hops</definition>
+        <argsstring></argsstring>
+        <name>max_hops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="405" column="1" bodyfile="include/xbee/sxa.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a9f101d3b4bbdb6e537204aaea805e79d" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t mesh_retries</definition>
+        <argsstring></argsstring>
+        <name>mesh_retries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="406" column="1" bodyfile="include/xbee/sxa.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a9f73e487a189f357e4c2d472fe280eeb" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t multi_transmit</definition>
+        <argsstring></argsstring>
+        <name>multi_transmit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="407" column="1" bodyfile="include/xbee/sxa.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a12b87380c0ae5a34354e9eae5c073ece" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t net_delay_slots</definition>
+        <argsstring></argsstring>
+        <name>net_delay_slots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="408" column="1" bodyfile="include/xbee/sxa.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1af2a08d1eb0031318ec99dd9912bbd9ef" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t network_watchdog</definition>
+        <argsstring></argsstring>
+        <name>network_watchdog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="410" column="1" bodyfile="include/xbee/sxa.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a3a4e03433345119bd0bb6e347a7424a2" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t packet_timeout</definition>
+        <argsstring></argsstring>
+        <name>packet_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="411" column="1" bodyfile="include/xbee/sxa.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a90ab3737ab9066793e4bce19727d6552" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t pan_id</definition>
+        <argsstring></argsstring>
+        <name>pan_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="412" column="1" bodyfile="include/xbee/sxa.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1aaba7c04f6808b9ca181417fa48a4536e" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t polling_rate</definition>
+        <argsstring></argsstring>
+        <name>polling_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="413" column="1" bodyfile="include/xbee/sxa.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a8d8ab853c4db7da7889ddf177619eef8" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t power_level</definition>
+        <argsstring></argsstring>
+        <name>power_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="414" column="1" bodyfile="include/xbee/sxa.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a24a7cf27e344d37b32c65c7be8c9c9e7" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t power_mode</definition>
+        <argsstring></argsstring>
+        <name>power_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="415" column="1" bodyfile="include/xbee/sxa.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a19e007d8d40744632be14e3791dabde0" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t rssi_timer</definition>
+        <argsstring></argsstring>
+        <name>rssi_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="416" column="1" bodyfile="include/xbee/sxa.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1af32b39eca3921c88cbe56528343fa7fc" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t scan_channels</definition>
+        <argsstring></argsstring>
+        <name>scan_channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="417" column="1" bodyfile="include/xbee/sxa.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1aa80aa88a7abf5d8d659bb026c0e900fb" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t scan_duration</definition>
+        <argsstring></argsstring>
+        <name>scan_duration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="418" column="1" bodyfile="include/xbee/sxa.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a19676a93e32db8ba76b14f8381b088ad" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t serial_parity</definition>
+        <argsstring></argsstring>
+        <name>serial_parity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="419" column="1" bodyfile="include/xbee/sxa.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1aa826e8539b193121c88bec64543fbcc6" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint32_t</type>
+        <definition>sxa_cached_uint32_t serial_rate</definition>
+        <argsstring></argsstring>
+        <name>serial_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="420" column="1" bodyfile="include/xbee/sxa.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ae9676b0bfe7646b4b58db600d0e3a0a6" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t sleep_count</definition>
+        <argsstring></argsstring>
+        <name>sleep_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="421" column="1" bodyfile="include/xbee/sxa.h" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ad5afcd7a6f3cbdb16fe69055e7b8846d" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t sleep_disassoc</definition>
+        <argsstring></argsstring>
+        <name>sleep_disassoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="422" column="1" bodyfile="include/xbee/sxa.h" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a28336f5bad6b465b0369b3acfc62d189" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t sleep_mode</definition>
+        <argsstring></argsstring>
+        <name>sleep_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="423" column="1" bodyfile="include/xbee/sxa.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1aed3bebe6a6fae2d721034293d2ab5e6f" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t sleep_options</definition>
+        <argsstring></argsstring>
+        <name>sleep_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="424" column="1" bodyfile="include/xbee/sxa.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ae374c3f0670061420de61693cc9a4b45" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t sleep_period</definition>
+        <argsstring></argsstring>
+        <name>sleep_period</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="425" column="1" bodyfile="include/xbee/sxa.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a9438233a08e6ad639e8d2ef265afa76c" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t sleep_sample_rate</definition>
+        <argsstring></argsstring>
+        <name>sleep_sample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="426" column="1" bodyfile="include/xbee/sxa.h" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a1b8b3953786fc8f4e85babd2424714ea" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t sleep_time</definition>
+        <argsstring></argsstring>
+        <name>sleep_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="427" column="1" bodyfile="include/xbee/sxa.h" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a5c074f146b34af1d0676c4ed20dd8add" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t sleep_wake</definition>
+        <argsstring></argsstring>
+        <name>sleep_wake</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="428" column="1" bodyfile="include/xbee/sxa.h" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a797bdd82fbff3c15a514b681fb86497d" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t source_endpoint</definition>
+        <argsstring></argsstring>
+        <name>source_endpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="429" column="1" bodyfile="include/xbee/sxa.h" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ad870c94f6e1cb4697b6d2e04f15e71e7" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t stack_profile</definition>
+        <argsstring></argsstring>
+        <name>stack_profile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="430" column="1" bodyfile="include/xbee/sxa.h" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1aee1069d5bd2d37c3be8c5c5d4e17fa02" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t stop_bits</definition>
+        <argsstring></argsstring>
+        <name>stop_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="431" column="1" bodyfile="include/xbee/sxa.h" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a3212070d20eab81e78e6ed45c625d9cf" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t supply_threshold</definition>
+        <argsstring></argsstring>
+        <name>supply_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="432" column="1" bodyfile="include/xbee/sxa.h" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1aaf807aaf291b79ce0e474e3bc5525e3a" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t xbee_retries</definition>
+        <argsstring></argsstring>
+        <name>xbee_retries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="433" column="1" bodyfile="include/xbee/sxa.h" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ae6f50e937e739f9f76268cd9ada5913b" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t wake_host_delay</definition>
+        <argsstring></argsstring>
+        <name>wake_host_delay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="434" column="1" bodyfile="include/xbee/sxa.h" bodystart="434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a7305c35cc7e30bf2e8f957bc632bd568" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t zigbee_enable</definition>
+        <argsstring></argsstring>
+        <name>zigbee_enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="435" column="1" bodyfile="include/xbee/sxa.h" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a4ca0beadf74288cf8953000e9c68974f" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t association</definition>
+        <argsstring></argsstring>
+        <name>association</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="437" column="1" bodyfile="include/xbee/sxa.h" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a5242f89ec315c2686d3fbd5c9722986e" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t children</definition>
+        <argsstring></argsstring>
+        <name>children</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="438" column="1" bodyfile="include/xbee/sxa.h" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a12367fce32f52967043c0af353fa2914" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t max_payload</definition>
+        <argsstring></argsstring>
+        <name>max_payload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="439" column="1" bodyfile="include/xbee/sxa.h" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ade3c4bde58c058d4c0bf3c8c253687b6" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t config_code</definition>
+        <argsstring></argsstring>
+        <name>config_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="440" column="1" bodyfile="include/xbee/sxa.h" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ab46f86f2b69313ee4718880c9c3b3069" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t verify_cert</definition>
+        <argsstring></argsstring>
+        <name>verify_cert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="441" column="1" bodyfile="include/xbee/sxa.h" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a9d0f7386d38f7870566220befdb0b2ea" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t supply_voltage</definition>
+        <argsstring></argsstring>
+        <name>supply_voltage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="442" column="1" bodyfile="include/xbee/sxa.h" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1acd76a81e7c979f34f6556d30279f7a11" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="443" column="1" bodyfile="include/xbee/sxa.h" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a9ad0ea06f029820d1f85b9ca75ab9eff" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t duty_cycle</definition>
+        <argsstring></argsstring>
+        <name>duty_cycle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="444" column="1" bodyfile="include/xbee/sxa.h" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a0f7f3bc7364d8cace8d6271080973848" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t rssi</definition>
+        <argsstring></argsstring>
+        <name>rssi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="445" column="1" bodyfile="include/xbee/sxa.h" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a99f0c98b1183b3312790bae7d260c904" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t tx_power</definition>
+        <argsstring></argsstring>
+        <name>tx_power</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="446" column="1" bodyfile="include/xbee/sxa.h" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a0966b19e355117ac1fd4b0803385f4a0" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint8_t</type>
+        <definition>sxa_cached_uint8_t sleep_status</definition>
+        <argsstring></argsstring>
+        <name>sleep_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="447" column="1" bodyfile="include/xbee/sxa.h" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a731ed9c34ea8cd4c59e540336a2f754b" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t sleep_time_op</definition>
+        <argsstring></argsstring>
+        <name>sleep_time_op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="448" column="1" bodyfile="include/xbee/sxa.h" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a60c7dd44749ecf219809ebea0923156c" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint16_t</type>
+        <definition>sxa_cached_uint16_t wake_time</definition>
+        <argsstring></argsstring>
+        <name>wake_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="449" column="1" bodyfile="include/xbee/sxa.h" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a1d997ce4ddc636bf758ce8b467c6375c" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint32_t</type>
+        <definition>sxa_cached_uint32_t ack_failures</definition>
+        <argsstring></argsstring>
+        <name>ack_failures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="450" column="1" bodyfile="include/xbee/sxa.h" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ae386d0a73ecaa5d9e8ecdf2a5c1c937a" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint32_t</type>
+        <definition>sxa_cached_uint32_t cca_failures</definition>
+        <argsstring></argsstring>
+        <name>cca_failures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="451" column="1" bodyfile="include/xbee/sxa.h" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ab651a5fe7d96c4a7310cf30dc5693f7d" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint32_t</type>
+        <definition>sxa_cached_uint32_t good_packets</definition>
+        <argsstring></argsstring>
+        <name>good_packets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="452" column="1" bodyfile="include/xbee/sxa.h" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ac7aa17ed22ae2c91a61313365fd9d37d" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint32_t</type>
+        <definition>sxa_cached_uint32_t missed_syncs</definition>
+        <argsstring></argsstring>
+        <name>missed_syncs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="453" column="1" bodyfile="include/xbee/sxa.h" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1ae5c478ae4e83cf0d44c55ab530a7c265" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint32_t</type>
+        <definition>sxa_cached_uint32_t missed_sync_msg</definition>
+        <argsstring></argsstring>
+        <name>missed_sync_msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="454" column="1" bodyfile="include/xbee/sxa.h" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a2aceee1ec0b4d950e907d33ee61bf31f" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint32_t</type>
+        <definition>sxa_cached_uint32_t rf_errors</definition>
+        <argsstring></argsstring>
+        <name>rf_errors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="455" column="1" bodyfile="include/xbee/sxa.h" bodystart="455" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__node__t_1a98a3b8427635213b5171534ae43c0df9" prot="public" static="no" mutable="no">
+        <type>sxa_cached_uint32_t</type>
+        <definition>sxa_cached_uint32_t tx_errors</definition>
+        <argsstring></argsstring>
+        <name>tx_errors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="456" column="1" bodyfile="include/xbee/sxa.h" bodystart="456" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsxa__node__t_1a8e784384cf9ff8c8972ae68e501e05c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>_SXA_CACHED_STRING</definition>
+        <argsstring>(command_char, 1)</argsstring>
+        <name>_SXA_CACHED_STRING</name>
+        <param>
+          <type>command_char</type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="380" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structsxa__node__t_1a72344c6c328b655270d31a7aa74a0c7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>_SXA_CACHED_BIN</definition>
+        <argsstring>(ext_pan_id, 8)</argsstring>
+        <name>_SXA_CACHED_BIN</name>
+        <param>
+          <type>ext_pan_id</type>
+        </param>
+        <param>
+          <type>8</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="392" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structsxa__node__t_1a54caac55fa94d32e26c54447a064ebee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>_SXA_CACHED_BIN</definition>
+        <argsstring>(link_key, 16)</argsstring>
+        <name>_SXA_CACHED_BIN</name>
+        <param>
+          <type>link_key</type>
+        </param>
+        <param>
+          <type>16</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="402" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structsxa__node__t_1a18c56e9dac1d18c895c0989b85b583ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>_SXA_CACHED_BIN</definition>
+        <argsstring>(network_key, 16)</argsstring>
+        <name>_SXA_CACHED_BIN</name>
+        <param>
+          <type>network_key</type>
+        </param>
+        <param>
+          <type>16</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="409" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This structure and the attendant functions provide a useful layer for Rabbit applications who wish to use a simplified interface to the XBee API. </para>    </briefdescription>
+    <detaileddescription>
+<para>The Simplified XBee API (SXA) has the following facilities:<itemizedlist>
+<listitem><para>discovery of nodes and maintenance of a node table</para></listitem><listitem><para>access to configurable I/Os on the XBee module</para></listitem><listitem><para>management of cached register values</para></listitem><listitem><para>establishment of point-to-point reliable data streams (xbee_sxa_socket) [Rabbit implementation only].</para></listitem></itemizedlist>
+</para><para>The first three items are device-independent. Data streams requires Rabbit-compatible CPUs on both ends.</para><para>It is assumed that XBee modules are used. This library depends on proprietary XBee functions, so interoperability with other manufacturers&apos; devices is not expected. In fact, since SXA currently supports only ATND node discovery (DDO) and not ZDO discovery, only XBee devices will show up in the node list. For upward compatibility, code can call sxa_is_digi() to determine whether the node is a &apos;Digi&apos; (i.e. XBee) device, and thus supports remote AT commands. The .caps field has additional information about node capabilities.</para><para>Node discovery is the most important service. Each node is added to a linked list which is dynamically allocated. The application deals with pointers to individual table elements, as returned by table searching API functions. Each new node (identified uniquely by IEEE 64-bit address) has a table entry allocated. The entry is never freed so that applications do not have to be concerned with dangling pointers. The assumption is that the total set of XBee nodes ever discovered (in one power cycle) is bounded to a reasonably small number (maybe in the low hundreds).</para><para>Each table entry contains basic addressing data for the node, some of which may be dynamically updated. The IEEE address is guaranteed to be constant. The table entry contains pointers (initially set NULL) which may be set to point to other dynamically allocated information such as I/O configuration. Some of the additional information is used to maintain &quot;cached&quot; settings of remote node configuration, which is necessary to avoid redundant radio traffic. Other information is used to record updated state on the remote device, and to implement scheduling for remote commands. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="51">
+        <label>xbee_io_t</label>
+        <link refid="structxbee__io__t"/>
+        <childnode refid="52" relation="usage">
+          <edgelabel>clc</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>wpan_envelope_t</label>
+        <link refid="structwpan__envelope__t"/>
+        <childnode refid="44" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>ieee_address</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>xbee_dev_t</label>
+        <link refid="structxbee__dev__t"/>
+        <childnode refid="41" relation="usage">
+          <edgelabel>rx</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>is_awake</edgelabel>
+          <edgelabel>reset</edgelabel>
+          <edgelabel>node_id_handler</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>serport</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>wpan_dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>xbee_node_id_t</label>
+        <link refid="structxbee__node__id__t"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>ieee_addr_be</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>wpan_address_t</label>
+        <link refid="structwpan__address__t"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>ieee</edgelabel>
+        </childnode>
+      </node>
+      <node id="50">
+        <label>xbee_at_cmd_t</label>
+        <link refid="unionxbee__at__cmd__t"/>
+      </node>
+      <node id="43">
+        <label>xbee_cbuf_t</label>
+        <link refid="structxbee__cbuf__t"/>
+      </node>
+      <node id="49">
+        <label>wpan_cluster_table_entry_t</label>
+        <link refid="structwpan__cluster__table__entry__t"/>
+        <childnode refid="45" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>wpan_endpoint_table_entry_t</label>
+        <link refid="structwpan__endpoint__table__entry__t"/>
+        <childnode refid="45" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>ep_state</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>cluster_table</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>rx</label>
+        <link refid="structxbee__dev__t_1_1rx"/>
+      </node>
+      <node id="35">
+        <label>addr64</label>
+        <link refid="unionaddr64"/>
+      </node>
+      <node id="47">
+        <label>wpan_ep_state_t</label>
+        <link refid="structwpan__ep__state__t"/>
+        <childnode refid="48" relation="usage">
+          <edgelabel>conversations</edgelabel>
+        </childnode>
+      </node>
+      <node id="52">
+        <label>xbee_command_list_context_t</label>
+        <link refid="structxbee__command__list__context__t"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="48">
+        <label>wpan_conversation_t</label>
+        <link refid="structwpan__conversation__t"/>
+        <childnode refid="48" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="44">
+        <label>wpan_dev_t</label>
+        <link refid="structwpan__dev__t"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>endpoint_send</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>endpoint_table</edgelabel>
+          <edgelabel>endpoint_get_next</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>tick</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>_xbee_reg_descr_t</label>
+        <link refid="struct__xbee__reg__descr__t"/>
+      </node>
+      <node id="33">
+        <label>sxa_node_t</label>
+        <link refid="structsxa__node__t"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>address</edgelabel>
+          <edgelabel>addr_ptr</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>groups</edgelabel>
+          <edgelabel>doing_group</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>next_local</edgelabel>
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>xbee</edgelabel>
+        </childnode>
+        <childnode refid="51" relation="usage">
+          <edgelabel>io</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>misc_reg</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>queued</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>dest_addr</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>sxa_cached_group_t</label>
+        <link refid="structsxa__cached__group__t"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>get_fn</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>get_list</edgelabel>
+        </childnode>
+      </node>
+      <node id="39">
+        <label>xbee_cmd_response_t</label>
+        <link refid="structxbee__cmd__response__t"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>command</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>xbee_serial_t</label>
+        <link refid="structxbee__serial__t"/>
+        <childnode refid="43" relation="usage">
+          <edgelabel>rxbuf</edgelabel>
+          <edgelabel>txbuf</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>xbee_atcmd_reg_t</label>
+        <link refid="structxbee__atcmd__reg__t"/>
+        <childnode refid="39" relation="usage">
+          <edgelabel>callback</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>command</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xbee/sxa.h" line="269" column="1" bodyfile="include/xbee/sxa.h" bodystart="268" bodyend="458"/>
+    <listofallmembers>
+      <member refid="structsxa__node__t_1a72344c6c328b655270d31a7aa74a0c7e" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>_SXA_CACHED_BIN</name></member>
+      <member refid="structsxa__node__t_1a54caac55fa94d32e26c54447a064ebee" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>_SXA_CACHED_BIN</name></member>
+      <member refid="structsxa__node__t_1a18c56e9dac1d18c895c0989b85b583ae" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>_SXA_CACHED_BIN</name></member>
+      <member refid="structsxa__node__t_1a8e784384cf9ff8c8972ae68e501e05c4" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>_SXA_CACHED_STRING</name></member>
+      <member refid="structsxa__node__t_1a1d997ce4ddc636bf758ce8b467c6375c" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>ack_failures</name></member>
+      <member refid="structsxa__node__t_1ae22454fb2324ac2f3c9ddc07fe24ae35" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>addr_ptr</name></member>
+      <member refid="structsxa__node__t_1a66a58a737aee9733019399e2eceabf4a" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>address</name></member>
+      <member refid="structsxa__node__t_1addae4971fe88bef06542be6b2de54ea3" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>aggregation</name></member>
+      <member refid="structsxa__node__t_1a4f850621475e7b60aa5aee84dda81a8f" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>ao</name></member>
+      <member refid="structsxa__node__t_1a4857814d272d7c236f20217036eadaa7" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>assoc_led</name></member>
+      <member refid="structsxa__node__t_1a4ca0beadf74288cf8953000e9c68974f" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>association</name></member>
+      <member refid="structsxa__node__t_1afbbaf03169e6357fcc78463452c5f473" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>beacon_response</name></member>
+      <member refid="structsxa__node__t_1a2fe0610672454f943a5a01ade84e7180" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>broadcast_hops</name></member>
+      <member refid="structsxa__node__t_1a6d8abccf90f28f0ea0a3423eaffacc7e" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>caps</name></member>
+      <member refid="structsxa__node__t_1ae386d0a73ecaa5d9e8ecdf2a5c1c937a" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>cca_failures</name></member>
+      <member refid="structsxa__node__t_1a9b601d4ed7a3ec9b0e05528390e78cdd" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>cca_threshold</name></member>
+      <member refid="structsxa__node__t_1a1f6b05bef57db1f1cbb4740a78914b5f" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>channel</name></member>
+      <member refid="structsxa__node__t_1a5242f89ec315c2686d3fbd5c9722986e" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>children</name></member>
+      <member refid="structsxa__node__t_1a112bc7028dd0dd7833eff63333fae9bb" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>cluster_id</name></member>
+      <member refid="structsxa__node__t_1a46cab60ad63ab8babe24c5ce86516638" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>command_timeout</name></member>
+      <member refid="structsxa__node__t_1ade3c4bde58c058d4c0bf3c8c253687b6" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>config_code</name></member>
+      <member refid="structsxa__node__t_1a7a94e7e4b3817846d70454a9ab66da8b" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>coord_assoc</name></member>
+      <member refid="structsxa__node__t_1ad3fce2599083f4ebf5f888b8330d504a" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>coord_enable</name></member>
+      <member refid="structsxa__node__t_1a296bccce81453e35d3726ac1476101eb" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>dd</name></member>
+      <member refid="structsxa__node__t_1ab9f0e8453527234d22e536993a78456d" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>delay_slots</name></member>
+      <member refid="structsxa__node__t_1abb357ccdd72453fd6f4ee76e18fde30c" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>dest_addr</name></member>
+      <member refid="structsxa__node__t_1a689242fa5061f19e077a70301de98059" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>dest_endpoint</name></member>
+      <member refid="structsxa__node__t_1a02af329d146957380b2ca7ffaae5bd83" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>device_info_cf</name></member>
+      <member refid="structsxa__node__t_1ac9f368083274bb195986b50252588f7b" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>device_options</name></member>
+      <member refid="structsxa__node__t_1adff7949139ea5500a94ee6fbedad3087" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>dhdl_cf</name></member>
+      <member refid="structsxa__node__t_1a0a42004e700f2c03e6129a8147e95d97" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>discover_timeout</name></member>
+      <member refid="structsxa__node__t_1ab2dff3a5f503f07dec32ae1e59c85898" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>doing_group</name></member>
+      <member refid="structsxa__node__t_1a9ad0ea06f029820d1f85b9ca75ab9eff" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>duty_cycle</name></member>
+      <member refid="structsxa__node__t_1a00ffdb170ca6e037cd0173021ef8e4c7" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>encrypt_enable</name></member>
+      <member refid="structsxa__node__t_1ae49cea8f0239bc780cf483678c71128f" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>encrypt_options</name></member>
+      <member refid="structsxa__node__t_1a23a460f331135e1dc1a5eb78119a4371" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>end_assoc</name></member>
+      <member refid="structsxa__node__t_1ac8e0f35fdeff288dd1a7b4f49754c9b2" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>firmware_version</name></member>
+      <member refid="structsxa__node__t_1ac58d8910a5f2c760b01eac5ad38a7f16" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>flow_threshold</name></member>
+      <member refid="structsxa__node__t_1ab651a5fe7d96c4a7310cf30dc5693f7d" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>good_packets</name></member>
+      <member refid="structsxa__node__t_1a41aeca059e6fef32cb611359925a0c5c" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>groups</name></member>
+      <member refid="structsxa__node__t_1a31a81247489c58560b3127236c6b7af4" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>guard_times</name></member>
+      <member refid="structsxa__node__t_1ad4c7c16c071f95965e2e506752b450fe" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>hardware_version</name></member>
+      <member refid="structsxa__node__t_1a44d133b35c0be116fac508f07a528eae" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>hop_sequence</name></member>
+      <member refid="structsxa__node__t_1a65028dacab709b3d58f37d40d9c1b572" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>id</name></member>
+      <member refid="structsxa__node__t_1a8411ba20cacdddb520e6c1358291c9ba" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>index</name></member>
+      <member refid="structsxa__node__t_1a2e3166588ffbe8aea29b921e2c3fc6d3" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>initial_pan_id</name></member>
+      <member refid="structsxa__node__t_1a87711fd12194e90fe58291cf2ea6e30f" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>io</name></member>
+      <member refid="structsxa__node__t_1a644deb9891fae6db24eb3f7ef5870965" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>io_address</name></member>
+      <member refid="structsxa__node__t_1a8b839f7ad17e883aa9ef2532b2be929a" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>io_config_cf</name></member>
+      <member refid="structsxa__node__t_1abc455e4cec44f0633172562200c876ca" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>io_enable</name></member>
+      <member refid="structsxa__node__t_1a7cc47c55ea75a6b3a18415bbde2d8a0a" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>join_notification</name></member>
+      <member refid="structsxa__node__t_1abc833d46789693278bb0217a1fa08315" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>join_time</name></member>
+      <member refid="structsxa__node__t_1a23899e347d6c43d4242065204cfa0939" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>join_verification</name></member>
+      <member refid="structsxa__node__t_1a72d79130c22c9fd91a190ef41b011fce" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>mac_mode</name></member>
+      <member refid="structsxa__node__t_1a7cdc48529cf2caa8c23e4d1587c5dcbb" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>mac_retries</name></member>
+      <member refid="structsxa__node__t_1aff8f109f646d13ad739b8a1968cd448c" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>max_hops</name></member>
+      <member refid="structsxa__node__t_1a12367fce32f52967043c0af353fa2914" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>max_payload</name></member>
+      <member refid="structsxa__node__t_1a9f101d3b4bbdb6e537204aaea805e79d" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>mesh_retries</name></member>
+      <member refid="structsxa__node__t_1ae825a2809f705ef65c961e8bfe3e98cc" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>misc_reg</name></member>
+      <member refid="structsxa__node__t_1ae5c478ae4e83cf0d44c55ab530a7c265" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>missed_sync_msg</name></member>
+      <member refid="structsxa__node__t_1ac7aa17ed22ae2c91a61313365fd9d37d" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>missed_syncs</name></member>
+      <member refid="structsxa__node__t_1a9f73e487a189f357e4c2d472fe280eeb" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>multi_transmit</name></member>
+      <member refid="structsxa__node__t_1a12b87380c0ae5a34354e9eae5c073ece" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>net_delay_slots</name></member>
+      <member refid="structsxa__node__t_1af2a08d1eb0031318ec99dd9912bbd9ef" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>network_watchdog</name></member>
+      <member refid="structsxa__node__t_1a10a0382c260b61c11040f1ea8853abd5" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>next</name></member>
+      <member refid="structsxa__node__t_1aba67917f7787a4106c8c066621db9bea" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>next_local</name></member>
+      <member refid="structsxa__node__t_1ac2acdbe4009c4fc763c6ac93bc0056eb" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>node_id_cf</name></member>
+      <member refid="structsxa__node__t_1a8de35431542d2c2508bb17ac8fa48a84" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>nqueued</name></member>
+      <member refid="structsxa__node__t_1a3a4e03433345119bd0bb6e347a7424a2" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>packet_timeout</name></member>
+      <member refid="structsxa__node__t_1a90ab3737ab9066793e4bce19727d6552" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>pan_id</name></member>
+      <member refid="structsxa__node__t_1aaba7c04f6808b9ca181417fa48a4536e" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>polling_rate</name></member>
+      <member refid="structsxa__node__t_1a8d8ab853c4db7da7889ddf177619eef8" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>power_level</name></member>
+      <member refid="structsxa__node__t_1a24a7cf27e344d37b32c65c7be8c9c9e7" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>power_mode</name></member>
+      <member refid="structsxa__node__t_1a8aa02a31241baba968d2892c98971c65" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>q_index</name></member>
+      <member refid="structsxa__node__t_1a17615250f94d830781403db708cd68d3" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>queued</name></member>
+      <member refid="structsxa__node__t_1a2aceee1ec0b4d950e907d33ee61bf31f" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>rf_errors</name></member>
+      <member refid="structsxa__node__t_1a0f7f3bc7364d8cace8d6271080973848" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>rssi</name></member>
+      <member refid="structsxa__node__t_1a19e007d8d40744632be14e3791dabde0" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>rssi_timer</name></member>
+      <member refid="structsxa__node__t_1af32b39eca3921c88cbe56528343fa7fc" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>scan_channels</name></member>
+      <member refid="structsxa__node__t_1aa80aa88a7abf5d8d659bb026c0e900fb" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>scan_duration</name></member>
+      <member refid="structsxa__node__t_1a19676a93e32db8ba76b14f8381b088ad" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>serial_parity</name></member>
+      <member refid="structsxa__node__t_1aa826e8539b193121c88bec64543fbcc6" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>serial_rate</name></member>
+      <member refid="structsxa__node__t_1ae9676b0bfe7646b4b58db600d0e3a0a6" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>sleep_count</name></member>
+      <member refid="structsxa__node__t_1ad5afcd7a6f3cbdb16fe69055e7b8846d" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>sleep_disassoc</name></member>
+      <member refid="structsxa__node__t_1a28336f5bad6b465b0369b3acfc62d189" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>sleep_mode</name></member>
+      <member refid="structsxa__node__t_1aed3bebe6a6fae2d721034293d2ab5e6f" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>sleep_options</name></member>
+      <member refid="structsxa__node__t_1ae374c3f0670061420de61693cc9a4b45" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>sleep_period</name></member>
+      <member refid="structsxa__node__t_1a9438233a08e6ad639e8d2ef265afa76c" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>sleep_sample_rate</name></member>
+      <member refid="structsxa__node__t_1a0966b19e355117ac1fd4b0803385f4a0" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>sleep_status</name></member>
+      <member refid="structsxa__node__t_1a1b8b3953786fc8f4e85babd2424714ea" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>sleep_time</name></member>
+      <member refid="structsxa__node__t_1a731ed9c34ea8cd4c59e540336a2f754b" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>sleep_time_op</name></member>
+      <member refid="structsxa__node__t_1a5c074f146b34af1d0676c4ed20dd8add" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>sleep_wake</name></member>
+      <member refid="structsxa__node__t_1a797bdd82fbff3c15a514b681fb86497d" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>source_endpoint</name></member>
+      <member refid="structsxa__node__t_1ad870c94f6e1cb4697b6d2e04f15e71e7" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>stack_profile</name></member>
+      <member refid="structsxa__node__t_1ac543485164457c0eefd43dcee04c82c6" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>stamp</name></member>
+      <member refid="structsxa__node__t_1aee1069d5bd2d37c3be8c5c5d4e17fa02" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>stop_bits</name></member>
+      <member refid="structsxa__node__t_1a3212070d20eab81e78e6ed45c625d9cf" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>supply_threshold</name></member>
+      <member refid="structsxa__node__t_1a9d0f7386d38f7870566220befdb0b2ea" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>supply_voltage</name></member>
+      <member refid="structsxa__node__t_1acd76a81e7c979f34f6556d30279f7a11" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>temperature</name></member>
+      <member refid="structsxa__node__t_1a98a3b8427635213b5171534ae43c0df9" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>tx_errors</name></member>
+      <member refid="structsxa__node__t_1a99f0c98b1183b3312790bae7d260c904" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>tx_power</name></member>
+      <member refid="structsxa__node__t_1ab46f86f2b69313ee4718880c9c3b3069" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>verify_cert</name></member>
+      <member refid="structsxa__node__t_1ae6f50e937e739f9f76268cd9ada5913b" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>wake_host_delay</name></member>
+      <member refid="structsxa__node__t_1a60c7dd44749ecf219809ebea0923156c" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>wake_time</name></member>
+      <member refid="structsxa__node__t_1a79f0c368a2efd172b3779a2ef3a26706" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>xbee</name></member>
+      <member refid="structsxa__node__t_1aaf807aaf291b79ce0e474e3bc5525e3a" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>xbee_retries</name></member>
+      <member refid="structsxa__node__t_1a7305c35cc7e30bf2e8f957bc632bd568" prot="public" virt="non-virtual"><scope>sxa_node_t</scope><name>zigbee_enable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

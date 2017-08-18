@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="xmodem__crc16_8c" kind="file" language="C++">
+    <compoundname>xmodem_crc16.c</compoundname>
+    <includes refid="platform_8h" local="yes">xbee/platform.h</includes>
+    <includes refid="xmodem__crc16_8h" local="yes">xbee/xmodem_crc16.h</includes>
+    <incdepgraph>
+      <node id="1228">
+        <label>src/util/xmodem_crc16.c</label>
+        <link refid="xmodem__crc16_8c"/>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1234" relation="include">
+        </childnode>
+      </node>
+      <node id="1230">
+        <label>errno.h</label>
+      </node>
+      <node id="1232">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="1233" relation="include">
+        </childnode>
+      </node>
+      <node id="1231">
+        <label>stddef.h</label>
+      </node>
+      <node id="1234">
+        <label>xbee/xmodem_crc16.h</label>
+        <link refid="xmodem__crc16_8h"/>
+        <childnode refid="1229" relation="include">
+        </childnode>
+      </node>
+      <node id="1229">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="1230" relation="include">
+        </childnode>
+        <childnode refid="1231" relation="include">
+        </childnode>
+        <childnode refid="1232" relation="include">
+        </childnode>
+      </node>
+      <node id="1233">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__util__xmodem_1gab903230030042c3ee444aa887b705e06" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> <ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>const FAR uint16_t crc16_table[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>crc16_table</name>
+        <briefdescription>
+<para>Table for XMODEM and &quot;False CCITT&quot; CRC, calculated with standard 0x1021 polynomial. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/util/xmodem_crc16.c" line="26" column="1" bodyfile="src/util/xmodem_crc16.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__util__xmodem_1ga48b65051c5461be6d016802e2eb8a138" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>XBEE_BEGIN_DECLS uint16_t crc16_calc</definition>
+        <argsstring>(const void FAR *data, uint16_t length, uint16_t current)</argsstring>
+        <name>crc16_calc</name>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+<para>Calculate CRC-16 of a data buffer using polynomial (0x1021) without reflection. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data to CRC</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to CRC</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When calculating a CRC-16 over a stream or a large range of bytes, it is necessary to call crc16_calc multiple times.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<itemizedlist>
+<listitem><para>Use an initial value of 0x0000 to generate an &quot;XMODEM&quot; CRC.</para></listitem><listitem><para>Use an initial value of 0xFFFF to generate a &quot;FALSE CCITT&quot; CRC.</para></listitem></itemizedlist>
+</para><para><simplesect kind="return"><para>CRC-16, without reflection, for <emphasis>length</emphasis> bytes of <emphasis>data</emphasis>, using <emphasis>current</emphasis> as the starting CRC and 0x1021 as a polynomial.</para></simplesect>
+<simplesect kind="see"><para><ulink url="http://regregex.bbcmicro.net/crc-catalogue.htm#appendix.a">http://regregex.bbcmicro.net/crc-catalogue.htm#appendix.a</ulink> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/util/xmodem_crc16.c" line="82" column="1" bodyfile="src/util/xmodem_crc16.c" bodystart="82" bodyend="91"/>
+        <references refid="group__xbee__io_1gac5955aa1e44ff234e6d78a19cf68f25c" compoundref="io_8h" startline="117">data</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>CRC16 implementation for use by XBee&apos;s Xmodem library if platform doesn&apos;t have an existing implementation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2008-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="xmodem__crc16_8h" kindref="compound">xbee/xmodem_crc16.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="group__util__xmodem_1gab903230030042c3ee444aa887b705e06" refkind="member"><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__util__xmodem_1gab903230030042c3ee444aa887b705e06" kindref="member">crc16_table</ref>[256]<sp/>=</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/>0x0000,<sp/>0x1021,<sp/>0x2042,<sp/>0x3063,<sp/>0x4084,<sp/>0x50A5,<sp/>0x60C6,<sp/>0x70E7,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/>0x8108,<sp/>0x9129,<sp/>0xA14A,<sp/>0xB16B,<sp/>0xC18C,<sp/>0xD1AD,<sp/>0xE1CE,<sp/>0xF1EF,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/>0x1231,<sp/>0x0210,<sp/>0x3273,<sp/>0x2252,<sp/>0x52B5,<sp/>0x4294,<sp/>0x72F7,<sp/>0x62D6,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/>0x9339,<sp/>0x8318,<sp/>0xB37B,<sp/>0xA35A,<sp/>0xD3BD,<sp/>0xC39C,<sp/>0xF3FF,<sp/>0xE3DE,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/>0x2462,<sp/>0x3443,<sp/>0x0420,<sp/>0x1401,<sp/>0x64E6,<sp/>0x74C7,<sp/>0x44A4,<sp/>0x5485,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/>0xA56A,<sp/>0xB54B,<sp/>0x8528,<sp/>0x9509,<sp/>0xE5EE,<sp/>0xF5CF,<sp/>0xC5AC,<sp/>0xD58D,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/>0x3653,<sp/>0x2672,<sp/>0x1611,<sp/>0x0630,<sp/>0x76D7,<sp/>0x66F6,<sp/>0x5695,<sp/>0x46B4,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/>0xB75B,<sp/>0xA77A,<sp/>0x9719,<sp/>0x8738,<sp/>0xF7DF,<sp/>0xE7FE,<sp/>0xD79D,<sp/>0xC7BC,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/>0x48C4,<sp/>0x58E5,<sp/>0x6886,<sp/>0x78A7,<sp/>0x0840,<sp/>0x1861,<sp/>0x2802,<sp/>0x3823,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/>0xC9CC,<sp/>0xD9ED,<sp/>0xE98E,<sp/>0xF9AF,<sp/>0x8948,<sp/>0x9969,<sp/>0xA90A,<sp/>0xB92B,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>0x5AF5,<sp/>0x4AD4,<sp/>0x7AB7,<sp/>0x6A96,<sp/>0x1A71,<sp/>0x0A50,<sp/>0x3A33,<sp/>0x2A12,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/>0xDBFD,<sp/>0xCBDC,<sp/>0xFBBF,<sp/>0xEB9E,<sp/>0x9B79,<sp/>0x8B58,<sp/>0xBB3B,<sp/>0xAB1A,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/>0x6CA6,<sp/>0x7C87,<sp/>0x4CE4,<sp/>0x5CC5,<sp/>0x2C22,<sp/>0x3C03,<sp/>0x0C60,<sp/>0x1C41,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>0xEDAE,<sp/>0xFD8F,<sp/>0xCDEC,<sp/>0xDDCD,<sp/>0xAD2A,<sp/>0xBD0B,<sp/>0x8D68,<sp/>0x9D49,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/>0x7E97,<sp/>0x6EB6,<sp/>0x5ED5,<sp/>0x4EF4,<sp/>0x3E13,<sp/>0x2E32,<sp/>0x1E51,<sp/>0x0E70,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/>0xFF9F,<sp/>0xEFBE,<sp/>0xDFDD,<sp/>0xCFFC,<sp/>0xBF1B,<sp/>0xAF3A,<sp/>0x9F59,<sp/>0x8F78,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/>0x9188,<sp/>0x81A9,<sp/>0xB1CA,<sp/>0xA1EB,<sp/>0xD10C,<sp/>0xC12D,<sp/>0xF14E,<sp/>0xE16F,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>0x1080,<sp/>0x00A1,<sp/>0x30C2,<sp/>0x20E3,<sp/>0x5004,<sp/>0x4025,<sp/>0x7046,<sp/>0x6067,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/>0x83B9,<sp/>0x9398,<sp/>0xA3FB,<sp/>0xB3DA,<sp/>0xC33D,<sp/>0xD31C,<sp/>0xE37F,<sp/>0xF35E,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/>0x02B1,<sp/>0x1290,<sp/>0x22F3,<sp/>0x32D2,<sp/>0x4235,<sp/>0x5214,<sp/>0x6277,<sp/>0x7256,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>0xB5EA,<sp/>0xA5CB,<sp/>0x95A8,<sp/>0x8589,<sp/>0xF56E,<sp/>0xE54F,<sp/>0xD52C,<sp/>0xC50D,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/>0x34E2,<sp/>0x24C3,<sp/>0x14A0,<sp/>0x0481,<sp/>0x7466,<sp/>0x6447,<sp/>0x5424,<sp/>0x4405,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/>0xA7DB,<sp/>0xB7FA,<sp/>0x8799,<sp/>0x97B8,<sp/>0xE75F,<sp/>0xF77E,<sp/>0xC71D,<sp/>0xD73C,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/>0x26D3,<sp/>0x36F2,<sp/>0x0691,<sp/>0x16B0,<sp/>0x6657,<sp/>0x7676,<sp/>0x4615,<sp/>0x5634,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/>0xD94C,<sp/>0xC96D,<sp/>0xF90E,<sp/>0xE92F,<sp/>0x99C8,<sp/>0x89E9,<sp/>0xB98A,<sp/>0xA9AB,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/>0x5844,<sp/>0x4865,<sp/>0x7806,<sp/>0x6827,<sp/>0x18C0,<sp/>0x08E1,<sp/>0x3882,<sp/>0x28A3,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>0xCB7D,<sp/>0xDB5C,<sp/>0xEB3F,<sp/>0xFB1E,<sp/>0x8BF9,<sp/>0x9BD8,<sp/>0xABBB,<sp/>0xBB9A,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/>0x4A75,<sp/>0x5A54,<sp/>0x6A37,<sp/>0x7A16,<sp/>0x0AF1,<sp/>0x1AD0,<sp/>0x2AB3,<sp/>0x3A92,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/>0xFD2E,<sp/>0xED0F,<sp/>0xDD6C,<sp/>0xCD4D,<sp/>0xBDAA,<sp/>0xAD8B,<sp/>0x9DE8,<sp/>0x8DC9,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/>0x7C26,<sp/>0x6C07,<sp/>0x5C64,<sp/>0x4C45,<sp/>0x3CA2,<sp/>0x2C83,<sp/>0x1CE0,<sp/>0x0CC1,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/>0xEF1F,<sp/>0xFF3E,<sp/>0xCF5D,<sp/>0xDF7C,<sp/>0xAF9B,<sp/>0xBFBA,<sp/>0x8FD9,<sp/>0x9FF8,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/>0x6E17,<sp/>0x7E36,<sp/>0x4E55,<sp/>0x5E74,<sp/>0x2E93,<sp/>0x3EB2,<sp/>0x0ED1,<sp/>0x1EF0</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="group__util__xmodem_1ga48b65051c5461be6d016802e2eb8a138" refkind="member"><highlight class="normal"><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__util__xmodem_1ga48b65051c5461be6d016802e2eb8a138" kindref="member">crc16_calc</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="group__xbee__io_1gac5955aa1e44ff234e6d78a19cf68f25c" kindref="member">data</ref>,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>current)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*bytes<sp/>=<sp/><ref refid="group__xbee__io_1gac5955aa1e44ff234e6d78a19cf68f25c" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(length--)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>current<sp/>=<sp/>(current<sp/>&lt;&lt;<sp/>8)<sp/>^<sp/>crc16_table[(current<sp/>&gt;&gt;<sp/>8)<sp/>^<sp/>*bytes++];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>current;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/util/xmodem_crc16.c"/>
+  </compounddef>
+</doxygen>

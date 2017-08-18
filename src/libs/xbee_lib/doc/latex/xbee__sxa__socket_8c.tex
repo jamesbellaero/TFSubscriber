@@ -1,0 +1,54 @@
+\hypertarget{xbee__sxa__socket_8c}{}\section{src/rabbit/xbee\+\_\+sxa\+\_\+socket.c File Reference}
+\label{xbee__sxa__socket_8c}\index{src/rabbit/xbee\+\_\+sxa\+\_\+socket.\+c@{src/rabbit/xbee\+\_\+sxa\+\_\+socket.\+c}}
+
+
+Simple X\+Bee A\+PI, T\+CP sockets over Zig\+Bee.  
+
+
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/byteorder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/sxa.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries \+\_\+sxa\+\_\+socket\+\_\+tx\+\_\+handler} (struct Loopback\+Handler \+\_\+\+\_\+far $\ast$lh, ll\+\_\+\+Gather $\ast$g)
+\item 
+int {\bfseries \+\_\+sxa\+\_\+socket\+\_\+rx\+\_\+handler} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ep\+\_\+state)
+\item 
+\+\_\+xbee\+\_\+sxa\+\_\+debug int {\bfseries sxa\+\_\+socket\+\_\+init} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple X\+Bee A\+PI, T\+CP sockets over Zig\+Bee. 
+
+An additional layer of functions for the Rabbit/\+Dynamic C platform. Implements reliable stream-\/based transport using the Rabbit T\+C\+P/\+IP socket A\+PI. The T\+CP protocol is transformed in order to run between Zig\+Bee endpoints. This relies on custom loopback interface functionality in the Rabbit T\+C\+P/\+IP stack.
+
+How it works\+:
+
+For an actively opened connection, the socket is opened to 127.\+1.\+0.\+x (where x is the S\+XA node table index of the desired peer device). Source and destination ports must currently be in the range 61616 to 61871 inclusive, since the port numbers (src and dest) must be packed into a 16-\/bit field. The field used is the cluster ID, since cluster I\+Ds are otherwise irrelevant for this endpoint.
+
+For a passively opened connection (i.\+e. listen), port 61616 is opened. Since the socket will receive connections from any interface by default, if you want it to only accept connections over Zig\+Bee, specify the specific interface I\+F\+\_\+\+L\+O\+O\+P\+B\+A\+CK when opening it.
+
+As with any other T\+CP socket, you can use tcp\+\_\+reserveport(61616) in order to allow queueing of multiple sessions (from distinct peer devices). (Note\+: you can use other ports as well for listening, up to 61871).
+
+Given a special loopback device packet handler registered with the normal loopback device driver, T\+CP segments sent to the above address get intercepted and modified to remove most of the 40 odd bytes of IP and T\+CP header, since this is not required and wasteful given the small M\+TU of the Zig\+Bee link. The only field in the IP header which is relevant is the destination IP address, which basically indexes the appropriate destination node.
+
+The T\+CP header is condensed as follows\+: seqnum\+: 16 bits acknum\+: 16 bits flags\+: 4 bits window\+: 12 bits These 6 octets become the condensed T\+CP header in the Zig\+Bee payload for the endpoint.
+
+Sequence numbers are shortened from the normal 32 bits, by assuming that the peers keep track of the implied 16 M\+S\+Bs. Since no more than a few hundred bytes in the stream could be outstanding on the network, the seq and ack numbers cannot change very much and hence the additional M\+S\+Bs to make up the full 32-\/bit seq numbers can be implied. For safety with this truncation scheme, all socket buffers must be 32k or less. Note that the M\+S\+Bs of the sequence number are supplied in the initial S\+YN segment, which transports the entire normal T\+CP header. In order to obviate the need for this level of driver to maintain the high part of the sequence numbers, the T\+CP socket handler (T\+C\+P.\+L\+IB) maintains the necessary state information. T\+CP assumes that truncated sequence numbers are used if the non-\/standard tcp\+\_\+\+Flag\+T\+R\+U\+NC flag is set in the T\+CP header. This bit is set by the lower level driver.
+
+Flags supports only S\+YN,F\+IN,A\+CK and R\+ST. Push and U\+RG are not used. R\+ST (if it appears) must be alone or with A\+CK in order to have its usual T\+CP meaning. S\+Y\+N+\+R\+ST and F\+I\+N+\+R\+ST are reserved for special use like path M\+TU discovery (T\+BD).
+
+When the S\+YN flag is set, no data payload is attached, but the original (uncondensed) T\+CP header is supplied as the payload.
+
+Window encodes the actual window\+: when the M\+SB is zero, the remaining bits encode the window directly, from 0 to 2047 bytes. When the M\+SB is 1, the L\+S\+Bs (in the range 1..2047) encode a multiple of 16 bytes in the window (hence encode window 2048..32752). Windows larger than this encode as 100000000000b. When encoding from the true 16-\/bit window size, the next lower encodable value is used.
+
+When S\+YN flag is set, no data is allowed, but the full original T\+CP header is supplied. In particular, the T\+CP options are parsed just like \char`\"{}real\char`\"{} T\+CP, although currently the Rabbit only uses the M\+SS. M\+SS is used symmetrically, as the minimum of both side\textquotesingle{}s M\+SS option.
+
+When reconstructing the IP and T\+CP headers for incoming segments, the library sets the source IP address to a suitable value depending on the peer node e.\+g. 127.\+1.\+0.\+5 if received from S\+XA node 5 (in its local node table). The dest IP address is set to 127.\+1.\+0.\+0. All other fields are reconstructed in a reasonable manner, except that IP and T\+CP checksums are not generated. It is assumed to be superflous given the Zig\+Bee frame C\+R\+Cs.
+
+Determining the path M\+TU can be tricky. For now, it is set to 104 octets, (default definition of S\+X\+A\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+M\+TU, which can be overridden), but with IP and T\+CP header compression, this results in a T\+CP M\+SS of 64 octets. Better throughput may be obtained by experimentation. It is imperative with T\+CP to avoid fragmentation at lower layers.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]Need a better path M\+TU discovery mechanism.\end{DoxyRefDesc}

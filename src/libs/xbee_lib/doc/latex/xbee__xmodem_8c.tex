@@ -1,0 +1,45 @@
+\hypertarget{xbee__xmodem_8c}{}\section{src/xbee/xbee\+\_\+xmodem.c File Reference}
+\label{xbee__xmodem_8c}\index{src/xbee/xbee\+\_\+xmodem.\+c@{src/xbee/xbee\+\_\+xmodem.\+c}}
+
+
+Xmodem send implementation, used for X\+Bee firmware updates.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/xmodem.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/xmodem\+\_\+crc16.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries \+\_\+xbee\+\_\+xmodem\+\_\+ser\+\_\+read} (void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} bytes)
+\item 
+int {\bfseries \+\_\+xbee\+\_\+xmodem\+\_\+ser\+\_\+write} (void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} bytes)
+\item 
+\+\_\+xmodem\+\_\+debug int \hyperlink{group__util__xmodem_ga728dd61f38b5563fe2ab45bcb982a1e7}{xbee\+\_\+xmodem\+\_\+use\+\_\+serport} (\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} $\ast$xbxm, \hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serport)
+\begin{DoxyCompactList}\small\item\em Used for xmodem transfers over a simple serial port. \end{DoxyCompactList}\item 
+\+\_\+xmodem\+\_\+debug int \hyperlink{group__util__xmodem_ga3153bea635e130326e96720fe354852d}{xbee\+\_\+xmodem\+\_\+set\+\_\+stream} (\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} $\ast$xbxm, \hyperlink{group__util__xmodem_ga25f49dbd4c2f9e274a32217a709d6382}{xbee\+\_\+xmodem\+\_\+read\+\_\+fn} read, \hyperlink{group__util__xmodem_ga57f329cc7f4e1b18f5baddb888221d7f}{xbee\+\_\+xmodem\+\_\+write\+\_\+fn} write, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Configure the stream used to communicate with the target. \end{DoxyCompactList}\item 
+\+\_\+xmodem\+\_\+debug int \hyperlink{group__util__xmodem_gaa71f0823f6fc8db3f7c556819079b225}{xbee\+\_\+xmodem\+\_\+set\+\_\+source} (\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} $\ast$xbxm, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__util__xmodem_ga25f49dbd4c2f9e274a32217a709d6382}{xbee\+\_\+xmodem\+\_\+read\+\_\+fn} read, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Configure the data source for the Xmodem send. \end{DoxyCompactList}\item 
+int \hyperlink{group__util__xmodem_gac01df75671906e590a9ed9b0a4644ba1}{\+\_\+xbee\+\_\+xmodem\+\_\+getchar} (\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} $\ast$xbxm)
+\item 
+int \hyperlink{group__util__xmodem_ga0cc061cd92dfa4eba4720b2839698545}{\+\_\+xbee\+\_\+xmodem\+\_\+putchar} (\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} $\ast$xbxm, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} ch)
+\item 
+\+\_\+xmodem\+\_\+debug int \hyperlink{group__util__xmodem_gabc8da474bce7043eef3537bd492c5123}{xbee\+\_\+xmodem\+\_\+tx\+\_\+init} (\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} $\ast$xbxm, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Initialize state structure for use with \hyperlink{group__util__xmodem_ga1de6d8cc3628767d877e854f92ab2b0e}{xbee\+\_\+xmodem\+\_\+tx\+\_\+tick()} to send a file via Xmodem. \end{DoxyCompactList}\item 
+\+\_\+xmodem\+\_\+debug int {\bfseries \+\_\+assemble\+\_\+packet} (\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} $\ast$xbxm, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} block\+\_\+size)
+\item 
+\+\_\+xmodem\+\_\+debug \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries \+\_\+block\+\_\+size} (\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} $\ast$xbxm)
+\item 
+\+\_\+xmodem\+\_\+debug int \hyperlink{group__util__xmodem_ga1de6d8cc3628767d877e854f92ab2b0e}{xbee\+\_\+xmodem\+\_\+tx\+\_\+tick} (\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} $\ast$xbxm)
+\begin{DoxyCompactList}\small\item\em Function to drive the Xmodem send state machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Xmodem send implementation, used for X\+Bee firmware updates. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000012}{Todo}]Have timeout values adjust based on link latency. Start out with a high timeout (10 seconds?) and adjust down based on actual response time (maybe 150\% of last A\+CK\textquotesingle{}s delay?) Timeout for E\+OT should start at timeout value from last block. \end{DoxyRefDesc}
