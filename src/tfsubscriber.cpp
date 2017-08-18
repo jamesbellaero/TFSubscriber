@@ -3,7 +3,7 @@
 #include <geometry_msgs/TransformStamped.h>
 #include <geometry_msgs/Twist.h>
 
-#include <cstring>
+#include <string>
 #include "quaternion.h"
 #include "device.h"
 
@@ -45,10 +45,17 @@ void sendMessage(){
   //   }
 
   }
+void logmsg(float a){
+  char log_msg[50];
+  int temp1 = (a - (int)a) * 100;
+  sprintf(log_msg, "Float = %0d.%d", (int)temp, temp1);
+  //ROS_DEBUG(log_msg);
+
+}
 
 void messageCallback( const geometry_msgs::TransformStamped& t){
 
-  string a =  t.header.frame_id;
+  std::string a =  t.header.frame_id;
   //Set target
   //Vec4 x;
   Vec4 quat;
@@ -85,14 +92,7 @@ void messageCallback( const geometry_msgs::TransformStamped& t){
   sendMessage();
 
 }
-void logmsg(float a){
-  char log_msg[50];
-  float temp = a;
-  int temp1 = (temp - (int)temp) * 100;
-  sprintf(log_msg, "Float = %0d.%d", (int)temp, temp1);
-  ROS_DEBUG(log_msg);
 
-}
 
 int main(int argc, char **argv){
   ros::init(argc,argv,"omnibot_throttle");
