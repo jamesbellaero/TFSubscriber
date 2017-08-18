@@ -1,0 +1,102 @@
+
+\begin{DoxyRefList}
+\item[\label{todo__todo000009}%
+\Hypertarget{todo__todo000009}%
+Global \hyperlink{group__xbee__atcmd_ga899d5ef84ca5790c3c76b965f88874e0}{\+\_\+xbee\+\_\+cmd\+\_\+release\+\_\+request} (\hyperlink{structxbee__cmd__request__t}{xbee\+\_\+cmd\+\_\+request\+\_\+t} F\+AR $\ast$request)]add bounds checking on request to make sure it\textquotesingle{}s in the table?  
+\item[\label{todo__todo000030}%
+\Hypertarget{todo__todo000030}%
+Global \hyperlink{group__xbee__wpan_ga56d68291ceee384fbd8a5833eb91182c}{\+\_\+xbee\+\_\+handle\+\_\+transmit\+\_\+status} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void F\+AR $\ast$payload, uint16\+\_\+t length, void F\+AR $\ast$context)]Figure out what needs to happen with these frames. Does atcmd layer need to pass errors down to callbacks? Registered endpoints? Tracked conversations?  
+\item[\label{todo__todo000017}%
+\Hypertarget{todo__todo000017}%
+Global \hyperlink{group__zcl__onoff_gae7dc87cd27559c9ae0499ac542ab6107}{\+\_\+zcl\+\_\+onoff\+\_\+handler} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} F\+AR $\ast$envelope, void F\+AR $\ast$context)]set the On\+Off attribute to off and break 
+
+set the On\+Off attribute to on and break 
+
+toggle the On\+Off attribute and break  
+\item[\label{todo__todo000013}%
+\Hypertarget{todo__todo000013}%
+Global \hyperlink{group__zcl__client_ga15f191f3166c71f3f436b2a32d108a9f}{\+\_\+zcl\+\_\+send\+\_\+read\+\_\+from\+\_\+zdo\+\_\+match} (\hyperlink{structwpan__conversation__t}{wpan\+\_\+conversation\+\_\+t} F\+AR $\ast$conversation, const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} F\+AR $\ast$envelope)]support a flag in the client\+\_\+read object for sending Z\+CL request to first endpoint in list (current behavior) or all endpoints (for example, to query A\+LL meter endpoints on A\+LL radios).
+
+find a way to track whether frame came in from broadcast or unicast response -- if unicast, can return W\+P\+A\+N\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+N\+\_\+\+E\+ND  
+\item[\label{todo__todo000021}%
+\Hypertarget{todo__todo000021}%
+Global \hyperlink{group__zcl_gaff3abb5d2022101c2873e7a8e8b027e5}{\+\_\+zcl\+\_\+write\+\_\+attributes} (\hyperlink{structzcl__command__t}{zcl\+\_\+command\+\_\+t} $\ast$cmd)]Generate error if command is not one of the three expected commands.
+
+Update to limit number of status records in response.  
+\item[\label{todo__todo000026}%
+\Hypertarget{todo__todo000026}%
+Class \hyperlink{unionaddr64}{addr64} ]update all \hyperlink{unionaddr64}{addr64} variables and structure elements to end in \+\_\+be (big-\/endian) or \+\_\+le (little-\/endian) where appropriate. Add functions to convert 64-\/bit values between host byte order and big/little endian.  
+\item[\label{todo__todo000005}%
+\Hypertarget{todo__todo000005}%
+Global \hyperlink{group__wpan__types_ga448782f4aed0821758969b47221417ed}{addr64\+\_\+format} (char F\+AR $\ast$buffer, const \hyperlink{unionaddr64}{addr64} F\+AR $\ast$address)]Add a parameter to indicate big or little endian and update code to work with either. (for little-\/endian, b starts at address-\/$>$b + 8 and is decremented) 
+\item[\label{todo__todo000027}%
+\Hypertarget{todo__todo000027}%
+File \hyperlink{firmware_8h}{firmware.h} ]Create typedefs for \hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} read() and seek() handlers, write documentation including what the return values are. We will have to check existing functions to confirm the A\+PI, but I\textquotesingle{}m guessing $<$0 for error, $>$=0 for number of bytes read. Make sure calls to the read() function check for errors! \hyperlink{group__xbee__firmware_ga06368ad0d6cc0d4e92dbf36f8b233f90}{\+\_\+xbee\+\_\+oem\+\_\+verify()} does not!  
+\item[\label{todo__todo000028}%
+\Hypertarget{todo__todo000028}%
+File \hyperlink{platform_8h}{platform.h} ]find pre-\/processor macro to identify P\+O\+S\+IX platform  
+\item[\label{todo__todo000029}%
+\Hypertarget{todo__todo000029}%
+File \hyperlink{platform__posix_8h}{platform\+\_\+posix.h} ]need a configure script to find location of endian.\+h? 
+
+figure out a way to handle X\+B\+E\+E\+\_\+\+N\+A\+T\+I\+V\+E\+\_\+64\+B\+IT 
+
+better way to determine timer resolution?  
+\item[\label{todo__todo000024}%
+\Hypertarget{todo__todo000024}%
+Global \hyperlink{group__wpan__aps_ga505477d0257efe527747c6d1f561cd6c}{wpan\+\_\+endpoint\+\_\+send\+\_\+fn} )(const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} F\+AR $\ast$envelope, uint16\+\_\+t flags)]Add support for a broadcast radius? Don\textquotesingle{}t send Tx Status? Use frame ID 0?
+
+come up with standard error codes for the following possible errors? outbound frame buffer is full, invalid data in envelope, payload is too big  
+\item[\label{todo__todo000006}%
+\Hypertarget{todo__todo000006}%
+File \hyperlink{xbee__atcmd_8c}{xbee\+\_\+atcmd.c} ]move xbee\+\_\+cmd\+\_\+simple and xbee\+\_\+identify into xbee\+\_\+device layer?
+
+Add code to return an error (and disable the stack) if the X\+Bee responds with an I\+E\+EE address not in Digi\textquotesingle{}s allocation?
+
+review todo list at the top of the file -- lots to do 
+\item[\label{todo__todo000010}%
+\Hypertarget{todo__todo000010}%
+Global \hyperlink{group__xbee__commissioning_ga886012f757de4a74d0c992d3ab04a373}{xbee\+\_\+comm\+\_\+\+SC} (\hyperlink{structzcl__comm__startup__param__t}{zcl\+\_\+comm\+\_\+startup\+\_\+param\+\_\+t} F\+AR $\ast$p, const void F\+AR $\ast$value\+\_\+be)]Depending on the value of Startup\+Control, the extended\+\_\+panid attribute might be set from ID (extended P\+AN ID) or OP (operating P\+AN ID). 
+\item[\label{todo__todo000011}%
+\Hypertarget{todo__todo000011}%
+Global \hyperlink{group__xbee__firmware_ga279def556401f533d798bb3896302ced}{xbee\+\_\+fw\+\_\+read\+\_\+byte} (\hyperlink{structxbee__fw__source__t}{xbee\+\_\+fw\+\_\+source\+\_\+t} $\ast$source)]check return value of source-\/$>$read here and in \+\_\+uint16 and \+\_\+uint32?  
+\item[\label{todo__todo000001}%
+\Hypertarget{todo__todo000001}%
+File \hyperlink{xbee__platform__posix_8c}{xbee\+\_\+platform\+\_\+posix.c} ]Create a platform unit test, one that can verify that the millisecond timer doesn\textquotesingle{}t run backwards and that it matches up accurately with the seconds timer (base it on the H\+C\+S08 regression).  
+\item[\label{todo__todo000002}%
+\Hypertarget{todo__todo000002}%
+File \hyperlink{xbee__serial__posix_8c}{xbee\+\_\+serial\+\_\+posix.c} ]missing a way to hold Tx in break condition  
+\item[\label{todo__todo000003}%
+\Hypertarget{todo__todo000003}%
+File \hyperlink{xbee__serial__rabbit_8c}{xbee\+\_\+serial\+\_\+rabbit.c} ]Need code to make sure IN and O\+UT buffers are large enough for X\+Bee. Does the out buffer need to be large enough to hold an entire frame? 
+\item[\label{todo__todo000004}%
+\Hypertarget{todo__todo000004}%
+File \hyperlink{xbee__sxa__socket_8c}{xbee\+\_\+sxa\+\_\+socket.c} ]Need a better path M\+TU discovery mechanism. 
+\item[\label{todo__todo000012}%
+\Hypertarget{todo__todo000012}%
+File \hyperlink{xbee__xmodem_8c}{xbee\+\_\+xmodem.c} ]Have timeout values adjust based on link latency. Start out with a high timeout (10 seconds?) and adjust down based on actual response time (maybe 150\% of last A\+CK\textquotesingle{}s delay?) Timeout for E\+OT should start at timeout value from last block.  
+\item[\label{todo__todo000031}%
+\Hypertarget{todo__todo000031}%
+File \hyperlink{zcl64_8h}{zcl64.h} ]add a Z\+C\+L64\+\_\+\+S\+P\+L\+IT macro to split zcl64\+\_\+t into high and low halves  
+\item[\label{todo__todo000032}%
+\Hypertarget{todo__todo000032}%
+Global \hyperlink{group__zcl__64_ga2e906cb47fc172ae60da5178075dd3c7}{zcl64\+\_\+t} ]Actually code up support for 56-\/bit values like we did for 24 bit.  
+\item[\label{todo__todo000033}%
+\Hypertarget{todo__todo000033}%
+File \hyperlink{zcl__basic_8h}{zcl\+\_\+basic.h} ]Explore how we would support the Device\+Enabled attribute. Does each application need to check it? Does the endpoint dispatcher need to know about it? What about clients?  
+\item[\label{todo__todo000016}%
+\Hypertarget{todo__todo000016}%
+Global \hyperlink{group__zcl__commissioning_ga91a578cd65163c738bd57a4249955c05}{zcl\+\_\+comm\+\_\+sas\+\_\+is\+\_\+valid} (const \hyperlink{structzcl__comm__state__t}{zcl\+\_\+comm\+\_\+state\+\_\+t} F\+AR $\ast$comm)]add more tests to this function  
+\item[\label{todo__todo000034}%
+\Hypertarget{todo__todo000034}%
+File \hyperlink{zcl__onoff_8h}{zcl\+\_\+onoff.h} ]Write code to support On\+Off commands. Create sample program demonstrating use of these clusters (perhaps using L\+E\+Ds and switches of X\+B\+I\+B-\/\+U-\/\+D\+EV board). R\+E\+Q\+U\+I\+R\+ES\+: need to have reporting in place before this cluster is really useful. Devices need to receive updates whenever switch status changes.  
+\item[\label{todo__todo000020}%
+\Hypertarget{todo__todo000020}%
+Global \hyperlink{group__zcl_ga9f9ac99001185554fe24dc7b09c0b0b0}{zcl\+\_\+parse\+\_\+attribute\+\_\+record} (const \hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} F\+AR $\ast$entry, \hyperlink{structzcl__attribute__write__rec__t}{zcl\+\_\+attribute\+\_\+write\+\_\+rec\+\_\+t} $\ast$write\+\_\+rec)]should we set a flag in write\+\_\+rec to indicate that the status was not success?  
+\item[\label{todo__todo000015}%
+\Hypertarget{todo__todo000015}%
+Global \hyperlink{group__zcl__client_ga4c75937cc0fa5c70c63f30b59a4ddebc}{zdo\+\_\+send\+\_\+match\+\_\+desc} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, const uint16\+\_\+t $\ast$clusters, uint16\+\_\+t profile\+\_\+id, wpan\+\_\+response\+\_\+fn callback, const void F\+AR $\ast$context)]update A\+PI to allow for unicast request in addition to broadcast  
+\item[\label{todo__todo000023}%
+\Hypertarget{todo__todo000023}%
+File \hyperlink{zigbee__zdo_8c}{zigbee\+\_\+zdo.c} ]Create a cluster table and have the \hyperlink{group__zdo_gaef7118e478f5ad9949dcd23f6e0901c9}{Z\+D\+O\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T()} macro use it instead of having zdo\+\_\+handler use a switch on cluster\+\_\+id to call the handlers for each command. 
+\end{DoxyRefList}

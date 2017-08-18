@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="zcl__basic__attributes_8h" kind="file" language="C++">
+    <compoundname>zcl_basic_attributes.h</compoundname>
+    <includes refid="zcl__basic_8h" local="yes">zigbee/zcl_basic.h</includes>
+    <incdepgraph>
+      <node id="927">
+        <label>errno.h</label>
+      </node>
+      <node id="929">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="930" relation="include">
+        </childnode>
+      </node>
+      <node id="928">
+        <label>stddef.h</label>
+      </node>
+      <node id="931">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="932" relation="include">
+        </childnode>
+      </node>
+      <node id="934">
+        <label>xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="935" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+      </node>
+      <node id="925">
+        <label>zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
+        </childnode>
+        <childnode refid="933" relation="include">
+        </childnode>
+      </node>
+      <node id="935">
+        <label>string.h</label>
+      </node>
+      <node id="932">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="926" relation="include">
+        </childnode>
+      </node>
+      <node id="926">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="927" relation="include">
+        </childnode>
+        <childnode refid="928" relation="include">
+        </childnode>
+        <childnode refid="929" relation="include">
+        </childnode>
+      </node>
+      <node id="933">
+        <label>zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+        <childnode refid="936" relation="include">
+        </childnode>
+      </node>
+      <node id="936">
+        <label>zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="926" relation="include">
+        </childnode>
+      </node>
+      <node id="930">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+      <node id="924">
+        <label>zigbee/zcl_basic.h</label>
+        <link refid="zcl__basic_8h"/>
+        <childnode refid="925" relation="include">
+        </childnode>
+      </node>
+      <node id="923">
+        <label>include/zigbee/zcl_basic_attributes.h</label>
+        <link refid="zcl__basic__attributes_8h"/>
+        <childnode refid="924" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structzcl__basic__dev__info" prot="public">zcl_basic_dev_info</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__zcl__basic_1ga739c59514b0eb0caee5541062c8e1ce8" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structzcl__basic__dev__info" kindref="compound">zcl_basic_dev_info</ref></type>
+        <definition>const struct zcl_basic_dev_info  zcl_basic_dev_info</definition>
+        <argsstring></argsstring>
+        <name>zcl_basic_dev_info</name>
+        <initializer>= {
+	<ref refid="group__zcl__basic_1ga677e87e13981dedcd3b370ede4902c54" kindref="member">ZCL_VERSION</ref>,
+
+
+
+
+
+
+
+
+
+	ZCL_POWER_SOURCE
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic_attributes.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__basic_1ga721ebe2f6ae346632475cf178671d150" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref></type>
+        <definition>const zcl_attribute_base_t FAR zcl_basic_attributes[]</definition>
+        <argsstring>[]</argsstring>
+        <name>zcl_basic_attributes</name>
+        <briefdescription>
+<para>Table of attributes for the Basic Cluster Server. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic_attributes.h" line="102" column="1" bodyfile="include/zigbee/zcl_basic_attributes.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__basic_1ga465778a2b459ad01710dc8f69ec2c19b" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structzcl__attribute__tree__t" kindref="compound">zcl_attribute_tree_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref></type>
+        <definition>const zcl_attribute_tree_t FAR zcl_basic_attribute_tree[]</definition>
+        <argsstring>[]</argsstring>
+        <name>zcl_basic_attribute_tree</name>
+        <initializer>=
+									{ { ZCL_MFG_NONE, <ref refid="group__zcl__basic_1ga721ebe2f6ae346632475cf178671d150" kindref="member">zcl_basic_attributes</ref>, NULL } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic_attributes.h" line="167" column="1" bodyfile="include/zigbee/zcl_basic_attributes.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="zcl__basic__attributes_8h_1zcl_basic">
+<title>ZCL Basic Cluster Overview</title>
+<para>This header should be included from the main .C file (after defining the macros described below) to add the globals <ref refid="structzcl__basic__dev__info" kindref="compound">zcl_basic_dev_info</ref> and <ref refid="group__zcl__basic_1ga721ebe2f6ae346632475cf178671d150" kindref="member">zcl_basic_attributes</ref>[] to the program.</para><para>It makes use of the following optional macros:<itemizedlist>
+<listitem><para>ZCL_APP_VERSION (8-bit)</para></listitem><listitem><para>ZCL_STACK_VERSION (8-bit)</para></listitem><listitem><para>ZCL_HW_VERSION (8-bit)</para></listitem><listitem><para>ZCL_MANUFACTURER_NAME (32-char null-terminated string)</para></listitem><listitem><para>ZCL_MODEL_IDENTIFIER (32-char null-terminated string)</para></listitem><listitem><para>ZCL_DATE_CODE (16-char null-terminated string, starting with YYYYMMDD)</para></listitem><listitem><para>ZCL_FACTORY_RESET_FN (function pointer)</para></listitem></itemizedlist>
+</para><para>And one required macro:<itemizedlist>
+<listitem><para>ZCL_POWER_SOURCE (8-bit) set to one of the following, optionally ORed with <ref refid="group__zcl__basic_1ga41f5febaea65227af827ca59f30a422b" kindref="member">ZCL_BASIC_PS_BATTERY_BACKUP</ref>.<itemizedlist>
+<listitem><para><ref refid="group__zcl__basic_1ga98e9e01925bb6c52e1d8ff837a32116d" kindref="member">ZCL_BASIC_PS_UNKNOWN</ref></para></listitem><listitem><para><ref refid="group__zcl__basic_1ga66eab175cd2834dbed155d4fa086e4d7" kindref="member">ZCL_BASIC_PS_SINGLE_PHASE</ref></para></listitem><listitem><para><ref refid="group__zcl__basic_1gacd2c65021e4ac4544bfe2419697d2407" kindref="member">ZCL_BASIC_PS_THREE_PHASE</ref></para></listitem><listitem><para><ref refid="group__zcl__basic_1ga9002aa7599325d8b9ef74743dc77eb4e" kindref="member">ZCL_BASIC_PS_BATTERY</ref></para></listitem><listitem><para><ref refid="group__zcl__basic_1ga528fdcef318ec276618896c7cbfec618" kindref="member">ZCL_BASIC_PS_DC</ref></para></listitem><listitem><para><ref refid="group__zcl__basic_1gacdadf5dfcbe4d7435e1f718c9ce9d275" kindref="member">ZCL_BASIC_PS_EMERGENCY_CONST</ref></para></listitem><listitem><para><ref refid="group__zcl__basic_1ga6a1e540c72d5ec1df8acc904c83f4bc9" kindref="member">ZCL_BASIC_PS_EMERGENCY_SWITCH</ref></para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para><para>For example: <programlisting><codeline><highlight class="normal">#include<sp/>&quot;zigbee/zcl_basic.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>ZCL_APP_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x12</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>ZCL_MANUFACTURER_NAME<sp/>&quot;Digi<sp/>International&quot;</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>ZCL_MODEL_IDENTIFIER<sp/><sp/>&quot;Win32&quot;</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>ZCL_DATE_CODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;20100601<sp/>dev&quot;</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>ZCL_POWER_SOURCE<sp/><sp/><sp/><sp/><sp/><sp/>ZCL_BASIC_PS_SINGLE_PHASE</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;zigbee/zcl_basic_attributes.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Can<sp/>now<sp/>use<sp/>ZCL_CLUST_ENTRY_BASIC_SERVER<sp/>in<sp/>an<sp/>endpoint&apos;s<sp/>cluster<sp/>table.</highlight></codeline>
+</programlisting> </para></sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zcl__basic_8h" kindref="compound">zigbee/zcl_basic.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ZCL_POWER_SOURCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#error<sp/>You<sp/>must<sp/>at<sp/>least<sp/>define<sp/>ZCL_POWER_SOURCE<sp/>before<sp/>including<sp/>this<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="structzcl__basic__dev__info" refkind="compound"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structzcl__basic__dev__info" kindref="compound">zcl_basic_dev_info</ref><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/>ZCLVersion;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_APP_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/>ApplicationVersion;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_STACK_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/>StackVersion;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_HW_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/>HWVersion;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/>PowerSource;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}<sp/><ref refid="structzcl__basic__dev__info" kindref="compound">zcl_basic_dev_info</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__zcl__basic_1ga677e87e13981dedcd3b370ede4902c54" kindref="member">ZCL_VERSION</ref>,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_APP_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/>ZCL_APP_VERSION,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_STACK_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/>ZCL_STACK_VERSION,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_HW_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/>ZCL_HW_VERSION,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/>ZCL_POWER_SOURCE</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="comment">//<sp/>note<sp/>that<sp/>this<sp/>list<sp/>must<sp/>be<sp/>kept<sp/>sorted<sp/>by<sp/>attribute<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="group__zcl__basic_1ga721ebe2f6ae346632475cf178671d150" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><ref refid="group__zcl__basic_1ga721ebe2f6ae346632475cf178671d150" kindref="member">zcl_basic_attributes</ref>[]<sp/>=</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>ID,<sp/>Flags,<sp/>Type,<sp/>Address<sp/>to<sp/>data,<sp/>min,<sp/>max,<sp/>read,<sp/>write</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/>{<sp/><ref refid="group__zcl__basic_1ga3680b891bc5b62eeb20ad9d65502e2ee" kindref="member">ZCL_BASIC_ATTR_ZCL_VERSION</ref>,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_UNSIGNED_8BIT,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structzcl__basic__dev__info" kindref="compound">zcl_basic_dev_info</ref>.ZCLVersion,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>address<sp/>to<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_APP_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/>{<sp/><ref refid="group__zcl__basic_1gab278ad4794718034db8bd583ed019fe7" kindref="member">ZCL_BASIC_ATTR_APP_VERSION</ref>,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_UNSIGNED_8BIT,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structzcl__basic__dev__info" kindref="compound">zcl_basic_dev_info</ref>.ApplicationVersion,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_STACK_VERSION_ADDR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/>{<sp/><ref refid="group__zcl__basic_1ga88bf0168f55c3addbe3c2ba54c8095b1" kindref="member">ZCL_BASIC_ATTR_STACK_VERSION</ref>,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_UNSIGNED_8BIT,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_STACK_VERSION_ADDR,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>ZCL_STACK_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/>{<sp/><ref refid="group__zcl__basic_1ga88bf0168f55c3addbe3c2ba54c8095b1" kindref="member">ZCL_BASIC_ATTR_STACK_VERSION</ref>,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_UNSIGNED_8BIT,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structzcl__basic__dev__info" kindref="compound">zcl_basic_dev_info</ref>.StackVersion,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_HW_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/>{<sp/><ref refid="group__zcl__basic_1gab2ab6140eb1374b9a82a56342a0b0fff" kindref="member">ZCL_BASIC_ATTR_HW_VERSION</ref>,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_UNSIGNED_8BIT,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structzcl__basic__dev__info" kindref="compound">zcl_basic_dev_info</ref>.HWVersion,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_MANUFACTURER_NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/>{<sp/><ref refid="group__zcl__basic_1ga4d657421aaf3ce5419e0e5d9ff6efcda" kindref="member">ZCL_BASIC_ATTR_MANUFACTURER_NAME</ref>,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__types_1ga64286e0c69e0ed344a6eb8756ac81f95" kindref="member">ZCL_TYPE_STRING_CHAR</ref>,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_MANUFACTURER_NAME,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_MODEL_IDENTIFIER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/>{<sp/><ref refid="group__zcl__basic_1gad6e74db6f2936706976045dee1c43cf2" kindref="member">ZCL_BASIC_ATTR_MODEL_IDENTIFIER</ref>,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__types_1ga64286e0c69e0ed344a6eb8756ac81f95" kindref="member">ZCL_TYPE_STRING_CHAR</ref>,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_MODEL_IDENTIFIER,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZCL_DATE_CODE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/>{<sp/><ref refid="group__zcl__basic_1gadfa72f9d6ff3d467de6a51314ab2cce8" kindref="member">ZCL_BASIC_ATTR_DATE_CODE</ref>,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__zcl__types_1ga64286e0c69e0ed344a6eb8756ac81f95" kindref="member">ZCL_TYPE_STRING_CHAR</ref>,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_DATE_CODE,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/>{<sp/><ref refid="group__zcl__basic_1ga566025cbf5bb2560164d45c221226844" kindref="member">ZCL_BASIC_ATTR_POWER_SOURCE</ref>,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_ATTRIB_FLAG_READONLY,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ZCL_TYPE_ENUM_8BIT,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structzcl__basic__dev__info" kindref="compound">zcl_basic_dev_info</ref>.PowerSource,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/>{<sp/><ref refid="group__zcl_1gab05da20cf1dfaef97e20dfca2fd26d14" kindref="member">ZCL_ATTRIBUTE_END_OF_LIST</ref><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structzcl__attribute__tree__t" kindref="compound">zcl_attribute_tree_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>zcl_basic_attribute_tree[]<sp/>=</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>{<sp/>ZCL_MFG_NONE,<sp/><ref refid="group__zcl__basic_1ga721ebe2f6ae346632475cf178671d150" kindref="member">zcl_basic_attributes</ref>,<sp/>NULL<sp/>}<sp/>};</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/zigbee/zcl_basic_attributes.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,788 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__zcl__client" kind="group">
+    <compoundname>zcl_client</compoundname>
+    <title>Cluster Client support code</title>
+    <innerfile refid="zcl__client_8c">zcl_client.c</innerfile>
+    <innerfile refid="zcl__client_8h">zcl_client.h</innerfile>
+    <innerclass refid="structzcl__client__read__t" prot="public">zcl_client_read_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__zcl__client_1gacf0aecf1ecf13d497498beef8c496dde" prot="public" static="no">
+        <type>const char *(*</type>
+        <definition>typedef const char*(* zcl_format_utctime_fn) (char dest[40], zcl_utctime_t utctime)</definition>
+        <argsstring>)(char dest[40], zcl_utctime_t utctime)</argsstring>
+        <name>zcl_format_utctime_fn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_client.h" line="60" column="1" bodyfile="include/zigbee/zcl_client.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__zcl__client_1gaece15f78359a3bae016be1d24e7d9ad9" prot="public" static="no" mutable="no">
+        <type>zcl_format_utctime_fn</type>
+        <definition>zcl_format_utctime_fn zcl_format_utctime</definition>
+        <argsstring></argsstring>
+        <name>zcl_format_utctime</name>
+        <initializer>= <ref refid="group__zcl__client_1gab6b575402b7ce107943e7d7c29499559" kindref="member">_zcl_format_utctime</ref></initializer>
+        <briefdescription>
+<para>Pointer to function that converts a zcl_utctime_t value to a human-readable timestamp. </para>        </briefdescription>
+        <detaileddescription>
+<para>Defaults to a function that formats timestamps as &quot;YYYY-MM-DD HH:MM:SS UTC&quot; or "[Invalid Timestamp] if <computeroutput>utctime</computeroutput> is 0xFFFFFFFF. Can be overriden by the user program to a function that uses another format. Strings must be limited to 40 characters.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to hold the formatted string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">utctime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time value to format</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value of parameter <computeroutput>dest</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="590" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="590" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__client_1ga459df22e40148e87ee6e57ec5cc3233a" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *</type>
+        <definition>const wpan_endpoint_table_entry_t* ep</definition>
+        <argsstring></argsstring>
+        <name>ep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_client.h" line="32" column="1" bodyfile="include/zigbee/zcl_client.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__client_1ga2ca485436d30af714cc277eaac216cae" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t mfg_id</definition>
+        <argsstring></argsstring>
+        <name>mfg_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_client.h" line="33" column="1" bodyfile="include/zigbee/zcl_client.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__client_1ga262a92f94287e77cb56350951893bae2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t cluster_id</definition>
+        <argsstring></argsstring>
+        <name>cluster_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_client.h" line="35" column="1" bodyfile="include/zigbee/zcl_client.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__client_1ga4dc4f61b6b33cb99330d56098bb9bf2a" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const uint16_t FAR* attribute_list</definition>
+        <argsstring></argsstring>
+        <name>attribute_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_client.h" line="36" column="1" bodyfile="include/zigbee/zcl_client.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__client_1gaece15f78359a3bae016be1d24e7d9ad9" prot="public" static="no" mutable="no">
+        <type>zcl_format_utctime_fn</type>
+        <definition>zcl_format_utctime_fn zcl_format_utctime</definition>
+        <argsstring></argsstring>
+        <name>zcl_format_utctime</name>
+        <briefdescription>
+<para>Pointer to function that converts a zcl_utctime_t value to a human-readable timestamp. </para>        </briefdescription>
+        <detaileddescription>
+<para>Defaults to a function that formats timestamps as &quot;YYYY-MM-DD HH:MM:SS UTC&quot; or "[Invalid Timestamp] if <computeroutput>utctime</computeroutput> is 0xFFFFFFFF. Can be overriden by the user program to a function that uses another format. Strings must be limited to 40 characters.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to hold the formatted string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">utctime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time value to format</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value of parameter <computeroutput>dest</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_client.h" line="62" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="590" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__zcl__client_1gae0892d22ee69940130d1111960401339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_client_debug int</type>
+        <definition>int zcl_process_read_attr_response</definition>
+        <argsstring>(zcl_command_t *zcl, const zcl_attribute_base_t FAR *attr_table)</argsstring>
+        <name>zcl_process_read_attr_response</name>
+        <param>
+          <type><ref refid="structzcl__command__t" kindref="compound">zcl_command_t</ref> *</type>
+          <declname>zcl</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>attr_table</declname>
+        </param>
+        <briefdescription>
+<para>Process a Read Attributes Response and populate the attibute values into an attribute table as if it was a Write Attributes Request. </para>        </briefdescription>
+        <detaileddescription>
+<para>Used in ZCL clients that want to read a lot of ZCL attributes. The client has a mirrored copy of the attributes on the target, and this function is used to populate that copy using the Read Attributes Responses.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">zcl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ZCL command to process </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attr_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start of the attribute list to use for storing attribute responses</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ZCL status value to send in a default response </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="60" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="60" bodyend="84"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__client_1ga24a7c15cdfe484aff260848694fccae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_client_debug int</type>
+        <definition>int zcl_client_read_attributes</definition>
+        <argsstring>(wpan_envelope_t FAR *envelope, const zcl_client_read_t *client_read)</argsstring>
+        <name>zcl_client_read_attributes</name>
+        <param>
+          <type><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structzcl__client__read__t" kindref="compound">zcl_client_read_t</ref> *</type>
+          <declname>client_read</declname>
+        </param>
+        <briefdescription>
+<para>Send a Read Attributes request for attributes listed in <computeroutput>client_read</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>addressing information for sending a ZCL Read Attributes request; this function fills in the <computeroutput>payload</computeroutput> and <computeroutput>length</computeroutput> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">client_read</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data structure used by ZCL clients to do ZDO discovery followed by ZCL attribute reads</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>successfully sent request </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error sending request </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="103" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="103" bodyend="152"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" compoundref="sxa_8h" startline="70">PACKED_STRUCT</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__client_1ga15f191f3166c71f3f436b2a32d108a9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_client_debug int</type>
+        <definition>int _zcl_send_read_from_zdo_match</definition>
+        <argsstring>(wpan_conversation_t FAR *conversation, const wpan_envelope_t FAR *envelope)</argsstring>
+        <name>_zcl_send_read_from_zdo_match</name>
+        <param>
+          <type><ref refid="structwpan__conversation__t" kindref="compound">wpan_conversation_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>conversation</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<internal><para>Process responses to ZDO Match_Desc broadcast sent by <ref refid="group__zcl__client_1ga4c75937cc0fa5c70c63f30b59a4ddebc" kindref="member">zdo_send_match_desc()</ref> and generate ZCL Read Attributes request for the attributes in the related conversation&apos;s context (a pointer to a <ref refid="structzcl__client__read__t" kindref="compound">zcl_client_read_t</ref> object).</para><para>The Read Attributes Responses are handled by the function registered to the cluster in the endpoint table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">conversation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matching entry in converstation table (which contains a context pointer) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>envelope of response or NULL if conversation timed out</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>send ZCL request for current time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error sending ZCL request for current time</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000013"><xreftitle>Todo</xreftitle><xrefdescription><para>support a flag in the client_read object for sending ZCL request to first endpoint in list (current behavior) or all endpoints (for example, to query ALL meter endpoints on ALL radios).</para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000014"><xreftitle>Todo</xreftitle><xrefdescription><para>find a way to track whether frame came in from broadcast or unicast response <ndash/> if unicast, can return WPAN_CONVERSATION_END </para></xrefdescription></xrefsect></para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="182" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="182" bodyend="278"/>
+        <references refid="group__zdo_1ga7d397493728da2bca8d55b2d61c4ec5d" compoundref="zdo_8h" startline="403">endpoint</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" compoundref="sxa_8h" startline="70">PACKED_STRUCT</references>
+        <referencedby refid="group__zcl__client_1gae673efbd325cea1f3befacda58332191" compoundref="zcl__client_8c" startline="300" endline="305">zcl_find_and_read_attributes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__client_1gae673efbd325cea1f3befacda58332191" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_client_debug int</type>
+        <definition>int zcl_find_and_read_attributes</definition>
+        <argsstring>(wpan_dev_t *dev, const uint16_t *clusters, const zcl_client_read_t FAR *cr)</argsstring>
+        <name>zcl_find_and_read_attributes</name>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref> *</type>
+          <declname>clusters</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structzcl__client__read__t" kindref="compound">zcl_client_read_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>cr</declname>
+        </param>
+        <briefdescription>
+<para>Use ZDO Match Descriptor Requests to find devices with a given profile/cluster and then automatically send a ZCL Read Attributes request for some of that cluster&apos;s attributes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device to use for time request</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clusters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to list of server clusters to search for, must end with <ref refid="group__wpan__aps_1gacbfdff1cef70167f178c4e05b69f65fe" kindref="member">WPAN_CLUSTER_END_OF_LIST</ref></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zcl_client_read record containing information on the request (endpoint, attributes, etc.); must be a static object (not an auto variable) since the ZDO responder will need to access it</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error sending request </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="300" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="300" bodyend="305"/>
+        <references refid="group__zcl__client_1ga15f191f3166c71f3f436b2a32d108a9f" compoundref="zcl__client_8c" startline="182" endline="278">_zcl_send_read_from_zdo_match</references>
+        <references refid="group__zcl__client_1ga4c75937cc0fa5c70c63f30b59a4ddebc" compoundref="zcl__client_8c" startline="334" endline="402">zdo_send_match_desc</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__client_1ga4c75937cc0fa5c70c63f30b59a4ddebc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_client_debug int</type>
+        <definition>int zdo_send_match_desc</definition>
+        <argsstring>(wpan_dev_t *dev, const uint16_t *clusters, uint16_t profile_id, wpan_response_fn callback, const void FAR *context)</argsstring>
+        <name>zdo_send_match_desc</name>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref> *</type>
+          <declname>clusters</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>profile_id</declname>
+        </param>
+        <param>
+          <type><ref refid="group__wpan__aps_1gabf0a6b85c9ff3ff9104c8b58c1436d72" kindref="member">wpan_response_fn</ref></type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Send a ZDO Match Descriptor request for a list of cluster IDs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device to use for time request </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clusters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to list of server clusters to search for, must end with <ref refid="group__wpan__aps_1gacbfdff1cef70167f178c4e05b69f65fe" kindref="member">WPAN_CLUSTER_END_OF_LIST</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">profile_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>profile ID associated with the cluster IDs (cannot be WPAN_APS_PROFILE_ANY) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function that will process the ZDO Match Descriptor responses; see wpan_response_fn for the callback&apos;s API </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>context to pass to <computeroutput>callback</computeroutput> in the <ref refid="structwpan__conversation__t" kindref="compound">wpan_conversation_t</ref> structure</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error sending request</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__client_1gae673efbd325cea1f3befacda58332191" kindref="member">zcl_find_and_read_attributes()</ref></para></simplesect>
+<xrefsect id="todo_1_todo000015"><xreftitle>Todo</xreftitle><xrefdescription><para>update API to allow for unicast request in addition to broadcast </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="334" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="334" bodyend="402"/>
+        <references refid="group__wpan__types_1ga83c0da7da25848a435da46b80fb70933" compoundref="wpan__types_8c" startline="36">_WPAN_IEEE_ADDR_BROADCAST</references>
+        <references refid="group__wpan__aps_1ga262a92f94287e77cb56350951893bae2" compoundref="aps_8h" startline="46">wpan_envelope_t::cluster_id</references>
+        <references refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" compoundref="aps_8h" startline="42">wpan_envelope_t::dev</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__wpan__aps_1ga2549f921e25a72dfa05a2154a792e2bf" compoundref="aps_8h" startline="43">wpan_envelope_t::ieee_address</references>
+        <references refid="group__wpan__aps_1ga30948a7f8d096191895f50b80d81ca12" compoundref="aps_8h" startline="44">wpan_envelope_t::network_address</references>
+        <references refid="group__wpan__types_1ga08ec03f67d0d74ba6f98da543baee129" compoundref="types_8h" startline="63">WPAN_NET_ADDR_BCAST_NOT_ASLEEP</references>
+        <references refid="group__wpan__types_1ga1674d7b825e528a482725d1c06b02c10" compoundref="types_8h" startline="68">WPAN_NET_ADDR_UNDEFINED</references>
+        <references refid="group__zdo_1ga8c614773175b0518e3a1f5a512dfe4d1" compoundref="zdo_8h" startline="485">ZDO_MATCH_DESC_REQ</references>
+        <references refid="group__zdo_1ga5746efffb4b90718eb973796f2b4bb41" compoundref="zigbee__zdo_8c" startline="247" endline="292">zdo_match_desc_request</references>
+        <referencedby refid="group__zcl__client_1gae673efbd325cea1f3befacda58332191" compoundref="zcl__client_8c" startline="300" endline="305">zcl_find_and_read_attributes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__client_1ga11f72950e4467286ef18468fbcb4bed4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_client_debug int</type>
+        <definition>int zcl_create_attribute_records</definition>
+        <argsstring>(void FAR *buffer, uint8_t bufsize, const zcl_attribute_base_t FAR **p_attr_list)</argsstring>
+        <name>zcl_create_attribute_records</name>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>bufsize</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> **</type>
+          <declname>p_attr_list</declname>
+        </param>
+        <briefdescription>
+<para>From a list of attributes, write ID (in little-endian byte order), type and value to a buffer as would be done in a Write Attributes Request. </para>        </briefdescription>
+        <detaileddescription>
+<para>The attribute list should be an array of attribute records, ending with an attribute ID of ZCL_ATTRIBUTE_END_OF_LIST.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to write values to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bufsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of <computeroutput>buffer</computeroutput> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">p_attr_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the attribute list to encode in <computeroutput>buffer</computeroutput>; points to next attribute to encode if buffer is filled</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes written to buffer </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="426" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="426" bodyend="465"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__util__byteorder_1ga3ea73a6089f61223b225c46e2ba58a47" compoundref="byteorder_8h" startline="135">htole16</references>
+        <references refid="group__zcl_1gab05da20cf1dfaef97e20dfca2fd26d14" compoundref="zcl_8h" startline="852">ZCL_ATTRIBUTE_END_OF_LIST</references>
+        <references refid="group__zcl_1ga66d9c3c646422e71fed6c94d67c14fdd" compoundref="zigbee__zcl_8c" startline="118" endline="143">zcl_attribute_get_next</references>
+        <references refid="group__zcl_1gae3f7f58d3b08caf95aa11f90e3995397" compoundref="zigbee__zcl_8c" startline="1087" endline="1223">zcl_encode_attribute_value</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__client_1ga98550adc25d4a19e4048ef9b251321ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_client_debug int</type>
+        <definition>int zcl_send_write_attributes</definition>
+        <argsstring>(wpan_envelope_t *envelope, const zcl_attribute_base_t FAR *attr_list)</argsstring>
+        <name>zcl_send_write_attributes</name>
+        <param>
+          <type><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>attr_list</declname>
+        </param>
+        <briefdescription>
+<para>Send one or more Write Attributes Requests to a node on the network. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para><simplesect kind="note"><para>This function API and is likely to change in a future release to include a Manufacturer ID and flags for sending server-to-client and &quot;undivided&quot; write requests.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>envelope to use for sending request; <computeroutput>payload</computeroutput> and <computeroutput>length</computeroutput> cleared on function exit </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attr_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>attributes with values to send a Write Attributes Request for</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL parameter passed, or couldn&apos;t find source endpoint based on envelope </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&lt;0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error trying to send request (for large writes, one or more requests may have been successful) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request(s) sent </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="496" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="496" bodyend="547"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__client_1gab6b575402b7ce107943e7d7c29499559" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* _zcl_format_utctime</definition>
+        <argsstring>(char dest[40], zcl_utctime_t utctime)</argsstring>
+        <name>_zcl_format_utctime</name>
+        <param>
+          <type>char</type>
+          <declname>dest</declname>
+          <array>[40]</array>
+        </param>
+        <param>
+          <type>zcl_utctime_t</type>
+          <declname>utctime</declname>
+        </param>
+        <briefdescription>
+<para>Default function for zcl_format_utctime function pointer. </para>        </briefdescription>
+        <detaileddescription>
+<internal></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="555" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="555" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__client_1ga4e831f4977e3c0eb5ad556a991b7da5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int zcl_print_array_value</definition>
+        <argsstring>(const void *value, int value_length)</argsstring>
+        <name>zcl_print_array_value</name>
+        <param>
+          <type>const void *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value_length</declname>
+        </param>
+        <briefdescription>
+<para>Print Read Attributes Response value of an array attribute. </para>        </briefdescription>
+        <detaileddescription>
+<para>Helper function for <ref refid="group__zcl__client_1gaa21e1a258a8cc7899586920a0247ee6d" kindref="member">zcl_print_attribute_value()</ref>, takes a pointer to the &quot;value&quot; field of a Read Attributes Response for an array type, formats it and prints to stdout.</para><para><programlisting><codeline><highlight class="normal"><sp/>Example:</highlight></codeline>
+<codeline><highlight class="normal">of<sp/>3<sp/>UNSIGNED_8BIT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[0]<sp/>=<sp/>0x54<sp/>=<sp/>84</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[1]<sp/>=<sp/>0x42<sp/>=<sp/>66</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[2]<sp/>=<sp/>0x43<sp/>=<sp/>67</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to ZCL-encoded array value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes at value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>value</computeroutput> is NULL or  is too small </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;=3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes from <computeroutput>value</computeroutput> consumed by function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__client_1gaa21e1a258a8cc7899586920a0247ee6d" kindref="member">zcl_print_attribute_value</ref>, <ref refid="group__zcl__client_1gadd1b745da67ffd49ec948ff56ec218fa" kindref="member">zcl_print_struct_value</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="617" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="617" bodyend="654"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" compoundref="zcl_8h" startline="416">type</references>
+        <references refid="group__xbee__atcmd_1ga5bf2410fa8ec37f47f8afeba8dcc7f1b" compoundref="atcmd_8h" startline="360">value</references>
+        <references refid="group__zcl__client_1gaa21e1a258a8cc7899586920a0247ee6d" compoundref="zcl__client_8c" startline="731" endline="914">zcl_print_attribute_value</references>
+        <references refid="group__zcl__types_1ga798e87a8b8f240a33706b7bc37c9ede1" compoundref="zcl__types_8c" startline="316" endline="372">zcl_type_name</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__client_1gadd1b745da67ffd49ec948ff56ec218fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int zcl_print_struct_value</definition>
+        <argsstring>(const void *value, int value_length)</argsstring>
+        <name>zcl_print_struct_value</name>
+        <param>
+          <type>const void *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value_length</declname>
+        </param>
+        <briefdescription>
+<para>Print Read Attributes Response value of a structure attribute. </para>        </briefdescription>
+        <detaileddescription>
+<para>Helper function for <ref refid="group__zcl__client_1gaa21e1a258a8cc7899586920a0247ee6d" kindref="member">zcl_print_attribute_value()</ref>, takes a pointer to the &quot;value&quot; field of a Read Attributes Response for a structure type, formats it and prints to stdout.</para><para><programlisting><codeline><highlight class="normal"><sp/>Example:</highlight></codeline>
+<codeline><highlight class="normal">with<sp/>3<sp/>elements</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>.element0<sp/>(TIME_UTCTIME)<sp/>=<sp/>2012-01-01<sp/>00:00:00</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>.element1<sp/>(UNSIGNED_8BIT)<sp/>=<sp/>0xAA<sp/>=<sp/>170</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>.element2<sp/>(SIGNED_8BIT)<sp/>=<sp/>0xAA<sp/>=<sp/>-86</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to ZCL-encoded structure value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes at value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>value</computeroutput> is NULL or  is too small </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;=2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes from <computeroutput>value</computeroutput> consumed by function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__client_1gaa21e1a258a8cc7899586920a0247ee6d" kindref="member">zcl_print_attribute_value</ref>, <ref refid="group__zcl__client_1ga4e831f4977e3c0eb5ad556a991b7da5f" kindref="member">zcl_print_array_value</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="678" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="678" bodyend="717"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" compoundref="zcl_8h" startline="416">type</references>
+        <references refid="group__xbee__atcmd_1ga5bf2410fa8ec37f47f8afeba8dcc7f1b" compoundref="atcmd_8h" startline="360">value</references>
+        <references refid="group__zcl__client_1gaa21e1a258a8cc7899586920a0247ee6d" compoundref="zcl__client_8c" startline="731" endline="914">zcl_print_attribute_value</references>
+        <references refid="group__zcl__types_1ga798e87a8b8f240a33706b7bc37c9ede1" compoundref="zcl__types_8c" startline="316" endline="372">zcl_type_name</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__client_1gaa21e1a258a8cc7899586920a0247ee6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int zcl_print_attribute_value</definition>
+        <argsstring>(uint8_t type, const void *value, int value_length)</argsstring>
+        <name>zcl_print_attribute_value</name>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value_length</declname>
+        </param>
+        <briefdescription>
+<para>Formats an attribute value and prints it to stdout. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ZCL datatype of attribute&apos;s value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the ZCL-encoded value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes at value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>value</computeroutput> is NULL or  is too small </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;=2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes from <computeroutput>value</computeroutput> consumed by function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__zcl__client_1ga4e831f4977e3c0eb5ad556a991b7da5f" kindref="member">zcl_print_array_value</ref>, <ref refid="group__zcl__client_1gadd1b745da67ffd49ec948ff56ec218fa" kindref="member">zcl_print_struct_value</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="731" column="1" bodyfile="src/zigbee/zcl_client.c" bodystart="731" bodyend="914"/>
+        <referencedby refid="group__zcl__client_1ga4e831f4977e3c0eb5ad556a991b7da5f" compoundref="zcl__client_8c" startline="617" endline="654">zcl_print_array_value</referencedby>
+        <referencedby refid="group__zcl__client_1gadd1b745da67ffd49ec948ff56ec218fa" compoundref="zcl__client_8c" startline="678" endline="717">zcl_print_struct_value</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__zcl__client_1ga83ae98abbceb7019002dd43103073552" prot="public" static="no">
+        <name>zcl_client_debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_client.c" line="34" column="10" bodyfile="src/zigbee/zcl_client.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,137 @@
+\hypertarget{io_8h}{}\section{include/xbee/io.h File Reference}
+\label{io_8h}\index{include/xbee/io.\+h@{include/xbee/io.\+h}}
+
+
+Header for code related to built-\/in I/\+Os on the X\+Bee module (the A\+T\+IS command, 0x92 frames)  
+
+
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/device.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/atcmd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wpan/types.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__xbee__io_ga196d5a808112b0c850b5b35c53b9cde1}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+I\+N\+V\+A\+L\+ID}~I\+N\+T16\+\_\+C(-\/32768)
+\begin{DoxyCompactList}\small\item\em Return code from analog I/O query functions if selected I/O is not valid. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga0e8b4392a59ce754f75251d04f3a1ac3}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+P\+E\+R\+I\+OD}~50
+\begin{DoxyCompactList}\small\item\em Minimum automatic I/O sample period in ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__io_ga91bd181d244760611d0c5292f12bced8}{xbee\+\_\+frame\+\_\+io\+\_\+response\+\_\+t}
+\begin{DoxyCompactList}\small\item\em X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+O\+\_\+\+R\+E\+S\+P\+O\+N\+SE (0x92) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__xbee__io_gac23a55c53310f865d9ed2381e331a438}{xbee\+\_\+io\+\_\+type} \{ \newline
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438ac94eae0e1d6e2f048b7ce9aad2dbb294}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED} = 0, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a03494dbb6cd4a96383107366370f0473}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+E\+C\+I\+AL} = 1, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a70bf5092d9f6fdf00cb81b4fd16aeb8b}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+I\+N\+P\+UT} = 2, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a2887707500afd7d22309447fef90d52e}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+N\+P\+UT} = 3, 
+\newline
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4e6de8188ed6ccfea0d862dc8c36cbbf}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+OW} = 4, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438ab62aebd7dfbb2424407a9115fbf55ef1}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+GH} = 5, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a85bc0f69a521fb5c165328ff14cb3c93}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+OW} = 6, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4a98244656eacb8587c39c6219b02731}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+H\+I\+GH} = 7, 
+\newline
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438afb53ffa5963f9677a369d43916807f44}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK} = 0x0F, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a2f8406584861bbcbd152bac72b6051c8}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+D\+E\+T\+E\+CT} = 0x10, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a6338af6819290605a1c535a610965340}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+UP} = 0x20, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a74522e6465b22217ea88fec09cf6601c}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+D\+O\+WN} = 0x40, 
+\newline
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4566a81606cd9dbd9ec84207a02a5936}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE} = 0x80, 
+{\bfseries X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+P\+U\+L\+L\+UP}
+ \}\begin{DoxyCompactList}\small\item\em Configuration type for X\+Bee built-\/in I/\+Os. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__xbee__io_gaf104a10d2bc34550b99de92fe3564cd2}{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state} \{ \hyperlink{group__xbee__io_ggaf104a10d2bc34550b99de92fe3564cd2ab51805fa21200aa69c1b83b718e8a48b}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+L\+OW} = X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+OW, 
+\hyperlink{group__xbee__io_ggaf104a10d2bc34550b99de92fe3564cd2a252b4619d7e663b9b816389c34731bd7}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+H\+I\+GH} = X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+GH, 
+{\bfseries X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+C\+E\+\_\+\+L\+OW} = X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+L\+O\+W$\vert$\+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE, 
+{\bfseries X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+C\+E\+\_\+\+H\+I\+GH} = X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+H\+I\+G\+H$\vert$\+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE
+ \}\begin{DoxyCompactList}\small\item\em Digital output state for X\+Bee built-\/in I/\+Os configured as outputs. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga49aae35ec2a46306bf2ad593cecbcf26}{xbee\+\_\+io\+\_\+response\+\_\+parse} (\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$parsed, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$source)
+\begin{DoxyCompactList}\small\item\em Parse an I/O response and store it in an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug void \hyperlink{group__xbee__io_ga931be802188e7f6d5f34ca8c47405479}{xbee\+\_\+io\+\_\+response\+\_\+dump} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io)
+\begin{DoxyCompactList}\small\item\em Debugging function used to dump an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure to stdout. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_gad542b5112bb7aafb9b3b9f965d6f3703}{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+input} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Return state of a digital input. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga6f3c5c657a49cd87abe13bdba3af15e9}{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+output} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Return state of a digital output. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} \hyperlink{group__xbee__io_ga69fd62a7e8b6ebd3654ba426f8aa07ab}{xbee\+\_\+io\+\_\+get\+\_\+analog\+\_\+input} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Return reading of an analog input. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga73696df85c4f9e52d5d24825d3a90b2a}{xbee\+\_\+io\+\_\+set\+\_\+digital\+\_\+output} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index, enum \hyperlink{group__xbee__io_gaf104a10d2bc34550b99de92fe3564cd2}{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state} state, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Set state of a digital output. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga0734acd149ca45fa8041d426f552e51a}{xbee\+\_\+io\+\_\+configure} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index, enum \hyperlink{group__xbee__io_gac23a55c53310f865d9ed2381e331a438}{xbee\+\_\+io\+\_\+type} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Configure X\+Bee digital and analog I/\+Os. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga6a1e9ccca3a6d97f1b583e76f1193dca}{xbee\+\_\+io\+\_\+set\+\_\+options} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} sample\+\_\+rate, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} change\+\_\+mask, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Configure X\+Bee automatic I/O sampling options. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int {\bfseries xbee\+\_\+io\+\_\+query} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_gad253478285335c84b310aafb13aa1b21}{xbee\+\_\+io\+\_\+query\+\_\+status} (\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io)
+\begin{DoxyCompactList}\small\item\em Check the status of querying an X\+Bee device, as initiated by xbee\+\_\+io\+\_\+query(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{unionaddr64}{addr64} \hyperlink{group__xbee__io_ga231e348f98931de7fde1d09f64264afc}{ieee\+\_\+address\+\_\+be}
+\begin{DoxyCompactList}\small\item\em A\+T\+SH and A\+T\+SL of sender. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_ga73d48563eb05cd5fcc4add79d226a3b8}{network\+\_\+address\+\_\+be}
+\begin{DoxyCompactList}\small\item\em A\+T\+MY value of sender. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries options}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__io_ga6bd874a22b34b2e3f911f90b07c4e6b4}{num\+\_\+samples}
+\begin{DoxyCompactList}\small\item\em Currently always 1. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gac5955aa1e44ff234e6d78a19cf68f25c}{data} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em First of variable amount of data Parse using \hyperlink{group__xbee__io_ga49aae35ec2a46306bf2ad593cecbcf26}{xbee\+\_\+io\+\_\+response\+\_\+parse()} \end{DoxyCompactList}\item 
+const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{unionxbee__at__cmd__t}{xbee\+\_\+at\+\_\+cmd\+\_\+t} {\bfseries xbee\+\_\+io\+\_\+cmd\+\_\+by\+\_\+index} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{X\+Bee configurable I/O pin names. Bitmask applied to certain fields.}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__xbee__io_gafc56816e62b0dd0a8d981b08f5f29651}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+D0}~0x0001
+\begin{DoxyCompactList}\small\item\em A\+D0 (pin 20) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_gaf01ab2d51afb8e360ade1ec5ceb15f0c}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O0}~0x0001
+\begin{DoxyCompactList}\small\item\em D\+I\+O0 (pin 20) -\/ also commissioning button if so configured. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga78db08538e469fbe09b17180b74f3e1c}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+D1}~0x0002
+\begin{DoxyCompactList}\small\item\em A\+D1 (pin 19) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_gaf13c9ac98667d02de7b5ab0428b20dc2}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O1}~0x0002
+\begin{DoxyCompactList}\small\item\em D\+I\+O1 (pin 19) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga03c92ebb88533c632409a6d869b7d063}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+D2}~0x0004
+\begin{DoxyCompactList}\small\item\em A\+D2 (pin 18) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga9c373a42f64e66bfa38b2235fdfe6a25}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O2}~0x0004
+\begin{DoxyCompactList}\small\item\em D\+I\+O2 (pin 18) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga4fe43e2934ff1e51aa67eb98facc8073}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+D3}~0x0008
+\begin{DoxyCompactList}\small\item\em A\+D3 (pin 17) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga9e539ad69c134bece49a356974defd98}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O3}~0x0008
+\begin{DoxyCompactList}\small\item\em D\+I\+O3 (pin 17) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_gaaa986d18e9f32ea28679ff354c503281}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O4}~0x0010
+\begin{DoxyCompactList}\small\item\em D\+I\+O4 (pin 11) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga51804d7450fba2e4200c39f5fba9ccf4}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O5}~0x0020
+\begin{DoxyCompactList}\small\item\em D\+I\+O5 (pin 15) -\/ also A\+S\+S\+OC indicator if so configured. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga1e1b537e3a643c8f79098d8f490f433e}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O6}~0x0040
+\begin{DoxyCompactList}\small\item\em D\+I\+O6 (pin 16) -\/ also R\+TS flow control if so configured. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga6255aa73ee149d14f2adb45112124dc1}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O7}~0x0080
+\begin{DoxyCompactList}\small\item\em D\+I\+O7 (pin 12) -\/ also C\+TS flow control if so configured. \end{DoxyCompactList}\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+G\+P\+I\+O7}~0x0080
+\item 
+\#define \hyperlink{group__xbee__io_gae8044e1e12773287a7d433b23bba560b}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+V\+C\+C\+\_\+\+S\+E\+N\+SE}~0x80
+\begin{DoxyCompactList}\small\item\em Supply voltage sense (in \hyperlink{group__xbee__io_ga8473837f97f54ee29f09cd8f9c15e084}{xbee\+\_\+io\+\_\+t.\+analog\+\_\+enabled} field) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_gaf960c0d984f3b75ecfcae16ccbb5f3b8}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O10}~0x0400
+\begin{DoxyCompactList}\small\item\em D\+I\+O10 (pin 6) -\/ also R\+S\+SI P\+WM if so configured. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga7c1e80d3412af7f1218b981c5c4e3702}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O11}~0x0800
+\begin{DoxyCompactList}\small\item\em D\+I\+O11 (pin 7) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__io_ga937549281953eb14d221e9f95445d210}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O12}~0x1000
+\begin{DoxyCompactList}\small\item\em D\+I\+O12 (pin 4) -\/ also CD signal if so configured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header for code related to built-\/in I/\+Os on the X\+Bee module (the A\+T\+IS command, 0x92 frames) 
+

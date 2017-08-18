@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structwpan__address__t" kind="struct" language="C++" prot="public">
+    <compoundname>wpan_address_t</compoundname>
+    <includes refid="types_8h" local="yes">wpan/types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__wpan__types_1ga57d831abe873357609a3fce445ac09c0" prot="public" static="no" mutable="no">
+        <type><ref refid="unionaddr64" kindref="compound">addr64</ref></type>
+        <definition>addr64 ieee</definition>
+        <argsstring></argsstring>
+        <name>ieee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/types.h" line="99" column="1" bodyfile="include/wpan/types.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__types_1ga8389ac73067c5366c166e34801bf95c4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t network</definition>
+        <argsstring></argsstring>
+        <name>network</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/types.h" line="100" column="1" bodyfile="include/wpan/types.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Single structure to hold an 802.15.4 device&apos;s 64-bit IEEE/MAC address and 16-bit network address. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="55">
+        <label>wpan_address_t</label>
+        <link refid="structwpan__address__t"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>ieee</edgelabel>
+        </childnode>
+      </node>
+      <node id="56">
+        <label>addr64</label>
+        <link refid="unionaddr64"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/wpan/types.h" line="98" column="1" bodyfile="include/wpan/types.h" bodystart="98" bodyend="101"/>
+    <listofallmembers>
+      <member refid="group__wpan__types_1ga57d831abe873357609a3fce445ac09c0" prot="public" virt="non-virtual"><scope>wpan_address_t</scope><name>ieee</name></member>
+      <member refid="group__wpan__types_1ga8389ac73067c5366c166e34801bf95c4" prot="public" virt="non-virtual"><scope>wpan_address_t</scope><name>network</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

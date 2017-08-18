@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structxbee__serial__t" kind="struct" language="C++" prot="public">
+    <compoundname>xbee_serial_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__hal__dos_1gac4f06ea26ed6bd7ae83b92d64ac10b78" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t baudrate</definition>
+        <argsstring></argsstring>
+        <name>baudrate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="69" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1ga1e87af3c18a2fd36c61faf89949bdc3f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="70" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1ga0b4f70bb619f70229e3332ca583501fa" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t comport</definition>
+        <argsstring></argsstring>
+        <name>comport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="72" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1ga8e0798404bf2cf5dabb84c5ba9a4f236" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="73" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1ga82781a1012b61cf73381d0e9cc5dbbbb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t intvec</definition>
+        <argsstring></argsstring>
+        <name>intvec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="75" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1gae7cbe64213a893a9b20210be34e3c0b9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t picmask</definition>
+        <argsstring></argsstring>
+        <name>picmask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="76" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1ga2dca5da6a3c4e6654c1fe9a3507aa4a8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t lsr_mask</definition>
+        <argsstring></argsstring>
+        <name>lsr_mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="77" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1gab84caebde2cbbf628c6b121ab1479657" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structxbee__cbuf__t" kindref="compound">xbee_cbuf_t</ref> *</type>
+        <definition>struct xbee_cbuf_t* txbuf</definition>
+        <argsstring></argsstring>
+        <name>txbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="87" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1ga240ac56bdef04d1201432e8fbbd701a7" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structxbee__cbuf__t" kindref="compound">xbee_cbuf_t</ref> *</type>
+        <definition>struct xbee_cbuf_t * rxbuf</definition>
+        <argsstring></argsstring>
+        <name>rxbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="88" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1ga39ae4f38dd4106e5ad471dea876ea044" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t isr_count</definition>
+        <argsstring></argsstring>
+        <name>isr_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="89" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1ga035e778219e705696ae1de6010c79f55" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t isr_rent</definition>
+        <argsstring></argsstring>
+        <name>isr_rent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="90" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1ga044661106248e3b88b7367a25564e017" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t oe</definition>
+        <argsstring></argsstring>
+        <name>oe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="91" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1gac386d9b4162d246079f9d095ff3b3138" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t pe</definition>
+        <argsstring></argsstring>
+        <name>pe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="92" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1gae1b2c519587a252d68482e46a9664571" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t fe</definition>
+        <argsstring></argsstring>
+        <name>fe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="93" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__dos_1ga580a572991f81c74d0cf88bdccc3db88" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t bi</definition>
+        <argsstring></argsstring>
+        <name>bi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="94" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__hcs08_1ga2fa54f9024782843172506fadbee2ac8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_hcs08.h" line="114" column="1" bodyfile="include/xbee/platform_hcs08.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__posix_1ga6f8059414f0228f0256115e024eeed4b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fd</definition>
+        <argsstring></argsstring>
+        <name>fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_posix.h" line="63" column="1" bodyfile="include/xbee/platform_posix.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__posix_1ga3a03f8d1b13de77b5c0885971a535d02" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char device[40]</definition>
+        <argsstring>[40]</argsstring>
+        <name>device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_posix.h" line="64" column="1" bodyfile="include/xbee/platform_posix.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxbee__serial__t_1a63c89c04d1feae07ca35558055155ffb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_rabbit.h" line="53" column="1" bodyfile="include/xbee/platform_rabbit.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__win32_1ga7fe6807e4e54777ba00f6dc48294f891" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int comport</definition>
+        <argsstring></argsstring>
+        <name>comport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="69" column="1" bodyfile="include/xbee/platform_win32.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__hal__win32_1ga36ece86d4caa2125784ad17fe12c0e95" prot="public" static="no" mutable="no">
+        <type>HANDLE</type>
+        <definition>HANDLE hCom</definition>
+        <argsstring></argsstring>
+        <name>hCom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="70" column="1" bodyfile="include/xbee/platform_win32.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="group__hal__dos_1ga475b2e273ce4aad9558201d41b6f4459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>void</definition>
+        <argsstring>(__interrupt FAR *prev_int)()</argsstring>
+        <name>void</name>
+        <param>
+          <type>__interrupt <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>prev_int</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_dos.h" line="74" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="278">
+        <label>xbee_cbuf_t</label>
+        <link refid="structxbee__cbuf__t"/>
+      </node>
+      <node id="277">
+        <label>xbee_serial_t</label>
+        <link refid="structxbee__serial__t"/>
+        <childnode refid="278" relation="usage">
+          <edgelabel>rxbuf</edgelabel>
+          <edgelabel>txbuf</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xbee/platform_dos.h" line="68" column="1" bodyfile="include/xbee/platform_dos.h" bodystart="68" bodyend="95"/>
+    <listofallmembers>
+      <member refid="group__hal__dos_1gac4f06ea26ed6bd7ae83b92d64ac10b78" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>baudrate</name></member>
+      <member refid="group__hal__dos_1ga580a572991f81c74d0cf88bdccc3db88" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>bi</name></member>
+      <member refid="group__hal__dos_1ga0b4f70bb619f70229e3332ca583501fa" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>comport</name></member>
+      <member refid="group__hal__win32_1ga7fe6807e4e54777ba00f6dc48294f891" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>comport</name></member>
+      <member refid="group__hal__posix_1ga3a03f8d1b13de77b5c0885971a535d02" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>device</name></member>
+      <member refid="group__hal__posix_1ga6f8059414f0228f0256115e024eeed4b" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>fd</name></member>
+      <member refid="group__hal__dos_1gae1b2c519587a252d68482e46a9664571" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>fe</name></member>
+      <member refid="group__hal__dos_1ga1e87af3c18a2fd36c61faf89949bdc3f" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>flags</name></member>
+      <member refid="group__hal__win32_1ga36ece86d4caa2125784ad17fe12c0e95" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>hCom</name></member>
+      <member refid="group__hal__dos_1ga82781a1012b61cf73381d0e9cc5dbbbb" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>intvec</name></member>
+      <member refid="group__hal__dos_1ga39ae4f38dd4106e5ad471dea876ea044" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>isr_count</name></member>
+      <member refid="group__hal__dos_1ga035e778219e705696ae1de6010c79f55" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>isr_rent</name></member>
+      <member refid="group__hal__dos_1ga2dca5da6a3c4e6654c1fe9a3507aa4a8" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>lsr_mask</name></member>
+      <member refid="group__hal__dos_1ga044661106248e3b88b7367a25564e017" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>oe</name></member>
+      <member refid="group__hal__dos_1gac386d9b4162d246079f9d095ff3b3138" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>pe</name></member>
+      <member refid="group__hal__dos_1gae7cbe64213a893a9b20210be34e3c0b9" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>picmask</name></member>
+      <member refid="group__hal__dos_1ga8e0798404bf2cf5dabb84c5ba9a4f236" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>port</name></member>
+      <member refid="group__hal__hcs08_1ga2fa54f9024782843172506fadbee2ac8" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>port</name></member>
+      <member refid="structxbee__serial__t_1a63c89c04d1feae07ca35558055155ffb" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>port</name></member>
+      <member refid="group__hal__dos_1ga240ac56bdef04d1201432e8fbbd701a7" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>rxbuf</name></member>
+      <member refid="group__hal__dos_1gab84caebde2cbbf628c6b121ab1479657" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>txbuf</name></member>
+      <member refid="group__hal__dos_1ga475b2e273ce4aad9558201d41b6f4459" prot="public" virt="non-virtual"><scope>xbee_serial_t</scope><name>void</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

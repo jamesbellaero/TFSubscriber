@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sxa__socket_8h" kind="file" language="C++">
+    <compoundname>sxa_socket.h</compoundname>
+    <includes refid="sxa_8h" local="yes">xbee/sxa.h</includes>
+    <incdepgraph>
+      <node id="754">
+        <label>xbee/device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="755" relation="include">
+        </childnode>
+        <childnode refid="760" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+        <childnode refid="762" relation="include">
+        </childnode>
+      </node>
+      <node id="766">
+        <label>xbee/reg_descr.h</label>
+        <link refid="reg__descr_8h"/>
+        <childnode refid="755" relation="include">
+        </childnode>
+      </node>
+      <node id="765">
+        <label>xbee/io.h</label>
+        <link refid="io_8h"/>
+        <childnode refid="755" relation="include">
+        </childnode>
+        <childnode refid="754" relation="include">
+        </childnode>
+        <childnode refid="753" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+      </node>
+      <node id="764">
+        <label>xbee/discovery.h</label>
+        <link refid="discovery_8h"/>
+        <childnode refid="755" relation="include">
+        </childnode>
+        <childnode refid="754" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+      </node>
+      <node id="756">
+        <label>errno.h</label>
+      </node>
+      <node id="758">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="759" relation="include">
+        </childnode>
+      </node>
+      <node id="757">
+        <label>stddef.h</label>
+      </node>
+      <node id="762">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="761" relation="include">
+        </childnode>
+      </node>
+      <node id="763">
+        <label>xbee/wpan.h</label>
+        <link refid="wpan_8h"/>
+        <childnode refid="754" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+      </node>
+      <node id="761">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="755" relation="include">
+        </childnode>
+      </node>
+      <node id="755">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="756" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+        <childnode refid="758" relation="include">
+        </childnode>
+      </node>
+      <node id="752">
+        <label>xbee/sxa.h</label>
+        <link refid="sxa_8h"/>
+        <childnode refid="753" relation="include">
+        </childnode>
+        <childnode refid="763" relation="include">
+        </childnode>
+        <childnode refid="764" relation="include">
+        </childnode>
+        <childnode refid="765" relation="include">
+        </childnode>
+        <childnode refid="766" relation="include">
+        </childnode>
+      </node>
+      <node id="753">
+        <label>xbee/atcmd.h</label>
+        <link refid="atcmd_8h"/>
+        <childnode refid="754" relation="include">
+        </childnode>
+      </node>
+      <node id="760">
+        <label>xbee/serial.h</label>
+        <link refid="serial_8h"/>
+        <childnode refid="755" relation="include">
+        </childnode>
+      </node>
+      <node id="751">
+        <label>include/xbee/sxa_socket.h</label>
+        <link refid="sxa__socket_8h"/>
+        <childnode refid="752" relation="include">
+        </childnode>
+      </node>
+      <node id="759">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct__sxa__sock__hdr__t" prot="public">_sxa_sock_hdr_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group___s_x_a_1ga24cd1c18c4568b532a09c4d3ae6a3700" prot="public" static="no">
+        <name>SXA_SOCKET_MTU</name>
+        <initializer>104</initializer>
+        <briefdescription>
+<para>Network interface Maximum Transmission Unit, as seen by TCP stack. </para>        </briefdescription>
+        <detaileddescription>
+<para>Selection of this constant is a bit tricky. ZigBee has a small MTU, however the XBee modules accept larger payloads and fragments them if necessary when transmitting. TCP likes to avoid fragmentation and tries to select an MSS (TCP payload size) as large as possible, but not so large as to require any fragmentation along the transmission path.</para><para>There is no reliable method to set the MSS, because the ZigBee MTU depends on various header options such as encryption and source routing. Because of this, we select a conservative value for the TCP MSS of 64 bytes. To this, we add 40 bytes (for the IP and TCP headers) to get an MTU of 104, since TCP computes its MSS by assuming IP and TCP headers are required for each segment. This MTU of 104 exceeds that for ZigBee, however out implementation of SXA sockets effectively compresses the IP and TCP headers into a 6-byte header. This gives a real MTU of 64+6 = 70 bytes. This is an acceptable envelope payload size, which will avoid fragmentation.</para><para>Thus, whatever this constant is, the real MTU will be 34 bytes less than this, and the TCP MSS will be 40 bytes less. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="55" column="10" bodyfile="include/xbee/sxa_socket.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga0ae330bea7b42c331e9f473387e5766b" prot="public" static="no">
+        <name>SXA_INDEX_TO_IP</name>
+        <param><defname>index</defname></param>
+        <initializer>IPADDR(127,1,0,index)</initializer>
+        <briefdescription>
+<para>Macro to generate the appropriate &quot;loopback&quot; IP address, i.e. </para>        </briefdescription>
+        <detaileddescription>
+<para>the IP address to use to talk to a particular remote node defined by its SXA node table index. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="61" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga686d56084362bb9152a4d5e6b048b80d" prot="public" static="no">
+        <name>SXA_STREAM_PORT</name>
+        <initializer>UINT16_C(61616)</initializer>
+        <briefdescription>
+<para>Macro to use for first and last valid TCP port numbers, for both source port and destination port. </para>        </briefdescription>
+        <detaileddescription>
+<para>This range is selected since port numbers must compress into 8-bit fields. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="66" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gab048ec29a4d3a7904f5aec7986ddcf6e" prot="public" static="no">
+        <name>SXA_MAX_STREAM_PORT</name>
+        <initializer>UINT16_C(61616+255)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="67" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1ga1d3ed304c9ba526771772782f6f446e5" prot="public" static="no">
+        <name>WPAN_ENDPOINT_DIGI_STREAM</name>
+        <initializer>0x66</initializer>
+        <briefdescription>
+<para>Provisional endpoint for reliable stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="70" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sxa__socket_8h_1a99608191298dc3124abbc6987681af2d" prot="public" static="no">
+        <name>_SXA_SOCK_SYN</name>
+        <initializer>0x8000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="81" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sxa__socket_8h_1a3ef1120303e06f26b7bf60a5ccde9dd4" prot="public" static="no">
+        <name>_SXA_SOCK_FIN</name>
+        <initializer>0x4000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="82" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sxa__socket_8h_1aae8a7fed5cdb10695bc3b753a6e194a8" prot="public" static="no">
+        <name>_SXA_SOCK_ACK</name>
+        <initializer>0x2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="83" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sxa__socket_8h_1a010755876f4e528e5cad696d56d43315" prot="public" static="no">
+        <name>_SXA_SOCK_RST</name>
+        <initializer>0x1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="84" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sxa__socket_8h_1affeb40f769c5794e9920633bd10f5218" prot="public" static="no">
+        <name>_SXA_SOCK_FLAG_MASK</name>
+        <initializer>0xF000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="85" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sxa__socket_8h_1a571c5518fbfcc72b3bda96c162c687c9" prot="public" static="no">
+        <name>_SXA_SOCK_WIN_MASK</name>
+        <initializer>0x0FFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="86" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sxa__socket_8h_1a83dcacb4e1b930231c79676d15b9f02a" prot="public" static="no">
+        <name>_SXA_SOCK_WIN_RANGE</name>
+        <initializer>0x0800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="87" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sxa__socket_8h_1a45211e148953300903af22cb01fc75c7" prot="public" static="no">
+        <name>_SXA_SOCK_WIN_COUNT</name>
+        <initializer>0x07FF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="88" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sxa__socket_8h_1a1399269a3f3a5928129b7f58ca4b48d2" prot="public" static="no">
+        <name>_SXA_WIN_LOW_RANGE_SHIFT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="89" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sxa__socket_8h_1ac530dfddd3255b7b227c8a5b3bb0fc39" prot="public" static="no">
+        <name>_SXA_WIN_HIGH_RANGE_SHIFT</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="90" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___s_x_a_1gacef6e474f41d87ead3269f543f2c5efd" prot="public" static="no">
+        <name>SXA_SOCKET_ENDPOINT</name>
+        <initializer>{ \
+        <ref refid="group___s_x_a_1ga1d3ed304c9ba526771772782f6f446e5" kindref="member">WPAN_ENDPOINT_DIGI_STREAM</ref>,	\
+        <ref refid="group__wpan__aps_1gaa90d7d1301c7de503f39113eb83e93e5" kindref="member">WPAN_PROFILE_DIGI</ref>,				\
+        _sxa_socket_rx_handler,		\
+        NULL,								\
+        0x0000,							\
+        0x00,								\
+        NULL }</initializer>
+        <briefdescription>
+<para>Place this entry in endpoint table to enable SXA sockets. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa_socket.h" line="103" column="9" bodyfile="include/xbee/sxa_socket.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___s_x_a_1ga04cec5760ca52362801366f825805a0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int _sxa_socket_tx_handler</definition>
+        <argsstring>(struct LoopbackHandler __far *lh, ll_Gather *g)</argsstring>
+        <name>_sxa_socket_tx_handler</name>
+        <param>
+          <type>struct LoopbackHandler __far *</type>
+          <declname>lh</declname>
+        </param>
+        <param>
+          <type>ll_Gather *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rabbit/xbee_sxa_socket.c" line="130" column="1" bodyfile="src/rabbit/xbee_sxa_socket.c" bodystart="130" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gad08c29c9cffd4775a178909a52d93121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _sxa_socket_rx_handler</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, wpan_ep_state_t FAR *ep_state)</argsstring>
+        <name>_sxa_socket_rx_handler</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>ep_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rabbit/xbee_sxa_socket.c" line="245" column="1" bodyfile="src/rabbit/xbee_sxa_socket.c" bodystart="245" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="group___s_x_a_1gaacbb5ad05beda82f9f21740433c7d3f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_xbee_sxa_debug int</type>
+        <definition>int sxa_socket_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>sxa_socket_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rabbit/xbee_sxa_socket.c" line="374" column="1" bodyfile="src/rabbit/xbee_sxa_socket.c" bodystart="374" bodyend="379"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header for Simplified XBee API TCP sockets over ZigBee. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#ifndef<sp/>__DC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#error<sp/>&quot;This<sp/>header<sp/>is<sp/>only<sp/>supported<sp/>on<sp/>the<sp/>Rabbit<sp/>platform<sp/>with<sp/>Dynamic<sp/>C.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__XBEE_SXA_SOCKET</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__XBEE_SXA_SOCKET</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sxa_8h" kindref="compound">xbee/sxa.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SXA_SOCKET_MTU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="group___s_x_a_1ga24cd1c18c4568b532a09c4d3ae6a3700" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>SXA_SOCKET_MTU<sp/><sp/>104</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="group___s_x_a_1ga0ae330bea7b42c331e9f473387e5766b" refkind="member"><highlight class="preprocessor">#define<sp/>SXA_INDEX_TO_IP(index)<sp/>IPADDR(127,1,0,index)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="group___s_x_a_1ga686d56084362bb9152a4d5e6b048b80d" refkind="member"><highlight class="preprocessor">#define<sp/>SXA_STREAM_PORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT16_C(61616)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SXA_MAX_STREAM_PORT<sp/><sp/><sp/><sp/><sp/><sp/>UINT16_C(61616+255)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="group___s_x_a_1ga1d3ed304c9ba526771772782f6f446e5" refkind="member"><highlight class="preprocessor">#define<sp/>WPAN_ENDPOINT_DIGI_STREAM<sp/><sp/><sp/>0x66</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Since<sp/>this<sp/>is<sp/>Rabbit-specific,<sp/>all<sp/>the<sp/>following<sp/>fields<sp/>are<sp/>sent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>little-endian<sp/>over<sp/>the<sp/>air.<sp/><sp/>This<sp/>struct<sp/>forms<sp/>the<sp/>condensed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TCP/IP<sp/>header,<sp/>which<sp/>forms<sp/>the<sp/>first<sp/>6<sp/>octets<sp/>of<sp/>the<sp/>WPAN<sp/>envelope</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>payload.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="struct__sxa__sock__hdr__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__sxa__sock__hdr__t" kindref="compound">_sxa_sock_hdr_t</ref></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78" refid="struct__sxa__sock__hdr__t_1a90ee27660869628b83fe9e5fdeaae7b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><ref refid="struct__sxa__sock__hdr__t_1a90ee27660869628b83fe9e5fdeaae7b2" kindref="member">seqnum</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="struct__sxa__sock__hdr__t_1a0758eb4120471bc74831dafe59b1f5c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><ref refid="struct__sxa__sock__hdr__t_1a0758eb4120471bc74831dafe59b1f5c7" kindref="member">acknum</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="struct__sxa__sock__hdr__t_1a1e87af3c18a2fd36c61faf89949bdc3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><ref refid="struct__sxa__sock__hdr__t_1a1e87af3c18a2fd36c61faf89949bdc3f" kindref="member">flags</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SXA_SOCK_SYN<sp/><sp/><sp/>0x8000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SXA_SOCK_FIN<sp/><sp/><sp/>0x4000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SXA_SOCK_ACK<sp/><sp/><sp/>0x2000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SXA_SOCK_RST<sp/><sp/><sp/>0x1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SXA_SOCK_FLAG_MASK<sp/><sp/><sp/>0xF000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SXA_SOCK_WIN_MASK<sp/><sp/><sp/><sp/>0x0FFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SXA_SOCK_WIN_RANGE<sp/><sp/><sp/>0x0800</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SXA_SOCK_WIN_COUNT<sp/><sp/><sp/>0x07FF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SXA_WIN_LOW_RANGE_SHIFT<sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SXA_WIN_HIGH_RANGE_SHIFT<sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}<sp/><ref refid="struct__sxa__sock__hdr__t" kindref="compound">_sxa_sock_hdr_t</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definitions<sp/>in<sp/>TCP<sp/>libraries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ll_Gather;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">LoopbackHandler;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_sxa_socket_tx_handler(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>LoopbackHandler<sp/>__far<sp/>*<sp/>lh,<sp/>ll_Gather<sp/>*<sp/>g);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_sxa_socket_rx_handler(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><sp/><sp/>*ep_state);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sxa_socket_init(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="group___s_x_a_1gacef6e474f41d87ead3269f543f2c5efd" refkind="member"><highlight class="preprocessor">#define<sp/>SXA_SOCKET_ENDPOINT<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WPAN_ENDPOINT_DIGI_STREAM,<sp/><sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WPAN_PROFILE_DIGI,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_sxa_socket_rx_handler,<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0000,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="group__hal_1ga8d7f5a691878e9ffb7da396899581062" kindref="member">XBEE_END_DECLS</ref></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#use<sp/>&quot;xbee_sxa_socket.c&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>__XBEE_SXA_SOCKET</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/xbee/sxa_socket.h"/>
+  </compounddef>
+</doxygen>

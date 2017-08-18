@@ -1,0 +1,301 @@
+\hypertarget{group__xbee__wpan}{}\section{Glue layer between X\+Bee Device driver and W\+P\+AN}
+\label{group__xbee__wpan}\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+
+
+network stack.  
+
+
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{xbee__wpan_8c}{xbee\+\_\+wpan.\+c}
+\begin{DoxyCompactList}\small\item\em Glue layer between X\+Bee-\/specific code and general W\+P\+AN layer. \end{DoxyCompactList}\item 
+file \hyperlink{wpan_8h}{wpan.\+h}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__wpan_gaca7a1f4a9ddf33e00ce7fd9382e18d29}\label{group__xbee__wpan_gaca7a1f4a9ddf33e00ce7fd9382e18d29}} 
+\#define {\bfseries xbee\+\_\+wpan\+\_\+debug}
+\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga8ac9b01d771126ea2e391a12a0a996ee}\label{group__xbee__wpan_ga8ac9b01d771126ea2e391a12a0a996ee}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+R\+X\+\_\+\+E\+X\+P\+L\+I\+C\+IT}~\{ \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a8f80b5fa338b8bf34888ffcbfd260a54}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+X\+P\+L\+I\+C\+IT}, 0, \hyperlink{group__xbee__wpan_ga8cb1973677412a2c5627a77009a8f283}{\+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit}, N\+U\+LL \}
+\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga4f363736032969f338cfd4e335e9be50}\label{group__xbee__wpan_ga4f363736032969f338cfd4e335e9be50}} 
+\#define \hyperlink{group__xbee__wpan_ga4f363736032969f338cfd4e335e9be50}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+A\+CK}~0x01
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Disable A\+CK \mbox{[}Zig\+Bee and Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga6a2846b0ca6b15ad7bdd7e4503fe5c30}\label{group__xbee__wpan_ga6a2846b0ca6b15ad7bdd7e4503fe5c30}} 
+\#define \hyperlink{group__xbee__wpan_ga6a2846b0ca6b15ad7bdd7e4503fe5c30}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+D\+I\+SC}~0x02
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Disable Route Discovery \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga8e8ed1a92da23af9d12c15a72a37795c}\label{group__xbee__wpan_ga8e8ed1a92da23af9d12c15a72a37795c}} 
+\#define \hyperlink{group__xbee__wpan_ga8e8ed1a92da23af9d12c15a72a37795c}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+U\+N\+I\+C\+A\+S\+T\+\_\+\+N\+A\+CK}~0x04
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Enable Unicast N\+A\+CK messages \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga44452074ba3205f9860d4d16e339aba1}\label{group__xbee__wpan_ga44452074ba3205f9860d4d16e339aba1}} 
+\#define \hyperlink{group__xbee__wpan_ga44452074ba3205f9860d4d16e339aba1}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+U\+N\+I\+C\+A\+S\+T\+\_\+\+T\+R\+A\+CE}~0x08
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Enable Unicast Trace Route messages \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga0a9bf2b58851b7d8db5359aefef3cfe0}\label{group__xbee__wpan_ga0a9bf2b58851b7d8db5359aefef3cfe0}} 
+\#define \hyperlink{group__xbee__wpan_ga0a9bf2b58851b7d8db5359aefef3cfe0}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+A\+P\+S\+\_\+\+E\+N\+C\+R\+Y\+PT}~0x20
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Enable A\+PS encryption (if EE=1) \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga60a1c57a93cd57570fb73bae97535fcb}\label{group__xbee__wpan_ga60a1c57a93cd57570fb73bae97535fcb}} 
+\#define \hyperlink{group__xbee__wpan_ga60a1c57a93cd57570fb73bae97535fcb}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+T\+I\+M\+E\+O\+UT}~0x40
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Use extended timeout for this destination. \mbox{[}Zig\+Bee\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_gab96b311d46a70649710385c64dde72f2}\label{group__xbee__wpan_gab96b311d46a70649710385c64dde72f2}} 
+\#define \hyperlink{group__xbee__wpan_gab96b311d46a70649710385c64dde72f2}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+M\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+M\+U\+L\+T\+I\+P\+O\+I\+NT}~(1$<$$<$6)
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Point-\/\+Multipoint \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga53517f5071a4aa5943b52a9c3574a77b}\label{group__xbee__wpan_ga53517f5071a4aa5943b52a9c3574a77b}} 
+\#define \hyperlink{group__xbee__wpan_ga53517f5071a4aa5943b52a9c3574a77b}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+M\+O\+D\+E\+\_\+\+R\+E\+P\+E\+A\+T\+ER}~(2$<$$<$6)
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Repeater mode (directed broadcast) \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga14d141b74c47cb6b0dfbd3563d4b097c}\label{group__xbee__wpan_ga14d141b74c47cb6b0dfbd3563d4b097c}} 
+\#define \hyperlink{group__xbee__wpan_ga14d141b74c47cb6b0dfbd3563d4b097c}{X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+G\+I\+M\+E\+SH}~(3$<$$<$6)
+\begin{DoxyCompactList}\small\item\em X\+Bee Transmit Option\+: Digi\+Mesh (not available on 10k product) \mbox{[}Digi\+Mesh\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__wpan_gad36b64f2e729281d8b7704f6e9906e82}{xbee\+\_\+frame\+\_\+receive\+\_\+explicit\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Format of X\+Bee A\+PI frame type 0x91 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a8f80b5fa338b8bf34888ffcbfd260a54}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+X\+P\+L\+I\+C\+IT}); received from X\+Bee by host. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__wpan_ga02e02911588cbafc0befb9b9da8961e6}{xbee\+\_\+header\+\_\+transmit\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Format of X\+Bee A\+PI frame type 0x10 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a5215c258e8db6c292b9e52ca26011ed1}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+IT}); sent from host to X\+Bee. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__wpan_gac2df4f67492506916726d8002ca5f2bd}{xbee\+\_\+header\+\_\+transmit\+\_\+explicit\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Format of X\+Bee A\+PI frame type 0x11 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9aa673474f9f3597929def38ad4cf7d63e}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+IT}); sent from host to X\+Bee. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+xbee\+\_\+wpan\+\_\+debug int \hyperlink{group__xbee__wpan_ga8cb1973677412a2c5627a77009a8f283}{\+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Process X\+Bee \char`\"{}\+Receive Explicit\char`\"{} frames (type 0x91) and hand off to \hyperlink{group__wpan__aps_gae84eafd10f51de6cdac4732b8948606d}{wpan\+\_\+envelope\+\_\+dispatch()} for further processing. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__wpan_ga1e5f537223d8dffb4d74f48bbc43d149}{\+\_\+xbee\+\_\+endpoint\+\_\+send} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags)
+\item 
+xbee\+\_\+wpan\+\_\+debug int \hyperlink{group__xbee__wpan_ga7c0492680badfd8ee30c5d797395394f}{\+\_\+xbee\+\_\+wpan\+\_\+tick} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev)
+\item 
+xbee\+\_\+wpan\+\_\+debug int \hyperlink{group__xbee__wpan_ga6b3d55dddb48e31d3f975f2afb4c9977}{xbee\+\_\+wpan\+\_\+init} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const \hyperlink{structwpan__endpoint__table__entry__t}{wpan\+\_\+endpoint\+\_\+table\+\_\+entry\+\_\+t} $\ast$ep\+\_\+table)
+\begin{DoxyCompactList}\small\item\em Configure \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} for A\+P\+S-\/layer (endpoint/cluster) networking. \end{DoxyCompactList}\item 
+xbee\+\_\+wpan\+\_\+debug int \hyperlink{group__xbee__wpan_ga56d68291ceee384fbd8a5833eb91182c}{\+\_\+xbee\+\_\+handle\+\_\+transmit\+\_\+status} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$\hyperlink{group__zcl_gacb1403989580c30b5cac60f347c5d6ab}{payload}, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\item 
+int \hyperlink{group__xbee__wpan_gaa750c530910a7d8324ba5579ee7fcb57}{xbee\+\_\+frame\+\_\+dump\+\_\+transmit\+\_\+status} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$\hyperlink{group__zcl_gacb1403989580c30b5cac60f347c5d6ab}{payload}, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Frame handler for 0x8B (X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+T\+A\+T\+US) frames -- dumps transmit status to S\+T\+D\+O\+UT for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal_ga336bff4f4a6012aacc4468132bbd3d7f}{X\+B\+E\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS} typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__wpan_ga0d1e37574952bdf60cda7f1351b41a9e}{xbee\+\_\+frame\+\_\+receive\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Format of X\+Bee A\+PI frame type 0x90 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9ab6fa3650abecfac4645c5d4ccdf857fd}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+C\+E\+I\+VE}); received from X\+Bee by host. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga2549f921e25a72dfa05a2154a792e2bf}\label{group__xbee__wpan_ga2549f921e25a72dfa05a2154a792e2bf}} 
+\hyperlink{unionaddr64}{addr64} {\bfseries ieee\+\_\+address}
+\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga73d48563eb05cd5fcc4add79d226a3b8}\label{group__xbee__wpan_ga73d48563eb05cd5fcc4add79d226a3b8}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries network\+\_\+address\+\_\+be}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__wpan_gaace3d640c8d449b8db1162993d259d3f}{options}
+\begin{DoxyCompactList}\small\item\em bitfield, see X\+B\+E\+E\+\_\+\+R\+X\+\_\+\+O\+P\+T\+\_\+xxx macros \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_gae6f5e79770e3e599bf8154eac1a2f3fe}\label{group__xbee__wpan_gae6f5e79770e3e599bf8154eac1a2f3fe}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__wpan_gae6f5e79770e3e599bf8154eac1a2f3fe}{payload} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em multi-\/byte payload \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga9781a5a281ee97f7f67d8ebe2c4f54db}\label{group__xbee__wpan_ga9781a5a281ee97f7f67d8ebe2c4f54db}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries source\+\_\+endpoint}
+\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga0992896b3999455a300e8ba25c368ae8}\label{group__xbee__wpan_ga0992896b3999455a300e8ba25c368ae8}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries dest\+\_\+endpoint}
+\item 
+\mbox{\Hypertarget{group__xbee__wpan_gaca804e188f62cc21ce241be1ea6a961e}\label{group__xbee__wpan_gaca804e188f62cc21ce241be1ea6a961e}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries cluster\+\_\+id\+\_\+be}
+\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga73cbe261e510134d8e042f518a939718}\label{group__xbee__wpan_ga73cbe261e510134d8e042f518a939718}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries profile\+\_\+id\+\_\+be}
+\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga03c1016ac46b9df250b994f242cf956a}\label{group__xbee__wpan_ga03c1016ac46b9df250b994f242cf956a}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries frame\+\_\+id}
+\item 
+\mbox{\Hypertarget{group__xbee__wpan_ga490a3948b7a9e6ded7f35e810366f85f}\label{group__xbee__wpan_ga490a3948b7a9e6ded7f35e810366f85f}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__wpan_ga490a3948b7a9e6ded7f35e810366f85f}{broadcast\+\_\+radius}
+\begin{DoxyCompactList}\small\item\em set to 0 for maximum hop value \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+network stack. 
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__xbee__wpan_gad36b64f2e729281d8b7704f6e9906e82}\label{group__xbee__wpan_gad36b64f2e729281d8b7704f6e9906e82}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!xbee\+\_\+frame\+\_\+receive\+\_\+explicit\+\_\+t@{xbee\+\_\+frame\+\_\+receive\+\_\+explicit\+\_\+t}}
+\index{xbee\+\_\+frame\+\_\+receive\+\_\+explicit\+\_\+t@{xbee\+\_\+frame\+\_\+receive\+\_\+explicit\+\_\+t}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{xbee\+\_\+frame\+\_\+receive\+\_\+explicit\+\_\+t}{xbee\_frame\_receive\_explicit\_t}}
+{\footnotesize\ttfamily \hyperlink{group__xbee__wpan_gad36b64f2e729281d8b7704f6e9906e82}{xbee\+\_\+frame\+\_\+receive\+\_\+explicit\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}       frame\_type
+\end{DoxyCode}
+
+
+Format of X\+Bee A\+PI frame type 0x91 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a8f80b5fa338b8bf34888ffcbfd260a54}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+X\+P\+L\+I\+C\+IT}); received from X\+Bee by host. 
+
+X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+E\+X\+P\+L\+I\+C\+IT (0x91) \mbox{\Hypertarget{group__xbee__wpan_gac2df4f67492506916726d8002ca5f2bd}\label{group__xbee__wpan_gac2df4f67492506916726d8002ca5f2bd}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!xbee\+\_\+header\+\_\+transmit\+\_\+explicit\+\_\+t@{xbee\+\_\+header\+\_\+transmit\+\_\+explicit\+\_\+t}}
+\index{xbee\+\_\+header\+\_\+transmit\+\_\+explicit\+\_\+t@{xbee\+\_\+header\+\_\+transmit\+\_\+explicit\+\_\+t}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{xbee\+\_\+header\+\_\+transmit\+\_\+explicit\+\_\+t}{xbee\_header\_transmit\_explicit\_t}}
+{\footnotesize\ttfamily \hyperlink{group__xbee__wpan_gac2df4f67492506916726d8002ca5f2bd}{xbee\+\_\+header\+\_\+transmit\+\_\+explicit\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}       frame\_type
+\end{DoxyCode}
+
+
+Format of X\+Bee A\+PI frame type 0x11 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9aa673474f9f3597929def38ad4cf7d63e}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+IT}); sent from host to X\+Bee. 
+
+X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+E\+X\+P\+L\+I\+C\+IT (0x11) \mbox{\Hypertarget{group__xbee__wpan_ga02e02911588cbafc0befb9b9da8961e6}\label{group__xbee__wpan_ga02e02911588cbafc0befb9b9da8961e6}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!xbee\+\_\+header\+\_\+transmit\+\_\+t@{xbee\+\_\+header\+\_\+transmit\+\_\+t}}
+\index{xbee\+\_\+header\+\_\+transmit\+\_\+t@{xbee\+\_\+header\+\_\+transmit\+\_\+t}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{xbee\+\_\+header\+\_\+transmit\+\_\+t}{xbee\_header\_transmit\_t}}
+{\footnotesize\ttfamily \hyperlink{group__xbee__wpan_ga02e02911588cbafc0befb9b9da8961e6}{xbee\+\_\+header\+\_\+transmit\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}       frame\_type
+\end{DoxyCode}
+
+
+Format of X\+Bee A\+PI frame type 0x10 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a5215c258e8db6c292b9e52ca26011ed1}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+IT}); sent from host to X\+Bee. 
+
+Note that the network stack does not include a function for sending this frame type -- use an explicit transmit frame instead (type 0x11) with W\+P\+A\+N\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+TA as the source and destination endpoint, D\+I\+G\+I\+\_\+\+C\+L\+U\+S\+T\+\_\+\+S\+E\+R\+I\+AL as the cluster ID and W\+P\+A\+N\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+D\+I\+GI as the profile ID. Or, use the \hyperlink{group__xbee__transparent_gafbf9e5ccdb17be373012bd690a76e570}{xbee\+\_\+transparent\+\_\+serial()} function from \hyperlink{xbee__transparent__serial_8c}{xbee\+\_\+transparent\+\_\+serial.\+c} to fill in those fields and send the data. X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+IT (0x10) 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__xbee__wpan_ga1e5f537223d8dffb4d74f48bbc43d149}\label{group__xbee__wpan_ga1e5f537223d8dffb4d74f48bbc43d149}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!\+\_\+xbee\+\_\+endpoint\+\_\+send@{\+\_\+xbee\+\_\+endpoint\+\_\+send}}
+\index{\+\_\+xbee\+\_\+endpoint\+\_\+send@{\+\_\+xbee\+\_\+endpoint\+\_\+send}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+endpoint\+\_\+send()}{\_xbee\_endpoint\_send()}}
+{\footnotesize\ttfamily xbee\+\_\+wpan\+\_\+debug int \+\_\+xbee\+\_\+endpoint\+\_\+send (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{flags }\end{DoxyParamCaption})}
+
+Sends data to an endpoint/profile/cluster on a remote W\+P\+AN node. See \hyperlink{group__wpan__aps_ga505477d0257efe527747c6d1f561cd6c}{wpan\+\_\+endpoint\+\_\+send\+\_\+fn()} for parameters and return values.
+
+User code should use \hyperlink{group__wpan__aps_ga06f1e9e86b74ef807ded44b79b13e283}{wpan\+\_\+envelope\+\_\+send()} instead of calling this function directly. 
+
+Referenced by \+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit(), and xbee\+\_\+wpan\+\_\+init().
+
+\mbox{\Hypertarget{group__xbee__wpan_ga8cb1973677412a2c5627a77009a8f283}\label{group__xbee__wpan_ga8cb1973677412a2c5627a77009a8f283}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!\+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit@{\+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit}}
+\index{\+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit@{\+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit()}{\_xbee\_handle\_receive\_explicit()}}
+{\footnotesize\ttfamily int \+\_\+xbee\+\_\+handle\+\_\+receive\+\_\+explicit (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{raw,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{length,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Process X\+Bee \char`\"{}\+Receive Explicit\char`\"{} frames (type 0x91) and hand off to \hyperlink{group__wpan__aps_gae84eafd10f51de6cdac4732b8948606d}{wpan\+\_\+envelope\+\_\+dispatch()} for further processing. 
+
+Please view the function help for \hyperlink{group__xbee__device_ga3e6f2b540e8cec7a69ef0b0166da14ff}{xbee\+\_\+frame\+\_\+handler\+\_\+fn()} for details on this function\textquotesingle{}s parameters and possible return values. 
+
+References \+\_\+xbee\+\_\+endpoint\+\_\+send(), be16toh, wpan\+\_\+envelope\+\_\+t\+::cluster\+\_\+id, wpan\+\_\+envelope\+\_\+t\+::dest\+\_\+endpoint, wpan\+\_\+envelope\+\_\+t\+::dev, E\+B\+A\+D\+M\+SG, E\+I\+N\+V\+AL, F\+AR, wpan\+\_\+envelope\+\_\+t\+::ieee\+\_\+address, wpan\+\_\+envelope\+\_\+t\+::length, wpan\+\_\+envelope\+\_\+t\+::network\+\_\+address, payload, wpan\+\_\+envelope\+\_\+t\+::payload, wpan\+\_\+envelope\+\_\+t\+::profile\+\_\+id, wpan\+\_\+envelope\+\_\+t\+::source\+\_\+endpoint, xbee\+\_\+dev\+\_\+t\+::wpan\+\_\+dev, W\+P\+A\+N\+\_\+\+E\+N\+V\+E\+L\+O\+P\+E\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T\+\_\+\+A\+D\+DR, wpan\+\_\+envelope\+\_\+dispatch(), W\+P\+A\+N\+\_\+\+E\+N\+V\+E\+L\+O\+P\+E\+\_\+\+R\+X\+\_\+\+A\+P\+S\+\_\+\+E\+N\+C\+R\+Y\+PT, X\+B\+E\+E\+\_\+\+R\+X\+\_\+\+O\+P\+T\+\_\+\+A\+P\+S\+\_\+\+E\+N\+C\+R\+Y\+PT, X\+B\+E\+E\+\_\+\+R\+X\+\_\+\+O\+P\+T\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST, and X\+B\+E\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER.
+
+\mbox{\Hypertarget{group__xbee__wpan_ga56d68291ceee384fbd8a5833eb91182c}\label{group__xbee__wpan_ga56d68291ceee384fbd8a5833eb91182c}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!\+\_\+xbee\+\_\+handle\+\_\+transmit\+\_\+status@{\+\_\+xbee\+\_\+handle\+\_\+transmit\+\_\+status}}
+\index{\+\_\+xbee\+\_\+handle\+\_\+transmit\+\_\+status@{\+\_\+xbee\+\_\+handle\+\_\+transmit\+\_\+status}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+handle\+\_\+transmit\+\_\+status()}{\_xbee\_handle\_transmit\_status()}}
+{\footnotesize\ttfamily xbee\+\_\+wpan\+\_\+debug int \+\_\+xbee\+\_\+handle\+\_\+transmit\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{frame,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{length,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+Dummy frame handler for 0x8B (X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+T\+A\+T\+US) frames. Placeholder until we integrate processing of those frames into the stack. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__device_ga3e6f2b540e8cec7a69ef0b0166da14ff}{xbee\+\_\+frame\+\_\+handler\+\_\+fn()}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000030}{Todo}]Figure out what needs to happen with these frames. Does atcmd layer need to pass errors down to callbacks? Registered endpoints? Tracked conversations? \end{DoxyRefDesc}
+
+
+References X\+B\+E\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER.
+
+\mbox{\Hypertarget{group__xbee__wpan_ga7c0492680badfd8ee30c5d797395394f}\label{group__xbee__wpan_ga7c0492680badfd8ee30c5d797395394f}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!\+\_\+xbee\+\_\+wpan\+\_\+tick@{\+\_\+xbee\+\_\+wpan\+\_\+tick}}
+\index{\+\_\+xbee\+\_\+wpan\+\_\+tick@{\+\_\+xbee\+\_\+wpan\+\_\+tick}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+wpan\+\_\+tick()}{\_xbee\_wpan\_tick()}}
+{\footnotesize\ttfamily xbee\+\_\+wpan\+\_\+debug int \+\_\+xbee\+\_\+wpan\+\_\+tick (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+Simple stub function for the \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} object to map the generic \char`\"{}tick wpan\+\_\+dev\+\_\+t\char`\"{} call into a \char`\"{}tick xbee\+\_\+dev\+\_\+t\char`\"{} call.
+
+Note that this works because the \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} structure starts with a \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} structure, so the \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} address is the same as the \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} address.
+
+See \hyperlink{group__wpan__aps_gafed1542f6becf2d81fd84ef2f0ae2833}{wpan\+\_\+tick\+\_\+fn()} for parameters and return value. 
+
+References xbee\+\_\+dev\+\_\+tick().
+
+
+
+Referenced by xbee\+\_\+wpan\+\_\+init().
+
+\mbox{\Hypertarget{group__xbee__wpan_gaa750c530910a7d8324ba5579ee7fcb57}\label{group__xbee__wpan_gaa750c530910a7d8324ba5579ee7fcb57}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!xbee\+\_\+frame\+\_\+dump\+\_\+transmit\+\_\+status@{xbee\+\_\+frame\+\_\+dump\+\_\+transmit\+\_\+status}}
+\index{xbee\+\_\+frame\+\_\+dump\+\_\+transmit\+\_\+status@{xbee\+\_\+frame\+\_\+dump\+\_\+transmit\+\_\+status}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{xbee\+\_\+frame\+\_\+dump\+\_\+transmit\+\_\+status()}{xbee\_frame\_dump\_transmit\_status()}}
+{\footnotesize\ttfamily int xbee\+\_\+frame\+\_\+dump\+\_\+transmit\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{frame,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{length,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Frame handler for 0x8B (X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+T\+A\+T\+US) frames -- dumps transmit status to S\+T\+D\+O\+UT for debugging purposes. 
+
+View the documentation of \hyperlink{group__xbee__device_ga3e6f2b540e8cec7a69ef0b0166da14ff}{xbee\+\_\+frame\+\_\+handler\+\_\+fn()} for this function\textquotesingle{}s parameters and return value.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{wpan_8h_a607cf0696a8bc634ee8993f45200297b}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+E\+B\+UG}, \hyperlink{group__xbee__device_ga3e6f2b540e8cec7a69ef0b0166da14ff}{xbee\+\_\+frame\+\_\+handler\+\_\+fn()} 
+\end{DoxySeeAlso}
+
+
+References F\+AR, payload, and X\+B\+E\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER.
+
+\mbox{\Hypertarget{group__xbee__wpan_ga6b3d55dddb48e31d3f975f2afb4c9977}\label{group__xbee__wpan_ga6b3d55dddb48e31d3f975f2afb4c9977}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!xbee\+\_\+wpan\+\_\+init@{xbee\+\_\+wpan\+\_\+init}}
+\index{xbee\+\_\+wpan\+\_\+init@{xbee\+\_\+wpan\+\_\+init}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{xbee\+\_\+wpan\+\_\+init()}{xbee\_wpan\_init()}}
+{\footnotesize\ttfamily int xbee\+\_\+wpan\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const \hyperlink{structwpan__endpoint__table__entry__t}{wpan\+\_\+endpoint\+\_\+table\+\_\+entry\+\_\+t} $\ast$}]{ep\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Configure \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} for A\+P\+S-\/layer (endpoint/cluster) networking. 
+
+If using this layer, be sure to call wpan\+\_\+tick (instead of xbee\+\_\+dev\+\_\+tick) so it can manage the A\+PS layers of the network stack.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em xbee} & device to configure \\
+\hline
+\mbox{\tt in}  & {\em ep\+\_\+table} & pointer to an endpoint table to use with device\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+\end{DoxyRetVals}
+
+
+References \+\_\+xbee\+\_\+endpoint\+\_\+send(), \+\_\+xbee\+\_\+wpan\+\_\+tick(), E\+I\+N\+V\+AL, wpan\+\_\+dev\+\_\+t\+::endpoint\+\_\+send, wpan\+\_\+dev\+\_\+t\+::endpoint\+\_\+table, wpan\+\_\+dev\+\_\+t\+::tick, and xbee\+\_\+dev\+\_\+t\+::wpan\+\_\+dev.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__xbee__wpan_gaace3d640c8d449b8db1162993d259d3f}\label{group__xbee__wpan_gaace3d640c8d449b8db1162993d259d3f}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!options@{options}}
+\index{options@{options}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} options}
+
+
+
+bitfield, see X\+B\+E\+E\+\_\+\+R\+X\+\_\+\+O\+P\+T\+\_\+xxx macros 
+
+combination of X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+$\ast$ macros \mbox{\Hypertarget{group__xbee__wpan_ga0d1e37574952bdf60cda7f1351b41a9e}\label{group__xbee__wpan_ga0d1e37574952bdf60cda7f1351b41a9e}} 
+\index{Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}!xbee\+\_\+frame\+\_\+receive\+\_\+t@{xbee\+\_\+frame\+\_\+receive\+\_\+t}}
+\index{xbee\+\_\+frame\+\_\+receive\+\_\+t@{xbee\+\_\+frame\+\_\+receive\+\_\+t}!Glue layer between X\+Bee Device driver and W\+P\+AN@{Glue layer between X\+Bee Device driver and W\+P\+AN}}
+\subsubsection{\texorpdfstring{xbee\+\_\+frame\+\_\+receive\+\_\+t}{xbee\_frame\_receive\_t}}
+{\footnotesize\ttfamily xbee\+\_\+frame\+\_\+receive\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}       frame\_type
+\end{DoxyCode}
+
+
+Format of X\+Bee A\+PI frame type 0x90 (\hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9ab6fa3650abecfac4645c5d4ccdf857fd}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+C\+E\+I\+VE}); received from X\+Bee by host. 
+
+X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+C\+E\+I\+VE (0x90) 

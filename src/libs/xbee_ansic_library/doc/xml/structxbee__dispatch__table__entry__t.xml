@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structxbee__dispatch__table__entry__t" kind="struct" language="C++" prot="public">
+    <compoundname>xbee_dispatch_table_entry_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__xbee__device_1gafa34d393db5fa915716b483011415ddc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t frame_type</definition>
+        <argsstring></argsstring>
+        <name>frame_type</name>
+        <briefdescription>
+<para>if 0, match all frames of this type </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/device.h" line="294" column="1" bodyfile="include/xbee/device.h" bodystart="294" bodyend="-1"/>
+        <referencedby refid="group__xbee__device_1gac7c192386ffce72242c2c8494b261491" compoundref="xbee__device_8c" startline="350" endline="379">_xbee_dispatch_table_dump</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__device_1ga03c1016ac46b9df250b994f242cf956a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t frame_id</definition>
+        <argsstring></argsstring>
+        <name>frame_id</name>
+        <briefdescription>
+<para>if 0, match all frames of this identifier </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/device.h" line="295" column="1" bodyfile="include/xbee/device.h" bodystart="295" bodyend="-1"/>
+        <referencedby refid="group__xbee__device_1gac7c192386ffce72242c2c8494b261491" compoundref="xbee__device_8c" startline="350" endline="379">_xbee_dispatch_table_dump</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__device_1gacae6128cc991ffaa526063adc6dd9fe8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn</ref></type>
+        <definition>xbee_frame_handler_fn handler</definition>
+        <argsstring></argsstring>
+        <name>handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/device.h" line="296" column="1" bodyfile="include/xbee/device.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__device_1gaa91f8e864e06077c354e5f5216547758" prot="public" static="no" mutable="no">
+        <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>void FAR* context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/device.h" line="297" column="1" bodyfile="include/xbee/device.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="195">
+        <label>wpan_envelope_t</label>
+        <link refid="structwpan__envelope__t"/>
+        <childnode refid="192" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="194" relation="usage">
+          <edgelabel>ieee_address</edgelabel>
+        </childnode>
+      </node>
+      <node id="188">
+        <label>xbee_dev_t</label>
+        <link refid="structxbee__dev__t"/>
+        <childnode refid="189" relation="usage">
+          <edgelabel>rx</edgelabel>
+        </childnode>
+        <childnode refid="188" relation="usage">
+          <edgelabel>is_awake</edgelabel>
+          <edgelabel>reset</edgelabel>
+          <edgelabel>node_id_handler</edgelabel>
+        </childnode>
+        <childnode refid="190" relation="usage">
+          <edgelabel>serport</edgelabel>
+        </childnode>
+        <childnode refid="192" relation="usage">
+          <edgelabel>wpan_dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="193">
+        <label>wpan_address_t</label>
+        <link refid="structwpan__address__t"/>
+        <childnode refid="194" relation="usage">
+          <edgelabel>ieee</edgelabel>
+        </childnode>
+      </node>
+      <node id="191">
+        <label>xbee_cbuf_t</label>
+        <link refid="structxbee__cbuf__t"/>
+      </node>
+      <node id="199">
+        <label>wpan_cluster_table_entry_t</label>
+        <link refid="structwpan__cluster__table__entry__t"/>
+        <childnode refid="195" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="196">
+        <label>wpan_endpoint_table_entry_t</label>
+        <link refid="structwpan__endpoint__table__entry__t"/>
+        <childnode refid="195" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+        <childnode refid="197" relation="usage">
+          <edgelabel>ep_state</edgelabel>
+        </childnode>
+        <childnode refid="199" relation="usage">
+          <edgelabel>cluster_table</edgelabel>
+        </childnode>
+      </node>
+      <node id="189">
+        <label>rx</label>
+        <link refid="structxbee__dev__t_1_1rx"/>
+      </node>
+      <node id="194">
+        <label>addr64</label>
+        <link refid="unionaddr64"/>
+      </node>
+      <node id="197">
+        <label>wpan_ep_state_t</label>
+        <link refid="structwpan__ep__state__t"/>
+        <childnode refid="198" relation="usage">
+          <edgelabel>conversations</edgelabel>
+        </childnode>
+      </node>
+      <node id="198">
+        <label>wpan_conversation_t</label>
+        <link refid="structwpan__conversation__t"/>
+        <childnode refid="198" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="192">
+        <label>wpan_dev_t</label>
+        <link refid="structwpan__dev__t"/>
+        <childnode refid="193" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="195" relation="usage">
+          <edgelabel>endpoint_send</edgelabel>
+        </childnode>
+        <childnode refid="196" relation="usage">
+          <edgelabel>endpoint_table</edgelabel>
+          <edgelabel>endpoint_get_next</edgelabel>
+        </childnode>
+        <childnode refid="192" relation="usage">
+          <edgelabel>tick</edgelabel>
+        </childnode>
+      </node>
+      <node id="187">
+        <label>xbee_dispatch_table_entry_t</label>
+        <link refid="structxbee__dispatch__table__entry__t"/>
+        <childnode refid="188" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="190">
+        <label>xbee_serial_t</label>
+        <link refid="structxbee__serial__t"/>
+        <childnode refid="191" relation="usage">
+          <edgelabel>rxbuf</edgelabel>
+          <edgelabel>txbuf</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xbee/device.h" line="293" column="1" bodyfile="include/xbee/device.h" bodystart="293" bodyend="298"/>
+    <listofallmembers>
+      <member refid="group__xbee__device_1gaa91f8e864e06077c354e5f5216547758" prot="public" virt="non-virtual"><scope>xbee_dispatch_table_entry_t</scope><name>context</name></member>
+      <member refid="group__xbee__device_1ga03c1016ac46b9df250b994f242cf956a" prot="public" virt="non-virtual"><scope>xbee_dispatch_table_entry_t</scope><name>frame_id</name></member>
+      <member refid="group__xbee__device_1gafa34d393db5fa915716b483011415ddc" prot="public" virt="non-virtual"><scope>xbee_dispatch_table_entry_t</scope><name>frame_type</name></member>
+      <member refid="group__xbee__device_1gacae6128cc991ffaa526063adc6dd9fe8" prot="public" virt="non-virtual"><scope>xbee_dispatch_table_entry_t</scope><name>handler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

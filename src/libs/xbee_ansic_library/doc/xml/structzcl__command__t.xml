@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structzcl__command__t" kind="struct" language="C++" prot="public">
+    <compoundname>zcl_command_t</compoundname>
+    <includes refid="zcl_8h" local="yes">zigbee/zcl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__zcl_1ga1c24c7848d60bc6aa335a8ba9fd14b7a" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const wpan_envelope_t FAR* envelope</definition>
+        <argsstring></argsstring>
+        <name>envelope</name>
+        <briefdescription>
+<para>envelope for the received command, envelope&apos;s payload and length include the ZCL header </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="880" column="1" bodyfile="include/zigbee/zcl.h" bodystart="880" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga5226462a41663bc81a5d67c04f18868a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t frame_control</definition>
+        <argsstring></argsstring>
+        <name>frame_control</name>
+        <briefdescription>
+<para>frame control byte from the ZCL header </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="882" column="1" bodyfile="include/zigbee/zcl.h" bodystart="882" bodyend="-1"/>
+        <referencedby refid="group__zcl__basic_1ga3a10395a400ea91bf9a3c37dcda69085" compoundref="zcl__basic_8c" startline="50" endline="72">_zcl_basic_server</referencedby>
+        <referencedby refid="group__zcl__identify_1ga94a1fe7c8892b55e0ffd3e2795139b1d" compoundref="zcl__identify_8c" startline="181" endline="243">zcl_identify_command</referencedby>
+        <referencedby refid="group__zcl__onoff_1gae7dc87cd27559c9ae0499ac542ab6107" compoundref="zcl__onoff_8c" startline="38" endline="70">_zcl_onoff_handler</referencedby>
+        <referencedby refid="group__zcl__time_1ga2c66ee215547beae5b5dde4f23cc8e00" compoundref="zcl__time_8c" startline="291" endline="392">zcl_time_client</referencedby>
+        <referencedby refid="group__zcl_1gaca5c04dd787b041bf40f3b2a4463bb70" compoundref="zigbee__zcl_8c" startline="1560" endline="1650">zcl_command_dump</referencedby>
+        <referencedby refid="group__zcl_1ga4251fbed33d85d2f7bbccb48857cae95" compoundref="zigbee__zcl_8c" startline="1747" endline="1778">zcl_invalid_command</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga011fb17c1112658806badaccba7a246d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t mfg_code</definition>
+        <argsstring></argsstring>
+        <name>mfg_code</name>
+        <briefdescription>
+<para>manufacturer code from the ZCL header, in host byte order, or 0x0000 if not mfg specific </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="885" column="1" bodyfile="include/zigbee/zcl.h" bodystart="885" bodyend="-1"/>
+        <referencedby refid="group__zcl_1gaca5c04dd787b041bf40f3b2a4463bb70" compoundref="zigbee__zcl_8c" startline="1560" endline="1650">zcl_command_dump</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1gacb5c8866a58116314f6c8eda9dc3544c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t sequence</definition>
+        <argsstring></argsstring>
+        <name>sequence</name>
+        <briefdescription>
+<para>sequence byte from the ZCL header </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="887" column="1" bodyfile="include/zigbee/zcl.h" bodystart="887" bodyend="-1"/>
+        <referencedby refid="group__zcl_1gaca5c04dd787b041bf40f3b2a4463bb70" compoundref="zigbee__zcl_8c" startline="1560" endline="1650">zcl_command_dump</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga1a5aaa930940857f68f245eeb89506b5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t command</definition>
+        <argsstring></argsstring>
+        <name>command</name>
+        <briefdescription>
+<para>command byte from the ZCL header </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="889" column="1" bodyfile="include/zigbee/zcl.h" bodystart="889" bodyend="-1"/>
+        <referencedby refid="group__zcl__basic_1ga3a10395a400ea91bf9a3c37dcda69085" compoundref="zcl__basic_8c" startline="50" endline="72">_zcl_basic_server</referencedby>
+        <referencedby refid="group__zcl__time_1ga2c66ee215547beae5b5dde4f23cc8e00" compoundref="zcl__time_8c" startline="291" endline="392">zcl_time_client</referencedby>
+        <referencedby refid="group__zcl_1gaca5c04dd787b041bf40f3b2a4463bb70" compoundref="zigbee__zcl_8c" startline="1560" endline="1650">zcl_command_dump</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga04c31df34f50e8dd1efaf1105631b2bc" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structzcl__attribute__base__t" kindref="compound">zcl_attribute_base_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const zcl_attribute_base_t FAR* attributes</definition>
+        <argsstring></argsstring>
+        <name>attributes</name>
+        <briefdescription>
+<para>Appropriate list of attributes on this device, related to the command. </para>        </briefdescription>
+        <detaileddescription>
+<para>Based on the <computeroutput>direction</computeroutput> bit from <computeroutput>frame_control</computeroutput> and the <computeroutput>mfg_code</computeroutput> field. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="893" column="1" bodyfile="include/zigbee/zcl.h" bodystart="893" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1gaf0e34793a3febabcdb61c020aecbf805" prot="public" static="no" mutable="no">
+        <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const void FAR* zcl_payload</definition>
+        <argsstring></argsstring>
+        <name>zcl_payload</name>
+        <briefdescription>
+<para>pointer to the ZCL payload (first byte after ZCL header) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="895" column="1" bodyfile="include/zigbee/zcl.h" bodystart="895" bodyend="-1"/>
+        <referencedby refid="group__zcl_1gaca5c04dd787b041bf40f3b2a4463bb70" compoundref="zigbee__zcl_8c" startline="1560" endline="1650">zcl_command_dump</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga0ff9f63e333676ba1359f505d02dd281" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga2140805d08462d474b82ddc8d1c2f3e6" kindref="member">int16_t</ref></type>
+        <definition>int16_t length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+<para>length of the ZCL payload </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="897" column="1" bodyfile="include/zigbee/zcl.h" bodystart="897" bodyend="-1"/>
+        <referencedby refid="group__zcl_1gaca5c04dd787b041bf40f3b2a4463bb70" compoundref="zigbee__zcl_8c" startline="1560" endline="1650">zcl_command_dump</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure populated by <ref refid="group__zcl_1gadeb35ab493fffec9ba1c33f658929136" kindref="member">zcl_command_build()</ref> with the ZCL header from a received ZCL command frame. </para>    </briefdescription>
+    <detaileddescription>
+<para>Does not look at the ZCL payload. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="333">
+        <label>wpan_envelope_t</label>
+        <link refid="structwpan__envelope__t"/>
+        <childnode refid="334" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="336" relation="usage">
+          <edgelabel>ieee_address</edgelabel>
+        </childnode>
+      </node>
+      <node id="332">
+        <label>zcl_command_t</label>
+        <link refid="structzcl__command__t"/>
+        <childnode refid="333" relation="usage">
+          <edgelabel>envelope</edgelabel>
+        </childnode>
+        <childnode refid="341" relation="usage">
+          <edgelabel>attributes</edgelabel>
+        </childnode>
+      </node>
+      <node id="335">
+        <label>wpan_address_t</label>
+        <link refid="structwpan__address__t"/>
+        <childnode refid="336" relation="usage">
+          <edgelabel>ieee</edgelabel>
+        </childnode>
+      </node>
+      <node id="340">
+        <label>wpan_cluster_table_entry_t</label>
+        <link refid="structwpan__cluster__table__entry__t"/>
+        <childnode refid="333" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="337">
+        <label>wpan_endpoint_table_entry_t</label>
+        <link refid="structwpan__endpoint__table__entry__t"/>
+        <childnode refid="333" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+        <childnode refid="338" relation="usage">
+          <edgelabel>ep_state</edgelabel>
+        </childnode>
+        <childnode refid="340" relation="usage">
+          <edgelabel>cluster_table</edgelabel>
+        </childnode>
+      </node>
+      <node id="336">
+        <label>addr64</label>
+        <link refid="unionaddr64"/>
+      </node>
+      <node id="338">
+        <label>wpan_ep_state_t</label>
+        <link refid="structwpan__ep__state__t"/>
+        <childnode refid="339" relation="usage">
+          <edgelabel>conversations</edgelabel>
+        </childnode>
+      </node>
+      <node id="339">
+        <label>wpan_conversation_t</label>
+        <link refid="structwpan__conversation__t"/>
+        <childnode refid="339" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="334">
+        <label>wpan_dev_t</label>
+        <link refid="structwpan__dev__t"/>
+        <childnode refid="335" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="333" relation="usage">
+          <edgelabel>endpoint_send</edgelabel>
+        </childnode>
+        <childnode refid="337" relation="usage">
+          <edgelabel>endpoint_table</edgelabel>
+          <edgelabel>endpoint_get_next</edgelabel>
+        </childnode>
+        <childnode refid="334" relation="usage">
+          <edgelabel>tick</edgelabel>
+        </childnode>
+      </node>
+      <node id="341">
+        <label>zcl_attribute_base_t</label>
+        <link refid="structzcl__attribute__base__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/zigbee/zcl.h" line="877" column="1" bodyfile="include/zigbee/zcl.h" bodystart="877" bodyend="898"/>
+    <listofallmembers>
+      <member refid="group__zcl_1ga04c31df34f50e8dd1efaf1105631b2bc" prot="public" virt="non-virtual"><scope>zcl_command_t</scope><name>attributes</name></member>
+      <member refid="group__zcl_1ga1a5aaa930940857f68f245eeb89506b5" prot="public" virt="non-virtual"><scope>zcl_command_t</scope><name>command</name></member>
+      <member refid="group__zcl_1ga1c24c7848d60bc6aa335a8ba9fd14b7a" prot="public" virt="non-virtual"><scope>zcl_command_t</scope><name>envelope</name></member>
+      <member refid="group__zcl_1ga5226462a41663bc81a5d67c04f18868a" prot="public" virt="non-virtual"><scope>zcl_command_t</scope><name>frame_control</name></member>
+      <member refid="group__zcl_1ga0ff9f63e333676ba1359f505d02dd281" prot="public" virt="non-virtual"><scope>zcl_command_t</scope><name>length</name></member>
+      <member refid="group__zcl_1ga011fb17c1112658806badaccba7a246d" prot="public" virt="non-virtual"><scope>zcl_command_t</scope><name>mfg_code</name></member>
+      <member refid="group__zcl_1gacb5c8866a58116314f6c8eda9dc3544c" prot="public" virt="non-virtual"><scope>zcl_command_t</scope><name>sequence</name></member>
+      <member refid="group__zcl_1gaf0e34793a3febabcdb61c020aecbf805" prot="public" virt="non-virtual"><scope>zcl_command_t</scope><name>zcl_payload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

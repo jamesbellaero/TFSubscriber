@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structxbee__fw__oem__state__t" kind="struct" language="C++" prot="public">
+    <compoundname>xbee_fw_oem_state_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__xbee__firmware_1gaaf993ea8576712b7e3f946ee716a1aa3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t firmware_length</definition>
+        <argsstring></argsstring>
+        <name>firmware_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="37" column="1" bodyfile="include/xbee/firmware.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1gaf563348d7d0afde1c7df0262979e78c5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t block_offset</definition>
+        <argsstring></argsstring>
+        <name>block_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="38" column="1" bodyfile="include/xbee/firmware.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1gaaff24a22c5321fbbc3715b1642e1bd26" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t cur_offset</definition>
+        <argsstring></argsstring>
+        <name>cur_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="39" column="1" bodyfile="include/xbee/firmware.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__firmware_1ga697415db67a165624b2b440418635e68" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t block_length</definition>
+        <argsstring></argsstring>
+        <name>block_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/firmware.h" line="40" column="1" bodyfile="include/xbee/firmware.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xbee/firmware.h" line="36" column="1" bodyfile="include/xbee/firmware.h" bodystart="36" bodyend="41"/>
+    <listofallmembers>
+      <member refid="group__xbee__firmware_1ga697415db67a165624b2b440418635e68" prot="public" virt="non-virtual"><scope>xbee_fw_oem_state_t</scope><name>block_length</name></member>
+      <member refid="group__xbee__firmware_1gaf563348d7d0afde1c7df0262979e78c5" prot="public" virt="non-virtual"><scope>xbee_fw_oem_state_t</scope><name>block_offset</name></member>
+      <member refid="group__xbee__firmware_1gaaff24a22c5321fbbc3715b1642e1bd26" prot="public" virt="non-virtual"><scope>xbee_fw_oem_state_t</scope><name>cur_offset</name></member>
+      <member refid="group__xbee__firmware_1gaaf993ea8576712b7e3f946ee716a1aa3" prot="public" virt="non-virtual"><scope>xbee_fw_oem_state_t</scope><name>firmware_length</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

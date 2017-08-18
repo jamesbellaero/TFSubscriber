@@ -1,0 +1,1703 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="zcl__types_8h" kind="file" language="C++">
+    <compoundname>zcl_types.h</compoundname>
+    <includes refid="platform_8h" local="yes">xbee/platform.h</includes>
+    <includes refid="byteorder_8h" local="yes">xbee/byteorder.h</includes>
+    <includes refid="zcl64_8h" local="yes">zigbee/zcl64.h</includes>
+    <includedby refid="zcl__types_8c" local="yes">src/zigbee/zcl_types.c</includedby>
+    <includedby refid="zigbee__zcl_8c" local="yes">src/zigbee/zigbee_zcl.c</includedby>
+    <includedby refid="zcl_8h" local="yes">include/zigbee/zcl.h</includedby>
+    <includedby refid="zcl__commissioning_8h" local="yes">include/zigbee/zcl_commissioning.h</includedby>
+    <incdepgraph>
+      <node id="1008">
+        <label>errno.h</label>
+      </node>
+      <node id="1010">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="1011" relation="include">
+        </childnode>
+      </node>
+      <node id="1009">
+        <label>stddef.h</label>
+      </node>
+      <node id="1012">
+        <label>xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1007" relation="include">
+        </childnode>
+      </node>
+      <node id="1013">
+        <label>string.h</label>
+      </node>
+      <node id="1007">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+      </node>
+      <node id="1006">
+        <label>include/zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="1007" relation="include">
+        </childnode>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1014" relation="include">
+        </childnode>
+      </node>
+      <node id="1014">
+        <label>zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="1007" relation="include">
+        </childnode>
+      </node>
+      <node id="1011">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1031">
+        <label>src/zigbee/zcl_time.c</label>
+        <link refid="zcl__time_8c"/>
+      </node>
+      <node id="1034">
+        <label>src/zigbee/zcl_commissioning.c</label>
+        <link refid="zcl__commissioning_8c"/>
+      </node>
+      <node id="1033">
+        <label>src/xbee/xbee_commissioning.c</label>
+        <link refid="xbee__commissioning_8c"/>
+      </node>
+      <node id="1017">
+        <label>src/zigbee/zigbee_zcl.c</label>
+        <link refid="zigbee__zcl_8c"/>
+      </node>
+      <node id="1016">
+        <label>src/zigbee/zcl_types.c</label>
+        <link refid="zcl__types_8c"/>
+      </node>
+      <node id="1025">
+        <label>include/xbee/ota_server.h</label>
+        <link refid="ota__server_8h"/>
+        <childnode refid="1026" relation="include">
+        </childnode>
+      </node>
+      <node id="1022">
+        <label>src/zigbee/zcl_client.c</label>
+        <link refid="zcl__client_8c"/>
+      </node>
+      <node id="1026">
+        <label>src/xbee/xbee_ota_server.c</label>
+        <link refid="xbee__ota__server_8c"/>
+      </node>
+      <node id="1021">
+        <label>src/zigbee/zcl_basic.c</label>
+        <link refid="zcl__basic_8c"/>
+      </node>
+      <node id="1030">
+        <label>include/zigbee/zcl_client.h</label>
+        <link refid="zcl__client_8h"/>
+        <childnode refid="1022" relation="include">
+        </childnode>
+        <childnode refid="1031" relation="include">
+        </childnode>
+      </node>
+      <node id="1036">
+        <label>include/zigbee/zcl_identify.h</label>
+        <link refid="zcl__identify_8h"/>
+        <childnode refid="1023" relation="include">
+        </childnode>
+      </node>
+      <node id="1018">
+        <label>include/zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="1019" relation="include">
+        </childnode>
+        <childnode refid="1020" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1022" relation="include">
+        </childnode>
+        <childnode refid="1023" relation="include">
+        </childnode>
+        <childnode refid="1024" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+        <childnode refid="1025" relation="include">
+        </childnode>
+        <childnode refid="1027" relation="include">
+        </childnode>
+        <childnode refid="1028" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1036" relation="include">
+        </childnode>
+        <childnode refid="1037" relation="include">
+        </childnode>
+      </node>
+      <node id="1032">
+        <label>include/zigbee/zcl_commissioning.h</label>
+        <link refid="zcl__commissioning_8h"/>
+        <childnode refid="1033" relation="include">
+        </childnode>
+        <childnode refid="1034" relation="include">
+        </childnode>
+        <childnode refid="1035" relation="include">
+        </childnode>
+      </node>
+      <node id="1020">
+        <label>src/xbee/xbee_wpan.c</label>
+        <link refid="xbee__wpan_8c"/>
+      </node>
+      <node id="1037">
+        <label>include/zigbee/zcl_time.h</label>
+        <link refid="zcl__time_8h"/>
+        <childnode refid="1031" relation="include">
+        </childnode>
+      </node>
+      <node id="1015">
+        <label>include/zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="1016" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+        <childnode refid="1018" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+      </node>
+      <node id="1023">
+        <label>src/zigbee/zcl_identify.c</label>
+        <link refid="zcl__identify_8c"/>
+      </node>
+      <node id="1019">
+        <label>src/wpan/wpan_aps.c</label>
+        <link refid="wpan__aps_8c"/>
+      </node>
+      <node id="1035">
+        <label>include/xbee/commissioning.h</label>
+        <link refid="commissioning_8h"/>
+        <childnode refid="1033" relation="include">
+        </childnode>
+      </node>
+      <node id="1028">
+        <label>include/zigbee/zcl_basic.h</label>
+        <link refid="zcl__basic_8h"/>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1029" relation="include">
+        </childnode>
+      </node>
+      <node id="1024">
+        <label>src/zigbee/zcl_onoff.c</label>
+        <link refid="zcl__onoff_8c"/>
+      </node>
+      <node id="1027">
+        <label>include/zigbee/zcl_bacnet.h</label>
+        <link refid="zcl__bacnet_8h"/>
+      </node>
+      <node id="1029">
+        <label>include/zigbee/zcl_basic_attributes.h</label>
+        <link refid="zcl__basic__attributes_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="unionzcl40__t" prot="public">zcl40_t</innerclass>
+    <innerclass refid="unionzcl48__t" prot="public">zcl48_t</innerclass>
+      <sectiondef kind="user-defined">
+      <header>ZCL Null Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga6f933afd1ace68cae2aec5373a960a72" prot="public" static="no">
+        <name>ZCL_TYPE_NO_DATA</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="33" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL General Data (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1gacde7d69b6b6930a192a03dd95548a402" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_8BIT</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="40" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga9eba3bb33af0080097578430a8b49fc3" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_16BIT</name>
+        <initializer>0x09</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="41" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gae5e7ea67aa04595d9d73da5f64f71a52" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_24BIT</name>
+        <initializer>0x0a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="42" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga63038284c953826853ba8747a82baa91" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_32BIT</name>
+        <initializer>0x0b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="43" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gab9b38a5f9e53db715ce6da47fee7982e" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_40BIT</name>
+        <initializer>0x0c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="44" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga11e0d3943fb5db53a13a8612a9ac99a8" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_48BIT</name>
+        <initializer>0x0d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="45" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga320d8cfb4b5674d25770ae6e7181b0fb" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_56BIT</name>
+        <initializer>0x0e</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="46" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga09599455943165aa8436142254c798da" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_64BIT</name>
+        <initializer>0x0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="47" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Logical (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1gaf53d04b9e7617803f30ec7cea3539056" prot="public" static="no">
+        <name>ZCL_TYPE_LOGICAL_BOOLEAN</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="53" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Values for #ZCL_TYPE_LOGICAL_BOOLEAN</header>
+      <memberdef kind="define" id="group__zcl__types_1ga415c6e6b5f1ee8afa117a28e9dbbaf91" prot="public" static="no">
+        <name>ZCL_BOOL_FALSE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="59" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga10619c77a809e680384955e6173e3512" prot="public" static="no">
+        <name>ZCL_BOOL_TRUE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="60" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaa605ed8ffc1519c222f5cf380967dd54" prot="public" static="no">
+        <name>ZCL_BOOL_INVALID</name>
+        <initializer>0xff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="61" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Bitmap (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga7db6654381619b6523ad087ad614d988" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_8BIT</name>
+        <initializer>0x18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="67" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga7f886220f979f20cda20f09f964add37" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_16BIT</name>
+        <initializer>0x19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="68" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gab977574080a1b9109cbedeb50a8231ac" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_24BIT</name>
+        <initializer>0x1a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="69" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gac8c24fce4d0c613af9f391c9752f4bc8" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_32BIT</name>
+        <initializer>0x1b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="70" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga353d00de31faa429445b5d810db284d9" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_40BIT</name>
+        <initializer>0x1c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="71" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga0e677ca1f39270eb85ddc76661003b93" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_48BIT</name>
+        <initializer>0x1d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="72" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gace8326adb7b2c3547039391c137b9656" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_56BIT</name>
+        <initializer>0x1e</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="73" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gad4df5246a0d9037921bbae054f5e249c" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_64BIT</name>
+        <initializer>0x1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="74" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Unsigned integer (analog) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga75582ab15d44904f07a44dc8a8e3b717" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_8BIT</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="80" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga9045340841bc9478061ce8f87b4840da" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_16BIT</name>
+        <initializer>0x21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="81" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaec9a6cd5a981c98207fa270670d7d777" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_24BIT</name>
+        <initializer>0x22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="82" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gab04603be22c673ef9c2fc3a2d2fcc837" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_32BIT</name>
+        <initializer>0x23</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="83" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gacd1861149c2b59749b5642737adf5195" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_40BIT</name>
+        <initializer>0x24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="84" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaa7f4db744263603cc5405b69ade288df" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_48BIT</name>
+        <initializer>0x25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="85" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaad5c0f4102ddb54ecd2c0f740faecd8a" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_56BIT</name>
+        <initializer>0x26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="86" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga712121c9bf4ad400b2c08ba200538ee8" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_64BIT</name>
+        <initializer>0x27</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="87" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Signed integer (analog) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga8df1144075b3c768717e38f750ff4d2d" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_8BIT</name>
+        <initializer>0x28</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="93" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga8ee8ec849fb738d70b81ce4b4af8ea93" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_16BIT</name>
+        <initializer>0x29</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="94" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga5d2c6473dec5ef0620e49a064e1b5040" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_24BIT</name>
+        <initializer>0x2a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="95" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gadb5ed867f966c7d280a59abd421004a9" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_32BIT</name>
+        <initializer>0x2b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="96" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga194ccd242604887fbaa41cd427088643" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_40BIT</name>
+        <initializer>0x2c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="97" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gad6d48bb79a8dc729807f137924d26920" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_48BIT</name>
+        <initializer>0x2d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="98" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga56a4716c3e4b5e8fd3b9bc4d944c5533" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_56BIT</name>
+        <initializer>0x2e</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="99" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga05040382bcbb409fdc93d7130057e3c6" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_64BIT</name>
+        <initializer>0x2f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="100" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Enumeration (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga941ea2cc51c3a17d4ae9e095ae3a864f" prot="public" static="no">
+        <name>ZCL_TYPE_ENUM_8BIT</name>
+        <initializer>0x30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="106" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga6688181319502f973473d2cdf17e6260" prot="public" static="no">
+        <name>ZCL_TYPE_ENUM_16BIT</name>
+        <initializer>0x31</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="107" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Floating point (analog) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga8b1e3e1ec66f72995346c295e8ba3fe7" prot="public" static="no">
+        <name>ZCL_TYPE_FLOAT_SEMI</name>
+        <initializer>0x38</initializer>
+        <briefdescription>
+<para>semi-precision (16-bit) floating point (unsupported) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="114" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga4b22fe5da2b5395e0cbd178054702602" prot="public" static="no">
+        <name>ZCL_TYPE_FLOAT_SINGLE</name>
+        <initializer>0x39</initializer>
+        <briefdescription>
+<para>single-precision (32-bit) IEEE 754 floating point </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="117" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga447b33931d4cb320761a0e5034f494b2" prot="public" static="no">
+        <name>ZCL_TYPE_FLOAT_DOUBLE</name>
+        <initializer>0x3a</initializer>
+        <briefdescription>
+<para>double-precision (64-bit) IEEE 754 floating point </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="120" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL String (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga7cd063b0a77ca0286b0dcc177e4251c5" prot="public" static="no">
+        <name>ZCL_TYPE_STRING_OCTET</name>
+        <initializer>0x41</initializer>
+        <briefdescription>
+<para>First octet is number of bytes in string or 0xff for invalid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="217" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga64286e0c69e0ed344a6eb8756ac81f95" prot="public" static="no">
+        <name>ZCL_TYPE_STRING_CHAR</name>
+        <initializer>0x42</initializer>
+        <briefdescription>
+<para>First octet is number of characters in string or 0xff for invalid. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that each character may be more than one byte depending on the &quot;language and character set field of the complex descriptor contained
+in the character data [following the first octet]&quot;. See ZCL for details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="223" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga567563a365e2dddaced101de02fd9128" prot="public" static="no">
+        <name>ZCL_TYPE_STRING_LONG_OCTET</name>
+        <initializer>0x43</initializer>
+        <briefdescription>
+<para>First two octets are number of bytes in string or 0xffff for invalid. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will come in so handy for a protcol with frames of 256 bytes max (he said sarcastically). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="228" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gabb23537eaae74cc55233355c6ce5979e" prot="public" static="no">
+        <name>ZCL_TYPE_STRING_LONG_CHAR</name>
+        <initializer>0x44</initializer>
+        <briefdescription>
+<para>First two octets are number of characters in string or 0xffff for invalid. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that each character may be more than one byte depending on the &quot;language and character set field of the complex descriptor contained
+in the character data [following the first octet]&quot;. See ZCL for details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="234" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Ordered Sequence (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga5f609d45e4eb91ae4187bf912e4f870b" prot="public" static="no">
+        <name>ZCL_TYPE_ARRAY</name>
+        <initializer>0x48</initializer>
+        <briefdescription>
+<para>ZCL Array (unsupported) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="244" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga2d94a79998fd3cdd13a2cd9ed25b88cb" prot="public" static="no">
+        <name>ZCL_TYPE_STRUCT</name>
+        <initializer>0x4C</initializer>
+        <briefdescription>
+<para>ZCL Struct (unsupported) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="246" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Collection (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga21ab004d25434d25e1e17865e895f1a7" prot="public" static="no">
+        <name>ZCL_TYPE_SET</name>
+        <initializer>0x50</initializer>
+        <briefdescription>
+<para>ZCL Set (unsupported) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="253" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gacd6bd1e469abc59bab04e247bc85997b" prot="public" static="no">
+        <name>ZCL_TYPE_BAG</name>
+        <initializer>0x51</initializer>
+        <briefdescription>
+<para>ZCL Bag (unsupported) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="255" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Time (analog) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1gaa6fdd0dcc77890280046eb1db9f79516" prot="public" static="no">
+        <name>ZCL_TYPE_TIME_TIMEOFDAY</name>
+        <initializer>0xE0</initializer>
+        <briefdescription>
+<para>see zcl_timeofday_t </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="262" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gad5552b0825d941f0ccd7b1d797dc091b" prot="public" static="no">
+        <name>ZCL_TYPE_TIME_DATE</name>
+        <initializer>0xE1</initializer>
+        <briefdescription>
+<para>see zcl_date_t </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="265" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga8f678e97557cb052c0df4be97e9f1e82" prot="public" static="no">
+        <name>ZCL_TYPE_TIME_UTCTIME</name>
+        <initializer>0xE2</initializer>
+        <briefdescription>
+<para>number of seconds (stored in uint32_t) since Midnight on 1/1/2000 UTC </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="268" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Identifier (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1gabf44aa40c12655d86c012c551bb6834e" prot="public" static="no">
+        <name>ZCL_TYPE_ID_CLUSTER</name>
+        <initializer>0xE8</initializer>
+        <briefdescription>
+<para>16-bit cluster ID </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="294" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga1dc09447fe0d1f047c4554975a11b3fa" prot="public" static="no">
+        <name>ZCL_TYPE_ID_ATTRIB</name>
+        <initializer>0xE9</initializer>
+        <briefdescription>
+<para>16-bit attribute ID </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="297" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga59fe9efad9f60ec8176a13c0ab1019ac" prot="public" static="no">
+        <name>ZCL_TYPE_ID_BACNET_OID</name>
+        <initializer>0xEA</initializer>
+        <briefdescription>
+<para>32-bit BACnet OID </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="300" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Miscellaneous Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga13bc9499fe6127a5ce30c31f3ccae2df" prot="public" static="no">
+        <name>ZCL_TYPE_IEEE_ADDR</name>
+        <initializer>0xF0</initializer>
+        <briefdescription>
+<para>64-bit IEEE address </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="307" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaa430fee3f4e5e09767b9fc969f73cf2f" prot="public" static="no">
+        <name>ZCL_TYPE_SECURITY_KEY</name>
+        <initializer>0xF1</initializer>
+        <briefdescription>
+<para>128-bit security key </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="310" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Unknown Type</header>
+      <memberdef kind="define" id="group__zcl__types_1ga856105c2b5037b8406a294b668dfe755" prot="public" static="no">
+        <name>ZCL_TYPE_UNKNOWN</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+<para>Unknown ZCL Type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="317" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Settings for zcl_type_info[]</header>
+      <description><para>These bitfields should only be used internally by the library, and should be exposed to user code via public APIs. </para></description>
+      <memberdef kind="define" id="group__zcl__types_1ga7609ed68cf4399cb2c09799ecedfdbe0" prot="public" static="no">
+        <name>ZCL_T_INVALID</name>
+        <initializer>0x0F</initializer>
+        <briefdescription>
+<para>Not a valid ZCL type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="362" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga3e9bf95af4f58a0c9c5c34639b0dda29" prot="public" static="no">
+        <name>ZCL_T_DISCRETE</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+<para>Discrete values (bitmap, enum, etc.) that can&apos;t be added/subtracted or (if reportable) have a reportable change. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default is analog. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="365" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga7b609984d4662f83a2248d1f485fd4ad" prot="public" static="no">
+        <name>ZCL_T_ANALOG</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+<para>If an attribute isn&apos;t discrete, it&apos;s analog (signed, unsigned, float, etc.) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="368" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaacf8dcd439ce0388d90681aec545e4e3" prot="public" static="no">
+        <name>ZCL_T_SIGNED</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+<para>Type is signed (default is unsigned). Only analog types can be signed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="370" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaad99789b034d1ed0a2825e075bba62af" prot="public" static="no">
+        <name>ZCL_T_FLOAT</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+<para>Type is floating point (single, double or semi-precision). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="372" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gab0e5c23a0877c17fde12043c85728c29" prot="public" static="no">
+        <name>ZCL_T_REPORTABLE</name>
+        <initializer>(<ref refid="group__zcl__types_1ga7b609984d4662f83a2248d1f485fd4ad" kindref="member">ZCL_T_ANALOG</ref> | <ref refid="group__zcl__types_1ga3e9bf95af4f58a0c9c5c34639b0dda29" kindref="member">ZCL_T_DISCRETE</ref>)</initializer>
+        <briefdescription>
+<para>Type is reportable. </para>        </briefdescription>
+        <detaileddescription>
+<para>Both the type AND attribute must have reportable flags set if they are reportable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="375" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaa49518f03f9632a55b3e1c4d4c68b60c" prot="public" static="no">
+        <name>ZCL_T_SIZE_MASK</name>
+        <initializer>0x0F</initializer>
+        <briefdescription>
+<para>0x00 to 0x08 represent 0 to 8 bytes; 0x0C is 16 bytes; 0x0D is two-octet size prefix, 0x0E is one-octet size prefix; 0x0F is invalid; 0x09, 0x0A and 0x0B are still available to encode special size information. </para>        </briefdescription>
+        <detaileddescription>
+<para>Be sure to update zcl_sizeof_type when adding to or changing these macros. Low nibble of each zcl_type_info byte stores the type&apos;s size. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="383" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="383" bodyend="-1"/>
+        <referencedby refid="group__zcl__types_1ga6134ab27d38abd300d008345e21fe560" compoundref="zcl__types_8c" startline="274" endline="299">zcl_sizeof_type</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga5f381526f4ac9adac8cb07b7135e737d" prot="public" static="no">
+        <name>ZCL_T_SIZE_INVALID</name>
+        <initializer>(<ref refid="group__zcl__types_1ga7609ed68cf4399cb2c09799ecedfdbe0" kindref="member">ZCL_T_INVALID</ref> &amp; <ref refid="group__zcl__types_1gaa49518f03f9632a55b3e1c4d4c68b60c" kindref="member">ZCL_T_SIZE_MASK</ref>)</initializer>
+        <briefdescription>
+<para>Macro used when type is invalid or doesn&apos;t have a known size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="385" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga5121bb1f631a19b8a50980325ee67c26" prot="public" static="no">
+        <name>ZCL_T_SIZE_SHORT</name>
+        <initializer>0x0E</initializer>
+        <briefdescription>
+<para>First octet of attribute&apos;s value is its size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="387" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="387" bodyend="-1"/>
+        <referencedby refid="group__zcl__types_1ga6134ab27d38abd300d008345e21fe560" compoundref="zcl__types_8c" startline="274" endline="299">zcl_sizeof_type</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaeee15697985458060bf5f85c00c15a41" prot="public" static="no">
+        <name>ZCL_T_SIZE_LONG</name>
+        <initializer>0x0D</initializer>
+        <briefdescription>
+<para>First two octets of attribute&apos;s value are its size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="389" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gad7a8d44d98b6872f187b1e0748ec7417" prot="public" static="no">
+        <name>ZCL_T_SIZE_128BIT</name>
+        <initializer>0x0C</initializer>
+        <briefdescription>
+<para>128-bit (16-byte) value </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="391" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga7691965c8c435fdafe30025c05817cf9" prot="public" static="no">
+        <name>ZCL_T_SIZE_VARIABLE</name>
+        <initializer>0x0B</initializer>
+        <briefdescription>
+<para>variable-length value (array, set, bag, struct) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="393" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__zcl__types_1ga615c98b6baffcb91fa19285f2557845a" prot="public" static="no">
+        <name>ZCL_UTCTIME_INVALID</name>
+        <initializer>0xFFFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="272" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga6e143abd16187cc59cdad352c1fde4bf" prot="public" static="no">
+        <name>ZCL_TYPE_IS_ANALOG</name>
+        <param><defname>t</defname></param>
+        <initializer>(<ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[t] &amp; <ref refid="group__zcl__types_1ga7b609984d4662f83a2248d1f485fd4ad" kindref="member">ZCL_T_ANALOG</ref>)</initializer>
+        <briefdescription>
+<para>ZCL data type <emphasis>t</emphasis> is an analog type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="397" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gafac9417148b2a7a3fbd64d84baf98cf7" prot="public" static="no">
+        <name>ZCL_TYPE_IS_DISCRETE</name>
+        <param><defname>t</defname></param>
+        <initializer>(<ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[t] &amp; <ref refid="group__zcl__types_1ga3e9bf95af4f58a0c9c5c34639b0dda29" kindref="member">ZCL_T_DISCRETE</ref>)</initializer>
+        <briefdescription>
+<para>ZCL data type <emphasis>t</emphasis> is a discrete type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="399" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga9114be7b872a013b27e06e4aa437318f" prot="public" static="no">
+        <name>ZCL_TYPE_IS_SIGNED</name>
+        <param><defname>t</defname></param>
+        <initializer>(<ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[t] &amp; <ref refid="group__zcl__types_1gaacf8dcd439ce0388d90681aec545e4e3" kindref="member">ZCL_T_SIGNED</ref>)</initializer>
+        <briefdescription>
+<para>ZCL data type <emphasis>t</emphasis> is a signed type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="401" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga665e39b52fa49df456f3e218dbb3c3e0" prot="public" static="no">
+        <name>ZCL_TYPE_IS_REPORTABLE</name>
+        <param><defname>t</defname></param>
+        <initializer>(<ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[t] &amp; <ref refid="group__zcl__types_1gab0e5c23a0877c17fde12043c85728c29" kindref="member">ZCL_T_REPORTABLE</ref>)</initializer>
+        <briefdescription>
+<para>ZCL data type <emphasis>t</emphasis> is a reportable type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="403" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga639712ec7549d1bb6a5bcb05097386e2" prot="public" static="no">
+        <name>ZCL_TYPE_IS_INVALID</name>
+        <param><defname>t</defname></param>
+        <initializer>(<ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[t] == <ref refid="group__zcl__types_1ga7609ed68cf4399cb2c09799ecedfdbe0" kindref="member">ZCL_T_INVALID</ref>)</initializer>
+        <briefdescription>
+<para>ZCL data type <emphasis>t</emphasis> is an invalid (unsupported/unrecognized) type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="405" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga755a7e3f73663a35fc1f702956dfca85" prot="public" static="no">
+        <name>ZCL_SIZE_SHORT</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="409" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga74ee31f6a58ad03535546050d04a0de1" prot="public" static="no">
+        <name>ZCL_SIZE_LONG</name>
+        <initializer>-2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="410" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga8b41a3880f93b53bbae1e241aac4bdb2" prot="public" static="no">
+        <name>ZCL_SIZE_VARIABLE</name>
+        <initializer>-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="411" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga18098b4db5dd09f98fdcb5db15cff375" prot="public" static="no">
+        <name>ZCL_SIZE_INVALID</name>
+        <initializer>-127</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="412" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__zcl__types_1gadd8ad64f3ae1ee581114f9ca39f3621f" prot="public" static="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>typedef uint32_t zcl_utctime_t</definition>
+        <argsstring></argsstring>
+        <name>zcl_utctime_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="271" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__zcl__types_1gafa65aea1347d7c84cd0019a7e013b8f5" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>zcl_timeofday_t</definition>
+        <argsstring></argsstring>
+        <name>zcl_timeofday_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>	hours</initializer>
+        <briefdescription>
+<para>Time of Day (for #ZCL_TYPE_TIME_TOD Data Type) </para>        </briefdescription>
+        <detaileddescription>
+<para>0-23 or 0xff for unused </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="275" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__zcl__types_1ga9ea8f9ebe25e922be76329748b8398b5" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>zcl_date_t</definition>
+        <argsstring></argsstring>
+        <name>zcl_date_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>	year</initializer>
+        <briefdescription>
+<para>Date (for <ref refid="group__zcl__types_1gad5552b0825d941f0ccd7b1d797dc091b" kindref="member">ZCL_TYPE_TIME_DATE</ref> Data Type) </para>        </briefdescription>
+        <detaileddescription>
+<para>year - 1900 or 0xff for unused </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="283" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__zcl__types_1ga7acca8be0094a19be6e308ac05924c4f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t minutes</definition>
+        <argsstring></argsstring>
+        <name>minutes</name>
+        <briefdescription>
+<para>0-59 or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="277" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga46729a903be1a03cdb248fb48d84d4f5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t seconds</definition>
+        <argsstring></argsstring>
+        <name>seconds</name>
+        <briefdescription>
+<para>0-59 or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="278" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1gaa9acbdd2fcf00f83919be503371fc8a2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t hundredths</definition>
+        <argsstring></argsstring>
+        <name>hundredths</name>
+        <briefdescription>
+<para>0-99 or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="279" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga3e00faf7fbf9805e9ec4d2edd6339050" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t month</definition>
+        <argsstring></argsstring>
+        <name>month</name>
+        <briefdescription>
+<para>1-12 or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="285" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga72369a1087b2aeffe374bb054cb97c12" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t day</definition>
+        <argsstring></argsstring>
+        <name>day</name>
+        <briefdescription>
+<para>1-31 or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="286" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1gaf19fd1d4c2d4e9354c68c3b5546b7d41" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t dayofweek</definition>
+        <argsstring></argsstring>
+        <name>dayofweek</name>
+        <briefdescription>
+<para>1-7 (1 = Monday, 7 = Sunday) or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="287" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>const uint8_t zcl_type_info[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>zcl_type_info</name>
+        <briefdescription>
+<para>Table to store information on each ZCL datatype. </para>        </briefdescription>
+        <detaileddescription>
+<para>Lower 4 bits encode size (0 to 8 octets, 16 octets, one-byte size prefix, two-byte size prefix), upper 4 bits encode additional information.</para><para>Need to represent 0 to 8 octets, 16 octets, size in first octet, size in first two octets. 12 possible values.</para><para>Using this table, it may be possible to simplify the encode/decode functions greatly <ndash/> just use memcpy or swapcpy to copy the given number of bytes.</para><para>Special case for floating point values if the platform doesn&apos;t use IEEE floats, and to convert from 2-byte semi-precision float to 4-byte float. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="408" column="1" bodyfile="src/zigbee/zcl_types.c" bodystart="54" bodyend="-1"/>
+        <referencedby refid="group__zcl__types_1ga6134ab27d38abd300d008345e21fe560" compoundref="zcl__types_8c" startline="274" endline="299">zcl_sizeof_type</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__zcl__types_1ga6134ab27d38abd300d008345e21fe560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_types_debug int</type>
+        <definition>int zcl_sizeof_type</definition>
+        <argsstring>(uint8_t type)</argsstring>
+        <name>zcl_sizeof_type</name>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Return the number of octets used by a given ZCL datatype. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type to look up. Typically one of the ZCL_TYPE_* macros, or the <computeroutput>type</computeroutput> element of an attribute record.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>ZCL_SIZE_INVALID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unknown or invalid type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ZCL_SIZE_SHORT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1-octet size prefix </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ZCL_SIZE_LONG</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2-octet size prefix </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ZCL_SIZE_VARIABLE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable-length type (array, struct, set, bag) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of octets used by type (0 to 8, 16)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="zcl__types_8h" kindref="compound">zigbee/zcl_types.h</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_types.c" line="274" column="1" bodyfile="src/zigbee/zcl_types.c" bodystart="274" bodyend="299"/>
+        <references refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" compoundref="zcl_8h" startline="416">type</references>
+        <references refid="group__zcl__types_1gaa49518f03f9632a55b3e1c4d4c68b60c" compoundref="zcl__types_8h" startline="383">ZCL_T_SIZE_MASK</references>
+        <references refid="group__zcl__types_1ga5121bb1f631a19b8a50980325ee67c26" compoundref="zcl__types_8h" startline="387">ZCL_T_SIZE_SHORT</references>
+        <references refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" compoundref="zcl__types_8c" startline="54">zcl_type_info</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__types_1ga798e87a8b8f240a33706b7bc37c9ede1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_types_debug const char *</type>
+        <definition>const char * zcl_type_name</definition>
+        <argsstring>(uint8_t type)</argsstring>
+        <name>zcl_type_name</name>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Return a descriptive string for a given ZCL attribute type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ZCL attribute type</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to a string description of the type, or &quot;INVALID_0xHH&quot; on unrecognized types (where HH is the hex representation of the type). Never returns NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_types.c" line="316" column="1" bodyfile="src/zigbee/zcl_types.c" bodystart="316" bodyend="372"/>
+        <referencedby refid="group__zcl__client_1ga4e831f4977e3c0eb5ad556a991b7da5f" compoundref="zcl__client_8c" startline="617" endline="654">zcl_print_array_value</referencedby>
+        <referencedby refid="group__zcl__client_1gadd1b745da67ffd49ec948ff56ec218fa" compoundref="zcl__client_8c" startline="678" endline="717">zcl_print_struct_value</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Macros and structures related to the ZCL datatypes. </para>    </briefdescription>
+    <detaileddescription>
+<para>All multi-byte types are little-endian. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor">#ifndef<sp/>__ZIGBEE_ZCL_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ZIGBEE_ZCL_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="byteorder_8h" kindref="compound">xbee/byteorder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_NO_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00<sp/><sp/><sp/><sp/><sp/>//<sp/>0<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_GENERAL_8BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08<sp/><sp/><sp/><sp/><sp/>//<sp/>1<sp/>octet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_GENERAL_16BIT<sp/><sp/><sp/><sp/><sp/><sp/>0x09<sp/><sp/><sp/><sp/><sp/>//<sp/>2<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_GENERAL_24BIT<sp/><sp/><sp/><sp/><sp/><sp/>0x0a<sp/><sp/><sp/><sp/><sp/>//<sp/>3<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_GENERAL_32BIT<sp/><sp/><sp/><sp/><sp/><sp/>0x0b<sp/><sp/><sp/><sp/><sp/>//<sp/>4<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_GENERAL_40BIT<sp/><sp/><sp/><sp/><sp/><sp/>0x0c<sp/><sp/><sp/><sp/><sp/>//<sp/>5<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_GENERAL_48BIT<sp/><sp/><sp/><sp/><sp/><sp/>0x0d<sp/><sp/><sp/><sp/><sp/>//<sp/>6<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_GENERAL_56BIT<sp/><sp/><sp/><sp/><sp/><sp/>0x0e<sp/><sp/><sp/><sp/><sp/>//<sp/>7<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_GENERAL_64BIT<sp/><sp/><sp/><sp/><sp/><sp/>0x0f<sp/><sp/><sp/><sp/><sp/>//<sp/>8<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_LOGICAL_BOOLEAN<sp/><sp/><sp/><sp/>0x10<sp/><sp/><sp/><sp/><sp/>//<sp/>1<sp/>octet,<sp/>invalid=0xff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"></codeline>
+<codeline lineno="59"><highlight class="preprocessor">#define<sp/>ZCL_BOOL_FALSE<sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BOOL_TRUE<sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_BOOL_INVALID<sp/><sp/><sp/>0xff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"></codeline>
+<codeline lineno="67"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_BITMAP_8BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x18<sp/><sp/><sp/><sp/><sp/>//<sp/>1<sp/>octet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_BITMAP_16BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x19<sp/><sp/><sp/><sp/><sp/>//<sp/>2<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_BITMAP_24BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1a<sp/><sp/><sp/><sp/><sp/>//<sp/>3<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_BITMAP_32BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1b<sp/><sp/><sp/><sp/><sp/>//<sp/>4<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_BITMAP_40BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1c<sp/><sp/><sp/><sp/><sp/>//<sp/>5<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_BITMAP_48BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1d<sp/><sp/><sp/><sp/><sp/>//<sp/>6<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_BITMAP_56BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1e<sp/><sp/><sp/><sp/><sp/>//<sp/>7<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_BITMAP_64BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1f<sp/><sp/><sp/><sp/><sp/>//<sp/>8<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"></codeline>
+<codeline lineno="80"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_UNSIGNED_8BIT<sp/><sp/><sp/><sp/><sp/><sp/>0x20<sp/><sp/><sp/><sp/><sp/>//<sp/>1<sp/>octet,<sp/>invalid=0xff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_UNSIGNED_16BIT<sp/><sp/><sp/><sp/><sp/>0x21<sp/><sp/><sp/><sp/><sp/>//<sp/>2<sp/>octets,<sp/>invalid<sp/>=<sp/>0xffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_UNSIGNED_24BIT<sp/><sp/><sp/><sp/><sp/>0x22<sp/><sp/><sp/><sp/><sp/>//<sp/>3<sp/>octets,<sp/>invalid<sp/>=<sp/>0xffffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_UNSIGNED_32BIT<sp/><sp/><sp/><sp/><sp/>0x23<sp/><sp/><sp/><sp/><sp/>//<sp/>4<sp/>octets,<sp/>invalid<sp/>=<sp/>0xffffffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_UNSIGNED_40BIT<sp/><sp/><sp/><sp/><sp/>0x24<sp/><sp/><sp/><sp/><sp/>//<sp/>5<sp/>octets,<sp/>invalid<sp/>=<sp/>all<sp/>ff&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_UNSIGNED_48BIT<sp/><sp/><sp/><sp/><sp/>0x25<sp/><sp/><sp/><sp/><sp/>//<sp/>6<sp/>octets,<sp/>invalid<sp/>=<sp/>all<sp/>ff&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_UNSIGNED_56BIT<sp/><sp/><sp/><sp/><sp/>0x26<sp/><sp/><sp/><sp/><sp/>//<sp/>7<sp/>octets,<sp/>invalid<sp/>=<sp/>all<sp/>ff&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_UNSIGNED_64BIT<sp/><sp/><sp/><sp/><sp/>0x27<sp/><sp/><sp/><sp/><sp/>//<sp/>8<sp/>octets,<sp/>invalid<sp/>=<sp/>all<sp/>ff&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"></codeline>
+<codeline lineno="93"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_SIGNED_8BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x28<sp/><sp/><sp/><sp/><sp/>//<sp/>1<sp/>octet,<sp/>invalid=0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_SIGNED_16BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x29<sp/><sp/><sp/><sp/><sp/>//<sp/>2<sp/>octets,<sp/>invalid=0x8000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_SIGNED_24BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x2a<sp/><sp/><sp/><sp/><sp/>//<sp/>3<sp/>octets,<sp/>invalid=0x800000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_SIGNED_32BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x2b<sp/><sp/><sp/><sp/><sp/>//<sp/>4<sp/>octets,<sp/>invalid=0x80000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_SIGNED_40BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x2c<sp/><sp/><sp/><sp/><sp/>//<sp/>5<sp/>octets,<sp/>invalid=0x8000000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_SIGNED_48BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x2d<sp/><sp/><sp/><sp/><sp/>//<sp/>6<sp/>octets,<sp/>invalid=0x80...0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_SIGNED_56BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x2e<sp/><sp/><sp/><sp/><sp/>//<sp/>7<sp/>octets,<sp/>invalid=0x80...0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_SIGNED_64BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x2f<sp/><sp/><sp/><sp/><sp/>//<sp/>8<sp/>octets,<sp/>invalid=0x80...0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"></codeline>
+<codeline lineno="106"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_ENUM_8BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x30<sp/><sp/><sp/><sp/><sp/>//<sp/>1<sp/>octet,<sp/>invalid=0xff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_ENUM_16BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x31<sp/><sp/><sp/><sp/><sp/>//<sp/>2<sp/>octets,<sp/>invalid=0xffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"></codeline>
+<codeline lineno="113"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_FLOAT_SEMI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x38<sp/><sp/><sp/><sp/><sp/>//<sp/>2<sp/>octets,<sp/>invalid=NaN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="group__zcl__types_1ga4b22fe5da2b5395e0cbd178054702602" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_FLOAT_SINGLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x39<sp/><sp/><sp/><sp/><sp/>//<sp/>4<sp/>octets,<sp/>invalid=NaN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="group__zcl__types_1ga447b33931d4cb320761a0e5034f494b2" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_FLOAT_DOUBLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x3a<sp/><sp/><sp/><sp/><sp/>//<sp/>8<sp/>octets,<sp/>invalid=NaN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>For<sp/>now,<sp/>comment<sp/>out<sp/>all<sp/>floating<sp/>point<sp/>macros.</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/>Needs<sp/>significant<sp/>work<sp/>if<sp/>we&apos;re<sp/>going<sp/>to<sp/>use<sp/>it.</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/>Decide<sp/>on<sp/>whether<sp/>the<sp/>_EXPONENT<sp/>macro<sp/>should<sp/>be<sp/>the<sp/>actual<sp/>signed<sp/>exponent,</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/>or<sp/>the<sp/>value<sp/>of<sp/>the<sp/>bits.</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"></highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/>Single<sp/>precision<sp/>and<sp/>double-precision<sp/>should<sp/>map<sp/>just<sp/>fine<sp/>to<sp/>&apos;float&apos;<sp/>and</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/>&apos;double&apos;<sp/>on<sp/>platforms<sp/>that<sp/>properly<sp/>support<sp/>IEEE<sp/>754<sp/>floating<sp/>point.</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"></highlight></codeline>
+<codeline lineno="131"><highlight class="comment">/<sp/>**<sp/>@name<sp/>Semi-Precision<sp/>Floating<sp/>Point</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/>Macros<sp/>for<sp/>working<sp/>with<sp/>host-byte-order<sp/>semi-precision<sp/>floating-point<sp/>values,</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/>stored<sp/>in<sp/>a<sp/>uint16_t.</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"></highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/>@internal</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"></highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/>@WARNING<sp/>The<sp/>current<sp/>driver<sp/>does<sp/>not<sp/>implement<sp/>floating<sp/>point<sp/>values,</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>these<sp/>macros<sp/>are<sp/>completely<sp/>untested.</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/>@{</highlight></codeline>
+<codeline lineno="140"><highlight class="comment">*<sp/>/</highlight></codeline>
+<codeline lineno="142"><highlight class="comment">#define<sp/>ZCL_FLOAT_SEMI_IS_NEGATIVE(f)<sp/><sp/>((uint16_t)(f)<sp/>&amp;<sp/>UINT16_C(0x8000))</highlight></codeline>
+<codeline lineno="144"><highlight class="comment">#define<sp/>ZCL_FLOAT_SEMI_EXPONENT(f)<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((int16_t)(f)<sp/>&gt;&gt;<sp/>10<sp/>&amp;<sp/>UINT16_C(0x001F))<sp/>-<sp/>15)</highlight></codeline>
+<codeline lineno="147"><highlight class="comment">#define<sp/>ZCL_FLOAT_SEMI_MANTISSA(f)<sp/><sp/><sp/><sp/><sp/>((int16_t)(f)<sp/>&amp;<sp/>UINT16_C(0x03FF))</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"></highlight></codeline>
+<codeline lineno="151"><highlight class="comment">#define<sp/>ZCL_FLOAT_SEMI_IS_NAN(f)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ZCL_FLOAT_SEMI_EXPONENT(f)<sp/>==<sp/>16)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ZCL_FLOAT_SEMI_MANTISSA(f))</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"></highlight></codeline>
+<codeline lineno="156"><highlight class="comment">#define<sp/>ZCL_FLOAT_SEMI_NORMALISED(f)<sp/><sp/><sp/>(ZCL_FLOAT_SEMI_EXPONENT(f)<sp/>==<sp/>-15)</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"></highlight></codeline>
+<codeline lineno="160"><highlight class="comment">#define<sp/>ZCL_FLOAT_SEMI_INF_POS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT16_C(0x7C00)</highlight></codeline>
+<codeline lineno="163"><highlight class="comment">#define<sp/>ZCL_FLOAT_SEMI_INF_NEG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT16_C(0xFC00)</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"></highlight></codeline>
+<codeline lineno="167"><highlight class="comment">#define<sp/>ZCL_FLOAT_SEMI_ZERO_POS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT16_C(0x0000)</highlight></codeline>
+<codeline lineno="170"><highlight class="comment">#define<sp/>ZCL_FLOAT_SEMI_ZERO_NEG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UINT16_C(0x8000)</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"></highlight></codeline>
+<codeline lineno="173"><highlight class="comment">/<sp/>**<sp/>@name<sp/>Semi-Precision<sp/>Floating<sp/>Point</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/><sp/><sp/>Macros<sp/>for<sp/>working<sp/>with<sp/>single-precision<sp/>IEEE<sp/>754<sp/>floating-point<sp/>values,<sp/>stored</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/><sp/>in<sp/>a<sp/>uint32_t.</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"></highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/><sp/><sp/>@internal</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"></highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/><sp/>@WARNING<sp/>The<sp/>current<sp/>driver<sp/>does<sp/>not<sp/>implement<sp/>floating<sp/>point<sp/>values,</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>these<sp/>macros<sp/>are<sp/>completely<sp/>untested.</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/><sp/><sp/>@{</highlight></codeline>
+<codeline lineno="182"><highlight class="comment">*<sp/>/</highlight></codeline>
+<codeline lineno="184"><highlight class="comment">#define<sp/>ZCL_FLOAT_IS_NEGATIVE(f)<sp/><sp/><sp/><sp/>((uint32_t)(f)<sp/>&amp;<sp/>UINT32_C(0x80000000))</highlight></codeline>
+<codeline lineno="186"><highlight class="comment">#define<sp/>ZCL_FLOAT_EXPONENT(f)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="187"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((int32_t)(f)<sp/>&gt;&gt;<sp/>23<sp/>&amp;<sp/>UINT32_C(0x00FF))<sp/>-<sp/>127)</highlight></codeline>
+<codeline lineno="189"><highlight class="comment">#define<sp/>ZCL_FLOAT_MANTISSA(f)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)(f)<sp/>&amp;<sp/>UINT32_C(0x007FFFFF))</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"></highlight></codeline>
+<codeline lineno="191"><highlight class="comment">//<sp/>Not<sp/>a<sp/>Number<sp/>(NaN)<sp/>used<sp/>for<sp/>undefined<sp/>values<sp/>and<sp/>is<sp/>indicated<sp/>by<sp/>an<sp/>exponent</highlight></codeline>
+<codeline lineno="192"><highlight class="comment">//<sp/>of<sp/>all-ones<sp/>with<sp/>a<sp/>non-zero<sp/>mantissa.</highlight></codeline>
+<codeline lineno="193"><highlight class="comment">#define<sp/>ZCL_FLOAT_IS_NAN(f)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ZCL_FLOAT_EXPONENT(f)<sp/>==<sp/>128)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ZCL_FLOAT_MANTISSA(f))</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"></highlight></codeline>
+<codeline lineno="196"><highlight class="comment">//<sp/>Un-normalised<sp/>numbers:<sp/>numbers<sp/>&lt;<sp/>2^-14<sp/>are<sp/>indicated<sp/>by<sp/>a<sp/>value<sp/>of<sp/>0<sp/>for<sp/>the</highlight></codeline>
+<codeline lineno="197"><highlight class="comment">//<sp/>exponent.</highlight></codeline>
+<codeline lineno="198"><highlight class="comment">#define<sp/>ZCL_FLOAT_NORMALISED(f)<sp/><sp/><sp/><sp/><sp/>(ZCL_FLOAT_EXPONENT(f)<sp/>==<sp/>-127)</highlight></codeline>
+<codeline lineno="199"><highlight class="comment"></highlight></codeline>
+<codeline lineno="200"><highlight class="comment">//<sp/>Infinity:<sp/>indicated<sp/>by<sp/>an<sp/>exponent<sp/>of<sp/>31<sp/>and<sp/>a<sp/>zero<sp/>mantissa</highlight></codeline>
+<codeline lineno="201"><highlight class="comment">#define<sp/>ZCL_FLOAT_INF_POS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(float)<sp/>0x7F800000ul</highlight></codeline>
+<codeline lineno="202"><highlight class="comment">#define<sp/>ZCL_FLOAT_INF_NEG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(float)<sp/>0xFF800000ul</highlight></codeline>
+<codeline lineno="203"><highlight class="comment"></highlight></codeline>
+<codeline lineno="204"><highlight class="comment">//<sp/>Zero:<sp/>indicated<sp/>by<sp/>a<sp/>zero<sp/>exponent<sp/>and<sp/>zero<sp/>mantissa</highlight></codeline>
+<codeline lineno="205"><highlight class="comment">#define<sp/>ZCL_FLOAT_ZERO_POS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(float)<sp/>0x00000000ul</highlight></codeline>
+<codeline lineno="206"><highlight class="comment">#define<sp/>ZCL_FLOAT_ZERO_NEG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(float)<sp/>0x80000000ul</highlight></codeline>
+<codeline lineno="208"><highlight class="comment"></highlight></codeline>
+<codeline lineno="209"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="comment">//</highlight></codeline>
+<codeline lineno="217" refid="group__zcl__types_1ga7cd063b0a77ca0286b0dcc177e4251c5" refkind="member"><highlight class="comment"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_STRING_OCTET<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x41</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="group__zcl__types_1ga64286e0c69e0ed344a6eb8756ac81f95" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_STRING_CHAR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="group__zcl__types_1ga567563a365e2dddaced101de02fd9128" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_STRING_LONG_OCTET<sp/><sp/>0x43</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="group__zcl__types_1gabb23537eaae74cc55233355c6ce5979e" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_STRING_LONG_CHAR<sp/><sp/><sp/>0x44</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Array,<sp/>Structure,<sp/>Set,<sp/>Bag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>datatypes<sp/>are<sp/>currently<sp/>unsupported.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_ARRAY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x48<sp/><sp/><sp/><sp/><sp/>//<sp/>invalid=0xffff<sp/>in<sp/>first<sp/>2<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_STRUCT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x4C<sp/><sp/><sp/><sp/><sp/>//<sp/>invalid=0xffff<sp/>in<sp/>first<sp/>2<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"></codeline>
+<codeline lineno="252"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_SET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x50<sp/><sp/><sp/><sp/><sp/>//<sp/>number<sp/>of<sp/>elements<sp/>=<sp/>0xffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_BAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x51<sp/><sp/><sp/><sp/><sp/>//<sp/>number<sp/>of<sp/>elements<sp/>=<sp/>0xffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"></codeline>
+<codeline lineno="261"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_TIME_TIMEOFDAY<sp/><sp/><sp/><sp/><sp/>0xE0<sp/><sp/><sp/><sp/><sp/>//<sp/>4<sp/>octets,<sp/>invalid=0xffffffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="group__zcl__types_1gad5552b0825d941f0ccd7b1d797dc091b" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_TIME_DATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xE1<sp/><sp/><sp/><sp/><sp/>//<sp/>4<sp/>octets,<sp/>invalid=0xffffffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="group__zcl__types_1ga8f678e97557cb052c0df4be97e9f1e82" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_TIME_UTCTIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xE2<sp/><sp/><sp/><sp/><sp/>//<sp/>4<sp/>octets,<sp/>invalid=0xffffffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/>zcl_utctime_t;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_UTCTIME_INVALID<sp/><sp/><sp/><sp/><sp/><sp/>0xFFFFFFFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="group__zcl__types_1gafa65aea1347d7c84cd0019a7e013b8f5" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/><ref refid="group__zcl__types_1gafa65aea1347d7c84cd0019a7e013b8f5" kindref="member">zcl_timeofday_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/>hours;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="277" refid="group__zcl__types_1ga7acca8be0094a19be6e308ac05924c4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><ref refid="group__zcl__types_1ga7acca8be0094a19be6e308ac05924c4f" kindref="member">minutes</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278" refid="group__zcl__types_1ga46729a903be1a03cdb248fb48d84d4f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><ref refid="group__zcl__types_1ga46729a903be1a03cdb248fb48d84d4f5" kindref="member">seconds</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="279" refid="group__zcl__types_1gaa9acbdd2fcf00f83919be503371fc8a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><ref refid="group__zcl__types_1gaa9acbdd2fcf00f83919be503371fc8a2" kindref="member">hundredths</ref>;<sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}<sp/><ref refid="group__zcl__types_1gafa65aea1347d7c84cd0019a7e013b8f5" kindref="member">zcl_timeofday_t</ref>;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283" refid="group__zcl__types_1ga9ea8f9ebe25e922be76329748b8398b5" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/><ref refid="group__zcl__types_1ga9ea8f9ebe25e922be76329748b8398b5" kindref="member">zcl_date_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/>year;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="285" refid="group__zcl__types_1ga3e00faf7fbf9805e9ec4d2edd6339050" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><ref refid="group__zcl__types_1ga3e00faf7fbf9805e9ec4d2edd6339050" kindref="member">month</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="286" refid="group__zcl__types_1ga72369a1087b2aeffe374bb054cb97c12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><ref refid="group__zcl__types_1ga72369a1087b2aeffe374bb054cb97c12" kindref="member">day</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="287" refid="group__zcl__types_1gaf19fd1d4c2d4e9354c68c3b5546b7d41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><ref refid="group__zcl__types_1gaf19fd1d4c2d4e9354c68c3b5546b7d41" kindref="member">dayofweek</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="288"><highlight class="normal">}<sp/><ref refid="group__zcl__types_1ga9ea8f9ebe25e922be76329748b8398b5" kindref="member">zcl_date_t</ref>;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_ID_CLUSTER<sp/><sp/><sp/><sp/><sp/><sp/>0xE8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>2<sp/>octets,<sp/>invalid=0xffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="group__zcl__types_1ga1dc09447fe0d1f047c4554975a11b3fa" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_ID_ATTRIB<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xE9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>2<sp/>octets,<sp/>invalid=0xffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="group__zcl__types_1ga59fe9efad9f60ec8176a13c0ab1019ac" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_ID_BACNET_OID<sp/><sp/><sp/>0xEA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>4<sp/>octets,<sp/>invalid=0xffffffff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"></codeline>
+<codeline lineno="306"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_IEEE_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xF0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>8<sp/>octets,<sp/>invalid=all<sp/>ffs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310" refid="group__zcl__types_1gaa430fee3f4e5e09767b9fc969f73cf2f" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_SECURITY_KEY<sp/><sp/><sp/><sp/>0xF1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>16<sp/>octets<sp/>(128-bit<sp/>security<sp/>key)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"></codeline>
+<codeline lineno="316"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_UNKNOWN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>0<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DEVNOTE:<sp/>May<sp/>be<sp/>necessary<sp/>to<sp/>add<sp/>pragmas<sp/>to<sp/>pack<sp/>these<sp/>structures<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>non-embedded<sp/>platforms.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324" refid="unionzcl40__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="unionzcl40__t" kindref="compound">zcl40_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>u8[5];</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/>PACKED_STRUCT<sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>BYTE_ORDER<sp/>==<sp/>LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/>low32;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/>high8;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/>high8;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/>low32;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/>}<sp/>mixed;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal">}<sp/><ref refid="unionzcl40__t" kindref="compound">zcl40_t</ref>;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338" refid="unionzcl48__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="unionzcl48__t" kindref="compound">zcl48_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/>u8[6];</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/>u16[3];</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref><sp/>{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>BYTE_ORDER<sp/>==<sp/>LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/>low32;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>high16;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>high16;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/>low32;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/>}<sp/>mixed;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">}<sp/><ref refid="unionzcl48__t" kindref="compound">zcl48_t</ref>;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight><highlight class="comment">//<sp/>load<sp/>separate<sp/>header<sp/>containing<sp/>definition<sp/>of<sp/>zcl64_t<sp/>and<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>work<sp/>with<sp/>64-bit<sp/>integers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zcl64_8h" kindref="compound">zigbee/zcl64.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="preprocessor">#define<sp/>ZCL_T_INVALID<sp/><sp/><sp/><sp/><sp/><sp/>0x0F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_T_DISCRETE<sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_T_ANALOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_T_SIGNED<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_T_FLOAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_T_REPORTABLE<sp/><sp/><sp/>(ZCL_T_ANALOG<sp/>|<sp/>ZCL_T_DISCRETE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"></codeline>
+<codeline lineno="383" refid="group__zcl__types_1gaa49518f03f9632a55b3e1c4d4c68b60c" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_T_SIZE_MASK<sp/><sp/><sp/><sp/>0x0F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_T_SIZE_INVALID<sp/>(ZCL_T_INVALID<sp/>&amp;<sp/>ZCL_T_SIZE_MASK)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_T_SIZE_SHORT<sp/><sp/><sp/>0x0E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_T_SIZE_LONG<sp/><sp/><sp/><sp/>0x0D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_T_SIZE_128BIT<sp/><sp/>0x0C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_T_SIZE_VARIABLE<sp/><sp/><sp/>0x0B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"></codeline>
+<codeline lineno="397" refid="group__zcl__types_1ga6e143abd16187cc59cdad352c1fde4bf" refkind="member"><highlight class="preprocessor">#define<sp/>ZCL_TYPE_IS_ANALOG(t)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(zcl_type_info[t]<sp/>&amp;<sp/>ZCL_T_ANALOG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_IS_DISCRETE(t)<sp/><sp/><sp/><sp/><sp/>(zcl_type_info[t]<sp/>&amp;<sp/>ZCL_T_DISCRETE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_IS_SIGNED(t)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(zcl_type_info[t]<sp/>&amp;<sp/>ZCL_T_SIGNED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_IS_REPORTABLE(t)<sp/><sp/><sp/>(zcl_type_info[t]<sp/>&amp;<sp/>ZCL_T_REPORTABLE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TYPE_IS_INVALID(t)<sp/><sp/><sp/><sp/><sp/><sp/>(zcl_type_info[t]<sp/>==<sp/>ZCL_T_INVALID)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>zcl_types.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[256];</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_SIZE_SHORT<sp/><sp/><sp/><sp/><sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_SIZE_LONG<sp/><sp/><sp/><sp/><sp/><sp/>-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_SIZE_VARIABLE<sp/><sp/>-3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_SIZE_INVALID<sp/><sp/><sp/>-127</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__zcl__types_1ga6134ab27d38abd300d008345e21fe560" kindref="member">zcl_sizeof_type</ref>(<sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>);</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__zcl__types_1ga798e87a8b8f240a33706b7bc37c9ede1" kindref="member">zcl_type_name</ref>(<sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>);</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><ref refid="group__hal_1ga8d7f5a691878e9ffb7da396899581062" kindref="member">XBEE_END_DECLS</ref></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>compiling<sp/>in<sp/>Dynamic<sp/>C,<sp/>automatically<sp/>#use<sp/>the<sp/>appropriate<sp/>C<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__DC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#use<sp/>&quot;zcl_types.c&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>__ZIGBEE_ZCL_TYPES_H</highlight></codeline>
+    </programlisting>
+    <location file="include/zigbee/zcl_types.h"/>
+  </compounddef>
+</doxygen>

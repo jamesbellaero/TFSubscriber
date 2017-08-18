@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structzcl__basic__dev__info" kind="struct" language="C++" prot="public">
+    <compoundname>zcl_basic_dev_info</compoundname>
+    <includes refid="zcl__basic__attributes_8h" local="yes">zigbee/zcl_basic_attributes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__zcl__basic_1ga192f747f17a619e344287c3e7f8a0dca" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t ZCLVersion</definition>
+        <argsstring></argsstring>
+        <name>ZCLVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic_attributes.h" line="75" column="1" bodyfile="include/zigbee/zcl_basic_attributes.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__basic_1ga339efb8b2f6c1ed9a5269621bc7adfbb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t PowerSource</definition>
+        <argsstring></argsstring>
+        <name>PowerSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_basic_attributes.h" line="85" column="1" bodyfile="include/zigbee/zcl_basic_attributes.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Global used to hold values referenced by <ref refid="group__zcl__basic_1ga721ebe2f6ae346632475cf178671d150" kindref="member">zcl_basic_attributes</ref>[]. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/zigbee/zcl_basic_attributes.h" line="74" column="1" bodyfile="include/zigbee/zcl_basic_attributes.h" bodystart="74" bodyend="86"/>
+    <listofallmembers>
+      <member refid="group__zcl__basic_1ga339efb8b2f6c1ed9a5269621bc7adfbb" prot="public" virt="non-virtual"><scope>zcl_basic_dev_info</scope><name>PowerSource</name></member>
+      <member refid="group__zcl__basic_1ga192f747f17a619e344287c3e7f8a0dca" prot="public" virt="non-virtual"><scope>zcl_basic_dev_info</scope><name>ZCLVersion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

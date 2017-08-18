@@ -1,0 +1,34 @@
+\hypertarget{structzcl__attribute__full__t}{}\section{zcl\+\_\+attribute\+\_\+full\+\_\+t Struct Reference}
+\label{structzcl__attribute__full__t}\index{zcl\+\_\+attribute\+\_\+full\+\_\+t@{zcl\+\_\+attribute\+\_\+full\+\_\+t}}
+
+
+Use this structure for attributes with min/max values or the need to have a read/write function.  
+
+
+
+
+{\ttfamily \#include \char`\"{}zigbee/zcl.\+h\char`\"{}}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structzcl__attribute__base__t}{zcl\+\_\+attribute\+\_\+base\+\_\+t} {\bfseries base}
+\item 
+\hyperlink{unionzcl__attribute__minmax__t}{zcl\+\_\+attribute\+\_\+minmax\+\_\+t} \hyperlink{group__zcl_gaad888af9d07cd3b611c75f15f8c90dfe}{min}
+\begin{DoxyCompactList}\small\item\em Minimum value for attribute (currently unused until I pick a value to represent \char`\"{}none\char`\"{}). \end{DoxyCompactList}\item 
+\hyperlink{unionzcl__attribute__minmax__t}{zcl\+\_\+attribute\+\_\+minmax\+\_\+t} \hyperlink{group__zcl_gae2490849003f8344782c06334b1e6b17}{max}
+\begin{DoxyCompactList}\small\item\em Maximum value for attribute, assumes 32-\/bit limit. \end{DoxyCompactList}\item 
+\hyperlink{group__zcl_gace94cfc3f22379fa08a5b8de8c6977f6}{zcl\+\_\+attribute\+\_\+update\+\_\+fn} \hyperlink{group__zcl_ga80943597b8cce9d751a45efa823596ac}{read}
+\begin{DoxyCompactList}\small\item\em On an attribute read, the Z\+CL dispatcher will call the .read function to refresh the attribute\textquotesingle{}s value before responding to the request. \end{DoxyCompactList}\item 
+\hyperlink{group__zcl_ga70fa1740c517a1e49c700cba7cf6b339}{zcl\+\_\+attribute\+\_\+write\+\_\+fn} \hyperlink{group__zcl_gac8bd2f85f7df500d34b1d3cd27033a4e}{write}
+\begin{DoxyCompactList}\small\item\em On an attribute write, the Z\+CL dispatcher will call the .write function with a structure containing information about the write request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Use this structure for attributes with min/max values or the need to have a read/write function. 
+
+Be sure to set the Z\+C\+L\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+F\+L\+A\+G\+\_\+\+F\+U\+LL flag in .base.\+flags so the attribute is parsed with the correct type. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/zigbee/\hyperlink{zcl_8h}{zcl.\+h}\end{DoxyCompactItemize}

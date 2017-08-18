@@ -1,0 +1,62 @@
+\hypertarget{xbee__io_8c}{}\section{src/xbee/xbee\+\_\+io.c File Reference}
+\label{xbee__io_8c}\index{src/xbee/xbee\+\_\+io.\+c@{src/xbee/xbee\+\_\+io.\+c}}
+
+
+Code related to I/O sampling and configuration (the A\+T\+IS command, 0x92 frames).  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/atcmd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/byteorder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/io.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga49aae35ec2a46306bf2ad593cecbcf26}{xbee\+\_\+io\+\_\+response\+\_\+parse} (\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$parsed, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$source)
+\begin{DoxyCompactList}\small\item\em Parse an I/O response and store it in an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug char $\ast$ {\bfseries \+\_\+xbee\+\_\+mask\+\_\+to\+\_\+binary} (char $\ast$buf, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} mask, char $\ast$digits, int maxbit)
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug char $\ast$ {\bfseries \+\_\+xbee\+\_\+2masks\+\_\+to\+\_\+quaternary} (char $\ast$buf, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} mask\+\_\+lo, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} mask\+\_\+hi, char $\ast$digits, int maxbit)
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug void \hyperlink{group__xbee__io_ga931be802188e7f6d5f34ca8c47405479}{xbee\+\_\+io\+\_\+response\+\_\+dump} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io)
+\begin{DoxyCompactList}\small\item\em Debugging function used to dump an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure to stdout. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_gad542b5112bb7aafb9b3b9f965d6f3703}{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+input} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Return state of a digital input. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga6f3c5c657a49cd87abe13bdba3af15e9}{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+output} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Return state of a digital output. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} \hyperlink{group__xbee__io_ga69fd62a7e8b6ebd3654ba426f8aa07ab}{xbee\+\_\+io\+\_\+get\+\_\+analog\+\_\+input} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Return reading of an analog input. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga73696df85c4f9e52d5d24825d3a90b2a}{xbee\+\_\+io\+\_\+set\+\_\+digital\+\_\+output} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index, enum \hyperlink{group__xbee__io_gaf104a10d2bc34550b99de92fe3564cd2}{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state} state, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Set state of a digital output. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga0734acd149ca45fa8041d426f552e51a}{xbee\+\_\+io\+\_\+configure} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index, enum \hyperlink{group__xbee__io_gac23a55c53310f865d9ed2381e331a438}{xbee\+\_\+io\+\_\+type} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Configure X\+Bee digital and analog I/\+Os. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga6a1e9ccca3a6d97f1b583e76f1193dca}{xbee\+\_\+io\+\_\+set\+\_\+options} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} sample\+\_\+rate, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} change\+\_\+mask, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Configure X\+Bee automatic I/O sampling options. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug void {\bfseries \+\_\+xbee\+\_\+io\+\_\+query\+\_\+handle\+\_\+pr} (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$reg, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base)
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug void {\bfseries \+\_\+xbee\+\_\+io\+\_\+query\+\_\+handle\+\_\+end} (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$reg, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base)
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int {\bfseries xbee\+\_\+io\+\_\+query} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_gad253478285335c84b310aafb13aa1b21}{xbee\+\_\+io\+\_\+query\+\_\+status} (\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io)
+\begin{DoxyCompactList}\small\item\em Check the status of querying an X\+Bee device, as initiated by xbee\+\_\+io\+\_\+query(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{unionxbee__at__cmd__t}{xbee\+\_\+at\+\_\+cmd\+\_\+t} {\bfseries xbee\+\_\+io\+\_\+cmd\+\_\+by\+\_\+index} \mbox{[}16\mbox{]}
+\item 
+const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gabcf9c9881057623ef7b28330631fad9b}{\+\_\+xbee\+\_\+pullup\+\_\+atcmd\+\_\+to\+\_\+iomask} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em Read current configuration of X\+Bee digital and analog I/\+Os. \end{DoxyCompactList}\item 
+const \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} {\bfseries \+\_\+xbee\+\_\+io\+\_\+query\+\_\+regs} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Code related to I/O sampling and configuration (the A\+T\+IS command, 0x92 frames). 
+
+\begin{DoxyNote}{Note}
+This code is not directly concerned with collecting I/O samples. To do that, it is necessary to register a command handler for A\+T\+IS commands, and/or appropriate endpoints to handle the incoming data frames. If not using the Simple X\+Bee A\+PI (S\+XA) layer, then see \hyperlink{xbee__sxa_8c}{xbee\+\_\+sxa.\+c} for examples of how to register the necessary callback functions. Otherwise, it is recommended to use S\+XA for all I/O manipulation. 
+\end{DoxyNote}

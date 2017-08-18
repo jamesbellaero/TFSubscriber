@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="platform__win32_8h" kind="file" language="C++">
+    <compoundname>platform_win32.h</compoundname>
+    <includes local="no">endian.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">windows.h</includes>
+    <incdepgraph>
+      <node id="651">
+        <label>windows.h</label>
+      </node>
+      <node id="648">
+        <label>endian.h</label>
+      </node>
+      <node id="649">
+        <label>stdint.h</label>
+      </node>
+      <node id="647">
+        <label>include/xbee/platform_win32.h</label>
+        <link refid="platform__win32_8h"/>
+        <childnode refid="648" relation="include">
+        </childnode>
+        <childnode refid="649" relation="include">
+        </childnode>
+        <childnode refid="650" relation="include">
+        </childnode>
+        <childnode refid="651" relation="include">
+        </childnode>
+      </node>
+      <node id="650">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structxbee__serial__t" prot="public">xbee_serial_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__hal__win32_1gafa9179779c676eed926a35c4ab5fe5b5" prot="public" static="no">
+        <name>PACKED_STRUCT</name>
+        <initializer>struct __attribute__ ((__packed__, __gcc_struct__))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="37" column="10" bodyfile="include/xbee/platform_win32.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__win32_1ga3ee5b5bde5321e97420753cf13ce9c1b" prot="public" static="no">
+        <name>_f_memcpy</name>
+        <initializer>memcpy</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="39" column="10" bodyfile="include/xbee/platform_win32.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__win32_1ga210604a4d70c1421599afca049c8dc55" prot="public" static="no">
+        <name>_f_memset</name>
+        <initializer>memset</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="40" column="10" bodyfile="include/xbee/platform_win32.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__win32_1ga7e9a5ad096612667f1abe02fe20e3a25" prot="public" static="no">
+        <name>XBEE_WIFI_ENABLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="55" column="11" bodyfile="include/xbee/platform_win32.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__win32_1ga422c69254f74ee55358b35d9eba96602" prot="public" static="no">
+        <name>XBEE_NATIVE_64BIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="59" column="10" bodyfile="include/xbee/platform_win32.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__win32_1ga6037ea0df413fa8f86dff3a3d4988ea0" prot="public" static="no">
+        <name>XBEE_SER_TX_BUFSIZE</name>
+        <initializer>2048</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="62" column="10" bodyfile="include/xbee/platform_win32.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__win32_1ga3b4b9c5fbbe3b3a824e4fa7aa7a77437" prot="public" static="no">
+        <name>XBEE_SER_RX_BUFSIZE</name>
+        <initializer>4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="63" column="10" bodyfile="include/xbee/platform_win32.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__win32_1ga503caf44f78cc52dc196c413cd6c78ab" prot="public" static="no">
+        <name>ZCL_TIME_EPOCH_DELTA</name>
+        <initializer><ref refid="group__hal_1ga735b0974380a73e9d7a12a1f199a5921" kindref="member">ZCL_TIME_EPOCH_DELTA_1970</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="74" column="9" bodyfile="include/xbee/platform_win32.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__hal__win32_1ga5cbeea4d9344138b657f78ad38813584" prot="public" static="no">
+        <name>XBEE_MS_TIMER_RESOLUTION</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="79" column="9" bodyfile="include/xbee/platform_win32.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__hal__win32_1ga812d16e5494522586b3784e55d479912" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int bool_t</definition>
+        <argsstring></argsstring>
+        <name>bool_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/platform_win32.h" line="45" column="1" bodyfile="include/xbee/platform_win32.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header for 32-bit Windows (Win32) platform (using cygwin and gcc). </para>    </briefdescription>
+    <detaileddescription>
+<para>This file is automatically included by <ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2013<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor">#ifndef<sp/>__XBEE_PLATFORM_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__XBEE_PLATFORM_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>platform&apos;s<sp/>endian<sp/>header<sp/>to<sp/>learn<sp/>whether<sp/>we&apos;re<sp/>big<sp/>or<sp/>little.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#ifdef<sp/>__MINGW32__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&lt;sys/param.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MinGW&apos;s<sp/>length-limited<sp/>case-insensitive<sp/>string<sp/>comparison<sp/>has<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>slightly<sp/>different<sp/>name.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>strncmpi<sp/>strnicmp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&lt;endian.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>macro<sp/>used<sp/>to<sp/>declare<sp/>a<sp/>packed<sp/>structure<sp/>(no<sp/>alignment<sp/>of<sp/>elements)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;__gcc_struct__&quot;<sp/>added<sp/>to<sp/>fix<sp/>problems<sp/>with<sp/>gcc<sp/>4.7.0<sp/>in<sp/>MinGW/MSYS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>PACKED_STRUCT<sp/><sp/><sp/>struct<sp/>__attribute__<sp/>((__packed__,<sp/>__gcc_struct__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>_f_memcpy<sp/><sp/><sp/><sp/>memcpy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>_f_memset<sp/><sp/><sp/><sp/>memset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stdint.h<sp/>for<sp/>int8_t,<sp/>uint8_t,<sp/>int16_t,<sp/>etc.<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>inttypes.h<sp/>for<sp/>PRIx16,<sp/>PRIx32,<sp/>etc.<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>HANDLE<sp/>type<sp/>used<sp/>in<sp/>xbee_serial_t,<sp/>GetTickCount,<sp/>str[n]cmpi,<sp/>etc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>enable<sp/>the<sp/>Wi-Fi<sp/>code<sp/>by<sp/>default</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#ifndef<sp/>XBEE_WIFI_DISABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>XBEE_WIFI_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compiler<sp/>natively<sp/>supports<sp/>64-bit<sp/>integers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>XBEE_NATIVE_64BIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>size<sp/>of<sp/>OS-level<sp/>serial<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>XBEE_SER_TX_BUFSIZE<sp/><sp/><sp/>2048</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>XBEE_SER_RX_BUFSIZE<sp/><sp/><sp/>4096</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Elements<sp/>needed<sp/>to<sp/>keep<sp/>track<sp/>of<sp/>serial<sp/>port<sp/>settings.<sp/><sp/>Must<sp/>have<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>baudrate<sp/>memember,<sp/>other<sp/>fields<sp/>are<sp/>platform-specific.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/><sp/><sp/><sp/>baudrate;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>comport;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>COMx:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/>HANDLE<sp/><sp/><sp/><sp/><sp/><sp/>hCom;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}<sp/><ref refid="structxbee__serial__t" kindref="compound">xbee_serial_t</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Win32<sp/>epoch<sp/>is<sp/>1/1/1970</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZCL_TIME_EPOCH_DELTA<sp/><sp/>ZCL_TIME_EPOCH_DELTA_1970</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Per<sp/>MSDN,<sp/>&quot;The<sp/>resolution<sp/>of<sp/>the<sp/>GetTickCount<sp/>function<sp/>is<sp/>limited<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>resolution<sp/>of<sp/>the<sp/>system<sp/>timer,<sp/>which<sp/>is<sp/>typically<sp/>in<sp/>the<sp/>range<sp/>of<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>milliseconds<sp/>to<sp/>16<sp/>milliseconds.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_MS_TIMER_RESOLUTION<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>__XBEE_PLATFORM_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/xbee/platform_win32.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,864 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="jslong__glue_8h" kind="file" language="C++">
+    <compoundname>jslong_glue.h</compoundname>
+    <includes refid="jslong_8h" local="yes">xbee/jslong.h</includes>
+    <includedby refid="platform_8h" local="yes">include/xbee/platform.h</includedby>
+    <incdepgraph>
+      <node id="416">
+        <label>include/xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h"/>
+        <childnode refid="417" relation="include">
+        </childnode>
+      </node>
+      <node id="417">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="437">
+        <label>src/xbee/xbee_device.c</label>
+        <link refid="xbee__device_8c"/>
+      </node>
+      <node id="426">
+        <label>src/rabbit/xbee_serial_rabbit.c</label>
+        <link refid="xbee__serial__rabbit_8c"/>
+      </node>
+      <node id="457">
+        <label>include/xbee/device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="437" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>src/xbee/xbee_gpm.c</label>
+        <link refid="xbee__gpm_8c"/>
+      </node>
+      <node id="495">
+        <label>include/xbee/reg_descr.h</label>
+        <link refid="reg__descr_8h"/>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="499">
+        <label>include/xbee/wifi.h</label>
+        <link refid="wifi_8h"/>
+        <childnode refid="500" relation="include">
+        </childnode>
+      </node>
+      <node id="459">
+        <label>include/xbee/io.h</label>
+        <link refid="io_8h"/>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="477">
+        <label>include/xbee/transparent_serial.h</label>
+        <link refid="transparent__serial_8h"/>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+      </node>
+      <node id="450">
+        <label>src/zigbee/zcl_time.c</label>
+        <link refid="zcl__time_8c"/>
+      </node>
+      <node id="427">
+        <label>src/rabbit/xbee_sxa_socket.c</label>
+        <link refid="xbee__sxa__socket_8c"/>
+      </node>
+      <node id="484">
+        <label>src/zigbee/zcl_commissioning.c</label>
+        <link refid="zcl__commissioning_8c"/>
+      </node>
+      <node id="465">
+        <label>include/xbee/discovery.h</label>
+        <link refid="discovery_8h"/>
+        <childnode refid="438" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="436">
+        <label>src/xbee/xbee_commissioning.c</label>
+        <link refid="xbee__commissioning_8c"/>
+      </node>
+      <node id="431">
+        <label>src/util/xmodem_crc16.c</label>
+        <link refid="xmodem__crc16_8c"/>
+      </node>
+      <node id="451">
+        <label>src/zigbee/zigbee_zcl.c</label>
+        <link refid="zigbee__zcl_8c"/>
+      </node>
+      <node id="452">
+        <label>src/zigbee/zigbee_zdo.c</label>
+        <link refid="zigbee__zdo_8c"/>
+      </node>
+      <node id="466">
+        <label>include/xbee/gpm.h</label>
+        <link refid="gpm_8h"/>
+        <childnode refid="467" relation="include">
+        </childnode>
+      </node>
+      <node id="440">
+        <label>src/xbee/xbee_io.c</label>
+        <link refid="xbee__io_8c"/>
+      </node>
+      <node id="418">
+        <label>include/xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h"/>
+        <childnode refid="419" relation="include">
+        </childnode>
+      </node>
+      <node id="439">
+        <label>src/xbee/xbee_firmware.c</label>
+        <link refid="xbee__firmware_8c"/>
+      </node>
+      <node id="430">
+        <label>src/util/swapbytes.c</label>
+        <link refid="swapbytes_8c"/>
+      </node>
+      <node id="441">
+        <label>src/xbee/xbee_ota_client.c</label>
+        <link refid="xbee__ota__client_8c"/>
+      </node>
+      <node id="491">
+        <label>src/zigbee/zcl_types.c</label>
+        <link refid="zcl__types_8c"/>
+      </node>
+      <node id="475">
+        <label>include/xbee/ota_server.h</label>
+        <link refid="ota__server_8h"/>
+        <childnode refid="476" relation="include">
+        </childnode>
+      </node>
+      <node id="448">
+        <label>src/zigbee/zcl_client.c</label>
+        <link refid="zcl__client_8c"/>
+      </node>
+      <node id="476">
+        <label>src/xbee/xbee_ota_server.c</label>
+        <link refid="xbee__ota__server_8c"/>
+      </node>
+      <node id="447">
+        <label>src/zigbee/zcl_basic.c</label>
+        <link refid="zcl__basic_8c"/>
+      </node>
+      <node id="421">
+        <label>src/util/jslong.c</label>
+        <link refid="jslong_8c"/>
+        <childnode refid="420" relation="include">
+        </childnode>
+      </node>
+      <node id="422">
+        <label>src/hcs08/xbee_platform_hcs08.c</label>
+        <link refid="xbee__platform__hcs08_8c"/>
+      </node>
+      <node id="482">
+        <label>include/zigbee/zcl_client.h</label>
+        <link refid="zcl__client_8h"/>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+      </node>
+      <node id="455">
+        <label>include/wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="433" relation="include">
+        </childnode>
+        <childnode refid="437" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="479" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+      </node>
+      <node id="497">
+        <label>src/posix/xbee_serial_posix.c</label>
+        <link refid="xbee__serial__posix_8c"/>
+      </node>
+      <node id="446">
+        <label>src/xbee/xbee_xmodem.c</label>
+        <link refid="xbee__xmodem_8c"/>
+      </node>
+      <node id="488">
+        <label>include/xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="427" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+        <childnode refid="434" relation="include">
+        </childnode>
+        <childnode refid="437" relation="include">
+        </childnode>
+        <childnode refid="438" relation="include">
+        </childnode>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+      </node>
+      <node id="471">
+        <label>include/xbee/wpan.h</label>
+        <link refid="wpan_8h"/>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="501">
+        <label>include/xbee/xmodem_crc16.h</label>
+        <link refid="xmodem__crc16_8h"/>
+        <childnode refid="431" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+      </node>
+      <node id="424">
+        <label>src/posix/xbee_platform_posix.c</label>
+        <link refid="xbee__platform__posix_8c"/>
+      </node>
+      <node id="468">
+        <label>include/xbee/route.h</label>
+        <link refid="route_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="435">
+        <label>src/xbee/xbee_atmode.c</label>
+        <link refid="xbee__atmode_8c"/>
+      </node>
+      <node id="485">
+        <label>include/zigbee/zcl_identify.h</label>
+        <link refid="zcl__identify_8h"/>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>include/zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="433" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+        <childnode refid="479" relation="include">
+        </childnode>
+        <childnode refid="480" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+      </node>
+      <node id="483">
+        <label>include/zigbee/zcl_commissioning.h</label>
+        <link refid="zcl__commissioning_8h"/>
+        <childnode refid="436" relation="include">
+        </childnode>
+        <childnode refid="484" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+      </node>
+      <node id="493">
+        <label>src/dos/xbee_serial_dos.c</label>
+        <link refid="xbee__serial__dos_8c"/>
+      </node>
+      <node id="489">
+        <label>src/util/swapcpy.c</label>
+        <link refid="swapcpy_8c"/>
+      </node>
+      <node id="461">
+        <label>src/xbee/xbee_reg_descr.c</label>
+        <link refid="xbee__reg__descr_8c"/>
+      </node>
+      <node id="442">
+        <label>src/xbee/xbee_scan.c</label>
+        <link refid="xbee__scan_8c"/>
+      </node>
+      <node id="453">
+        <label>include/wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="433" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+      </node>
+      <node id="419">
+        <label>include/xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="420" relation="include">
+        </childnode>
+        <childnode refid="421" relation="include">
+        </childnode>
+        <childnode refid="422" relation="include">
+        </childnode>
+        <childnode refid="423" relation="include">
+        </childnode>
+        <childnode refid="424" relation="include">
+        </childnode>
+        <childnode refid="425" relation="include">
+        </childnode>
+        <childnode refid="426" relation="include">
+        </childnode>
+        <childnode refid="427" relation="include">
+        </childnode>
+        <childnode refid="428" relation="include">
+        </childnode>
+        <childnode refid="429" relation="include">
+        </childnode>
+        <childnode refid="430" relation="include">
+        </childnode>
+        <childnode refid="431" relation="include">
+        </childnode>
+        <childnode refid="432" relation="include">
+        </childnode>
+        <childnode refid="433" relation="include">
+        </childnode>
+        <childnode refid="434" relation="include">
+        </childnode>
+        <childnode refid="435" relation="include">
+        </childnode>
+        <childnode refid="436" relation="include">
+        </childnode>
+        <childnode refid="437" relation="include">
+        </childnode>
+        <childnode refid="438" relation="include">
+        </childnode>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="492" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="495" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+        <childnode refid="499" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+        <childnode refid="501" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+      </node>
+      <node id="460">
+        <label>include/xbee/sxa.h</label>
+        <link refid="sxa_8h"/>
+        <childnode refid="427" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+      </node>
+      <node id="443">
+        <label>src/xbee/xbee_sxa.c</label>
+        <link refid="xbee__sxa_8c"/>
+      </node>
+      <node id="445">
+        <label>src/xbee/xbee_wpan.c</label>
+        <link refid="xbee__wpan_8c"/>
+      </node>
+      <node id="458">
+        <label>include/xbee/atcmd.h</label>
+        <link refid="atcmd_8h"/>
+        <childnode refid="434" relation="include">
+        </childnode>
+        <childnode refid="436" relation="include">
+        </childnode>
+        <childnode refid="438" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="494">
+        <label>src/xbee/xbee_cbuf.c</label>
+        <link refid="xbee__cbuf_8c"/>
+      </node>
+      <node id="496">
+        <label>include/xbee/serial.h</label>
+        <link refid="serial_8h"/>
+        <childnode refid="493" relation="include">
+        </childnode>
+        <childnode refid="423" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="426" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+        <childnode refid="437" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+      </node>
+      <node id="486">
+        <label>include/zigbee/zcl_time.h</label>
+        <link refid="zcl__time_8h"/>
+        <childnode refid="450" relation="include">
+        </childnode>
+      </node>
+      <node id="490">
+        <label>include/zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="491" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+      </node>
+      <node id="502">
+        <label>include/zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="490" relation="include">
+        </childnode>
+      </node>
+      <node id="474">
+        <label>include/xbee/ota_client.h</label>
+        <link refid="ota__client_8h"/>
+        <childnode refid="441" relation="include">
+        </childnode>
+      </node>
+      <node id="462">
+        <label>include/xbee/sxa_socket.h</label>
+        <link refid="sxa__socket_8h"/>
+      </node>
+      <node id="463">
+        <label>include/xbee/atmode.h</label>
+        <link refid="atmode_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+      </node>
+      <node id="449">
+        <label>src/zigbee/zcl_identify.c</label>
+        <link refid="zcl__identify_8c"/>
+      </node>
+      <node id="433">
+        <label>src/wpan/wpan_aps.c</label>
+        <link refid="wpan__aps_8c"/>
+      </node>
+      <node id="487">
+        <label>include/zigbee/zdo.h</label>
+        <link refid="zdo_8h"/>
+        <childnode refid="433" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="420">
+        <label>src/dos/xbee_platform_dos.c</label>
+        <link refid="xbee__platform__dos_8c"/>
+      </node>
+      <node id="432">
+        <label>src/win32/xbee_platform_win32.c</label>
+        <link refid="xbee__platform__win32_8c"/>
+      </node>
+      <node id="492">
+        <label>include/xbee/cbuf.h</label>
+        <link refid="cbuf_8h"/>
+        <childnode refid="493" relation="include">
+        </childnode>
+        <childnode refid="423" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+      </node>
+      <node id="498">
+        <label>src/win32/xbee_serial_win32.c</label>
+        <link refid="xbee__serial__win32_8c"/>
+      </node>
+      <node id="423">
+        <label>src/hcs08/xbee_serial_hcs08.c</label>
+        <link refid="xbee__serial__hcs08_8c"/>
+      </node>
+      <node id="500">
+        <label>src/xbee/xbee_wifi.c</label>
+        <link refid="xbee__wifi_8c"/>
+      </node>
+      <node id="472">
+        <label>include/xbee/xmodem.h</label>
+        <link refid="xmodem_8h"/>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="473" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+      </node>
+      <node id="429">
+        <label>src/util/hexstrtobyte.c</label>
+        <link refid="hexstrtobyte_8c"/>
+      </node>
+      <node id="464">
+        <label>include/xbee/commissioning.h</label>
+        <link refid="commissioning_8h"/>
+        <childnode refid="436" relation="include">
+        </childnode>
+      </node>
+      <node id="469">
+        <label>src/xbee/xbee_route.c</label>
+        <link refid="xbee__route_8c"/>
+      </node>
+      <node id="425">
+        <label>src/rabbit/xbee_platform_rabbit.c</label>
+        <link refid="xbee__platform__rabbit_8c"/>
+      </node>
+      <node id="454">
+        <label>src/wpan/wpan_types.c</label>
+        <link refid="wpan__types_8c"/>
+      </node>
+      <node id="473">
+        <label>include/xbee/firmware.h</label>
+        <link refid="firmware_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+      </node>
+      <node id="480">
+        <label>include/zigbee/zcl_basic.h</label>
+        <link refid="zcl__basic_8h"/>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+      </node>
+      <node id="470">
+        <label>include/xbee/scan.h</label>
+        <link refid="scan_8h"/>
+        <childnode refid="442" relation="include">
+        </childnode>
+      </node>
+      <node id="456">
+        <label>src/zigbee/zcl_onoff.c</label>
+        <link refid="zcl__onoff_8c"/>
+      </node>
+      <node id="434">
+        <label>src/xbee/xbee_atcmd.c</label>
+        <link refid="xbee__atcmd_8c"/>
+      </node>
+      <node id="444">
+        <label>src/xbee/xbee_transparent_serial.c</label>
+        <link refid="xbee__transparent__serial_8c"/>
+      </node>
+      <node id="479">
+        <label>include/zigbee/zcl_bacnet.h</label>
+        <link refid="zcl__bacnet_8h"/>
+      </node>
+      <node id="481">
+        <label>include/zigbee/zcl_basic_attributes.h</label>
+        <link refid="zcl__basic__attributes_8h"/>
+      </node>
+      <node id="438">
+        <label>src/xbee/xbee_discovery.c</label>
+        <link refid="xbee__discovery_8c"/>
+      </node>
+      <node id="428">
+        <label>src/util/hexdump.c</label>
+        <link refid="hexdump_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_j_s_int64" prot="public">JSInt64</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="jslong__glue_8h_1a30f87dfd7349d5165f116b550c35c6ed" prot="public" static="no">
+        <name>IS_LITTLE_ENDIAN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong_glue.h" line="44" column="10" bodyfile="include/xbee/jslong_glue.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="jslong__glue_8h_1aefa4610c1f8dd9c33aaf79f61d7ee04a" prot="public" static="no">
+        <type><ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref></type>
+        <definition>typedef JSInt64 JSUint64</definition>
+        <argsstring></argsstring>
+        <name>JSUint64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong_glue.h" line="37" column="1" bodyfile="include/xbee/jslong_glue.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="jslong__glue_8h_1a8dfab2053e57351f3971ba5c2a2e6382" prot="public" static="no">
+        <type><ref refid="group__hal__dos_1gafd12020da5a235dfcf0c3c748fb5baed" kindref="member">int32_t</ref></type>
+        <definition>typedef int32_t JSInt32</definition>
+        <argsstring></argsstring>
+        <name>JSInt32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong_glue.h" line="40" column="1" bodyfile="include/xbee/jslong_glue.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="jslong__glue_8h_1a53efee5e0b993a47f15bd904f7ee4a6d" prot="public" static="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>typedef uint32_t JSUint32</definition>
+        <argsstring></argsstring>
+        <name>JSUint32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong_glue.h" line="41" column="1" bodyfile="include/xbee/jslong_glue.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>glue<sp/>for<sp/>jslong.h/jslong.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>automatically<sp/>included<sp/>at<sp/>the<sp/>end<sp/>of<sp/>xbee/platform.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>***<sp/>Do<sp/>not<sp/>#include<sp/>this<sp/>file<sp/>directly.<sp/>**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XBEE_JSLONG_GLUE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_JSLONG_GLUE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>XBEE_NATIVE_64BIT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>JS_HAVE_LONG_LONG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>Your<sp/>code<sp/>should<sp/>never<sp/>access<sp/>these<sp/>types<sp/>as<sp/>integral<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(i.e.,<sp/>don&apos;t<sp/>use<sp/>unary<sp/>or<sp/>binary<sp/>operators<sp/>on<sp/>them)<sp/>since<sp/>some</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>platforms<sp/>implement<sp/>them<sp/>as<sp/>structures.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int64_t<sp/><sp/><sp/><ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint64_t<sp/><sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>Your<sp/>code<sp/>should<sp/>never<sp/>access<sp/>.lo<sp/>and<sp/>.hi<sp/>directly,<sp/>since<sp/>some</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>platforms<sp/>will<sp/>be<sp/>using<sp/>an<sp/>actual<sp/>64-bit<sp/>integer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="struct_j_s_int64" refkind="compound"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>BYTE_ORDER<sp/>==<sp/>LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/>lo,<sp/>hi;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/>hi,<sp/>lo;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/>}<sp/><ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref><sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1gafd12020da5a235dfcf0c3c748fb5baed" kindref="member">int32_t</ref><sp/><sp/><sp/>JSInt32;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/><sp/>JSUint32;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(BYTE_ORDER<sp/>==<sp/>LITTLE_ENDIAN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>IS_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;xbee/jslong.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>xbee_platform_rabbit.c<sp/>includes<sp/>the<sp/>#use<sp/>for<sp/>jslong.c,<sp/>no<sp/>need<sp/>for<sp/>it<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>!<sp/>defined<sp/>XBEE_JSLONG_GLUE_H</highlight></codeline>
+    </programlisting>
+    <location file="include/xbee/jslong_glue.h"/>
+  </compounddef>
+</doxygen>

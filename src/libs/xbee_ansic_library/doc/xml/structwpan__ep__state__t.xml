@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structwpan__ep__state__t" kind="struct" language="C++" prot="public">
+    <compoundname>wpan_ep_state_t</compoundname>
+    <includes refid="aps_8h" local="yes">wpan/aps.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__wpan__aps_1ga9e18c6583d7c94f03b10fc1e99187939" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t last_transaction</definition>
+        <argsstring></argsstring>
+        <name>last_transaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="524" column="1" bodyfile="include/wpan/aps.h" bodystart="524" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1gaf9565ebe099d08e3f9f26783a4f89826" prot="public" static="no" mutable="no">
+        <type><ref refid="structwpan__conversation__t" kindref="compound">wpan_conversation_t</ref></type>
+        <definition>wpan_conversation_t conversations[WPAN_MAX_CONVERSATIONS]</definition>
+        <argsstring>[WPAN_MAX_CONVERSATIONS]</argsstring>
+        <name>conversations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="525" column="1" bodyfile="include/wpan/aps.h" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Volatile part of an endpoint record used to track conversations (requests waiting for responses). </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="96">
+        <label>wpan_ep_state_t</label>
+        <link refid="structwpan__ep__state__t"/>
+        <childnode refid="97" relation="usage">
+          <edgelabel>conversations</edgelabel>
+        </childnode>
+      </node>
+      <node id="97">
+        <label>wpan_conversation_t</label>
+        <link refid="structwpan__conversation__t"/>
+        <childnode refid="97" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/wpan/aps.h" line="523" column="1" bodyfile="include/wpan/aps.h" bodystart="523" bodyend="526"/>
+    <listofallmembers>
+      <member refid="group__wpan__aps_1gaf9565ebe099d08e3f9f26783a4f89826" prot="public" virt="non-virtual"><scope>wpan_ep_state_t</scope><name>conversations</name></member>
+      <member refid="group__wpan__aps_1ga9e18c6583d7c94f03b10fc1e99187939" prot="public" virt="non-virtual"><scope>wpan_ep_state_t</scope><name>last_transaction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="struct__xbee__reg__descr__t" kind="struct" language="C++" prot="public">
+    <compoundname>_xbee_reg_descr_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__xbee__reg__descr__t_1ad94e63af9aef7b2c583788852ebdc5b1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int is_state</definition>
+        <argsstring></argsstring>
+        <name>is_state</name>
+        <briefdescription>
+<para>1 if a &quot;state&quot;, 0 if a &quot;setting&quot;, or other values for special purposes. </para>        </briefdescription>
+        <detaileddescription>
+<para>A state is read-only, and reflects dynamic state such as error counts. A setting is read/write or write-only, which can (in principle) be saved to non-volatile storage on the device. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/reg_descr.h" line="57" column="1" bodyfile="include/xbee/reg_descr.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__xbee__reg__descr__t_1aae877041546563a319dff9e25bc3aaf7" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* alias</definition>
+        <argsstring></argsstring>
+        <name>alias</name>
+        <briefdescription>
+<para>Two-character AT command string for this register (except entry for &lt;dest_addr&gt; is &quot;DH/DL&quot;). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/reg_descr.h" line="60" column="1" bodyfile="include/xbee/reg_descr.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__xbee__reg__descr__t_1aa89979f0cabc914d3df82120cb9aa1a4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t cxval</definition>
+        <argsstring></argsstring>
+        <name>cxval</name>
+        <briefdescription>
+<para>Custom xbee_type value (bitfield) for query descriptor. </para>        </briefdescription>
+        <detaileddescription>
+<para>This field is a bitmask, which determines whether this entry is applicable to a given XBee module type. A mask (M) for the module is obtained by (e.g.) M = sxa_module_type_mask(sxa). Then, only if (M &amp; cxval) == M is the entry applicable.</para><para>One of the bits in cxval is for a &quot;gateway&quot; i.e. a local module. If this bit is NOT set in cxval, then such commands are not usually performed on local devices, usually because changing that register might disrupt the network and make it inaccessible. In cases where it really is necessary to change one of these registers, the gateway bit in M can be reset before applying the above bitmask test.</para><para><simplesect kind="note"><para>This mask behavior is derived from NDS and is used by iDigi. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/reg_descr.h" line="77" column="1" bodyfile="include/xbee/reg_descr.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__xbee__reg__descr__t_1a7ae80afc0da97444432fc11aadbcb52d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__xbee__atcmd_1gaa874b4a291f79f2e80f867ce71fccea5" kindref="member">_xbee_rci_type_t</ref></type>
+        <definition>_xbee_rci_type_t rci_type</definition>
+        <argsstring></argsstring>
+        <name>rci_type</name>
+        <briefdescription>
+<para>RCI type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/reg_descr.h" line="79" column="1" bodyfile="include/xbee/reg_descr.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__xbee__reg__descr__t_1acfa39348dc06ee8b25af49145a003e23" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t sxa_offs</definition>
+        <argsstring></argsstring>
+        <name>sxa_offs</name>
+        <briefdescription>
+<para>Offset in SXA node structure of cached field value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/reg_descr.h" line="95" column="1" bodyfile="include/xbee/reg_descr.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__xbee__reg__descr__t_1afffefbb55b7d4e0f2932567b30161167" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t sxa_len</definition>
+        <argsstring></argsstring>
+        <name>sxa_len</name>
+        <briefdescription>
+<para>Length of cached field value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/reg_descr.h" line="97" column="1" bodyfile="include/xbee/reg_descr.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__xbee__reg__descr__t_1a4ef83a005ab7c0854ce2de3973b2a3df" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t sxa_cache_group</definition>
+        <argsstring></argsstring>
+        <name>sxa_cache_group</name>
+        <briefdescription>
+<para>SXA cache group (bitfield), or SXA_CACHED_MISC if not grouped. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/reg_descr.h" line="99" column="1" bodyfile="include/xbee/reg_descr.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xbee/reg_descr.h" line="51" column="1" bodyfile="include/xbee/reg_descr.h" bodystart="50" bodyend="100"/>
+    <listofallmembers>
+      <member refid="struct__xbee__reg__descr__t_1aae877041546563a319dff9e25bc3aaf7" prot="public" virt="non-virtual"><scope>_xbee_reg_descr_t</scope><name>alias</name></member>
+      <member refid="struct__xbee__reg__descr__t_1aa89979f0cabc914d3df82120cb9aa1a4" prot="public" virt="non-virtual"><scope>_xbee_reg_descr_t</scope><name>cxval</name></member>
+      <member refid="struct__xbee__reg__descr__t_1ad94e63af9aef7b2c583788852ebdc5b1" prot="public" virt="non-virtual"><scope>_xbee_reg_descr_t</scope><name>is_state</name></member>
+      <member refid="struct__xbee__reg__descr__t_1a7ae80afc0da97444432fc11aadbcb52d" prot="public" virt="non-virtual"><scope>_xbee_reg_descr_t</scope><name>rci_type</name></member>
+      <member refid="struct__xbee__reg__descr__t_1a4ef83a005ab7c0854ce2de3973b2a3df" prot="public" virt="non-virtual"><scope>_xbee_reg_descr_t</scope><name>sxa_cache_group</name></member>
+      <member refid="struct__xbee__reg__descr__t_1afffefbb55b7d4e0f2932567b30161167" prot="public" virt="non-virtual"><scope>_xbee_reg_descr_t</scope><name>sxa_len</name></member>
+      <member refid="struct__xbee__reg__descr__t_1acfa39348dc06ee8b25af49145a003e23" prot="public" virt="non-virtual"><scope>_xbee_reg_descr_t</scope><name>sxa_offs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

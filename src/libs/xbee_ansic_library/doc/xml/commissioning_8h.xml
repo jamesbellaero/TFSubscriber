@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="commissioning_8h" kind="file" language="C++">
+    <compoundname>commissioning.h</compoundname>
+    <includes refid="device_8h" local="yes">xbee/device.h</includes>
+    <includes refid="zcl__commissioning_8h" local="yes">zigbee/zcl_commissioning.h</includes>
+    <includedby refid="xbee__commissioning_8c" local="yes">src/xbee/xbee_commissioning.c</includedby>
+    <incdepgraph>
+      <node id="213">
+        <label>xbee/device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+      </node>
+      <node id="215">
+        <label>errno.h</label>
+      </node>
+      <node id="217">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>stddef.h</label>
+      </node>
+      <node id="221">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="220" relation="include">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+      </node>
+      <node id="222">
+        <label>zigbee/zcl_commissioning.h</label>
+        <link refid="zcl__commissioning_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+      </node>
+      <node id="226">
+        <label>string.h</label>
+      </node>
+      <node id="220">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+      </node>
+      <node id="219">
+        <label>xbee/serial.h</label>
+        <link refid="serial_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+      </node>
+      <node id="227">
+        <label>zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+      </node>
+      <node id="212">
+        <label>include/xbee/commissioning.h</label>
+        <link refid="commissioning_8h"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="229">
+        <label>src/xbee/xbee_commissioning.c</label>
+        <link refid="xbee__commissioning_8c"/>
+      </node>
+      <node id="228">
+        <label>include/xbee/commissioning.h</label>
+        <link refid="commissioning_8h"/>
+        <childnode refid="229" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__xbee__commissioning_1ga23d98ae5f8500da3bfa56812d5fcf568" prot="public" static="no">
+        <name>XBEE_COMM_SCAN_ATTEMPTS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/commissioning.h" line="30" column="9" bodyfile="include/xbee/commissioning.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__commissioning_1gaf8d4e57bf93de8024ae827ddd8a5e9d2" prot="public" static="no">
+        <name>XBEE_COMM_TIME_BETWEEN_SCANS</name>
+        <initializer>0x0064</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/commissioning.h" line="31" column="9" bodyfile="include/xbee/commissioning.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__commissioning_1gafe13908815f7385ccfb912c0b5aca770" prot="public" static="no">
+        <name>XBEE_COMM_REJOIN_INTERVAL</name>
+        <initializer>0x003C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/commissioning.h" line="32" column="9" bodyfile="include/xbee/commissioning.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__xbee__commissioning_1gabae5f132ed1e863cd313c12b4c5ce3a3" prot="public" static="no">
+        <name>XBEE_COMM_MAX_REJOIN_INTERVAL</name>
+        <initializer>0x0E10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/commissioning.h" line="33" column="9" bodyfile="include/xbee/commissioning.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__commissioning_1gadd6acaa6c6403e9371358da445f3f194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xbee_commissioning_tick</definition>
+        <argsstring>(xbee_dev_t *xbee, zcl_comm_state_t *comm)</argsstring>
+        <name>xbee_commissioning_tick</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="structzcl__comm__state__t" kindref="compound">zcl_comm_state_t</ref> *</type>
+          <declname>comm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="461" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="461" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__commissioning_1ga6fb796928aa5ff990ca4b62c4893bc2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_commissioning_set</definition>
+        <argsstring>(xbee_dev_t *xbee, zcl_comm_startup_param_t *sas)</argsstring>
+        <name>xbee_commissioning_set</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref> *</type>
+          <declname>sas</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_commissioning.c" line="263" column="1" bodyfile="src/xbee/xbee_commissioning.c" bodystart="263" bodyend="453"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header for XBee module support of ZCL Commissioning Cluster. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#ifndef<sp/>XBEE_COMMISSIONING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_COMMISSIONING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="device_8h" kindref="compound">xbee/device.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zcl__commissioning_8h" kindref="compound">zigbee/zcl_commissioning.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>XBee<sp/>has<sp/>hard-coded<sp/>values,<sp/>same<sp/>as<sp/>ZCL<sp/>defaults<sp/>except<sp/>for<sp/>ScanAttempts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(which<sp/>is<sp/>set<sp/>to<sp/>1<sp/>instead<sp/>of<sp/>5).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_COMM_SCAN_ATTEMPTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_COMM_TIME_BETWEEN_SCANS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0064</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_COMM_REJOIN_INTERVAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x003C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBEE_COMM_MAX_REJOIN_INTERVAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0E10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>xbee_commissioning_tick(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,<sp/><ref refid="structzcl__comm__state__t" kindref="compound">zcl_comm_state_t</ref><sp/>*comm_state);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xbee_commissioning_set(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,<sp/><ref refid="structzcl__comm__startup__param__t" kindref="compound">zcl_comm_startup_param_t</ref><sp/>*p);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="group__hal_1ga8d7f5a691878e9ffb7da396899581062" kindref="member">XBEE_END_DECLS</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>compiling<sp/>in<sp/>Dynamic<sp/>C,<sp/>automatically<sp/>#use<sp/>the<sp/>appropriate<sp/>C<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__DC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#use<sp/>&quot;xbee_commissioning.c&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/>//<sp/>XBEE_COMMISSIONING_H<sp/>defined</highlight></codeline>
+    </programlisting>
+    <location file="include/xbee/commissioning.h"/>
+  </compounddef>
+</doxygen>

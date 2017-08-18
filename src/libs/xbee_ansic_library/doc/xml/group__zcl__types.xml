@@ -1,0 +1,1351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__zcl__types" kind="group">
+    <compoundname>zcl_types</compoundname>
+    <title>Datatypes</title>
+    <innerfile refid="zcl__types_8c">zcl_types.c</innerfile>
+    <innerfile refid="zcl__types_8h">zcl_types.h</innerfile>
+    <innerclass refid="unionzcl40__t" prot="public">zcl40_t</innerclass>
+    <innerclass refid="unionzcl48__t" prot="public">zcl48_t</innerclass>
+      <sectiondef kind="user-defined">
+      <header>ZCL Null Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga6f933afd1ace68cae2aec5373a960a72" prot="public" static="no">
+        <name>ZCL_TYPE_NO_DATA</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="33" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL General Data (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1gacde7d69b6b6930a192a03dd95548a402" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_8BIT</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="40" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga9eba3bb33af0080097578430a8b49fc3" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_16BIT</name>
+        <initializer>0x09</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="41" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gae5e7ea67aa04595d9d73da5f64f71a52" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_24BIT</name>
+        <initializer>0x0a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="42" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga63038284c953826853ba8747a82baa91" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_32BIT</name>
+        <initializer>0x0b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="43" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gab9b38a5f9e53db715ce6da47fee7982e" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_40BIT</name>
+        <initializer>0x0c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="44" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga11e0d3943fb5db53a13a8612a9ac99a8" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_48BIT</name>
+        <initializer>0x0d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="45" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga320d8cfb4b5674d25770ae6e7181b0fb" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_56BIT</name>
+        <initializer>0x0e</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="46" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga09599455943165aa8436142254c798da" prot="public" static="no">
+        <name>ZCL_TYPE_GENERAL_64BIT</name>
+        <initializer>0x0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="47" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Logical (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1gaf53d04b9e7617803f30ec7cea3539056" prot="public" static="no">
+        <name>ZCL_TYPE_LOGICAL_BOOLEAN</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="53" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Values for #ZCL_TYPE_LOGICAL_BOOLEAN</header>
+      <memberdef kind="define" id="group__zcl__types_1ga415c6e6b5f1ee8afa117a28e9dbbaf91" prot="public" static="no">
+        <name>ZCL_BOOL_FALSE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="59" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga10619c77a809e680384955e6173e3512" prot="public" static="no">
+        <name>ZCL_BOOL_TRUE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="60" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaa605ed8ffc1519c222f5cf380967dd54" prot="public" static="no">
+        <name>ZCL_BOOL_INVALID</name>
+        <initializer>0xff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="61" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Bitmap (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga7db6654381619b6523ad087ad614d988" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_8BIT</name>
+        <initializer>0x18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="67" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga7f886220f979f20cda20f09f964add37" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_16BIT</name>
+        <initializer>0x19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="68" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gab977574080a1b9109cbedeb50a8231ac" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_24BIT</name>
+        <initializer>0x1a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="69" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gac8c24fce4d0c613af9f391c9752f4bc8" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_32BIT</name>
+        <initializer>0x1b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="70" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga353d00de31faa429445b5d810db284d9" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_40BIT</name>
+        <initializer>0x1c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="71" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga0e677ca1f39270eb85ddc76661003b93" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_48BIT</name>
+        <initializer>0x1d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="72" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gace8326adb7b2c3547039391c137b9656" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_56BIT</name>
+        <initializer>0x1e</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="73" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gad4df5246a0d9037921bbae054f5e249c" prot="public" static="no">
+        <name>ZCL_TYPE_BITMAP_64BIT</name>
+        <initializer>0x1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="74" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Unsigned integer (analog) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga75582ab15d44904f07a44dc8a8e3b717" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_8BIT</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="80" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga9045340841bc9478061ce8f87b4840da" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_16BIT</name>
+        <initializer>0x21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="81" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaec9a6cd5a981c98207fa270670d7d777" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_24BIT</name>
+        <initializer>0x22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="82" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gab04603be22c673ef9c2fc3a2d2fcc837" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_32BIT</name>
+        <initializer>0x23</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="83" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gacd1861149c2b59749b5642737adf5195" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_40BIT</name>
+        <initializer>0x24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="84" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaa7f4db744263603cc5405b69ade288df" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_48BIT</name>
+        <initializer>0x25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="85" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaad5c0f4102ddb54ecd2c0f740faecd8a" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_56BIT</name>
+        <initializer>0x26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="86" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga712121c9bf4ad400b2c08ba200538ee8" prot="public" static="no">
+        <name>ZCL_TYPE_UNSIGNED_64BIT</name>
+        <initializer>0x27</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="87" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Signed integer (analog) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga8df1144075b3c768717e38f750ff4d2d" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_8BIT</name>
+        <initializer>0x28</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="93" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga8ee8ec849fb738d70b81ce4b4af8ea93" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_16BIT</name>
+        <initializer>0x29</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="94" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga5d2c6473dec5ef0620e49a064e1b5040" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_24BIT</name>
+        <initializer>0x2a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="95" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gadb5ed867f966c7d280a59abd421004a9" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_32BIT</name>
+        <initializer>0x2b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="96" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga194ccd242604887fbaa41cd427088643" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_40BIT</name>
+        <initializer>0x2c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="97" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gad6d48bb79a8dc729807f137924d26920" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_48BIT</name>
+        <initializer>0x2d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="98" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga56a4716c3e4b5e8fd3b9bc4d944c5533" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_56BIT</name>
+        <initializer>0x2e</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="99" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga05040382bcbb409fdc93d7130057e3c6" prot="public" static="no">
+        <name>ZCL_TYPE_SIGNED_64BIT</name>
+        <initializer>0x2f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="100" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Enumeration (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga941ea2cc51c3a17d4ae9e095ae3a864f" prot="public" static="no">
+        <name>ZCL_TYPE_ENUM_8BIT</name>
+        <initializer>0x30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="106" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga6688181319502f973473d2cdf17e6260" prot="public" static="no">
+        <name>ZCL_TYPE_ENUM_16BIT</name>
+        <initializer>0x31</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="107" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Floating point (analog) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga8b1e3e1ec66f72995346c295e8ba3fe7" prot="public" static="no">
+        <name>ZCL_TYPE_FLOAT_SEMI</name>
+        <initializer>0x38</initializer>
+        <briefdescription>
+<para>semi-precision (16-bit) floating point (unsupported) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="114" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga4b22fe5da2b5395e0cbd178054702602" prot="public" static="no">
+        <name>ZCL_TYPE_FLOAT_SINGLE</name>
+        <initializer>0x39</initializer>
+        <briefdescription>
+<para>single-precision (32-bit) IEEE 754 floating point </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="117" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga447b33931d4cb320761a0e5034f494b2" prot="public" static="no">
+        <name>ZCL_TYPE_FLOAT_DOUBLE</name>
+        <initializer>0x3a</initializer>
+        <briefdescription>
+<para>double-precision (64-bit) IEEE 754 floating point </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="120" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL String (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga7cd063b0a77ca0286b0dcc177e4251c5" prot="public" static="no">
+        <name>ZCL_TYPE_STRING_OCTET</name>
+        <initializer>0x41</initializer>
+        <briefdescription>
+<para>First octet is number of bytes in string or 0xff for invalid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="217" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga64286e0c69e0ed344a6eb8756ac81f95" prot="public" static="no">
+        <name>ZCL_TYPE_STRING_CHAR</name>
+        <initializer>0x42</initializer>
+        <briefdescription>
+<para>First octet is number of characters in string or 0xff for invalid. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that each character may be more than one byte depending on the &quot;language and character set field of the complex descriptor contained
+in the character data [following the first octet]&quot;. See ZCL for details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="223" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga567563a365e2dddaced101de02fd9128" prot="public" static="no">
+        <name>ZCL_TYPE_STRING_LONG_OCTET</name>
+        <initializer>0x43</initializer>
+        <briefdescription>
+<para>First two octets are number of bytes in string or 0xffff for invalid. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will come in so handy for a protcol with frames of 256 bytes max (he said sarcastically). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="228" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gabb23537eaae74cc55233355c6ce5979e" prot="public" static="no">
+        <name>ZCL_TYPE_STRING_LONG_CHAR</name>
+        <initializer>0x44</initializer>
+        <briefdescription>
+<para>First two octets are number of characters in string or 0xffff for invalid. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that each character may be more than one byte depending on the &quot;language and character set field of the complex descriptor contained
+in the character data [following the first octet]&quot;. See ZCL for details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="234" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Ordered Sequence (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga5f609d45e4eb91ae4187bf912e4f870b" prot="public" static="no">
+        <name>ZCL_TYPE_ARRAY</name>
+        <initializer>0x48</initializer>
+        <briefdescription>
+<para>ZCL Array (unsupported) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="244" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga2d94a79998fd3cdd13a2cd9ed25b88cb" prot="public" static="no">
+        <name>ZCL_TYPE_STRUCT</name>
+        <initializer>0x4C</initializer>
+        <briefdescription>
+<para>ZCL Struct (unsupported) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="246" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Collection (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga21ab004d25434d25e1e17865e895f1a7" prot="public" static="no">
+        <name>ZCL_TYPE_SET</name>
+        <initializer>0x50</initializer>
+        <briefdescription>
+<para>ZCL Set (unsupported) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="253" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gacd6bd1e469abc59bab04e247bc85997b" prot="public" static="no">
+        <name>ZCL_TYPE_BAG</name>
+        <initializer>0x51</initializer>
+        <briefdescription>
+<para>ZCL Bag (unsupported) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="255" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Time (analog) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1gaa6fdd0dcc77890280046eb1db9f79516" prot="public" static="no">
+        <name>ZCL_TYPE_TIME_TIMEOFDAY</name>
+        <initializer>0xE0</initializer>
+        <briefdescription>
+<para>see zcl_timeofday_t </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="262" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gad5552b0825d941f0ccd7b1d797dc091b" prot="public" static="no">
+        <name>ZCL_TYPE_TIME_DATE</name>
+        <initializer>0xE1</initializer>
+        <briefdescription>
+<para>see zcl_date_t </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="265" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga8f678e97557cb052c0df4be97e9f1e82" prot="public" static="no">
+        <name>ZCL_TYPE_TIME_UTCTIME</name>
+        <initializer>0xE2</initializer>
+        <briefdescription>
+<para>number of seconds (stored in uint32_t) since Midnight on 1/1/2000 UTC </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="268" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Identifier (discrete) Types</header>
+      <memberdef kind="define" id="group__zcl__types_1gabf44aa40c12655d86c012c551bb6834e" prot="public" static="no">
+        <name>ZCL_TYPE_ID_CLUSTER</name>
+        <initializer>0xE8</initializer>
+        <briefdescription>
+<para>16-bit cluster ID </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="294" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga1dc09447fe0d1f047c4554975a11b3fa" prot="public" static="no">
+        <name>ZCL_TYPE_ID_ATTRIB</name>
+        <initializer>0xE9</initializer>
+        <briefdescription>
+<para>16-bit attribute ID </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="297" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga59fe9efad9f60ec8176a13c0ab1019ac" prot="public" static="no">
+        <name>ZCL_TYPE_ID_BACNET_OID</name>
+        <initializer>0xEA</initializer>
+        <briefdescription>
+<para>32-bit BACnet OID </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="300" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Miscellaneous Types</header>
+      <memberdef kind="define" id="group__zcl__types_1ga13bc9499fe6127a5ce30c31f3ccae2df" prot="public" static="no">
+        <name>ZCL_TYPE_IEEE_ADDR</name>
+        <initializer>0xF0</initializer>
+        <briefdescription>
+<para>64-bit IEEE address </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="307" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaa430fee3f4e5e09767b9fc969f73cf2f" prot="public" static="no">
+        <name>ZCL_TYPE_SECURITY_KEY</name>
+        <initializer>0xF1</initializer>
+        <briefdescription>
+<para>128-bit security key </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="310" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>ZCL Unknown Type</header>
+      <memberdef kind="define" id="group__zcl__types_1ga856105c2b5037b8406a294b668dfe755" prot="public" static="no">
+        <name>ZCL_TYPE_UNKNOWN</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+<para>Unknown ZCL Type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="317" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Settings for zcl_type_info[]</header>
+      <description><para>These bitfields should only be used internally by the library, and should be exposed to user code via public APIs. </para></description>
+      <memberdef kind="define" id="group__zcl__types_1ga7609ed68cf4399cb2c09799ecedfdbe0" prot="public" static="no">
+        <name>ZCL_T_INVALID</name>
+        <initializer>0x0F</initializer>
+        <briefdescription>
+<para>Not a valid ZCL type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="362" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga3e9bf95af4f58a0c9c5c34639b0dda29" prot="public" static="no">
+        <name>ZCL_T_DISCRETE</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+<para>Discrete values (bitmap, enum, etc.) that can&apos;t be added/subtracted or (if reportable) have a reportable change. </para>        </briefdescription>
+        <detaileddescription>
+<para>Default is analog. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="365" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga7b609984d4662f83a2248d1f485fd4ad" prot="public" static="no">
+        <name>ZCL_T_ANALOG</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+<para>If an attribute isn&apos;t discrete, it&apos;s analog (signed, unsigned, float, etc.) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="368" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaacf8dcd439ce0388d90681aec545e4e3" prot="public" static="no">
+        <name>ZCL_T_SIGNED</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+<para>Type is signed (default is unsigned). Only analog types can be signed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="370" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaad99789b034d1ed0a2825e075bba62af" prot="public" static="no">
+        <name>ZCL_T_FLOAT</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+<para>Type is floating point (single, double or semi-precision). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="372" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gab0e5c23a0877c17fde12043c85728c29" prot="public" static="no">
+        <name>ZCL_T_REPORTABLE</name>
+        <initializer>(<ref refid="group__zcl__types_1ga7b609984d4662f83a2248d1f485fd4ad" kindref="member">ZCL_T_ANALOG</ref> | <ref refid="group__zcl__types_1ga3e9bf95af4f58a0c9c5c34639b0dda29" kindref="member">ZCL_T_DISCRETE</ref>)</initializer>
+        <briefdescription>
+<para>Type is reportable. </para>        </briefdescription>
+        <detaileddescription>
+<para>Both the type AND attribute must have reportable flags set if they are reportable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="375" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaa49518f03f9632a55b3e1c4d4c68b60c" prot="public" static="no">
+        <name>ZCL_T_SIZE_MASK</name>
+        <initializer>0x0F</initializer>
+        <briefdescription>
+<para>0x00 to 0x08 represent 0 to 8 bytes; 0x0C is 16 bytes; 0x0D is two-octet size prefix, 0x0E is one-octet size prefix; 0x0F is invalid; 0x09, 0x0A and 0x0B are still available to encode special size information. </para>        </briefdescription>
+        <detaileddescription>
+<para>Be sure to update zcl_sizeof_type when adding to or changing these macros. Low nibble of each zcl_type_info byte stores the type&apos;s size. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="383" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="383" bodyend="-1"/>
+        <referencedby refid="group__zcl__types_1ga6134ab27d38abd300d008345e21fe560" compoundref="zcl__types_8c" startline="274" endline="299">zcl_sizeof_type</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga5f381526f4ac9adac8cb07b7135e737d" prot="public" static="no">
+        <name>ZCL_T_SIZE_INVALID</name>
+        <initializer>(<ref refid="group__zcl__types_1ga7609ed68cf4399cb2c09799ecedfdbe0" kindref="member">ZCL_T_INVALID</ref> &amp; <ref refid="group__zcl__types_1gaa49518f03f9632a55b3e1c4d4c68b60c" kindref="member">ZCL_T_SIZE_MASK</ref>)</initializer>
+        <briefdescription>
+<para>Macro used when type is invalid or doesn&apos;t have a known size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="385" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga5121bb1f631a19b8a50980325ee67c26" prot="public" static="no">
+        <name>ZCL_T_SIZE_SHORT</name>
+        <initializer>0x0E</initializer>
+        <briefdescription>
+<para>First octet of attribute&apos;s value is its size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="387" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="387" bodyend="-1"/>
+        <referencedby refid="group__zcl__types_1ga6134ab27d38abd300d008345e21fe560" compoundref="zcl__types_8c" startline="274" endline="299">zcl_sizeof_type</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gaeee15697985458060bf5f85c00c15a41" prot="public" static="no">
+        <name>ZCL_T_SIZE_LONG</name>
+        <initializer>0x0D</initializer>
+        <briefdescription>
+<para>First two octets of attribute&apos;s value are its size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="389" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gad7a8d44d98b6872f187b1e0748ec7417" prot="public" static="no">
+        <name>ZCL_T_SIZE_128BIT</name>
+        <initializer>0x0C</initializer>
+        <briefdescription>
+<para>128-bit (16-byte) value </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="391" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga7691965c8c435fdafe30025c05817cf9" prot="public" static="no">
+        <name>ZCL_T_SIZE_VARIABLE</name>
+        <initializer>0x0B</initializer>
+        <briefdescription>
+<para>variable-length value (array, set, bag, struct) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="393" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__zcl__types_1gadd8ad64f3ae1ee581114f9ca39f3621f" prot="public" static="no">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>typedef uint32_t zcl_utctime_t</definition>
+        <argsstring></argsstring>
+        <name>zcl_utctime_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="271" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__zcl__types_1gafa65aea1347d7c84cd0019a7e013b8f5" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>zcl_timeofday_t</definition>
+        <argsstring></argsstring>
+        <name>zcl_timeofday_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>	hours</initializer>
+        <briefdescription>
+<para>Time of Day (for #ZCL_TYPE_TIME_TOD Data Type) </para>        </briefdescription>
+        <detaileddescription>
+<para>0-23 or 0xff for unused </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="275" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__zcl__types_1ga9ea8f9ebe25e922be76329748b8398b5" prot="public" static="no">
+        <type><ref refid="group___s_x_a_1ga4233297bd31be5c273d4fb0758cc54d7" kindref="member">PACKED_STRUCT</ref></type>
+        <definition>zcl_date_t</definition>
+        <argsstring></argsstring>
+        <name>zcl_date_t</name>
+        <initializer>{
+	<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>	year</initializer>
+        <briefdescription>
+<para>Date (for <ref refid="group__zcl__types_1gad5552b0825d941f0ccd7b1d797dc091b" kindref="member">ZCL_TYPE_TIME_DATE</ref> Data Type) </para>        </briefdescription>
+        <detaileddescription>
+<para>year - 1900 or 0xff for unused </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="283" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>const uint8_t zcl_type_info[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>zcl_type_info</name>
+        <briefdescription>
+<para>Table to store information on each ZCL datatype. </para>        </briefdescription>
+        <detaileddescription>
+<para>Lower 4 bits encode size (0 to 8 octets, 16 octets, one-byte size prefix, two-byte size prefix), upper 4 bits encode additional information.</para><para>Need to represent 0 to 8 octets, 16 octets, size in first octet, size in first two octets. 12 possible values.</para><para>Using this table, it may be possible to simplify the encode/decode functions greatly <ndash/> just use memcpy or swapcpy to copy the given number of bytes.</para><para>Special case for floating point values if the platform doesn&apos;t use IEEE floats, and to convert from 2-byte semi-precision float to 4-byte float. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_types.c" line="54" column="1" bodyfile="src/zigbee/zcl_types.c" bodystart="54" bodyend="-1"/>
+        <referencedby refid="group__zcl__types_1ga6134ab27d38abd300d008345e21fe560" compoundref="zcl__types_8c" startline="274" endline="299">zcl_sizeof_type</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga7acca8be0094a19be6e308ac05924c4f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t minutes</definition>
+        <argsstring></argsstring>
+        <name>minutes</name>
+        <briefdescription>
+<para>0-59 or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="277" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga46729a903be1a03cdb248fb48d84d4f5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t seconds</definition>
+        <argsstring></argsstring>
+        <name>seconds</name>
+        <briefdescription>
+<para>0-59 or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="278" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1gaa9acbdd2fcf00f83919be503371fc8a2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t hundredths</definition>
+        <argsstring></argsstring>
+        <name>hundredths</name>
+        <briefdescription>
+<para>0-99 or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="279" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga3e00faf7fbf9805e9ec4d2edd6339050" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t month</definition>
+        <argsstring></argsstring>
+        <name>month</name>
+        <briefdescription>
+<para>1-12 or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="285" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga72369a1087b2aeffe374bb054cb97c12" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t day</definition>
+        <argsstring></argsstring>
+        <name>day</name>
+        <briefdescription>
+<para>1-31 or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="286" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1gaf19fd1d4c2d4e9354c68c3b5546b7d41" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t dayofweek</definition>
+        <argsstring></argsstring>
+        <name>dayofweek</name>
+        <briefdescription>
+<para>1-7 (1 = Monday, 7 = Sunday) or 0xff for unused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="287" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1gad4679e287f6f18ba62228daa926eea7b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t u8[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>u8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="325" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga5d86508e715769ce35a4845ed5f8f252" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>PACKED_STRUCT</definition>
+        <argsstring></argsstring>
+        <name>PACKED_STRUCT</name>
+        <initializer>{
+
+			<ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref>	low32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="326" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1gac0be63c87188a7765bd25f38f3bf5b9e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t high8</definition>
+        <argsstring></argsstring>
+        <name>high8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="329" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga1c5d0403e0a7a57d3778e56e8798faa8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>mixed</definition>
+        <argsstring></argsstring>
+        <name>mixed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="334" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga0989b828fcba5b50454c134bb08c46ac" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t u8[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>u8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="339" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga41b61059ce2e09f103fbd64c9abe5bff" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t u16[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>u16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="340" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga5d86508e715769ce35a4845ed5f8f252" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>PACKED_STRUCT</definition>
+        <argsstring></argsstring>
+        <name>PACKED_STRUCT</name>
+        <initializer>{
+
+			<ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref>	low32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="341" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga8496547ebd48f63b4a6d8a8bd059c89e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t high16</definition>
+        <argsstring></argsstring>
+        <name>high16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="344" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga1c5d0403e0a7a57d3778e56e8798faa8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>mixed</definition>
+        <argsstring></argsstring>
+        <name>mixed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="349" column="1" bodyfile="include/zigbee/zcl_types.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>const uint8_t zcl_type_info[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>zcl_type_info</name>
+        <briefdescription>
+<para>Table to store information on each ZCL datatype. </para>        </briefdescription>
+        <detaileddescription>
+<para>Lower 4 bits encode size (0 to 8 octets, 16 octets, one-byte size prefix, two-byte size prefix), upper 4 bits encode additional information.</para><para>Need to represent 0 to 8 octets, 16 octets, size in first octet, size in first two octets. 12 possible values.</para><para>Using this table, it may be possible to simplify the encode/decode functions greatly <ndash/> just use memcpy or swapcpy to copy the given number of bytes.</para><para>Special case for floating point values if the platform doesn&apos;t use IEEE floats, and to convert from 2-byte semi-precision float to 4-byte float. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="408" column="1" bodyfile="src/zigbee/zcl_types.c" bodystart="54" bodyend="-1"/>
+        <referencedby refid="group__zcl__types_1ga6134ab27d38abd300d008345e21fe560" compoundref="zcl__types_8c" startline="274" endline="299">zcl_sizeof_type</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__zcl__types_1ga6134ab27d38abd300d008345e21fe560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_types_debug int</type>
+        <definition>int zcl_sizeof_type</definition>
+        <argsstring>(uint8_t type)</argsstring>
+        <name>zcl_sizeof_type</name>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Return the number of octets used by a given ZCL datatype. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type to look up. Typically one of the ZCL_TYPE_* macros, or the <computeroutput>type</computeroutput> element of an attribute record.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>ZCL_SIZE_INVALID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unknown or invalid type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ZCL_SIZE_SHORT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1-octet size prefix </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ZCL_SIZE_LONG</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2-octet size prefix </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ZCL_SIZE_VARIABLE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable-length type (array, struct, set, bag) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of octets used by type (0 to 8, 16)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="zcl__types_8h" kindref="compound">zigbee/zcl_types.h</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_types.c" line="274" column="1" bodyfile="src/zigbee/zcl_types.c" bodystart="274" bodyend="299"/>
+        <references refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" compoundref="zcl_8h" startline="416">type</references>
+        <references refid="group__zcl__types_1gaa49518f03f9632a55b3e1c4d4c68b60c" compoundref="zcl__types_8h" startline="383">ZCL_T_SIZE_MASK</references>
+        <references refid="group__zcl__types_1ga5121bb1f631a19b8a50980325ee67c26" compoundref="zcl__types_8h" startline="387">ZCL_T_SIZE_SHORT</references>
+        <references refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" compoundref="zcl__types_8c" startline="54">zcl_type_info</references>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__types_1ga798e87a8b8f240a33706b7bc37c9ede1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>zcl_types_debug const char *</type>
+        <definition>const char * zcl_type_name</definition>
+        <argsstring>(uint8_t type)</argsstring>
+        <name>zcl_type_name</name>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Return a descriptive string for a given ZCL attribute type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ZCL attribute type</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to a string description of the type, or &quot;INVALID_0xHH&quot; on unrecognized types (where HH is the hex representation of the type). Never returns NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_types.c" line="316" column="1" bodyfile="src/zigbee/zcl_types.c" bodystart="316" bodyend="372"/>
+        <referencedby refid="group__zcl__client_1ga4e831f4977e3c0eb5ad556a991b7da5f" compoundref="zcl__client_8c" startline="617" endline="654">zcl_print_array_value</referencedby>
+        <referencedby refid="group__zcl__client_1gadd1b745da67ffd49ec948ff56ec218fa" compoundref="zcl__client_8c" startline="678" endline="717">zcl_print_struct_value</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__zcl__types_1ga6017ac37035b8b2b8a7fd864f8654c35" prot="public" static="no">
+        <name>zcl_types_debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/zigbee/zcl_types.c" line="26" column="10" bodyfile="src/zigbee/zcl_types.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga615c98b6baffcb91fa19285f2557845a" prot="public" static="no">
+        <name>ZCL_UTCTIME_INVALID</name>
+        <initializer>0xFFFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="272" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga6e143abd16187cc59cdad352c1fde4bf" prot="public" static="no">
+        <name>ZCL_TYPE_IS_ANALOG</name>
+        <param><defname>t</defname></param>
+        <initializer>(<ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[t] &amp; <ref refid="group__zcl__types_1ga7b609984d4662f83a2248d1f485fd4ad" kindref="member">ZCL_T_ANALOG</ref>)</initializer>
+        <briefdescription>
+<para>ZCL data type <emphasis>t</emphasis> is an analog type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="397" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1gafac9417148b2a7a3fbd64d84baf98cf7" prot="public" static="no">
+        <name>ZCL_TYPE_IS_DISCRETE</name>
+        <param><defname>t</defname></param>
+        <initializer>(<ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[t] &amp; <ref refid="group__zcl__types_1ga3e9bf95af4f58a0c9c5c34639b0dda29" kindref="member">ZCL_T_DISCRETE</ref>)</initializer>
+        <briefdescription>
+<para>ZCL data type <emphasis>t</emphasis> is a discrete type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="399" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga9114be7b872a013b27e06e4aa437318f" prot="public" static="no">
+        <name>ZCL_TYPE_IS_SIGNED</name>
+        <param><defname>t</defname></param>
+        <initializer>(<ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[t] &amp; <ref refid="group__zcl__types_1gaacf8dcd439ce0388d90681aec545e4e3" kindref="member">ZCL_T_SIGNED</ref>)</initializer>
+        <briefdescription>
+<para>ZCL data type <emphasis>t</emphasis> is a signed type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="401" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga665e39b52fa49df456f3e218dbb3c3e0" prot="public" static="no">
+        <name>ZCL_TYPE_IS_REPORTABLE</name>
+        <param><defname>t</defname></param>
+        <initializer>(<ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[t] &amp; <ref refid="group__zcl__types_1gab0e5c23a0877c17fde12043c85728c29" kindref="member">ZCL_T_REPORTABLE</ref>)</initializer>
+        <briefdescription>
+<para>ZCL data type <emphasis>t</emphasis> is a reportable type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="403" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga639712ec7549d1bb6a5bcb05097386e2" prot="public" static="no">
+        <name>ZCL_TYPE_IS_INVALID</name>
+        <param><defname>t</defname></param>
+        <initializer>(<ref refid="group__zcl__types_1ga0f5737f60f1f37fb3b375e9fd5fe664d" kindref="member">zcl_type_info</ref>[t] == <ref refid="group__zcl__types_1ga7609ed68cf4399cb2c09799ecedfdbe0" kindref="member">ZCL_T_INVALID</ref>)</initializer>
+        <briefdescription>
+<para>ZCL data type <emphasis>t</emphasis> is an invalid (unsupported/unrecognized) type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="405" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga755a7e3f73663a35fc1f702956dfca85" prot="public" static="no">
+        <name>ZCL_SIZE_SHORT</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="409" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga74ee31f6a58ad03535546050d04a0de1" prot="public" static="no">
+        <name>ZCL_SIZE_LONG</name>
+        <initializer>-2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="410" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga8b41a3880f93b53bbae1e241aac4bdb2" prot="public" static="no">
+        <name>ZCL_SIZE_VARIABLE</name>
+        <initializer>-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="411" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__zcl__types_1ga18098b4db5dd09f98fdcb5db15cff375" prot="public" static="no">
+        <name>ZCL_SIZE_INVALID</name>
+        <initializer>-127</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl_types.h" line="412" column="9" bodyfile="include/zigbee/zcl_types.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

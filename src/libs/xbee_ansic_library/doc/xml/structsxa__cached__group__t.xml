@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsxa__cached__group__t" kind="struct" language="C++" prot="public">
+    <compoundname>sxa_cached_group_t</compoundname>
+    <includes refid="sxa_8h" local="yes">xbee/sxa.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsxa__cached__group__t_1a4fc3a0c58dfbd1e68224521185cb9384" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>Arbitrary numeric ID of this group (see <ref refid="group___s_x_a_1ggabed82baf7f470b522273a3e37c24c600a8d6b7f78660e6b7da06d0fa99dfb6df6" kindref="member">SXA_CACHED_NODE_ID</ref> etc.) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="162" column="1" bodyfile="include/xbee/sxa.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__cached__group__t_1a384f3d44ddc76275447a4027f7d7dc11" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t flags_offs</definition>
+        <argsstring></argsstring>
+        <name>flags_offs</name>
+        <briefdescription>
+<para>Offset (within <ref refid="structsxa__node__t" kindref="compound">sxa_node_t</ref>) of cache group status flags (<ref refid="group___s_x_a_1gga0411cd49bb5b71852cecd93bcbf0ca2da54498f64b3ad7c2be423d32b45deac04" kindref="member">_SXA_CACHED_OK</ref> etc.) This field is zero to indicate end of array of <ref refid="structsxa__cached__group__t" kindref="compound">sxa_cached_group_t</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="165" column="1" bodyfile="include/xbee/sxa.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__cached__group__t_1a74693ee122171373c13f53dd39a0997e" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structxbee__atcmd__reg__t" kindref="compound">xbee_atcmd_reg_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const xbee_atcmd_reg_t FAR* get_list</definition>
+        <argsstring></argsstring>
+        <name>get_list</name>
+        <briefdescription>
+<para>If not NULL, is a command list used to update all cached values in the group. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="167" column="1" bodyfile="include/xbee/sxa.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsxa__cached__group__t_1aa73aae7aa31e051678e55ca4025a2d3a" prot="public" static="no" mutable="no">
+        <type><ref refid="group___s_x_a_1gaaeb2977fc8c351b3edcf007c1effc374" kindref="member">sxa_cache_upd_fn</ref></type>
+        <definition>sxa_cache_upd_fn get_fn</definition>
+        <argsstring></argsstring>
+        <name>get_fn</name>
+        <briefdescription>
+<para>If not NULL, is a function to call (after get_list, if any) in order to perform any necessary post processing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/sxa.h" line="170" column="1" bodyfile="include/xbee/sxa.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Cached register group value. </para>    </briefdescription>
+    <detaileddescription>
+<para>This struct is used to manage related groups of registers. A group is used when registers are almost always used together or when special actions need to be taken on updates or queries.</para><para><simplesect kind="note"><para>There is a static (const) array of these set up for the standard groups (_sxa_default_cache_groups). In sxa_node_t.groups points to this array by default.</para></simplesect>
+The function _sxa_cache_group_by_id() returns one of the default cached groups by looking up its ID. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="26">
+        <label>xbee_io_t</label>
+        <link refid="structxbee__io__t"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>clc</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>wpan_envelope_t</label>
+        <link refid="structwpan__envelope__t"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>ieee_address</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>xbee_dev_t</label>
+        <link refid="structxbee__dev__t"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>rx</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>is_awake</edgelabel>
+          <edgelabel>reset</edgelabel>
+          <edgelabel>node_id_handler</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>serport</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>wpan_dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>xbee_node_id_t</label>
+        <link refid="structxbee__node__id__t"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>ieee_addr_be</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>wpan_address_t</label>
+        <link refid="structwpan__address__t"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>ieee</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>xbee_at_cmd_t</label>
+        <link refid="unionxbee__at__cmd__t"/>
+      </node>
+      <node id="19">
+        <label>xbee_cbuf_t</label>
+        <link refid="structxbee__cbuf__t"/>
+      </node>
+      <node id="25">
+        <label>wpan_cluster_table_entry_t</label>
+        <link refid="structwpan__cluster__table__entry__t"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>wpan_endpoint_table_entry_t</label>
+        <link refid="structwpan__endpoint__table__entry__t"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>ep_state</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>cluster_table</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>rx</label>
+        <link refid="structxbee__dev__t_1_1rx"/>
+      </node>
+      <node id="14">
+        <label>addr64</label>
+        <link refid="unionaddr64"/>
+      </node>
+      <node id="23">
+        <label>wpan_ep_state_t</label>
+        <link refid="structwpan__ep__state__t"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>conversations</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>xbee_command_list_context_t</label>
+        <link refid="structxbee__command__list__context__t"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>wpan_conversation_t</label>
+        <link refid="structwpan__conversation__t"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>wpan_dev_t</label>
+        <link refid="structwpan__dev__t"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>endpoint_send</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>endpoint_table</edgelabel>
+          <edgelabel>endpoint_get_next</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>tick</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>_xbee_reg_descr_t</label>
+        <link refid="struct__xbee__reg__descr__t"/>
+      </node>
+      <node id="12">
+        <label>sxa_node_t</label>
+        <link refid="structsxa__node__t"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>address</edgelabel>
+          <edgelabel>addr_ptr</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>groups</edgelabel>
+          <edgelabel>doing_group</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>next_local</edgelabel>
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>xbee</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>io</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>misc_reg</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>queued</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>dest_addr</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>sxa_cached_group_t</label>
+        <link refid="structsxa__cached__group__t"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>get_fn</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>get_list</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>xbee_cmd_response_t</label>
+        <link refid="structxbee__cmd__response__t"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>command</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>xbee_serial_t</label>
+        <link refid="structxbee__serial__t"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>rxbuf</edgelabel>
+          <edgelabel>txbuf</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>xbee_atcmd_reg_t</label>
+        <link refid="structxbee__atcmd__reg__t"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>callback</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>command</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xbee/sxa.h" line="160" column="1" bodyfile="include/xbee/sxa.h" bodystart="159" bodyend="171"/>
+    <listofallmembers>
+      <member refid="structsxa__cached__group__t_1a384f3d44ddc76275447a4027f7d7dc11" prot="public" virt="non-virtual"><scope>sxa_cached_group_t</scope><name>flags_offs</name></member>
+      <member refid="structsxa__cached__group__t_1aa73aae7aa31e051678e55ca4025a2d3a" prot="public" virt="non-virtual"><scope>sxa_cached_group_t</scope><name>get_fn</name></member>
+      <member refid="structsxa__cached__group__t_1a74693ee122171373c13f53dd39a0997e" prot="public" virt="non-virtual"><scope>sxa_cached_group_t</scope><name>get_list</name></member>
+      <member refid="structsxa__cached__group__t_1a4fc3a0c58dfbd1e68224521185cb9384" prot="public" virt="non-virtual"><scope>sxa_cached_group_t</scope><name>id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

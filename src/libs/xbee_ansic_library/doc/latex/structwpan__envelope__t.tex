@@ -1,0 +1,48 @@
+\hypertarget{structwpan__envelope__t}{}\section{wpan\+\_\+envelope\+\_\+t Struct Reference}
+\label{structwpan__envelope__t}\index{wpan\+\_\+envelope\+\_\+t@{wpan\+\_\+envelope\+\_\+t}}
+
+
+The \char`\"{}envelope\char`\"{} is used to gather all necessary information about a given frame on the network.  
+
+
+
+
+{\ttfamily \#include \char`\"{}wpan/aps.\+h\char`\"{}}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$ \hyperlink{group__wpan__aps_ga7f9a38312b9025348d42a4ed0042ce37}{dev}
+\begin{DoxyCompactList}\small\item\em interface received on/to send to \end{DoxyCompactList}\item 
+\hyperlink{unionaddr64}{addr64} \hyperlink{group__wpan__aps_ga2549f921e25a72dfa05a2154a792e2bf}{ieee\+\_\+address}
+\begin{DoxyCompactList}\small\item\em remote 64-\/bit address \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__wpan__aps_ga30948a7f8d096191895f50b80d81ca12}{network\+\_\+address}
+\begin{DoxyCompactList}\small\item\em remote 16-\/bit address \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__wpan__aps_ga5ca7f19e5697de2baf0e2147a41a5792}{profile\+\_\+id}
+\begin{DoxyCompactList}\small\item\em Profile ID. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__wpan__aps_ga262a92f94287e77cb56350951893bae2}{cluster\+\_\+id}
+\begin{DoxyCompactList}\small\item\em Cluster ID. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__wpan__aps_ga9781a5a281ee97f7f67d8ebe2c4f54db}{source\+\_\+endpoint}
+\begin{DoxyCompactList}\small\item\em endpoint on sender (source) \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__wpan__aps_ga0992896b3999455a300e8ba25c368ae8}{dest\+\_\+endpoint}
+\begin{DoxyCompactList}\small\item\em endpoint on recipient (dest) \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries options}
+\item 
+const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__wpan__aps_ga8737375e27cb391ff381fff10dc0c132}{payload}
+\begin{DoxyCompactList}\small\item\em contents of message \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__wpan__aps_ga1892eba2086d12ac2b09005aeb09ea3b}{length}
+\begin{DoxyCompactList}\small\item\em number of bytes in payload \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \char`\"{}envelope\char`\"{} is used to gather all necessary information about a given frame on the network. 
+
+Note that all members of the structure are in host byte order.
+
+The low byte of the {\itshape options} field is a copy of the cluster flags for the cluster that received the data. Use \hyperlink{group__wpan__aps_ga6a6e8a32dc7117f44bdca2802a1e54aa}{W\+P\+A\+N\+\_\+\+E\+N\+V\+E\+L\+O\+P\+E\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+F\+L\+A\+GS} to mask off the byte, and then compare to the various W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+\_\+\+F\+L\+A\+G\+\_\+$\ast$ macros.
+
+On a Digi\+Mesh network, the 16-\/bit network address is always set to W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED (0x\+F\+F\+FE). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/wpan/\hyperlink{aps_8h}{aps.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,1105 @@
+\hypertarget{group__hal__hcs08}{}\section{Hal\+\_\+hcs08}
+\label{group__hal__hcs08}\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{xbee__platform__hcs08_8c}{xbee\+\_\+platform\+\_\+hcs08.\+c}
+\begin{DoxyCompactList}\small\item\em Platform-\/specific functions for use by the X\+Bee Driver on Freescale H\+C\+S08 platform. \end{DoxyCompactList}\item 
+file \hyperlink{xbee__serial__hcs08_8c}{xbee\+\_\+serial\+\_\+hcs08.\+c}
+\begin{DoxyCompactList}\small\item\em Serial Interface for Programmable X\+Bee Module (Freescale H\+C\+S08 Platform). \end{DoxyCompactList}\item 
+file \hyperlink{platform__hcs08_8h}{platform\+\_\+hcs08.\+h}
+\begin{DoxyCompactList}\small\item\em Header for Freescale H\+C\+S08 platform (X\+Bee Programmable using Code\+Warrior). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga7c3a985c27600619d2bc4db511aff598}\label{group__hal__hcs08_ga7c3a985c27600619d2bc4db511aff598}} 
+\#define {\bfseries R\+T\+S\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+B\+Y\+T\+ES}~8
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga4014e6eec5520cf4a6ef76ead07fb7ee}\label{group__hal__hcs08_ga4014e6eec5520cf4a6ef76ead07fb7ee}} 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+OW}(x)~(x)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga1ffa0bde2db555fdfc6d8c1e076751a6}\label{group__hal__hcs08_ga1ffa0bde2db555fdfc6d8c1e076751a6}} 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+R\+TS}(x)~(x $<$$<$ 2)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gad4a243237dcc9407b96ff3ee542af5e0}\label{group__hal__hcs08_gad4a243237dcc9407b96ff3ee542af5e0}} 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+O\+W\+\_\+\+H\+O\+ST}~\+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+OW(1)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga1e9912dd7658dc97935822d8558379f0}\label{group__hal__hcs08_ga1e9912dd7658dc97935822d8558379f0}} 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+O\+W\+\_\+\+E\+M\+B\+ER}~\+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+OW(2)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga0e794f88b0b3a3936752efbfc6ca18db}\label{group__hal__hcs08_ga0e794f88b0b3a3936752efbfc6ca18db}} 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+R\+T\+S\+\_\+\+H\+O\+ST}~\+\_\+\+F\+L\+A\+G\+\_\+\+R\+TS(1)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga9ba3c976fe95439424c64615bbb17f3f}\label{group__hal__hcs08_ga9ba3c976fe95439424c64615bbb17f3f}} 
+\#define {\bfseries \+\_\+\+F\+L\+A\+G\+\_\+\+R\+T\+S\+\_\+\+E\+M\+B\+ER}~\+\_\+\+F\+L\+A\+G\+\_\+\+R\+TS(2)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga08e617305a992b712a63f4da735ceb00}\label{group__hal__hcs08_ga08e617305a992b712a63f4da735ceb00}} 
+\#define {\bfseries L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+O\+FF}~(0$\ast$S\+C\+I1\+C1\+\_\+\+L\+O\+O\+P\+S\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga7e1861e44c67148b15f190a3db2dae68}\label{group__hal__hcs08_ga7e1861e44c67148b15f190a3db2dae68}} 
+\#define {\bfseries L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+ON}~(1$\ast$S\+C\+I1\+C1\+\_\+\+L\+O\+O\+P\+S\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gae9834631c2f2af773cfd0922b34e2585}\label{group__hal__hcs08_gae9834631c2f2af773cfd0922b34e2585}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+O\+F\+F\+\_\+\+D\+U\+R\+I\+N\+G\+\_\+\+W\+A\+IT}~(1$\ast$S\+C\+I1\+C1\+\_\+\+S\+C\+I\+S\+W\+A\+I\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga1744d6efe5c7cd1a39598fef0e0af8d4}\label{group__hal__hcs08_ga1744d6efe5c7cd1a39598fef0e0af8d4}} 
+\#define {\bfseries U\+A\+R\+T\+\_\+\+O\+N\+\_\+\+D\+U\+R\+I\+N\+G\+\_\+\+W\+A\+IT}~(0$\ast$S\+C\+I1\+C1\+\_\+\+S\+C\+I\+S\+W\+A\+I\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga25d27a14c5440938136dae2800615545}\label{group__hal__hcs08_ga25d27a14c5440938136dae2800615545}} 
+\#define {\bfseries L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+T\+W\+O\+\_\+\+W\+I\+RE}~(0$\ast$S\+C\+I1\+C1\+\_\+\+R\+S\+R\+C\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga0f35b829f9d0c8f8c97f602db5d56647}\label{group__hal__hcs08_ga0f35b829f9d0c8f8c97f602db5d56647}} 
+\#define {\bfseries L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+O\+N\+E\+\_\+\+W\+I\+RE}~(1$\ast$S\+C\+I1\+C1\+\_\+\+R\+S\+R\+C\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gad77aa548b2536bccf1b324e771914290}\label{group__hal__hcs08_gad77aa548b2536bccf1b324e771914290}} 
+\#define {\bfseries C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+8\+B\+IT}~(0$\ast$S\+C\+I1\+C1\+\_\+\+M\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga962590525d78b87e2ea37f9e070c1ec6}\label{group__hal__hcs08_ga962590525d78b87e2ea37f9e070c1ec6}} 
+\#define {\bfseries C\+H\+A\+R\+A\+C\+T\+E\+R\+\_\+9\+B\+IT}~(1$\ast$S\+C\+I1\+C1\+\_\+\+M\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga32fbf7b38d85f44b730ccc6da30b5212}\label{group__hal__hcs08_ga32fbf7b38d85f44b730ccc6da30b5212}} 
+\#define {\bfseries W\+A\+K\+E\+U\+P\+\_\+\+I\+D\+L\+E\+\_\+\+L\+I\+NE}~(0$\ast$S\+C\+I1\+C1\+\_\+\+W\+A\+K\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga18f8279aba1ee4c344e1b1b467536a6b}\label{group__hal__hcs08_ga18f8279aba1ee4c344e1b1b467536a6b}} 
+\#define {\bfseries W\+A\+K\+E\+U\+P\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+M\+A\+RK}~(1$\ast$S\+C\+I1\+C1\+\_\+\+W\+A\+K\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga28374a7264f20336ce6c2c54a5b04909}\label{group__hal__hcs08_ga28374a7264f20336ce6c2c54a5b04909}} 
+\#define {\bfseries I\+D\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+A\+F\+T\+E\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+B\+IT}~(0$\ast$S\+C\+I1\+C1\+\_\+\+I\+L\+T\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gab8165c5333007979a7ad0ce33e7a8acd}\label{group__hal__hcs08_gab8165c5333007979a7ad0ce33e7a8acd}} 
+\#define {\bfseries I\+D\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+A\+F\+T\+E\+R\+\_\+\+S\+T\+O\+P\+\_\+\+B\+IT}~(1$\ast$S\+C\+I1\+C1\+\_\+\+I\+L\+T\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga8142bbc0d82c0406de8f5f128cbb44b1}\label{group__hal__hcs08_ga8142bbc0d82c0406de8f5f128cbb44b1}} 
+\#define {\bfseries P\+A\+R\+I\+T\+Y\+\_\+\+O\+FF}~(0$\ast$S\+C\+I1\+C1\+\_\+\+P\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gab3f60f495dad3c9f992ff8e0a59f2b49}\label{group__hal__hcs08_gab3f60f495dad3c9f992ff8e0a59f2b49}} 
+\#define {\bfseries P\+A\+R\+I\+T\+Y\+\_\+\+ON}~(1$\ast$S\+C\+I1\+C1\+\_\+\+P\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga64de75e13d62a653f2a2b5c41e0374c2}\label{group__hal__hcs08_ga64de75e13d62a653f2a2b5c41e0374c2}} 
+\#define {\bfseries P\+A\+R\+I\+T\+Y\+\_\+\+E\+V\+EN}~(0$\ast$S\+C\+I1\+C1\+\_\+\+P\+T\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga25e17ce6ba7124885e170c47bcd833e5}\label{group__hal__hcs08_ga25e17ce6ba7124885e170c47bcd833e5}} 
+\#define {\bfseries P\+A\+R\+I\+T\+Y\+\_\+\+O\+DD}~(1$\ast$S\+C\+I1\+C1\+\_\+\+P\+T\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gabacdf9b833047b2b834cf92e6137bcce}\label{group__hal__hcs08_gabacdf9b833047b2b834cf92e6137bcce}} 
+\#define {\bfseries R\+X\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+O\+FF}~(0$\ast$S\+C\+I1\+C2\+\_\+\+R\+W\+U\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gafa441acd3cb8b71faf6211db701bd4bd}\label{group__hal__hcs08_gafa441acd3cb8b71faf6211db701bd4bd}} 
+\#define {\bfseries R\+X\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+ON}~(1$\ast$S\+C\+I1\+C2\+\_\+\+R\+W\+U\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaec484d0fae46f97debc24d8743c0b9f7}\label{group__hal__hcs08_gaec484d0fae46f97debc24d8743c0b9f7}} 
+\#define {\bfseries R\+X\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+R\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga503de2a6a495fceb78236de11743af62}\label{group__hal__hcs08_ga503de2a6a495fceb78236de11743af62}} 
+\#define {\bfseries R\+X\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+R\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gafe106e50390ad91020a5f8e91123cbd1}\label{group__hal__hcs08_gafe106e50390ad91020a5f8e91123cbd1}} 
+\#define {\bfseries T\+X\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+T\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaf1984a3b79957819c4156add3317994b}\label{group__hal__hcs08_gaf1984a3b79957819c4156add3317994b}} 
+\#define {\bfseries T\+X\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+T\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga14bf84d23bef2a5772347e0daa49edcb}\label{group__hal__hcs08_ga14bf84d23bef2a5772347e0daa49edcb}} 
+\#define {\bfseries I\+D\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+I\+L\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaab16dc5a206e53be03c6ab93bca3ce59}\label{group__hal__hcs08_gaab16dc5a206e53be03c6ab93bca3ce59}} 
+\#define {\bfseries I\+D\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+I\+L\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga6893ac5b107885a8eb763b7135cb0a40}\label{group__hal__hcs08_ga6893ac5b107885a8eb763b7135cb0a40}} 
+\#define {\bfseries R\+X\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+R\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga00ed29bebf9147d906f32ee8b026ef24}\label{group__hal__hcs08_ga00ed29bebf9147d906f32ee8b026ef24}} 
+\#define {\bfseries R\+X\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+R\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga571d71662dd43839e7393fa49d15b88d}\label{group__hal__hcs08_ga571d71662dd43839e7393fa49d15b88d}} 
+\#define {\bfseries T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+T\+C\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaee61d1036e789eb51384860865302dd8}\label{group__hal__hcs08_gaee61d1036e789eb51384860865302dd8}} 
+\#define {\bfseries T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+T\+C\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga3168abbaed1501827b501cde77617636}\label{group__hal__hcs08_ga3168abbaed1501827b501cde77617636}} 
+\#define {\bfseries T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C2\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga35bcc3d9078a9d99a8760e2c2e3953db}\label{group__hal__hcs08_ga35bcc3d9078a9d99a8760e2c2e3953db}} 
+\#define {\bfseries T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C2\+\_\+\+T\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga5442523637fd7e9c39aaa1c30b5ac306}\label{group__hal__hcs08_ga5442523637fd7e9c39aaa1c30b5ac306}} 
+\#define {\bfseries R\+X\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C3\+\_\+\+P\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gad0bec7d431949da04eb4c6bb58a18e5a}\label{group__hal__hcs08_gad0bec7d431949da04eb4c6bb58a18e5a}} 
+\#define {\bfseries R\+X\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C3\+\_\+\+P\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaea33d14c8ee7cd8d79faec9f0c981a61}\label{group__hal__hcs08_gaea33d14c8ee7cd8d79faec9f0c981a61}} 
+\#define {\bfseries R\+X\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C3\+\_\+\+F\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga821b12b9b4fcdb4687fef78a7fb876bb}\label{group__hal__hcs08_ga821b12b9b4fcdb4687fef78a7fb876bb}} 
+\#define {\bfseries R\+X\+\_\+\+F\+R\+A\+M\+I\+N\+G\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C3\+\_\+\+F\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga0541125834b75b553db07263155e2b90}\label{group__hal__hcs08_ga0541125834b75b553db07263155e2b90}} 
+\#define {\bfseries R\+X\+\_\+\+N\+O\+I\+S\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C3\+\_\+\+N\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga47a73e96478b0cc59f0f7f148347e8a4}\label{group__hal__hcs08_ga47a73e96478b0cc59f0f7f148347e8a4}} 
+\#define {\bfseries R\+X\+\_\+\+N\+O\+I\+S\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C3\+\_\+\+N\+E\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga48b69442c30bac047ea2225225649588}\label{group__hal__hcs08_ga48b69442c30bac047ea2225225649588}} 
+\#define {\bfseries R\+X\+\_\+\+O\+V\+E\+R\+R\+U\+N\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+D\+I\+S\+A\+B\+LE}~(0$\ast$S\+C\+I1\+C3\+\_\+\+O\+R\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaa1b1d5ac782ce2e3e33a797386b4dab5}\label{group__hal__hcs08_gaa1b1d5ac782ce2e3e33a797386b4dab5}} 
+\#define {\bfseries R\+X\+\_\+\+O\+V\+E\+R\+R\+U\+N\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+N\+A\+B\+LE}~(1$\ast$S\+C\+I1\+C3\+\_\+\+O\+R\+I\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga5e47942b893d3f497abbbb9bfb482b68}\label{group__hal__hcs08_ga5e47942b893d3f497abbbb9bfb482b68}} 
+\#define {\bfseries T\+X\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+R\+M\+AL}~(0$\ast$S\+C\+I1\+C3\+\_\+\+T\+X\+I\+N\+V\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaf02f81f6666e2f43e2dd36a778e10a5b}\label{group__hal__hcs08_gaf02f81f6666e2f43e2dd36a778e10a5b}} 
+\#define {\bfseries T\+X\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+V\+E\+R\+T\+ED}~(1$\ast$S\+C\+I1\+C3\+\_\+\+T\+X\+I\+N\+V\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga25413b97ae398d27727d76c969feb05a}\label{group__hal__hcs08_ga25413b97ae398d27727d76c969feb05a}} 
+\#define {\bfseries O\+N\+E\+\_\+\+W\+I\+R\+E\+\_\+\+R\+X\+\_\+\+M\+O\+DE}~(0$\ast$S\+C\+I1\+C3\+\_\+\+T\+X\+D\+I\+R\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gad2761bc976329eb0899a71626b8ab828}\label{group__hal__hcs08_gad2761bc976329eb0899a71626b8ab828}} 
+\#define {\bfseries O\+N\+E\+\_\+\+W\+I\+R\+E\+\_\+\+T\+X\+\_\+\+M\+O\+DE}~(1$\ast$S\+C\+I1\+C3\+\_\+\+T\+X\+D\+I\+R\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga39df5c5d34b30aaee2892d35fa035cf3}\label{group__hal__hcs08_ga39df5c5d34b30aaee2892d35fa035cf3}} 
+\#define {\bfseries R\+X\+\_\+\+B\+R\+E\+A\+K\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+10\+\_\+\+B\+I\+TS}~(0$\ast$S\+C\+I1\+S2\+\_\+\+L\+B\+K\+D\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaea6a929697eb2b8b2afd702a8fba5467}\label{group__hal__hcs08_gaea6a929697eb2b8b2afd702a8fba5467}} 
+\#define {\bfseries R\+X\+\_\+\+B\+R\+E\+A\+K\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+11\+\_\+\+B\+I\+TS}~(1$\ast$S\+C\+I1\+S2\+\_\+\+L\+B\+K\+D\+E\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaca187a7c41efdd9de1e53a53342f20c8}\label{group__hal__hcs08_gaca187a7c41efdd9de1e53a53342f20c8}} 
+\#define {\bfseries T\+X\+\_\+\+B\+R\+E\+A\+K\+\_\+10\+\_\+\+B\+I\+TS}~(0$\ast$S\+C\+I1\+S2\+\_\+\+B\+R\+K13\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaaa6fae15a2b05ec500d6fa657bcde50a}\label{group__hal__hcs08_gaaa6fae15a2b05ec500d6fa657bcde50a}} 
+\#define {\bfseries T\+X\+\_\+\+B\+R\+E\+A\+K\+\_\+13\+\_\+\+B\+I\+TS}~(1$\ast$S\+C\+I1\+S2\+\_\+\+B\+R\+K13\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaa4a66785d136b84e2cfc141ca32c9aa2}\label{group__hal__hcs08_gaa4a66785d136b84e2cfc141ca32c9aa2}} 
+\#define {\bfseries R\+X\+\_\+\+I\+D\+L\+E\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+O\+FF}~(0$\ast$S\+C\+I1\+S2\+\_\+\+R\+W\+U\+I\+D\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaabfee037722f85499aeb6d652c2dcab5}\label{group__hal__hcs08_gaabfee037722f85499aeb6d652c2dcab5}} 
+\#define {\bfseries R\+X\+\_\+\+I\+D\+L\+E\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+ON}~(1$\ast$S\+C\+I1\+S2\+\_\+\+R\+W\+U\+I\+D\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gab7b998b86a088f5061781736b60cb887}\label{group__hal__hcs08_gab7b998b86a088f5061781736b60cb887}} 
+\#define {\bfseries R\+X\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+V\+E\+R\+T\+ED}~(1$\ast$S\+C\+I1\+S2\+\_\+\+R\+X\+I\+N\+V\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga0a72a4916f2154d228a89ef2cf511758}\label{group__hal__hcs08_ga0a72a4916f2154d228a89ef2cf511758}} 
+\#define {\bfseries R\+X\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+R\+M\+AL}~(0$\ast$S\+C\+I1\+S2\+\_\+\+R\+X\+I\+N\+V\+\_\+\+M\+A\+SK)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga755b7e850db6200a6f43b741c678ae53}\label{group__hal__hcs08_ga755b7e850db6200a6f43b741c678ae53}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+CK}(ptr)
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+TS}(s)
+\item 
+\#define {\bfseries S\+C\+Ix\+C1\+\_\+\+D\+E\+F\+A\+U\+LT}
+\item 
+\#define {\bfseries S\+C\+Ix\+C3\+\_\+\+D\+E\+F\+A\+U\+LT}
+\item 
+\#define {\bfseries S\+C\+Ix\+S2\+\_\+\+D\+E\+F\+A\+U\+LT}
+\item 
+\#define {\bfseries S\+C\+Ix\+C2\+\_\+\+D\+E\+F\+A\+U\+LT}
+\item 
+\#define {\bfseries \+\_\+\+I\+S\+R\+\_\+\+R\+TS}(port,  pin)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga760ceea16e88c6f4195e368ebbdff7bc}\label{group__hal__hcs08_ga760ceea16e88c6f4195e368ebbdff7bc}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+C\+W6}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga828bb1dfda1afd67ca795075903d227d}\label{group__hal__hcs08_ga828bb1dfda1afd67ca795075903d227d}} 
+\#define {\bfseries \+\_\+\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+}~\char`\"{}xbee\char`\"{}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga8782a401fbf55261460863fc2f8df1ce}\label{group__hal__hcs08_ga8782a401fbf55261460863fc2f8df1ce}} 
+\#define {\bfseries L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}~1234
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga23eb5e058a210efdde3d64e69679fafa}\label{group__hal__hcs08_ga23eb5e058a210efdde3d64e69679fafa}} 
+\#define {\bfseries B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}~4321
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga2026615c7441e0b093ff7389f46f7654}\label{group__hal__hcs08_ga2026615c7441e0b093ff7389f46f7654}} 
+\#define {\bfseries P\+D\+P\+\_\+\+E\+N\+D\+I\+AN}~3412
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga1771b7fb65ee640524d0052f229768c3}\label{group__hal__hcs08_ga1771b7fb65ee640524d0052f229768c3}} 
+\#define {\bfseries B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}~B\+I\+G\+\_\+\+E\+N\+D\+I\+AN
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga3ee5b5bde5321e97420753cf13ce9c1b}\label{group__hal__hcs08_ga3ee5b5bde5321e97420753cf13ce9c1b}} 
+\#define {\bfseries \+\_\+f\+\_\+memcpy}~memcpy
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga210604a4d70c1421599afca049c8dc55}\label{group__hal__hcs08_ga210604a4d70c1421599afca049c8dc55}} 
+\#define {\bfseries \+\_\+f\+\_\+memset}~memset
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga838b261fec725cb0f5d5b6769d3521e7}\label{group__hal__hcs08_ga838b261fec725cb0f5d5b6769d3521e7}} 
+\#define {\bfseries I\+N\+T16\+\_\+C}(x)~(x)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga1cb39a2cfaf899fd38730c7637807708}\label{group__hal__hcs08_ga1cb39a2cfaf899fd38730c7637807708}} 
+\#define {\bfseries U\+I\+N\+T16\+\_\+C}(x)~(x \#\# U)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gad78650fb7726f4e99205406569ef403d}\label{group__hal__hcs08_gad78650fb7726f4e99205406569ef403d}} 
+\#define {\bfseries I\+N\+T32\+\_\+C}(x)~(x \#\# L)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga2451a7ede7ebd810357f1503e9898ea6}\label{group__hal__hcs08_ga2451a7ede7ebd810357f1503e9898ea6}} 
+\#define {\bfseries U\+I\+N\+T32\+\_\+C}(x)~(x \#\# UL)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga087e50fe0283aacc71d7138d13e91939}\label{group__hal__hcs08_ga087e50fe0283aacc71d7138d13e91939}} 
+\#define {\bfseries P\+R\+Id16}~\char`\"{}d\char`\"{}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga86bc00ee87e8e40787e0681fc34c576a}\label{group__hal__hcs08_ga86bc00ee87e8e40787e0681fc34c576a}} 
+\#define {\bfseries P\+R\+Iu16}~\char`\"{}u\char`\"{}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga70f5e38b517f714518c970a4da37bef1}\label{group__hal__hcs08_ga70f5e38b517f714518c970a4da37bef1}} 
+\#define {\bfseries P\+R\+Ix16}~\char`\"{}x\char`\"{}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga570ca9af5087023f75fc8a1a602d26ab}\label{group__hal__hcs08_ga570ca9af5087023f75fc8a1a602d26ab}} 
+\#define {\bfseries P\+R\+I\+X16}~\char`\"{}X\char`\"{}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaef060b3456fdcc093a7210a762d5f2ed}\label{group__hal__hcs08_gaef060b3456fdcc093a7210a762d5f2ed}} 
+\#define {\bfseries F\+AR}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga8c212fbcc94488b4d889075a4a352278}\label{group__hal__hcs08_ga8c212fbcc94488b4d889075a4a352278}} 
+\#define {\bfseries S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+S\+C\+I1}~1
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga2ac2211493ad6e391d90976257a14836}\label{group__hal__hcs08_ga2ac2211493ad6e391d90976257a14836}} 
+\#define {\bfseries S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+S\+C\+I2}~2
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga503caf44f78cc52dc196c413cd6c78ab}\label{group__hal__hcs08_ga503caf44f78cc52dc196c413cd6c78ab}} 
+\#define {\bfseries Z\+C\+L\+\_\+\+T\+I\+M\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+D\+E\+L\+TA}~0
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gae06d582222a6c1b1aa2996a510e5a60c}\label{group__hal__hcs08_gae06d582222a6c1b1aa2996a510e5a60c}} 
+\#define {\bfseries H\+A\+V\+E\+\_\+\+S\+W\+A\+P\+\_\+\+F\+U\+N\+CS}~1
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gae8fb830d9a707a0f6d60a2c480ed7dfc}\label{group__hal__hcs08_gae8fb830d9a707a0f6d60a2c480ed7dfc}} 
+\#define {\bfseries xbee\+\_\+seconds\+\_\+timer}()~(S\+E\+C\+\_\+\+T\+I\+M\+ER)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gae68dcfee6e7c24b7a401c769c3fc1dd0}\label{group__hal__hcs08_gae68dcfee6e7c24b7a401c769c3fc1dd0}} 
+\#define {\bfseries xbee\+\_\+millisecond\+\_\+timer}()~(M\+S\+\_\+\+T\+I\+M\+ER)
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga5cbeea4d9344138b657f78ad38813584}\label{group__hal__hcs08_ga5cbeea4d9344138b657f78ad38813584}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+M\+S\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}~4
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaef44329758059c91c76d334e8fc09700}\label{group__hal__hcs08_gaef44329758059c91c76d334e8fc09700}} 
+typedef signed char {\bfseries int8\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gaba7bc1797add20fe3efdf37ced1182c5}\label{group__hal__hcs08_gaba7bc1797add20fe3efdf37ced1182c5}} 
+typedef unsigned char {\bfseries uint8\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gab5525e8f9f02c79fbadd0f03ff724e23}\label{group__hal__hcs08_gab5525e8f9f02c79fbadd0f03ff724e23}} 
+typedef int {\bfseries int16\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga1f1825b69244eb3ad2c7165ddc99c956}\label{group__hal__hcs08_ga1f1825b69244eb3ad2c7165ddc99c956}} 
+typedef unsigned int {\bfseries uint16\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga0d2e949ab6a1bb62f1b295cc79bc1f60}\label{group__hal__hcs08_ga0d2e949ab6a1bb62f1b295cc79bc1f60}} 
+typedef long {\bfseries int32\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga06896e8c53f721507066c079052171f8}\label{group__hal__hcs08_ga06896e8c53f721507066c079052171f8}} 
+typedef unsigned long {\bfseries uint32\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga2d31063fef649c85396fb28130ef9795}\label{group__hal__hcs08_ga2d31063fef649c85396fb28130ef9795}} 
+typedef unsigned char {\bfseries uint\+\_\+fast8\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gafa981e0352f65c207364c9cb82246b53}\label{group__hal__hcs08_gafa981e0352f65c207364c9cb82246b53}} 
+typedef signed char {\bfseries int\+\_\+fast8\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga57c3b7201116536b822f0f8520aa99c7}\label{group__hal__hcs08_ga57c3b7201116536b822f0f8520aa99c7}} 
+typedef \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries bool\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}() \hyperlink{group__hal__hcs08_ga68237f552f0e9a1d548516af35cacbc9}{xbee\+\_\+seconds\+\_\+timer} (void)
+\begin{DoxyCompactList}\small\item\em Platform-\/specific function to return the number of elapsed seconds. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}() \hyperlink{group__hal__hcs08_ga22b4e3df788254ca5f8530e9aee58515}{xbee\+\_\+millisecond\+\_\+timer} (void)
+\begin{DoxyCompactList}\small\item\em Platform-\/specific function to return the number of elapsed milliseconds. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__hal__hcs08_ga490209526172903494641bdac55db46e}{swap16} (\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value})
+\begin{DoxyCompactList}\small\item\em Swap the byte order of a 16-\/bit value. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__hal__hcs08_ga5bdbc60a02db00841f567d1ade52f877}{swap32} (\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value})
+\begin{DoxyCompactList}\small\item\em Swap the byte order of a 32-\/bit value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga482f4962318807aab3c24b9f0bf9af82}\label{group__hal__hcs08_ga482f4962318807aab3c24b9f0bf9af82}} 
+void \hyperlink{group__hal__hcs08_ga482f4962318807aab3c24b9f0bf9af82}{xbee\+\_\+reset\+\_\+radio} (struct \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} asserted)
+\begin{DoxyCompactList}\small\item\em Function to pass to \hyperlink{group__xbee__device_ga550d7c865e75d3fc1df0e64cb880cf3d}{xbee\+\_\+dev\+\_\+init()} to control the E\+M250\textquotesingle{}s /\+R\+E\+S\+ET pin on P\+T\+C\+D4. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} \hyperlink{group__hal__hcs08_ga9bf21a5b024e4919bbe8b605c8f45351}{xbee\+\_\+ser\+\_\+invalid} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Helper function used by other xbee\+\_\+serial functions to validate the {\itshape serial} parameter. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__hal__hcs08_ga898057d1b7645785e7f3d6256828d039}{xbee\+\_\+ser\+\_\+portname} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns a human-\/readable string describing the serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Transmits {\itshape length} bytes from {\itshape buffer} to the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, int bufsize)
+\begin{DoxyCompactList}\small\item\em Reads up to {\itshape bufsize} bytes from X\+Bee serial port {\itshape serial} and into {\itshape buffer}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga86fea2345efb8bf9424228f0979b1849}{xbee\+\_\+ser\+\_\+putchar} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} ch)
+\begin{DoxyCompactList}\small\item\em Transmits a single character, {\itshape ch}, to the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Reads a single character from the X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of bytes of unused space in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of queued bytes in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Flushes (i.\+e., deletes and does not transmit) characters in the serial transmit buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of bytes of unused space in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Returns the number of queued bytes in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Deletes all characters in the serial receive buffer for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gab3c12543a07e0669b672c5cab54b0926}{xbee\+\_\+ser\+\_\+baudrate} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} baudrate)
+\begin{DoxyCompactList}\small\item\em Change the baud rate of X\+Bee serial port {\itshape serial} to {\itshape baudrate} bits/second. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} baudrate)
+\begin{DoxyCompactList}\small\item\em Opens the serial port connected to X\+Bee serial port {\itshape serial} at {\itshape baudrate} bits/second. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Close the serial port attached to X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} enabled)
+\begin{DoxyCompactList}\small\item\em Disable the serial transmit pin and pull it low to send a break to the X\+Bee serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga33229d0d63ff1442f23b0739794d3afb}{xbee\+\_\+ser\+\_\+flowcontrol} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable hardware flow control (C\+T\+S/\+R\+TS) on the serial port for X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}{xbee\+\_\+ser\+\_\+set\+\_\+rts} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} asserted)
+\begin{DoxyCompactList}\small\item\em Disable hardware flow control and manually set the R\+TS (ready to send) pin on the X\+Bee device\textquotesingle{}s serial port. \end{DoxyCompactList}\item 
+int \hyperlink{group__hal__hcs08_ga894f6fadc890b5ba5ce32338f0acd217}{xbee\+\_\+ser\+\_\+get\+\_\+cts} (\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Read the status of the /\+C\+TS (clear to send) pin on the serial port connected to X\+Bee serial port {\itshape serial}. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__hcs08_gac4c834cc0ad3ee43af562f658833a6d5}{xbee\+\_\+cbuf\+\_\+putch} (E\+M\+B\+E\+R\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T.\+rxbuf, S\+C\+I2D)
+\begin{DoxyCompactList}\small\item\em This is the I\+SR for receiving data on the S\+C\+I2 serial port, which is connected to the Ember radio on the Programmable X\+Bee. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga24980a5b377ce3ec80b1a5b59b93c894}\label{group__hal__hcs08_ga24980a5b377ce3ec80b1a5b59b93c894}} 
+{\bfseries \+\_\+\+I\+S\+R\+\_\+\+R\+TS} (E\+M\+B\+ER, P\+T\+C\+D\+\_\+\+P\+T\+C\+D1)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga7b94b1cffbda721cef09c47910312334}\label{group__hal__hcs08_ga7b94b1cffbda721cef09c47910312334}} 
+\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} {\bfseries H\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+RT} = \{ 0, S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+S\+C\+I1 \}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gabde5add8d0a8b02079f3bcfd077a6040}\label{group__hal__hcs08_gabde5add8d0a8b02079f3bcfd077a6040}} 
+\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} {\bfseries E\+M\+B\+E\+R\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+RT} = \{ 0, S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T\+\_\+\+S\+C\+I2 \}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga5629227e4392e5086f50519e78e4c973}\label{group__hal__hcs08_ga5629227e4392e5086f50519e78e4c973}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries \+\_\+flags} = 0
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga2fa54f9024782843172506fadbee2ac8}\label{group__hal__hcs08_ga2fa54f9024782843172506fadbee2ac8}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries port}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_ga7b94b1cffbda721cef09c47910312334}\label{group__hal__hcs08_ga7b94b1cffbda721cef09c47910312334}} 
+\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} {\bfseries H\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+RT}
+\item 
+\mbox{\Hypertarget{group__hal__hcs08_gabde5add8d0a8b02079f3bcfd077a6040}\label{group__hal__hcs08_gabde5add8d0a8b02079f3bcfd077a6040}} 
+\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} {\bfseries E\+M\+B\+E\+R\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+RT}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__hal__hcs08_gabe88e9fb750b4a68d47144afec1c7378}\label{group__hal__hcs08_gabe88e9fb750b4a68d47144afec1c7378}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!\+\_\+\+I\+S\+R\+\_\+\+R\+TS@{\+\_\+\+I\+S\+R\+\_\+\+R\+TS}}
+\index{\+\_\+\+I\+S\+R\+\_\+\+R\+TS@{\+\_\+\+I\+S\+R\+\_\+\+R\+TS}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{\+\_\+\+I\+S\+R\+\_\+\+R\+TS}{\_ISR\_RTS}}
+{\footnotesize\ttfamily \#define \+\_\+\+I\+S\+R\+\_\+\+R\+TS(\begin{DoxyParamCaption}\item[{}]{port,  }\item[{}]{pin }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} ((\_flags & (\_FLAG\_FLOW\_ ## port | \_FLAG\_RTS\_ ## port)) ==            \(\backslash\)
+                  (\_FLAG\_FLOW\_ ## port | \_FLAG\_RTS\_ ## port)               \(\backslash\)
+      && \hyperlink{group__util__cbuf_ga9a2eeedf642bdf31dba98aacdc5a7d75}{xbee\_cbuf\_free}( port ## \_SERIAL\_PORT.rxbuf) < RTS\_ASSERT\_BYTES) \(\backslash\)
+   \{ \_flags &= ~\_FLAG\_RTS\_ ## port; pin = 1; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__hal__hcs08_ga955444f1940e1c003043a26082c7ce37}\label{group__hal__hcs08_ga955444f1940e1c003043a26082c7ce37}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!S\+C\+Ix\+C1\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+C\+Ix\+C1\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{S\+C\+Ix\+C1\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+C\+Ix\+C1\+\_\+\+D\+E\+F\+A\+U\+LT}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{S\+C\+Ix\+C1\+\_\+\+D\+E\+F\+A\+U\+LT}{SCIxC1\_DEFAULT}}
+{\footnotesize\ttfamily \#define S\+C\+Ix\+C1\+\_\+\+D\+E\+F\+A\+U\+LT}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+LOOPBACK\_OFF | LOOPBACK\_TWO\_WIRE | UART\_OFF\_DURING\_WAIT \(\backslash\)
+            | CHARACTER\_8BIT | WAKEUP\_IDLE\_LINE | IDLE\_COUNT\_AFTER\_START\_BIT \(\backslash\)
+            | PARITY\_OFF | PARITY\_EVEN
+\end{DoxyCode}
+\mbox{\Hypertarget{group__hal__hcs08_gad91bb0f654e9398d1913fb23c872fd9a}\label{group__hal__hcs08_gad91bb0f654e9398d1913fb23c872fd9a}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!S\+C\+Ix\+C2\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+C\+Ix\+C2\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{S\+C\+Ix\+C2\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+C\+Ix\+C2\+\_\+\+D\+E\+F\+A\+U\+LT}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{S\+C\+Ix\+C2\+\_\+\+D\+E\+F\+A\+U\+LT}{SCIxC2\_DEFAULT}}
+{\footnotesize\ttfamily \#define S\+C\+Ix\+C2\+\_\+\+D\+E\+F\+A\+U\+LT}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+RX\_WAKEUP\_CONTROL\_OFF | RX\_ENABLE | TX\_ENABLE \(\backslash\)
+            | RX\_INTERRUPT\_ENABLE | IDLE\_INTERRUPT\_DISABLE \(\backslash\)
+            | TX\_COMPLETE\_INTERRUPT\_DISABLE \(\backslash\)
+            | TX\_BUFFER\_READY\_INTERRUPT\_DISABLE
+\end{DoxyCode}
+\mbox{\Hypertarget{group__hal__hcs08_ga4e57fc710ca7907c0d9ce9248b50ec67}\label{group__hal__hcs08_ga4e57fc710ca7907c0d9ce9248b50ec67}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!S\+C\+Ix\+C3\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+C\+Ix\+C3\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{S\+C\+Ix\+C3\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+C\+Ix\+C3\+\_\+\+D\+E\+F\+A\+U\+LT}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{S\+C\+Ix\+C3\+\_\+\+D\+E\+F\+A\+U\+LT}{SCIxC3\_DEFAULT}}
+{\footnotesize\ttfamily \#define S\+C\+Ix\+C3\+\_\+\+D\+E\+F\+A\+U\+LT}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+TX\_DATA\_NORMAL | RX\_PARITY\_ERROR\_INTERRUPT\_DISABLE \(\backslash\)
+            | RX\_FRAMING\_ERROR\_INTERRUPT\_DISABLE \(\backslash\)
+            | RX\_NOISE\_ERROR\_INTERRUPT\_DISABLE \(\backslash\)
+            | RX\_OVERRUN\_INTERRUPT\_DISABLE | ONE\_WIRE\_RX\_MODE
+\end{DoxyCode}
+\mbox{\Hypertarget{group__hal__hcs08_gaf03ceb7e519e6c12ed04a8f600ea217a}\label{group__hal__hcs08_gaf03ceb7e519e6c12ed04a8f600ea217a}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!S\+C\+Ix\+S2\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+C\+Ix\+S2\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{S\+C\+Ix\+S2\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+C\+Ix\+S2\+\_\+\+D\+E\+F\+A\+U\+LT}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{S\+C\+Ix\+S2\+\_\+\+D\+E\+F\+A\+U\+LT}{SCIxS2\_DEFAULT}}
+{\footnotesize\ttfamily \#define S\+C\+Ix\+S2\+\_\+\+D\+E\+F\+A\+U\+LT}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+RX\_BREAK\_DETECT\_10\_BITS | TX\_BREAK\_10\_BITS \(\backslash\)
+            | RX\_IDLE\_DETECT\_OFF | RX\_DATA\_NORMAL
+\end{DoxyCode}
+\mbox{\Hypertarget{group__hal__hcs08_ga282b828d9c34a5dc7d2e0c02f5d262db}\label{group__hal__hcs08_ga282b828d9c34a5dc7d2e0c02f5d262db}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+TS@{X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+TS}}
+\index{X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+TS@{X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+TS}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+TS}{XBEE\_SER\_CHECK\_RTS}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+S\+E\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+TS(\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(((\_flags >> (s->port - 1)) & (\_FLAG\_FLOW(1) | \_FLAG\_RTS(1))) \(\backslash\)
+                                                         == \_FLAG\_FLOW(1))
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__hal__hcs08_ga490209526172903494641bdac55db46e}\label{group__hal__hcs08_ga490209526172903494641bdac55db46e}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!swap16@{swap16}}
+\index{swap16@{swap16}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{swap16()}{swap16()}}
+{\footnotesize\ttfamily \hyperlink{group__hal_ga336bff4f4a6012aacc4468132bbd3d7f}{X\+B\+E\+E\+\_\+\+B\+E\+G\+I\+N\+\_\+\+D\+E\+C\+LS} \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} swap16 (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+
+
+Swap the byte order of a 16-\/bit value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value} & value to swap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new 16-\/bit value with opposite endianness of {\itshape value} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__hal__hcs08_ga5bdbc60a02db00841f567d1ade52f877}\label{group__hal__hcs08_ga5bdbc60a02db00841f567d1ade52f877}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!swap32@{swap32}}
+\index{swap32@{swap32}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{swap32()}{swap32()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} swap32 (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+
+
+Swap the byte order of a 32-\/bit value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value} & value to swap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new 32-\/bit value with opposite endianness of {\itshape value} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__hal__hcs08_gac4c834cc0ad3ee43af562f658833a6d5}\label{group__hal__hcs08_gac4c834cc0ad3ee43af562f658833a6d5}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+cbuf\+\_\+putch@{xbee\+\_\+cbuf\+\_\+putch}}
+\index{xbee\+\_\+cbuf\+\_\+putch@{xbee\+\_\+cbuf\+\_\+putch}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cbuf\+\_\+putch()}{xbee\_cbuf\_putch()}}
+{\footnotesize\ttfamily xbee\+\_\+cbuf\+\_\+putch (\begin{DoxyParamCaption}\item[{E\+M\+B\+E\+R\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+P\+O\+R\+T.}]{rxbuf,  }\item[{S\+C\+I2D}]{ }\end{DoxyParamCaption})}
+
+
+
+This is the I\+SR for receiving data on the S\+C\+I2 serial port, which is connected to the Ember radio on the Programmable X\+Bee. 
+
+Make sure the .prm file for the project contains the following line\+: 
+\begin{DoxyCode}
+VECTOR ADDRESS 0x0000F1D2  vSci2Rx
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__hal__hcs08_ga22b4e3df788254ca5f8530e9aee58515}\label{group__hal__hcs08_ga22b4e3df788254ca5f8530e9aee58515}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+millisecond\+\_\+timer@{xbee\+\_\+millisecond\+\_\+timer}}
+\index{xbee\+\_\+millisecond\+\_\+timer@{xbee\+\_\+millisecond\+\_\+timer}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+millisecond\+\_\+timer()}{xbee\_millisecond\_timer()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}() xbee\+\_\+millisecond\+\_\+timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Platform-\/specific function to return the number of elapsed milliseconds. 
+
+OK for this counter to rollover. Used for timing and should have a resolution of at least 60ms.
+
+
+\begin{DoxyItemize}
+\item Rabbit has 1ms resolution.
+\item H\+C\+S08 has 4ms resolution.
+\item D\+OS has 18 ticks/second (55.\+55ms resolution)
+\end{DoxyItemize}
+
+(Function name wrapped in parentheses so platforms can use a macro function of the same name.)
+
+\begin{DoxyReturn}{Returns}
+Number of elapsed milliseconds.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+X\+B\+E\+E\+\_\+\+M\+S\+\_\+\+T\+I\+M\+E\+R\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga68237f552f0e9a1d548516af35cacbc9}\label{group__hal__hcs08_ga68237f552f0e9a1d548516af35cacbc9}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+seconds\+\_\+timer@{xbee\+\_\+seconds\+\_\+timer}}
+\index{xbee\+\_\+seconds\+\_\+timer@{xbee\+\_\+seconds\+\_\+timer}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+seconds\+\_\+timer()}{xbee\_seconds\_timer()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}() xbee\+\_\+seconds\+\_\+timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Platform-\/specific function to return the number of elapsed seconds. 
+
+On some platforms, this is the equivalent of an \char`\"{}uptime\char`\"{}.
+
+On other platforms, it may reflect the value of the R\+TC, which might not be synchronized with a time server and might include leap seconds.
+
+Regardless, it should consistently report elapsed time and not jump on clock synchronization.
+
+In addition to determining timeouts, the \hyperlink{group__zcl__time}{Z\+CL Time Cluster} makes use of it to report current time.
+
+(Function name wrapped in parentheses so platforms can use a macro function of the same name.)
+
+\begin{DoxyReturn}{Returns}
+Number of elapsed seconds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__hal__hcs08_gab3c12543a07e0669b672c5cab54b0926}\label{group__hal__hcs08_gab3c12543a07e0669b672c5cab54b0926}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+baudrate@{xbee\+\_\+ser\+\_\+baudrate}}
+\index{xbee\+\_\+ser\+\_\+baudrate@{xbee\+\_\+ser\+\_\+baudrate}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+baudrate()}{xbee\_ser\_baudrate()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+baudrate (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Change the baud rate of X\+Bee serial port {\itshape serial} to {\itshape baudrate} bits/second. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em baudrate} & Bits per second of serial data transfer speed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Opened serial port within 5\% of requested baudrate. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & Can\textquotesingle{}t open serial port within 5\% of requested baudrate.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open()}, \hyperlink{group__xbee__serial_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close()}, \hyperlink{group__xbee__serial_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_gae19aa61eec588d1b935d267b0a982319}\label{group__hal__hcs08_gae19aa61eec588d1b935d267b0a982319}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+break@{xbee\+\_\+ser\+\_\+break}}
+\index{xbee\+\_\+ser\+\_\+break@{xbee\+\_\+ser\+\_\+break}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+break()}{xbee\_ser\_break()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+break (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Disable the serial transmit pin and pull it low to send a break to the X\+Bee serial port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em enabled} & Set to 1 to start the break or 0 to end the break (and resume transmitting).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open()}, \hyperlink{group__xbee__serial_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga48b9d743a446074ea6abacd0de24044d}\label{group__hal__hcs08_ga48b9d743a446074ea6abacd0de24044d}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+close@{xbee\+\_\+ser\+\_\+close}}
+\index{xbee\+\_\+ser\+\_\+close@{xbee\+\_\+ser\+\_\+close}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+close()}{xbee\_ser\_close()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+close (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Close the serial port attached to X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & closed serial port \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gaa615a221dd69c17ee2989c281f2bf04a}{xbee\+\_\+ser\+\_\+open()}, \hyperlink{group__xbee__serial_gab3c12543a07e0669b672c5cab54b0926}{xbee\+\_\+ser\+\_\+baudrate()}, \hyperlink{group__xbee__serial_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga33229d0d63ff1442f23b0739794d3afb}\label{group__hal__hcs08_ga33229d0d63ff1442f23b0739794d3afb}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+flowcontrol@{xbee\+\_\+ser\+\_\+flowcontrol}}
+\index{xbee\+\_\+ser\+\_\+flowcontrol@{xbee\+\_\+ser\+\_\+flowcontrol}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+flowcontrol()}{xbee\_ser\_flowcontrol()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+flowcontrol (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable or disable hardware flow control (C\+T\+S/\+R\+TS) on the serial port for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em enabled} & Set to 0 to disable flow control or non-\/zero to enable flow control.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}{xbee\+\_\+ser\+\_\+set\+\_\+rts()}, \hyperlink{group__xbee__serial_ga894f6fadc890b5ba5ce32338f0acd217}{xbee\+\_\+ser\+\_\+get\+\_\+cts()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga894f6fadc890b5ba5ce32338f0acd217}\label{group__hal__hcs08_ga894f6fadc890b5ba5ce32338f0acd217}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+get\+\_\+cts@{xbee\+\_\+ser\+\_\+get\+\_\+cts}}
+\index{xbee\+\_\+ser\+\_\+get\+\_\+cts@{xbee\+\_\+ser\+\_\+get\+\_\+cts}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+get\+\_\+cts()}{xbee\_ser\_get\_cts()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+get\+\_\+cts (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Read the status of the /\+C\+TS (clear to send) pin on the serial port connected to X\+Bee serial port {\itshape serial}. 
+
+Note that this function doesn\textquotesingle{}t return the value of the pin -- it returns whether it\textquotesingle{}s asserted (i.\+e., clear to send to the X\+Bee serial port) or not.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & it\textquotesingle{}s clear to send \\
+\hline
+{\em 0} & it\textquotesingle{}s not clear to send \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga33229d0d63ff1442f23b0739794d3afb}{xbee\+\_\+ser\+\_\+flowcontrol()}, \hyperlink{group__xbee__serial_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}{xbee\+\_\+ser\+\_\+set\+\_\+rts()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_gaeeb38154313a44f86146cdcfe08e7d08}\label{group__hal__hcs08_gaeeb38154313a44f86146cdcfe08e7d08}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+getchar@{xbee\+\_\+ser\+\_\+getchar}}
+\index{xbee\+\_\+ser\+\_\+getchar@{xbee\+\_\+ser\+\_\+getchar}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+getchar()}{xbee\_ser\_getchar()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+getchar (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Reads a single character from the X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0-\/255} & character read from X\+Bee serial port \\
+\hline
+{\em -\/\+E\+N\+O\+D\+A\+TA} & There aren\textquotesingle{}t any characters in the read buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read()}, \hyperlink{group__xbee__serial_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga9bf21a5b024e4919bbe8b605c8f45351}\label{group__hal__hcs08_ga9bf21a5b024e4919bbe8b605c8f45351}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+invalid@{xbee\+\_\+ser\+\_\+invalid}}
+\index{xbee\+\_\+ser\+\_\+invalid@{xbee\+\_\+ser\+\_\+invalid}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+invalid()}{xbee\_ser\_invalid()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} xbee\+\_\+ser\+\_\+invalid (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Helper function used by other xbee\+\_\+serial functions to validate the {\itshape serial} parameter. 
+
+Confirms that it is non-\/{\ttfamily N\+U\+LL} and is set to a valid port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 1} & {\itshape serial} is not a valid X\+Bee serial port \\
+\hline
+{\em 0} & {\itshape serial} is a valid X\+Bee serial port \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__hal__hcs08_gaa615a221dd69c17ee2989c281f2bf04a}\label{group__hal__hcs08_gaa615a221dd69c17ee2989c281f2bf04a}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+open@{xbee\+\_\+ser\+\_\+open}}
+\index{xbee\+\_\+ser\+\_\+open@{xbee\+\_\+ser\+\_\+open}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+open()}{xbee\_ser\_open()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Opens the serial port connected to X\+Bee serial port {\itshape serial} at {\itshape baudrate} bits/second. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em baudrate} & Bits per second of serial data transfer speed.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Opened serial port within 5\% of requested baudrate. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & Can\textquotesingle{}t open serial port within 5\% of requested baudrate.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_gab3c12543a07e0669b672c5cab54b0926}{xbee\+\_\+ser\+\_\+baudrate()}, \hyperlink{group__xbee__serial_ga48b9d743a446074ea6abacd0de24044d}{xbee\+\_\+ser\+\_\+close()}, \hyperlink{group__xbee__serial_gae19aa61eec588d1b935d267b0a982319}{xbee\+\_\+ser\+\_\+break()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga898057d1b7645785e7f3d6256828d039}\label{group__hal__hcs08_ga898057d1b7645785e7f3d6256828d039}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+portname@{xbee\+\_\+ser\+\_\+portname}}
+\index{xbee\+\_\+ser\+\_\+portname@{xbee\+\_\+ser\+\_\+portname}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+portname()}{xbee\_ser\_portname()}}
+{\footnotesize\ttfamily const char$\ast$ xbee\+\_\+ser\+\_\+portname (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns a human-\/readable string describing the serial port. 
+
+For example, on a Windows machine this will be \char`\"{}\+C\+O\+M1\char`\"{} or \char`\"{}\+C\+O\+M999\char`\"{}. On a Rabbit, it will be a single letter, \char`\"{}\+A\char`\"{} through \char`\"{}\+F\char`\"{}. On Freescale H\+C\+S08, it will be something like \char`\"{}\+S\+C\+I1\char`\"{} or \char`\"{}\+S\+C\+I2\char`\"{}. On P\+O\+S\+IX, the name of the device (e.\+g., \char`\"{}/dev/tty\+S0\char`\"{})
+
+Returns \char`\"{}(invalid)\char`\"{} if {\itshape serial} is invalid or not configured.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & port\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null-\/terminated string describing the serial port 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__hal__hcs08_ga86fea2345efb8bf9424228f0979b1849}\label{group__hal__hcs08_ga86fea2345efb8bf9424228f0979b1849}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+putchar@{xbee\+\_\+ser\+\_\+putchar}}
+\index{xbee\+\_\+ser\+\_\+putchar@{xbee\+\_\+ser\+\_\+putchar}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+putchar()}{xbee\_ser\_putchar()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+putchar (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}}]{ch }\end{DoxyParamCaption})}
+
+
+
+Transmits a single character, {\itshape ch}, to the X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em ch} & character to send\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Successfully sent (queued) character. \\
+\hline
+{\em -\/\+E\+N\+O\+S\+PC} & The write buffer is full and the character wasn\textquotesingle{}t sent. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read()}, \hyperlink{group__xbee__serial_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+
+
+References E\+N\+O\+S\+PC, and xbee\+\_\+ser\+\_\+write().
+
+\mbox{\Hypertarget{group__hal__hcs08_ga8263312373c03a79a718142e051b3342}\label{group__hal__hcs08_ga8263312373c03a79a718142e051b3342}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+read@{xbee\+\_\+ser\+\_\+read}}
+\index{xbee\+\_\+ser\+\_\+read@{xbee\+\_\+ser\+\_\+read}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+read()}{xbee\_ser\_read()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+read (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{int}]{bufsize }\end{DoxyParamCaption})}
+
+
+
+Reads up to {\itshape bufsize} bytes from X\+Bee serial port {\itshape serial} and into {\itshape buffer}. 
+
+If there is no data available when the function is called, it will return immediately.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt out}  & {\em buffer} & buffer to hold bytes read from X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em bufsize} & maximum number of bytes to read\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & The number of bytes read from X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & I/O error attempting to write to serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga2ca4e60c9d642084afa52dff9e1f6be4}{xbee\+\_\+ser\+\_\+write()}, \hyperlink{group__xbee__serial_ga86fea2345efb8bf9424228f0979b1849}{xbee\+\_\+ser\+\_\+putchar()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}\label{group__hal__hcs08_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+rx\+\_\+flush@{xbee\+\_\+ser\+\_\+rx\+\_\+flush}}
+\index{xbee\+\_\+ser\+\_\+rx\+\_\+flush@{xbee\+\_\+ser\+\_\+rx\+\_\+flush}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}{xbee\_ser\_rx\_flush()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+rx\+\_\+flush (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Deletes all characters in the serial receive buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga16fb431a1e66861439518e562431821f}\label{group__hal__hcs08_ga16fb431a1e66861439518e562431821f}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+rx\+\_\+free@{xbee\+\_\+ser\+\_\+rx\+\_\+free}}
+\index{xbee\+\_\+ser\+\_\+rx\+\_\+free@{xbee\+\_\+ser\+\_\+rx\+\_\+free}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+rx\+\_\+free()}{xbee\_ser\_rx\_free()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+rx\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of bytes of unused space in the serial receive buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em I\+N\+T\+\_\+\+M\+AX} & The buffer size is unlimited (or unknown). \\
+\hline
+{\em $>$=0} & The number of bytes it would take to fill the X\+Bee serial port\textquotesingle{}s serial receive buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga43b8322771cc16b4130fa5330ad2242b}\label{group__hal__hcs08_ga43b8322771cc16b4130fa5330ad2242b}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+rx\+\_\+used@{xbee\+\_\+ser\+\_\+rx\+\_\+used}}
+\index{xbee\+\_\+ser\+\_\+rx\+\_\+used@{xbee\+\_\+ser\+\_\+rx\+\_\+used}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+rx\+\_\+used()}{xbee\_ser\_rx\_used()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+rx\+\_\+used (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of queued bytes in the serial receive buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & The number of bytes queued in the X\+Bee serial port\textquotesingle{}s serial transmit buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Unlike \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, this function M\+U\+ST return the number of bytes available. Some layers of the library wait until enough bytes are ready before continuing.
+\end{DoxyNote}
+We may expand on or replace this A\+PI. On some platforms (like Win32) we have to do some of our own buffering in order to peek at data in the serial receive buffer. Most of the driver only requires a check to see if some number of bytes are available or not. Consider changing the A\+PI to something like\+:
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} xbee\_ser\_rx\_avail( \hyperlink{structxbee__serial__t}{xbee\_serial\_t} *serial, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} count)
+\end{DoxyCode}
+ returns T\+R\+UE if {\ttfamily count} bytes are available, F\+A\+L\+SE otherwise. \mbox{\Hypertarget{group__hal__hcs08_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}\label{group__hal__hcs08_gad1b1f9f42e58d8299ddcca1c9cb3c5e8}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+set\+\_\+rts@{xbee\+\_\+ser\+\_\+set\+\_\+rts}}
+\index{xbee\+\_\+ser\+\_\+set\+\_\+rts@{xbee\+\_\+ser\+\_\+set\+\_\+rts}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+set\+\_\+rts()}{xbee\_ser\_set\_rts()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+set\+\_\+rts (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{asserted }\end{DoxyParamCaption})}
+
+
+
+Disable hardware flow control and manually set the R\+TS (ready to send) pin on the X\+Bee device\textquotesingle{}s serial port. 
+
+Typically used to enter the X\+Bee device\textquotesingle{}s boot loader and initiate a firmware update.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em asserted} & Set to 1 to assert R\+TS (ok for X\+Bee to send to us) or 0 to deassert R\+TS (tell X\+Bee not to send to us).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga33229d0d63ff1442f23b0739794d3afb}{xbee\+\_\+ser\+\_\+flowcontrol()}, \hyperlink{group__xbee__serial_ga894f6fadc890b5ba5ce32338f0acd217}{xbee\+\_\+ser\+\_\+get\+\_\+cts()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga05308d37301d27715f1e1308b7189220}\label{group__hal__hcs08_ga05308d37301d27715f1e1308b7189220}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+tx\+\_\+flush@{xbee\+\_\+ser\+\_\+tx\+\_\+flush}}
+\index{xbee\+\_\+ser\+\_\+tx\+\_\+flush@{xbee\+\_\+ser\+\_\+tx\+\_\+flush}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+tx\+\_\+flush()}{xbee\_ser\_tx\_flush()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+tx\+\_\+flush (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Flushes (i.\+e., deletes and does not transmit) characters in the serial transmit buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga3ad8f378b572d6fec982f1086bd3b94f}\label{group__hal__hcs08_ga3ad8f378b572d6fec982f1086bd3b94f}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+tx\+\_\+free@{xbee\+\_\+ser\+\_\+tx\+\_\+free}}
+\index{xbee\+\_\+ser\+\_\+tx\+\_\+free@{xbee\+\_\+ser\+\_\+tx\+\_\+free}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+tx\+\_\+free()}{xbee\_ser\_tx\_free()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+tx\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of bytes of unused space in the serial transmit buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em I\+N\+T\+\_\+\+M\+AX} & The buffer size is unlimited (or unknown). \\
+\hline
+{\em $>$=0} & The number of bytes it would take to fill the X\+Bee serial port\textquotesingle{}s serial transmit buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}, \hyperlink{group__xbee__serial_gaabf70934d186354cde4ac14ed27d1bd2}{xbee\+\_\+ser\+\_\+tx\+\_\+used()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_gaabf70934d186354cde4ac14ed27d1bd2}\label{group__hal__hcs08_gaabf70934d186354cde4ac14ed27d1bd2}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+tx\+\_\+used@{xbee\+\_\+ser\+\_\+tx\+\_\+used}}
+\index{xbee\+\_\+ser\+\_\+tx\+\_\+used@{xbee\+\_\+ser\+\_\+tx\+\_\+used}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+tx\+\_\+used()}{xbee\_ser\_tx\_used()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+tx\+\_\+used (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Returns the number of queued bytes in the serial transmit buffer for X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & The buffer size is unlimited (or space used is unknown). \\
+\hline
+{\em $>$0} & The number of bytes queued in the X\+Bee serial port\textquotesingle{}s serial transmit buffer. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga16fb431a1e66861439518e562431821f}{xbee\+\_\+ser\+\_\+rx\+\_\+free()}, \hyperlink{group__xbee__serial_ga43b8322771cc16b4130fa5330ad2242b}{xbee\+\_\+ser\+\_\+rx\+\_\+used()}, \hyperlink{group__xbee__serial_ga98a6d5ceb5e1445e8ef82ccaa65a8c15}{xbee\+\_\+ser\+\_\+rx\+\_\+flush()}, \hyperlink{group__xbee__serial_ga3ad8f378b572d6fec982f1086bd3b94f}{xbee\+\_\+ser\+\_\+tx\+\_\+free()}, \hyperlink{group__xbee__serial_ga05308d37301d27715f1e1308b7189220}{xbee\+\_\+ser\+\_\+tx\+\_\+flush()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__hal__hcs08_ga2ca4e60c9d642084afa52dff9e1f6be4}\label{group__hal__hcs08_ga2ca4e60c9d642084afa52dff9e1f6be4}} 
+\index{Hal\+\_\+hcs08@{Hal\+\_\+hcs08}!xbee\+\_\+ser\+\_\+write@{xbee\+\_\+ser\+\_\+write}}
+\index{xbee\+\_\+ser\+\_\+write@{xbee\+\_\+ser\+\_\+write}!Hal\+\_\+hcs08@{Hal\+\_\+hcs08}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ser\+\_\+write()}{xbee\_ser\_write()}}
+{\footnotesize\ttfamily int xbee\+\_\+ser\+\_\+write (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__serial__t}{xbee\+\_\+serial\+\_\+t} $\ast$}]{serial,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Transmits {\itshape length} bytes from {\itshape buffer} to the X\+Bee serial port {\itshape serial}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em serial} & X\+Bee serial port\\
+\hline
+\mbox{\tt in}  & {\em buffer} & source of bytes to send\\
+\hline
+\mbox{\tt in}  & {\em length} & number of bytes to write\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$=0} & The number of bytes successfully written to X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape serial} is not a valid X\+Bee serial port. \\
+\hline
+{\em -\/\+E\+IO} & I/O error attempting to write to serial port.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__serial_ga8263312373c03a79a718142e051b3342}{xbee\+\_\+ser\+\_\+read()}, \hyperlink{group__xbee__serial_ga86fea2345efb8bf9424228f0979b1849}{xbee\+\_\+ser\+\_\+putchar()}, \hyperlink{group__xbee__serial_gaeeb38154313a44f86146cdcfe08e7d08}{xbee\+\_\+ser\+\_\+getchar()} 
+\end{DoxySeeAlso}
+
+
+References length.
+
+
+
+Referenced by xbee\+\_\+ser\+\_\+putchar().
+

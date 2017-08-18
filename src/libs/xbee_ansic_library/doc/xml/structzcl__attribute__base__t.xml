@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structzcl__attribute__base__t" kind="struct" language="C++" prot="public">
+    <compoundname>zcl_attribute_base_t</compoundname>
+    <includes refid="zcl_8h" local="yes">zigbee/zcl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__zcl_1ga4fc3a0c58dfbd1e68224521185cb9384" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="738" column="1" bodyfile="include/zigbee/zcl.h" bodystart="738" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1gaa2585d779da0ab21273a8d92de9a0ebe" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="739" column="1" bodyfile="include/zigbee/zcl.h" bodystart="739" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>The ZCL Attribute Type, should be one of the ZCL_TYPE_* macros defined in <ref refid="zcl__types_8h" kindref="compound">zigbee/zcl_types.h</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="765" column="1" bodyfile="include/zigbee/zcl.h" bodystart="765" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__zcl_1gaaaa0b89997c57cfca2dfae40f46e702d" prot="public" static="no" mutable="no">
+        <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+        <definition>const void FAR* value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+<para>Pointer to global variable of correct type, set as <computeroutput>const</computeroutput> to allow for both const and non-const values. </para>        </briefdescription>
+        <detaileddescription>
+<para>(If <computeroutput>const</computeroutput>, flags should be include #ZCL_ATTRIB_FLAG_READONLY.) If NULL, the ZCL stack will respond to attempts to read/write with ZCL_STATUS_DEFINED_OUT_OF_BAND. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zigbee/zcl.h" line="771" column="1" bodyfile="include/zigbee/zcl.h" bodystart="771" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Basic structure for storing a list of attributes in a cluster. </para>    </briefdescription>
+    <detaileddescription>
+<para>If .min and .max are both set to 0, there isn&apos;t a limit</para><para><simplesect kind="note"><para>Consider putting type after id <ndash/> it would then be possible to have macros for attributes that include the id AND type. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="include/zigbee/zcl.h" line="737" column="1" bodyfile="include/zigbee/zcl.h" bodystart="736" bodyend="773"/>
+    <listofallmembers>
+      <member refid="group__zcl_1gaa2585d779da0ab21273a8d92de9a0ebe" prot="public" virt="non-virtual"><scope>zcl_attribute_base_t</scope><name>flags</name></member>
+      <member refid="group__zcl_1ga4fc3a0c58dfbd1e68224521185cb9384" prot="public" virt="non-virtual"><scope>zcl_attribute_base_t</scope><name>id</name></member>
+      <member refid="group__zcl_1ga1d127017fb298b889f4ba24752d08b8e" prot="public" virt="non-virtual"><scope>zcl_attribute_base_t</scope><name>type</name></member>
+      <member refid="group__zcl_1gaaaa0b89997c57cfca2dfae40f46e702d" prot="public" virt="non-virtual"><scope>zcl_attribute_base_t</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

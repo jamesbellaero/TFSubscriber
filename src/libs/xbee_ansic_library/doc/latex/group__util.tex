@@ -1,0 +1,63 @@
+\hypertarget{group__util}{}\section{Utility/\+Support Code}
+\label{group__util}\index{Utility/\+Support Code@{Utility/\+Support Code}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__util__cbuf}{Circular Buffer}
+\item 
+\hyperlink{group__util__byteorder}{Byte-\/swapping functions}
+\item 
+\hyperlink{group__util__xmodem}{X\+M\+O\+D\+E\+M code used by the firmware update process}
+\end{DoxyCompactItemize}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{hexdump_8c}{hexdump.\+c}
+\begin{DoxyCompactList}\small\item\em A\+N\+SI C \hyperlink{group__util_gaa321236a0cb6f4e0dad592fdf1b550d2}{hex\+\_\+dump()} implementation if not available natively on a given platform. \end{DoxyCompactList}\item 
+file \hyperlink{hexstrtobyte_8c}{hexstrtobyte.\+c}
+\begin{DoxyCompactList}\small\item\em A\+N\+SI C \hyperlink{group__hal_ga519e5ae2049b59689a474a8c48fee353}{hexstrtobyte()} implementation if not available natively on a given platform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__util_gaa321236a0cb6f4e0dad592fdf1b550d2}{hex\+\_\+dump} (const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Helper function for printing a hex dump of memory to stdout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__util_ga7ef9d8eaba1a5730261c557b1cb0a36b}\label{group__util_ga7ef9d8eaba1a5730261c557b1cb0a36b}} 
+int {\bfseries hexstrtobyte} (const char $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__util_gaa321236a0cb6f4e0dad592fdf1b550d2}\label{group__util_gaa321236a0cb6f4e0dad592fdf1b550d2}} 
+\index{Utility/\+Support Code@{Utility/\+Support Code}!hex\+\_\+dump@{hex\+\_\+dump}}
+\index{hex\+\_\+dump@{hex\+\_\+dump}!Utility/\+Support Code@{Utility/\+Support Code}}
+\subsubsection{\texorpdfstring{hex\+\_\+dump()}{hex\_dump()}}
+{\footnotesize\ttfamily void hex\+\_\+dump (\begin{DoxyParamCaption}\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{address,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{length,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Helper function for printing a hex dump of memory to stdout. 
+
+A reference implementation is provided in as \hyperlink{hexdump_8c}{util/hexdump.\+c}. Dumps data in hex/printable format, 16 bytes to a line, to stdout.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em address} & Address of data to dump.\\
+\hline
+\mbox{\tt in}  & {\em length} & Number of bytes to dump.\\
+\hline
+\mbox{\tt in}  & {\em flags} & One of
+\begin{DoxyItemize}
+\item \hyperlink{group__hal_gae60f842ae8bc3cc952cdeece611670d5}{H\+E\+X\+\_\+\+D\+U\+M\+P\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE}
+\item \hyperlink{group__hal_gaec79525addd1a70fda55b1ea11534832}{H\+E\+X\+\_\+\+D\+U\+M\+P\+\_\+\+F\+L\+A\+G\+\_\+\+O\+F\+F\+S\+ET}
+\item \hyperlink{group__hal_ga967137c51c026d68d03d1668402ec12b}{H\+E\+X\+\_\+\+D\+U\+M\+P\+\_\+\+F\+L\+A\+G\+\_\+\+A\+D\+D\+R\+E\+SS}
+\item \hyperlink{group__hal_ga696f6553e33cbd20eda34e220ec9939a}{H\+E\+X\+\_\+\+D\+U\+M\+P\+\_\+\+F\+L\+A\+G\+\_\+\+T\+AB} 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Referenced by wpan\+\_\+envelope\+\_\+dump().
+

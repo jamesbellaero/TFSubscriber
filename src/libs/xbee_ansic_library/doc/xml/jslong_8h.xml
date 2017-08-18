@@ -1,0 +1,1901 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="jslong_8h" kind="file" language="C++">
+    <compoundname>jslong.h</compoundname>
+    <includedby refid="jslong__glue_8h" local="yes">include/xbee/jslong_glue.h</includedby>
+    <invincdepgraph>
+      <node id="350">
+        <label>src/xbee/xbee_device.c</label>
+        <link refid="xbee__device_8c"/>
+      </node>
+      <node id="339">
+        <label>src/rabbit/xbee_serial_rabbit.c</label>
+        <link refid="xbee__serial__rabbit_8c"/>
+      </node>
+      <node id="370">
+        <label>include/xbee/device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+        <childnode refid="379" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="381" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="384" relation="include">
+        </childnode>
+        <childnode refid="385" relation="include">
+        </childnode>
+      </node>
+      <node id="380">
+        <label>src/xbee/xbee_gpm.c</label>
+        <link refid="xbee__gpm_8c"/>
+      </node>
+      <node id="408">
+        <label>include/xbee/reg_descr.h</label>
+        <link refid="reg__descr_8h"/>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+      </node>
+      <node id="412">
+        <label>include/xbee/wifi.h</label>
+        <link refid="wifi_8h"/>
+        <childnode refid="413" relation="include">
+        </childnode>
+      </node>
+      <node id="372">
+        <label>include/xbee/io.h</label>
+        <link refid="io_8h"/>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+      </node>
+      <node id="390">
+        <label>include/xbee/transparent_serial.h</label>
+        <link refid="transparent__serial_8h"/>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+      </node>
+      <node id="363">
+        <label>src/zigbee/zcl_time.c</label>
+        <link refid="zcl__time_8c"/>
+      </node>
+      <node id="340">
+        <label>src/rabbit/xbee_sxa_socket.c</label>
+        <link refid="xbee__sxa__socket_8c"/>
+      </node>
+      <node id="397">
+        <label>src/zigbee/zcl_commissioning.c</label>
+        <link refid="zcl__commissioning_8c"/>
+      </node>
+      <node id="378">
+        <label>include/xbee/discovery.h</label>
+        <link refid="discovery_8h"/>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+      </node>
+      <node id="349">
+        <label>src/xbee/xbee_commissioning.c</label>
+        <link refid="xbee__commissioning_8c"/>
+      </node>
+      <node id="344">
+        <label>src/util/xmodem_crc16.c</label>
+        <link refid="xmodem__crc16_8c"/>
+      </node>
+      <node id="364">
+        <label>src/zigbee/zigbee_zcl.c</label>
+        <link refid="zigbee__zcl_8c"/>
+      </node>
+      <node id="365">
+        <label>src/zigbee/zigbee_zdo.c</label>
+        <link refid="zigbee__zdo_8c"/>
+      </node>
+      <node id="379">
+        <label>include/xbee/gpm.h</label>
+        <link refid="gpm_8h"/>
+        <childnode refid="380" relation="include">
+        </childnode>
+      </node>
+      <node id="353">
+        <label>src/xbee/xbee_io.c</label>
+        <link refid="xbee__io_8c"/>
+      </node>
+      <node id="331">
+        <label>include/xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="352">
+        <label>src/xbee/xbee_firmware.c</label>
+        <link refid="xbee__firmware_8c"/>
+      </node>
+      <node id="343">
+        <label>src/util/swapbytes.c</label>
+        <link refid="swapbytes_8c"/>
+      </node>
+      <node id="354">
+        <label>src/xbee/xbee_ota_client.c</label>
+        <link refid="xbee__ota__client_8c"/>
+      </node>
+      <node id="404">
+        <label>src/zigbee/zcl_types.c</label>
+        <link refid="zcl__types_8c"/>
+      </node>
+      <node id="388">
+        <label>include/xbee/ota_server.h</label>
+        <link refid="ota__server_8h"/>
+        <childnode refid="389" relation="include">
+        </childnode>
+      </node>
+      <node id="361">
+        <label>src/zigbee/zcl_client.c</label>
+        <link refid="zcl__client_8c"/>
+      </node>
+      <node id="389">
+        <label>src/xbee/xbee_ota_server.c</label>
+        <link refid="xbee__ota__server_8c"/>
+      </node>
+      <node id="360">
+        <label>src/zigbee/zcl_basic.c</label>
+        <link refid="zcl__basic_8c"/>
+      </node>
+      <node id="334">
+        <label>src/util/jslong.c</label>
+        <link refid="jslong_8c"/>
+        <childnode refid="333" relation="include">
+        </childnode>
+      </node>
+      <node id="335">
+        <label>src/hcs08/xbee_platform_hcs08.c</label>
+        <link refid="xbee__platform__hcs08_8c"/>
+      </node>
+      <node id="395">
+        <label>include/zigbee/zcl_client.h</label>
+        <link refid="zcl__client_8h"/>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+      </node>
+      <node id="368">
+        <label>include/wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="379" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+        <childnode refid="388" relation="include">
+        </childnode>
+        <childnode refid="390" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="392" relation="include">
+        </childnode>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="400" relation="include">
+        </childnode>
+      </node>
+      <node id="410">
+        <label>src/posix/xbee_serial_posix.c</label>
+        <link refid="xbee__serial__posix_8c"/>
+      </node>
+      <node id="359">
+        <label>src/xbee/xbee_xmodem.c</label>
+        <link refid="xbee__xmodem_8c"/>
+      </node>
+      <node id="401">
+        <label>include/xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+        <childnode refid="380" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="382" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="403" relation="include">
+        </childnode>
+      </node>
+      <node id="384">
+        <label>include/xbee/wpan.h</label>
+        <link refid="wpan_8h"/>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+      </node>
+      <node id="414">
+        <label>include/xbee/xmodem_crc16.h</label>
+        <link refid="xmodem__crc16_8h"/>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+      </node>
+      <node id="337">
+        <label>src/posix/xbee_platform_posix.c</label>
+        <link refid="xbee__platform__posix_8c"/>
+      </node>
+      <node id="381">
+        <label>include/xbee/route.h</label>
+        <link refid="route_8h"/>
+        <childnode refid="382" relation="include">
+        </childnode>
+      </node>
+      <node id="348">
+        <label>src/xbee/xbee_atmode.c</label>
+        <link refid="xbee__atmode_8c"/>
+      </node>
+      <node id="398">
+        <label>include/zigbee/zcl_identify.h</label>
+        <link refid="zcl__identify_8h"/>
+        <childnode refid="362" relation="include">
+        </childnode>
+      </node>
+      <node id="391">
+        <label>include/zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="388" relation="include">
+        </childnode>
+        <childnode refid="392" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="396" relation="include">
+        </childnode>
+        <childnode refid="398" relation="include">
+        </childnode>
+        <childnode refid="399" relation="include">
+        </childnode>
+      </node>
+      <node id="396">
+        <label>include/zigbee/zcl_commissioning.h</label>
+        <link refid="zcl__commissioning_8h"/>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="397" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+      </node>
+      <node id="406">
+        <label>src/dos/xbee_serial_dos.c</label>
+        <link refid="xbee__serial__dos_8c"/>
+      </node>
+      <node id="402">
+        <label>src/util/swapcpy.c</label>
+        <link refid="swapcpy_8c"/>
+      </node>
+      <node id="374">
+        <label>src/xbee/xbee_reg_descr.c</label>
+        <link refid="xbee__reg__descr_8c"/>
+      </node>
+      <node id="355">
+        <label>src/xbee/xbee_scan.c</label>
+        <link refid="xbee__scan_8c"/>
+      </node>
+      <node id="366">
+        <label>include/wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="384" relation="include">
+        </childnode>
+        <childnode refid="396" relation="include">
+        </childnode>
+        <childnode refid="400" relation="include">
+        </childnode>
+      </node>
+      <node id="332">
+        <label>include/xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+        <childnode refid="339" relation="include">
+        </childnode>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+        <childnode refid="343" relation="include">
+        </childnode>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+        <childnode refid="405" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+        <childnode refid="379" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+        <childnode refid="408" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="409" relation="include">
+        </childnode>
+        <childnode refid="390" relation="include">
+        </childnode>
+        <childnode refid="412" relation="include">
+        </childnode>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="414" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="415" relation="include">
+        </childnode>
+        <childnode refid="396" relation="include">
+        </childnode>
+        <childnode refid="403" relation="include">
+        </childnode>
+      </node>
+      <node id="373">
+        <label>include/xbee/sxa.h</label>
+        <link refid="sxa_8h"/>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+      </node>
+      <node id="356">
+        <label>src/xbee/xbee_sxa.c</label>
+        <link refid="xbee__sxa_8c"/>
+      </node>
+      <node id="358">
+        <label>src/xbee/xbee_wpan.c</label>
+        <link refid="xbee__wpan_8c"/>
+      </node>
+      <node id="371">
+        <label>include/xbee/atcmd.h</label>
+        <link refid="atcmd_8h"/>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+        <childnode refid="353" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+        <childnode refid="356" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+      </node>
+      <node id="407">
+        <label>src/xbee/xbee_cbuf.c</label>
+        <link refid="xbee__cbuf_8c"/>
+      </node>
+      <node id="409">
+        <label>include/xbee/serial.h</label>
+        <link refid="serial_8h"/>
+        <childnode refid="406" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="410" relation="include">
+        </childnode>
+        <childnode refid="339" relation="include">
+        </childnode>
+        <childnode refid="411" relation="include">
+        </childnode>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+      </node>
+      <node id="399">
+        <label>include/zigbee/zcl_time.h</label>
+        <link refid="zcl__time_8h"/>
+        <childnode refid="363" relation="include">
+        </childnode>
+      </node>
+      <node id="403">
+        <label>include/zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="404" relation="include">
+        </childnode>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="396" relation="include">
+        </childnode>
+      </node>
+      <node id="415">
+        <label>include/zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="403" relation="include">
+        </childnode>
+      </node>
+      <node id="387">
+        <label>include/xbee/ota_client.h</label>
+        <link refid="ota__client_8h"/>
+        <childnode refid="354" relation="include">
+        </childnode>
+      </node>
+      <node id="375">
+        <label>include/xbee/sxa_socket.h</label>
+        <link refid="sxa__socket_8h"/>
+      </node>
+      <node id="376">
+        <label>include/xbee/atmode.h</label>
+        <link refid="atmode_8h"/>
+        <childnode refid="352" relation="include">
+        </childnode>
+      </node>
+      <node id="362">
+        <label>src/zigbee/zcl_identify.c</label>
+        <link refid="zcl__identify_8c"/>
+      </node>
+      <node id="346">
+        <label>src/wpan/wpan_aps.c</label>
+        <link refid="wpan__aps_8c"/>
+      </node>
+      <node id="400">
+        <label>include/zigbee/zdo.h</label>
+        <link refid="zdo_8h"/>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+      </node>
+      <node id="333">
+        <label>src/dos/xbee_platform_dos.c</label>
+        <link refid="xbee__platform__dos_8c"/>
+      </node>
+      <node id="345">
+        <label>src/win32/xbee_platform_win32.c</label>
+        <link refid="xbee__platform__win32_8c"/>
+      </node>
+      <node id="405">
+        <label>include/xbee/cbuf.h</label>
+        <link refid="cbuf_8h"/>
+        <childnode refid="406" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="407" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+      </node>
+      <node id="411">
+        <label>src/win32/xbee_serial_win32.c</label>
+        <link refid="xbee__serial__win32_8c"/>
+      </node>
+      <node id="336">
+        <label>src/hcs08/xbee_serial_hcs08.c</label>
+        <link refid="xbee__serial__hcs08_8c"/>
+      </node>
+      <node id="413">
+        <label>src/xbee/xbee_wifi.c</label>
+        <link refid="xbee__wifi_8c"/>
+      </node>
+      <node id="385">
+        <label>include/xbee/xmodem.h</label>
+        <link refid="xmodem_8h"/>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="386" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+      </node>
+      <node id="342">
+        <label>src/util/hexstrtobyte.c</label>
+        <link refid="hexstrtobyte_8c"/>
+      </node>
+      <node id="377">
+        <label>include/xbee/commissioning.h</label>
+        <link refid="commissioning_8h"/>
+        <childnode refid="349" relation="include">
+        </childnode>
+      </node>
+      <node id="382">
+        <label>src/xbee/xbee_route.c</label>
+        <link refid="xbee__route_8c"/>
+      </node>
+      <node id="338">
+        <label>src/rabbit/xbee_platform_rabbit.c</label>
+        <link refid="xbee__platform__rabbit_8c"/>
+      </node>
+      <node id="367">
+        <label>src/wpan/wpan_types.c</label>
+        <link refid="wpan__types_8c"/>
+      </node>
+      <node id="386">
+        <label>include/xbee/firmware.h</label>
+        <link refid="firmware_8h"/>
+        <childnode refid="352" relation="include">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>include/xbee/jslong.h</label>
+        <link refid="jslong_8h"/>
+        <childnode refid="331" relation="include">
+        </childnode>
+      </node>
+      <node id="393">
+        <label>include/zigbee/zcl_basic.h</label>
+        <link refid="zcl__basic_8h"/>
+        <childnode refid="360" relation="include">
+        </childnode>
+        <childnode refid="394" relation="include">
+        </childnode>
+      </node>
+      <node id="383">
+        <label>include/xbee/scan.h</label>
+        <link refid="scan_8h"/>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="369">
+        <label>src/zigbee/zcl_onoff.c</label>
+        <link refid="zcl__onoff_8c"/>
+      </node>
+      <node id="347">
+        <label>src/xbee/xbee_atcmd.c</label>
+        <link refid="xbee__atcmd_8c"/>
+      </node>
+      <node id="357">
+        <label>src/xbee/xbee_transparent_serial.c</label>
+        <link refid="xbee__transparent__serial_8c"/>
+      </node>
+      <node id="392">
+        <label>include/zigbee/zcl_bacnet.h</label>
+        <link refid="zcl__bacnet_8h"/>
+      </node>
+      <node id="394">
+        <label>include/zigbee/zcl_basic_attributes.h</label>
+        <link refid="zcl__basic__attributes_8h"/>
+      </node>
+      <node id="351">
+        <label>src/xbee/xbee_discovery.c</label>
+        <link refid="xbee__discovery_8c"/>
+      </node>
+      <node id="341">
+        <label>src/util/hexdump.c</label>
+        <link refid="hexdump_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="jslong_8h_1a1c877547f5d9ac637514cb1cadadf6e7" prot="public" static="no">
+        <name>JSLL_INIT</name>
+        <param><defname>hi</defname></param>
+        <param><defname>lo</defname></param>
+        <initializer>{ hi, lo }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="193" column="10" bodyfile="include/xbee/jslong.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a060266424b34fb6d6bc74c190c56658e" prot="public" static="no">
+        <name>JSLL_IS_ZERO</name>
+        <param><defname>a</defname></param>
+        <initializer>(((a).hi == 0) &amp;&amp; ((a).lo == 0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="196" column="9" bodyfile="include/xbee/jslong.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a6ba5c0e8bab0cd190033548a61e1de9a" prot="public" static="no">
+        <name>JSLL_EQ</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a).hi == (b).hi) &amp;&amp; ((a).lo == (b).lo))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="197" column="9" bodyfile="include/xbee/jslong.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a0bc79967f6630c21a8d77886794c9ab7" prot="public" static="no">
+        <name>JSLL_NE</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a).hi != (b).hi) || ((a).lo != (b).lo))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="198" column="9" bodyfile="include/xbee/jslong.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1aa6e18bdcc80f68a4d1057057b7efb1e5" prot="public" static="no">
+        <name>JSLL_GE_ZERO</name>
+        <param><defname>a</defname></param>
+        <initializer>(((a).hi &gt;&gt; 31) == 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="199" column="9" bodyfile="include/xbee/jslong.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1aa996bfc05974843b8db1dc611ef34104" prot="public" static="no">
+        <name>JSLL_CMP</name>
+        <param><defname>a</defname></param>
+        <param><defname>op</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_REAL_CMP(a, op, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="205" column="10" bodyfile="include/xbee/jslong.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1aa05dcc2c14be679191fbbb9a49f9c2cb" prot="public" static="no">
+        <name>JSLL_UCMP</name>
+        <param><defname>a</defname></param>
+        <param><defname>op</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>JSLL_REAL_UCMP(a, op, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="206" column="9" bodyfile="include/xbee/jslong.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a581bff042f55798490932170b118b93a" prot="public" static="no">
+        <name>JSLL_REAL_CMP</name>
+        <param><defname>a</defname></param>
+        <param><defname>op</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((JSInt32)(a).hi op (JSInt32)(b).hi) || \
+                                 (((a).hi == (b).hi) &amp;&amp; ((a).lo op (b).lo)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="209" column="9" bodyfile="include/xbee/jslong.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1abd6579756a084ba762bcb2ac008a69f3" prot="public" static="no">
+        <name>JSLL_REAL_UCMP</name>
+        <param><defname>a</defname></param>
+        <param><defname>op</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a).hi op (b).hi) || \
+                                 (((a).hi == (b).hi) &amp;&amp; ((a).lo op (b).lo)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="211" column="9" bodyfile="include/xbee/jslong.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1ab6c8e666fa2c0455faca5ebef5a9910d" prot="public" static="no">
+        <name>JSLL_AND</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((r).lo = (a).lo &amp; (b).lo, \
+                                 (r).hi = (a).hi &amp; (b).hi)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="214" column="9" bodyfile="include/xbee/jslong.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1adb2e08dbe1865ba949f98ec2d137d21c" prot="public" static="no">
+        <name>JSLL_OR</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((r).lo = (a).lo | (b).lo, \
+                                 (r).hi = (a).hi | (b).hi)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="216" column="9" bodyfile="include/xbee/jslong.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a9208b73c2d184bc42eba1a7b48e20fd2" prot="public" static="no">
+        <name>JSLL_XOR</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((r).lo = (a).lo ^ (b).lo, \
+                                 (r).hi = (a).hi ^ (b).hi)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="218" column="9" bodyfile="include/xbee/jslong.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1aad67d79704b62d1fb1e5a5b2b8255a6c" prot="public" static="no">
+        <name>JSLL_OR2</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <initializer>((r).lo = (r).lo | (a).lo, \
+                                 (r).hi = (r).hi | (a).hi)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="220" column="9" bodyfile="include/xbee/jslong.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a3ed55cb8c0dfd28100ca08bb3c578311" prot="public" static="no">
+        <name>JSLL_NOT</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <initializer>((r).lo = ~(a).lo, \
+                                 (r).hi = ~(a).hi)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="222" column="9" bodyfile="include/xbee/jslong.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1acfab6764e6ea71de223c9ba7f2d7692c" prot="public" static="no">
+        <name>JSLL_NEG</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <initializer>((r).lo = -(JSInt32)(a).lo, \
+                                 (r).hi = -(JSInt32)(a).hi - ((r).lo != 0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="225" column="9" bodyfile="include/xbee/jslong.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a52e1a9177d4ea5dac56b7a8e9d01f35a" prot="public" static="no">
+        <name>JSLL_ADD</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>{ \
+    JSUint32 t; \
+    t = (a).lo + (b).lo; \
+    (r).hi = (a).hi + (b).hi + (t &lt; (b).lo); \
+	 (r).lo = t; \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="227" column="9" bodyfile="include/xbee/jslong.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1ac1e41934e1b188385092d3d4cd522dbd" prot="public" static="no">
+        <name>JSLL_SUB</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>{ \
+    (r).hi = (a).hi - (b).hi - ((a).lo &lt; (b).lo); \
+    (r).lo = (a).lo - (b).lo; \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="234" column="9" bodyfile="include/xbee/jslong.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1adf95463cbc32f94ca091b61f9c7bb568" prot="public" static="no">
+        <name>JSLL_MUL</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>jsll_mul( &amp;(r), a, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="239" column="9" bodyfile="include/xbee/jslong.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a3800922add2fcf88a4cc3d52d9657720" prot="public" static="no">
+        <name>JSLL_MUL32</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>jsll_mul32( &amp;(r), a, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="242" column="9" bodyfile="include/xbee/jslong.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a616a2b4bc34342a585a4ddf6f34ca6fe" prot="public" static="no">
+        <name>JSLL_UDIVMOD</name>
+        <param><defname>qp</defname></param>
+        <param><defname>rp</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>jsll_udivmod(qp, rp, a, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="245" column="9" bodyfile="include/xbee/jslong.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1afec63fd1d10dd8fef80d7592c2aff6b8" prot="public" static="no">
+        <name>JSLL_DIV</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>jsll_div( &amp;(r), &amp;(a), &amp;(b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="248" column="9" bodyfile="include/xbee/jslong.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1aed5d754c595b3a7e95d4140996c179b3" prot="public" static="no">
+        <name>JSLL_MOD</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>jsll_mod( &amp;(r), &amp;(a), &amp;(b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="251" column="9" bodyfile="include/xbee/jslong.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1aa35aa787fb7b72090b52dadb746a0b8e" prot="public" static="no">
+        <name>JSLL_ISHL</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>{ \
+    if (b) { \
+        if ((b) &lt; 32) { \
+            (r).lo = (a) &lt;&lt; ((b) &amp; 31); \
+            (r).hi = ((a) &gt;&gt; (32 - (b))); \
+        } else { \
+            (r).lo = 0; \
+            (r).hi = (a) &lt;&lt; ((b) &amp; 31); \
+        } \
+    } else { \
+        (r).lo = (a); \
+        (r).hi = 0; \
+    } \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="255" column="9" bodyfile="include/xbee/jslong.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1ab4f0b46703bfb59e8694cd6be3befdca" prot="public" static="no">
+        <name>JSLL_SHL</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>jsll_shl( &amp;(r), a, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="270" column="9" bodyfile="include/xbee/jslong.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a1187f085f32f9a3f5874f70dca217f90" prot="public" static="no">
+        <name>JSLL_SHR</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>jsll_shr( &amp;(r), a, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="271" column="9" bodyfile="include/xbee/jslong.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a1e65a125823484ae68744a016861fe95" prot="public" static="no">
+        <name>JSLL_USHR</name>
+        <param><defname>r</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>jsll_ushr( &amp;(r), a, b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="272" column="9" bodyfile="include/xbee/jslong.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a8761e6b2cf301d5e9c1146496134ccf0" prot="public" static="no">
+        <name>JSLL_L2I</name>
+        <param><defname>i</defname></param>
+        <param><defname>l</defname></param>
+        <initializer>((i) = (l).lo)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="278" column="9" bodyfile="include/xbee/jslong.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1adc6bae97f2b111de69ff18d7c3ff9345" prot="public" static="no">
+        <name>JSLL_L2UI</name>
+        <param><defname>ui</defname></param>
+        <param><defname>l</defname></param>
+        <initializer>((ui) = (l).lo)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="279" column="9" bodyfile="include/xbee/jslong.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1aee458dc0d21a6ea5acae112989b78469" prot="public" static="no">
+        <name>JSLL_L2F</name>
+        <param><defname>f</defname></param>
+        <param><defname>l</defname></param>
+        <initializer>{ double _d; JSLL_L2D(_d, l); (f) = (JSFloat64)_d; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="280" column="9" bodyfile="include/xbee/jslong.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a2b9631e07e79d2fbcd71020517364999" prot="public" static="no">
+        <name>JSLL_L2D</name>
+        <param><defname>d</defname></param>
+        <param><defname>l</defname></param>
+        <initializer>{ \
+    <ref refid="group__hal__dos_1ga04dd5074964518403bf944f2b240a5f8" kindref="member">bool_t</ref> _negative; \
+    <ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref> _absval; \
+ \
+    _negative = (JSInt32)(l).hi &lt; 0; \
+    if (_negative) { \
+        JSLL_NEG(_absval, l); \
+    } else { \
+        _absval = l; \
+    } \
+    (d) = (double)_absval.hi * 4.294967296e9 + _absval.lo; \
+    if (_negative) \
+        (d) = -(d); \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="282" column="9" bodyfile="include/xbee/jslong.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1ac1960472b9d7f92c629d4bdae093092b" prot="public" static="no">
+        <name>JSLL_I2L</name>
+        <param><defname>l</defname></param>
+        <param><defname>i</defname></param>
+        <initializer>{(l).lo = (i); (l).hi = (JSInt32)(i) &gt;&gt; 31; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="297" column="9" bodyfile="include/xbee/jslong.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1acdc500a4dd82469485cd4ef89c12dd4f" prot="public" static="no">
+        <name>JSLL_UI2L</name>
+        <param><defname>l</defname></param>
+        <param><defname>ui</defname></param>
+        <initializer>((l).lo = (ui), (l).hi = 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="298" column="9" bodyfile="include/xbee/jslong.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a2059ed0775762dc2a376128e75d25df2" prot="public" static="no">
+        <name>JSLL_F2L</name>
+        <param><defname>l</defname></param>
+        <param><defname>f</defname></param>
+        <initializer>{ double _d = (double)f; JSLL_D2L(l, _d); }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="299" column="9" bodyfile="include/xbee/jslong.h" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a57d715b5db875734796d1d2288b801d8" prot="public" static="no">
+        <name>JSLL_D2L</name>
+        <param><defname>l</defname></param>
+        <param><defname>d</defname></param>
+        <initializer>{ \
+    int _negative; \
+    double _absval, _d_hi; \
+    <ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref> _lo_d; \
+ \
+    _negative = ((d) &lt; 0); \
+    _absval = _negative ? -(d) : (d); \
+ \
+    (l).hi = _absval / 4.294967296e9; \
+    (l).lo = 0; \
+    JSLL_L2D(_d_hi, l); \
+    _absval -= _d_hi; \
+    _lo_d.hi = 0; \
+    if (_absval &lt; 0) { \
+    _lo_d.lo = -_absval; \
+    JSLL_SUB(l, l, _lo_d); \
+    } else { \
+    _lo_d.lo = _absval; \
+    JSLL_ADD(l, l, _lo_d); \
+    } \
+ \
+    if (_negative) \
+    JSLL_NEG(l, l); \
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="301" column="9" bodyfile="include/xbee/jslong.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1ae660442df5aa1d098becd237c2f9ec87" prot="public" static="no">
+        <name>JSLL_HEXSTR</name>
+        <param><defname>s</defname></param>
+        <param><defname>a</defname></param>
+        <initializer>sprintf( s, &quot;%08&quot; <ref refid="group__hal_1ga80ca66bcc9e366733f02c90ed4b0838c" kindref="member">PRIx32</ref> &quot;%08&quot; <ref refid="group__hal_1ga80ca66bcc9e366733f02c90ed4b0838c" kindref="member">PRIx32</ref>, (a).hi, (a).lo)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="326" column="9" bodyfile="include/xbee/jslong.h" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a9ebfddf04323a6deddb6b6685c2413af" prot="public" static="no">
+        <name>JSLL_DECSTR</name>
+        <param><defname>s</defname></param>
+        <param><defname>a</defname></param>
+        <initializer>jsll_decstr( s, &amp;(a))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="328" column="9" bodyfile="include/xbee/jslong.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="jslong_8h_1a59ca78b4a1cab23997cc844b876a9e72" prot="public" static="no">
+        <name>JSLL_UDECSTR</name>
+        <param><defname>s</defname></param>
+        <param><defname>a</defname></param>
+        <initializer>jsll_udecstr( s, &amp;(a))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="329" column="9" bodyfile="include/xbee/jslong.h" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__zcl__64_1ga09e45168abb5ea8e6d487514eae102c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jsll_mul</definition>
+        <argsstring>(JSUint64 *rp, JSUint64 a, JSUint64 b)</argsstring>
+        <name>jsll_mul</name>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>rp</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="240" column="1" bodyfile="src/util/jslong.c" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__64_1ga0b4ed4198b603054301a4c9147e5f060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jsll_mul32</definition>
+        <argsstring>(JSUint64 *rp, JSUint32 a, JSUint32 b)</argsstring>
+        <name>jsll_mul32</name>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>rp</declname>
+        </param>
+        <param>
+          <type>JSUint32</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>JSUint32</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="243" column="1" bodyfile="src/util/jslong.c" bodystart="72" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__64_1ga26cb84da9083907cc41db0edf95b1b96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jsll_udivmod</definition>
+        <argsstring>(JSUint64 *qp, JSUint64 *rp, JSUint64 a, JSUint64 b)</argsstring>
+        <name>jsll_udivmod</name>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>qp</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>rp</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="246" column="1" bodyfile="src/util/jslong.c" bodystart="157" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__64_1gaf40c23a4a3872380497dae260ea58554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jsll_div</definition>
+        <argsstring>(JSUint64 *r, const JSUint64 *a, const JSUint64 *b)</argsstring>
+        <name>jsll_div</name>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="249" column="1" bodyfile="src/util/jslong.c" bodystart="323" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__64_1gaecddfb7e3ca39fa5313632c47a47f20c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jsll_mod</definition>
+        <argsstring>(JSUint64 *r, const JSUint64 *a, const JSUint64 *b)</argsstring>
+        <name>jsll_mod</name>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="252" column="1" bodyfile="src/util/jslong.c" bodystart="352" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__64_1gadbc8463d4ec9862cbb621cdd5f7297fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jsll_shl</definition>
+        <argsstring>(JSUint64 *r, JSUint64 a, uint_fast8_t b)</argsstring>
+        <name>jsll_shl</name>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint_fast8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="274" column="1" bodyfile="src/util/jslong.c" bodystart="378" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__64_1gab406a00beab4086e1f29bfa6c98e0e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jsll_shr</definition>
+        <argsstring>(JSInt64 *r, JSInt64 a, uint_fast8_t b)</argsstring>
+        <name>jsll_shr</name>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint_fast8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="275" column="1" bodyfile="src/util/jslong.c" bodystart="399" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__64_1gaab6291a66e18f75aa28dd777cb66d49b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jsll_ushr</definition>
+        <argsstring>(JSUint64 *r, JSUint64 a, uint_fast8_t b)</argsstring>
+        <name>jsll_ushr</name>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint_fast8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="276" column="1" bodyfile="src/util/jslong.c" bodystart="420" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__64_1gaaeb3f577d08fb658090c74ce03da319a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int jsll_decstr</definition>
+        <argsstring>(char *buffer, const JSInt64 *v)</argsstring>
+        <name>jsll_decstr</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="331" column="1" bodyfile="src/util/jslong.c" bodystart="441" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="group__zcl__64_1gaf41ea39427421502a4c90a5cd5f62cb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int jsll_udecstr</definition>
+        <argsstring>(char *buffer, const JSUint64 *v)</argsstring>
+        <name>jsll_udecstr</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/jslong.h" line="332" column="1" bodyfile="src/util/jslong.c" bodystart="461" bodyend="501"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>Mode:<sp/>C++;<sp/>tab-width:<sp/>4;<sp/>indent-tabs-mode:<sp/>nil;<sp/>c-basic-offset:<sp/>2<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>is<sp/>a<sp/>modified<sp/>version<sp/>of<sp/>jslong.h<sp/>Rev<sp/>3.13<sp/>from<sp/>mozilla.org,<sp/>with<sp/>as</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/>few<sp/>changes<sp/>as<sp/>possible.<sp/><sp/>The<sp/>original<sp/>file<sp/>is<sp/>available<sp/>here:</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>http://mxr.mozilla.org/mozilla/source/js/src/jslong.h</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>Do<sp/>not<sp/>include<sp/>it<sp/>directly,<sp/>as<sp/>it<sp/>requires<sp/>glue<sp/>macros<sp/>and<sp/>typedefs<sp/>defined</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>in<sp/>xbee/platform.h<sp/>(which<sp/>includes<sp/>it<sp/>automatically).</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*****<sp/>BEGIN<sp/>LICENSE<sp/>BLOCK<sp/>*****</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Version:<sp/>MPL<sp/>1.1/GPL<sp/>2.0/LGPL<sp/>2.1</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>contents<sp/>of<sp/>this<sp/>file<sp/>are<sp/>subject<sp/>to<sp/>the<sp/>Mozilla<sp/>Public<sp/>License<sp/>Version</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>1.1<sp/>(the<sp/>&quot;License&quot;);<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>the<sp/>License.<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>http://www.mozilla.org/MPL/</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Software<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>basis,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.<sp/>See<sp/>the<sp/>License</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>rights<sp/>and<sp/>limitations<sp/>under<sp/>the</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>License.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>The<sp/>Original<sp/>Code<sp/>is<sp/>Mozilla<sp/>Communicator<sp/>client<sp/>code,<sp/>released</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>March<sp/>31,<sp/>1998.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>The<sp/>Initial<sp/>Developer<sp/>of<sp/>the<sp/>Original<sp/>Code<sp/>is</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>Netscape<sp/>Communications<sp/>Corporation.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>Portions<sp/>created<sp/>by<sp/>the<sp/>Initial<sp/>Developer<sp/>are<sp/>Copyright<sp/>(C)<sp/>1998</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>the<sp/>Initial<sp/>Developer.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>Contributor(s):</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>Alternatively,<sp/>the<sp/>contents<sp/>of<sp/>this<sp/>file<sp/>may<sp/>be<sp/>used<sp/>under<sp/>the<sp/>terms<sp/>of</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>either<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>Version<sp/>2<sp/>or<sp/>later<sp/>(the<sp/>&quot;GPL&quot;),</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>or<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>Version<sp/>2.1<sp/>or<sp/>later<sp/>(the<sp/>&quot;LGPL&quot;),</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>in<sp/>which<sp/>case<sp/>the<sp/>provisions<sp/>of<sp/>the<sp/>GPL<sp/>or<sp/>the<sp/>LGPL<sp/>are<sp/>applicable<sp/>instead</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>of<sp/>those<sp/>above.<sp/>If<sp/>you<sp/>wish<sp/>to<sp/>allow<sp/>use<sp/>of<sp/>your<sp/>version<sp/>of<sp/>this<sp/>file<sp/>only</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>either<sp/>the<sp/>GPL<sp/>or<sp/>the<sp/>LGPL,<sp/>and<sp/>not<sp/>to<sp/>allow<sp/>others<sp/>to</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>use<sp/>your<sp/>version<sp/>of<sp/>this<sp/>file<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>MPL,<sp/>indicate<sp/>your</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>decision<sp/>by<sp/>deleting<sp/>the<sp/>provisions<sp/>above<sp/>and<sp/>replace<sp/>them<sp/>with<sp/>the<sp/>notice</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>and<sp/>other<sp/>provisions<sp/>required<sp/>by<sp/>the<sp/>GPL<sp/>or<sp/>the<sp/>LGPL.<sp/>If<sp/>you<sp/>do<sp/>not<sp/>delete</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>the<sp/>provisions<sp/>above,<sp/>a<sp/>recipient<sp/>may<sp/>use<sp/>your<sp/>version<sp/>of<sp/>this<sp/>file<sp/>under</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>the<sp/>terms<sp/>of<sp/>any<sp/>one<sp/>of<sp/>the<sp/>MPL,<sp/>the<sp/>GPL<sp/>or<sp/>the<sp/>LGPL.</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>*****<sp/>END<sp/>LICENSE<sp/>BLOCK<sp/>*****<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jslong.h</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/>Description:<sp/>Portable<sp/>access<sp/>to<sp/>64<sp/>bit<sp/>numerics</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>Long-long<sp/>(64-bit<sp/>signed<sp/>integer<sp/>type)<sp/>support.<sp/>Some<sp/>C<sp/>compilers</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/>don&apos;t<sp/>support<sp/>64<sp/>bit<sp/>integers<sp/>yet,<sp/>so<sp/>we<sp/>use<sp/>these<sp/>macros<sp/>to</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/>support<sp/>both<sp/>machines<sp/>that<sp/>do<sp/>and<sp/>don&apos;t.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>jslong_h___</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>jslong_h___</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>JS_HAVE_LONG_LONG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_INIT(hi,<sp/>lo)<sp/><sp/>((UINT64_C(hi)<sp/>&lt;&lt;<sp/>32)<sp/>+<sp/>UINT64_C(lo))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">**<sp/>MACROS:<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_*</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">**<sp/>DESCRIPTION:</highlight></codeline>
+<codeline lineno="64"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>following<sp/>macros<sp/>define<sp/>portable<sp/>access<sp/>to<sp/>the<sp/>64<sp/>bit</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>math<sp/>facilities.</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">***********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">**<sp/>MACROS:<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_&lt;relational<sp/>operators&gt;</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">**<sp/><sp/>JSLL_IS_ZERO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Test<sp/>for<sp/>zero</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">**<sp/><sp/>JSLL_EQ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Test<sp/>for<sp/>equality</highlight></codeline>
+<codeline lineno="74"><highlight class="comment">**<sp/><sp/>JSLL_NE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Test<sp/>for<sp/>inequality</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">**<sp/><sp/>JSLL_GE_ZERO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Test<sp/>for<sp/>zero<sp/>or<sp/>positive</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">**<sp/><sp/>JSLL_CMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Compare<sp/>two<sp/>values</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">***********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_IS_ZERO(a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a)<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_EQ(a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a)<sp/>==<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_NE(a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a)<sp/>!=<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_GE_ZERO(a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a)<sp/>&gt;=<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_CMP(a,<sp/>op,<sp/>b)<sp/><sp/><sp/><sp/>((JSInt64)(a)<sp/>op<sp/>(JSInt64)(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_UCMP(a,<sp/>op,<sp/>b)<sp/><sp/><sp/>((JSUint64)(a)<sp/>op<sp/>(JSUint64)(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************</highlight></codeline>
+<codeline lineno="86"><highlight class="comment">**<sp/>MACROS:<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_&lt;logical<sp/>operators&gt;</highlight></codeline>
+<codeline lineno="87"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">**<sp/><sp/>JSLL_AND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Logical<sp/>and</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">**<sp/><sp/>JSLL_OR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Logical<sp/>or</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">**<sp/><sp/>JSLL_XOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Logical<sp/>exclusion</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">**<sp/><sp/>JSLL_OR2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>A<sp/>disgusting<sp/>deviation</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">**<sp/><sp/>JSLL_NOT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Negation<sp/>(one&apos;s<sp/>compliment)</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">***********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_AND(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(a)<sp/>&amp;<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_OR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(a)<sp/>|<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_XOR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(a)<sp/>^<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_OR2(r,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(r)<sp/>|<sp/>(a))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_NOT(r,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>~(a))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">**<sp/>MACROS:<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_&lt;mathematical<sp/>operators&gt;</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">**<sp/><sp/>JSLL_NEG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Negation<sp/>(two&apos;s<sp/>compliment)</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">**<sp/><sp/>JSLL_ADD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Summation<sp/>(two&apos;s<sp/>compliment)</highlight></codeline>
+<codeline lineno="105"><highlight class="comment">**<sp/><sp/>JSLL_SUB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Difference<sp/>(two&apos;s<sp/>compliment)</highlight></codeline>
+<codeline lineno="106"><highlight class="comment">***********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_NEG(r,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>-(a))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_ADD(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(a)<sp/>+<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_SUB(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(a)<sp/>-<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************</highlight></codeline>
+<codeline lineno="112"><highlight class="comment">**<sp/>MACROS:<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_&lt;mathematical<sp/>operators&gt;</highlight></codeline>
+<codeline lineno="113"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="114"><highlight class="comment">**<sp/><sp/>JSLL_MUL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Product<sp/>(two&apos;s<sp/>compliment)</highlight></codeline>
+<codeline lineno="115"><highlight class="comment">**<sp/><sp/>JSLL_MUL32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64-bit<sp/>product<sp/>of<sp/>two<sp/>unsigned<sp/>32-bit<sp/>integers</highlight></codeline>
+<codeline lineno="116"><highlight class="comment">**<sp/><sp/>JSLL_DIV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Quotient<sp/>(two&apos;s<sp/>compliment)</highlight></codeline>
+<codeline lineno="117"><highlight class="comment">**<sp/><sp/>JSLL_MOD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Modulus<sp/>(two&apos;s<sp/>compliment)</highlight></codeline>
+<codeline lineno="118"><highlight class="comment">***********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_MUL(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(a)<sp/>*<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_MUL32(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(JSUint64)(a)<sp/>*<sp/>(JSUint32)(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_DIV(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(a)<sp/>/<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_MOD(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(a)<sp/>%<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************</highlight></codeline>
+<codeline lineno="125"><highlight class="comment">**<sp/>MACROS:<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_&lt;shifting<sp/>operators&gt;</highlight></codeline>
+<codeline lineno="126"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="127"><highlight class="comment">**<sp/><sp/>JSLL_SHL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Shift<sp/>left<sp/>[0..64]<sp/>bits</highlight></codeline>
+<codeline lineno="128"><highlight class="comment">**<sp/><sp/>JSLL_SHR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Shift<sp/>right<sp/>[0..64]<sp/>bits<sp/>with<sp/>sign<sp/>extension</highlight></codeline>
+<codeline lineno="129"><highlight class="comment">**<sp/><sp/>JSLL_USHR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Unsigned<sp/>shift<sp/>right<sp/>[0..64]<sp/>bits</highlight></codeline>
+<codeline lineno="130"><highlight class="comment">**<sp/><sp/>(consider<sp/>renaming<sp/>to<sp/>LSR<sp/>and<sp/>ASR<sp/>for<sp/>logical<sp/>and<sp/>arithmetic<sp/>shift<sp/>right)</highlight></codeline>
+<codeline lineno="131"><highlight class="comment">**<sp/><sp/>JSLL_ISHL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Integer<sp/>(32-bit)<sp/>shift<sp/>left<sp/>[0..64]<sp/>bits</highlight></codeline>
+<codeline lineno="132"><highlight class="comment">***********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_SHL(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(JSInt64)(a)<sp/>&lt;&lt;<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_SHR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(JSInt64)(a)<sp/>&gt;&gt;<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_USHR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(JSUint64)(a)<sp/>&gt;&gt;<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_ISHL(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/>((r)<sp/>=<sp/>(JSInt64)(a)<sp/>&lt;&lt;<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************</highlight></codeline>
+<codeline lineno="139"><highlight class="comment">**<sp/>MACROS:<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_&lt;conversion<sp/>operators&gt;</highlight></codeline>
+<codeline lineno="140"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="141"><highlight class="comment">**<sp/><sp/>JSLL_L2I<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>64-bit<sp/>to<sp/>signed<sp/>32-bit</highlight></codeline>
+<codeline lineno="142"><highlight class="comment">**<sp/><sp/>JSLL_L2UI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>64-bit<sp/>to<sp/>unsigned<sp/>32-bit</highlight></codeline>
+<codeline lineno="143"><highlight class="comment">**<sp/><sp/>JSLL_L2F<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>64-bit<sp/>to<sp/>float</highlight></codeline>
+<codeline lineno="144"><highlight class="comment">**<sp/><sp/>JSLL_L2D<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>64-bit<sp/>to<sp/>double</highlight></codeline>
+<codeline lineno="145"><highlight class="comment">**<sp/><sp/>JSLL_I2L<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>signed<sp/>32-bit<sp/>to<sp/>64-bit</highlight></codeline>
+<codeline lineno="146"><highlight class="comment">**<sp/><sp/>JSLL_UI2L<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>unsigned<sp/>32-bit<sp/>to<sp/>64-bit</highlight></codeline>
+<codeline lineno="147"><highlight class="comment">**<sp/><sp/>JSLL_F2L<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>float<sp/>to<sp/>64-bit</highlight></codeline>
+<codeline lineno="148"><highlight class="comment">**<sp/><sp/>JSLL_D2L<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>double<sp/>to<sp/>64-bit</highlight></codeline>
+<codeline lineno="149"><highlight class="comment">***********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_L2I(i,<sp/>l)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)<sp/>=<sp/>(JSInt32)(l))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_L2UI(ui,<sp/>l)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((ui)<sp/>=<sp/>(JSUint32)(l))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_L2F(f,<sp/>l)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((f)<sp/>=<sp/>(JSFloat64)(l))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_L2D(d,<sp/>l)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((d)<sp/>=<sp/>(JSFloat64)(l))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_I2L(l,<sp/>i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((l)<sp/>=<sp/>(JSInt64)(i))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_UI2L(l,<sp/>ui)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((l)<sp/>=<sp/>(JSInt64)(ui))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_F2L(l,<sp/>f)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((l)<sp/>=<sp/>(JSInt64)(f))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_D2L(l,<sp/>d)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((l)<sp/>=<sp/>(JSInt64)(d))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************</highlight></codeline>
+<codeline lineno="161"><highlight class="comment">**<sp/>MACROS:<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_UDIVMOD</highlight></codeline>
+<codeline lineno="162"><highlight class="comment">**<sp/>DESCRIPTION:</highlight></codeline>
+<codeline lineno="163"><highlight class="comment">**<sp/><sp/>Produce<sp/>both<sp/>a<sp/>quotient<sp/>and<sp/>a<sp/>remainder<sp/>given<sp/>an<sp/>unsigned</highlight></codeline>
+<codeline lineno="164"><highlight class="comment">**<sp/>INPUTS:<sp/><sp/><sp/><sp/><sp/><sp/>JSUint64<sp/>a:<sp/>The<sp/>dividend<sp/>of<sp/>the<sp/>operation</highlight></codeline>
+<codeline lineno="165"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSUint64<sp/>b:<sp/>The<sp/>quotient<sp/>of<sp/>the<sp/>operation</highlight></codeline>
+<codeline lineno="166"><highlight class="comment">**<sp/>OUTPUTS:<sp/><sp/><sp/><sp/><sp/>JSUint64<sp/>*qp:<sp/>pointer<sp/>to<sp/>quotient</highlight></codeline>
+<codeline lineno="167"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSUint64<sp/>*rp:<sp/>pointer<sp/>to<sp/>remainder</highlight></codeline>
+<codeline lineno="168"><highlight class="comment">***********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_UDIVMOD(qp,<sp/>rp,<sp/>a,<sp/>b)<sp/>\</highlight></codeline>
+<codeline lineno="170"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(*(qp)<sp/>=<sp/>((JSUint64)(a)<sp/>/<sp/>(b)),<sp/>\</highlight></codeline>
+<codeline lineno="171"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/>*(rp)<sp/>=<sp/>((JSUint64)(a)<sp/>%<sp/>(b)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">/***********************************************************************</highlight></codeline>
+<codeline lineno="174"><highlight class="comment">**<sp/>MACROS:<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_HEXSTR,<sp/>JSLL_DECSTR</highlight></codeline>
+<codeline lineno="175"><highlight class="comment">**<sp/>DESCRIPTION:</highlight></codeline>
+<codeline lineno="176"><highlight class="comment">**<sp/><sp/>Convert<sp/>64-bit<sp/>value<sp/>to<sp/>hexadecimal<sp/>or<sp/>decimal<sp/>string.</highlight></codeline>
+<codeline lineno="177"><highlight class="comment">**<sp/><sp/>JSLL_HEXSTR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>to<sp/>(lowercase)<sp/>hexadecimal<sp/>string,<sp/>padded</highlight></codeline>
+<codeline lineno="178"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>with<sp/>zeros<sp/>to<sp/>16<sp/>characters</highlight></codeline>
+<codeline lineno="179"><highlight class="comment">**<sp/><sp/>JSLL_DECSTR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>signed<sp/>value<sp/>to<sp/>decimal<sp/>string</highlight></codeline>
+<codeline lineno="180"><highlight class="comment">**<sp/><sp/>JSLL_UDECSTR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Convert<sp/>unsigned<sp/>value<sp/>to<sp/>decimal<sp/>string</highlight></codeline>
+<codeline lineno="181"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="182"><highlight class="comment">**<sp/><sp/>Returns<sp/>number<sp/>of<sp/>characters<sp/>written<sp/>to<sp/>buffer.</highlight></codeline>
+<codeline lineno="183"><highlight class="comment">***********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_HEXSTR(s,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/>s,<sp/>&quot;%016&quot;<sp/>PRIx64,<sp/>a)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_DECSTR(s,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/>s,<sp/>&quot;%&quot;<sp/>PRId64,<sp/>a)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_UDECSTR(s,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(<sp/>s,<sp/>&quot;%&quot;<sp/>PRIu64,<sp/>a)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">/*<sp/>!JS_HAVE_LONG_LONG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IS_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_INIT(hi,<sp/>lo)<sp/>{<sp/>lo,<sp/>hi<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_INIT(hi,<sp/>lo)<sp/>{<sp/>hi,<sp/>lo<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_IS_ZERO(a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((a).hi<sp/>==<sp/>0)<sp/>&amp;&amp;<sp/>((a).lo<sp/>==<sp/>0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_EQ(a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((a).hi<sp/>==<sp/>(b).hi)<sp/>&amp;&amp;<sp/>((a).lo<sp/>==<sp/>(b).lo))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_NE(a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((a).hi<sp/>!=<sp/>(b).hi)<sp/>||<sp/>((a).lo<sp/>!=<sp/>(b).lo))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_GE_ZERO(a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((a).hi<sp/>&gt;&gt;<sp/>31)<sp/>==<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_CMP(a,<sp/>op,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/>(JS_ASSERT((#op)[1]<sp/>!=<sp/>&apos;=&apos;),<sp/>JSLL_REAL_CMP(a,<sp/>op,<sp/>b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_UCMP(a,<sp/>op,<sp/>b)<sp/><sp/><sp/><sp/><sp/>(JS_ASSERT((#op)[1]<sp/>!=<sp/>&apos;=&apos;),<sp/>JSLL_REAL_UCMP(a,<sp/>op,<sp/>b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_CMP(a,<sp/>op,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/>JSLL_REAL_CMP(a,<sp/>op,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_UCMP(a,<sp/>op,<sp/>b)<sp/><sp/><sp/><sp/><sp/>JSLL_REAL_UCMP(a,<sp/>op,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_REAL_CMP(a,op,b)<sp/><sp/><sp/>(((JSInt32)(a).hi<sp/>op<sp/>(JSInt32)(b).hi)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="210"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((a).hi<sp/>==<sp/>(b).hi)<sp/>&amp;&amp;<sp/>((a).lo<sp/>op<sp/>(b).lo)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_REAL_UCMP(a,op,b)<sp/><sp/>(((a).hi<sp/>op<sp/>(b).hi)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="212"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((a).hi<sp/>==<sp/>(b).hi)<sp/>&amp;&amp;<sp/>((a).lo<sp/>op<sp/>(b).lo)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_AND(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r).lo<sp/>=<sp/>(a).lo<sp/>&amp;<sp/>(b).lo,<sp/>\</highlight></codeline>
+<codeline lineno="215"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>(a).hi<sp/>&amp;<sp/>(b).hi)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_OR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r).lo<sp/>=<sp/>(a).lo<sp/>|<sp/>(b).lo,<sp/>\</highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>(a).hi<sp/>|<sp/>(b).hi)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_XOR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r).lo<sp/>=<sp/>(a).lo<sp/>^<sp/>(b).lo,<sp/>\</highlight></codeline>
+<codeline lineno="219"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>(a).hi<sp/>^<sp/>(b).hi)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_OR2(r,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r).lo<sp/>=<sp/>(r).lo<sp/>|<sp/>(a).lo,<sp/>\</highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>(r).hi<sp/>|<sp/>(a).hi)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_NOT(r,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r).lo<sp/>=<sp/>~(a).lo,<sp/>\</highlight></codeline>
+<codeline lineno="223"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>~(a).hi)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_NEG(r,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((r).lo<sp/>=<sp/>-(JSInt32)(a).lo,<sp/>\</highlight></codeline>
+<codeline lineno="226"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>-(JSInt32)(a).hi<sp/>-<sp/>((r).lo<sp/>!=<sp/>0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_ADD(r,<sp/>a,<sp/>b)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="228"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>JSUint32<sp/>t;<sp/>\</highlight></codeline>
+<codeline lineno="229"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>t<sp/>=<sp/>(a).lo<sp/>+<sp/>(b).lo;<sp/>\</highlight></codeline>
+<codeline lineno="230"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>(a).hi<sp/>+<sp/>(b).hi<sp/>+<sp/>(t<sp/>&lt;<sp/>(b).lo);<sp/>\</highlight></codeline>
+<codeline lineno="231"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(r).lo<sp/>=<sp/>t;<sp/>\</highlight></codeline>
+<codeline lineno="232"><highlight class="preprocessor">}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_SUB(r,<sp/>a,<sp/>b)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="235"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>(a).hi<sp/>-<sp/>(b).hi<sp/>-<sp/>((a).lo<sp/>&lt;<sp/>(b).lo);<sp/>\</highlight></codeline>
+<codeline lineno="236"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(r).lo<sp/>=<sp/>(a).lo<sp/>-<sp/>(b).lo;<sp/>\</highlight></codeline>
+<codeline lineno="237"><highlight class="preprocessor">}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_MUL(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jsll_mul(<sp/>&amp;(r),<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jsll_mul(<ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*rp,<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>a,<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>b);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_MUL32(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jsll_mul32(<sp/>&amp;(r),<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jsll_mul32(<ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*rp,<sp/>JSUint32<sp/>a,<sp/>JSUint32<sp/>b);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_UDIVMOD(qp,<sp/>rp,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/>jsll_udivmod(qp,<sp/>rp,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jsll_udivmod(<ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*qp,<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*rp,<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>a,<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>b);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_DIV(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jsll_div(<sp/>&amp;(r),<sp/>&amp;(a),<sp/>&amp;(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jsll_div(<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*b);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_MOD(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jsll_mod(<sp/>&amp;(r),<sp/>&amp;(a),<sp/>&amp;(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jsll_mod(<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*b);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>a<sp/>is<sp/>an<sp/>JSInt32,<sp/>b<sp/>is<sp/>JSInt32,<sp/>r<sp/>is<sp/>JSInt64<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_ISHL(r,<sp/>a,<sp/>b)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="256"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(b)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="257"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>((b)<sp/>&lt;<sp/>32)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="258"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).lo<sp/>=<sp/>(a)<sp/>&lt;&lt;<sp/>((b)<sp/>&amp;<sp/>31);<sp/>\</highlight></codeline>
+<codeline lineno="259"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>((a)<sp/>&gt;&gt;<sp/>(32<sp/>-<sp/>(b)));<sp/>\</highlight></codeline>
+<codeline lineno="260"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>else<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="261"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).lo<sp/>=<sp/>0;<sp/>\</highlight></codeline>
+<codeline lineno="262"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>(a)<sp/>&lt;&lt;<sp/>((b)<sp/>&amp;<sp/>31);<sp/>\</highlight></codeline>
+<codeline lineno="263"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="264"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>else<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="265"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).lo<sp/>=<sp/>(a);<sp/>\</highlight></codeline>
+<codeline lineno="266"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(r).hi<sp/>=<sp/>0;<sp/>\</highlight></codeline>
+<codeline lineno="267"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="268"><highlight class="preprocessor">}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_SHL(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jsll_shl(<sp/>&amp;(r),<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_SHR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jsll_shr(<sp/>&amp;(r),<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_USHR(r,<sp/>a,<sp/>b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jsll_ushr(<sp/>&amp;(r),<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jsll_shl(<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*r,<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>a,<sp/>uint_fast8_t<sp/>b);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jsll_shr(<sp/><ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref><sp/>*r,<sp/><ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref><sp/>a,<sp/>uint_fast8_t<sp/>b);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jsll_ushr(<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*r,<sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>a,<sp/>uint_fast8_t<sp/>b);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_L2I(i,<sp/>l)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)<sp/>=<sp/>(l).lo)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_L2UI(ui,<sp/>l)<sp/><sp/><sp/><sp/><sp/><sp/>((ui)<sp/>=<sp/>(l).lo)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_L2F(f,<sp/>l)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>double<sp/>_d;<sp/>JSLL_L2D(_d,<sp/>l);<sp/>(f)<sp/>=<sp/>(JSFloat64)_d;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_L2D(d,<sp/>l)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="283"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>bool_t<sp/>_negative;<sp/>\</highlight></codeline>
+<codeline lineno="284"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>JSInt64<sp/>_absval;<sp/>\</highlight></codeline>
+<codeline lineno="285"><highlight class="preprocessor"><sp/>\</highlight></codeline>
+<codeline lineno="286"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_negative<sp/>=<sp/>(JSInt32)(l).hi<sp/>&lt;<sp/>0;<sp/>\</highlight></codeline>
+<codeline lineno="287"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(_negative)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="288"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSLL_NEG(_absval,<sp/>l);<sp/>\</highlight></codeline>
+<codeline lineno="289"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>else<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="290"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_absval<sp/>=<sp/>l;<sp/>\</highlight></codeline>
+<codeline lineno="291"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="292"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(d)<sp/>=<sp/>(double)_absval.hi<sp/>*<sp/>4.294967296e9<sp/>+<sp/>_absval.lo;<sp/>\</highlight></codeline>
+<codeline lineno="293"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(_negative)<sp/>\</highlight></codeline>
+<codeline lineno="294"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(d)<sp/>=<sp/>-(d);<sp/>\</highlight></codeline>
+<codeline lineno="295"><highlight class="preprocessor">}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_I2L(l,<sp/>i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{(l).lo<sp/>=<sp/>(i);<sp/>(l).hi<sp/>=<sp/>(JSInt32)(i)<sp/>&gt;&gt;<sp/>31;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_UI2L(l,<sp/>ui)<sp/><sp/><sp/><sp/><sp/><sp/>((l).lo<sp/>=<sp/>(ui),<sp/>(l).hi<sp/>=<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_F2L(l,<sp/>f)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>double<sp/>_d<sp/>=<sp/>(double)f;<sp/>JSLL_D2L(l,<sp/>_d);<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_D2L(l,<sp/>d)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="302"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>int<sp/>_negative;<sp/>\</highlight></codeline>
+<codeline lineno="303"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>double<sp/>_absval,<sp/>_d_hi;<sp/>\</highlight></codeline>
+<codeline lineno="304"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>JSInt64<sp/>_lo_d;<sp/>\</highlight></codeline>
+<codeline lineno="305"><highlight class="preprocessor"><sp/>\</highlight></codeline>
+<codeline lineno="306"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_negative<sp/>=<sp/>((d)<sp/>&lt;<sp/>0);<sp/>\</highlight></codeline>
+<codeline lineno="307"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_absval<sp/>=<sp/>_negative<sp/>?<sp/>-(d)<sp/>:<sp/>(d);<sp/>\</highlight></codeline>
+<codeline lineno="308"><highlight class="preprocessor"><sp/>\</highlight></codeline>
+<codeline lineno="309"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(l).hi<sp/>=<sp/>_absval<sp/>/<sp/>4.294967296e9;<sp/>\</highlight></codeline>
+<codeline lineno="310"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(l).lo<sp/>=<sp/>0;<sp/>\</highlight></codeline>
+<codeline lineno="311"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>JSLL_L2D(_d_hi,<sp/>l);<sp/>\</highlight></codeline>
+<codeline lineno="312"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_absval<sp/>-=<sp/>_d_hi;<sp/>\</highlight></codeline>
+<codeline lineno="313"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_lo_d.hi<sp/>=<sp/>0;<sp/>\</highlight></codeline>
+<codeline lineno="314"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(_absval<sp/>&lt;<sp/>0)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="315"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_lo_d.lo<sp/>=<sp/>-_absval;<sp/>\</highlight></codeline>
+<codeline lineno="316"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>JSLL_SUB(l,<sp/>l,<sp/>_lo_d);<sp/>\</highlight></codeline>
+<codeline lineno="317"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>else<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="318"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>_lo_d.lo<sp/>=<sp/>_absval;<sp/>\</highlight></codeline>
+<codeline lineno="319"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>JSLL_ADD(l,<sp/>l,<sp/>_lo_d);<sp/>\</highlight></codeline>
+<codeline lineno="320"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="321"><highlight class="preprocessor"><sp/>\</highlight></codeline>
+<codeline lineno="322"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(_negative)<sp/>\</highlight></codeline>
+<codeline lineno="323"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>JSLL_NEG(l,<sp/>l);<sp/>\</highlight></codeline>
+<codeline lineno="324"><highlight class="preprocessor">}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_HEXSTR(s,<sp/>a)<sp/>\</highlight></codeline>
+<codeline lineno="327"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>sprintf(<sp/>s,<sp/>&quot;%08&quot;<sp/>PRIx32<sp/>&quot;%08&quot;<sp/>PRIx32,<sp/>(a).hi,<sp/>(a).lo)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_DECSTR(s,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jsll_decstr(<sp/>s,<sp/>&amp;(a))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSLL_UDECSTR(s,<sp/>a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>jsll_udecstr(<sp/>s,<sp/>&amp;(a))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jsll_decstr(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_s_int64" kindref="compound">JSInt64</ref><sp/>*v);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jsll_udecstr(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_j_s_int64" kindref="compound">JSUint64</ref><sp/>*v);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!JS_HAVE_LONG_LONG<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>jslong_h___<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/xbee/jslong.h"/>
+  </compounddef>
+</doxygen>

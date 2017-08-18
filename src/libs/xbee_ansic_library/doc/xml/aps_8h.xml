@@ -1,0 +1,2642 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="aps_8h" kind="file" language="C++">
+    <compoundname>aps.h</compoundname>
+    <includes refid="types_8h" local="yes">wpan/types.h</includes>
+    <includedby refid="wpan__aps_8c" local="yes">src/wpan/wpan_aps.c</includedby>
+    <includedby refid="xbee__device_8c" local="yes">src/xbee/xbee_device.c</includedby>
+    <includedby refid="xbee__wpan_8c" local="yes">src/xbee/xbee_wpan.c</includedby>
+    <includedby refid="zcl__onoff_8c" local="yes">src/zigbee/zcl_onoff.c</includedby>
+    <includedby refid="zigbee__zcl_8c" local="yes">src/zigbee/zigbee_zcl.c</includedby>
+    <includedby refid="zigbee__zdo_8c" local="yes">src/zigbee/zigbee_zdo.c</includedby>
+    <includedby refid="device_8h" local="yes">include/xbee/device.h</includedby>
+    <includedby refid="gpm_8h" local="yes">include/xbee/gpm.h</includedby>
+    <includedby refid="ota__client_8h" local="yes">include/xbee/ota_client.h</includedby>
+    <includedby refid="ota__server_8h" local="yes">include/xbee/ota_server.h</includedby>
+    <includedby refid="transparent__serial_8h" local="yes">include/xbee/transparent_serial.h</includedby>
+    <includedby refid="zcl_8h" local="yes">include/zigbee/zcl.h</includedby>
+    <includedby refid="zcl__bacnet_8h" local="yes">include/zigbee/zcl_bacnet.h</includedby>
+    <includedby refid="zcl__client_8h" local="yes">include/zigbee/zcl_client.h</includedby>
+    <includedby refid="zdo_8h" local="yes">include/zigbee/zdo.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>errno.h</label>
+      </node>
+      <node id="7">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="2">
+        <label>include/wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>src/xbee/xbee_device.c</label>
+        <link refid="xbee__device_8c"/>
+      </node>
+      <node id="16">
+        <label>include/xbee/device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>src/xbee/xbee_gpm.c</label>
+        <link refid="xbee__gpm_8c"/>
+      </node>
+      <node id="24">
+        <label>include/xbee/io.h</label>
+        <link refid="io_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>include/xbee/transparent_serial.h</label>
+        <link refid="transparent__serial_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>src/zigbee/zcl_time.c</label>
+        <link refid="zcl__time_8c"/>
+      </node>
+      <node id="26">
+        <label>src/rabbit/xbee_sxa_socket.c</label>
+        <link refid="xbee__sxa__socket_8c"/>
+      </node>
+      <node id="58">
+        <label>src/zigbee/zcl_commissioning.c</label>
+        <link refid="zcl__commissioning_8c"/>
+      </node>
+      <node id="32">
+        <label>include/xbee/discovery.h</label>
+        <link refid="discovery_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>src/xbee/xbee_commissioning.c</label>
+        <link refid="xbee__commissioning_8c"/>
+      </node>
+      <node id="14">
+        <label>src/zigbee/zigbee_zcl.c</label>
+        <link refid="zigbee__zcl_8c"/>
+      </node>
+      <node id="15">
+        <label>src/zigbee/zigbee_zdo.c</label>
+        <link refid="zigbee__zdo_8c"/>
+      </node>
+      <node id="33">
+        <label>include/xbee/gpm.h</label>
+        <link refid="gpm_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>src/xbee/xbee_io.c</label>
+        <link refid="xbee__io_8c"/>
+      </node>
+      <node id="30">
+        <label>src/xbee/xbee_firmware.c</label>
+        <link refid="xbee__firmware_8c"/>
+      </node>
+      <node id="43">
+        <label>src/xbee/xbee_ota_client.c</label>
+        <link refid="xbee__ota__client_8c"/>
+      </node>
+      <node id="44">
+        <label>include/xbee/ota_server.h</label>
+        <link refid="ota__server_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>src/zigbee/zcl_client.c</label>
+        <link refid="zcl__client_8c"/>
+      </node>
+      <node id="45">
+        <label>src/xbee/xbee_ota_server.c</label>
+        <link refid="xbee__ota__server_8c"/>
+      </node>
+      <node id="49">
+        <label>src/zigbee/zcl_basic.c</label>
+        <link refid="zcl__basic_8c"/>
+      </node>
+      <node id="55">
+        <label>include/zigbee/zcl_client.h</label>
+        <link refid="zcl__client_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>include/wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>src/xbee/xbee_xmodem.c</label>
+        <link refid="xbee__xmodem_8c"/>
+      </node>
+      <node id="38">
+        <label>include/xbee/wpan.h</label>
+        <link refid="wpan_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>include/xbee/route.h</label>
+        <link refid="route_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>include/zigbee/zcl_identify.h</label>
+        <link refid="zcl__identify_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>include/zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>include/zigbee/zcl_commissioning.h</label>
+        <link refid="zcl__commissioning_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>src/xbee/xbee_reg_descr.c</label>
+        <link refid="xbee__reg__descr_8c"/>
+      </node>
+      <node id="23">
+        <label>src/xbee/xbee_scan.c</label>
+        <link refid="xbee__scan_8c"/>
+      </node>
+      <node id="25">
+        <label>include/xbee/sxa.h</label>
+        <link refid="sxa_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>src/xbee/xbee_sxa.c</label>
+        <link refid="xbee__sxa_8c"/>
+      </node>
+      <node id="12">
+        <label>src/xbee/xbee_wpan.c</label>
+        <link refid="xbee__wpan_8c"/>
+      </node>
+      <node id="18">
+        <label>include/xbee/atcmd.h</label>
+        <link refid="atcmd_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>include/zigbee/zcl_time.h</label>
+        <link refid="zcl__time_8h"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>include/xbee/ota_client.h</label>
+        <link refid="ota__client_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>include/xbee/sxa_socket.h</label>
+        <link refid="sxa__socket_8h"/>
+      </node>
+      <node id="29">
+        <label>include/xbee/atmode.h</label>
+        <link refid="atmode_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>src/zigbee/zcl_identify.c</label>
+        <link refid="zcl__identify_8c"/>
+      </node>
+      <node id="10">
+        <label>src/wpan/wpan_aps.c</label>
+        <link refid="wpan__aps_8c"/>
+      </node>
+      <node id="61">
+        <label>include/zigbee/zdo.h</label>
+        <link refid="zdo_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>include/xbee/xmodem.h</label>
+        <link refid="xmodem_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>include/xbee/commissioning.h</label>
+        <link refid="commissioning_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>src/xbee/xbee_route.c</label>
+        <link refid="xbee__route_8c"/>
+      </node>
+      <node id="41">
+        <label>include/xbee/firmware.h</label>
+        <link refid="firmware_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>include/zigbee/zcl_basic.h</label>
+        <link refid="zcl__basic_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>include/xbee/scan.h</label>
+        <link refid="scan_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>src/zigbee/zcl_onoff.c</label>
+        <link refid="zcl__onoff_8c"/>
+      </node>
+      <node id="19">
+        <label>src/xbee/xbee_atcmd.c</label>
+        <link refid="xbee__atcmd_8c"/>
+      </node>
+      <node id="47">
+        <label>src/xbee/xbee_transparent_serial.c</label>
+        <link refid="xbee__transparent__serial_8c"/>
+      </node>
+      <node id="52">
+        <label>include/zigbee/zcl_bacnet.h</label>
+        <link refid="zcl__bacnet_8h"/>
+      </node>
+      <node id="54">
+        <label>include/zigbee/zcl_basic_attributes.h</label>
+        <link refid="zcl__basic__attributes_8h"/>
+      </node>
+      <node id="21">
+        <label>src/xbee/xbee_discovery.c</label>
+        <link refid="xbee__discovery_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structwpan__envelope__t" prot="public">wpan_envelope_t</innerclass>
+    <innerclass refid="structwpan__cluster__table__entry__t" prot="public">wpan_cluster_table_entry_t</innerclass>
+    <innerclass refid="structwpan__endpoint__table__entry__t" prot="public">wpan_endpoint_table_entry_t</innerclass>
+    <innerclass refid="structwpan__dev__t" prot="public">wpan_dev_t</innerclass>
+    <innerclass refid="structwpan__conversation__t" prot="public">wpan_conversation_t</innerclass>
+    <innerclass refid="structwpan__ep__state__t" prot="public">wpan_ep_state_t</innerclass>
+      <sectiondef kind="user-defined">
+      <header>ZigBee Stack Profile IDs</header>
+      <description><para>4-bit values used in ZigBee beacons </para></description>
+      <memberdef kind="define" id="group__wpan__aps_1ga6c74dccd9d25158e8fae5f405708a412" prot="public" static="no">
+        <name>WPAN_STACK_PROFILE_PROPRIETARY</name>
+        <initializer>0x0</initializer>
+        <briefdescription>
+<para>Network Specific. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="70" column="9" bodyfile="include/wpan/aps.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga7836a9ee2baaed24f5f4f8368aee7ef4" prot="public" static="no">
+        <name>WPAN_STACK_PROFILE_ZIGBEE</name>
+        <initializer>0x1</initializer>
+        <briefdescription>
+<para>ZigBee (2006) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="72" column="9" bodyfile="include/wpan/aps.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga9f0ebaaaa46a7bdaa646050b927d5dbb" prot="public" static="no">
+        <name>WPAN_STACK_PROFILE_ZIGBEE_PRO</name>
+        <initializer>0x2</initializer>
+        <briefdescription>
+<para>ZigBee PRO (2007) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="74" column="9" bodyfile="include/wpan/aps.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="define" id="group__wpan__aps_1gabdbce33bdd976b65877a241842b73a20" prot="public" static="no">
+        <name>WPAN_PROFILE_ZDO</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+<para>ZigBee Device Object (aka ZigBee Device Profile) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="80" column="9" bodyfile="include/wpan/aps.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="group__zdo_1gab405baf051b6c2b3c85bc4e80aa5c2bb" compoundref="zigbee__zdo_8c" startline="65" endline="68">_zdo_endpoint_of</referencedby>
+        <referencedby refid="group__zdo_1gae4b6736d215caf2a10790761ed52443d" compoundref="zigbee__zdo_8c" startline="110" endline="139">_zdo_envelope_create</referencedby>
+        <referencedby refid="group__zdo_1gafbbece379bc09af360099d1e0825d507" compoundref="zigbee__zdo_8c" startline="422" endline="464">zdo_simple_desc_request</referencedby>
+        <referencedby refid="group__zdo_1gac842062e5e1a60d25cddf16ec22ef601" compoundref="zigbee__zdo_8c" startline="925" endline="969">zdo_send_descriptor_req</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga7cc56763cce2df7785d8d5e75f9e1a40" prot="public" static="no">
+        <name>WPAN_PROFILE_SMART_ENERGY</name>
+        <initializer>0x0109</initializer>
+        <briefdescription>
+<para>Smart Energy Profile. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="83" column="9" bodyfile="include/wpan/aps.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gaa90d7d1301c7de503f39113eb83e93e5" prot="public" static="no">
+        <name>WPAN_PROFILE_DIGI</name>
+        <initializer>0xC105</initializer>
+        <briefdescription>
+<para>Digi International, mfg-specific. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="86" column="9" bodyfile="include/wpan/aps.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="group__xbee__ota__client_1ga4805b029d840b86133ef62d64866c6af" compoundref="xbee__ota__client_8c" startline="157" endline="211">xbee_ota_init</referencedby>
+        <referencedby refid="group__xbee__transparent_1gafbf9e5ccdb17be373012bd690a76e570" compoundref="xbee__transparent__serial_8c" startline="32" endline="41">xbee_transparent_serial</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Manufacturer IDs</header>
+      <description><para>Contact the ZigBee Alliance to have a Manufacturer ID assigned to your company.</para><para>DO NOT use the Digi Manufacturer ID for your own manufacturer-specific profiles/clusters/attributes. </para></description>
+      <memberdef kind="define" id="group__wpan__aps_1gaa70d29d210f9c88ba4d98192da5fe49e" prot="public" static="no">
+        <name>WPAN_MANUFACTURER_DIGI</name>
+        <initializer>0x101E</initializer>
+        <briefdescription>
+<para>Digi International (MaxStream) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="96" column="9" bodyfile="include/wpan/aps.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga1ead60857a680665668ceefcc848476f" prot="public" static="no">
+        <name>WPAN_MANUFACTURER_DIGI2</name>
+        <initializer>0x1087</initializer>
+        <briefdescription>
+<para>Digi International. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="98" column="9" bodyfile="include/wpan/aps.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga5c6e0e7a7b405359bceb6d8ccb95ea87" prot="public" static="no">
+        <name>WPAN_MANUFACTURER_TEST1</name>
+        <initializer>0xFFF1</initializer>
+        <briefdescription>
+<para>Test Vendor #1. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="101" column="9" bodyfile="include/wpan/aps.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga45102d99f16b30fb8773a2c8d1a03865" prot="public" static="no">
+        <name>WPAN_MANUFACTURER_TEST2</name>
+        <initializer>0xFFF2</initializer>
+        <briefdescription>
+<para>Test Vendor #2. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="103" column="9" bodyfile="include/wpan/aps.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga688f8334e635eccefb38df9ae08d8689" prot="public" static="no">
+        <name>WPAN_MANUFACTURER_TEST3</name>
+        <initializer>0xFFF3</initializer>
+        <briefdescription>
+<para>Test Vendor #3. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="105" column="9" bodyfile="include/wpan/aps.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="define" id="group__wpan__aps_1ga860a08927c4e6d7656281713186c43dd" prot="public" static="no">
+        <name>WPAN_ENDPOINT_ZDO</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>ZigBee Device Object/Profile. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="111" column="9" bodyfile="include/wpan/aps.h" bodystart="111" bodyend="-1"/>
+        <referencedby refid="group__zdo_1gab405baf051b6c2b3c85bc4e80aa5c2bb" compoundref="zigbee__zdo_8c" startline="65" endline="68">_zdo_endpoint_of</referencedby>
+        <referencedby refid="group__zdo_1gae4b6736d215caf2a10790761ed52443d" compoundref="zigbee__zdo_8c" startline="110" endline="139">_zdo_envelope_create</referencedby>
+        <referencedby refid="group__zdo_1gafbbece379bc09af360099d1e0825d507" compoundref="zigbee__zdo_8c" startline="422" endline="464">zdo_simple_desc_request</referencedby>
+        <referencedby refid="group__zdo_1gac842062e5e1a60d25cddf16ec22ef601" compoundref="zigbee__zdo_8c" startline="925" endline="969">zdo_send_descriptor_req</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga0c664cef1ec55fd759b5ec9d4bea2618" prot="public" static="no">
+        <name>WPAN_ENDPOINT_DIGI_SE</name>
+        <initializer>0x5E</initializer>
+        <briefdescription>
+<para>Digi Smart Energy. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="113" column="9" bodyfile="include/wpan/aps.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga97ce39dc7f8bc63ac9d874b1c807158d" prot="public" static="no">
+        <name>WPAN_ENDPOINT_DDO</name>
+        <initializer>0xE6</initializer>
+        <briefdescription>
+<para>Digi Device Objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="115" column="9" bodyfile="include/wpan/aps.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga7a19c414fd3b7386a205d5150c604ef5" prot="public" static="no">
+        <name>WPAN_ENDPOINT_DIGI_DEVICE</name>
+        <initializer><ref refid="group__wpan__aps_1ga97ce39dc7f8bc63ac9d874b1c807158d" kindref="member">WPAN_ENDPOINT_DDO</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="116" column="9" bodyfile="include/wpan/aps.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga83cb85a2a1e374554f9ad735c9c06e7b" prot="public" static="no">
+        <name>WPAN_ENDPOINT_DIGI_DATA</name>
+        <initializer>0xE8</initializer>
+        <briefdescription>
+<para>Digi Data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="118" column="9" bodyfile="include/wpan/aps.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="group__xbee__ota__client_1ga4805b029d840b86133ef62d64866c6af" compoundref="xbee__ota__client_8c" startline="157" endline="211">xbee_ota_init</referencedby>
+        <referencedby refid="group__xbee__transparent_1gafbf9e5ccdb17be373012bd690a76e570" compoundref="xbee__transparent__serial_8c" startline="32" endline="41">xbee_transparent_serial</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga1a2c2bd5eb7dcb276d89e7f7e9d66d32" prot="public" static="no">
+        <name>WPAN_ENDPOINT_BROADCAST</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+<para>Broadcast Endpoint. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="120" column="9" bodyfile="include/wpan/aps.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para>Bitfields for <computeroutput>flags</computeroutput> parameter to a <ref refid="group__wpan__aps_1ga505477d0257efe527747c6d1f561cd6c" kindref="member">wpan_endpoint_send_fn()</ref>. </para></description>
+      <memberdef kind="define" id="group__wpan__aps_1ga527d35044842aa4e58eb3c4134eb968d" prot="public" static="no">
+        <name>WPAN_SEND_FLAG_NONE</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="322" column="9" bodyfile="include/wpan/aps.h" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga5b0b8ed1c327d9da8beb9dec38d3117a" prot="public" static="no">
+        <name>WPAN_SEND_FLAG_ENCRYPTED</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="323" column="9" bodyfile="include/wpan/aps.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <description><para>Values for <computeroutput>flags</computeroutput> field of <ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref>. </para></description>
+      <memberdef kind="define" id="group__wpan__aps_1ga738343e3e3392f22d0a5d7615648ba53" prot="public" static="no">
+        <name>WPAN_CLUST_FLAG_NONE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+<para>no flags </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="222" column="11" bodyfile="include/wpan/aps.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga2024b5d21c6f8c2f151cc2b0576c08f4" prot="public" static="no">
+        <name>WPAN_CLUST_FLAG_INPUT</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+<para>input/server cluster (typically receives requests) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="224" column="11" bodyfile="include/wpan/aps.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga0456c33bdaa673f37f9285a3f5ca0172" prot="public" static="no">
+        <name>WPAN_CLUST_FLAG_OUTPUT</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>output/client cluster (typically receives responses) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="226" column="11" bodyfile="include/wpan/aps.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gaf1185ec162a18803e11a83491bf57d3d" prot="public" static="no">
+        <name>WPAN_CLUST_FLAG_INOUT</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+<para>both client and server cluster </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="228" column="11" bodyfile="include/wpan/aps.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga9e0a1a0abf5594d8fa5a38b1ca40b3bc" prot="public" static="no">
+        <name>WPAN_CLUST_FLAG_SERVER</name>
+        <initializer><ref refid="group__wpan__aps_1ga2024b5d21c6f8c2f151cc2b0576c08f4" kindref="member">WPAN_CLUST_FLAG_INPUT</ref></initializer>
+        <briefdescription>
+<para>alias name for input cluster (uses ZCL terminology) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="230" column="11" bodyfile="include/wpan/aps.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga9aae0646b212af63cbb07c98a33cd986" prot="public" static="no">
+        <name>WPAN_CLUST_FLAG_CLIENT</name>
+        <initializer><ref refid="group__wpan__aps_1ga0456c33bdaa673f37f9285a3f5ca0172" kindref="member">WPAN_CLUST_FLAG_OUTPUT</ref></initializer>
+        <briefdescription>
+<para>alias name for output cluster (uses ZCL terminology) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="232" column="11" bodyfile="include/wpan/aps.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga1eafd87038a2134da7a1f72e6801d23b" prot="public" static="no">
+        <name>WPAN_CLUST_FLAG_ENCRYPT</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+<para>Data sent or received by this cluster must be encrypted. </para>        </briefdescription>
+        <detaileddescription>
+<para>Do not accept unencrypted broadcast messages. If using this flag on a non-ZCL cluster, be sure to set WPAN_CLUST_FLAG_NOT_ZCL as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="237" column="11" bodyfile="include/wpan/aps.h" bodystart="237" bodyend="-1"/>
+        <referencedby refid="group__xbee__ota__client_1ga88905a78517417dd42f6356038717d01" compoundref="xbee__ota__client_8c" startline="119" endline="154">_xbee_ota_xmodem_write</referencedby>
+        <referencedby refid="group__xbee__ota__client_1ga4805b029d840b86133ef62d64866c6af" compoundref="xbee__ota__client_8c" startline="157" endline="211">xbee_ota_init</referencedby>
+        <referencedby refid="group__xbee__ota__server_1ga22cb77be06faba4020a4f5e0daf48f4f" compoundref="xbee__ota__server_8c" startline="30" endline="77">xbee_ota_server_cmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga1ccfd85378afaa02de5c3f9c71c17df4" prot="public" static="no">
+        <name>WPAN_CLUST_FLAG_ENCRYPT_UNICAST</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+<para>Unicast data sent or received by this cluster must be encrypted, but unencrypted broadcast frames are OK. </para>        </briefdescription>
+        <detaileddescription>
+<para>If using this flag on a non-ZCL cluster, be sure to set WPAN_CLUST_FLAG_NOT_ZCL as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="242" column="11" bodyfile="include/wpan/aps.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gacb0e365a8c5e72ee90be503513e7e630" prot="public" static="no">
+        <name>WPAN_CLUST_FLAG_NOT_ZCL</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+<para>this cluster is NOT using the ZigBee Cluster Library (ZCL) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="244" column="11" bodyfile="include/wpan/aps.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__wpan__aps_1ga6a6e8a32dc7117f44bdca2802a1e54aa" prot="public" static="no">
+        <name>WPAN_ENVELOPE_CLUSTER_FLAGS</name>
+        <initializer>0x00FF</initializer>
+        <briefdescription>
+<para>mask of WPAN_CLUST_FLAG_* flags for the cluster tied to this envelope </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="53" column="11" bodyfile="include/wpan/aps.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga92a0f27267b04aa691e184b428e8f7c6" prot="public" static="no">
+        <name>WPAN_ENVELOPE_BROADCAST_ADDR</name>
+        <initializer>0x0100</initializer>
+        <briefdescription>
+<para>frame was received on a broadcast address </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="55" column="11" bodyfile="include/wpan/aps.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" compoundref="xbee__wpan_8c" startline="54" endline="93">_xbee_handle_receive_explicit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga9572c340b083c6a51b0473fee184ea2c" prot="public" static="no">
+        <name>WPAN_ENVELOPE_BROADCAST_EP</name>
+        <initializer>0x0200</initializer>
+        <briefdescription>
+<para>frame was received on the broadcast endpoint (0xFF) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="57" column="11" bodyfile="include/wpan/aps.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga3bf12c3b9fd0afac2c9f58de8e7c38e9" prot="public" static="no">
+        <name>WPAN_ENVELOPE_RX_APS_ENCRYPT</name>
+        <initializer>0x0400</initializer>
+        <briefdescription>
+<para>frame was received with APS encryption </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="59" column="11" bodyfile="include/wpan/aps.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="group__xbee__ota__server_1ga22cb77be06faba4020a4f5e0daf48f4f" compoundref="xbee__ota__server_8c" startline="30" endline="77">xbee_ota_server_cmd</referencedby>
+        <referencedby refid="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" compoundref="xbee__wpan_8c" startline="54" endline="93">_xbee_handle_receive_explicit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gacbfdff1cef70167f178c4e05b69f65fe" prot="public" static="no">
+        <name>WPAN_CLUSTER_END_OF_LIST</name>
+        <initializer>0xFFFF</initializer>
+        <briefdescription>
+<para>Cluster ID used to mark the end of <computeroutput>cluster_table</computeroutput> in <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="280" column="9" bodyfile="include/wpan/aps.h" bodystart="280" bodyend="-1"/>
+        <referencedby refid="group__zdo_1ga1a65d88af9f0c9906d548aa1ff2586f7" compoundref="zigbee__zdo_8c" startline="199" endline="221">_match_desc_cluster_list</referencedby>
+        <referencedby refid="group__zdo_1ga558539813d6a9c8813eeae855e77385f" compoundref="zigbee__zdo_8c" startline="483" endline="509">_simple_desc_cluster_list</referencedby>
+        <referencedby refid="group__wpan__aps_1ga1c725384b21faf5953683d7b028c7be3" compoundref="wpan__aps_8c" startline="62" endline="80">wpan_cluster_match</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga55a7fbd8adf019d268f17b6ede90fe0f" prot="public" static="no">
+        <name>WPAN_CLUST_ENTRY_LIST_END</name>
+        <initializer>{ <ref refid="group__wpan__aps_1gacbfdff1cef70167f178c4e05b69f65fe" kindref="member">WPAN_CLUSTER_END_OF_LIST</ref> }</initializer>
+        <briefdescription>
+<para>Macro for a <ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref> that can be used to mark the end of the table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="284" column="9" bodyfile="include/wpan/aps.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga550a679be9209ba69cdc3d6a0846b86d" prot="public" static="no">
+        <name>WPAN_FLAG_NONE</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="403" column="11" bodyfile="include/wpan/aps.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gaa06c0d38b4a130f9657abf26c73b49dd" prot="public" static="no">
+        <name>WPAN_FLAG_JOINED</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>device has joined a network (but not necessarily authenticated) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="405" column="11" bodyfile="include/wpan/aps.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga6508b417838fc0a043f5570b65e3f24b" prot="public" static="no">
+        <name>WPAN_FLAG_AUTHENTICATED</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+<para>device completed Key Establishment and can send APS encrypted frames </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="407" column="11" bodyfile="include/wpan/aps.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gab7d95fae8b625fd39ae3b6f168a5511f" prot="public" static="no">
+        <name>WPAN_FLAG_AUTHENTICATION_ENABLED</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+<para>device has encryption enabled (EO non-zero) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="409" column="11" bodyfile="include/wpan/aps.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gabe1e612e16ea40f970a7f160cae6de3a" prot="public" static="no">
+        <name>WPAN_DEV_IS_JOINED</name>
+        <param><defname>dev</defname></param>
+        <initializer>((dev)-&gt;flags &amp; <ref refid="group__wpan__aps_1gaa06c0d38b4a130f9657abf26c73b49dd" kindref="member">WPAN_FLAG_JOINED</ref>)</initializer>
+        <briefdescription>
+<para>Macro to test whether a device has joined the network. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(<ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> FAR *) to test </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device has not joined the network </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device has joined the network </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="422" column="9" bodyfile="include/wpan/aps.h" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga5ba1c4d72eeac9bb8bd97ee811d7aa05" prot="public" static="no">
+        <name>WPAN_DEV_IS_AUTHENTICATED</name>
+        <param><defname>dev</defname></param>
+        <initializer>((dev)-&gt;flags &amp; <ref refid="group__wpan__aps_1ga6508b417838fc0a043f5570b65e3f24b" kindref="member">WPAN_FLAG_AUTHENTICATED</ref>)</initializer>
+        <briefdescription>
+<para>Macro to test whether a device has authenticated with the trust center. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(<ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> FAR *) to test </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device has authenticated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device has not authenticated </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="428" column="9" bodyfile="include/wpan/aps.h" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga0ca55f0e8039df7fba03c041e4cf5a79" prot="public" static="no">
+        <name>WPAN_ENDPOINT_END_OF_LIST</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+<para>Endpoint ID used to mark the end of <computeroutput>endpoint_table</computeroutput> in <ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="431" column="9" bodyfile="include/wpan/aps.h" bodystart="431" bodyend="-1"/>
+        <referencedby refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" compoundref="wpan__aps_8c" startline="105" endline="132">wpan_endpoint_get_next</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gaac571cafa96f8201c714feb0634afa92" prot="public" static="no">
+        <name>WPAN_ENDPOINT_TABLE_END</name>
+        <initializer>{ <ref refid="group__wpan__aps_1ga0ca55f0e8039df7fba03c041e4cf5a79" kindref="member">WPAN_ENDPOINT_END_OF_LIST</ref> }</initializer>
+        <briefdescription>
+<para>Macro for a <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> that can be used to mark the end of the table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="435" column="9" bodyfile="include/wpan/aps.h" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga05c007913497e9a6286b7b2cdcb3f37f" prot="public" static="no">
+        <name>WPAN_APS_PROFILE_ANY</name>
+        <initializer>0xFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="457" column="9" bodyfile="include/wpan/aps.h" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1ga7f0128cee60f97e9f07bc95df3a0a1f1" prot="public" static="no">
+        <name>WPAN_CONVERSATION_END</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="495" column="9" bodyfile="include/wpan/aps.h" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gaef235cbd4d3160abe5f856d86ad70555" prot="public" static="no">
+        <name>WPAN_CONVERSATION_CONTINUE</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="496" column="9" bodyfile="include/wpan/aps.h" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gae34b1efc8ba99add17fcd767852197d4" prot="public" static="no">
+        <name>WPAN_MAX_CONVERSATIONS</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para>Number of outstanding requests to track in a <ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref> associated with an endpoint. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="513" column="10" bodyfile="include/wpan/aps.h" bodystart="513" bodyend="-1"/>
+        <referencedby refid="group__wpan__aps_1gae5f88ed40bd334d963e261947b77b980" compoundref="wpan__aps_8c" startline="299" endline="339">wpan_conversation_register</referencedby>
+        <referencedby refid="group__wpan__aps_1gaf56e4d0e52462b5cf41c5fa5f23ea952" compoundref="wpan__aps_8c" startline="427" endline="481">wpan_conversation_response</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__wpan__aps_1gaaa330f432d7a6bccdb393a656ddfe4d3" prot="public" static="no">
+        <name>WPAN_CONVERSATION_TIMEOUT</name>
+        <initializer>30</initializer>
+        <briefdescription>
+<para>Default conversation recycle timeout (seconds) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="518" column="10" bodyfile="include/wpan/aps.h" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__wpan__aps_1ga1227ab13b41d82d9c9c9080662f74cf7" prot="public" static="no">
+        <name>wpan_clust_digi</name>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ac46c70b2d273c05acf42fd4a19583187" prot="public">
+          <name>DIGI_CLUST_SLEEP_SYNC</name>
+          <initializer>= 0x0009</initializer>
+          <briefdescription>
+<para>DigiMesh Sleeping Router Sync. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a8208e143b452d11140e487d7d29eb38f" prot="public">
+          <name>DIGI_CLUST_SERIAL</name>
+          <initializer>= 0x0011</initializer>
+          <briefdescription>
+<para>Serial data. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a378346cc570b606ab6984ade7e1ff01d" prot="public">
+          <name>DIGI_CLUST_LOOPBACK</name>
+          <initializer>= 0x0012</initializer>
+          <briefdescription>
+<para>Serial loopback transmit. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ae94c438b8e786806a840eb6cae8603fd" prot="public">
+          <name>DIGI_CLUST_ND_COMMAND</name>
+          <initializer>= 0x0015</initializer>
+          <briefdescription>
+<para>Digi ND Command. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a6606012ac5ed20a518f28ff156be7652" prot="public">
+          <name>DIGI_CLUST_DN_COMMAND</name>
+          <initializer>= 0x0016</initializer>
+          <briefdescription>
+<para>Digi DN Command. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7aa637ec5b1224724b075a36eefa351126" prot="public">
+          <name>DIGI_CLUST_REMOTE_COMMAND</name>
+          <initializer>= 0x0021</initializer>
+          <briefdescription>
+<para>Remote Command Request. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ae81533aa4490e5001cc0866c0572fc2e" prot="public">
+          <name>DIGI_CLUST_NR_COMMAND</name>
+          <initializer>= 0x0022</initializer>
+          <briefdescription>
+<para>Digi NR Command. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a66527ddc0653858888ce47c469c95349" prot="public">
+          <name>DIGI_CLUST_IODATA</name>
+          <initializer>= 0x0092</initializer>
+          <briefdescription>
+<para>Unsolicited I/O data sample. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a8d4df2bd5e335f87df0e038e803796ef" prot="public">
+          <name>DIGI_CLUST_WATCHPORT</name>
+          <initializer>= 0x0094</initializer>
+          <briefdescription>
+<para>Unsolicited Watchport sensor. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ad19431fd18576cc8463e8ac362a8579c" prot="public">
+          <name>DIGI_CLUST_NODEID_MESSAGE</name>
+          <initializer>= 0x0095</initializer>
+          <briefdescription>
+<para>Node ID Message. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a1705862df524f4ecaab07a18a0b3f0d1" prot="public">
+          <name>DIGI_CLUST_DN_RESPONSE</name>
+          <initializer>= 0x0096</initializer>
+          <briefdescription>
+<para>Digi DN Response. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a84486276a61e57d2d2ff9a85d052fdb5" prot="public">
+          <name>DIGI_CLUST_REMOTE_RESPONSE</name>
+          <initializer>= 0x00A1</initializer>
+          <briefdescription>
+<para>Digi Remote Command Response. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a29b2b3f9713deb027140197f2ef499fa" prot="public">
+          <name>DIGI_CLUST_NR_RESPONSE</name>
+          <initializer>= 0x00A2</initializer>
+          <briefdescription>
+<para>Digi NR Response. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a0da3cc1e291aeaaff4492bb1cec504fa" prot="public">
+          <name>DIGI_CLUST_INDIRECT_ROUTE_ERR</name>
+          <initializer>= 0x00B0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7aedb825ada66b8c7bbfbeaee6d9dfba0a" prot="public">
+          <name>DIGI_CLUST_PROG_XBEE_OTA_UPD</name>
+          <initializer>= 0x1000</initializer>
+          <briefdescription>
+<para>Start OTA update of PXBee App. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a95c58dbf91ce9b915abdc1fdbc236ebe" prot="public">
+          <name>DIGI_CLUST_NBRFWUPDATE</name>
+          <initializer>= 0x71FE</initializer>
+          <briefdescription>
+<para>Neighbor FW update. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a378e1e715bf4f25284c4739dccdc8c79" prot="public">
+          <name>DIGI_CLUST_REMFWUPDATE</name>
+          <initializer>= 0x71FF</initializer>
+          <briefdescription>
+<para>Remote FW update. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7abc3b7a2d5a20c8f541dce60eb523694f" prot="public">
+          <name>DIGI_CLUST_FWUPDATERESP</name>
+          <initializer>= (int)0xF1FF</initializer>
+          <briefdescription>
+<para>FW update response. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Digi Data cluster IDs (endpoint <ref refid="group__wpan__aps_1ga83cb85a2a1e374554f9ad735c9c06e7b" kindref="member">WPAN_ENDPOINT_DIGI_DATA</ref>) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="126" column="1" bodyfile="include/wpan/aps.h" bodystart="125" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__wpan__aps_1ga8575b0db762a5fbb858d4994c9b657e3" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* wpan_aps_handler_fn) (const wpan_envelope_t FAR *envelope, void FAR *context)</definition>
+        <argsstring>)(const wpan_envelope_t FAR *envelope, void FAR *context)</argsstring>
+        <name>wpan_aps_handler_fn</name>
+        <briefdescription>
+<para>General handler used in the cluster table. </para>        </briefdescription>
+        <detaileddescription>
+<para>Dispatcher searches an endpoint&apos;s cluster table for a matching cluster, and hands the frame off to the cluster&apos;s handler.</para><para>If the cluster&apos;s handler is set to <computeroutput>NULL</computeroutput>, or the frame is for a cluster ID that does not appear in the table, the dispatcher hands the frame off to the endpoint&apos;s handler.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>information about the frame (addresses, endpoint, profile, cluster, etc.) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user context (from cluster table)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handled data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>some sort of error processing data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="167" column="1" bodyfile="include/wpan/aps.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__wpan__aps_1ga23d4e0e2f2137c75700dfec73b2cc80f" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* wpan_ep_handler_fn) (const wpan_envelope_t FAR *envelope, struct wpan_ep_state_t FAR *ep_state)</definition>
+        <argsstring>)(const wpan_envelope_t FAR *envelope, struct wpan_ep_state_t FAR *ep_state)</argsstring>
+        <name>wpan_ep_handler_fn</name>
+        <briefdescription>
+<para>General handler used in the endpoint table. </para>        </briefdescription>
+        <detaileddescription>
+<para>If a cluster&apos;s handler is set to <computeroutput>NULL</computeroutput>, or the frame is for a cluster ID that does not appear in the table, the dispatcher hands the frame off to the endpoint&apos;s handler.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>information about the frame (addresses, endpoint, profile, cluster, etc.) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">ep_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to endpoint state structure</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handled data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>some sort of error processing data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="191" column="1" bodyfile="include/wpan/aps.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__wpan__aps_1ga505477d0257efe527747c6d1f561cd6c" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* wpan_endpoint_send_fn) (const wpan_envelope_t FAR *envelope, uint16_t flags)</definition>
+        <argsstring>)(const wpan_envelope_t FAR *envelope, uint16_t flags)</argsstring>
+        <name>wpan_endpoint_send_fn</name>
+        <briefdescription>
+<para>Function called by the WPAN APS layer to send a frame out on the network. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is part of the glue that links the XBee layer with the WPAN/ZigBee layers.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>information about the frame (addresses, endpoint, profile, cluster, payload, etc.) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flags related to sending, see WPAN_SEND_FLAG_* macros<itemizedlist>
+<listitem><para>#WPAN_SEND_FLAG_NONE: no special behavior</para></listitem><listitem><para>#WPAN_SEND_FLAG_ENCRYPTED: use APS layer encryption</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frame sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error sending frame </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EMSGSIZE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>payload is too large</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000024"><xreftitle>Todo</xreftitle><xrefdescription><para>Add support for a broadcast radius? Don&apos;t send Tx Status? Use frame ID 0?</para></xrefdescription></xrefsect></para><para><xrefsect id="todo_1_todo000025"><xreftitle>Todo</xreftitle><xrefdescription><para>come up with standard error codes for the following possible errors? outbound frame buffer is full, invalid data in envelope, payload is too big </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="315" column="1" bodyfile="include/wpan/aps.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__wpan__aps_1ga9287e4838cc6dc51febe18acab6738ce" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* _wpan_config_fn) (struct wpan_dev_t *dev,...)</definition>
+        <argsstring>)(struct wpan_dev_t *dev,...)</argsstring>
+        <name>_wpan_config_fn</name>
+        <briefdescription>
+<para>Function called by the WPAN APS layer to configure the underlying network device. </para>        </briefdescription>
+        <detaileddescription>
+<internal><para>Exact implementation is currently undefined, but this entry exists for future expansion of the API.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device to configure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>...</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable arguments to the function</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>configuration request processed successfully </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&gt;0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error parsing parameter #<computeroutput>retval</computeroutput> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="341" column="1" bodyfile="include/wpan/aps.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__wpan__aps_1gafed1542f6becf2d81fd84ef2f0ae2833" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* wpan_tick_fn) (struct wpan_dev_t *dev)</definition>
+        <argsstring>)(struct wpan_dev_t *dev)</argsstring>
+        <name>wpan_tick_fn</name>
+        <briefdescription>
+<para>Function called by the WPAN APS layer to have the underlying device read and dispatch frames. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device to tick</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of frames processed during the tick </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="352" column="1" bodyfile="include/wpan/aps.h" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__wpan__aps_1ga4239e4654962f88f42a53abae18e7827" prot="public" static="no">
+        <type>const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *(*</type>
+        <definition>typedef const wpan_endpoint_table_entry_t*(* wpan_endpoint_get_next_fn) (struct wpan_dev_t *dev, const wpan_endpoint_table_entry_t *ep)</definition>
+        <argsstring>)(struct wpan_dev_t *dev, const wpan_endpoint_table_entry_t *ep)</argsstring>
+        <name>wpan_endpoint_get_next_fn</name>
+        <briefdescription>
+<para>Custom function for walking the endpoint table. </para>        </briefdescription>
+        <detaileddescription>
+<para>The application can define its own function to walk the endpoint table, possibly to support a dynamic table or a table where endpoints aren&apos;t always visible.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device with endpoint table to walk </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL to return first entry in table, or a pointer previously returned by this function to get the next entry</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>dev</emphasis> is invalid or reached end of table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>next entry from table</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__wpan__aps_1ga0a88c1b17d1f9a42a53668b14f15e205" kindref="member">wpan_endpoint_match()</ref>, <ref refid="group__wpan__aps_1ga1c725384b21faf5953683d7b028c7be3" kindref="member">wpan_cluster_match()</ref>, <ref refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" kindref="member">wpan_endpoint_get_next()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="372" column="1" bodyfile="include/wpan/aps.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__wpan__aps_1gabf0a6b85c9ff3ff9104c8b58c1436d72" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* wpan_response_fn) (struct wpan_conversation_t FAR *conversation, const wpan_envelope_t FAR *envelope)</definition>
+        <argsstring>)(struct wpan_conversation_t FAR *conversation, const wpan_envelope_t FAR *envelope)</argsstring>
+        <name>wpan_response_fn</name>
+        <briefdescription>
+<para>Handler registered with <ref refid="group__wpan__aps_1gae5f88ed40bd334d963e261947b77b980" kindref="member">wpan_conversation_register()</ref> to process responses to outstanding requests. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">conversation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to entry in conversation table. Handler can use the pointer to access the context and transaction ID from the conversation, or request deletion of the conversation via <ref refid="group__wpan__aps_1gad36c04a3f2741f52710ab7768d1fcda8" kindref="member">wpan_conversation_delete()</ref>. Never NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>envelope with response or NULL if there was a timeout</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>WPAN_CONVERSATION_END</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end of conversation, no more responses expected </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WPAN_CONVERSATION_CONTINUE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>leave conversation open, more responses are expected </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="489" column="1" bodyfile="include/wpan/aps.h" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__wpan__aps_1ga1254464011d2d98c13db7b0b3d41c25b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug int</type>
+        <definition>int wpan_tick</definition>
+        <argsstring>(wpan_dev_t *dev)</argsstring>
+        <name>wpan_tick</name>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+<para>Calls the underlying hardware tick function to process received frames, and times out expired conversations. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WPAN device to tick</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>&gt;=0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of frames processed during the tick </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device does not have a <computeroutput>tick</computeroutput> function assigned to it </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>&lt;0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>some other error encountered during the tick </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="860" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="860" bodyend="881"/>
+        <references refid="group__wpan__aps_1gad55133545fcf6ebc2d630057abf5ad48" compoundref="wpan__aps_8c" startline="368" endline="400">_wpan_endpoint_expire_conversations</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__wpan__aps_1ga389966cb276b33004b14ee698c270347" compoundref="aps_8h" startline="264">wpan_endpoint_table_entry_t::ep_state</references>
+        <references refid="group__wpan__aps_1gab472632c6a95d7856d1ea137441ec6a2" compoundref="aps_8h" startline="388">wpan_dev_t::tick</references>
+        <references refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" compoundref="wpan__aps_8c" startline="105" endline="132">wpan_endpoint_get_next</references>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1ga1c725384b21faf5953683d7b028c7be3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug const <ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref> *</type>
+        <definition>const wpan_cluster_table_entry_t * wpan_cluster_match</definition>
+        <argsstring>(uint16_t match, uint8_t mask, const wpan_cluster_table_entry_t *entry)</argsstring>
+        <name>wpan_cluster_match</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>match</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref> *</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+<para>Search a cluster table for a matching cluster ID. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">match</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID to match </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags to match against the <computeroutput>flags</computeroutput> member of the <ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref> structure. If any flags match, the entry is returned. Typically one of<itemizedlist>
+<listitem><para><ref refid="group__wpan__aps_1ga2024b5d21c6f8c2f151cc2b0576c08f4" kindref="member">WPAN_CLUST_FLAG_INPUT</ref> (or <ref refid="group__wpan__aps_1ga9e0a1a0abf5594d8fa5a38b1ca40b3bc" kindref="member">WPAN_CLUST_FLAG_SERVER</ref>)</para></listitem><listitem><para><ref refid="group__wpan__aps_1ga0456c33bdaa673f37f9285a3f5ca0172" kindref="member">WPAN_CLUST_FLAG_OUTPUT</ref> (or <ref refid="group__wpan__aps_1ga9aae0646b212af63cbb07c98a33cd986" kindref="member">WPAN_CLUST_FLAG_CLIENT</ref>) </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">entry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to list of entries to search</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>entry</emphasis> is invalid or search reached <ref refid="group__wpan__aps_1gacbfdff1cef70167f178c4e05b69f65fe" kindref="member">WPAN_CLUSTER_END_OF_LIST</ref> without finding a match. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to matching entry from table.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" kindref="member">wpan_endpoint_get_next()</ref>, <ref refid="group__wpan__aps_1ga0a88c1b17d1f9a42a53668b14f15e205" kindref="member">wpan_endpoint_match()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="62" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="62" bodyend="80"/>
+        <references refid="group__wpan__aps_1ga262a92f94287e77cb56350951893bae2" compoundref="aps_8h" startline="203">wpan_cluster_table_entry_t::cluster_id</references>
+        <references refid="group__wpan__aps_1gaa2585d779da0ab21273a8d92de9a0ebe" compoundref="aps_8h" startline="216">wpan_cluster_table_entry_t::flags</references>
+        <references refid="group__wpan__aps_1gacbfdff1cef70167f178c4e05b69f65fe" compoundref="aps_8h" startline="280">WPAN_CLUSTER_END_OF_LIST</references>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *</type>
+        <definition>const wpan_endpoint_table_entry_t * wpan_endpoint_get_next</definition>
+        <argsstring>(wpan_dev_t *dev, const wpan_endpoint_table_entry_t *ep)</argsstring>
+        <name>wpan_endpoint_get_next</name>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *</type>
+          <declname>ep</declname>
+        </param>
+        <briefdescription>
+<para>Function used to walk a device&apos;s endpoint table. </para>        </briefdescription>
+        <detaileddescription>
+<para>For most devices, this will just walk the entries in dev-&gt;endpoint_table. For custom applications a function may dynamically return entries.</para><para>Use of this function is the only way to walk the endpoint table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device with endpoint table to walk </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL to return first entry in table, or a pointer previously returned by this function to get the next entry</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>dev</emphasis> is invalid or reached end of table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>next entry from table</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__wpan__aps_1ga0a88c1b17d1f9a42a53668b14f15e205" kindref="member">wpan_endpoint_match()</ref>, <ref refid="group__wpan__aps_1ga1c725384b21faf5953683d7b028c7be3" kindref="member">wpan_cluster_match()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="105" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="105" bodyend="132"/>
+        <references refid="group__wpan__aps_1ga7d397493728da2bca8d55b2d61c4ec5d" compoundref="aps_8h" startline="252">wpan_endpoint_table_entry_t::endpoint</references>
+        <references refid="group__wpan__aps_1ga249b57f4a0559c0adb038f68d9b5c443" compoundref="aps_8h" startline="390">wpan_dev_t::endpoint_get_next</references>
+        <references refid="group__wpan__aps_1gad7c834ea25a2f008caaf40ec08aa5a86" compoundref="aps_8h" startline="414">wpan_dev_t::endpoint_table</references>
+        <references refid="group__wpan__aps_1ga0ca55f0e8039df7fba03c041e4cf5a79" compoundref="aps_8h" startline="431">WPAN_ENDPOINT_END_OF_LIST</references>
+        <referencedby refid="group__wpan__aps_1ga1254464011d2d98c13db7b0b3d41c25b" compoundref="wpan__aps_8c" startline="860" endline="881">wpan_tick</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1ga0a88c1b17d1f9a42a53668b14f15e205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *</type>
+        <definition>const wpan_endpoint_table_entry_t * wpan_endpoint_match</definition>
+        <argsstring>(wpan_dev_t *dev, uint8_t endpoint, uint16_t profile_id)</argsstring>
+        <name>wpan_endpoint_match</name>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>endpoint</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>profile_id</declname>
+        </param>
+        <briefdescription>
+<para>Walk a device&apos;s endpoint table looking for a matching endpoint ID and profile ID. </para>        </briefdescription>
+        <detaileddescription>
+<para>Used by the endpoint dispatcher and ZDO layer to describe available endpoints on this device.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device with endpoint table to search. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">endpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Endpoint number to search for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">profile_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Profile to match or WPAN_APS_PROFILE_ANY to search on endpoint number only.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>dev</emphasis> is invalid or reached end of table without finding a match </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>next entry from table</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__wpan__aps_1ga2cc975231963e0eb75c449c11b1d95de" kindref="member">wpan_endpoint_of_cluster()</ref>, <ref refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" kindref="member">wpan_endpoint_get_next()</ref>, <ref refid="group__wpan__aps_1ga1c725384b21faf5953683d7b028c7be3" kindref="member">wpan_cluster_match()</ref>, <ref refid="group__wpan__aps_1gab448ec18a47178272336da5eacfa2290" kindref="member">wpan_endpoint_of_envelope()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="160" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="160" bodyend="179"/>
+        <referencedby refid="group__zdo_1gab405baf051b6c2b3c85bc4e80aa5c2bb" compoundref="zigbee__zdo_8c" startline="65" endline="68">_zdo_endpoint_of</referencedby>
+        <referencedby refid="group__wpan__aps_1gaf56e4d0e52462b5cf41c5fa5f23ea952" compoundref="wpan__aps_8c" startline="427" endline="481">wpan_conversation_response</referencedby>
+        <referencedby refid="group__wpan__aps_1gab448ec18a47178272336da5eacfa2290" compoundref="wpan__aps_8c" startline="204" endline="211">wpan_endpoint_of_envelope</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1gab448ec18a47178272336da5eacfa2290" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *</type>
+        <definition>const wpan_endpoint_table_entry_t * wpan_endpoint_of_envelope</definition>
+        <argsstring>(const wpan_envelope_t *env)</argsstring>
+        <name>wpan_endpoint_of_envelope</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>env</declname>
+        </param>
+        <briefdescription>
+<para>Look up the endpoint table entry for the source endpoint of an envelope. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">env</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Envelope for lookup. Uses <emphasis>env-&gt;source_endpoint</emphasis> and <emphasis>env-&gt;profile_id</emphasis> to find the endpoint table entry for <emphasis>env-&gt;dev</emphasis>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter, or reached end of table without finding a match </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entry from table</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__wpan__aps_1ga2cc975231963e0eb75c449c11b1d95de" kindref="member">wpan_endpoint_of_cluster()</ref>, <ref refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" kindref="member">wpan_endpoint_get_next()</ref>, <ref refid="group__wpan__aps_1ga1c725384b21faf5953683d7b028c7be3" kindref="member">wpan_cluster_match()</ref>, <ref refid="group__wpan__aps_1ga0a88c1b17d1f9a42a53668b14f15e205" kindref="member">wpan_endpoint_match()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="204" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="204" bodyend="211"/>
+        <references refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" compoundref="aps_8h" startline="42">wpan_envelope_t::dev</references>
+        <references refid="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" compoundref="aps_8h" startline="45">wpan_envelope_t::profile_id</references>
+        <references refid="group__wpan__aps_1ga9781a5a281ee97f7f67d8ebe2c4f54db" compoundref="aps_8h" startline="49">wpan_envelope_t::source_endpoint</references>
+        <references refid="group__wpan__aps_1ga0a88c1b17d1f9a42a53668b14f15e205" compoundref="wpan__aps_8c" startline="160" endline="179">wpan_endpoint_match</references>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1ga2cc975231963e0eb75c449c11b1d95de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *</type>
+        <definition>const wpan_endpoint_table_entry_t * wpan_endpoint_of_cluster</definition>
+        <argsstring>(wpan_dev_t *dev, uint16_t profile_id, uint16_t cluster_id, uint8_t mask)</argsstring>
+        <name>wpan_endpoint_of_cluster</name>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>profile_id</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>cluster_id</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+<para>Walk a device&apos;s endpoint table looking for a matching profile ID and cluster ID. </para>        </briefdescription>
+        <detaileddescription>
+<para>Used to find the correct endpoint to use for sending ZCL client requests.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device with endpoint table to search. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">profile_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Profile to match or WPAN_APS_PROFILE_ANY to search on cluster ID only. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cluster_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cluster ID to search for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags to match against the <computeroutput>flags</computeroutput> member of the <ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref> structure. If any flags match, the entry is returned. Typically one of<itemizedlist>
+<listitem><para><ref refid="group__wpan__aps_1ga2024b5d21c6f8c2f151cc2b0576c08f4" kindref="member">WPAN_CLUST_FLAG_INPUT</ref> (or <ref refid="group__wpan__aps_1ga9e0a1a0abf5594d8fa5a38b1ca40b3bc" kindref="member">WPAN_CLUST_FLAG_SERVER</ref>)</para></listitem><listitem><para><ref refid="group__wpan__aps_1ga0456c33bdaa673f37f9285a3f5ca0172" kindref="member">WPAN_CLUST_FLAG_OUTPUT</ref> (or <ref refid="group__wpan__aps_1ga9aae0646b212af63cbb07c98a33cd986" kindref="member">WPAN_CLUST_FLAG_CLIENT</ref>)</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>dev</emphasis> is invalid or reached end of table without finding a match </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matching entry from table</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__wpan__aps_1ga0a88c1b17d1f9a42a53668b14f15e205" kindref="member">wpan_endpoint_match()</ref>, <ref refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" kindref="member">wpan_endpoint_get_next()</ref>, <ref refid="group__wpan__aps_1ga1c725384b21faf5953683d7b028c7be3" kindref="member">wpan_cluster_match()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="243" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="243" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1ga95e2bb4e4c546191c059f54179064fc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug void</type>
+        <definition>void wpan_envelope_create</definition>
+        <argsstring>(wpan_envelope_t *envelope, wpan_dev_t *dev, const addr64 FAR *ieee, uint16_t network_addr)</argsstring>
+        <name>wpan_envelope_create</name>
+        <param>
+          <type><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>const <ref refid="unionaddr64" kindref="compound">addr64</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>ieee</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>network_addr</declname>
+        </param>
+        <briefdescription>
+<para>Starting with a blank envelope, fill in the device, 64-bit IEEE address and 16-bit network address of the destination. </para>        </briefdescription>
+        <detaileddescription>
+<para>The profile ID, cluster ID, source/destination endpoints and envelope options are all be set to zero.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>envelope to populate </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device that will send this envelope </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ieee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>64-bit IEEE/MAC address of recipient or one of<itemizedlist>
+<listitem><para><ref refid="group__wpan__types_1ga816199ef85ef801e07ae48350664034d" kindref="member">WPAN_IEEE_ADDR_COORDINATOR</ref> (send to coordinator)</para></listitem><listitem><para><ref refid="group__wpan__types_1gaced36f5538c5bb2da4f60a90313f1674" kindref="member">WPAN_IEEE_ADDR_BROADCAST</ref> (broadcast packet)</para></listitem><listitem><para><ref refid="group__wpan__types_1ga09e965ef6cfbfd48312d86bb011f125b" kindref="member">WPAN_IEEE_ADDR_UNDEFINED</ref> (use network address only) </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">network_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>16-bit network address of recipient or one of<itemizedlist>
+<listitem><para><ref refid="group__wpan__types_1ga5158cbab6c4139bd77d1d3f80d9071b2" kindref="member">WPAN_NET_ADDR_COORDINATOR</ref> for the coordinator (use the coordinator&apos;s actual IEEE address for the <emphasis>ieee</emphasis> parameter).</para></listitem><listitem><para><ref refid="group__wpan__types_1ga6865088a83d5dbd67d9185fbe0d25063" kindref="member">WPAN_NET_ADDR_BCAST_ALL_NODES</ref> (broadcast to all nodes)</para></listitem><listitem><para><ref refid="group__wpan__types_1ga08ec03f67d0d74ba6f98da543baee129" kindref="member">WPAN_NET_ADDR_BCAST_NOT_ASLEEP</ref> (broadcast to awake nodes)</para></listitem><listitem><para><ref refid="group__wpan__types_1gabc1252917f345a50aa97f991bb7a3685" kindref="member">WPAN_NET_ADDR_BCAST_ROUTERS</ref> (broadcast to routers/coordinator)</para></listitem><listitem><para><ref refid="group__wpan__types_1ga1674d7b825e528a482725d1c06b02c10" kindref="member">WPAN_NET_ADDR_UNDEFINED</ref> (use 64-bit address only)</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+When sending broadcast packets, use WPAN_IEEE_ADDR_BROADCAST and WPAN_NET_ADDR_UNDEFINED. Don&apos;t set both addresses to broadcast.</para><para>When using DigiMesh protocol, always set the <computeroutput>network_addr</computeroutput> to WPAN_NET_ADDR_UNDEFINED.</para><para><simplesect kind="see"><para><ref refid="group__wpan__aps_1gaaaee02ff456d4f6103a5e94c2ba106c5" kindref="member">wpan_envelope_reply()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="712" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="712" bodyend="723"/>
+        <references refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" compoundref="aps_8h" startline="42">wpan_envelope_t::dev</references>
+        <references refid="group__wpan__aps_1ga2549f921e25a72dfa05a2154a792e2bf" compoundref="aps_8h" startline="43">wpan_envelope_t::ieee_address</references>
+        <references refid="group__wpan__aps_1ga30948a7f8d096191895f50b80d81ca12" compoundref="aps_8h" startline="44">wpan_envelope_t::network_address</references>
+        <referencedby refid="group__xbee__ota__client_1ga88905a78517417dd42f6356038717d01" compoundref="xbee__ota__client_8c" startline="119" endline="154">_xbee_ota_xmodem_write</referencedby>
+        <referencedby refid="group__zdo_1gae4b6736d215caf2a10790761ed52443d" compoundref="zigbee__zdo_8c" startline="110" endline="139">_zdo_envelope_create</referencedby>
+        <referencedby refid="group__xbee__ota__client_1ga4805b029d840b86133ef62d64866c6af" compoundref="xbee__ota__client_8c" startline="157" endline="211">xbee_ota_init</referencedby>
+        <referencedby refid="group__zdo_1ga4af5f8d70054f7883dbc1305e3a3f181" compoundref="zigbee__zdo_8c" startline="1134" endline="1173">zdo_send_ieee_addr_req</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1gaaaee02ff456d4f6103a5e94c2ba106c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug int</type>
+        <definition>int wpan_envelope_reply</definition>
+        <argsstring>(wpan_envelope_t FAR *reply, const wpan_envelope_t FAR *original)</argsstring>
+        <name>wpan_envelope_reply</name>
+        <param>
+          <type><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>reply</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>original</declname>
+        </param>
+        <briefdescription>
+<para>Create a reply envelope based on the envelope received from a remote node. </para>        </briefdescription>
+        <detaileddescription>
+<para>Copies the interface, addresses, profile and cluster from the original envelope, and then swaps the source and destination endpoints.</para><para>Note that it may be necessary for the caller to change the <emphasis>cluster_id</emphasis> as well, after building the reply envelope. For example, ZDO responses set the high bit of the request&apos;s cluster ID.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">reply</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer for storing the reply envelope.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">original</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original envelope, received from a remote node, to base the reply on.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>addressed reply envelope </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>either parameter is <computeroutput>NULL</computeroutput> or they point to the same address</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__wpan__aps_1ga95e2bb4e4c546191c059f54179064fc3" kindref="member">wpan_envelope_create()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="752" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="752" bodyend="776"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <referencedby refid="group__xbee__ota__server_1ga22cb77be06faba4020a4f5e0daf48f4f" compoundref="xbee__ota__server_8c" startline="30" endline="77">xbee_ota_server_cmd</referencedby>
+        <referencedby refid="group__zcl__commissioning_1ga57f9aaf3da6dc9b513f7f9ccbb473a0b" compoundref="zcl__commissioning_8c" startline="265" endline="295">zcl_comm_response</referencedby>
+        <referencedby refid="group__zdo_1ga1d645805a731e1419b5012a5c8a09bf8" compoundref="zigbee__zdo_8c" startline="160" endline="182">zdo_send_response</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1ga06f1e9e86b74ef807ded44b79b13e283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug int</type>
+        <definition>int wpan_envelope_send</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope)</argsstring>
+        <name>wpan_envelope_send</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <briefdescription>
+<para>Send a message to an endpoint using address and payload information stored in a <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>envelope of request to send</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error trying to send request </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="790" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="790" bodyend="810"/>
+        <referencedby refid="group__zcl__commissioning_1gab653d2ac290d96d3131c894f7330fbb6" compoundref="zcl__commissioning_8c" startline="370" endline="381">_zcl_comm_command_send</referencedby>
+        <referencedby refid="group__xbee__ota__server_1ga22cb77be06faba4020a4f5e0daf48f4f" compoundref="xbee__ota__server_8c" startline="30" endline="77">xbee_ota_server_cmd</referencedby>
+        <referencedby refid="group__xbee__transparent_1gafbf9e5ccdb17be373012bd690a76e570" compoundref="xbee__transparent__serial_8c" startline="32" endline="41">xbee_transparent_serial</referencedby>
+        <referencedby refid="group__zcl__commissioning_1ga57f9aaf3da6dc9b513f7f9ccbb473a0b" compoundref="zcl__commissioning_8c" startline="265" endline="295">zcl_comm_response</referencedby>
+        <referencedby refid="group__zdo_1gac842062e5e1a60d25cddf16ec22ef601" compoundref="zigbee__zdo_8c" startline="925" endline="969">zdo_send_descriptor_req</referencedby>
+        <referencedby refid="group__zdo_1gafbbece379bc09af360099d1e0825d507" compoundref="zigbee__zdo_8c" startline="422" endline="464">zdo_simple_desc_request</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1ga2a4e8b3e2022e55e6607243a5feb25cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug void</type>
+        <definition>void wpan_envelope_dump</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope)</argsstring>
+        <name>wpan_envelope_dump</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <briefdescription>
+<para>Debugging function to dump the contents of an envelope to stdout. </para>        </briefdescription>
+        <detaileddescription>
+<para>Displays all fields from the envelope, plus the contents of the payload</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>envelope to dump </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="823" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="823" bodyend="841"/>
+        <references refid="group__wpan__types_1ga448782f4aed0821758969b47221417ed" compoundref="wpan__types_8c" startline="77" endline="111">addr64_format</references>
+        <references refid="group__wpan__types_1gac468b40b060897498f923923654c3d4a" compoundref="types_8h" startline="49">ADDR64_STRING_LENGTH</references>
+        <references refid="group__util_1gaa321236a0cb6f4e0dad592fdf1b550d2" compoundref="hexdump_8c" startline="28" endline="91">hex_dump</references>
+        <references refid="group__hal_1gaec79525addd1a70fda55b1ea11534832" compoundref="platform_8h" startline="547">HEX_DUMP_FLAG_OFFSET</references>
+        <references refid="group__hal_1ga379022d2cd3136d8f3500c88658056b7" compoundref="platform_8h" startline="406">PRIsFAR</references>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1gae5f88ed40bd334d963e261947b77b980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug int</type>
+        <definition>int wpan_conversation_register</definition>
+        <argsstring>(wpan_ep_state_t FAR *state, wpan_response_fn handler, const void FAR *context, uint16_t timeout)</argsstring>
+        <name>wpan_conversation_register</name>
+        <param>
+          <type><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="group__wpan__aps_1gabf0a6b85c9ff3ff9104c8b58c1436d72" kindref="member">wpan_response_fn</ref></type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Add a conversation to the table of tracked conversations. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>endpoint state associated with sending endpoint </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handler to call when responses come back, or <computeroutput>NULL</computeroutput> to increment and return the endpoint&apos;s transaction ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer stored in conversation table and passed to callback handler </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of seconds before generating timeout, or 0 for none</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0-255</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction ID to use in sent frame </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>state is invalid (NULL) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOSPC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>table is full</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__wpan__aps_1gaab1c77ccbd237270f11499fb6411599c" kindref="member">wpan_endpoint_next_trans</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="299" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="299" bodyend="339"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__wpan__aps_1gae34b1efc8ba99add17fcd767852197d4" compoundref="aps_8h" startline="513">WPAN_MAX_CONVERSATIONS</references>
+        <referencedby refid="group__zdo_1gab02e4c1584594c0a96d05399bd69bffa" compoundref="zigbee__zdo_8c" startline="839" endline="885">zdo_send_bind_req</referencedby>
+        <referencedby refid="group__zdo_1gac842062e5e1a60d25cddf16ec22ef601" compoundref="zigbee__zdo_8c" startline="925" endline="969">zdo_send_descriptor_req</referencedby>
+        <referencedby refid="group__zdo_1ga4af5f8d70054f7883dbc1305e3a3f181" compoundref="zigbee__zdo_8c" startline="1134" endline="1173">zdo_send_ieee_addr_req</referencedby>
+        <referencedby refid="group__zdo_1ga40f076c190ab2390836687b8e1f705eb" compoundref="zigbee__zdo_8c" startline="1028" endline="1070">zdo_send_nwk_addr_req</referencedby>
+        <referencedby refid="group__zdo_1gafbbece379bc09af360099d1e0825d507" compoundref="zigbee__zdo_8c" startline="422" endline="464">zdo_simple_desc_request</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1gaf56e4d0e52462b5cf41c5fa5f23ea952" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug int</type>
+        <definition>int wpan_conversation_response</definition>
+        <argsstring>(wpan_ep_state_t FAR *state, uint8_t transaction_id, const wpan_envelope_t FAR *envelope)</argsstring>
+        <name>wpan_conversation_response</name>
+        <param>
+          <type><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+          <declname>transaction_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <briefdescription>
+<para>Searches the endpoint&apos;s table of active conversations (outstanding requests waiting for responses) for a given transaction. </para>        </briefdescription>
+        <detaileddescription>
+<para>Hands the response frame off to the handler registered to the conversation with <ref refid="group__wpan__aps_1gae5f88ed40bd334d963e261947b77b980" kindref="member">wpan_conversation_register()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>endpoint state (from endpoint table) or NULL to look it up using the envelope </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">transaction_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transaction ID from frame payload, used to look up conversation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>envelope from response frame, passed to conversation&apos;s handler</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter passed to function, or conversation not found in table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handler processed response </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handler reported an error while processing response </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="427" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="427" bodyend="481"/>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__wpan__aps_1ga389966cb276b33004b14ee698c270347" compoundref="aps_8h" startline="264">wpan_endpoint_table_entry_t::ep_state</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__wpan__aps_1ga0a88c1b17d1f9a42a53668b14f15e205" compoundref="wpan__aps_8c" startline="160" endline="179">wpan_endpoint_match</references>
+        <references refid="group__wpan__aps_1gae34b1efc8ba99add17fcd767852197d4" compoundref="aps_8h" startline="513">WPAN_MAX_CONVERSATIONS</references>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1gaab1c77ccbd237270f11499fb6411599c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug <ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t wpan_endpoint_next_trans</definition>
+        <argsstring>(const wpan_endpoint_table_entry_t *ep)</argsstring>
+        <name>wpan_endpoint_next_trans</name>
+        <param>
+          <type>const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *</type>
+          <declname>ep</declname>
+        </param>
+        <briefdescription>
+<para>Increment and return the endpoint&apos;s transaction ID counter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entry from endpoint table</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0-255</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current transaction ID for endpoint </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="493" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="493" bodyend="500"/>
+        <references refid="group__wpan__aps_1ga389966cb276b33004b14ee698c270347" compoundref="aps_8h" startline="264">wpan_endpoint_table_entry_t::ep_state</references>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1gae84eafd10f51de6cdac4732b8948606d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug int</type>
+        <definition>int wpan_envelope_dispatch</definition>
+        <argsstring>(wpan_envelope_t *envelope)</argsstring>
+        <name>wpan_envelope_dispatch</name>
+        <param>
+          <type><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <briefdescription>
+<para>Find the matching endpoint for the provided <computeroutput>envelope</computeroutput> and have it process the frame. </para>        </briefdescription>
+        <detaileddescription>
+<para>In the case of the broadcast endpoint (255), dispatches the frame to all endpoints matching the envelope&apos;s profile ID.</para><para>Looks up the destination endpoint and cluster ID in the device&apos;s endpoint table and passes <computeroutput>envelope</computeroutput> off to the cluster handler (if a matching cluster was found) or the endpoint handler.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">envelope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>structure containing all necessary information about message (endpoints, cluster, profile, etc.)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>successfully dispatched message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-ENOENT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>no handler for this endpoint/cluster </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>!0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error dispatching messages </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="622" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="622" bodyend="676"/>
+        <references refid="group__hal_1ga03e689f378f643d16ea7537918528a48" compoundref="platform_8h" startline="110">ENOENT</references>
+        <referencedby refid="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" compoundref="xbee__wpan_8c" startline="54" endline="93">_xbee_handle_receive_explicit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__wpan__aps_1gad36c04a3f2741f52710ab7768d1fcda8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wpan_aps_debug void</type>
+        <definition>void wpan_conversation_delete</definition>
+        <argsstring>(wpan_conversation_t FAR *conversation)</argsstring>
+        <name>wpan_conversation_delete</name>
+        <param>
+          <type><ref refid="structwpan__conversation__t" kindref="compound">wpan_conversation_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>conversation</declname>
+        </param>
+        <briefdescription>
+<para>Delete a conversation from an endpoint&apos;s conversation table. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">conversation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>conversation to delete </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wpan/wpan_aps.c" line="349" column="1" bodyfile="src/wpan/wpan_aps.c" bodystart="349" bodyend="355"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Cluster/Endpoint layer for WPAN networks (ZigBee and DigiMesh). </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2008-2013<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#ifndef<sp/>__WPAN_APS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__WPAN_APS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">wpan/types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="group__hal_1ga336bff4f4a6012aacc4468132bbd3d7f" kindref="member">XBEE_BEGIN_DECLS</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="structwpan__envelope__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>first<sp/>group<sp/>of<sp/>members<sp/>are<sp/>common<sp/>when<sp/>creating<sp/>reply<sp/>envelope</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/><sp/><sp/><sp/>*<ref refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" kindref="member">dev</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="group__wpan__aps_1ga2549f921e25a72dfa05a2154a792e2bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="unionaddr64" kindref="compound">addr64</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga2549f921e25a72dfa05a2154a792e2bf" kindref="member">ieee_address</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="group__wpan__aps_1ga30948a7f8d096191895f50b80d81ca12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga30948a7f8d096191895f50b80d81ca12" kindref="member">network_address</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" kindref="member">profile_id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="group__wpan__aps_1ga262a92f94287e77cb56350951893bae2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga262a92f94287e77cb56350951893bae2" kindref="member">cluster_id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>second<sp/>group<sp/>of<sp/>members<sp/>are<sp/>modified<sp/>when<sp/>creating<sp/>reply<sp/>envelope</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="group__wpan__aps_1ga9781a5a281ee97f7f67d8ebe2c4f54db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga9781a5a281ee97f7f67d8ebe2c4f54db" kindref="member">source_endpoint</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="group__wpan__aps_1ga0992896b3999455a300e8ba25c368ae8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga0992896b3999455a300e8ba25c368ae8" kindref="member">dest_endpoint</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__xbee__atcmd_1gaace3d640c8d449b8db1162993d259d3f" kindref="member">options</ref>;</highlight></codeline>
+<codeline lineno="53" refid="group__wpan__aps_1ga6a6e8a32dc7117f44bdca2802a1e54aa" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_ENVELOPE_CLUSTER_FLAGS<sp/><sp/><sp/><sp/>0x00FF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_ENVELOPE_BROADCAST_ADDR<sp/><sp/><sp/>0x0100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_ENVELOPE_BROADCAST_EP<sp/><sp/><sp/><sp/><sp/>0x0200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_ENVELOPE_RX_APS_ENCRYPT<sp/><sp/><sp/>0x0400</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><sp/><sp/>*<ref refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" kindref="member">payload</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor">#define<sp/>WPAN_STACK_PROFILE_PROPRIETARY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_STACK_PROFILE_ZIGBEE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_STACK_PROFILE_ZIGBEE_PRO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//@name<sp/>Profile<sp/>IDs</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"></highlight><highlight class="preprocessor">#define<sp/>WPAN_PROFILE_ZDO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="group__wpan__aps_1ga7cc56763cce2df7785d8d5e75f9e1a40" refkind="member"><highlight class="preprocessor">#define<sp/>WPAN_PROFILE_SMART_ENERGY<sp/><sp/><sp/>0x0109</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="group__wpan__aps_1gaa90d7d1301c7de503f39113eb83e93e5" refkind="member"><highlight class="preprocessor">#define<sp/>WPAN_PROFILE_DIGI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC105</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"></codeline>
+<codeline lineno="95"><highlight class="preprocessor">#define<sp/>WPAN_MANUFACTURER_DIGI<sp/><sp/><sp/><sp/><sp/><sp/>0x101E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_MANUFACTURER_DIGI2<sp/><sp/><sp/><sp/><sp/>0x1087</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="group__wpan__aps_1ga5c6e0e7a7b405359bceb6d8ccb95ea87" refkind="member"><highlight class="preprocessor">#define<sp/>WPAN_MANUFACTURER_TEST1<sp/><sp/><sp/><sp/><sp/>0xFFF1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_MANUFACTURER_TEST2<sp/><sp/><sp/><sp/><sp/>0xFFF2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_MANUFACTURER_TEST3<sp/><sp/><sp/><sp/><sp/>0xFFF3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//@name<sp/>List<sp/>of<sp/>fixed<sp/>endpoints</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"></highlight><highlight class="preprocessor">#define<sp/>WPAN_ENDPOINT_ZDO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_ENDPOINT_DIGI_SE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x5E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_ENDPOINT_DDO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xE6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_ENDPOINT_DIGI_DEVICE<sp/><sp/><sp/>WPAN_ENDPOINT_DDO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_ENDPOINT_DIGI_DATA<sp/><sp/><sp/><sp/><sp/>0xE8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_ENDPOINT_BROADCAST<sp/><sp/><sp/><sp/><sp/>0xFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"></codeline>
+<codeline lineno="124"><highlight class="comment">//<sp/>(cast<sp/>to<sp/>int<sp/>required<sp/>by<sp/>Codewarrior/HCS08<sp/>platform<sp/>if<sp/>enum<sp/>is<sp/>signed)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="group__wpan__aps_1ga1227ab13b41d82d9c9c9080662f74cf7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1ga1227ab13b41d82d9c9c9080662f74cf7" kindref="member">wpan_clust_digi</ref></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ac46c70b2d273c05acf42fd4a19583187" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ac46c70b2d273c05acf42fd4a19583187" kindref="member">DIGI_CLUST_SLEEP_SYNC</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0009,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a8208e143b452d11140e487d7d29eb38f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a8208e143b452d11140e487d7d29eb38f" kindref="member">DIGI_CLUST_SERIAL</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0011,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a378346cc570b606ab6984ade7e1ff01d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a378346cc570b606ab6984ade7e1ff01d" kindref="member">DIGI_CLUST_LOOPBACK</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0012,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ae94c438b8e786806a840eb6cae8603fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ae94c438b8e786806a840eb6cae8603fd" kindref="member">DIGI_CLUST_ND_COMMAND</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0015,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a6606012ac5ed20a518f28ff156be7652" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a6606012ac5ed20a518f28ff156be7652" kindref="member">DIGI_CLUST_DN_COMMAND</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0016,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7aa637ec5b1224724b075a36eefa351126" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7aa637ec5b1224724b075a36eefa351126" kindref="member">DIGI_CLUST_REMOTE_COMMAND</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0021,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ae81533aa4490e5001cc0866c0572fc2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ae81533aa4490e5001cc0866c0572fc2e" kindref="member">DIGI_CLUST_NR_COMMAND</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0022,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a66527ddc0653858888ce47c469c95349" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a66527ddc0653858888ce47c469c95349" kindref="member">DIGI_CLUST_IODATA</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0092,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a8d4df2bd5e335f87df0e038e803796ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a8d4df2bd5e335f87df0e038e803796ef" kindref="member">DIGI_CLUST_WATCHPORT</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0094,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ad19431fd18576cc8463e8ac362a8579c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7ad19431fd18576cc8463e8ac362a8579c" kindref="member">DIGI_CLUST_NODEID_MESSAGE</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0095,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a1705862df524f4ecaab07a18a0b3f0d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a1705862df524f4ecaab07a18a0b3f0d1" kindref="member">DIGI_CLUST_DN_RESPONSE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0096,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a84486276a61e57d2d2ff9a85d052fdb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a84486276a61e57d2d2ff9a85d052fdb5" kindref="member">DIGI_CLUST_REMOTE_RESPONSE</ref><sp/><sp/><sp/><sp/>=<sp/>0x00A1,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a29b2b3f9713deb027140197f2ef499fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a29b2b3f9713deb027140197f2ef499fa" kindref="member">DIGI_CLUST_NR_RESPONSE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00A2,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/>DIGI_CLUST_INDIRECT_ROUTE_ERR<sp/>=<sp/>0x00B0,</highlight></codeline>
+<codeline lineno="141" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7aedb825ada66b8c7bbfbeaee6d9dfba0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7aedb825ada66b8c7bbfbeaee6d9dfba0a" kindref="member">DIGI_CLUST_PROG_XBEE_OTA_UPD</ref><sp/><sp/>=<sp/>0x1000,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Unsure<sp/>of<sp/>how<sp/>these<sp/>clusters<sp/>are<sp/>used.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a95c58dbf91ce9b915abdc1fdbc236ebe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a95c58dbf91ce9b915abdc1fdbc236ebe" kindref="member">DIGI_CLUST_NBRFWUPDATE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x71FE,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a378e1e715bf4f25284c4739dccdc8c79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7a378e1e715bf4f25284c4739dccdc8c79" kindref="member">DIGI_CLUST_REMFWUPDATE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x71FF,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146" refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7abc3b7a2d5a20c8f541dce60eb523694f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gga1227ab13b41d82d9c9c9080662f74cf7abc3b7a2d5a20c8f541dce60eb523694f" kindref="member">DIGI_CLUST_FWUPDATERESP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(int)0xF1FF,<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="group__wpan__aps_1ga8575b0db762a5fbb858d4994c9b657e3" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__wpan__aps_1ga8575b0db762a5fbb858d4994c9b657e3" kindref="member">wpan_aps_handler_fn</ref>)(</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><sp/><sp/>*envelope,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><sp/><sp/>*context</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Actual<sp/>definition<sp/>comes<sp/>later,<sp/>declare<sp/>here<sp/>so<sp/>we<sp/>can<sp/>use<sp/>it<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">//<sp/>function<sp/>pointer<sp/>typedefs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="group__wpan__aps_1ga23d4e0e2f2137c75700dfec73b2cc80f" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__wpan__aps_1ga23d4e0e2f2137c75700dfec73b2cc80f" kindref="member">wpan_ep_handler_fn</ref>)(</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><sp/><sp/>*envelope,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><sp/><sp/>*ep_state</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="structwpan__cluster__table__entry__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="203" refid="group__wpan__aps_1ga262a92f94287e77cb56350951893bae2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga262a92f94287e77cb56350951893bae2" kindref="member">cluster_id</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="group__wpan__aps_1gab0c5e32241c4c2860c728aeab4b6f253" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga8575b0db762a5fbb858d4994c9b657e3" kindref="member">wpan_aps_handler_fn</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1gab0c5e32241c4c2860c728aeab4b6f253" kindref="member">handler</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="group__wpan__aps_1gad58378484a15ab673f5eb1613114330e" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="group__wpan__aps_1gad58378484a15ab673f5eb1613114330e" kindref="member">context</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="group__wpan__aps_1gaa2585d779da0ab21273a8d92de9a0ebe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1gaa2585d779da0ab21273a8d92de9a0ebe" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_CLUST_FLAG_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_CLUST_FLAG_INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_CLUST_FLAG_OUTPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_CLUST_FLAG_INOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_CLUST_FLAG_SERVER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WPAN_CLUST_FLAG_INPUT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_CLUST_FLAG_CLIENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WPAN_CLUST_FLAG_OUTPUT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_CLUST_FLAG_ENCRYPT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_CLUST_FLAG_ENCRYPT_UNICAST<sp/><sp/><sp/>0x20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_CLUST_FLAG_NOT_ZCL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}<sp/><ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref>;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249" refid="structwpan__endpoint__table__entry__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref></highlight></codeline>
+<codeline lineno="250"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="252" refid="group__wpan__aps_1ga7d397493728da2bca8d55b2d61c4ec5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga7d397493728da2bca8d55b2d61c4ec5d" kindref="member">endpoint</ref>;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" kindref="member">profile_id</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="group__wpan__aps_1ga4835da0b636ce07eedbf92aa2779a761" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga23d4e0e2f2137c75700dfec73b2cc80f" kindref="member">wpan_ep_handler_fn</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga4835da0b636ce07eedbf92aa2779a761" kindref="member">handler</ref>;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="group__wpan__aps_1ga389966cb276b33004b14ee698c270347" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><sp/><sp/>*<ref refid="group__wpan__aps_1ga389966cb276b33004b14ee698c270347" kindref="member">ep_state</ref>;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="group__wpan__aps_1gadc401e0e7465eda38f9444eeb6169a10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1gadc401e0e7465eda38f9444eeb6169a10" kindref="member">device_id</ref>;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="group__wpan__aps_1ga0b8f4e315b56b3e3c53dea801ce92104" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga0b8f4e315b56b3e3c53dea801ce92104" kindref="member">device_version</ref>;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="group__wpan__aps_1gac7944498524739a9becec626bf9bcb15" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref><sp/>*<ref refid="group__wpan__aps_1gac7944498524739a9becec626bf9bcb15" kindref="member">cluster_table</ref>;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}<sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref>;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="group__wpan__aps_1gacbfdff1cef70167f178c4e05b69f65fe" refkind="member"><highlight class="preprocessor">#define<sp/>WPAN_CLUSTER_END_OF_LIST<sp/><sp/><sp/><sp/>0xFFFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="group__wpan__aps_1ga55a7fbd8adf019d268f17b6ede90fe0f" refkind="member"><highlight class="preprocessor">#define<sp/>WPAN_CLUST_ENTRY_LIST_END<sp/><sp/><sp/>{<sp/>WPAN_CLUSTER_END_OF_LIST<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>wpan-capable<sp/>devices<sp/>need<sp/>to<sp/>start<sp/>with<sp/>the<sp/>wpan_dev_t<sp/>struct<sp/>so<sp/>that<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="comment">//<sp/>wpan<sp/>layer<sp/>can<sp/>share<sp/>some<sp/>elements<sp/>(ieee_address,<sp/>network_address,<sp/>payload)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>have<sp/>access<sp/>to<sp/>the<sp/>function<sp/>pointers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>function<sp/>pointers<sp/>to<sp/>NULL<sp/>if<sp/>not<sp/>implemented<sp/>on<sp/>a<sp/>particular<sp/>device.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315" refid="group__wpan__aps_1ga505477d0257efe527747c6d1f561cd6c" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__wpan__aps_1ga505477d0257efe527747c6d1f561cd6c" kindref="member">wpan_endpoint_send_fn</ref>)(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>flags);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="preprocessor">#define<sp/>WPAN_SEND_FLAG_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_SEND_FLAG_ENCRYPTED<sp/><sp/><sp/><sp/>0x0001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"></codeline>
+<codeline lineno="341" refid="group__wpan__aps_1ga9287e4838cc6dc51febe18acab6738ce" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__wpan__aps_1ga9287e4838cc6dc51febe18acab6738ce" kindref="member">_wpan_config_fn</ref>)(<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*<ref refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" kindref="member">dev</ref>,<sp/>...);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352" refid="group__wpan__aps_1gafed1542f6becf2d81fd84ef2f0ae2833" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__wpan__aps_1gafed1542f6becf2d81fd84ef2f0ae2833" kindref="member">wpan_tick_fn</ref>)(<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*<ref refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" kindref="member">dev</ref>);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372" refid="group__wpan__aps_1ga4239e4654962f88f42a53abae18e7827" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref><sp/>*(*wpan_endpoint_get_next_fn)(</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*<ref refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" kindref="member">dev</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref><sp/>*ep);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386" refid="structwpan__dev__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="comment">//<sp/>_wpan_config_fn<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>///&lt;<sp/>change<sp/>device&apos;s<sp/>cfg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388" refid="group__wpan__aps_1gab472632c6a95d7856d1ea137441ec6a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gafed1542f6becf2d81fd84ef2f0ae2833" kindref="member">wpan_tick_fn</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1gab472632c6a95d7856d1ea137441ec6a2" kindref="member">tick</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="389" refid="group__wpan__aps_1ga363ce09a97ec0b7a2dbff5b815fc3fbc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga505477d0257efe527747c6d1f561cd6c" kindref="member">wpan_endpoint_send_fn</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga363ce09a97ec0b7a2dbff5b815fc3fbc" kindref="member">endpoint_send</ref>;<sp/></highlight></codeline>
+<codeline lineno="390" refid="group__wpan__aps_1ga249b57f4a0559c0adb038f68d9b5c443" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga4239e4654962f88f42a53abae18e7827" kindref="member">wpan_endpoint_get_next_fn</ref><sp/><sp/><ref refid="group__wpan__aps_1ga249b57f4a0559c0adb038f68d9b5c443" kindref="member">endpoint_get_next</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight></codeline>
+<codeline lineno="392" refid="group__wpan__aps_1ga66a58a737aee9733019399e2eceabf4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="structwpan__address__t" kindref="compound">wpan_address_t</ref><sp/><ref refid="group__wpan__aps_1ga66a58a737aee9733019399e2eceabf4a" kindref="member">address</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395" refid="group__wpan__aps_1ga27ab4ae0aba390adfd9907aeebd88b9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga27ab4ae0aba390adfd9907aeebd88b9c" kindref="member">payload</ref>;</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402" refid="group__wpan__aps_1ga1e87af3c18a2fd36c61faf89949bdc3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga1e87af3c18a2fd36c61faf89949bdc3f" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_FLAG_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_FLAG_JOINED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_FLAG_AUTHENTICATED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0002</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WPAN_FLAG_AUTHENTICATION_ENABLED<sp/><sp/>0x0004</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414" refid="group__wpan__aps_1gad7c834ea25a2f008caaf40ec08aa5a86" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref><sp/><sp/><sp/>*<ref refid="group__wpan__aps_1gad7c834ea25a2f008caaf40ec08aa5a86" kindref="member">endpoint_table</ref>;</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal">}<sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref>;</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422" refid="group__wpan__aps_1gabe1e612e16ea40f970a7f160cae6de3a" refkind="member"><highlight class="preprocessor">#define<sp/>WPAN_DEV_IS_JOINED(dev)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dev)-&gt;flags<sp/>&amp;<sp/>WPAN_FLAG_JOINED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428" refid="group__wpan__aps_1ga5ba1c4d72eeac9bb8bd97ee811d7aa05" refkind="member"><highlight class="preprocessor">#define<sp/>WPAN_DEV_IS_AUTHENTICATED(dev)<sp/>((dev)-&gt;flags<sp/>&amp;<sp/>WPAN_FLAG_AUTHENTICATED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431" refid="group__wpan__aps_1ga0ca55f0e8039df7fba03c041e4cf5a79" refkind="member"><highlight class="preprocessor">#define<sp/>WPAN_ENDPOINT_END_OF_LIST<sp/><sp/><sp/>0xFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="435" refid="group__wpan__aps_1gaac571cafa96f8201c714feb0634afa92" refkind="member"><highlight class="preprocessor">#define<sp/>WPAN_ENDPOINT_TABLE_END<sp/><sp/><sp/><sp/><sp/>{<sp/>WPAN_ENDPOINT_END_OF_LIST<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1ga1254464011d2d98c13db7b0b3d41c25b" kindref="member">wpan_tick</ref>(<sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref><sp/>*<ref refid="group__wpan__aps_1ga1c725384b21faf5953683d7b028c7be3" kindref="member">wpan_cluster_match</ref>(<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>match,</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/>mask,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__cluster__table__entry__t" kindref="compound">wpan_cluster_table_entry_t</ref><sp/>*entry);</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref><sp/>*<ref refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" kindref="member">wpan_endpoint_get_next</ref>(<sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*dev,</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref><sp/>*ep);</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref><sp/>*<ref refid="group__wpan__aps_1ga0a88c1b17d1f9a42a53668b14f15e205" kindref="member">wpan_endpoint_match</ref>(<sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*dev,</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__zdo_1ga7d397493728da2bca8d55b2d61c4ec5d" kindref="member">endpoint</ref>,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" kindref="member">profile_id</ref>);</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/>*<ref refid="group__wpan__aps_1gab448ec18a47178272336da5eacfa2290" kindref="member">wpan_endpoint_of_envelope</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*env);</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref><sp/>*<ref refid="group__wpan__aps_1ga2cc975231963e0eb75c449c11b1d95de" kindref="member">wpan_endpoint_of_cluster</ref>(<sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*dev,</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" kindref="member">profile_id</ref>,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__wpan__aps_1ga262a92f94287e77cb56350951893bae2" kindref="member">cluster_id</ref>,<sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/>mask);</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DEVNOTE:<sp/>Do<sp/>we<sp/>need<sp/>to<sp/>use<sp/>the<sp/>platform-independent<sp/>casting<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to<sp/>cast<sp/>this<sp/>value<sp/>to<sp/>uint16_t?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_APS_PROFILE_ANY<sp/><sp/><sp/><sp/><sp/>0xFFFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1ga95e2bb4e4c546191c059f54179064fc3" kindref="member">wpan_envelope_create</ref>(<sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*envelope,<sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*dev,</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionaddr64" kindref="compound">addr64</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*ieee,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>network_addr);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1gaaaee02ff456d4f6103a5e94c2ba106c5" kindref="member">wpan_envelope_reply</ref>(<sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*reply,</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*original);</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1ga06f1e9e86b74ef807ded44b79b13e283" kindref="member">wpan_envelope_send</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope);</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1ga2a4e8b3e2022e55e6607243a5feb25cd" kindref="member">wpan_envelope_dump</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope);</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Forward<sp/>declaration<sp/>of<sp/>struct<sp/>for<sp/>use<sp/>in<sp/>function<sp/>pointer<sp/>declaration.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__conversation__t" kindref="compound">wpan_conversation_t</ref>;</highlight></codeline>
+<codeline lineno="489" refid="group__wpan__aps_1gabf0a6b85c9ff3ff9104c8b58c1436d72" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__wpan__aps_1gabf0a6b85c9ff3ff9104c8b58c1436d72" kindref="member">wpan_response_fn</ref>)(</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__conversation__t" kindref="compound">wpan_conversation_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><sp/><sp/>*conversation,</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><sp/><sp/>*envelope);</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"></highlight></codeline>
+<codeline lineno="493"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Return<sp/>values<sp/>for<sp/>wpan_response_fn()<sp/>function<sp/>handlers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Reserve<sp/>0<sp/>for<sp/>invalid<sp/>response<sp/>and<sp/>negative<sp/>for<sp/>error<sp/>responses.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_CONVERSATION_END<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WPAN_CONVERSATION_CONTINUE<sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499" refid="structwpan__conversation__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__conversation__t" kindref="compound">wpan_conversation_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transaction_id;</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context;</highlight></codeline>
+<codeline lineno="506" refid="group__wpan__aps_1ga7f1ad43d3bf79b40bc39dbb5a6c3a5ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wpan__aps_1ga7f1ad43d3bf79b40bc39dbb5a6c3a5ae" kindref="member">timeout</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>time<sp/>to<sp/>expire<sp/>converstation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gabf0a6b85c9ff3ff9104c8b58c1436d72" kindref="member">wpan_response_fn</ref><sp/><sp/>handler;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>NULL,<sp/>record<sp/>is<sp/>unused</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal">}<sp/><ref refid="structwpan__conversation__t" kindref="compound">wpan_conversation_t</ref>;</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="preprocessor">#ifndef<sp/>WPAN_MAX_CONVERSATIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="513" refid="group__wpan__aps_1gae34b1efc8ba99add17fcd767852197d4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>WPAN_MAX_CONVERSATIONS<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"></highlight></codeline>
+<codeline lineno="517"><highlight class="preprocessor">#ifndef<sp/>WPAN_CONVERSATION_TIMEOUT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="518" refid="group__wpan__aps_1gaaa330f432d7a6bccdb393a656ddfe4d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>WPAN_CONVERSATION_TIMEOUT<sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight></codeline>
+<codeline lineno="523" refid="structwpan__ep__state__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_transaction;</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><ref refid="structwpan__conversation__t" kindref="compound">wpan_conversation_t</ref><sp/><sp/>conversations[<ref refid="group__wpan__aps_1gae34b1efc8ba99add17fcd767852197d4" kindref="member">WPAN_MAX_CONVERSATIONS</ref>];</highlight></codeline>
+<codeline lineno="526"><highlight class="normal">}<sp/><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref>;</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1gae5f88ed40bd334d963e261947b77b980" kindref="member">wpan_conversation_register</ref>(<sp/><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*state,</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__wpan__aps_1gabf0a6b85c9ff3ff9104c8b58c1436d72" kindref="member">wpan_response_fn</ref><sp/>handler,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>timeout);</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1gaf56e4d0e52462b5cf41c5fa5f23ea952" kindref="member">wpan_conversation_response</ref>(<sp/><ref refid="structwpan__ep__state__t" kindref="compound">wpan_ep_state_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*state,</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/>transaction_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope);</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref><sp/><ref refid="group__wpan__aps_1gaab1c77ccbd237270f11499fb6411599c" kindref="member">wpan_endpoint_next_trans</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref><sp/>*ep);</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"></highlight></codeline>
+<codeline lineno="534"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1gae84eafd10f51de6cdac4732b8948606d" kindref="member">wpan_envelope_dispatch</ref>(<sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/>*envelope);</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1gad36c04a3f2741f52710ab7768d1fcda8" kindref="member">wpan_conversation_delete</ref>(<sp/><ref refid="structwpan__conversation__t" kindref="compound">wpan_conversation_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*conversation);</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"></highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><ref refid="group__hal_1ga8d7f5a691878e9ffb7da396899581062" kindref="member">XBEE_END_DECLS</ref></highlight></codeline>
+<codeline lineno="539"><highlight class="normal"></highlight></codeline>
+<codeline lineno="540"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>compiling<sp/>in<sp/>Dynamic<sp/>C,<sp/>automatically<sp/>#use<sp/>the<sp/>appropriate<sp/>C<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__DC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#use<sp/>&quot;wpan_aps.c&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>__WPAN_APS_H</highlight></codeline>
+    </programlisting>
+    <location file="include/wpan/aps.h"/>
+  </compounddef>
+</doxygen>

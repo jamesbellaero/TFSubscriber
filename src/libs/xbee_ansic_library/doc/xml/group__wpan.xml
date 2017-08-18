@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__wpan" kind="group">
+    <compoundname>wpan</compoundname>
+    <title>Wireless Personal Area Networking (WPAN)</title>
+    <innergroup refid="group__wpan__aps">Cluster/Endpoint layer</innergroup>
+    <innergroup refid="group__wpan__types">Datatypes and support functions</innergroup>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

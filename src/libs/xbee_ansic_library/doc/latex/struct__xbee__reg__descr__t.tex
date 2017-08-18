@@ -1,0 +1,68 @@
+\hypertarget{struct__xbee__reg__descr__t}{}\section{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t Struct Reference}
+\label{struct__xbee__reg__descr__t}\index{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t@{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t}}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct__xbee__reg__descr__t_ad94e63af9aef7b2c583788852ebdc5b1}{is\+\_\+state}
+\begin{DoxyCompactList}\small\item\em 1 if a \char`\"{}state\char`\"{}, 0 if a \char`\"{}setting\char`\"{}, or other values for special purposes. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{struct__xbee__reg__descr__t_aae877041546563a319dff9e25bc3aaf7}{alias}
+\begin{DoxyCompactList}\small\item\em Two-\/character AT command string for this register (except entry for $<$dest\+\_\+addr$>$ is \char`\"{}\+D\+H/\+D\+L\char`\"{}). \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{struct__xbee__reg__descr__t_aa89979f0cabc914d3df82120cb9aa1a4}{cxval}
+\begin{DoxyCompactList}\small\item\em Custom xbee\+\_\+type value (bitfield) for query descriptor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct__xbee__reg__descr__t_a7ae80afc0da97444432fc11aadbcb52d}\label{struct__xbee__reg__descr__t_a7ae80afc0da97444432fc11aadbcb52d}} 
+\hyperlink{group__xbee__atcmd_gaa874b4a291f79f2e80f867ce71fccea5}{\+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t} \hyperlink{struct__xbee__reg__descr__t_a7ae80afc0da97444432fc11aadbcb52d}{rci\+\_\+type}
+\begin{DoxyCompactList}\small\item\em R\+CI type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct__xbee__reg__descr__t_acfa39348dc06ee8b25af49145a003e23}\label{struct__xbee__reg__descr__t_acfa39348dc06ee8b25af49145a003e23}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{struct__xbee__reg__descr__t_acfa39348dc06ee8b25af49145a003e23}{sxa\+\_\+offs}
+\begin{DoxyCompactList}\small\item\em Offset in S\+XA node structure of cached field value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct__xbee__reg__descr__t_afffefbb55b7d4e0f2932567b30161167}\label{struct__xbee__reg__descr__t_afffefbb55b7d4e0f2932567b30161167}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{struct__xbee__reg__descr__t_afffefbb55b7d4e0f2932567b30161167}{sxa\+\_\+len}
+\begin{DoxyCompactList}\small\item\em Length of cached field value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct__xbee__reg__descr__t_a4ef83a005ab7c0854ce2de3973b2a3df}\label{struct__xbee__reg__descr__t_a4ef83a005ab7c0854ce2de3973b2a3df}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{struct__xbee__reg__descr__t_a4ef83a005ab7c0854ce2de3973b2a3df}{sxa\+\_\+cache\+\_\+group}
+\begin{DoxyCompactList}\small\item\em S\+XA cache group (bitfield), or S\+X\+A\+\_\+\+C\+A\+C\+H\+E\+D\+\_\+\+M\+I\+SC if not grouped. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__xbee__reg__descr__t_aae877041546563a319dff9e25bc3aaf7}\label{struct__xbee__reg__descr__t_aae877041546563a319dff9e25bc3aaf7}} 
+\index{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t@{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t}!alias@{alias}}
+\index{alias@{alias}!\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t@{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t}}
+\subsubsection{\texorpdfstring{alias}{alias}}
+{\footnotesize\ttfamily const char$\ast$ alias}
+
+
+
+Two-\/character AT command string for this register (except entry for $<$dest\+\_\+addr$>$ is \char`\"{}\+D\+H/\+D\+L\char`\"{}). 
+
+\mbox{\Hypertarget{struct__xbee__reg__descr__t_aa89979f0cabc914d3df82120cb9aa1a4}\label{struct__xbee__reg__descr__t_aa89979f0cabc914d3df82120cb9aa1a4}} 
+\index{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t@{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t}!cxval@{cxval}}
+\index{cxval@{cxval}!\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t@{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t}}
+\subsubsection{\texorpdfstring{cxval}{cxval}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} cxval}
+
+
+
+Custom xbee\+\_\+type value (bitfield) for query descriptor. 
+
+This field is a bitmask, which determines whether this entry is applicable to a given X\+Bee module type. A mask (M) for the module is obtained by (e.\+g.) M = sxa\+\_\+module\+\_\+type\+\_\+mask(sxa). Then, only if (M \& cxval) == M is the entry applicable.
+
+One of the bits in cxval is for a \char`\"{}gateway\char`\"{} i.\+e. a local module. If this bit is N\+OT set in cxval, then such commands are not usually performed on local devices, usually because changing that register might disrupt the network and make it inaccessible. In cases where it really is necessary to change one of these registers, the gateway bit in M can be reset before applying the above bitmask test.
+
+\begin{DoxyNote}{Note}
+This mask behavior is derived from N\+DS and is used by i\+Digi. 
+\end{DoxyNote}
+\mbox{\Hypertarget{struct__xbee__reg__descr__t_ad94e63af9aef7b2c583788852ebdc5b1}\label{struct__xbee__reg__descr__t_ad94e63af9aef7b2c583788852ebdc5b1}} 
+\index{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t@{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t}!is\+\_\+state@{is\+\_\+state}}
+\index{is\+\_\+state@{is\+\_\+state}!\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t@{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t}}
+\subsubsection{\texorpdfstring{is\+\_\+state}{is\_state}}
+{\footnotesize\ttfamily int is\+\_\+state}
+
+
+
+1 if a \char`\"{}state\char`\"{}, 0 if a \char`\"{}setting\char`\"{}, or other values for special purposes. 
+
+A state is read-\/only, and reflects dynamic state such as error counts. A setting is read/write or write-\/only, which can (in principle) be saved to non-\/volatile storage on the device. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/xbee/\hyperlink{reg__descr_8h}{reg\+\_\+descr.\+h}\end{DoxyCompactItemize}

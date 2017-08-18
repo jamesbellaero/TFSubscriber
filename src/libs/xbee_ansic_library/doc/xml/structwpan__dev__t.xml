@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structwpan__dev__t" kind="struct" language="C++" prot="public">
+    <compoundname>wpan_dev_t</compoundname>
+    <includes refid="aps_8h" local="yes">wpan/aps.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__wpan__aps_1gab472632c6a95d7856d1ea137441ec6a2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__wpan__aps_1gafed1542f6becf2d81fd84ef2f0ae2833" kindref="member">wpan_tick_fn</ref></type>
+        <definition>wpan_tick_fn tick</definition>
+        <argsstring></argsstring>
+        <name>tick</name>
+        <briefdescription>
+<para>read and dispatch frames </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="388" column="1" bodyfile="include/wpan/aps.h" bodystart="388" bodyend="-1"/>
+        <referencedby refid="group__wpan__aps_1ga1254464011d2d98c13db7b0b3d41c25b" compoundref="wpan__aps_8c" startline="860" endline="881">wpan_tick</referencedby>
+        <referencedby refid="group__xbee__wpan_1ga6b3d55dddb48e31d3f975f2afb4c9977" compoundref="xbee__wpan_8c" startline="182" endline="196">xbee_wpan_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1ga363ce09a97ec0b7a2dbff5b815fc3fbc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__wpan__aps_1ga505477d0257efe527747c6d1f561cd6c" kindref="member">wpan_endpoint_send_fn</ref></type>
+        <definition>wpan_endpoint_send_fn endpoint_send</definition>
+        <argsstring></argsstring>
+        <name>endpoint_send</name>
+        <briefdescription>
+<para>send frame to an endpoint </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="389" column="1" bodyfile="include/wpan/aps.h" bodystart="389" bodyend="-1"/>
+        <referencedby refid="group__xbee__wpan_1ga6b3d55dddb48e31d3f975f2afb4c9977" compoundref="xbee__wpan_8c" startline="182" endline="196">xbee_wpan_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1ga249b57f4a0559c0adb038f68d9b5c443" prot="public" static="no" mutable="no">
+        <type><ref refid="group__wpan__aps_1ga4239e4654962f88f42a53abae18e7827" kindref="member">wpan_endpoint_get_next_fn</ref></type>
+        <definition>wpan_endpoint_get_next_fn endpoint_get_next</definition>
+        <argsstring></argsstring>
+        <name>endpoint_get_next</name>
+        <briefdescription>
+<para>walk endpoint table </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="390" column="1" bodyfile="include/wpan/aps.h" bodystart="390" bodyend="-1"/>
+        <referencedby refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" compoundref="wpan__aps_8c" startline="105" endline="132">wpan_endpoint_get_next</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1ga66a58a737aee9733019399e2eceabf4a" prot="public" static="no" mutable="no">
+        <type><ref refid="structwpan__address__t" kindref="compound">wpan_address_t</ref></type>
+        <definition>wpan_address_t address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <briefdescription>
+<para>IEEE/MAC and network addresses. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="392" column="1" bodyfile="include/wpan/aps.h" bodystart="392" bodyend="-1"/>
+        <referencedby refid="group__zdo_1gae4b6736d215caf2a10790761ed52443d" compoundref="zigbee__zdo_8c" startline="110" endline="139">_zdo_envelope_create</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1ga27ab4ae0aba390adfd9907aeebd88b9c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t payload</definition>
+        <argsstring></argsstring>
+        <name>payload</name>
+        <briefdescription>
+<para>max bytes in RF payload, need to refresh if encryption enabled/disabled </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="395" column="1" bodyfile="include/wpan/aps.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1ga1e87af3c18a2fd36c61faf89949bdc3f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+<para>Bitfield describing the device&apos;s capabilities (maybe CAN_SLEEP, nodetype, etc.) and state. </para>        </briefdescription>
+        <detaileddescription>
+<para>Only valid if <ref refid="group__xbee__atcmd_1ga1cc803f821ed44e27e404d38349f53c7" kindref="member">xbee_cmd_init_device()</ref> is used or ALL Modem Status messages are received from radio. User code should not access this directly, but use WPAN_DEV_IS_* macros instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="402" column="1" bodyfile="include/wpan/aps.h" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wpan__aps_1gad7c834ea25a2f008caaf40ec08aa5a86" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *</type>
+        <definition>const wpan_endpoint_table_entry_t* endpoint_table</definition>
+        <argsstring></argsstring>
+        <name>endpoint_table</name>
+        <briefdescription>
+<para>Pointer to a table of the device&apos;s endpoints, ending with <ref refid="group__wpan__aps_1gaac571cafa96f8201c714feb0634afa92" kindref="member">WPAN_ENDPOINT_TABLE_END</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Do not reference directly! Use <ref refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" kindref="member">wpan_endpoint_get_next()</ref> to walk the table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/wpan/aps.h" line="414" column="1" bodyfile="include/wpan/aps.h" bodystart="414" bodyend="-1"/>
+        <referencedby refid="group__wpan__aps_1gaca3b72047ea4e156ce9a977c13624b5c" compoundref="wpan__aps_8c" startline="105" endline="132">wpan_endpoint_get_next</referencedby>
+        <referencedby refid="group__xbee__wpan_1ga6b3d55dddb48e31d3f975f2afb4c9977" compoundref="xbee__wpan_8c" startline="182" endline="196">xbee_wpan_init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure used by the WPAN/ZigBee layers. </para>    </briefdescription>
+    <detaileddescription>
+<para>Contains information about the node (addresses, payload limit, capabilities) along with an endpoint list and function pointers to configure, tick and send packets through the underlying network interface.</para><para>This is the abstraction layer between a physical XBee (or some other piece of hardware or gateway/router/tunnel device) and the networking layers. Similar to a driver for an Ethernet NIC and the TCP/IP stack that runs on top of it. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="72">
+        <label>wpan_envelope_t</label>
+        <link refid="structwpan__envelope__t"/>
+        <childnode refid="69" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="71" relation="usage">
+          <edgelabel>ieee_address</edgelabel>
+        </childnode>
+      </node>
+      <node id="70">
+        <label>wpan_address_t</label>
+        <link refid="structwpan__address__t"/>
+        <childnode refid="71" relation="usage">
+          <edgelabel>ieee</edgelabel>
+        </childnode>
+      </node>
+      <node id="76">
+        <label>wpan_cluster_table_entry_t</label>
+        <link refid="structwpan__cluster__table__entry__t"/>
+        <childnode refid="72" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="73">
+        <label>wpan_endpoint_table_entry_t</label>
+        <link refid="structwpan__endpoint__table__entry__t"/>
+        <childnode refid="72" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+        <childnode refid="74" relation="usage">
+          <edgelabel>ep_state</edgelabel>
+        </childnode>
+        <childnode refid="76" relation="usage">
+          <edgelabel>cluster_table</edgelabel>
+        </childnode>
+      </node>
+      <node id="71">
+        <label>addr64</label>
+        <link refid="unionaddr64"/>
+      </node>
+      <node id="74">
+        <label>wpan_ep_state_t</label>
+        <link refid="structwpan__ep__state__t"/>
+        <childnode refid="75" relation="usage">
+          <edgelabel>conversations</edgelabel>
+        </childnode>
+      </node>
+      <node id="75">
+        <label>wpan_conversation_t</label>
+        <link refid="structwpan__conversation__t"/>
+        <childnode refid="75" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="69">
+        <label>wpan_dev_t</label>
+        <link refid="structwpan__dev__t"/>
+        <childnode refid="70" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="72" relation="usage">
+          <edgelabel>endpoint_send</edgelabel>
+        </childnode>
+        <childnode refid="73" relation="usage">
+          <edgelabel>endpoint_table</edgelabel>
+          <edgelabel>endpoint_get_next</edgelabel>
+        </childnode>
+        <childnode refid="69" relation="usage">
+          <edgelabel>tick</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/wpan/aps.h" line="386" column="1" bodyfile="include/wpan/aps.h" bodystart="386" bodyend="416"/>
+    <listofallmembers>
+      <member refid="group__wpan__aps_1ga66a58a737aee9733019399e2eceabf4a" prot="public" virt="non-virtual"><scope>wpan_dev_t</scope><name>address</name></member>
+      <member refid="group__wpan__aps_1ga249b57f4a0559c0adb038f68d9b5c443" prot="public" virt="non-virtual"><scope>wpan_dev_t</scope><name>endpoint_get_next</name></member>
+      <member refid="group__wpan__aps_1ga363ce09a97ec0b7a2dbff5b815fc3fbc" prot="public" virt="non-virtual"><scope>wpan_dev_t</scope><name>endpoint_send</name></member>
+      <member refid="group__wpan__aps_1gad7c834ea25a2f008caaf40ec08aa5a86" prot="public" virt="non-virtual"><scope>wpan_dev_t</scope><name>endpoint_table</name></member>
+      <member refid="group__wpan__aps_1ga1e87af3c18a2fd36c61faf89949bdc3f" prot="public" virt="non-virtual"><scope>wpan_dev_t</scope><name>flags</name></member>
+      <member refid="group__wpan__aps_1ga27ab4ae0aba390adfd9907aeebd88b9c" prot="public" virt="non-virtual"><scope>wpan_dev_t</scope><name>payload</name></member>
+      <member refid="group__wpan__aps_1gab472632c6a95d7856d1ea137441ec6a2" prot="public" virt="non-virtual"><scope>wpan_dev_t</scope><name>tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

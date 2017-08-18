@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="swapbytes_8c" kind="file" language="C++">
+    <compoundname>swapbytes.c</compoundname>
+    <includes refid="platform_8h" local="yes">xbee/platform.h</includes>
+    <incdepgraph>
+      <node id="1214">
+        <label>errno.h</label>
+      </node>
+      <node id="1216">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="1217" relation="include">
+        </childnode>
+      </node>
+      <node id="1212">
+        <label>src/util/swapbytes.c</label>
+        <link refid="swapbytes_8c"/>
+        <childnode refid="1213" relation="include">
+        </childnode>
+      </node>
+      <node id="1215">
+        <label>stddef.h</label>
+      </node>
+      <node id="1213">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="1214" relation="include">
+        </childnode>
+        <childnode refid="1215" relation="include">
+        </childnode>
+        <childnode refid="1216" relation="include">
+        </childnode>
+      </node>
+      <node id="1217">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__util__byteorder_1ga5bdbc60a02db00841f567d1ade52f877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+        <definition>uint32_t swap32</definition>
+        <argsstring>(uint32_t value)</argsstring>
+        <name>swap32</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Swap the byte order of a 32-bit value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to swap </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>new 32-bit value with opposite endianness of <emphasis>value</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/util/swapbytes.c" line="33" column="1" bodyfile="src/util/swapbytes.c" bodystart="33" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__util__byteorder_1ga7cf3526e1af5c8642d2ec02caecf99bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t swap16</definition>
+        <argsstring>(uint16_t value)</argsstring>
+        <name>swap16</name>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Swap the byte order of a 16-bit value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to swap </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>new 16-bit value with opposite endianness of <emphasis>value</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/util/swapbytes.c" line="47" column="1" bodyfile="src/util/swapbytes.c" bodystart="47" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>For platforms without <ref refid="group__util__byteorder_1ga5bdbc60a02db00841f567d1ade52f877" kindref="member">swap32()</ref> and <ref refid="group__util__byteorder_1ga7cf3526e1af5c8642d2ec02caecf99bc" kindref="member">swap16()</ref> functions for swapping byte order for 32 and 16-bit values. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Should be written in assembly for embedded targets. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010-2012<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HAVE_SWAP_FUNCS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="group__util__byteorder_1ga5bdbc60a02db00841f567d1ade52f877" refkind="member"><highlight class="normal"><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/><ref refid="group__util__byteorder_1ga5bdbc60a02db00841f567d1ade52f877" kindref="member">swap32</ref>(<sp/><ref refid="group__hal__dos_1ga09a1e304d66d35dd47daffee9731edaa" kindref="member">uint32_t</ref><sp/><ref refid="group__xbee__atcmd_1ga5bf2410fa8ec37f47f8afeba8dcc7f1b" kindref="member">value</ref>)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><sp/>(value<sp/>&amp;<sp/>0x000000FF)<sp/>&lt;&lt;<sp/>24</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>(value<sp/>&amp;<sp/>0x0000FF00)<sp/>&lt;&lt;<sp/>8</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>(value<sp/>&amp;<sp/>0x00FF0000)<sp/>&gt;&gt;<sp/>8</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>(value<sp/>&amp;<sp/>0xFF000000)<sp/>&gt;&gt;<sp/>24;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="group__util__byteorder_1ga7cf3526e1af5c8642d2ec02caecf99bc" refkind="member"><highlight class="normal"><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__util__byteorder_1ga7cf3526e1af5c8642d2ec02caecf99bc" kindref="member">swap16</ref>(<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__xbee__atcmd_1ga5bf2410fa8ec37f47f8afeba8dcc7f1b" kindref="member">value</ref>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((value<sp/>&amp;<sp/>0x00FF)<sp/>&lt;&lt;<sp/>8)<sp/>|<sp/>(value<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HAVE_SWAP_FUNCS<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/util/swapbytes.c"/>
+  </compounddef>
+</doxygen>

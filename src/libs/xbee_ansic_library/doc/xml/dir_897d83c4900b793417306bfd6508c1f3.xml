@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_897d83c4900b793417306bfd6508c1f3" kind="dir">
+    <compoundname>include/xbee</compoundname>
+    <innerfile refid="atcmd_8h">atcmd.h</innerfile>
+    <innerfile refid="atmode_8h">atmode.h</innerfile>
+    <innerfile refid="byteorder_8h">byteorder.h</innerfile>
+    <innerfile refid="cbuf_8h">cbuf.h</innerfile>
+    <innerfile refid="commissioning_8h">commissioning.h</innerfile>
+    <innerfile refid="device_8h">device.h</innerfile>
+    <innerfile refid="discovery_8h">discovery.h</innerfile>
+    <innerfile refid="firmware_8h">firmware.h</innerfile>
+    <innerfile refid="gpm_8h">gpm.h</innerfile>
+    <innerfile refid="io_8h">io.h</innerfile>
+    <innerfile refid="jslong_8h">jslong.h</innerfile>
+    <innerfile refid="jslong__glue_8h">jslong_glue.h</innerfile>
+    <innerfile refid="ota__client_8h">ota_client.h</innerfile>
+    <innerfile refid="ota__server_8h">ota_server.h</innerfile>
+    <innerfile refid="platform_8h">platform.h</innerfile>
+    <innerfile refid="platform__dos_8h">platform_dos.h</innerfile>
+    <innerfile refid="platform__hcs08_8h">platform_hcs08.h</innerfile>
+    <innerfile refid="platform__mbed_8h">platform_mbed.h</innerfile>
+    <innerfile refid="platform__posix_8h">platform_posix.h</innerfile>
+    <innerfile refid="platform__rabbit_8h">platform_rabbit.h</innerfile>
+    <innerfile refid="platform__win32_8h">platform_win32.h</innerfile>
+    <innerfile refid="reg__descr_8h">reg_descr.h</innerfile>
+    <innerfile refid="route_8h">route.h</innerfile>
+    <innerfile refid="scan_8h">scan.h</innerfile>
+    <innerfile refid="serial_8h">serial.h</innerfile>
+    <innerfile refid="sxa_8h">sxa.h</innerfile>
+    <innerfile refid="sxa__socket_8h">sxa_socket.h</innerfile>
+    <innerfile refid="transparent__serial_8h">transparent_serial.h</innerfile>
+    <innerfile refid="wifi_8h">wifi.h</innerfile>
+    <innerfile refid="wpan_8h">wpan.h</innerfile>
+    <innerfile refid="xmodem_8h">xmodem.h</innerfile>
+    <innerfile refid="xmodem__crc16_8h">xmodem_crc16.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/xbee/"/>
+  </compounddef>
+</doxygen>

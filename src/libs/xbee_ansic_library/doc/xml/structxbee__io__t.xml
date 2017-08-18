@@ -1,0 +1,416 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structxbee__io__t" kind="struct" language="C++" prot="public">
+    <compoundname>xbee_io_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="group__xbee__io_1ga55f4e774c0eb8d8dfbcdb7f1faff5ef6" prot="public" static="no" mutable="no">
+        <type><ref refid="structxbee__command__list__context__t" kindref="compound">xbee_command_list_context_t</ref></type>
+        <definition>xbee_command_list_context_t clc</definition>
+        <argsstring></argsstring>
+        <name>clc</name>
+        <briefdescription>
+<para>Command list context used for querying configuration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="38" column="1" bodyfile="include/xbee/io.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1gabf150485c21c63b46d511cb50b2bf2df" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t din_enabled</definition>
+        <argsstring></argsstring>
+        <name>din_enabled</name>
+        <briefdescription>
+<para>Which pins have digital input sampling enabled. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="group__xbee__io_1gaf01ab2d51afb8e360ade1ec5ceb15f0c" kindref="member">XBEE_IO_DIO0</ref> etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="40" column="1" bodyfile="include/xbee/io.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1gab9c5cc4d30d476f26698c96f9aa329fe" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t dout_enabled</definition>
+        <argsstring></argsstring>
+        <name>dout_enabled</name>
+        <briefdescription>
+<para>Which pins have digital output enabled. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="42" column="1" bodyfile="include/xbee/io.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1gaef89a704cd7723b8bac1e3f6f1abd71f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t din_state</definition>
+        <argsstring></argsstring>
+        <name>din_state</name>
+        <briefdescription>
+<para>Sampled state of digital inputs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="44" column="1" bodyfile="include/xbee/io.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1gafffe3ca8d9c16b73247ec851e1c263ca" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t dout_state</definition>
+        <argsstring></argsstring>
+        <name>dout_state</name>
+        <briefdescription>
+<para>Shadow state of digital outputs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="45" column="1" bodyfile="include/xbee/io.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1gae74f9326ff51e03bd7ae5d2c85c08f9e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t pullup_state</definition>
+        <argsstring></argsstring>
+        <name>pullup_state</name>
+        <briefdescription>
+<para>Shadow state of pull-up resistors 0:no pull-up; 1:pull-up applied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="46" column="1" bodyfile="include/xbee/io.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1gab7b8b762841906ebf44fe90a3194d20c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t pulldown_state</definition>
+        <argsstring></argsstring>
+        <name>pulldown_state</name>
+        <briefdescription>
+<para>Shadow state of pull-down resistors 0:no pull-down; 1:pull-down applied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="48" column="1" bodyfile="include/xbee/io.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1ga8473837f97f54ee29f09cd8f9c15e084" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t analog_enabled</definition>
+        <argsstring></argsstring>
+        <name>analog_enabled</name>
+        <briefdescription>
+<para>Which analog inputs are enabled See <ref refid="group__xbee__io_1gafc56816e62b0dd0a8d981b08f5f29651" kindref="member">XBEE_IO_AD0</ref> etc. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="51" column="1" bodyfile="include/xbee/io.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1ga51a638af480039b3c6578b36b5ad44f0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t adc_sample[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>adc_sample</name>
+        <briefdescription>
+<para>Analog samples (raw count 0..1023) Entries 0..3 correspond to AD0..3, Entries 4..6 not currently used, Entry 7 for Vcc reading (only obtained if ATV+ issued, and Vcc is less than that threshold). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="53" column="1" bodyfile="include/xbee/io.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1ga55f35df829432e5948124c79e1cda4d9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t sample_rate</definition>
+        <argsstring></argsstring>
+        <name>sample_rate</name>
+        <briefdescription>
+<para>Shadow value of ATIR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="59" column="1" bodyfile="include/xbee/io.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1ga2502e2e5a62801d202ac0cb63e546e46" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t change_mask</definition>
+        <argsstring></argsstring>
+        <name>change_mask</name>
+        <briefdescription>
+<para>Shadow value of ATIC. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="60" column="1" bodyfile="include/xbee/io.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1ga46d8dea1f8c2a731faf0db27d6ed308f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t config[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>config</name>
+        <briefdescription>
+<para>First 16 configuration states (from ATD0 etc. </para>        </briefdescription>
+        <detaileddescription>
+<para>commands). Not all used with current hardware. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="61" column="1" bodyfile="include/xbee/io.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1ga059172dae4cbb97d22755682ec824079" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t pullup_enable</definition>
+        <argsstring></argsstring>
+        <name>pullup_enable</name>
+        <briefdescription>
+<para>Raw ATPR command value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="64" column="1" bodyfile="include/xbee/io.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1gaa1b20f291d5ad3201dbf1d3ff9aae9f2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t pullup_direction</definition>
+        <argsstring></argsstring>
+        <name>pullup_direction</name>
+        <briefdescription>
+<para>Raw ATPD command value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="65" column="1" bodyfile="include/xbee/io.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1gac20a5cb3031dfc972e4a7fcb21e7face" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t pwm0_level</definition>
+        <argsstring></argsstring>
+        <name>pwm0_level</name>
+        <briefdescription>
+<para>Output PWM level (ATM0) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="66" column="1" bodyfile="include/xbee/io.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1gaeb45f3abc59a12070b903f6b832b9de5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t pwm1_level</definition>
+        <argsstring></argsstring>
+        <name>pwm1_level</name>
+        <briefdescription>
+<para>Output PWM level (ATM1) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="67" column="1" bodyfile="include/xbee/io.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1ga2c9a187c0282faada2a305e02f9ac0e0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t pwm_timeout</definition>
+        <argsstring></argsstring>
+        <name>pwm_timeout</name>
+        <briefdescription>
+<para>ATPT value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="68" column="1" bodyfile="include/xbee/io.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__xbee__io_1ga7483aa3631522522a66c78b0f7f946f7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref></type>
+        <definition>uint8_t tx_samples</definition>
+        <argsstring></argsstring>
+        <name>tx_samples</name>
+        <briefdescription>
+<para>ATIT value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/xbee/io.h" line="69" column="1" bodyfile="include/xbee/io.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="242">
+        <label>xbee_io_t</label>
+        <link refid="structxbee__io__t"/>
+        <childnode refid="243" relation="usage">
+          <edgelabel>clc</edgelabel>
+        </childnode>
+      </node>
+      <node id="253">
+        <label>wpan_envelope_t</label>
+        <link refid="structwpan__envelope__t"/>
+        <childnode refid="252" relation="usage">
+          <edgelabel>dev</edgelabel>
+        </childnode>
+        <childnode refid="247" relation="usage">
+          <edgelabel>ieee_address</edgelabel>
+        </childnode>
+      </node>
+      <node id="248">
+        <label>xbee_dev_t</label>
+        <link refid="structxbee__dev__t"/>
+        <childnode refid="249" relation="usage">
+          <edgelabel>rx</edgelabel>
+        </childnode>
+        <childnode refid="248" relation="usage">
+          <edgelabel>is_awake</edgelabel>
+          <edgelabel>reset</edgelabel>
+          <edgelabel>node_id_handler</edgelabel>
+        </childnode>
+        <childnode refid="250" relation="usage">
+          <edgelabel>serport</edgelabel>
+        </childnode>
+        <childnode refid="252" relation="usage">
+          <edgelabel>wpan_dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="246">
+        <label>wpan_address_t</label>
+        <link refid="structwpan__address__t"/>
+        <childnode refid="247" relation="usage">
+          <edgelabel>ieee</edgelabel>
+        </childnode>
+      </node>
+      <node id="258">
+        <label>xbee_at_cmd_t</label>
+        <link refid="unionxbee__at__cmd__t"/>
+      </node>
+      <node id="251">
+        <label>xbee_cbuf_t</label>
+        <link refid="structxbee__cbuf__t"/>
+      </node>
+      <node id="257">
+        <label>wpan_cluster_table_entry_t</label>
+        <link refid="structwpan__cluster__table__entry__t"/>
+        <childnode refid="253" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="254">
+        <label>wpan_endpoint_table_entry_t</label>
+        <link refid="structwpan__endpoint__table__entry__t"/>
+        <childnode refid="253" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+        <childnode refid="255" relation="usage">
+          <edgelabel>ep_state</edgelabel>
+        </childnode>
+        <childnode refid="257" relation="usage">
+          <edgelabel>cluster_table</edgelabel>
+        </childnode>
+      </node>
+      <node id="249">
+        <label>rx</label>
+        <link refid="structxbee__dev__t_1_1rx"/>
+      </node>
+      <node id="247">
+        <label>addr64</label>
+        <link refid="unionaddr64"/>
+      </node>
+      <node id="255">
+        <label>wpan_ep_state_t</label>
+        <link refid="structwpan__ep__state__t"/>
+        <childnode refid="256" relation="usage">
+          <edgelabel>conversations</edgelabel>
+        </childnode>
+      </node>
+      <node id="243">
+        <label>xbee_command_list_context_t</label>
+        <link refid="structxbee__command__list__context__t"/>
+        <childnode refid="244" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="256">
+        <label>wpan_conversation_t</label>
+        <link refid="structwpan__conversation__t"/>
+        <childnode refid="256" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="252">
+        <label>wpan_dev_t</label>
+        <link refid="structwpan__dev__t"/>
+        <childnode refid="246" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="253" relation="usage">
+          <edgelabel>endpoint_send</edgelabel>
+        </childnode>
+        <childnode refid="254" relation="usage">
+          <edgelabel>endpoint_table</edgelabel>
+          <edgelabel>endpoint_get_next</edgelabel>
+        </childnode>
+        <childnode refid="252" relation="usage">
+          <edgelabel>tick</edgelabel>
+        </childnode>
+      </node>
+      <node id="245">
+        <label>xbee_cmd_response_t</label>
+        <link refid="structxbee__cmd__response__t"/>
+        <childnode refid="246" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="248" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="258" relation="usage">
+          <edgelabel>command</edgelabel>
+        </childnode>
+      </node>
+      <node id="250">
+        <label>xbee_serial_t</label>
+        <link refid="structxbee__serial__t"/>
+        <childnode refid="251" relation="usage">
+          <edgelabel>rxbuf</edgelabel>
+          <edgelabel>txbuf</edgelabel>
+        </childnode>
+      </node>
+      <node id="244">
+        <label>xbee_atcmd_reg_t</label>
+        <link refid="structxbee__atcmd__reg__t"/>
+        <childnode refid="245" relation="usage">
+          <edgelabel>callback</edgelabel>
+        </childnode>
+        <childnode refid="258" relation="usage">
+          <edgelabel>command</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/xbee/io.h" line="36" column="1" bodyfile="include/xbee/io.h" bodystart="36" bodyend="70"/>
+    <listofallmembers>
+      <member refid="group__xbee__io_1ga51a638af480039b3c6578b36b5ad44f0" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>adc_sample</name></member>
+      <member refid="group__xbee__io_1ga8473837f97f54ee29f09cd8f9c15e084" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>analog_enabled</name></member>
+      <member refid="group__xbee__io_1ga2502e2e5a62801d202ac0cb63e546e46" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>change_mask</name></member>
+      <member refid="group__xbee__io_1ga55f4e774c0eb8d8dfbcdb7f1faff5ef6" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>clc</name></member>
+      <member refid="group__xbee__io_1ga46d8dea1f8c2a731faf0db27d6ed308f" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>config</name></member>
+      <member refid="group__xbee__io_1gabf150485c21c63b46d511cb50b2bf2df" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>din_enabled</name></member>
+      <member refid="group__xbee__io_1gaef89a704cd7723b8bac1e3f6f1abd71f" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>din_state</name></member>
+      <member refid="group__xbee__io_1gab9c5cc4d30d476f26698c96f9aa329fe" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>dout_enabled</name></member>
+      <member refid="group__xbee__io_1gafffe3ca8d9c16b73247ec851e1c263ca" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>dout_state</name></member>
+      <member refid="group__xbee__io_1gab7b8b762841906ebf44fe90a3194d20c" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>pulldown_state</name></member>
+      <member refid="group__xbee__io_1gaa1b20f291d5ad3201dbf1d3ff9aae9f2" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>pullup_direction</name></member>
+      <member refid="group__xbee__io_1ga059172dae4cbb97d22755682ec824079" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>pullup_enable</name></member>
+      <member refid="group__xbee__io_1gae74f9326ff51e03bd7ae5d2c85c08f9e" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>pullup_state</name></member>
+      <member refid="group__xbee__io_1gac20a5cb3031dfc972e4a7fcb21e7face" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>pwm0_level</name></member>
+      <member refid="group__xbee__io_1gaeb45f3abc59a12070b903f6b832b9de5" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>pwm1_level</name></member>
+      <member refid="group__xbee__io_1ga2c9a187c0282faada2a305e02f9ac0e0" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>pwm_timeout</name></member>
+      <member refid="group__xbee__io_1ga55f35df829432e5948124c79e1cda4d9" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>sample_rate</name></member>
+      <member refid="group__xbee__io_1ga7483aa3631522522a66c78b0f7f946f7" prot="public" virt="non-virtual"><scope>xbee_io_t</scope><name>tx_samples</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

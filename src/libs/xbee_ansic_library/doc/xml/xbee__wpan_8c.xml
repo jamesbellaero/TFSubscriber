@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="xbee__wpan_8c" kind="file" language="C++">
+    <compoundname>xbee_wpan.c</compoundname>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="platform_8h" local="yes">xbee/platform.h</includes>
+    <includes refid="device_8h" local="yes">xbee/device.h</includes>
+    <includes refid="wpan_8h" local="yes">xbee/wpan.h</includes>
+    <includes refid="types_8h" local="yes">wpan/types.h</includes>
+    <includes refid="aps_8h" local="yes">wpan/aps.h</includes>
+    <includes refid="zdo_8h" local="yes">zigbee/zdo.h</includes>
+    <includes refid="zcl_8h" local="yes">zigbee/zcl.h</includes>
+    <includes refid="byteorder_8h" local="yes">xbee/byteorder.h</includes>
+    <incdepgraph>
+      <node id="1549">
+        <label>xbee/device.h</label>
+        <link refid="device_8h"/>
+        <childnode refid="1545" relation="include">
+        </childnode>
+        <childnode refid="1550" relation="include">
+        </childnode>
+        <childnode refid="1551" relation="include">
+        </childnode>
+        <childnode refid="1552" relation="include">
+        </childnode>
+      </node>
+      <node id="1546">
+        <label>errno.h</label>
+      </node>
+      <node id="1547">
+        <label>xbee/jslong_glue.h</label>
+        <link refid="jslong__glue_8h_source"/>
+        <childnode refid="1548" relation="include">
+        </childnode>
+      </node>
+      <node id="1543">
+        <label>stddef.h</label>
+      </node>
+      <node id="1552">
+        <label>wpan/aps.h</label>
+        <link refid="aps_8h"/>
+        <childnode refid="1551" relation="include">
+        </childnode>
+      </node>
+      <node id="1557">
+        <label>xbee/byteorder.h</label>
+        <link refid="byteorder_8h"/>
+        <childnode refid="1558" relation="include">
+        </childnode>
+        <childnode refid="1545" relation="include">
+        </childnode>
+      </node>
+      <node id="1553">
+        <label>xbee/wpan.h</label>
+        <link refid="wpan_8h"/>
+        <childnode refid="1549" relation="include">
+        </childnode>
+        <childnode refid="1551" relation="include">
+        </childnode>
+      </node>
+      <node id="1555">
+        <label>zigbee/zcl.h</label>
+        <link refid="zcl_8h"/>
+        <childnode refid="1545" relation="include">
+        </childnode>
+        <childnode refid="1552" relation="include">
+        </childnode>
+        <childnode refid="1556" relation="include">
+        </childnode>
+      </node>
+      <node id="1558">
+        <label>string.h</label>
+      </node>
+      <node id="1551">
+        <label>wpan/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="1545" relation="include">
+        </childnode>
+      </node>
+      <node id="1545">
+        <label>xbee/platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="1546" relation="include">
+        </childnode>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1547" relation="include">
+        </childnode>
+      </node>
+      <node id="1542">
+        <label>src/xbee/xbee_wpan.c</label>
+        <link refid="xbee__wpan_8c"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1544" relation="include">
+        </childnode>
+        <childnode refid="1545" relation="include">
+        </childnode>
+        <childnode refid="1549" relation="include">
+        </childnode>
+        <childnode refid="1553" relation="include">
+        </childnode>
+        <childnode refid="1551" relation="include">
+        </childnode>
+        <childnode refid="1552" relation="include">
+        </childnode>
+        <childnode refid="1554" relation="include">
+        </childnode>
+        <childnode refid="1555" relation="include">
+        </childnode>
+        <childnode refid="1557" relation="include">
+        </childnode>
+      </node>
+      <node id="1550">
+        <label>xbee/serial.h</label>
+        <link refid="serial_8h"/>
+        <childnode refid="1545" relation="include">
+        </childnode>
+      </node>
+      <node id="1556">
+        <label>zigbee/zcl_types.h</label>
+        <link refid="zcl__types_8h"/>
+        <childnode refid="1545" relation="include">
+        </childnode>
+        <childnode refid="1557" relation="include">
+        </childnode>
+        <childnode refid="1559" relation="include">
+        </childnode>
+      </node>
+      <node id="1559">
+        <label>zigbee/zcl64.h</label>
+        <link refid="zcl64_8h"/>
+        <childnode refid="1545" relation="include">
+        </childnode>
+      </node>
+      <node id="1554">
+        <label>zigbee/zdo.h</label>
+        <link refid="zdo_8h"/>
+        <childnode refid="1551" relation="include">
+        </childnode>
+        <childnode refid="1552" relation="include">
+        </childnode>
+      </node>
+      <node id="1548">
+        <label>xbee/jslong.h</label>
+        <link refid="jslong_8h_source"/>
+      </node>
+      <node id="1544">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__xbee__wpan_1gaca7a1f4a9ddf33e00ce7fd9382e18d29" prot="public" static="no">
+        <name>xbee_wpan_debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_wpan.c" line="33" column="10" bodyfile="src/xbee/xbee_wpan.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>xbee_wpan_debug int</type>
+        <definition>int _xbee_handle_receive_explicit</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *raw, uint16_t length, void FAR *context)</argsstring>
+        <name>_xbee_handle_receive_explicit</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Process XBee &quot;Receive Explicit&quot; frames (type 0x91) and hand off to <ref refid="group__wpan__aps_1gae84eafd10f51de6cdac4732b8948606d" kindref="member">wpan_envelope_dispatch()</ref> for further processing. </para>        </briefdescription>
+        <detaileddescription>
+<para>Please view the function help for <ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> for details on this function&apos;s parameters and possible return values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_wpan.c" line="54" column="1" bodyfile="src/xbee/xbee_wpan.c" bodystart="54" bodyend="93"/>
+        <references refid="group__xbee__wpan_1ga1e5f537223d8dffb4d74f48bbc43d149" compoundref="xbee__wpan_8c" startline="108" endline="147">_xbee_endpoint_send</references>
+        <references refid="group__util__byteorder_1gabb9b3120f6457dc04471c134fee1d221" compoundref="byteorder_8h" startline="131">be16toh</references>
+        <references refid="group__wpan__aps_1ga262a92f94287e77cb56350951893bae2" compoundref="aps_8h" startline="46">wpan_envelope_t::cluster_id</references>
+        <references refid="group__wpan__aps_1ga0992896b3999455a300e8ba25c368ae8" compoundref="aps_8h" startline="50">wpan_envelope_t::dest_endpoint</references>
+        <references refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" compoundref="aps_8h" startline="42">wpan_envelope_t::dev</references>
+        <references refid="group__hal_1ga251e9b536ed96ccb16aa28ca2d5bd656" compoundref="platform_8h" startline="116">EBADMSG</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__wpan__aps_1ga2549f921e25a72dfa05a2154a792e2bf" compoundref="aps_8h" startline="43">wpan_envelope_t::ieee_address</references>
+        <references refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" compoundref="aps_8h" startline="62">wpan_envelope_t::length</references>
+        <references refid="group__wpan__aps_1ga30948a7f8d096191895f50b80d81ca12" compoundref="aps_8h" startline="44">wpan_envelope_t::network_address</references>
+        <references refid="group__xbee__wpan_1gae6f5e79770e3e599bf8154eac1a2f3fe" compoundref="wpan_8h" startline="34">payload</references>
+        <references refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" compoundref="aps_8h" startline="61">wpan_envelope_t::payload</references>
+        <references refid="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" compoundref="aps_8h" startline="45">wpan_envelope_t::profile_id</references>
+        <references refid="group__wpan__aps_1ga9781a5a281ee97f7f67d8ebe2c4f54db" compoundref="aps_8h" startline="49">wpan_envelope_t::source_endpoint</references>
+        <references refid="group__xbee__device_1ga8547395da056b57ba7c6b26c0c0f6ccf" compoundref="device_8h" startline="359">xbee_dev_t::wpan_dev</references>
+        <references refid="group__wpan__aps_1ga92a0f27267b04aa691e184b428e8f7c6" compoundref="aps_8h" startline="55">WPAN_ENVELOPE_BROADCAST_ADDR</references>
+        <references refid="group__wpan__aps_1gae84eafd10f51de6cdac4732b8948606d" compoundref="wpan__aps_8c" startline="622" endline="676">wpan_envelope_dispatch</references>
+        <references refid="group__wpan__aps_1ga3bf12c3b9fd0afac2c9f58de8e7c38e9" compoundref="aps_8h" startline="59">WPAN_ENVELOPE_RX_APS_ENCRYPT</references>
+        <references refid="group__xbee__device_1gafcd6165b6fd733dea9704d79c5ecc671" compoundref="device_8h" startline="151">XBEE_RX_OPT_APS_ENCRYPT</references>
+        <references refid="group__xbee__device_1ga6f9c28f688c7f59b8df18f660fb94961" compoundref="device_8h" startline="148">XBEE_RX_OPT_BROADCAST</references>
+        <references refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" compoundref="platform_8h" startline="399">XBEE_UNUSED_PARAMETER</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__wpan_1ga1e5f537223d8dffb4d74f48bbc43d149" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>xbee_wpan_debug int _xbee_endpoint_send</definition>
+        <argsstring>(const wpan_envelope_t FAR *envelope, uint16_t flags)</argsstring>
+        <name>_xbee_endpoint_send</name>
+        <param>
+          <type>const <ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref> <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>envelope</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<internal><para>Sends data to an endpoint/profile/cluster on a remote WPAN node. See <ref refid="group__wpan__aps_1ga505477d0257efe527747c6d1f561cd6c" kindref="member">wpan_endpoint_send_fn()</ref> for parameters and return values.</para><para>User code should use <ref refid="group__wpan__aps_1ga06f1e9e86b74ef807ded44b79b13e283" kindref="member">wpan_envelope_send()</ref> instead of calling this function directly. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_wpan.c" line="96" column="1" bodyfile="src/xbee/xbee_wpan.c" bodystart="108" bodyend="147"/>
+        <referencedby refid="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" compoundref="xbee__wpan_8c" startline="54" endline="93">_xbee_handle_receive_explicit</referencedby>
+        <referencedby refid="group__xbee__wpan_1ga6b3d55dddb48e31d3f975f2afb4c9977" compoundref="xbee__wpan_8c" startline="182" endline="196">xbee_wpan_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__wpan_1ga7c0492680badfd8ee30c5d797395394f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>xbee_wpan_debug int</type>
+        <definition>xbee_wpan_debug int _xbee_wpan_tick</definition>
+        <argsstring>(wpan_dev_t *dev)</argsstring>
+        <name>_xbee_wpan_tick</name>
+        <param>
+          <type><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<internal><para>Simple stub function for the <ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> object to map the generic &quot;tick wpan_dev_t&quot; call into a &quot;tick xbee_dev_t&quot; call.</para><para>Note that this works because the <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> structure starts with a <ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> structure, so the <ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref> address is the same as the <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> address.</para><para>See <ref refid="group__wpan__aps_1gafed1542f6becf2d81fd84ef2f0ae2833" kindref="member">wpan_tick_fn()</ref> for parameters and return value. </para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_wpan.c" line="162" column="1" bodyfile="src/xbee/xbee_wpan.c" bodystart="162" bodyend="165"/>
+        <references refid="group__xbee__device_1gaf16e8e532b1eb587794b60222c3a0cce" compoundref="xbee__device_8c" startline="309" endline="337">xbee_dev_tick</references>
+        <referencedby refid="group__xbee__wpan_1ga6b3d55dddb48e31d3f975f2afb4c9977" compoundref="xbee__wpan_8c" startline="182" endline="196">xbee_wpan_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__wpan_1ga6b3d55dddb48e31d3f975f2afb4c9977" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>xbee_wpan_debug int</type>
+        <definition>int xbee_wpan_init</definition>
+        <argsstring>(xbee_dev_t *xbee, const wpan_endpoint_table_entry_t *ep_table)</argsstring>
+        <name>xbee_wpan_init</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref> *</type>
+          <declname>ep_table</declname>
+        </param>
+        <briefdescription>
+<para>Configure <ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> for APS-layer (endpoint/cluster) networking. </para>        </briefdescription>
+        <detaileddescription>
+<para>If using this layer, be sure to call wpan_tick (instead of xbee_dev_tick) so it can manage the APS layers of the network stack.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">xbee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>device to configure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ep_table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to an endpoint table to use with device</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>success </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-EINVAL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>invalid parameter passed to function </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_wpan.c" line="182" column="1" bodyfile="src/xbee/xbee_wpan.c" bodystart="182" bodyend="196"/>
+        <references refid="group__xbee__wpan_1ga1e5f537223d8dffb4d74f48bbc43d149" compoundref="xbee__wpan_8c" startline="108" endline="147">_xbee_endpoint_send</references>
+        <references refid="group__xbee__wpan_1ga7c0492680badfd8ee30c5d797395394f" compoundref="xbee__wpan_8c" startline="162" endline="165">_xbee_wpan_tick</references>
+        <references refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" compoundref="platform_8h" startline="95">EINVAL</references>
+        <references refid="group__wpan__aps_1ga363ce09a97ec0b7a2dbff5b815fc3fbc" compoundref="aps_8h" startline="389">wpan_dev_t::endpoint_send</references>
+        <references refid="group__wpan__aps_1gad7c834ea25a2f008caaf40ec08aa5a86" compoundref="aps_8h" startline="414">wpan_dev_t::endpoint_table</references>
+        <references refid="group__wpan__aps_1gab472632c6a95d7856d1ea137441ec6a2" compoundref="aps_8h" startline="388">wpan_dev_t::tick</references>
+        <references refid="group__xbee__device_1ga8547395da056b57ba7c6b26c0c0f6ccf" compoundref="device_8h" startline="359">xbee_dev_t::wpan_dev</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__wpan_1ga56d68291ceee384fbd8a5833eb91182c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>xbee_wpan_debug int</type>
+        <definition>xbee_wpan_debug int _xbee_handle_transmit_status</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *payload, uint16_t length, void FAR *context)</argsstring>
+        <name>_xbee_handle_transmit_status</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>frame</declname>
+          <defname>payload</defname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<internal><para>Dummy frame handler for 0x8B (XBEE_FRAME_TRANSMIT_STATUS) frames. Placeholder until we integrate processing of those frames into the stack. <simplesect kind="see"><para><ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref></para></simplesect>
+<xrefsect id="todo_1_todo000030"><xreftitle>Todo</xreftitle><xrefdescription><para>Figure out what needs to happen with these frames. Does atcmd layer need to pass errors down to callbacks? Registered endpoints? Tracked conversations? </para></xrefdescription></xrefsect></para></internal>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_wpan.c" line="203" column="1" bodyfile="src/xbee/xbee_wpan.c" bodystart="203" bodyend="216"/>
+        <references refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" compoundref="platform_8h" startline="399">XBEE_UNUSED_PARAMETER</references>
+      </memberdef>
+      <memberdef kind="function" id="group__xbee__wpan_1gaa750c530910a7d8324ba5579ee7fcb57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int xbee_frame_dump_transmit_status</definition>
+        <argsstring>(xbee_dev_t *xbee, const void FAR *payload, uint16_t length, void FAR *context)</argsstring>
+        <name>xbee_frame_dump_transmit_status</name>
+        <param>
+          <type><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref> *</type>
+          <declname>xbee</declname>
+        </param>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>frame</declname>
+          <defname>payload</defname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Frame handler for 0x8B (XBEE_FRAME_TRANSMIT_STATUS) frames <ndash/> dumps transmit status to STDOUT for debugging purposes. </para>        </briefdescription>
+        <detaileddescription>
+<para>View the documentation of <ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> for this function&apos;s parameters and return value.</para><para><simplesect kind="see"><para><ref refid="wpan_8h_1a607cf0696a8bc634ee8993f45200297b" kindref="member">XBEE_FRAME_TRANSMIT_STATUS_DEBUG</ref>, <ref refid="group__xbee__device_1ga3e6f2b540e8cec7a69ef0b0166da14ff" kindref="member">xbee_frame_handler_fn()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/xbee/xbee_wpan.c" line="220" column="1" bodyfile="src/xbee/xbee_wpan.c" bodystart="220" bodyend="236"/>
+        <references refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" compoundref="platform_8h" startline="370">FAR</references>
+        <references refid="group__xbee__wpan_1gae6f5e79770e3e599bf8154eac1a2f3fe" compoundref="wpan_8h" startline="34">payload</references>
+        <references refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" compoundref="platform_8h" startline="399">XBEE_UNUSED_PARAMETER</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Glue layer between XBee-specific code and general WPAN layer. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009-2013<sp/>Digi<sp/>International<sp/>Inc.,</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>not<sp/>expressly<sp/>granted<sp/>are<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Digi<sp/>International<sp/>Inc.<sp/>11001<sp/>Bren<sp/>Road<sp/>East,<sp/>Minnetonka,<sp/>MN<sp/>55343</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>=======================================================================</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">/***<sp/>BeginHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">xbee/platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="device_8h" kindref="compound">xbee/device.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wpan_8h" kindref="compound">xbee/wpan.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">wpan/types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="aps_8h" kindref="compound">wpan/aps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zdo_8h" kindref="compound">zigbee/zdo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zcl_8h" kindref="compound">zigbee/zcl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__DC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>xbee_wpan_debug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>XBEE_WPAN_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>xbee_wpan_debug<sp/><sp/><sp/><sp/>__debug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>xbee_wpan_debug<sp/><sp/><sp/><sp/>__nodebug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>_xbee_handle_receive_explicit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="byteorder_8h" kindref="compound">xbee/byteorder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">xbee_wpan_debug</highlight></codeline>
+<codeline lineno="54" refid="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__wpan_1ga8cb1973677412a2c5627a77009a8f283" kindref="member">_xbee_handle_receive_explicit</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*raw,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__xbee__wpan_1gad36b64f2e729281d8b7704f6e9906e82" kindref="member">xbee_frame_receive_explicit_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*frame<sp/>=<sp/>raw;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><sp/><sp/>env;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>XBee<sp/>frame<sp/>handler<sp/>(standard<sp/>API)<sp/>doesn&apos;t<sp/>use<sp/>the<sp/>context<sp/>parameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>context);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(frame<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(length<sp/>&lt;<sp/>offsetof(<sp/><ref refid="group__xbee__wpan_1gad36b64f2e729281d8b7704f6e9906e82" kindref="member">xbee_frame_receive_explicit_t</ref>,<sp/><ref refid="group__xbee__wpan_1gae6f5e79770e3e599bf8154eac1a2f3fe" kindref="member">payload</ref>))</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>invalid<sp/>frame<sp/>--<sp/>should<sp/>always<sp/>be<sp/>at<sp/>least<sp/>as<sp/>long<sp/>as<sp/>payload<sp/>field</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga251e9b536ed96ccb16aa28ca2d5bd656" kindref="member">EBADMSG</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/>env.<ref refid="group__wpan__aps_1ga7f9a38312b9025348d42a4ed0042ce37" kindref="member">dev</ref><sp/>=<sp/>&amp;xbee-&gt;<ref refid="group__xbee__device_1ga8547395da056b57ba7c6b26c0c0f6ccf" kindref="member">wpan_dev</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/>env.<ref refid="group__wpan__aps_1ga2549f921e25a72dfa05a2154a792e2bf" kindref="member">ieee_address</ref><sp/>=<sp/>frame-&gt;ieee_address;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/>env.<ref refid="group__wpan__aps_1ga30948a7f8d096191895f50b80d81ca12" kindref="member">network_address</ref><sp/>=<sp/><ref refid="group__util__byteorder_1gabb9b3120f6457dc04471c134fee1d221" kindref="member">be16toh</ref>(<sp/>frame-&gt;network_address_be);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/>env.<ref refid="group__wpan__aps_1ga9781a5a281ee97f7f67d8ebe2c4f54db" kindref="member">source_endpoint</ref><sp/>=<sp/>frame-&gt;source_endpoint;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/>env.<ref refid="group__wpan__aps_1ga0992896b3999455a300e8ba25c368ae8" kindref="member">dest_endpoint</ref><sp/>=<sp/>frame-&gt;dest_endpoint;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/>env.<ref refid="group__wpan__aps_1ga262a92f94287e77cb56350951893bae2" kindref="member">cluster_id</ref><sp/>=<sp/><ref refid="group__util__byteorder_1gabb9b3120f6457dc04471c134fee1d221" kindref="member">be16toh</ref>(<sp/>frame-&gt;cluster_id_be);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/>env.<ref refid="group__wpan__aps_1ga5ca7f19e5697de2baf0e2147a41a5792" kindref="member">profile_id</ref><sp/>=<sp/><ref refid="group__util__byteorder_1gabb9b3120f6457dc04471c134fee1d221" kindref="member">be16toh</ref>(<sp/>frame-&gt;profile_id_be);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/>env.options<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(frame-&gt;options<sp/>&amp;<sp/><ref refid="group__xbee__device_1ga6f9c28f688c7f59b8df18f660fb94961" kindref="member">XBEE_RX_OPT_BROADCAST</ref>)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>env.options<sp/>|=<sp/><ref refid="group__wpan__aps_1ga92a0f27267b04aa691e184b428e8f7c6" kindref="member">WPAN_ENVELOPE_BROADCAST_ADDR</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(frame-&gt;options<sp/>&amp;<sp/><ref refid="group__xbee__device_1gafcd6165b6fd733dea9704d79c5ecc671" kindref="member">XBEE_RX_OPT_APS_ENCRYPT</ref>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>env.options<sp/>|=<sp/><ref refid="group__wpan__aps_1ga3bf12c3b9fd0afac2c9f58de8e7c38e9" kindref="member">WPAN_ENVELOPE_RX_APS_ENCRYPT</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/>env.<ref refid="group__wpan__aps_1ga8737375e27cb391ff381fff10dc0c132" kindref="member">payload</ref><sp/>=<sp/>frame-&gt;payload;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/>env.<ref refid="group__wpan__aps_1ga1892eba2086d12ac2b09005aeb09ea3b" kindref="member">length</ref><sp/>=<sp/>length<sp/>-<sp/>offsetof(<sp/><ref refid="group__xbee__wpan_1gad36b64f2e729281d8b7704f6e9906e82" kindref="member">xbee_frame_receive_explicit_t</ref>,<sp/><ref refid="group__xbee__wpan_1gae6f5e79770e3e599bf8154eac1a2f3fe" kindref="member">payload</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__wpan__aps_1gae84eafd10f51de6cdac4732b8948606d" kindref="member">wpan_envelope_dispatch</ref>(<sp/>&amp;env);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>_xbee_endpoint_send<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__wpan_1ga1e5f537223d8dffb4d74f48bbc43d149" kindref="member">_xbee_endpoint_send</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>flags);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">xbee_wpan_debug</highlight></codeline>
+<codeline lineno="108" refid="group__xbee__wpan_1ga1e5f537223d8dffb4d74f48bbc43d149" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__wpan_1ga1e5f537223d8dffb4d74f48bbc43d149" kindref="member">_xbee_endpoint_send</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__envelope__t" kindref="compound">wpan_envelope_t</ref><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*envelope,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/>flags)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__xbee__wpan_1gac2df4f67492506916726d8002ca5f2bd" kindref="member">xbee_header_transmit_explicit_t</ref><sp/><sp/>header;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>note<sp/>that<sp/>wpan_envelope_send()<sp/>verifies<sp/>that<sp/>envelope<sp/>is<sp/>not<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/>xbee<sp/>=<sp/>(<ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*)<sp/>envelope-&gt;dev;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>envelope<sp/>to<sp/>the<sp/>necessary<sp/>frame<sp/>type<sp/>and<sp/>call<sp/>xbee_frame_send</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/>header.frame_type<sp/>=<sp/>(<ref refid="group__hal__dos_1gae1affc9ca37cfb624959c866a73f83c2" kindref="member">uint8_t</ref>)<sp/><ref refid="group__xbee__device_1gga7753bbebaf00d6d64942f64b6ae9b7b9aa673474f9f3597929def38ad4cf7d63e" kindref="member">XBEE_FRAME_TRANSMIT_EXPLICIT</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/>header.frame_id<sp/>=<sp/><ref refid="group__xbee__device_1ga9faca10d7a960dcd3c0c3ad9c0d59cab" kindref="member">xbee_next_frame_id</ref>(<sp/>xbee);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/>header.ieee_address<sp/>=<sp/>envelope-&gt;ieee_address;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/>header.network_address_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>envelope-&gt;network_address);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/>header.source_endpoint<sp/>=<sp/>envelope-&gt;source_endpoint;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/>header.dest_endpoint<sp/>=<sp/>envelope-&gt;dest_endpoint;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/>header.cluster_id_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>envelope-&gt;cluster_id);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/>header.profile_id_be<sp/>=<sp/><ref refid="group__util__byteorder_1ga4b9167199621b390f82c3e5361ba6df6" kindref="member">htobe16</ref>(<sp/>envelope-&gt;profile_id);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/>header.broadcast_radius<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/>header.options<sp/>=<sp/>(flags<sp/>&amp;<sp/>WPAN_SEND_FLAG_ENCRYPTED)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/><ref refid="group__xbee__wpan_1ga0a9bf2b58851b7d8db5359aefef3cfe0" kindref="member">XBEE_TX_OPT_APS_ENCRYPT</ref><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#ifdef<sp/>XBEE_WPAN_VERBOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(<sp/></highlight><highlight class="stringliteral">&quot;%s:<sp/>%u<sp/>bytes<sp/>to<sp/>0x%04x<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;(ep=%02x-&gt;%02x<sp/>clust=%04x<sp/>prof=%04x<sp/>opt=%02x)\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FUNCTION__,<sp/>envelope-&gt;length,<sp/>envelope-&gt;network_address,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>envelope-&gt;source_endpoint,<sp/>envelope-&gt;dest_endpoint,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>envelope-&gt;cluster_id,<sp/>envelope-&gt;profile_id,<sp/>header.options);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/>error<sp/>=<sp/><ref refid="group__xbee__device_1ga51f281b72bffcc99eec0e8c7f65a5f3f" kindref="member">xbee_frame_write</ref>(<sp/>xbee,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&amp;header,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(header),<sp/>envelope-&gt;payload,<sp/>envelope-&gt;length,<sp/>0);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#ifdef<sp/>XBEE_WPAN_VERBOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(<sp/></highlight><highlight class="stringliteral">&quot;%s:<sp/>%s<sp/>returned<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>__FUNCTION__,<sp/></highlight><highlight class="stringliteral">&quot;xbee_frame_write&quot;</highlight><highlight class="normal">,<sp/>error);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>error;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_wpan_init<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">xbee_wpan_debug</highlight></codeline>
+<codeline lineno="162" refid="group__xbee__wpan_1ga7c0492680badfd8ee30c5d797395394f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__wpan_1ga7c0492680badfd8ee30c5d797395394f" kindref="member">_xbee_wpan_tick</ref>(<sp/><ref refid="structwpan__dev__t" kindref="compound">wpan_dev_t</ref><sp/>*dev)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__xbee__device_1gaf16e8e532b1eb587794b60222c3a0cce" kindref="member">xbee_dev_tick</ref>(<sp/>(<ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*)<sp/>dev);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal">xbee_wpan_debug</highlight></codeline>
+<codeline lineno="182" refid="group__xbee__wpan_1ga6b3d55dddb48e31d3f975f2afb4c9977" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__wpan_1ga6b3d55dddb48e31d3f975f2afb4c9977" kindref="member">xbee_wpan_init</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structwpan__endpoint__table__entry__t" kindref="compound">wpan_endpoint_table_entry_t</ref><sp/>*ep_table)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xbee<sp/>==<sp/>NULL<sp/>||<sp/>ep_table<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="group__hal_1ga2d1678d5a7cc8ce499643f3b8957def4" kindref="member">EINVAL</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">//<sp/>xbee-&gt;wpan_dev.config<sp/>=<sp/>NULL;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>future<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/>xbee-&gt;<ref refid="group__xbee__device_1ga8547395da056b57ba7c6b26c0c0f6ccf" kindref="member">wpan_dev</ref>.<ref refid="group__wpan__aps_1gab472632c6a95d7856d1ea137441ec6a2" kindref="member">tick</ref><sp/>=<sp/><ref refid="group__xbee__wpan_1ga7c0492680badfd8ee30c5d797395394f" kindref="member">_xbee_wpan_tick</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/>xbee-&gt;<ref refid="group__xbee__device_1ga8547395da056b57ba7c6b26c0c0f6ccf" kindref="member">wpan_dev</ref>.<ref refid="group__wpan__aps_1ga363ce09a97ec0b7a2dbff5b815fc3fbc" kindref="member">endpoint_send</ref><sp/>=<sp/><ref refid="group__xbee__wpan_1ga1e5f537223d8dffb4d74f48bbc43d149" kindref="member">_xbee_endpoint_send</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/>xbee-&gt;<ref refid="group__xbee__device_1ga8547395da056b57ba7c6b26c0c0f6ccf" kindref="member">wpan_dev</ref>.<ref refid="group__wpan__aps_1gad7c834ea25a2f008caaf40ec08aa5a86" kindref="member">endpoint_table</ref><sp/>=<sp/>ep_table;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>_xbee_handle_transmit_status<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment">//<sp/>see<sp/>xbee/device.h<sp/>for<sp/>documentation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal">xbee_wpan_debug</highlight></codeline>
+<codeline lineno="203" refid="group__xbee__wpan_1ga56d68291ceee384fbd8a5833eb91182c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__wpan_1ga56d68291ceee384fbd8a5833eb91182c" kindref="member">_xbee_handle_transmit_status</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="group__xbee__wpan_1gae6f5e79770e3e599bf8154eac1a2f3fe" kindref="member">payload</ref>,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>standard<sp/>XBee<sp/>frame<sp/>handler;<sp/>stub<sp/>isn&apos;t<sp/>using<sp/>any<sp/>parameters<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>xbee);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>payload);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>length);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>context);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>it<sp/>may<sp/>be<sp/>necessary<sp/>to<sp/>push<sp/>information<sp/>up<sp/>to<sp/>user<sp/>code<sp/>so<sp/>they<sp/>know<sp/>when</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>packet<sp/>has<sp/>been<sp/>received<sp/>or<sp/>if<sp/>it<sp/>didn&apos;t<sp/>make<sp/>it<sp/>out</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>BeginHeader<sp/>xbee_frame_dump_transmit_status<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>EndHeader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="group__xbee__wpan_1gaa750c530910a7d8324ba5579ee7fcb57" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__xbee__wpan_1gaa750c530910a7d8324ba5579ee7fcb57" kindref="member">xbee_frame_dump_transmit_status</ref>(<sp/><ref refid="structxbee__dev__t" kindref="compound">xbee_dev_t</ref><sp/>*xbee,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="group__xbee__wpan_1gae6f5e79770e3e599bf8154eac1a2f3fe" kindref="member">payload</ref>,<sp/><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref><sp/><ref refid="group__zdo_1gab2b3adeb2a67e656ff030b56727fd0ac" kindref="member">length</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*context)</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>xbee_frame_transmit_status_t<sp/><ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*frame<sp/>=<sp/><ref refid="group__xbee__wpan_1gae6f5e79770e3e599bf8154eac1a2f3fe" kindref="member">payload</ref>;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>standard<sp/>XBee<sp/>frame<sp/>handler;<sp/>doesn&apos;t<sp/>use<sp/>all<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>xbee);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>length);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__hal_1gacddb73dac3fd1bdec26cd7dc0a652c00" kindref="member">XBEE_UNUSED_PARAMETER</ref>(<sp/>context);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/>printf(<sp/></highlight><highlight class="stringliteral">&quot;%s:<sp/>id<sp/>0x%02x<sp/>to<sp/>0x%04x<sp/>retries=%d<sp/>del=0x%02x<sp/>disc=0x%02x\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>__FUNCTION__,<sp/>frame-&gt;frame_id,</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__util__byteorder_1gabb9b3120f6457dc04471c134fee1d221" kindref="member">be16toh</ref>(<sp/>frame-&gt;network_address_be),<sp/>frame-&gt;retries,<sp/>frame-&gt;delivery,</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>frame-&gt;discovery);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/xbee/xbee_wpan.c"/>
+  </compounddef>
+</doxygen>

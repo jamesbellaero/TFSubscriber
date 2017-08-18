@@ -1,0 +1,1826 @@
+\hypertarget{group__xbee__atcmd}{}\section{AT Commands}
+\label{group__xbee__atcmd}\index{A\+T Commands@{A\+T Commands}}
+
+
+This layer wraps the AT request/response frames to provide an easy method for querying/setting registers on, and sending AT commands to the X\+Bee.  
+
+
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{xbee__atcmd_8c}{xbee\+\_\+atcmd.\+c}
+\begin{DoxyCompactList}\small\item\em Code related to sending AT command requests and processing the responses. \end{DoxyCompactList}\item 
+file \hyperlink{xbee__scan_8c}{xbee\+\_\+scan.\+c}
+\begin{DoxyCompactList}\small\item\em Code related to A\+T\+AS (Active Scan) responses. \end{DoxyCompactList}\item 
+file \hyperlink{atcmd_8h}{atcmd.\+h}
+\begin{DoxyCompactList}\small\item\em Sending AT command requests and processing the responses. \end{DoxyCompactList}\item 
+file \hyperlink{reg__descr_8h}{reg\+\_\+descr.\+h}
+\begin{DoxyCompactList}\small\item\em Header for X\+Bee register descriptors. \end{DoxyCompactList}\item 
+file \hyperlink{scan_8h}{scan.\+h}
+\begin{DoxyCompactList}\small\item\em Structures for the A\+T\+AS (Active Scan) A\+PI responses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionxbee__at__cmd__t}{xbee\+\_\+at\+\_\+cmd\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Datatype used for passing and storing X\+Bee AT Commands. \end{DoxyCompactList}\item 
+struct \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure used to pass AT Command responses to registered callback handlers. \end{DoxyCompactList}\item 
+struct \hyperlink{structxbee__cmd__request__t}{xbee\+\_\+cmd\+\_\+request\+\_\+t}
+\begin{DoxyCompactList}\small\item\em This structure is used to keep track of outstanding local and remote AT requests. \end{DoxyCompactList}\item 
+union \hyperlink{unionxbee__header__at__request__t}{xbee\+\_\+header\+\_\+at\+\_\+request\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Useful typedef to create either a local or remote request frame. \end{DoxyCompactList}\item 
+union \hyperlink{unionxbee__frame__at__response__t}{xbee\+\_\+frame\+\_\+at\+\_\+response\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Useful typedef for casting either a local or remote response frame. \end{DoxyCompactList}\item 
+struct \hyperlink{structxbee__command__list__context__t}{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Context data passed to command list processor. \end{DoxyCompactList}\item 
+struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Entry for table of X\+Bee registers to query at startup. \end{DoxyCompactList}\item 
+struct \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t}
+\item 
+union \hyperlink{unionxbee__scan__response__t}{xbee\+\_\+scan\+\_\+response\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gaa0a5c0b4df3e37c4a829f4675818fbbf}\label{group__xbee__atcmd_gaa0a5c0b4df3e37c4a829f4675818fbbf}} 
+\#define {\bfseries \+\_\+xbee\+\_\+atcmd\+\_\+debug}
+\item 
+\#define \hyperlink{group__xbee__atcmd_ga23209b601f70aa30a5a6997c9baf313e}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+DX}~6
+\begin{DoxyCompactList}\small\item\em Offset into \+\_\+xbee\+\_\+atcmd\+\_\+query\+\_\+regs to use when refreshing the xbee\+\_\+dev\+\_\+t/ \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} structure. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_gaf992e9b985e2b1eb185ef3d2d38a01c0}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE}~2
+\begin{DoxyCompactList}\small\item\em Maximum number of outstanding requests. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_ga9b1046f9c200c1bb0a9b57cb0ec474df}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH}~48
+\begin{DoxyCompactList}\small\item\em Maximum number of bytes in the parameter sent to a command. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_ga386fdd4cf7046c98379878dab89e5012}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+T\+I\+M\+E\+O\+UT}~180
+\begin{DoxyCompactList}\small\item\em Timeout (in seconds) to wait for a response to a remote command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gae5e93a4c6f52f5853d19a8b4a78810a6}\label{group__xbee__atcmd_gae5e93a4c6f52f5853d19a8b4a78810a6}} 
+\#define \hyperlink{group__xbee__atcmd_gae5e93a4c6f52f5853d19a8b4a78810a6}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+I\+M\+E\+O\+UT}~2
+\begin{DoxyCompactList}\small\item\em Timeout (in seconds) to wait for a response to a local command. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gaa5d4a48819eeef79e9552c6c139b73cf}\label{group__xbee__atcmd_gaa5d4a48819eeef79e9552c6c139b73cf}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+A\+T\+E\+O\+\_\+\+I\+N\+S\+E\+C\+U\+R\+E\+\_\+\+J\+O\+IN}~(1$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga0aa3bb0ab5ac949a951778338d87356d}\label{group__xbee__atcmd_ga0aa3bb0ab5ac949a951778338d87356d}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+A\+T\+E\+O\+\_\+\+U\+S\+E\+\_\+\+T\+R\+U\+S\+T\+\_\+\+C\+E\+N\+T\+ER}~(1$<$$<$1)
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga203e29636f971bc1e5ca82d158eec447}\label{group__xbee__atcmd_ga203e29636f971bc1e5ca82d158eec447}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+A\+T\+E\+O\+\_\+\+U\+S\+E\+\_\+\+H\+A\+S\+H\+\_\+\+L\+I\+N\+K\+\_\+\+K\+EY}~(1$<$$<$2)
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga11bd61fb70eddd0996b67c3b45bed8d3}\label{group__xbee__atcmd_ga11bd61fb70eddd0996b67c3b45bed8d3}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+A\+T\+E\+O\+\_\+\+U\+S\+E\+\_\+\+A\+U\+T\+H\+E\+N\+T\+I\+C\+A\+T\+I\+ON}~(1$<$$<$3)
+\item 
+\#define \hyperlink{group__xbee__atcmd_ga4dc292cd07dfd93bbfb2b8632b580949}{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+US}(var)~((var) \& \hyperlink{group__xbee__atcmd_ggac6a27f1b1ee32b75b6f966afbb347f22adb75bf991027151c1aa20a454e278145}{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK})
+\begin{DoxyCompactList}\small\item\em Macro for checking the status byte of an AT response. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG}(c1,  c2,  \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type},  obj,  field)
+\begin{DoxyCompactList}\small\item\em Macro used in creating command list tables. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_gabbaf60bd4d186b860fd58c8a6111e9f9}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+CB}(c1,  c2,  cb,  flags)~\{ \{ \{ c1, c2 \} \}, flags, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba01bd43706bd844415cc0882b861df4d1}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE}, cb, 0, 0 \}
+\begin{DoxyCompactList}\small\item\em Macro used in creating command list tables. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_gaf5f12cd2d94f9f4ecf0a679196a6ed21}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+M\+O\+V\+E\+\_\+\+T\+H\+E\+N\+\_\+\+CB}(c1,  c2,  \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type},  obj,  field,  cb,  flags)
+\begin{DoxyCompactList}\small\item\em Macro used in creating command list tables. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_ga37dcc1cfc854d7876be99eff279bf2a0}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+S\+E\+T\+\_\+8}(c1,  c2,  \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value})~\{ \{ \{ c1, c2 \} \}, 0, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0eb2ffa9c761ab74335695f818ce8410}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+8}, N\+U\+LL, \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value}, 0 \}
+\begin{DoxyCompactList}\small\item\em Macro used in creating command list tables. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_ga22fe547f7ae9fd0b090c5e45f03c162d}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+ND}~\{ \{ \{ \textquotesingle{}\textbackslash{}0\textquotesingle{}, \textquotesingle{}\textbackslash{}0\textquotesingle{} \} \} \}
+\begin{DoxyCompactList}\small\item\em Macro used in creating command list tables. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_gaaed20e2dcb547e8a3256e1168e1c95b0}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+C\+MD}(c1,  c2)~\{ \{ \{ c1, c2 \} \}, 0, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba6e78c45780bccbc7226af34868dc567f}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+L\+A\+ST}, N\+U\+LL, 0, 0 \}
+\begin{DoxyCompactList}\small\item\em Macro used in creating command list tables. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_gae8d6778e286e3bf82eafc842d451c161}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+CB}(cb,  flags)~\{ \{ \{ \textquotesingle{}\textbackslash{}0\textquotesingle{}, \textquotesingle{}\textbackslash{}0\textquotesingle{} \} \}, flags, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba01bd43706bd844415cc0882b861df4d1}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE}, cb, 0, 0 \}
+\begin{DoxyCompactList}\small\item\em Macro used in creating command list tables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga1c37bac63df4c1378f8140c6e02eb301}\label{group__xbee__atcmd_ga1c37bac63df4c1378f8140c6e02eb301}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+V\+A\+L\+ID}(ptr)~(ptr-\/$>$command.\+w != 0)
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga75cfdd39f5f70bd8a180f9c858927aec}\label{group__xbee__atcmd_ga75cfdd39f5f70bd8a180f9c858927aec}} 
+\#define {\bfseries xbee\+\_\+cmd\+\_\+list\+\_\+status}(clc)~((clc)-\/$>$\hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status})
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga56c0812894871f4a6429ef00ac2d15c7}\label{group__xbee__atcmd_ga56c0812894871f4a6429ef00ac2d15c7}} 
+\#define \hyperlink{group__xbee__atcmd_ga56c0812894871f4a6429ef00ac2d15c7}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+E\+M\+P\+TY}(index)~(\hyperlink{group__xbee__atcmd_ga551531248de3d539dfb15bd89cf4734b}{xbee\+\_\+cmd\+\_\+request\+\_\+table}\mbox{[}index\mbox{]}.device == N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Is entry {\itshape index} available (unused)? \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_gac86e9f2dc459c0c6b758ba90142bbc54}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+A\+N\+D\+LE}(index)~((index $<$$<$ 8) $\vert$$\vert$ \hyperlink{group__xbee__atcmd_ga551531248de3d539dfb15bd89cf4734b}{xbee\+\_\+cmd\+\_\+request\+\_\+table}\mbox{[}index\mbox{]}.sequence)
+\begin{DoxyCompactList}\small\item\em Return the handle for entry {\itshape index} (combination of {\itshape index} and {\itshape }.sequence member of entry). \end{DoxyCompactList}\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+AT}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gab361800e13206736264e7d1e5ebd159a}\label{group__xbee__atcmd_gab361800e13206736264e7d1e5ebd159a}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+AT}~\{ \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a3cd726459592fab4cdc9b5e6bbecb79f}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE}, 0, \hyperlink{group__xbee__atcmd_ga3b4559f4e729b1c96f5c0d9e4476aa7d}{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response}, N\+U\+LL \}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga707fb13fddd604c1b306c6bd30d10a98}\label{group__xbee__atcmd_ga707fb13fddd604c1b306c6bd30d10a98}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+S\+C\+A\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+Z\+I\+G\+B\+EE}~0x01
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int($\ast$ \hyperlink{group__xbee__atcmd_ga113cbd0a40a638710974218de5f885fe}{xbee\+\_\+cmd\+\_\+callback\+\_\+fn}) (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response)
+\begin{DoxyCompactList}\small\item\em Callback registered to an AT Command with \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__atcmd_ga9bf03869fc9022aadb223bfe0cbbce48}{xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+req}
+\begin{DoxyCompactList}\small\item\em Header for AT Commands sent to the local (serially-\/attached) X\+Bee. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__atcmd_gad9afb37256d642019ad00c6ec75eae05}{xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+req}
+\begin{DoxyCompactList}\small\item\em Header to AT Commands sent to a remote X\+Bee on the network. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+resp}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+resp}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__atcmd_ga8e4eb20c6debd4dfac4a8a81d9314e98}{xbee\+\_\+frame\+\_\+local\+\_\+at\+\_\+resp}
+\begin{DoxyCompactList}\small\item\em Response to an AT Command sent to the local serially-\/connected X\+Bee. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__atcmd_ga5c11edcb9c5f6b11eec5d5d1c37cfbfd}{xbee\+\_\+frame\+\_\+remote\+\_\+at\+\_\+resp}
+\begin{DoxyCompactList}\small\item\em Response to an AT Command sent to a remote X\+Bee. \end{DoxyCompactList}\item 
+typedef void($\ast$ \hyperlink{group__xbee__atcmd_ga7909235eb77ba64c93742f8f9013d7fb}{xbee\+\_\+command\+\_\+list\+\_\+fn}) (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$reg, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base)
+\begin{DoxyCompactList}\small\item\em Callback registered for individual command list commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__xbee__atcmd_gac6a27f1b1ee32b75b6f966afbb347f22}{xbee\+\_\+at\+\_\+resp\+\_\+status} \{ \newline
+\hyperlink{group__xbee__atcmd_ggac6a27f1b1ee32b75b6f966afbb347f22adb75bf991027151c1aa20a454e278145}{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK} = 0x0F, 
+{\bfseries X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+U\+C\+C\+E\+SS} = 0, 
+{\bfseries X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+E\+R\+R\+OR} = 1, 
+{\bfseries X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+B\+A\+D\+\_\+\+C\+O\+M\+M\+A\+ND} = 2, 
+\newline
+{\bfseries X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+B\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER} = 3, 
+{\bfseries X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+T\+X\+\_\+\+F\+A\+IL} = 4, 
+\hyperlink{group__xbee__atcmd_ggac6a27f1b1ee32b75b6f966afbb347f22a52c349dd42d745e58fbeb90b51927947}{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+A\+T\+N\+D\+\_\+\+R\+S\+S\+I\+\_\+\+I\+N\+V\+A\+L\+ID} = 0x40
+ \}\begin{DoxyCompactList}\small\item\em Possible values of {\ttfamily status} byte in xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+resp\+\_\+t and xbee\+\_\+frame\+\_\+local\+\_\+at\+\_\+resp\+\_\+t. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__xbee__atcmd_ga3ec63530d743d1c91126c67493c3245d}{xbee\+\_\+command\+\_\+list\+\_\+status} \{ {\bfseries X\+B\+E\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+I\+S\+T\+\_\+\+R\+U\+N\+N\+I\+NG} = -\/\+E\+B\+U\+SY, 
+{\bfseries X\+B\+E\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+I\+S\+T\+\_\+\+D\+O\+NE} = 0, 
+{\bfseries X\+B\+E\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+I\+S\+T\+\_\+\+T\+I\+M\+E\+O\+UT} = -\/\+E\+T\+I\+M\+E\+D\+O\+UT, 
+{\bfseries X\+B\+E\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+I\+S\+T\+\_\+\+E\+R\+R\+OR} = -\/\+E\+IO
+ \}\begin{DoxyCompactList}\small\item\em Status codes for \hyperlink{group__xbee__atcmd_gafb2d1636c675066469ee388170ea27a0}{xbee\+\_\+cmd\+\_\+list\+\_\+status()} \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__xbee__atcmd_ga1bd8ecd38c107579d20ded3c79a7d70b}{xbee\+\_\+command\+\_\+list\+\_\+type} \{ \newline
+\hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba01bd43706bd844415cc0882b861df4d1}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE}, 
+\hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+PY}, 
+\hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba5450809b1aae150ec7dfb4c8faa8161a}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+P\+A\+D\+\_\+\+L\+E\+FT}, 
+\hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+BE}, 
+\newline
+\hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70babea87822fa7171a077a3c1c88e3fa7dc}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+ET}, 
+\hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef4f9c1bf1001814d8b9e44c08c91c38}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+S\+TR}, 
+\hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba32b0b8fbea9aa5c2d6a8886ccbdbf609}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+BE}, 
+\hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0eb2ffa9c761ab74335695f818ce8410}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+8}, 
+\newline
+\hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba6e78c45780bccbc7226af34868dc567f}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+L\+A\+ST}
+ \}
+\item 
+enum \hyperlink{group__xbee__atcmd_gaa874b4a291f79f2e80f867ce71fccea5}{\+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t} \{ \newline
+{\bfseries X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T32}, 
+{\bfseries X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+E\+X32}, 
+{\bfseries X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG}, 
+{\bfseries X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+IN}, 
+\newline
+{\bfseries X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+D\+D\+R64}
+ \}\begin{DoxyCompactList}\small\item\em i\+Digi R\+CI type names used by do\+\_\+command type=zigbee. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__xbee__atcmd_ga7ef08f6771da8c18234bbffca2be4ff3}{xbee\+\_\+cmd\+\_\+tick} (void)
+\begin{DoxyCompactList}\small\item\em This function should be called periodically (at least every few seconds) to expire old entries from the AT Command Request table. \end{DoxyCompactList}\item 
+\hyperlink{structxbee__cmd__request__t}{xbee\+\_\+cmd\+\_\+request\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__xbee__atcmd_ga710b2223cda09c52a8518c964da88347}{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle)
+\item 
+int \hyperlink{group__xbee__atcmd_ga4931ffe3ba31eaf16eee72ac0a95015b}{\+\_\+xbee\+\_\+cmd\+\_\+issue\+\_\+list} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__command__list__context__t}{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$clc, const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response)
+\item 
+int \hyperlink{group__xbee__atcmd_ga9f1bad1621dfd1d13b6f1102fc592d13}{\+\_\+xbee\+\_\+cmd\+\_\+list\+\_\+callback} (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response)
+\item 
+int \hyperlink{group__xbee__atcmd_gab9fb2f15b9134bd32d937a51e4c68014}{xbee\+\_\+cmd\+\_\+list\+\_\+execute} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__command__list__context__t}{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$clc, const \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$list, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Execute a list of AT commands. \end{DoxyCompactList}\item 
+enum \hyperlink{group__xbee__atcmd_ga3ec63530d743d1c91126c67493c3245d}{xbee\+\_\+command\+\_\+list\+\_\+status}() \hyperlink{group__xbee__atcmd_gafb2d1636c675066469ee388170ea27a0}{xbee\+\_\+cmd\+\_\+list\+\_\+status} (\hyperlink{structxbee__command__list__context__t}{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$clc)
+\begin{DoxyCompactList}\small\item\em Determine status of command list execution. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga1cc803f821ed44e27e404d38349f53c7}{xbee\+\_\+cmd\+\_\+init\+\_\+device} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\begin{DoxyCompactList}\small\item\em Initialize the AT Command layer for an X\+Bee device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gac58af8f94f76f3d3201c055aaa9a559b}\label{group__xbee__atcmd_gac58af8f94f76f3d3201c055aaa9a559b}} 
+void {\bfseries \+\_\+xbee\+\_\+cmd\+\_\+query\+\_\+handle\+\_\+eo} (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$reg, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base)
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga1a1bd382a9a9f19787577bd709679f82}\label{group__xbee__atcmd_ga1a1bd382a9a9f19787577bd709679f82}} 
+void {\bfseries \+\_\+xbee\+\_\+cmd\+\_\+query\+\_\+handle\+\_\+ai} (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$reg, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base)
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gafdbf73f2f7ab0efaa371e912f36ac8cb}\label{group__xbee__atcmd_gafdbf73f2f7ab0efaa371e912f36ac8cb}} 
+void {\bfseries \+\_\+xbee\+\_\+cmd\+\_\+query\+\_\+handle\+\_\+end} (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$reg, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base)
+\item 
+int \hyperlink{group__xbee__atcmd_ga12317255ca84c2539b7d7a58816eccab}{xbee\+\_\+cmd\+\_\+query\+\_\+device} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, uint\+\_\+fast8\+\_\+t refresh)
+\begin{DoxyCompactList}\small\item\em Learn about the underlying device by sending a series of commands and storing the results in the \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t}. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga83f36dfc3c3cd2c4046719ea6e9cc53c}{xbee\+\_\+cmd\+\_\+query\+\_\+status} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee)
+\begin{DoxyCompactList}\small\item\em Check the status of querying an X\+Bee device, as initiated by \hyperlink{group__xbee__atcmd_ga12317255ca84c2539b7d7a58816eccab}{xbee\+\_\+cmd\+\_\+query\+\_\+device()}. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{group__xbee__atcmd_ga1a5aaa930940857f68f245eeb89506b5}{command}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Allocate an AT Command request. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga899d5ef84ca5790c3c76b965f88874e0}{\+\_\+xbee\+\_\+cmd\+\_\+release\+\_\+request} (\hyperlink{structxbee__cmd__request__t}{xbee\+\_\+cmd\+\_\+request\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$request)
+\begin{DoxyCompactList}\small\item\em Release an entry from the request table by marking it as available. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga91641619ae34da34615193962ffd1525}{xbee\+\_\+cmd\+\_\+release\+\_\+handle} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle)
+\begin{DoxyCompactList}\small\item\em Release an entry from the request table by marking it as available. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle, const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{group__xbee__atcmd_ga1a5aaa930940857f68f245eeb89506b5}{command}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Change the command associated with a request. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle, \hyperlink{group__xbee__atcmd_ga113cbd0a40a638710974218de5f885fe}{xbee\+\_\+cmd\+\_\+callback\+\_\+fn} callback, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Associate a callback with a given AT Command request. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle, const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ieee, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} network\+\_\+address)
+\begin{DoxyCompactList}\small\item\em Associate a remote X\+Bee device with a given AT Command request. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__atcmd_ga484572705b9695ab429fd51188f74238}{\+\_\+xbee\+\_\+cmd\+\_\+encode\+\_\+param} (void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value})
+\begin{DoxyCompactList}\small\item\em Store an unsigned integer in 1, 2 or 4 bytes as a parameter to an AT command. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_gad2cc44803cc53ada37df4557313e120b}{xbee\+\_\+cmd\+\_\+set\+\_\+flags} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Set the flags for a given AT Command request. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga0828601d6b2735ee9f2ebf408d12c05c}{xbee\+\_\+cmd\+\_\+clear\+\_\+flags} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Clear the flags for a given AT Command request. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value})
+\begin{DoxyCompactList}\small\item\em Set the parameter (up to 32-\/bits) for a given AT Command request. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$\hyperlink{group__xbee__io_gac5955aa1e44ff234e6d78a19cf68f25c}{data}, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Set the parameter for a given AT Command request to a sequence of bytes. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle, const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$str)
+\begin{DoxyCompactList}\small\item\em Set a string parameter for a given AT Command request (e.\+g., the \char`\"{}\+N\+I\char`\"{} node identifier command). \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}{xbee\+\_\+cmd\+\_\+send} (\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} handle)
+\begin{DoxyCompactList}\small\item\em Send an AT Command to a local or remote X\+Bee device. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga3b4559f4e729b1c96f5c0d9e4476aa7d}{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$rawframe, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Callback handler registered for frame types \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9ae66771334070219cd098c8201936cf4a}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE} (0x88) and \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a3cd726459592fab4cdc9b5e6bbecb79f}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE} (0x97). \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga9b0ddf7aae7599dc334304f2b642f05f}{\+\_\+xbee\+\_\+cmd\+\_\+modem\+\_\+status} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$\hyperlink{group__zcl_gacb1403989580c30b5cac60f347c5d6ab}{payload}, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Receive modem status frames and update our network address (and payload size) on state changes. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga6b157fe048c0082253056a7bda0ba9bb}{xbee\+\_\+cmd\+\_\+simple} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{group__xbee__atcmd_ga1a5aaa930940857f68f245eeb89506b5}{command}\mbox{[}3\mbox{]}, \hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value})
+\begin{DoxyCompactList}\small\item\em Simple interface for sending a command with a parameter to the local X\+Bee without checking for a response. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__atcmd_ga19d16fbaf1da1cc581fbedcb36f7263f}{xbee\+\_\+cmd\+\_\+execute} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{group__xbee__atcmd_ga1a5aaa930940857f68f245eeb89506b5}{command}\mbox{[}3\mbox{]}, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$\hyperlink{group__xbee__io_gac5955aa1e44ff234e6d78a19cf68f25c}{data}, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Simple interface for sending a command with an optional parameter to the local X\+Bee without checking for a response. \end{DoxyCompactList}\item 
+void \hyperlink{group__xbee__atcmd_ga42768d8f8aa841ed4f42396cff2815aa}{xbee\+\_\+identify} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t} identify)
+\begin{DoxyCompactList}\small\item\em Programs with the Z\+CL Identify Server Cluster can call this function in their main loop to have the X\+Bee module\textquotesingle{}s association L\+ED flash fast (100ms cycle) when in Identify Mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gaf0bac69b2b0db9bb2130de80697583f4}\label{group__xbee__atcmd_gaf0bac69b2b0db9bb2130de80697583f4}} 
+int {\bfseries xbee\+\_\+scan\+\_\+dump\+\_\+response} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$raw, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga551531248de3d539dfb15bd89cf4734b}\label{group__xbee__atcmd_ga551531248de3d539dfb15bd89cf4734b}} 
+\hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{structxbee__cmd__request__t}{xbee\+\_\+cmd\+\_\+request\+\_\+t} \hyperlink{group__xbee__atcmd_ga551531248de3d539dfb15bd89cf4734b}{xbee\+\_\+cmd\+\_\+request\+\_\+table} \mbox{[}\hyperlink{group__xbee__atcmd_gaf992e9b985e2b1eb185ef3d2d38a01c0}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table used to keep track of outstanding requests. \end{DoxyCompactList}\item 
+const \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__xbee__atcmd_ga0b78107b2303165b7cf9969125064dcc}{\+\_\+xbee\+\_\+atcmd\+\_\+query\+\_\+regs} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga6cd73a1bba0cb3c1766f7f7d5d2123ea}\label{group__xbee__atcmd_ga6cd73a1bba0cb3c1766f7f7d5d2123ea}} 
+\hyperlink{structxbee__command__list__context__t}{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t} {\bfseries \+\_\+xbee\+\_\+atcmd\+\_\+query\+\_\+regs\+\_\+head}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__atcmd_ga03c1016ac46b9df250b994f242cf956a}{frame\+\_\+id}
+\begin{DoxyCompactList}\small\item\em 1 to 255, or 0 to suppress the Transmit Status response \end{DoxyCompactList}\item 
+\hyperlink{unionxbee__at__cmd__t}{xbee\+\_\+at\+\_\+cmd\+\_\+t} \hyperlink{group__xbee__atcmd_ga1a5aaa930940857f68f245eeb89506b5}{command}
+\begin{DoxyCompactList}\small\item\em two-\/character AT Command \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga568e56506b6d03a08723e768edbbcfa7}\label{group__xbee__atcmd_ga568e56506b6d03a08723e768edbbcfa7}} 
+{\bfseries xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+req\+\_\+t}
+\item 
+\hyperlink{unionaddr64}{addr64} \hyperlink{group__xbee__atcmd_ga2549f921e25a72dfa05a2154a792e2bf}{ieee\+\_\+address}
+\begin{DoxyCompactList}\small\item\em 64-\/bit I\+E\+EE address (big-\/endian) of target \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__atcmd_ga73d48563eb05cd5fcc4add79d226a3b8}{network\+\_\+address\+\_\+be}
+\begin{DoxyCompactList}\small\item\em 16-\/bit network address (big-\/endian) of target \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__atcmd_gaace3d640c8d449b8db1162993d259d3f}{options}
+\begin{DoxyCompactList}\small\item\em Options byte (see X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+$\ast$ macros) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gac183f43dbcf4b089132cd4c5f1677d62}\label{group__xbee__atcmd_gac183f43dbcf4b089132cd4c5f1677d62}} 
+{\bfseries xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+req\+\_\+t}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\begin{DoxyCompactList}\small\item\em See enum \hyperlink{group__xbee__atcmd_gac6a27f1b1ee32b75b6f966afbb347f22}{xbee\+\_\+at\+\_\+resp\+\_\+status}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gadee54f5443232dd369d7f30cea874c69}\label{group__xbee__atcmd_gadee54f5443232dd369d7f30cea874c69}} 
+{\bfseries xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+resp\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gaa69f16913b7efb4fafc34dbdccf198cd}\label{group__xbee__atcmd_gaa69f16913b7efb4fafc34dbdccf198cd}} 
+{\bfseries xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+resp\+\_\+t}
+\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__atcmd_ga5bf2410fa8ec37f47f8afeba8dcc7f1b}{value} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em First byte of multi-\/byte value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gab63b15c8139a653c95998e4c1bcd2b99}\label{group__xbee__atcmd_gab63b15c8139a653c95998e4c1bcd2b99}} 
+{\bfseries xbee\+\_\+frame\+\_\+local\+\_\+at\+\_\+resp\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga4c2b2ae22bdb77d9f8427b9bfff5a35d}\label{group__xbee__atcmd_ga4c2b2ae22bdb77d9f8427b9bfff5a35d}} 
+{\bfseries xbee\+\_\+frame\+\_\+remote\+\_\+at\+\_\+resp\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga551531248de3d539dfb15bd89cf4734b}\label{group__xbee__atcmd_ga551531248de3d539dfb15bd89cf4734b}} 
+\hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{structxbee__cmd__request__t}{xbee\+\_\+cmd\+\_\+request\+\_\+t} \hyperlink{group__xbee__atcmd_ga551531248de3d539dfb15bd89cf4734b}{xbee\+\_\+cmd\+\_\+request\+\_\+table} \mbox{[}\hyperlink{group__xbee__atcmd_gaf992e9b985e2b1eb185ef3d2d38a01c0}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table used to keep track of outstanding requests. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga62238d483c628f8c996664ff0f47ccef}\label{group__xbee__atcmd_ga62238d483c628f8c996664ff0f47ccef}} 
+const char $\ast$ \hyperlink{group__xbee__atcmd_ga62238d483c628f8c996664ff0f47ccef}{\+\_\+xbee\+\_\+rci\+\_\+types} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table to map \+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t to R\+CI type string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga38e53826af221faaa9c92525dfeb8ed3}\label{group__xbee__atcmd_ga38e53826af221faaa9c92525dfeb8ed3}} 
+const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{struct__xbee__reg__descr__t}{\+\_\+xbee\+\_\+reg\+\_\+descr\+\_\+t} {\bfseries \+\_\+xbee\+\_\+reg\+\_\+table} \mbox{[}$\,$\mbox{]}
+\item 
+typedef {\bfseries P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga715f5cb061d11eb75981741eda4dafcd}\label{group__xbee__atcmd_ga715f5cb061d11eb75981741eda4dafcd}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries channel}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga6764c432df57e31f99d528ba063ee3c3}\label{group__xbee__atcmd_ga6764c432df57e31f99d528ba063ee3c3}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries pan\+\_\+be}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga83454e414bc47cecde95577336ef19d5}\label{group__xbee__atcmd_ga83454e414bc47cecde95577336ef19d5}} 
+\hyperlink{unionaddr64}{addr64} {\bfseries extended\+\_\+pan\+\_\+be}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga4c103634447787a8b0d3377ea51107e9}\label{group__xbee__atcmd_ga4c103634447787a8b0d3377ea51107e9}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries allow\+\_\+join}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gaaa8b6f584719cbc7ae8923ced6e88766}\label{group__xbee__atcmd_gaaa8b6f584719cbc7ae8923ced6e88766}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries stack\+\_\+profile}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga0dd69605aea6dba42ffd851067dbfe77}\label{group__xbee__atcmd_ga0dd69605aea6dba42ffd851067dbfe77}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries lqi}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga3b962e67ba74725bd60ca3c29f785abe}\label{group__xbee__atcmd_ga3b962e67ba74725bd60ca3c29f785abe}} 
+\hyperlink{group__hal__dos_ga20c38cc5aac7cc6b0a3c6ab05428436d}{int8\+\_\+t} {\bfseries rssi}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gabf6256ab8381b527e6933fa07b03b378}\label{group__xbee__atcmd_gabf6256ab8381b527e6933fa07b03b378}} 
+{\bfseries xbee\+\_\+scan\+\_\+zigbee\+\_\+response\+\_\+t}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gaadc767576eaf9c39b663366c0b05c88c}\label{group__xbee__atcmd_gaadc767576eaf9c39b663366c0b05c88c}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries as\+\_\+type}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga487bfb4c432a318974154d1ebd0330ae}\label{group__xbee__atcmd_ga487bfb4c432a318974154d1ebd0330ae}} 
+xbee\+\_\+scan\+\_\+zigbee\+\_\+response\+\_\+t {\bfseries zigbee}
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+Return values for \hyperlink{group__xbee__atcmd_ga113cbd0a40a638710974218de5f885fe}{xbee\+\_\+cmd\+\_\+callback\+\_\+fn()} functions. \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__atcmd_gad51a6fee7843df5a5bfd6f3957465426}\label{group__xbee__atcmd_gad51a6fee7843df5a5bfd6f3957465426}} 
+\#define \hyperlink{group__xbee__atcmd_gad51a6fee7843df5a5bfd6f3957465426}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+D\+O\+NE}~0
+\begin{DoxyCompactList}\small\item\em Returned by an \hyperlink{group__xbee__atcmd_ga113cbd0a40a638710974218de5f885fe}{xbee\+\_\+cmd\+\_\+callback\+\_\+fn()} if the handle can be released. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__atcmd_ga9a5078393806d67903c87b3c82597fb1}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+U\+SE}~1
+\begin{DoxyCompactList}\small\item\em Returned by an \hyperlink{group__xbee__atcmd_ga113cbd0a40a638710974218de5f885fe}{xbee\+\_\+cmd\+\_\+callback\+\_\+fn()} if more reponses are expected, or it has re-\/used the command handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+Values for {\ttfamily }.options member of xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+req\+\_\+t. \begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__xbee__atcmd_ga3ca0a18e4e629050e8f1387f72638f69}{X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+Q\+U\+E\+UE}~0x00
+\begin{DoxyCompactList}\small\item\em Queue changes until A\+T\+AC command or another request with X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+I\+M\+M\+E\+D\+I\+A\+TE set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__atcmd_ga61c52828070a499e9fbfc4e6edef158b}\label{group__xbee__atcmd_ga61c52828070a499e9fbfc4e6edef158b}} 
+\#define \hyperlink{group__xbee__atcmd_ga61c52828070a499e9fbfc4e6edef158b}{X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+I\+M\+M\+E\+D\+I\+A\+TE}~0x02
+\begin{DoxyCompactList}\small\item\em Apply changes immediately, don\textquotesingle{}t wait for A\+T\+AC command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This layer wraps the AT request/response frames to provide an easy method for querying/setting registers on, and sending AT commands to the X\+Bee. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__xbee__atcmd_ga4dc292cd07dfd93bbfb2b8632b580949}\label{group__xbee__atcmd_ga4dc292cd07dfd93bbfb2b8632b580949}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+US@{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+US}}
+\index{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+US@{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+US}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+US}{XBEE\_AT\_RESP\_STATUS}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+US(\begin{DoxyParamCaption}\item[{}]{var }\end{DoxyParamCaption})~((var) \& \hyperlink{group__xbee__atcmd_ggac6a27f1b1ee32b75b6f966afbb347f22adb75bf991027151c1aa20a454e278145}{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK})}
+
+
+
+Macro for checking the status byte of an AT response. 
+
+If this library is compiled without Digi\+Mesh support, we can use a simpler test. \mbox{\Hypertarget{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}\label{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG}}
+\index{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG}{XBEE\_ATCMD\_REG}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG(\begin{DoxyParamCaption}\item[{}]{c1,  }\item[{}]{c2,  }\item[{}]{\hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type},  }\item[{}]{obj,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \{ \{ c1, c2 \} \}, 0, \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}, NULL, \(\backslash\)
+      (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}) \textcolor{keyword}{sizeof}((*(obj *)NULL).field), \(\backslash\)
+      (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}) offsetof( obj, field) \}
+\end{DoxyCode}
+
+
+Macro used in creating command list tables. 
+
+This macro does not set a callback.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c1} & first character of AT command \\
+\hline
+\mbox{\tt in}  & {\em c2} & second character of AT command \\
+\hline
+\mbox{\tt in}  & {\em type} & one of xbee\+\_\+command\+\_\+list\+\_\+type enumerated values\+: X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE -\/ no action except to issue the command. \textquotesingle{}obj\textquotesingle{} and \textquotesingle{}field\textquotesingle{} parameters are ignored. X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+PY -\/ copy response data directly, followed by 0x00 to fill the target element X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+P\+A\+D\+\_\+\+L\+E\+FT -\/ copy response data directly, padding to the left with 0x00 to fill target element X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+BE -\/ copy numeric data to host byte order X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+ET -\/ set command parameter directly X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+S\+TR -\/ set command parameter as null-\/ terminated string. X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+BE -\/ set numeric command parameter \\
+\hline
+\mbox{\tt in}  & {\em obj} & typedef name of object at base address \\
+\hline
+\mbox{\tt in}  & {\em field} & field in obj in which to store result\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The \textquotesingle{}type\textquotesingle{} parameter allows for either setting the data in the base structure as the command parameter (X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T$\ast$) or the converse, which is copying the command result back to the base structure (X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y$\ast$).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} record for constructing command list tables
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gabbaf60bd4d186b860fd58c8a6111e9f9}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+CB}, \hyperlink{group__xbee__atcmd_ga37dcc1cfc854d7876be99eff279bf2a0}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+S\+E\+T\+\_\+8} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__atcmd_gabbaf60bd4d186b860fd58c8a6111e9f9}\label{group__xbee__atcmd_gabbaf60bd4d186b860fd58c8a6111e9f9}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+CB@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+CB}}
+\index{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+CB@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+CB}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+CB}{XBEE\_ATCMD\_REG\_CB}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+CB(\begin{DoxyParamCaption}\item[{}]{c1,  }\item[{}]{c2,  }\item[{}]{cb,  }\item[{}]{flags }\end{DoxyParamCaption})~\{ \{ \{ c1, c2 \} \}, flags, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba01bd43706bd844415cc0882b861df4d1}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE}, cb, 0, 0 \}}
+
+
+
+Macro used in creating command list tables. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c1} & first character of AT command \\
+\hline
+\mbox{\tt in}  & {\em c2} & second character of AT command \\
+\hline
+\mbox{\tt in}  & {\em cb} & callback function (prototype {\itshape xbee\+\_\+command\+\_\+list\+\_\+fn}) \\
+\hline
+\mbox{\tt in}  & {\em flags} & 8-\/bit flags for callback (arbitrary).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} record for constructing command list tables
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__atcmd_ga22fe547f7ae9fd0b090c5e45f03c162d}\label{group__xbee__atcmd_ga22fe547f7ae9fd0b090c5e45f03c162d}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+ND@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+ND}}
+\index{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+ND@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+ND}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+ND}{XBEE\_ATCMD\_REG\_END}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+ND~\{ \{ \{ \textquotesingle{}\textbackslash{}0\textquotesingle{}, \textquotesingle{}\textbackslash{}0\textquotesingle{} \} \} \}}
+
+
+
+Macro used in creating command list tables. 
+
+Used to terminate table, with no special final callback. This {\bfseries must} be the last entry if used, or \hyperlink{group__xbee__atcmd_gae8d6778e286e3bf82eafc842d451c161}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+CB} must be used. \mbox{\Hypertarget{group__xbee__atcmd_gae8d6778e286e3bf82eafc842d451c161}\label{group__xbee__atcmd_gae8d6778e286e3bf82eafc842d451c161}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+CB@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+CB}}
+\index{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+CB@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+CB}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+CB}{XBEE\_ATCMD\_REG\_END\_CB}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+CB(\begin{DoxyParamCaption}\item[{}]{cb,  }\item[{}]{flags }\end{DoxyParamCaption})~\{ \{ \{ \textquotesingle{}\textbackslash{}0\textquotesingle{}, \textquotesingle{}\textbackslash{}0\textquotesingle{} \} \}, flags, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba01bd43706bd844415cc0882b861df4d1}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE}, cb, 0, 0 \}}
+
+
+
+Macro used in creating command list tables. 
+
+Used to terminate table, with a final callback. This {\bfseries must} be the last entry if used, or \hyperlink{group__xbee__atcmd_ga22fe547f7ae9fd0b090c5e45f03c162d}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+ND} must be used.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cb} & callback function (prototype {\itshape xbee\+\_\+command\+\_\+list\+\_\+fn}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The \textquotesingle{}response\textquotesingle{} parameter to the callback will be the final command response received. 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em flags} & 8-\/bit flags for callback (arbitrary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__xbee__atcmd_gaaed20e2dcb547e8a3256e1168e1c95b0}\label{group__xbee__atcmd_gaaed20e2dcb547e8a3256e1168e1c95b0}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+C\+MD@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+C\+MD}}
+\index{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+C\+MD@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+C\+MD}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+C\+MD}{XBEE\_ATCMD\_REG\_END\_CMD}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+C\+MD(\begin{DoxyParamCaption}\item[{}]{c1,  }\item[{}]{c2 }\end{DoxyParamCaption})~\{ \{ \{ c1, c2 \} \}, 0, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba6e78c45780bccbc7226af34868dc567f}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+L\+A\+ST}, N\+U\+LL, 0, 0 \}}
+
+
+
+Macro used in creating command list tables. 
+
+Used to terminate table, with a command (usually ND or WR). This {\bfseries must} be the last entry if used. \mbox{\Hypertarget{group__xbee__atcmd_gaf5f12cd2d94f9f4ecf0a679196a6ed21}\label{group__xbee__atcmd_gaf5f12cd2d94f9f4ecf0a679196a6ed21}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+M\+O\+V\+E\+\_\+\+T\+H\+E\+N\+\_\+\+CB@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+M\+O\+V\+E\+\_\+\+T\+H\+E\+N\+\_\+\+CB}}
+\index{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+M\+O\+V\+E\+\_\+\+T\+H\+E\+N\+\_\+\+CB@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+M\+O\+V\+E\+\_\+\+T\+H\+E\+N\+\_\+\+CB}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+M\+O\+V\+E\+\_\+\+T\+H\+E\+N\+\_\+\+CB}{XBEE\_ATCMD\_REG\_MOVE\_THEN\_CB}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+M\+O\+V\+E\+\_\+\+T\+H\+E\+N\+\_\+\+CB(\begin{DoxyParamCaption}\item[{}]{c1,  }\item[{}]{c2,  }\item[{}]{\hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type},  }\item[{}]{obj,  }\item[{}]{field,  }\item[{}]{cb,  }\item[{}]{flags }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \{ \{ c1, c2 \} \}, flags, \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}, cb,    \(\backslash\)
+      (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}) \textcolor{keyword}{sizeof}((*(obj *)NULL).field), \(\backslash\)
+      (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}) offsetof( obj, field) \}
+\end{DoxyCode}
+
+
+Macro used in creating command list tables. 
+
+This is a combination of \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG} (moving data automatically) and \hyperlink{group__xbee__atcmd_gabbaf60bd4d186b860fd58c8a6111e9f9}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+CB} (calling a callback function). The callback function is invoked after the data move.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c1} & first character of AT command \\
+\hline
+\mbox{\tt in}  & {\em c2} & second character of AT command \\
+\hline
+\mbox{\tt in}  & {\em type} & one of xbee\+\_\+command\+\_\+list\+\_\+type enumerated values\+: X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE -\/ no action except to issue the command. \textquotesingle{}obj\textquotesingle{} and \textquotesingle{}field\textquotesingle{} parameters are ignored. X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+PY -\/ copy response data directly, followed by 0x00 to fill the target element X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+P\+A\+D\+\_\+\+L\+E\+FT -\/ copy response data directly, padding to the left with 0x00 to fill target element X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+BE -\/ copy numeric data to host byte order X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+ET -\/ set command parameter directly X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+S\+TR -\/ set command parameter as null-\/ terminated string. X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+BE -\/ set numeric command parameter \\
+\hline
+\mbox{\tt in}  & {\em obj} & typedef name of object at base address \\
+\hline
+\mbox{\tt in}  & {\em field} & field in obj in which to store result \\
+\hline
+\mbox{\tt in}  & {\em cb} & callback function (prototype {\itshape xbee\+\_\+command\+\_\+list\+\_\+fn}) \\
+\hline
+\mbox{\tt in}  & {\em flags} & 8-\/bit flags for callback (arbitrary).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} record for constructing command list tables
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG}, \hyperlink{group__xbee__atcmd_gabbaf60bd4d186b860fd58c8a6111e9f9}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+CB} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__atcmd_ga23209b601f70aa30a5a6997c9baf313e}\label{group__xbee__atcmd_ga23209b601f70aa30a5a6997c9baf313e}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+DX@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+DX}}
+\index{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+DX@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+DX}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+DX}{XBEE\_ATCMD\_REG\_REFRESH\_IDX}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+DX~6}
+
+
+
+Offset into \+\_\+xbee\+\_\+atcmd\+\_\+query\+\_\+regs to use when refreshing the xbee\+\_\+dev\+\_\+t/ \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} structure. 
+
+
+
+Referenced by xbee\+\_\+cmd\+\_\+query\+\_\+device().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga37dcc1cfc854d7876be99eff279bf2a0}\label{group__xbee__atcmd_ga37dcc1cfc854d7876be99eff279bf2a0}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+S\+E\+T\+\_\+8@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+S\+E\+T\+\_\+8}}
+\index{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+S\+E\+T\+\_\+8@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+S\+E\+T\+\_\+8}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+S\+E\+T\+\_\+8}{XBEE\_ATCMD\_REG\_SET\_8}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+S\+E\+T\+\_\+8(\begin{DoxyParamCaption}\item[{}]{c1,  }\item[{}]{c2,  }\item[{}]{\hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value} }\end{DoxyParamCaption})~\{ \{ \{ c1, c2 \} \}, 0, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0eb2ffa9c761ab74335695f818ce8410}{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+8}, N\+U\+LL, \hyperlink{group__zcl_ga1ed5b151a90f7e99af8cca2e6875ddf4}{value}, 0 \}}
+
+
+
+Macro used in creating command list tables. 
+
+This macro does not set a callback.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c1} & first character of AT command \\
+\hline
+\mbox{\tt in}  & {\em c2} & second character of AT command \\
+\hline
+\mbox{\tt in}  & {\em value} & unsigned 8-\/bit value (compile-\/time constant) to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} record for constructing command list tables
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__atcmd_ga9a5078393806d67903c87b3c82597fb1}\label{group__xbee__atcmd_ga9a5078393806d67903c87b3c82597fb1}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+U\+SE@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+U\+SE}}
+\index{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+U\+SE@{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+U\+SE}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+U\+SE}{XBEE\_ATCMD\_REUSE}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+U\+SE~1}
+
+
+
+Returned by an \hyperlink{group__xbee__atcmd_ga113cbd0a40a638710974218de5f885fe}{xbee\+\_\+cmd\+\_\+callback\+\_\+fn()} if more reponses are expected, or it has re-\/used the command handle. 
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga9b1046f9c200c1bb0a9b57cb0ec474df}\label{group__xbee__atcmd_ga9b1046f9c200c1bb0a9b57cb0ec474df}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH@{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH}}
+\index{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH@{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH}{XBEE\_CMD\_MAX\_PARAM\_LENGTH}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH~48}
+
+
+
+Maximum number of bytes in the parameter sent to a command. 
+
+The NI command takes a 20-\/byte string. A\+T\+ZT is 48 bytes, A\+T\+ZU is 22. Platforms can override this when limiting to AT commands with shorter parameters (e.\+g., 16 bytes when not using the certificate parameters). 
+
+Referenced by xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes(), and xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga386fdd4cf7046c98379878dab89e5012}\label{group__xbee__atcmd_ga386fdd4cf7046c98379878dab89e5012}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+T\+I\+M\+E\+O\+UT@{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+T\+I\+M\+E\+O\+UT}}
+\index{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+T\+I\+M\+E\+O\+UT@{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+T\+I\+M\+E\+O\+UT}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+T\+I\+M\+E\+O\+UT}{XBEE\_CMD\_REMOTE\_TIMEOUT}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+T\+I\+M\+E\+O\+UT~180}
+
+
+
+Timeout (in seconds) to wait for a response to a remote command. 
+
+Set to a high value to allow for a sleeping end device. \mbox{\Hypertarget{group__xbee__atcmd_gac86e9f2dc459c0c6b758ba90142bbc54}\label{group__xbee__atcmd_gac86e9f2dc459c0c6b758ba90142bbc54}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+A\+N\+D\+LE@{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+A\+N\+D\+LE}}
+\index{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+A\+N\+D\+LE@{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+A\+N\+D\+LE}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+A\+N\+D\+LE}{XBEE\_CMD\_REQUEST\_HANDLE}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+H\+A\+N\+D\+LE(\begin{DoxyParamCaption}\item[{}]{index }\end{DoxyParamCaption})~((index $<$$<$ 8) $\vert$$\vert$ \hyperlink{group__xbee__atcmd_ga551531248de3d539dfb15bd89cf4734b}{xbee\+\_\+cmd\+\_\+request\+\_\+table}\mbox{[}index\mbox{]}.sequence)}
+
+
+
+Return the handle for entry {\itshape index} (combination of {\itshape index} and {\itshape }.sequence member of entry). 
+
+\mbox{\Hypertarget{group__xbee__atcmd_gaf992e9b985e2b1eb185ef3d2d38a01c0}\label{group__xbee__atcmd_gaf992e9b985e2b1eb185ef3d2d38a01c0}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE@{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE}}
+\index{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE@{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE}{XBEE\_CMD\_REQUEST\_TABLESIZE}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE~2}
+
+
+
+Maximum number of outstanding requests. 
+
+Two should be sufficient in most (all?) cases. One might even be enough if space is tight. 
+
+Referenced by \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address().
+
+\mbox{\Hypertarget{group__xbee__atcmd_gaae50224419f278ac13faf6637befa899}\label{group__xbee__atcmd_gaae50224419f278ac13faf6637befa899}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+AT@{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+AT}}
+\index{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+AT@{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+AT}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+AT}{XBEE\_FRAME\_HANDLE\_LOCAL\_AT}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+AT}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9ae66771334070219cd098c8201936cf4a}{XBEE\_FRAME\_LOCAL\_AT\_RESPONSE}, 0, 
+      \hyperlink{group__xbee__atcmd_ga3b4559f4e729b1c96f5c0d9e4476aa7d}{\_xbee\_cmd\_handle\_response}, NULL \}, \(\backslash\)
+   \{ \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9adff71d45371cf6b933688c43994b7f81}{XBEE\_FRAME\_MODEM\_STATUS}, 0, \hyperlink{group__xbee__atcmd_ga9b0ddf7aae7599dc334304f2b642f05f}{\_xbee\_cmd\_modem\_status}, NULL 
+      \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__xbee__atcmd_ga3ca0a18e4e629050e8f1387f72638f69}\label{group__xbee__atcmd_ga3ca0a18e4e629050e8f1387f72638f69}} 
+\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+Q\+U\+E\+UE@{X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+Q\+U\+E\+UE}}
+\index{X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+Q\+U\+E\+UE@{X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+Q\+U\+E\+UE}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+Q\+U\+E\+UE}{XBEE\_REMOTE\_AT\_OPT\_QUEUE}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+Q\+U\+E\+UE~0x00}
+
+
+
+Queue changes until A\+T\+AC command or another request with X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+I\+M\+M\+E\+D\+I\+A\+TE set. 
+
+
+
+Referenced by xbee\+\_\+cmd\+\_\+send().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__xbee__atcmd_ga113cbd0a40a638710974218de5f885fe}\label{group__xbee__atcmd_ga113cbd0a40a638710974218de5f885fe}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+callback\+\_\+fn@{xbee\+\_\+cmd\+\_\+callback\+\_\+fn}}
+\index{xbee\+\_\+cmd\+\_\+callback\+\_\+fn@{xbee\+\_\+cmd\+\_\+callback\+\_\+fn}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+callback\+\_\+fn}{xbee\_cmd\_callback\_fn}}
+{\footnotesize\ttfamily typedef int($\ast$ xbee\+\_\+cmd\+\_\+callback\+\_\+fn) (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response)}
+
+
+
+Callback registered to an AT Command with \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}. 
+
+It should not modify the contents of the \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} structure passed to it. It should return either \hyperlink{group__xbee__atcmd_gad51a6fee7843df5a5bfd6f3957465426}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+D\+O\+NE} or \hyperlink{group__xbee__atcmd_ga9a5078393806d67903c87b3c82597fb1}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+U\+SE}.
+
+View the help on \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} for details on the members of that structure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em response} & response received for AT Command\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+D\+O\+NE} & done with the request handle \\
+\hline
+{\em X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+U\+SE} & more responses are expected, or the request handle will be reused\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__atcmd_ga7909235eb77ba64c93742f8f9013d7fb}\label{group__xbee__atcmd_ga7909235eb77ba64c93742f8f9013d7fb}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+command\+\_\+list\+\_\+fn@{xbee\+\_\+command\+\_\+list\+\_\+fn}}
+\index{xbee\+\_\+command\+\_\+list\+\_\+fn@{xbee\+\_\+command\+\_\+list\+\_\+fn}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+command\+\_\+list\+\_\+fn}{xbee\_command\_list\_fn}}
+{\footnotesize\ttfamily typedef void($\ast$ xbee\+\_\+command\+\_\+list\+\_\+fn) (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$reg, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base)}
+
+
+
+Callback registered for individual command list commands. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em response} & response received for AT Command. From this, the {\ttfamily context} field points to the start of the entire set of commands in the list being processed. \\
+\hline
+\mbox{\tt in}  & {\em reg} & Table element for this command. Usually, the callback will dereference reg-\/$>$context to find any required auxiliary data for processing this command. \\
+\hline
+\mbox{\tt in,out}  & {\em base} & Base address of structure to populate with response value (typical use).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This callback is called for a command response, and is intended to be used for manipulating the raw response data into something suitable for the application. There is no corresponding callback for a request (i.\+e. called before setting parameter data); the application is expected to perform setting parameter manipulation before invoking \hyperlink{group__xbee__atcmd_gab9fb2f15b9134bd32d937a51e4c68014}{xbee\+\_\+cmd\+\_\+list\+\_\+execute()}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__xbee__atcmd_ga8e4eb20c6debd4dfac4a8a81d9314e98}\label{group__xbee__atcmd_ga8e4eb20c6debd4dfac4a8a81d9314e98}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+frame\+\_\+local\+\_\+at\+\_\+resp@{xbee\+\_\+frame\+\_\+local\+\_\+at\+\_\+resp}}
+\index{xbee\+\_\+frame\+\_\+local\+\_\+at\+\_\+resp@{xbee\+\_\+frame\+\_\+local\+\_\+at\+\_\+resp}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+frame\+\_\+local\+\_\+at\+\_\+resp}{xbee\_frame\_local\_at\_resp}}
+{\footnotesize\ttfamily typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__atcmd_ga8e4eb20c6debd4dfac4a8a81d9314e98}{xbee\+\_\+frame\+\_\+local\+\_\+at\+\_\+resp}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+
+   xbee\_header\_local\_at\_resp\_t header
+\end{DoxyCode}
+
+
+Response to an AT Command sent to the local serially-\/connected X\+Bee. 
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga5c11edcb9c5f6b11eec5d5d1c37cfbfd}\label{group__xbee__atcmd_ga5c11edcb9c5f6b11eec5d5d1c37cfbfd}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+frame\+\_\+remote\+\_\+at\+\_\+resp@{xbee\+\_\+frame\+\_\+remote\+\_\+at\+\_\+resp}}
+\index{xbee\+\_\+frame\+\_\+remote\+\_\+at\+\_\+resp@{xbee\+\_\+frame\+\_\+remote\+\_\+at\+\_\+resp}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+frame\+\_\+remote\+\_\+at\+\_\+resp}{xbee\_frame\_remote\_at\_resp}}
+{\footnotesize\ttfamily typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__atcmd_ga5c11edcb9c5f6b11eec5d5d1c37cfbfd}{xbee\+\_\+frame\+\_\+remote\+\_\+at\+\_\+resp}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   xbee\_header\_remote\_at\_resp\_t header
+\end{DoxyCode}
+
+
+Response to an AT Command sent to a remote X\+Bee. 
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga9bf03869fc9022aadb223bfe0cbbce48}\label{group__xbee__atcmd_ga9bf03869fc9022aadb223bfe0cbbce48}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+req@{xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+req}}
+\index{xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+req@{xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+req}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+req}{xbee\_header\_local\_at\_req}}
+{\footnotesize\ttfamily typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__atcmd_ga9bf03869fc9022aadb223bfe0cbbce48}{xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+req}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}          frame\_type
+\end{DoxyCode}
+
+
+Header for AT Commands sent to the local (serially-\/attached) X\+Bee. 
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga99f105c39f52045b88bc1974fb520ed2}\label{group__xbee__atcmd_ga99f105c39f52045b88bc1974fb520ed2}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+resp@{xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+resp}}
+\index{xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+resp@{xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+resp}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+resp}{xbee\_header\_local\_at\_resp}}
+{\footnotesize\ttfamily typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+resp}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}          frame\_type
+\end{DoxyCode}
+\mbox{\Hypertarget{group__xbee__atcmd_gad9afb37256d642019ad00c6ec75eae05}\label{group__xbee__atcmd_gad9afb37256d642019ad00c6ec75eae05}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+req@{xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+req}}
+\index{xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+req@{xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+req}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+req}{xbee\_header\_remote\_at\_req}}
+{\footnotesize\ttfamily typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__atcmd_gad9afb37256d642019ad00c6ec75eae05}{xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+req}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}          frame\_type
+\end{DoxyCode}
+
+
+Header to AT Commands sent to a remote X\+Bee on the network. 
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga3f35810cc9e8761d8865f7f53f6ffa28}\label{group__xbee__atcmd_ga3f35810cc9e8761d8865f7f53f6ffa28}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+resp@{xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+resp}}
+\index{xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+resp@{xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+resp}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+resp}{xbee\_header\_remote\_at\_resp}}
+{\footnotesize\ttfamily typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} xbee\+\_\+header\+\_\+remote\+\_\+at\+\_\+resp}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}          frame\_type
+\end{DoxyCode}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__xbee__atcmd_gaa874b4a291f79f2e80f867ce71fccea5}\label{group__xbee__atcmd_gaa874b4a291f79f2e80f867ce71fccea5}} 
+\index{A\+T Commands@{A\+T Commands}!\+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t@{\+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t}}
+\index{\+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t@{\+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t}{\_xbee\_rci\_type\_t}}
+{\footnotesize\ttfamily enum \hyperlink{group__xbee__atcmd_gaa874b4a291f79f2e80f867ce71fccea5}{\+\_\+xbee\+\_\+rci\+\_\+type\+\_\+t}}
+
+
+
+i\+Digi R\+CI type names used by do\+\_\+command type=zigbee. 
+
+This table is used so as to avoid having X\+B\+E\+E\+\_\+\+R\+C\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG pointers in the register descriptor table. \mbox{\Hypertarget{group__xbee__atcmd_gac6a27f1b1ee32b75b6f966afbb347f22}\label{group__xbee__atcmd_gac6a27f1b1ee32b75b6f966afbb347f22}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+at\+\_\+resp\+\_\+status@{xbee\+\_\+at\+\_\+resp\+\_\+status}}
+\index{xbee\+\_\+at\+\_\+resp\+\_\+status@{xbee\+\_\+at\+\_\+resp\+\_\+status}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+at\+\_\+resp\+\_\+status}{xbee\_at\_resp\_status}}
+{\footnotesize\ttfamily enum \hyperlink{group__xbee__atcmd_gac6a27f1b1ee32b75b6f966afbb347f22}{xbee\+\_\+at\+\_\+resp\+\_\+status}}
+
+
+
+Possible values of {\ttfamily status} byte in xbee\+\_\+header\+\_\+local\+\_\+at\+\_\+resp\+\_\+t and xbee\+\_\+frame\+\_\+local\+\_\+at\+\_\+resp\+\_\+t. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK@{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK@{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK}}}\mbox{\Hypertarget{group__xbee__atcmd_ggac6a27f1b1ee32b75b6f966afbb347f22adb75bf991027151c1aa20a454e278145}\label{group__xbee__atcmd_ggac6a27f1b1ee32b75b6f966afbb347f22adb75bf991027151c1aa20a454e278145}} 
+X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+SK&Mask to ignore extra bits used in the status response. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+A\+T\+N\+D\+\_\+\+R\+S\+S\+I\+\_\+\+I\+N\+V\+A\+L\+ID@{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+A\+T\+N\+D\+\_\+\+R\+S\+S\+I\+\_\+\+I\+N\+V\+A\+L\+ID}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+A\+T\+N\+D\+\_\+\+R\+S\+S\+I\+\_\+\+I\+N\+V\+A\+L\+ID@{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+A\+T\+N\+D\+\_\+\+R\+S\+S\+I\+\_\+\+I\+N\+V\+A\+L\+ID}}}\mbox{\Hypertarget{group__xbee__atcmd_ggac6a27f1b1ee32b75b6f966afbb347f22a52c349dd42d745e58fbeb90b51927947}\label{group__xbee__atcmd_ggac6a27f1b1ee32b75b6f966afbb347f22a52c349dd42d745e58fbeb90b51927947}} 
+X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+A\+T\+N\+D\+\_\+\+R\+S\+S\+I\+\_\+\+I\+N\+V\+A\+L\+ID&The R\+S\+SI field of the A\+T\+ND response is not valid \mbox{[}Digi\+Mesh\mbox{]}. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__xbee__atcmd_ga3ec63530d743d1c91126c67493c3245d}\label{group__xbee__atcmd_ga3ec63530d743d1c91126c67493c3245d}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+command\+\_\+list\+\_\+status@{xbee\+\_\+command\+\_\+list\+\_\+status}}
+\index{xbee\+\_\+command\+\_\+list\+\_\+status@{xbee\+\_\+command\+\_\+list\+\_\+status}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+command\+\_\+list\+\_\+status}{xbee\_command\_list\_status}}
+{\footnotesize\ttfamily enum \hyperlink{group__xbee__atcmd_ga3ec63530d743d1c91126c67493c3245d}{xbee\+\_\+command\+\_\+list\+\_\+status}}
+
+
+
+Status codes for \hyperlink{group__xbee__atcmd_gafb2d1636c675066469ee388170ea27a0}{xbee\+\_\+cmd\+\_\+list\+\_\+status()} 
+
+We force these to be -\/\+Exxx codes (or 0). \mbox{\Hypertarget{group__xbee__atcmd_ga1bd8ecd38c107579d20ded3c79a7d70b}\label{group__xbee__atcmd_ga1bd8ecd38c107579d20ded3c79a7d70b}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+command\+\_\+list\+\_\+type@{xbee\+\_\+command\+\_\+list\+\_\+type}}
+\index{xbee\+\_\+command\+\_\+list\+\_\+type@{xbee\+\_\+command\+\_\+list\+\_\+type}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+command\+\_\+list\+\_\+type}{xbee\_command\_list\_type}}
+{\footnotesize\ttfamily enum \hyperlink{group__xbee__atcmd_ga1bd8ecd38c107579d20ded3c79a7d70b}{xbee\+\_\+command\+\_\+list\+\_\+type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba01bd43706bd844415cc0882b861df4d1}\label{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba01bd43706bd844415cc0882b861df4d1}} 
+X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+N\+O\+NE&No default action. Often used for callbacks. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+PY@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+PY}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+PY@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+PY}}}\mbox{\Hypertarget{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}\label{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}} 
+X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+PY&Copy response data byte-\/for-\/byte to base struct, starting at offset 0 and setting remaining bytes to 0x00. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+P\+A\+D\+\_\+\+L\+E\+FT@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+P\+A\+D\+\_\+\+L\+E\+FT}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+P\+A\+D\+\_\+\+L\+E\+FT@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+P\+A\+D\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba5450809b1aae150ec7dfb4c8faa8161a}\label{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba5450809b1aae150ec7dfb4c8faa8161a}} 
+X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+P\+A\+D\+\_\+\+L\+E\+FT&Copy response data byte-\/for-\/byte to base struct,. padding with 0x00 bytes before the copied data, to have last copied byte in last position of base struct. (see A\+T\+S\+H/\+A\+T\+SL). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+BE@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+BE}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+BE@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+BE}}}\mbox{\Hypertarget{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537}\label{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537}} 
+X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+BE&Copy response, changing expected big-\/endian to host byte order, and store in base struct. Data must be 1, 2 or 4 bytes, assumed unsigned. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+ET@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+ET}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+ET@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+ET}}}\mbox{\Hypertarget{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70babea87822fa7171a077a3c1c88e3fa7dc}\label{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70babea87822fa7171a077a3c1c88e3fa7dc}} 
+X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+ET&Use data in base struct as parameter for command, with binary data copied byte-\/for-\/byte. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+S\+TR@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+S\+TR}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+S\+TR@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+S\+TR}}}\mbox{\Hypertarget{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef4f9c1bf1001814d8b9e44c08c91c38}\label{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef4f9c1bf1001814d8b9e44c08c91c38}} 
+X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+S\+TR&Use data in base struct as parameter for command, with null-\/terminated string data copied byte-\/for-\/byte. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+BE@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+BE}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+BE@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+BE}}}\mbox{\Hypertarget{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba32b0b8fbea9aa5c2d6a8886ccbdbf609}\label{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba32b0b8fbea9aa5c2d6a8886ccbdbf609}} 
+X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+\+BE&Use data in base struct as parameter for command, changing host byte order to big-\/endian. Data must be 1,2 or 4 bytes, assumed unsigned. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+8@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+8}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+8@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+8}}}\mbox{\Hypertarget{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0eb2ffa9c761ab74335695f818ce8410}\label{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0eb2ffa9c761ab74335695f818ce8410}} 
+X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+S\+E\+T\+\_\+8&Set value to immediate 8-\/bit constant in .bytes field of the \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} entry. No response. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+L\+A\+ST@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+L\+A\+ST}!A\+T Commands@{A\+T Commands}}\index{A\+T Commands@{A\+T Commands}!X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+L\+A\+ST@{X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+L\+A\+ST}}}\mbox{\Hypertarget{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba6e78c45780bccbc7226af34868dc567f}\label{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba6e78c45780bccbc7226af34868dc567f}} 
+X\+B\+E\+E\+\_\+\+C\+L\+T\+\_\+\+L\+A\+ST&Last command, any response is discarded, no further command list entries are processed. This is useful if ND is the last command, since the command list will terminate, but discovered nodes will be handled subsequently (asynchronously). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__xbee__atcmd_ga484572705b9695ab429fd51188f74238}\label{group__xbee__atcmd_ga484572705b9695ab429fd51188f74238}} 
+\index{A\+T Commands@{A\+T Commands}!\+\_\+xbee\+\_\+cmd\+\_\+encode\+\_\+param@{\+\_\+xbee\+\_\+cmd\+\_\+encode\+\_\+param}}
+\index{\+\_\+xbee\+\_\+cmd\+\_\+encode\+\_\+param@{\+\_\+xbee\+\_\+cmd\+\_\+encode\+\_\+param}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+cmd\+\_\+encode\+\_\+param()}{\_xbee\_cmd\_encode\_param()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \+\_\+xbee\+\_\+cmd\+\_\+encode\+\_\+param (\begin{DoxyParamCaption}\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+
+
+Store an unsigned integer in 1, 2 or 4 bytes as a parameter to an AT command. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em buffer} & buffer to store value \\
+\hline
+\mbox{\tt in}  & {\em value} & value to store\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes required (1, 2 or 4) to hold value. 
+\end{DoxyReturn}
+
+
+Referenced by xbee\+\_\+cmd\+\_\+set\+\_\+param().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga3b4559f4e729b1c96f5c0d9e4476aa7d}\label{group__xbee__atcmd_ga3b4559f4e729b1c96f5c0d9e4476aa7d}} 
+\index{A\+T Commands@{A\+T Commands}!\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response@{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response}}
+\index{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response@{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response()}{\_xbee\_cmd\_handle\_response()}}
+{\footnotesize\ttfamily int \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{rawframe,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{length,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Callback handler registered for frame types \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9ae66771334070219cd098c8201936cf4a}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE} (0x88) and \hyperlink{group__xbee__device_gga7753bbebaf00d6d64942f64b6ae9b7b9a3cd726459592fab4cdc9b5e6bbecb79f}{X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+O\+N\+SE} (0x97). 
+
+Should only be called by the frame dispatcher and unit tests.
+
+See the function help for \hyperlink{group__xbee__device_ga3e6f2b540e8cec7a69ef0b0166da14ff}{xbee\+\_\+frame\+\_\+handler\+\_\+fn()} for full documentation on this function\textquotesingle{}s A\+PI. 
+
+References command, F\+AR, frame\+\_\+id, status, and value.
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga710b2223cda09c52a8518c964da88347}\label{group__xbee__atcmd_ga710b2223cda09c52a8518c964da88347}} 
+\index{A\+T Commands@{A\+T Commands}!\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address@{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address}}
+\index{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address@{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address()}{\_xbee\_cmd\_handle\_to\_address()}}
+{\footnotesize\ttfamily \hyperlink{structxbee__cmd__request__t}{xbee\+\_\+cmd\+\_\+request\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle }\end{DoxyParamCaption})}
+
+Convert a handle (16-\/bit int) to a pointer into the command request table. Ensures that the handle is valid (correct index and sequence bytes).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle returned from \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer into the request table or N\+U\+LL if handle is invalid.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()} 
+\end{DoxySeeAlso}
+
+
+References F\+AR, xbee\+\_\+cmd\+\_\+request\+\_\+table, and X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE.
+
+
+
+Referenced by xbee\+\_\+cmd\+\_\+release\+\_\+handle(), xbee\+\_\+cmd\+\_\+send(), xbee\+\_\+cmd\+\_\+set\+\_\+callback(), xbee\+\_\+cmd\+\_\+set\+\_\+command(), xbee\+\_\+cmd\+\_\+set\+\_\+param(), and xbee\+\_\+cmd\+\_\+set\+\_\+target().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga4931ffe3ba31eaf16eee72ac0a95015b}\label{group__xbee__atcmd_ga4931ffe3ba31eaf16eee72ac0a95015b}} 
+\index{A\+T Commands@{A\+T Commands}!\+\_\+xbee\+\_\+cmd\+\_\+issue\+\_\+list@{\+\_\+xbee\+\_\+cmd\+\_\+issue\+\_\+list}}
+\index{\+\_\+xbee\+\_\+cmd\+\_\+issue\+\_\+list@{\+\_\+xbee\+\_\+cmd\+\_\+issue\+\_\+list}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+cmd\+\_\+issue\+\_\+list()}{\_xbee\_cmd\_issue\_list()}}
+{\footnotesize\ttfamily int \+\_\+xbee\+\_\+cmd\+\_\+issue\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{\hyperlink{structxbee__command__list__context__t}{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{clc,  }\item[{const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{response }\end{DoxyParamCaption})}
+
+Helper function to send off the next command in the list. 
+
+References F\+AR.
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga9f1bad1621dfd1d13b6f1102fc592d13}\label{group__xbee__atcmd_ga9f1bad1621dfd1d13b6f1102fc592d13}} 
+\index{A\+T Commands@{A\+T Commands}!\+\_\+xbee\+\_\+cmd\+\_\+list\+\_\+callback@{\+\_\+xbee\+\_\+cmd\+\_\+list\+\_\+callback}}
+\index{\+\_\+xbee\+\_\+cmd\+\_\+list\+\_\+callback@{\+\_\+xbee\+\_\+cmd\+\_\+list\+\_\+callback}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+cmd\+\_\+list\+\_\+callback()}{\_xbee\_cmd\_list\_callback()}}
+{\footnotesize\ttfamily int \+\_\+xbee\+\_\+cmd\+\_\+list\+\_\+callback (\begin{DoxyParamCaption}\item[{const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{response }\end{DoxyParamCaption})}
+
+Callback used by xbee\+\_\+cmd\+\_\+query\+\_\+device (and possibly other functions) to learn about the attached X\+Bee device (hardware/firmware version, address, etc.)
+
+View function help for \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()} for details on \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} structure. \begin{DoxyVerb}This callback should only be called by xbee_cmd_handle_response(). ***\end{DoxyVerb}
+ 
+
+References command, and F\+AR.
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga9b0ddf7aae7599dc334304f2b642f05f}\label{group__xbee__atcmd_ga9b0ddf7aae7599dc334304f2b642f05f}} 
+\index{A\+T Commands@{A\+T Commands}!\+\_\+xbee\+\_\+cmd\+\_\+modem\+\_\+status@{\+\_\+xbee\+\_\+cmd\+\_\+modem\+\_\+status}}
+\index{\+\_\+xbee\+\_\+cmd\+\_\+modem\+\_\+status@{\+\_\+xbee\+\_\+cmd\+\_\+modem\+\_\+status}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+cmd\+\_\+modem\+\_\+status()}{\_xbee\_cmd\_modem\_status()}}
+{\footnotesize\ttfamily int \+\_\+xbee\+\_\+cmd\+\_\+modem\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{payload,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{length,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Receive modem status frames and update our network address (and payload size) on state changes. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__device_ga3e6f2b540e8cec7a69ef0b0166da14ff}{xbee\+\_\+frame\+\_\+handler\+\_\+fn()} 
+\end{DoxySeeAlso}
+
+
+References E\+I\+N\+V\+AL, F\+AR, status, xbee\+\_\+cmd\+\_\+query\+\_\+device(), X\+B\+E\+E\+\_\+\+M\+O\+D\+E\+M\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+C\+O\+O\+R\+D\+\_\+\+S\+T\+A\+RT, X\+B\+E\+E\+\_\+\+M\+O\+D\+E\+M\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+J\+O\+I\+N\+ED, X\+B\+E\+E\+\_\+\+M\+O\+D\+E\+M\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+K\+E\+Y\+\_\+\+E\+S\+T\+A\+B\+L\+I\+S\+H\+ED, and X\+B\+E\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER.
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga899d5ef84ca5790c3c76b965f88874e0}\label{group__xbee__atcmd_ga899d5ef84ca5790c3c76b965f88874e0}} 
+\index{A\+T Commands@{A\+T Commands}!\+\_\+xbee\+\_\+cmd\+\_\+release\+\_\+request@{\+\_\+xbee\+\_\+cmd\+\_\+release\+\_\+request}}
+\index{\+\_\+xbee\+\_\+cmd\+\_\+release\+\_\+request@{\+\_\+xbee\+\_\+cmd\+\_\+release\+\_\+request}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+cmd\+\_\+release\+\_\+request()}{\_xbee\_cmd\_release\_request()}}
+{\footnotesize\ttfamily int \+\_\+xbee\+\_\+cmd\+\_\+release\+\_\+request (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__cmd__request__t}{xbee\+\_\+cmd\+\_\+request\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{request }\end{DoxyParamCaption})}
+
+
+
+Release an entry from the request table by marking it as available. 
+
+For internal driver use only -- userspace code should use \hyperlink{group__xbee__atcmd_ga91641619ae34da34615193962ffd1525}{xbee\+\_\+cmd\+\_\+release\+\_\+handle()} instead.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em request} & Address of the table entry.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & request freed \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & address ({\itshape request}) is not valid\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga91641619ae34da34615193962ffd1525}{xbee\+\_\+cmd\+\_\+release\+\_\+handle()}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000009}{Todo}]add bounds checking on request to make sure it\textquotesingle{}s in the table? \end{DoxyRefDesc}
+
+
+References E\+I\+N\+V\+AL.
+
+
+
+Referenced by xbee\+\_\+cmd\+\_\+release\+\_\+handle().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga0828601d6b2735ee9f2ebf408d12c05c}\label{group__xbee__atcmd_ga0828601d6b2735ee9f2ebf408d12c05c}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+clear\+\_\+flags@{xbee\+\_\+cmd\+\_\+clear\+\_\+flags}}
+\index{xbee\+\_\+cmd\+\_\+clear\+\_\+flags@{xbee\+\_\+cmd\+\_\+clear\+\_\+flags}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+clear\+\_\+flags()}{xbee\_cmd\_clear\_flags()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+clear\+\_\+flags (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Clear the flags for a given AT Command request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to the request, as returned by \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}. \\
+\hline
+\mbox{\tt in}  & {\em flags} & One or more of the following\+:
+\begin{DoxyItemize}
+\item X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+F\+L\+A\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+C\+H\+A\+N\+GE don\textquotesingle{}t apply changes until A\+T\+AC or another command without this flag is sent
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & flags cleared \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape handle} is not valid\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gad2cc44803cc53ada37df4557313e120b}{xbee\+\_\+cmd\+\_\+set\+\_\+flags} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}\label{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+create@{xbee\+\_\+cmd\+\_\+create}}
+\index{xbee\+\_\+cmd\+\_\+create@{xbee\+\_\+cmd\+\_\+create}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+create()}{xbee\_cmd\_create()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} xbee\+\_\+cmd\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR}}]{command\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Allocate an AT Command request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & X\+Bee device to use as the target (local) or to send through (remote). This function will automatically call xbee\+\_\+cmd\+\_\+init() if it hasn\textquotesingle{}t already been called for this device.\\
+\hline
+\mbox{\tt in}  & {\em command} & Two-\/letter AT Command to send (e.\+g., \char`\"{}\+V\+R\char`\"{}, \char`\"{}\+N\+I\char`\"{}, etc.).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em $>$0} & a \char`\"{}handle\char`\"{} to a request that can be built up and sent to a local (serially-\/attached) or remote X\+Bee module. \\
+\hline
+{\em -\/\+E\+N\+O\+S\+PC} & the AT command table is full (increase the compile-\/time macro X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE) \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & an invalid parameter was passed to the function\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_ga1cc803f821ed44e27e404d38349f53c7}{xbee\+\_\+cmd\+\_\+init\+\_\+device()}, \hyperlink{group__xbee__atcmd_ga12317255ca84c2539b7d7a58816eccab}{xbee\+\_\+cmd\+\_\+query\+\_\+device()}, \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command()}, \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target()}, \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param()}, \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}, \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}, \hyperlink{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}{xbee\+\_\+cmd\+\_\+send()} 
+\end{DoxySeeAlso}
+
+
+Referenced by xbee\+\_\+io\+\_\+set\+\_\+options().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga19d16fbaf1da1cc581fbedcb36f7263f}\label{group__xbee__atcmd_ga19d16fbaf1da1cc581fbedcb36f7263f}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+execute@{xbee\+\_\+cmd\+\_\+execute}}
+\index{xbee\+\_\+cmd\+\_\+execute@{xbee\+\_\+cmd\+\_\+execute}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+execute()}{xbee\_cmd\_execute()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+execute (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR}}]{command\mbox{[}3\mbox{]},  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{data,  }\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}}]{length }\end{DoxyParamCaption})}
+
+
+
+Simple interface for sending a command with an optional parameter to the local X\+Bee without checking for a response. 
+
+For an asynchronous method of sending AT commands and getting the response, see xbee\+\_\+cmd\+\_\+create, the xbee\+\_\+cmd\+\_\+set\+\_\+$\ast$ functions and xbee\+\_\+cmd\+\_\+send.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & X\+Bee device to use as the target.\\
+\hline
+\mbox{\tt in}  & {\em command} & Two-\/letter AT Command to send (e.\+g., \char`\"{}\+I\+D\char`\"{}, \char`\"{}\+C\+H\char`\"{}, etc.).\\
+\hline
+\mbox{\tt in}  & {\em data} & Optional big-\/endian (M\+S\+B-\/first) value to assign to {\itshape command}. Use N\+U\+LL if {\itshape command} doesn\textquotesingle{}t take a parameter.\\
+\hline
+\mbox{\tt in}  & {\em length} & Number of bytes in {\itshape data}; ignored if {\itshape data} is N\+U\+LL.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & command sent \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & an invalid parameter was passed to the function \\
+\hline
+{\em -\/\+E\+B\+U\+SY} & transmit serial buffer is full, or X\+Bee is not accepting serial data (deasserting /\+C\+TS signal).\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command()}, \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target()}, \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param()}, \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}, \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}, \hyperlink{group__xbee__atcmd_ga6b157fe048c0082253056a7bda0ba9bb}{xbee\+\_\+cmd\+\_\+simple()} 
+\end{DoxySeeAlso}
+
+
+Referenced by xbee\+\_\+disc\+\_\+discover\+\_\+nodes().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga1cc803f821ed44e27e404d38349f53c7}\label{group__xbee__atcmd_ga1cc803f821ed44e27e404d38349f53c7}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+init\+\_\+device@{xbee\+\_\+cmd\+\_\+init\+\_\+device}}
+\index{xbee\+\_\+cmd\+\_\+init\+\_\+device@{xbee\+\_\+cmd\+\_\+init\+\_\+device}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+init\+\_\+device()}{xbee\_cmd\_init\_device()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+init\+\_\+device (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee }\end{DoxyParamCaption})}
+
+
+
+Initialize the AT Command layer for an X\+Bee device. 
+
+You need to call this function before any of the other xbee\+\_\+cmd\+\_\+$\ast$ functions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & X\+Bee device on which to enable the AT Command layer. This function will automatically call xbee\+\_\+cmd\+\_\+query\+\_\+device if it hasn\textquotesingle{}t already been called for this device.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & the X\+Bee device was successfully configured to send and receive AT commands \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & an invalid parameter was passed to the function\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_ga12317255ca84c2539b7d7a58816eccab}{xbee\+\_\+cmd\+\_\+query\+\_\+device()}, \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command()}, \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target()}, \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param()}, \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}, \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}, \hyperlink{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}{xbee\+\_\+cmd\+\_\+send()} 
+\end{DoxySeeAlso}
+
+
+References E\+I\+N\+V\+AL, xbee\+\_\+dev\+\_\+t\+::flags, xbee\+\_\+cmd\+\_\+query\+\_\+device(), X\+B\+E\+E\+\_\+\+D\+E\+V\+\_\+\+F\+L\+A\+G\+\_\+\+C\+M\+D\+\_\+\+I\+N\+IT, and X\+B\+E\+E\+\_\+\+D\+E\+V\+\_\+\+F\+L\+A\+G\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+B\+E\+G\+IN.
+
+\mbox{\Hypertarget{group__xbee__atcmd_gab9fb2f15b9134bd32d937a51e4c68014}\label{group__xbee__atcmd_gab9fb2f15b9134bd32d937a51e4c68014}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+list\+\_\+execute@{xbee\+\_\+cmd\+\_\+list\+\_\+execute}}
+\index{xbee\+\_\+cmd\+\_\+list\+\_\+execute@{xbee\+\_\+cmd\+\_\+list\+\_\+execute}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+list\+\_\+execute()}{xbee\_cmd\_list\_execute()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+list\+\_\+execute (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{\hyperlink{structxbee__command__list__context__t}{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{clc,  }\item[{const \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{list,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{base,  }\item[{const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Execute a list of AT commands. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em xbee} & Device to execute commands \\
+\hline
+\mbox{\tt out}  & {\em clc} & List head to set up. This must be static since callback functions access it asynchronously. \\
+\hline
+\mbox{\tt in}  & {\em list} & First entry of list of commands to execute. The list must be terminated by either \hyperlink{group__xbee__atcmd_ga22fe547f7ae9fd0b090c5e45f03c162d}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+ND} or \hyperlink{group__xbee__atcmd_gae8d6778e286e3bf82eafc842d451c161}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+E\+N\+D\+\_\+\+CB}. List entries are created using \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+EG} macros etc. \\
+\hline
+\mbox{\tt in}  & {\em base} & Base address of a structure to fill in with command results or as a source of values to set. \\
+\hline
+\mbox{\tt in}  & {\em address} & Remote address, or N\+U\+LL if local device.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & started sending commands from the list \\
+\hline
+{\em -\/\+E\+N\+O\+S\+PC} & the AT command table is full (increase the compile-\/time macro X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE) \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & an invalid parameter was passed to the function\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gafb2d1636c675066469ee388170ea27a0}{xbee\+\_\+cmd\+\_\+list\+\_\+status()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__atcmd_gafb2d1636c675066469ee388170ea27a0}\label{group__xbee__atcmd_gafb2d1636c675066469ee388170ea27a0}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+list\+\_\+status@{xbee\+\_\+cmd\+\_\+list\+\_\+status}}
+\index{xbee\+\_\+cmd\+\_\+list\+\_\+status@{xbee\+\_\+cmd\+\_\+list\+\_\+status}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+list\+\_\+status()}{xbee\_cmd\_list\_status()}}
+{\footnotesize\ttfamily enum \hyperlink{group__xbee__atcmd_ga3ec63530d743d1c91126c67493c3245d}{xbee\+\_\+command\+\_\+list\+\_\+status}() xbee\+\_\+cmd\+\_\+list\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__command__list__context__t}{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{clc }\end{DoxyParamCaption})}
+
+
+
+Determine status of command list execution. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em clc} & List head passed to \hyperlink{group__xbee__atcmd_gab9fb2f15b9134bd32d937a51e4c68014}{xbee\+\_\+cmd\+\_\+list\+\_\+execute()}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em X\+B\+E\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+I\+S\+T\+\_\+\+R\+U\+N\+N\+I\+NG} & currently executing commands \\
+\hline
+{\em X\+B\+E\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+I\+S\+T\+\_\+\+D\+O\+NE} & successfully completed \\
+\hline
+{\em X\+B\+E\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+I\+S\+T\+\_\+\+T\+I\+M\+E\+O\+UT} & timed out \\
+\hline
+{\em X\+B\+E\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+I\+S\+T\+\_\+\+E\+R\+R\+OR} & completed with error(s)\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab9fb2f15b9134bd32d937a51e4c68014}{xbee\+\_\+cmd\+\_\+list\+\_\+execute()} 
+\end{DoxySeeAlso}
+
+
+Referenced by xbee\+\_\+cmd\+\_\+query\+\_\+status(), and xbee\+\_\+io\+\_\+query\+\_\+status().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga12317255ca84c2539b7d7a58816eccab}\label{group__xbee__atcmd_ga12317255ca84c2539b7d7a58816eccab}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+query\+\_\+device@{xbee\+\_\+cmd\+\_\+query\+\_\+device}}
+\index{xbee\+\_\+cmd\+\_\+query\+\_\+device@{xbee\+\_\+cmd\+\_\+query\+\_\+device}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+query\+\_\+device()}{xbee\_cmd\_query\_device()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+query\+\_\+device (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{uint\+\_\+fast8\+\_\+t}]{refresh }\end{DoxyParamCaption})}
+
+
+
+Learn about the underlying device by sending a series of commands and storing the results in the \hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t}. 
+
+This function will likely get called by the X\+Bee stack at some point in the startup/initialization phase.
+
+Use \hyperlink{group__xbee__atcmd_ga83f36dfc3c3cd2c4046719ea6e9cc53c}{xbee\+\_\+cmd\+\_\+query\+\_\+status()} to check on the progress of querying the device.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em xbee} & X\+Bee device to query. \\
+\hline
+\mbox{\tt in}  & {\em refresh} & if non-\/zero, just refresh the volatile values (e.\+g., network settings, as opposed to device serial number)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Started querying device. \\
+\hline
+{\em -\/\+E\+B\+U\+SY} & Transmit serial buffer is full, or X\+Bee is not accepting serial data (deasserting /\+C\+TS signal).\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_ga1cc803f821ed44e27e404d38349f53c7}{xbee\+\_\+cmd\+\_\+init\+\_\+device()}, \hyperlink{group__xbee__atcmd_ga83f36dfc3c3cd2c4046719ea6e9cc53c}{xbee\+\_\+cmd\+\_\+query\+\_\+status()} 
+\end{DoxySeeAlso}
+
+
+References E\+I\+N\+V\+AL, xbee\+\_\+dev\+\_\+t\+::flags, X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+G\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+DX, X\+B\+E\+E\+\_\+\+D\+E\+V\+\_\+\+F\+L\+A\+G\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS, and X\+B\+E\+E\+\_\+\+D\+E\+V\+\_\+\+F\+L\+A\+G\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+F\+R\+E\+SH.
+
+
+
+Referenced by \+\_\+xbee\+\_\+cmd\+\_\+modem\+\_\+status(), and xbee\+\_\+cmd\+\_\+init\+\_\+device().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga83f36dfc3c3cd2c4046719ea6e9cc53c}\label{group__xbee__atcmd_ga83f36dfc3c3cd2c4046719ea6e9cc53c}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+query\+\_\+status@{xbee\+\_\+cmd\+\_\+query\+\_\+status}}
+\index{xbee\+\_\+cmd\+\_\+query\+\_\+status@{xbee\+\_\+cmd\+\_\+query\+\_\+status}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+query\+\_\+status()}{xbee\_cmd\_query\_status()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+query\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee }\end{DoxyParamCaption})}
+
+
+
+Check the status of querying an X\+Bee device, as initiated by \hyperlink{group__xbee__atcmd_ga12317255ca84c2539b7d7a58816eccab}{xbee\+\_\+cmd\+\_\+query\+\_\+device()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & device to check\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & query completed \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape xbee} is N\+U\+LL \\
+\hline
+{\em -\/\+E\+B\+U\+SY} & query underway \\
+\hline
+{\em -\/\+E\+T\+I\+M\+E\+D\+O\+UT} & query timed out \\
+\hline
+{\em -\/\+E\+IO} & halted, but query may not have completed (unexpected response) \\
+\hline
+\end{DoxyRetVals}
+
+
+References E\+I\+N\+V\+AL, xbee\+\_\+cmd\+\_\+list\+\_\+status(), and xbee\+\_\+cmd\+\_\+tick().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga91641619ae34da34615193962ffd1525}\label{group__xbee__atcmd_ga91641619ae34da34615193962ffd1525}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+release\+\_\+handle@{xbee\+\_\+cmd\+\_\+release\+\_\+handle}}
+\index{xbee\+\_\+cmd\+\_\+release\+\_\+handle@{xbee\+\_\+cmd\+\_\+release\+\_\+handle}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+release\+\_\+handle()}{xbee\_cmd\_release\_handle()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+release\+\_\+handle (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Release an entry from the request table by marking it as available. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & handle to the request (as returned by xbee\+\_\+cmd\+\_\+create)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & request freed \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape handle} is not valid\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga91641619ae34da34615193962ffd1525}{xbee\+\_\+cmd\+\_\+release\+\_\+handle()} 
+\end{DoxySeeAlso}
+
+
+References \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address(), and \+\_\+xbee\+\_\+cmd\+\_\+release\+\_\+request().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}\label{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+send@{xbee\+\_\+cmd\+\_\+send}}
+\index{xbee\+\_\+cmd\+\_\+send@{xbee\+\_\+cmd\+\_\+send}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+send()}{xbee\_cmd\_send()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+send (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Send an AT Command to a local or remote X\+Bee device. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to the request, as returned by \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & frame sent \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & handle is not valid \\
+\hline
+{\em -\/\+E\+B\+U\+SY} & transmit serial buffer is full, or X\+Bee is not accepting serial data (deasserting /\+C\+TS signal).\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Note}
+If the request does not have a callback set, it will be automatically released if \hyperlink{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}{xbee\+\_\+cmd\+\_\+send()} returns 0.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command()}, \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target()}, \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param()}, \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}, \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()} 
+\end{DoxySeeAlso}
+
+
+References \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address(), E\+I\+N\+V\+AL, F\+AR, xbee\+\_\+header\+\_\+at\+\_\+request\+\_\+t\+::frame\+\_\+type, htobe16, xbee\+\_\+header\+\_\+at\+\_\+request\+\_\+t\+::remote, X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+F\+L\+A\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+C\+H\+A\+N\+GE, X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+M\+O\+TE, X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+C\+MD, xbee\+\_\+next\+\_\+frame\+\_\+id(), X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+I\+M\+M\+E\+D\+I\+A\+TE, and X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+\+Q\+U\+E\+UE.
+
+
+
+Referenced by xbee\+\_\+io\+\_\+set\+\_\+options().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}\label{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+set\+\_\+callback@{xbee\+\_\+cmd\+\_\+set\+\_\+callback}}
+\index{xbee\+\_\+cmd\+\_\+set\+\_\+callback@{xbee\+\_\+cmd\+\_\+set\+\_\+callback}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}{xbee\_cmd\_set\_callback()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+set\+\_\+callback (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle,  }\item[{\hyperlink{group__xbee__atcmd_ga113cbd0a40a638710974218de5f885fe}{xbee\+\_\+cmd\+\_\+callback\+\_\+fn}}]{callback,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Associate a callback with a given AT Command request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to the request, as returned by \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}.\\
+\hline
+\mbox{\tt in}  & {\em callback} & Callback function to receive the AT Command response. This function should take a single parameter (pointer to an \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t}) and return either \hyperlink{group__xbee__atcmd_gad51a6fee7843df5a5bfd6f3957465426}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+D\+O\+NE} (if done with the request handle) or \hyperlink{group__xbee__atcmd_ga9a5078393806d67903c87b3c82597fb1}{X\+B\+E\+E\+\_\+\+A\+T\+C\+M\+D\+\_\+\+R\+E\+U\+SE} (if more responses are expected, or the request handle is going to be reused). 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} atcmd\_callback( \textcolor{keyword}{const} \hyperlink{structxbee__cmd__response__t}{xbee\_cmd\_response\_t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{FAR} *response)
+\end{DoxyCode}
+\\
+\hline
+\mbox{\tt in}  & {\em context} & Context (or \char`\"{}userdata\char`\"{}) value to pass to the callback along with the AT Command response when it arrives. Should be set to N\+U\+LL if not used.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & callback set \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape handle} is not valid\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command()}, \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target()}, \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param()}, \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}, \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}, \hyperlink{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}{xbee\+\_\+cmd\+\_\+send()} 
+\end{DoxySeeAlso}
+
+
+References \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address(), E\+I\+N\+V\+AL, and F\+AR.
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}\label{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+set\+\_\+command@{xbee\+\_\+cmd\+\_\+set\+\_\+command}}
+\index{xbee\+\_\+cmd\+\_\+set\+\_\+command@{xbee\+\_\+cmd\+\_\+set\+\_\+command}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+set\+\_\+command()}{xbee\_cmd\_set\_command()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+set\+\_\+command (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle,  }\item[{const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR}}]{command\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Change the command associated with a request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & handle to the request, as returned by \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}\\
+\hline
+\mbox{\tt in}  & {\em command} & two-\/letter AT Command to send (e.\+g., \char`\"{}\+V\+R\char`\"{}, \char`\"{}\+N\+I\char`\"{}, etc.)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & command changed \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape handle} is not valid\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target()}, \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param()}, \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}, \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}, \hyperlink{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}{xbee\+\_\+cmd\+\_\+send()} 
+\end{DoxySeeAlso}
+
+
+References \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address(), E\+I\+N\+V\+AL, and F\+AR.
+
+\mbox{\Hypertarget{group__xbee__atcmd_gad2cc44803cc53ada37df4557313e120b}\label{group__xbee__atcmd_gad2cc44803cc53ada37df4557313e120b}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+set\+\_\+flags@{xbee\+\_\+cmd\+\_\+set\+\_\+flags}}
+\index{xbee\+\_\+cmd\+\_\+set\+\_\+flags@{xbee\+\_\+cmd\+\_\+set\+\_\+flags}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+set\+\_\+flags()}{xbee\_cmd\_set\_flags()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+set\+\_\+flags (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Set the flags for a given AT Command request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to the request, as returned by \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}. \\
+\hline
+\mbox{\tt in}  & {\em flags} & One or more of the following\+:
+\begin{DoxyItemize}
+\item X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+F\+L\+A\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+C\+H\+A\+N\+GE don\textquotesingle{}t apply changes until A\+T\+AC or another command without this flag is sent
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & flags set \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape handle} is not valid\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_ga0828601d6b2735ee9f2ebf408d12c05c}{xbee\+\_\+cmd\+\_\+clear\+\_\+flags} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}\label{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+set\+\_\+param@{xbee\+\_\+cmd\+\_\+set\+\_\+param}}
+\index{xbee\+\_\+cmd\+\_\+set\+\_\+param@{xbee\+\_\+cmd\+\_\+set\+\_\+param}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+set\+\_\+param()}{xbee\_cmd\_set\_param()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+set\+\_\+param (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle,  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+
+
+Set the parameter (up to 32-\/bits) for a given AT Command request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to the request, as returned by \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}.\\
+\hline
+\mbox{\tt in}  & {\em value} & Value to use as the parameter to the AT Command. For negative values, or values $>$ 0x\+F\+F\+F\+F\+F\+F\+FF, use \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}. For string parameters (e.\+g., for the \char`\"{}\+N\+I\char`\"{} command), use \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & parameter set \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape handle} is not valid\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command()}, \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target()}, \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}, \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}, \hyperlink{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}{xbee\+\_\+cmd\+\_\+send()} 
+\end{DoxySeeAlso}
+
+
+References \+\_\+xbee\+\_\+cmd\+\_\+encode\+\_\+param(), \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address(), E\+I\+N\+V\+AL, and F\+AR.
+
+
+
+Referenced by xbee\+\_\+io\+\_\+set\+\_\+options().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}\label{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes@{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes}}
+\index{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes@{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}{xbee\_cmd\_set\_param\_bytes()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{data,  }\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}}]{length }\end{DoxyParamCaption})}
+
+
+
+Set the parameter for a given AT Command request to a sequence of bytes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to the request, as returned by \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}.\\
+\hline
+\mbox{\tt in}  & {\em data} & Pointer to bytes (M\+S\+B-\/first) to copy into request.\\
+\hline
+\mbox{\tt in}  & {\em length} & Number of bytes to copy. 0 $<$ {\itshape length} $<$= \hyperlink{group__xbee__atcmd_ga9b1046f9c200c1bb0a9b57cb0ec474df}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & parameter set \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape handle} or {\itshape length} is not valid \\
+\hline
+{\em -\/\+E\+M\+S\+G\+S\+I\+ZE} & {\itshape length} is greater than \hyperlink{group__xbee__atcmd_ga9b1046f9c200c1bb0a9b57cb0ec474df}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH}\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command()}, \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target()}, \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param()}, \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}, \hyperlink{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}{xbee\+\_\+cmd\+\_\+send()} 
+\end{DoxySeeAlso}
+
+
+References F\+AR, and X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH.
+
+
+
+Referenced by xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}\label{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str@{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str}}
+\index{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str@{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}{xbee\_cmd\_set\_param\_str()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle,  }\item[{const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Set a string parameter for a given AT Command request (e.\+g., the \char`\"{}\+N\+I\char`\"{} node identifier command). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to the request, as returned by \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}.\\
+\hline
+\mbox{\tt in}  & {\em str} & String to use as the parameter. Must be less than \hyperlink{group__xbee__atcmd_ga9b1046f9c200c1bb0a9b57cb0ec474df}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH} characters long.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & parameter set \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape handle} is not valid \\
+\hline
+{\em -\/\+E\+M\+S\+G\+S\+I\+ZE} & {\itshape str} is more than \hyperlink{group__xbee__atcmd_ga9b1046f9c200c1bb0a9b57cb0ec474df}{X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH} characters.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command()}, \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target()}, \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param()}, \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}, \hyperlink{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}{xbee\+\_\+cmd\+\_\+send()} 
+\end{DoxySeeAlso}
+
+
+References E\+M\+S\+G\+S\+I\+ZE, length, X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+E\+N\+G\+TH, and xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes().
+
+\mbox{\Hypertarget{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}\label{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+set\+\_\+target@{xbee\+\_\+cmd\+\_\+set\+\_\+target}}
+\index{xbee\+\_\+cmd\+\_\+set\+\_\+target@{xbee\+\_\+cmd\+\_\+set\+\_\+target}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+set\+\_\+target()}{xbee\_cmd\_set\_target()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+set\+\_\+target (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{handle,  }\item[{const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{ieee,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{network\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Associate a remote X\+Bee device with a given AT Command request. 
+
+By default, \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()} configures the request as a local AT Command for the serially-\/attached X\+Bee module. Use this function to send the command to a remote device.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & Handle to the request, as returned by \hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}.\\
+\hline
+\mbox{\tt in}  & {\em ieee} & Pointer to 64-\/bit I\+E\+EE hardware address of target, or N\+U\+LL to switch back to the local X\+Bee device.
+\begin{DoxyItemize}
+\item \hyperlink{group__wpan__types_gaced36f5538c5bb2da4f60a90313f1674}{W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST} for broadcast.
+\item \hyperlink{group__wpan__types_ga816199ef85ef801e07ae48350664034d}{W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+O\+R\+D\+I\+N\+A\+T\+OR} for the coordinator (use \hyperlink{group__wpan__types_ga1674d7b825e528a482725d1c06b02c10}{W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED} for the network address).
+\item \hyperlink{group__wpan__types_ga09e965ef6cfbfd48312d86bb011f125b}{W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED} to use the 16-\/bit network address.
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em network} & 16-\/bit network address of target.
+\begin{DoxyItemize}
+\item \hyperlink{group__wpan__types_ga1674d7b825e528a482725d1c06b02c10}{W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED} if the node\textquotesingle{}s network address isn\textquotesingle{}t known or this is a Digi\+Mesh network.
+\item \hyperlink{group__wpan__types_ga5158cbab6c4139bd77d1d3f80d9071b2}{W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+O\+R\+D\+I\+N\+A\+T\+OR} for the coordinator (use the coordinator\textquotesingle{}s actual I\+E\+EE address for the {\itshape ieee} parameter).
+\item \hyperlink{group__wpan__types_ga08ec03f67d0d74ba6f98da543baee129}{W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+B\+C\+A\+S\+T\+\_\+\+N\+O\+T\+\_\+\+A\+S\+L\+E\+EP} to broadcast to all nodes that aren\textquotesingle{}t sleeping.
+\item \hyperlink{group__wpan__types_gabc1252917f345a50aa97f991bb7a3685}{W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+B\+C\+A\+S\+T\+\_\+\+R\+O\+U\+T\+E\+RS} to broadcast to the coordinator and all routers.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & target set \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape handle} is not valid \\
+\hline
+{\em -\/\+E\+N\+O\+S\+YS} & function not implemented (X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+R\+E\+M\+O\+TE defined)\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command()}, \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param()}, \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}, \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}, \hyperlink{group__xbee__atcmd_ga2c58eedef60b41dd30ae1f6b475606a8}{xbee\+\_\+cmd\+\_\+send()} 
+\end{DoxySeeAlso}
+
+
+References \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+to\+\_\+address(), E\+I\+N\+V\+AL, E\+N\+O\+S\+YS, and F\+AR.
+
+
+
+Referenced by xbee\+\_\+io\+\_\+set\+\_\+options().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga6b157fe048c0082253056a7bda0ba9bb}\label{group__xbee__atcmd_ga6b157fe048c0082253056a7bda0ba9bb}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+simple@{xbee\+\_\+cmd\+\_\+simple}}
+\index{xbee\+\_\+cmd\+\_\+simple@{xbee\+\_\+cmd\+\_\+simple}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+simple()}{xbee\_cmd\_simple()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+simple (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{const char \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR}}]{command\mbox{[}3\mbox{]},  }\item[{\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t}}]{value }\end{DoxyParamCaption})}
+
+
+
+Simple interface for sending a command with a parameter to the local X\+Bee without checking for a response. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & X\+Bee device to use as the target.\\
+\hline
+\mbox{\tt in}  & {\em command} & Two-\/letter AT Command to send (e.\+g., \char`\"{}\+I\+D\char`\"{}, \char`\"{}\+C\+H\char`\"{}, etc.).\\
+\hline
+\mbox{\tt in}  & {\em value} & Value to use as the parameter to the AT Command.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & command sent \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & an invalid parameter was passed to the function \\
+\hline
+{\em -\/\+E\+B\+U\+SY} & transmit serial buffer is full, or X\+Bee is not accepting serial data (deasserting /\+C\+TS signal).\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__atcmd_gab73aaf873be6f9e515dcd65748a7f21c}{xbee\+\_\+cmd\+\_\+create()}, \hyperlink{group__xbee__atcmd_ga06181e54a87d90c30108360d6b433323}{xbee\+\_\+cmd\+\_\+set\+\_\+command()}, \hyperlink{group__xbee__atcmd_ga0a5d2e2e87743061c46abd53e379e014}{xbee\+\_\+cmd\+\_\+set\+\_\+callback()}, \hyperlink{group__xbee__atcmd_gae478cb2ea9bb07ade86009a65e6d121f}{xbee\+\_\+cmd\+\_\+set\+\_\+target()}, \hyperlink{group__xbee__atcmd_ga4295dde3673b07f41e569e333abd9730}{xbee\+\_\+cmd\+\_\+set\+\_\+param()}, \hyperlink{group__xbee__atcmd_ga6bd558a2d03eafe29b176f598d76ffd6}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+bytes()}, \hyperlink{group__xbee__atcmd_ga5b69459e7c47be384c9add2921e507e0}{xbee\+\_\+cmd\+\_\+set\+\_\+param\+\_\+str()}, \hyperlink{group__xbee__atcmd_ga19d16fbaf1da1cc581fbedcb36f7263f}{xbee\+\_\+cmd\+\_\+execute()} 
+\end{DoxySeeAlso}
+
+
+References P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT.
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga7ef08f6771da8c18234bbffca2be4ff3}\label{group__xbee__atcmd_ga7ef08f6771da8c18234bbffca2be4ff3}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+cmd\+\_\+tick@{xbee\+\_\+cmd\+\_\+tick}}
+\index{xbee\+\_\+cmd\+\_\+tick@{xbee\+\_\+cmd\+\_\+tick}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+cmd\+\_\+tick()}{xbee\_cmd\_tick()}}
+{\footnotesize\ttfamily int xbee\+\_\+cmd\+\_\+tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function should be called periodically (at least every few seconds) to expire old entries from the AT Command Request table. 
+
+\begin{DoxyReturn}{Returns}
+$>$0 number of requests expired 
+
+0 none of the requests in the table expired 
+\end{DoxyReturn}
+
+
+References F\+AR.
+
+
+
+Referenced by xbee\+\_\+cmd\+\_\+query\+\_\+status(), and xbee\+\_\+io\+\_\+query\+\_\+status().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga42768d8f8aa841ed4f42396cff2815aa}\label{group__xbee__atcmd_ga42768d8f8aa841ed4f42396cff2815aa}} 
+\index{A\+T Commands@{A\+T Commands}!xbee\+\_\+identify@{xbee\+\_\+identify}}
+\index{xbee\+\_\+identify@{xbee\+\_\+identify}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{xbee\+\_\+identify()}{xbee\_identify()}}
+{\footnotesize\ttfamily void xbee\+\_\+identify (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{\hyperlink{group__hal__dos_ga04dd5074964518403bf944f2b240a5f8}{bool\+\_\+t}}]{identify }\end{DoxyParamCaption})}
+
+
+
+Programs with the Z\+CL Identify Server Cluster can call this function in their main loop to have the X\+Bee module\textquotesingle{}s association L\+ED flash fast (100ms cycle) when in Identify Mode. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xbee} & device to identify \\
+\hline
+\mbox{\tt in}  & {\em identify} & T\+R\+UE if X\+Bee should be in identify mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__device_gaece12bbe1dd3135e51f714b485ed0cf2}{xbee\+\_\+zcl\+\_\+identify}, \hyperlink{group__zcl__identify_ga95b00d55b861c1ea6033c16794ae818d}{zcl\+\_\+identify\+\_\+isactive}, \hyperlink{group__zcl__identify_gaeae5b3a460629b095247d160235ec586}{Z\+C\+L\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+ER} 
+\end{DoxySeeAlso}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__xbee__atcmd_ga0b78107b2303165b7cf9969125064dcc}\label{group__xbee__atcmd_ga0b78107b2303165b7cf9969125064dcc}} 
+\index{A\+T Commands@{A\+T Commands}!\+\_\+xbee\+\_\+atcmd\+\_\+query\+\_\+regs@{\+\_\+xbee\+\_\+atcmd\+\_\+query\+\_\+regs}}
+\index{\+\_\+xbee\+\_\+atcmd\+\_\+query\+\_\+regs@{\+\_\+xbee\+\_\+atcmd\+\_\+query\+\_\+regs}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+atcmd\+\_\+query\+\_\+regs}{\_xbee\_atcmd\_query\_regs}}
+{\footnotesize\ttfamily const \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \+\_\+xbee\+\_\+atcmd\+\_\+query\+\_\+regs\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'H'}, \textcolor{charliteral}{'V'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537}{XBEE\_CLT\_COPY\_BE}, 
+      \hyperlink{structxbee__dev__t}{xbee\_dev\_t}, hardware\_version),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'V'}, \textcolor{charliteral}{'R'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537}{XBEE\_CLT\_COPY\_BE}, 
+      \hyperlink{structxbee__dev__t}{xbee\_dev\_t}, firmware\_version),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'S'}, \textcolor{charliteral}{'H'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba5450809b1aae150ec7dfb4c8faa8161a}{XBEE\_CLT\_COPY\_PAD\_LEFT}, 
+      \hyperlink{structxbee__dev__t}{xbee\_dev\_t}, wpan\_dev.address.ieee.l[0]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'S'}, \textcolor{charliteral}{'L'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba5450809b1aae150ec7dfb4c8faa8161a}{XBEE\_CLT\_COPY\_PAD\_LEFT}, 
+      \hyperlink{structxbee__dev__t}{xbee\_dev\_t}, wpan\_dev.address.ieee.l[1]),
+
+
+
+
+
+   \hyperlink{group__xbee__atcmd_gabbaf60bd4d186b860fd58c8a6111e9f9}{XBEE\_ATCMD\_REG\_CB}( \textcolor{charliteral}{'E'}, \textcolor{charliteral}{'O'}, \_xbee\_cmd\_query\_handle\_eo, 0),
+   \hyperlink{group__xbee__atcmd_gabbaf60bd4d186b860fd58c8a6111e9f9}{XBEE\_ATCMD\_REG\_CB}( \textcolor{charliteral}{'A'}, \textcolor{charliteral}{'I'}, \_xbee\_cmd\_query\_handle\_ai, 0),
+   
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'N'}, \textcolor{charliteral}{'P'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537}{XBEE\_CLT\_COPY\_BE}, 
+      \hyperlink{structxbee__dev__t}{xbee\_dev\_t}, wpan\_dev.payload),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'M'}, \textcolor{charliteral}{'Y'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537}{XBEE\_CLT\_COPY\_BE}, 
+      \hyperlink{structxbee__dev__t}{xbee\_dev\_t}, wpan\_dev.address.network),
+
+\}
+\end{DoxyCode}
+List of X\+Bee registers to query at startup; used to learn about the attached X\+Bee module. \mbox{\Hypertarget{group__xbee__atcmd_ga1a5aaa930940857f68f245eeb89506b5}\label{group__xbee__atcmd_ga1a5aaa930940857f68f245eeb89506b5}} 
+\index{A\+T Commands@{A\+T Commands}!command@{command}}
+\index{command@{command}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{command}{command}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} command}
+
+
+
+two-\/character AT Command 
+
+Command from original request. 
+
+Referenced by \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response(), \+\_\+xbee\+\_\+cmd\+\_\+list\+\_\+callback(), and zcl\+\_\+default\+\_\+response().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga03c1016ac46b9df250b994f242cf956a}\label{group__xbee__atcmd_ga03c1016ac46b9df250b994f242cf956a}} 
+\index{A\+T Commands@{A\+T Commands}!frame\+\_\+id@{frame\+\_\+id}}
+\index{frame\+\_\+id@{frame\+\_\+id}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{frame\+\_\+id}{frame\_id}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} frame\+\_\+id}
+
+
+
+1 to 255, or 0 to suppress the Transmit Status response 
+
+ID from request, used to match response to request. 
+
+Referenced by \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga2549f921e25a72dfa05a2154a792e2bf}\label{group__xbee__atcmd_ga2549f921e25a72dfa05a2154a792e2bf}} 
+\index{A\+T Commands@{A\+T Commands}!ieee\+\_\+address@{ieee\+\_\+address}}
+\index{ieee\+\_\+address@{ieee\+\_\+address}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{ieee\+\_\+address}{ieee\_address}}
+{\footnotesize\ttfamily \hyperlink{unionaddr64}{addr64} ieee\+\_\+address}
+
+
+
+64-\/bit I\+E\+EE address (big-\/endian) of target 
+
+64-\/bit I\+E\+EE address (big-\/endian) of source.
+
+64-\/bit I\+E\+EE address (big-\/endian) of responder. \mbox{\Hypertarget{group__xbee__atcmd_ga73d48563eb05cd5fcc4add79d226a3b8}\label{group__xbee__atcmd_ga73d48563eb05cd5fcc4add79d226a3b8}} 
+\index{A\+T Commands@{A\+T Commands}!network\+\_\+address\+\_\+be@{network\+\_\+address\+\_\+be}}
+\index{network\+\_\+address\+\_\+be@{network\+\_\+address\+\_\+be}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{network\+\_\+address\+\_\+be}{network\_address\_be}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} network\+\_\+address\+\_\+be}
+
+
+
+16-\/bit network address (big-\/endian) of target 
+
+16-\/bit network address (big-\/endian) of source.
+
+16-\/bit network address (big-\/endian) of responder. \mbox{\Hypertarget{group__xbee__atcmd_gaace3d640c8d449b8db1162993d259d3f}\label{group__xbee__atcmd_gaace3d640c8d449b8db1162993d259d3f}} 
+\index{A\+T Commands@{A\+T Commands}!options@{options}}
+\index{options@{options}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} options}
+
+
+
+Options byte (see X\+B\+E\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+A\+T\+\_\+\+O\+P\+T\+\_\+$\ast$ macros) 
+
+combination of X\+B\+E\+E\+\_\+\+T\+X\+\_\+\+O\+P\+T\+\_\+$\ast$ macros
+
+bitfield, see X\+B\+E\+E\+\_\+\+R\+X\+\_\+\+O\+P\+T\+\_\+xxx macros 
+
+Referenced by xbee\+\_\+ota\+\_\+server\+\_\+cmd().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga4233297bd31be5c273d4fb0758cc54d7}\label{group__xbee__atcmd_ga4233297bd31be5c273d4fb0758cc54d7}} 
+\index{A\+T Commands@{A\+T Commands}!P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}{PACKED\_STRUCT}}
+{\footnotesize\ttfamily typedef P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} as\_type
+\end{DoxyCode}
+\mbox{\Hypertarget{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}\label{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}} 
+\index{A\+T Commands@{A\+T Commands}!status@{status}}
+\index{status@{status}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} status}
+
+
+
+See enum \hyperlink{group__xbee__atcmd_gac6a27f1b1ee32b75b6f966afbb347f22}{xbee\+\_\+at\+\_\+resp\+\_\+status}. 
+
+Note that Digi\+Mesh uses the upper nibble for additional flags -- use \hyperlink{group__xbee__atcmd_ga4dc292cd07dfd93bbfb2b8632b580949}{X\+B\+E\+E\+\_\+\+A\+T\+\_\+\+R\+E\+S\+P\+\_\+\+S\+T\+A\+T\+U\+S()} macro when comparing this field to the xbee\+\_\+at\+\_\+resp\+\_\+status enum. 
+
+Referenced by \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response(), \+\_\+xbee\+\_\+cmd\+\_\+modem\+\_\+status(), \+\_\+zcl\+\_\+onoff\+\_\+handler(), \+\_\+zcl\+\_\+write\+\_\+attributes(), xbee\+\_\+ser\+\_\+get\+\_\+cts(), xbee\+\_\+ser\+\_\+set\+\_\+rts(), zcl\+\_\+comm\+\_\+response(), zcl\+\_\+default\+\_\+response(), zcl\+\_\+encode\+\_\+attribute\+\_\+value(), and zcl\+\_\+invalid\+\_\+command().
+
+\mbox{\Hypertarget{group__xbee__atcmd_ga5bf2410fa8ec37f47f8afeba8dcc7f1b}\label{group__xbee__atcmd_ga5bf2410fa8ec37f47f8afeba8dcc7f1b}} 
+\index{A\+T Commands@{A\+T Commands}!value@{value}}
+\index{value@{value}!A\+T Commands@{A\+T Commands}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} value}
+
+
+
+First byte of multi-\/byte value. 
+
+variable length, only if Z\+C\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS
+
+Cached value. 
+
+Referenced by \+\_\+xbee\+\_\+cmd\+\_\+handle\+\_\+response(), \+\_\+zcl\+\_\+comm\+\_\+startup\+\_\+control\+\_\+set(), zcl\+\_\+check\+\_\+minmax(), zcl\+\_\+print\+\_\+array\+\_\+value(), and zcl\+\_\+print\+\_\+struct\+\_\+value().
+

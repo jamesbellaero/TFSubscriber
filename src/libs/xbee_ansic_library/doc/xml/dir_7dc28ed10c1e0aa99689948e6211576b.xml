@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_7dc28ed10c1e0aa99689948e6211576b" kind="dir">
+    <compoundname>src/win32</compoundname>
+    <innerfile refid="xbee__platform__win32_8c">xbee_platform_win32.c</innerfile>
+    <innerfile refid="xbee__serial__win32_8c">xbee_serial_win32.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/win32/"/>
+  </compounddef>
+</doxygen>

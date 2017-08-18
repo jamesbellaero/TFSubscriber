@@ -1,0 +1,24 @@
+\hypertarget{xmodem__crc16_8c}{}\section{src/util/xmodem\+\_\+crc16.c File Reference}
+\label{xmodem__crc16_8c}\index{src/util/xmodem\+\_\+crc16.\+c@{src/util/xmodem\+\_\+crc16.\+c}}
+
+
+C\+R\+C16 implementation for use by X\+Bee\textquotesingle{}s Xmodem library if platform doesn\textquotesingle{}t have an existing implementation.  
+
+
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xbee/xmodem\+\_\+crc16.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__util__xmodem_ga48b65051c5461be6d016802e2eb8a138}{crc16\+\_\+calc} (const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$\hyperlink{group__xbee__io_gac5955aa1e44ff234e6d78a19cf68f25c}{data}, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} current)
+\begin{DoxyCompactList}\small\item\em Calculate C\+R\+C-\/16 of a data buffer using polynomial (0x1021) without reflection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__util__xmodem_gab903230030042c3ee444aa887b705e06}{crc16\+\_\+table} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table for X\+M\+O\+D\+EM and \char`\"{}\+False C\+C\+I\+T\+T\char`\"{} C\+RC, calculated with standard 0x1021 polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+R\+C16 implementation for use by X\+Bee\textquotesingle{}s Xmodem library if platform doesn\textquotesingle{}t have an existing implementation. 
+

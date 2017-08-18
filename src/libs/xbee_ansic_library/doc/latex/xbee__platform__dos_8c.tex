@@ -1,0 +1,40 @@
+\hypertarget{xbee__platform__dos_8c}{}\section{src/dos/xbee\+\_\+platform\+\_\+dos.c File Reference}
+\label{xbee__platform__dos_8c}\index{src/dos/xbee\+\_\+platform\+\_\+dos.\+c@{src/dos/xbee\+\_\+platform\+\_\+dos.\+c}}
+
+
+Platform-\/specific functions for use by the X\+Bee Driver on D\+OS target.  
+
+
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xbee/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../util/jslong.\+c\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+R\+E\+A\+D\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+IT}~0
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+R\+E\+A\+D\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+S\+T\+A\+R\+T\+\_\+\+L\+I\+NE}~1
+\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+R\+E\+A\+D\+L\+I\+N\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+L\+I\+NE}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__hal__dos_gad66d00b144089426f04db771be5baa8b}{xbee\+\_\+seconds\+\_\+timer} ()
+\begin{DoxyCompactList}\small\item\em Platform-\/specific function to return the number of elapsed seconds. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga09a1e304d66d35dd47daffee9731edaa}{uint32\+\_\+t} \hyperlink{group__hal__dos_ga63bb246b86f72e88fa8ddc7a429c0e67}{xbee\+\_\+millisecond\+\_\+timer} ()
+\begin{DoxyCompactList}\small\item\em Platform-\/specific function to return the number of elapsed milliseconds. \end{DoxyCompactList}\item 
+void {\bfseries gotoxy\+\_\+ansi} (int col, int row)
+\item 
+void {\bfseries clrscr\+\_\+ansi} (void)
+\item 
+int \hyperlink{group__hal__dos_ga8c0c80b64f63d395e718172190b21fcc}{xbee\+\_\+readline} (char $\ast$buffer, int \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em This function is a non-\/blocking version of gets(), used to read a line of input from the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Platform-\/specific functions for use by the X\+Bee Driver on D\+OS target. 
+

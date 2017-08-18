@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__util" kind="group">
+    <compoundname>util</compoundname>
+    <title>Utility/Support Code</title>
+    <innerfile refid="hexdump_8c">hexdump.c</innerfile>
+    <innerfile refid="hexstrtobyte_8c">hexstrtobyte.c</innerfile>
+    <innergroup refid="group__util__cbuf">Circular Buffer</innergroup>
+    <innergroup refid="group__util__byteorder">Byte-swapping functions</innergroup>
+    <innergroup refid="group__util__xmodem">XMODEM code used by the firmware update process</innergroup>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__util_1gaa321236a0cb6f4e0dad592fdf1b550d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hex_dump</definition>
+        <argsstring>(const void FAR *address, uint16_t length, uint16_t flags)</argsstring>
+        <name>hex_dump</name>
+        <param>
+          <type>const void <ref refid="group__hal_1gaef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref> *</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hal__dos_1ga5a8b2dc9e45a9ee81a94ef304fb62505" kindref="member">uint16_t</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for printing a hex dump of memory to stdout. </para>        </briefdescription>
+        <detaileddescription>
+<para>A reference implementation is provided in as <ref refid="hexdump_8c" kindref="compound">util/hexdump.c</ref>. Dumps data in hex/printable format, 16 bytes to a line, to stdout.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of data to dump.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to dump.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of<itemizedlist>
+<listitem><para><ref refid="group__hal_1gae60f842ae8bc3cc952cdeece611670d5" kindref="member">HEX_DUMP_FLAG_NONE</ref></para></listitem><listitem><para><ref refid="group__hal_1gaec79525addd1a70fda55b1ea11534832" kindref="member">HEX_DUMP_FLAG_OFFSET</ref></para></listitem><listitem><para><ref refid="group__hal_1ga967137c51c026d68d03d1668402ec12b" kindref="member">HEX_DUMP_FLAG_ADDRESS</ref></para></listitem><listitem><para><ref refid="group__hal_1ga696f6553e33cbd20eda34e220ec9939a" kindref="member">HEX_DUMP_FLAG_TAB</ref> </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/util/hexdump.c" line="28" column="1" bodyfile="src/util/hexdump.c" bodystart="28" bodyend="91"/>
+        <referencedby refid="group__wpan__aps_1ga2a4e8b3e2022e55e6607243a5feb25cd" compoundref="wpan__aps_8c" startline="823" endline="841">wpan_envelope_dump</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__util_1ga7ef9d8eaba1a5730261c557b1cb0a36b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hexstrtobyte</definition>
+        <argsstring>(const char *p)</argsstring>
+        <name>hexstrtobyte</name>
+        <param>
+          <type>const char *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/util/hexstrtobyte.c" line="26" column="1" bodyfile="src/util/hexstrtobyte.c" bodystart="26" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,765 @@
+\hypertarget{group__xbee__io}{}\section{Xbee\+\_\+io}
+\label{group__xbee__io}\index{Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{xbee__io_8c}{xbee\+\_\+io.\+c}
+\begin{DoxyCompactList}\small\item\em Code related to I/O sampling and configuration (the A\+T\+IS command, 0x92 frames). \end{DoxyCompactList}\item 
+file \hyperlink{io_8h}{io.\+h}
+\begin{DoxyCompactList}\small\item\em Header for code related to built-\/in I/\+Os on the X\+Bee module (the A\+T\+IS command, 0x92 frames) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__io_ga4bbb6c16a5af138ecfc8357d0675a5c4}\label{group__xbee__io_ga4bbb6c16a5af138ecfc8357d0675a5c4}} 
+\#define {\bfseries \+\_\+xbee\+\_\+io\+\_\+debug}
+\item 
+\mbox{\Hypertarget{group__xbee__io_ga196d5a808112b0c850b5b35c53b9cde1}\label{group__xbee__io_ga196d5a808112b0c850b5b35c53b9cde1}} 
+\#define \hyperlink{group__xbee__io_ga196d5a808112b0c850b5b35c53b9cde1}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+I\+N\+V\+A\+L\+ID}~I\+N\+T16\+\_\+C(-\/32768)
+\begin{DoxyCompactList}\small\item\em Return code from analog I/O query functions if selected I/O is not valid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga0e8b4392a59ce754f75251d04f3a1ac3}\label{group__xbee__io_ga0e8b4392a59ce754f75251d04f3a1ac3}} 
+\#define \hyperlink{group__xbee__io_ga0e8b4392a59ce754f75251d04f3a1ac3}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+P\+E\+R\+I\+OD}~50
+\begin{DoxyCompactList}\small\item\em Minimum automatic I/O sample period in ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__xbee__io_ga91bd181d244760611d0c5292f12bced8}{xbee\+\_\+frame\+\_\+io\+\_\+response\+\_\+t}
+\begin{DoxyCompactList}\small\item\em X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+O\+\_\+\+R\+E\+S\+P\+O\+N\+SE (0x92) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__xbee__io_gac23a55c53310f865d9ed2381e331a438}{xbee\+\_\+io\+\_\+type} \{ \newline
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438ac94eae0e1d6e2f048b7ce9aad2dbb294}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED} = 0, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a03494dbb6cd4a96383107366370f0473}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+E\+C\+I\+AL} = 1, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a70bf5092d9f6fdf00cb81b4fd16aeb8b}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+I\+N\+P\+UT} = 2, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a2887707500afd7d22309447fef90d52e}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+N\+P\+UT} = 3, 
+\newline
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4e6de8188ed6ccfea0d862dc8c36cbbf}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+OW} = 4, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438ab62aebd7dfbb2424407a9115fbf55ef1}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+GH} = 5, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a85bc0f69a521fb5c165328ff14cb3c93}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+OW} = 6, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4a98244656eacb8587c39c6219b02731}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+H\+I\+GH} = 7, 
+\newline
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438afb53ffa5963f9677a369d43916807f44}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK} = 0x0F, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a2f8406584861bbcbd152bac72b6051c8}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+D\+E\+T\+E\+CT} = 0x10, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a6338af6819290605a1c535a610965340}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+UP} = 0x20, 
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a74522e6465b22217ea88fec09cf6601c}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+D\+O\+WN} = 0x40, 
+\newline
+\hyperlink{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4566a81606cd9dbd9ec84207a02a5936}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE} = 0x80, 
+{\bfseries X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+N\+P\+U\+T\+\_\+\+P\+U\+L\+L\+UP}
+ \}\begin{DoxyCompactList}\small\item\em Configuration type for X\+Bee built-\/in I/\+Os. \end{DoxyCompactList}
+\item 
+enum \hyperlink{group__xbee__io_gaf104a10d2bc34550b99de92fe3564cd2}{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state} \{ \hyperlink{group__xbee__io_ggaf104a10d2bc34550b99de92fe3564cd2ab51805fa21200aa69c1b83b718e8a48b}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+L\+OW} = X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+OW, 
+\hyperlink{group__xbee__io_ggaf104a10d2bc34550b99de92fe3564cd2a252b4619d7e663b9b816389c34731bd7}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+H\+I\+GH} = X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+GH, 
+{\bfseries X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+C\+E\+\_\+\+L\+OW} = X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+L\+O\+W$\vert$\+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE, 
+{\bfseries X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+C\+E\+\_\+\+H\+I\+GH} = X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+H\+I\+G\+H$\vert$\+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE
+ \}\begin{DoxyCompactList}\small\item\em Digital output state for X\+Bee built-\/in I/\+Os configured as outputs. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga49aae35ec2a46306bf2ad593cecbcf26}{xbee\+\_\+io\+\_\+response\+\_\+parse} (\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$parsed, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$source)
+\begin{DoxyCompactList}\small\item\em Parse an I/O response and store it in an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga973f925aa6983ad40f5e4fb2665d7e37}\label{group__xbee__io_ga973f925aa6983ad40f5e4fb2665d7e37}} 
+\+\_\+xbee\+\_\+io\+\_\+debug char $\ast$ {\bfseries \+\_\+xbee\+\_\+mask\+\_\+to\+\_\+binary} (char $\ast$buf, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} mask, char $\ast$digits, int maxbit)
+\item 
+\mbox{\Hypertarget{group__xbee__io_ga4d913c1fcbb1a2552babe3e6a86c22c7}\label{group__xbee__io_ga4d913c1fcbb1a2552babe3e6a86c22c7}} 
+\+\_\+xbee\+\_\+io\+\_\+debug char $\ast$ {\bfseries \+\_\+xbee\+\_\+2masks\+\_\+to\+\_\+quaternary} (char $\ast$buf, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} mask\+\_\+lo, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} mask\+\_\+hi, char $\ast$digits, int maxbit)
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug void \hyperlink{group__xbee__io_ga931be802188e7f6d5f34ca8c47405479}{xbee\+\_\+io\+\_\+response\+\_\+dump} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io)
+\begin{DoxyCompactList}\small\item\em Debugging function used to dump an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure to stdout. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_gad542b5112bb7aafb9b3b9f965d6f3703}{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+input} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Return state of a digital input. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga6f3c5c657a49cd87abe13bdba3af15e9}{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+output} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Return state of a digital output. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} \hyperlink{group__xbee__io_ga69fd62a7e8b6ebd3654ba426f8aa07ab}{xbee\+\_\+io\+\_\+get\+\_\+analog\+\_\+input} (const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Return reading of an analog input. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga73696df85c4f9e52d5d24825d3a90b2a}{xbee\+\_\+io\+\_\+set\+\_\+digital\+\_\+output} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index, enum \hyperlink{group__xbee__io_gaf104a10d2bc34550b99de92fe3564cd2}{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state} state, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Set state of a digital output. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga0734acd149ca45fa8041d426f552e51a}{xbee\+\_\+io\+\_\+configure} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, uint\+\_\+fast8\+\_\+t index, enum \hyperlink{group__xbee__io_gac23a55c53310f865d9ed2381e331a438}{xbee\+\_\+io\+\_\+type} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Configure X\+Bee digital and analog I/\+Os. \end{DoxyCompactList}\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_ga6a1e9ccca3a6d97f1b583e76f1193dca}{xbee\+\_\+io\+\_\+set\+\_\+options} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} sample\+\_\+rate, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} change\+\_\+mask, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\begin{DoxyCompactList}\small\item\em Configure X\+Bee automatic I/O sampling options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gaa65c33f5a2ca49785dafc0b2408e0d2c}\label{group__xbee__io_gaa65c33f5a2ca49785dafc0b2408e0d2c}} 
+\+\_\+xbee\+\_\+io\+\_\+debug void {\bfseries \+\_\+xbee\+\_\+io\+\_\+query\+\_\+handle\+\_\+pr} (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$reg, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base)
+\item 
+\mbox{\Hypertarget{group__xbee__io_gab1a374b17b64343fec98a0c2fc419df4}\label{group__xbee__io_gab1a374b17b64343fec98a0c2fc419df4}} 
+\+\_\+xbee\+\_\+io\+\_\+debug void {\bfseries \+\_\+xbee\+\_\+io\+\_\+query\+\_\+handle\+\_\+end} (const \hyperlink{structxbee__cmd__response__t}{xbee\+\_\+cmd\+\_\+response\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, const struct \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$reg, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$base)
+\item 
+\mbox{\Hypertarget{group__xbee__io_ga730672b8c2d615d0cd3a4083e673e6e8}\label{group__xbee__io_ga730672b8c2d615d0cd3a4083e673e6e8}} 
+\+\_\+xbee\+\_\+io\+\_\+debug int {\bfseries xbee\+\_\+io\+\_\+query} (\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$xbee, \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io, const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$address)
+\item 
+\+\_\+xbee\+\_\+io\+\_\+debug int \hyperlink{group__xbee__io_gad253478285335c84b310aafb13aa1b21}{xbee\+\_\+io\+\_\+query\+\_\+status} (\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$io)
+\begin{DoxyCompactList}\small\item\em Check the status of querying an X\+Bee device, as initiated by xbee\+\_\+io\+\_\+query(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{unionxbee__at__cmd__t}{xbee\+\_\+at\+\_\+cmd\+\_\+t} {\bfseries xbee\+\_\+io\+\_\+cmd\+\_\+by\+\_\+index} \mbox{[}16\mbox{]}
+\item 
+const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gabcf9c9881057623ef7b28330631fad9b}{\+\_\+xbee\+\_\+pullup\+\_\+atcmd\+\_\+to\+\_\+iomask} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em Read current configuration of X\+Bee digital and analog I/\+Os. \end{DoxyCompactList}\item 
+const \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} {\bfseries \+\_\+xbee\+\_\+io\+\_\+query\+\_\+regs} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{group__xbee__io_ga55f4e774c0eb8d8dfbcdb7f1faff5ef6}\label{group__xbee__io_ga55f4e774c0eb8d8dfbcdb7f1faff5ef6}} 
+\hyperlink{structxbee__command__list__context__t}{xbee\+\_\+command\+\_\+list\+\_\+context\+\_\+t} \hyperlink{group__xbee__io_ga55f4e774c0eb8d8dfbcdb7f1faff5ef6}{clc}
+\begin{DoxyCompactList}\small\item\em Command list context used for querying configuration. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gabf150485c21c63b46d511cb50b2bf2df}{din\+\_\+enabled}
+\begin{DoxyCompactList}\small\item\em Which pins have digital input sampling enabled. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gab9c5cc4d30d476f26698c96f9aa329fe}{dout\+\_\+enabled}
+\begin{DoxyCompactList}\small\item\em Which pins have digital output enabled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gaef89a704cd7723b8bac1e3f6f1abd71f}\label{group__xbee__io_gaef89a704cd7723b8bac1e3f6f1abd71f}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gaef89a704cd7723b8bac1e3f6f1abd71f}{din\+\_\+state}
+\begin{DoxyCompactList}\small\item\em Sampled state of digital inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gafffe3ca8d9c16b73247ec851e1c263ca}\label{group__xbee__io_gafffe3ca8d9c16b73247ec851e1c263ca}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gafffe3ca8d9c16b73247ec851e1c263ca}{dout\+\_\+state}
+\begin{DoxyCompactList}\small\item\em Shadow state of digital outputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gae74f9326ff51e03bd7ae5d2c85c08f9e}\label{group__xbee__io_gae74f9326ff51e03bd7ae5d2c85c08f9e}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gae74f9326ff51e03bd7ae5d2c85c08f9e}{pullup\+\_\+state}
+\begin{DoxyCompactList}\small\item\em Shadow state of pull-\/up resistors 0\+:no pull-\/up; 1\+:pull-\/up applied. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gab7b8b762841906ebf44fe90a3194d20c}\label{group__xbee__io_gab7b8b762841906ebf44fe90a3194d20c}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gab7b8b762841906ebf44fe90a3194d20c}{pulldown\+\_\+state}
+\begin{DoxyCompactList}\small\item\em Shadow state of pull-\/down resistors 0\+:no pull-\/down; 1\+:pull-\/down applied. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__io_ga8473837f97f54ee29f09cd8f9c15e084}{analog\+\_\+enabled}
+\begin{DoxyCompactList}\small\item\em Which analog inputs are enabled See \hyperlink{group__xbee__io_gafc56816e62b0dd0a8d981b08f5f29651}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+D0} etc. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_ga51a638af480039b3c6578b36b5ad44f0}{adc\+\_\+sample} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em Analog samples (raw count 0..1023) Entries 0..3 correspond to A\+D0..3, Entries 4..6 not currently used, Entry 7 for Vcc reading (only obtained if A\+T\+V+ issued, and Vcc is less than that threshold). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga55f35df829432e5948124c79e1cda4d9}\label{group__xbee__io_ga55f35df829432e5948124c79e1cda4d9}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_ga55f35df829432e5948124c79e1cda4d9}{sample\+\_\+rate}
+\begin{DoxyCompactList}\small\item\em Shadow value of A\+T\+IR. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga2502e2e5a62801d202ac0cb63e546e46}\label{group__xbee__io_ga2502e2e5a62801d202ac0cb63e546e46}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_ga2502e2e5a62801d202ac0cb63e546e46}{change\+\_\+mask}
+\begin{DoxyCompactList}\small\item\em Shadow value of A\+T\+IC. \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__io_ga46d8dea1f8c2a731faf0db27d6ed308f}{config} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em First 16 configuration states (from A\+T\+D0 etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga059172dae4cbb97d22755682ec824079}\label{group__xbee__io_ga059172dae4cbb97d22755682ec824079}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_ga059172dae4cbb97d22755682ec824079}{pullup\+\_\+enable}
+\begin{DoxyCompactList}\small\item\em Raw A\+T\+PR command value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gaa1b20f291d5ad3201dbf1d3ff9aae9f2}\label{group__xbee__io_gaa1b20f291d5ad3201dbf1d3ff9aae9f2}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gaa1b20f291d5ad3201dbf1d3ff9aae9f2}{pullup\+\_\+direction}
+\begin{DoxyCompactList}\small\item\em Raw A\+T\+PD command value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gac20a5cb3031dfc972e4a7fcb21e7face}\label{group__xbee__io_gac20a5cb3031dfc972e4a7fcb21e7face}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gac20a5cb3031dfc972e4a7fcb21e7face}{pwm0\+\_\+level}
+\begin{DoxyCompactList}\small\item\em Output P\+WM level (A\+T\+M0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gaeb45f3abc59a12070b903f6b832b9de5}\label{group__xbee__io_gaeb45f3abc59a12070b903f6b832b9de5}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gaeb45f3abc59a12070b903f6b832b9de5}{pwm1\+\_\+level}
+\begin{DoxyCompactList}\small\item\em Output P\+WM level (A\+T\+M1) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga2c9a187c0282faada2a305e02f9ac0e0}\label{group__xbee__io_ga2c9a187c0282faada2a305e02f9ac0e0}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__io_ga2c9a187c0282faada2a305e02f9ac0e0}{pwm\+\_\+timeout}
+\begin{DoxyCompactList}\small\item\em A\+T\+PT value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga7483aa3631522522a66c78b0f7f946f7}\label{group__xbee__io_ga7483aa3631522522a66c78b0f7f946f7}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__io_ga7483aa3631522522a66c78b0f7f946f7}{tx\+\_\+samples}
+\begin{DoxyCompactList}\small\item\em A\+T\+IT value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga231e348f98931de7fde1d09f64264afc}\label{group__xbee__io_ga231e348f98931de7fde1d09f64264afc}} 
+\hyperlink{unionaddr64}{addr64} \hyperlink{group__xbee__io_ga231e348f98931de7fde1d09f64264afc}{ieee\+\_\+address\+\_\+be}
+\begin{DoxyCompactList}\small\item\em A\+T\+SH and A\+T\+SL of sender. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga73d48563eb05cd5fcc4add79d226a3b8}\label{group__xbee__io_ga73d48563eb05cd5fcc4add79d226a3b8}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_ga73d48563eb05cd5fcc4add79d226a3b8}{network\+\_\+address\+\_\+be}
+\begin{DoxyCompactList}\small\item\em A\+T\+MY value of sender. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gaace3d640c8d449b8db1162993d259d3f}\label{group__xbee__io_gaace3d640c8d449b8db1162993d259d3f}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries options}
+\item 
+\mbox{\Hypertarget{group__xbee__io_ga6bd874a22b34b2e3f911f90b07c4e6b4}\label{group__xbee__io_ga6bd874a22b34b2e3f911f90b07c4e6b4}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__io_ga6bd874a22b34b2e3f911f90b07c4e6b4}{num\+\_\+samples}
+\begin{DoxyCompactList}\small\item\em Currently always 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gac5955aa1e44ff234e6d78a19cf68f25c}\label{group__xbee__io_gac5955aa1e44ff234e6d78a19cf68f25c}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__io_gac5955aa1e44ff234e6d78a19cf68f25c}{data} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em First of variable amount of data Parse using \hyperlink{group__xbee__io_ga49aae35ec2a46306bf2ad593cecbcf26}{xbee\+\_\+io\+\_\+response\+\_\+parse()} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga57790808110ca09ef2d7ec4a5573d4d2}\label{group__xbee__io_ga57790808110ca09ef2d7ec4a5573d4d2}} 
+const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{unionxbee__at__cmd__t}{xbee\+\_\+at\+\_\+cmd\+\_\+t} {\bfseries xbee\+\_\+io\+\_\+cmd\+\_\+by\+\_\+index} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{X\+Bee configurable I/O pin names. Bitmask applied to certain fields.}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__io_gafc56816e62b0dd0a8d981b08f5f29651}\label{group__xbee__io_gafc56816e62b0dd0a8d981b08f5f29651}} 
+\#define \hyperlink{group__xbee__io_gafc56816e62b0dd0a8d981b08f5f29651}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+D0}~0x0001
+\begin{DoxyCompactList}\small\item\em A\+D0 (pin 20) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gaf01ab2d51afb8e360ade1ec5ceb15f0c}\label{group__xbee__io_gaf01ab2d51afb8e360ade1ec5ceb15f0c}} 
+\#define \hyperlink{group__xbee__io_gaf01ab2d51afb8e360ade1ec5ceb15f0c}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O0}~0x0001
+\begin{DoxyCompactList}\small\item\em D\+I\+O0 (pin 20) -\/ also commissioning button if so configured. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga78db08538e469fbe09b17180b74f3e1c}\label{group__xbee__io_ga78db08538e469fbe09b17180b74f3e1c}} 
+\#define \hyperlink{group__xbee__io_ga78db08538e469fbe09b17180b74f3e1c}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+D1}~0x0002
+\begin{DoxyCompactList}\small\item\em A\+D1 (pin 19) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gaf13c9ac98667d02de7b5ab0428b20dc2}\label{group__xbee__io_gaf13c9ac98667d02de7b5ab0428b20dc2}} 
+\#define \hyperlink{group__xbee__io_gaf13c9ac98667d02de7b5ab0428b20dc2}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O1}~0x0002
+\begin{DoxyCompactList}\small\item\em D\+I\+O1 (pin 19) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga03c92ebb88533c632409a6d869b7d063}\label{group__xbee__io_ga03c92ebb88533c632409a6d869b7d063}} 
+\#define \hyperlink{group__xbee__io_ga03c92ebb88533c632409a6d869b7d063}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+D2}~0x0004
+\begin{DoxyCompactList}\small\item\em A\+D2 (pin 18) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga9c373a42f64e66bfa38b2235fdfe6a25}\label{group__xbee__io_ga9c373a42f64e66bfa38b2235fdfe6a25}} 
+\#define \hyperlink{group__xbee__io_ga9c373a42f64e66bfa38b2235fdfe6a25}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O2}~0x0004
+\begin{DoxyCompactList}\small\item\em D\+I\+O2 (pin 18) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga4fe43e2934ff1e51aa67eb98facc8073}\label{group__xbee__io_ga4fe43e2934ff1e51aa67eb98facc8073}} 
+\#define \hyperlink{group__xbee__io_ga4fe43e2934ff1e51aa67eb98facc8073}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+D3}~0x0008
+\begin{DoxyCompactList}\small\item\em A\+D3 (pin 17) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga9e539ad69c134bece49a356974defd98}\label{group__xbee__io_ga9e539ad69c134bece49a356974defd98}} 
+\#define \hyperlink{group__xbee__io_ga9e539ad69c134bece49a356974defd98}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O3}~0x0008
+\begin{DoxyCompactList}\small\item\em D\+I\+O3 (pin 17) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gaaa986d18e9f32ea28679ff354c503281}\label{group__xbee__io_gaaa986d18e9f32ea28679ff354c503281}} 
+\#define \hyperlink{group__xbee__io_gaaa986d18e9f32ea28679ff354c503281}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O4}~0x0010
+\begin{DoxyCompactList}\small\item\em D\+I\+O4 (pin 11) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga51804d7450fba2e4200c39f5fba9ccf4}\label{group__xbee__io_ga51804d7450fba2e4200c39f5fba9ccf4}} 
+\#define \hyperlink{group__xbee__io_ga51804d7450fba2e4200c39f5fba9ccf4}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O5}~0x0020
+\begin{DoxyCompactList}\small\item\em D\+I\+O5 (pin 15) -\/ also A\+S\+S\+OC indicator if so configured. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga1e1b537e3a643c8f79098d8f490f433e}\label{group__xbee__io_ga1e1b537e3a643c8f79098d8f490f433e}} 
+\#define \hyperlink{group__xbee__io_ga1e1b537e3a643c8f79098d8f490f433e}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O6}~0x0040
+\begin{DoxyCompactList}\small\item\em D\+I\+O6 (pin 16) -\/ also R\+TS flow control if so configured. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga6255aa73ee149d14f2adb45112124dc1}\label{group__xbee__io_ga6255aa73ee149d14f2adb45112124dc1}} 
+\#define \hyperlink{group__xbee__io_ga6255aa73ee149d14f2adb45112124dc1}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O7}~0x0080
+\begin{DoxyCompactList}\small\item\em D\+I\+O7 (pin 12) -\/ also C\+TS flow control if so configured. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gaa33d3e911aa351342fb8a28a0bdae41f}\label{group__xbee__io_gaa33d3e911aa351342fb8a28a0bdae41f}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+G\+P\+I\+O7}~0x0080
+\item 
+\mbox{\Hypertarget{group__xbee__io_gae8044e1e12773287a7d433b23bba560b}\label{group__xbee__io_gae8044e1e12773287a7d433b23bba560b}} 
+\#define \hyperlink{group__xbee__io_gae8044e1e12773287a7d433b23bba560b}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+V\+C\+C\+\_\+\+S\+E\+N\+SE}~0x80
+\begin{DoxyCompactList}\small\item\em Supply voltage sense (in \hyperlink{group__xbee__io_ga8473837f97f54ee29f09cd8f9c15e084}{xbee\+\_\+io\+\_\+t.\+analog\+\_\+enabled} field) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_gaf960c0d984f3b75ecfcae16ccbb5f3b8}\label{group__xbee__io_gaf960c0d984f3b75ecfcae16ccbb5f3b8}} 
+\#define \hyperlink{group__xbee__io_gaf960c0d984f3b75ecfcae16ccbb5f3b8}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O10}~0x0400
+\begin{DoxyCompactList}\small\item\em D\+I\+O10 (pin 6) -\/ also R\+S\+SI P\+WM if so configured. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga7c1e80d3412af7f1218b981c5c4e3702}\label{group__xbee__io_ga7c1e80d3412af7f1218b981c5c4e3702}} 
+\#define \hyperlink{group__xbee__io_ga7c1e80d3412af7f1218b981c5c4e3702}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O11}~0x0800
+\begin{DoxyCompactList}\small\item\em D\+I\+O11 (pin 7) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__io_ga937549281953eb14d221e9f95445d210}\label{group__xbee__io_ga937549281953eb14d221e9f95445d210}} 
+\#define \hyperlink{group__xbee__io_ga937549281953eb14d221e9f95445d210}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O12}~0x1000
+\begin{DoxyCompactList}\small\item\em D\+I\+O12 (pin 4) -\/ also CD signal if so configured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__xbee__io_ga91bd181d244760611d0c5292f12bced8}\label{group__xbee__io_ga91bd181d244760611d0c5292f12bced8}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+frame\+\_\+io\+\_\+response\+\_\+t@{xbee\+\_\+frame\+\_\+io\+\_\+response\+\_\+t}}
+\index{xbee\+\_\+frame\+\_\+io\+\_\+response\+\_\+t@{xbee\+\_\+frame\+\_\+io\+\_\+response\+\_\+t}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+frame\+\_\+io\+\_\+response\+\_\+t}{xbee\_frame\_io\_response\_t}}
+{\footnotesize\ttfamily \hyperlink{group__xbee__io_ga91bd181d244760611d0c5292f12bced8}{xbee\+\_\+frame\+\_\+io\+\_\+response\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}          frame\_type
+\end{DoxyCode}
+
+
+X\+B\+E\+E\+\_\+\+F\+R\+A\+M\+E\+\_\+\+I\+O\+\_\+\+R\+E\+S\+P\+O\+N\+SE (0x92) 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__xbee__io_gaf104a10d2bc34550b99de92fe3564cd2}\label{group__xbee__io_gaf104a10d2bc34550b99de92fe3564cd2}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state@{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state}}
+\index{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state@{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state}{xbee\_io\_digital\_output\_state}}
+{\footnotesize\ttfamily enum \hyperlink{group__xbee__io_gaf104a10d2bc34550b99de92fe3564cd2}{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state}}
+
+
+
+Digital output state for X\+Bee built-\/in I/\+Os configured as outputs. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+L\+OW@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+L\+OW}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+L\+OW@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+L\+OW}}}\mbox{\Hypertarget{group__xbee__io_ggaf104a10d2bc34550b99de92fe3564cd2ab51805fa21200aa69c1b83b718e8a48b}\label{group__xbee__io_ggaf104a10d2bc34550b99de92fe3564cd2ab51805fa21200aa69c1b83b718e8a48b}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+L\+OW&Low (0V) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+H\+I\+GH@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+H\+I\+GH}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+H\+I\+GH@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+H\+I\+GH}}}\mbox{\Hypertarget{group__xbee__io_ggaf104a10d2bc34550b99de92fe3564cd2a252b4619d7e663b9b816389c34731bd7}\label{group__xbee__io_ggaf104a10d2bc34550b99de92fe3564cd2a252b4619d7e663b9b816389c34731bd7}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+S\+E\+T\+\_\+\+H\+I\+GH&High (Vcc) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__xbee__io_gac23a55c53310f865d9ed2381e331a438}\label{group__xbee__io_gac23a55c53310f865d9ed2381e331a438}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+type@{xbee\+\_\+io\+\_\+type}}
+\index{xbee\+\_\+io\+\_\+type@{xbee\+\_\+io\+\_\+type}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+type}{xbee\_io\_type}}
+{\footnotesize\ttfamily enum \hyperlink{group__xbee__io_gac23a55c53310f865d9ed2381e331a438}{xbee\+\_\+io\+\_\+type}}
+
+
+
+Configuration type for X\+Bee built-\/in I/\+Os. 
+
+Follows encoding in A\+T\+D0 etc., but also add pullup state as bit encoding. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438ac94eae0e1d6e2f048b7ce9aad2dbb294}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438ac94eae0e1d6e2f048b7ce9aad2dbb294}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED&Disabled. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+E\+C\+I\+AL@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+E\+C\+I\+AL}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+E\+C\+I\+AL@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+E\+C\+I\+AL}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a03494dbb6cd4a96383107366370f0473}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a03494dbb6cd4a96383107366370f0473}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+E\+C\+I\+AL&Special function e.\+g. association indicator for D\+I\+O5 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+I\+N\+P\+UT@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+I\+N\+P\+UT}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+I\+N\+P\+UT@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+I\+N\+P\+UT}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a70bf5092d9f6fdf00cb81b4fd16aeb8b}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a70bf5092d9f6fdf00cb81b4fd16aeb8b}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+I\+N\+P\+UT&Analog input. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+N\+P\+UT@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+N\+P\+UT}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+N\+P\+UT@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+N\+P\+UT}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a2887707500afd7d22309447fef90d52e}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a2887707500afd7d22309447fef90d52e}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+N\+P\+UT&Digital input. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+OW@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+OW}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+OW@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+OW}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4e6de8188ed6ccfea0d862dc8c36cbbf}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4e6de8188ed6ccfea0d862dc8c36cbbf}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+OW&Digital output low. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+GH@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+GH}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+GH@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+GH}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438ab62aebd7dfbb2424407a9115fbf55ef1}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438ab62aebd7dfbb2424407a9115fbf55ef1}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+GH&Digital output high. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+OW@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+OW}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+OW@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+OW}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a85bc0f69a521fb5c165328ff14cb3c93}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a85bc0f69a521fb5c165328ff14cb3c93}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+L\+OW&R\+S485 transmit enable (act low) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+H\+I\+GH@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+H\+I\+GH}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+H\+I\+GH@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+H\+I\+GH}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4a98244656eacb8587c39c6219b02731}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4a98244656eacb8587c39c6219b02731}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+X\+E\+N\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+H\+I\+GH&R\+S485 transmit enable (act high) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438afb53ffa5963f9677a369d43916807f44}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438afb53ffa5963f9677a369d43916807f44}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK&Mask for above settings. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+D\+E\+T\+E\+CT@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+D\+E\+T\+E\+CT}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+D\+E\+T\+E\+CT@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+D\+E\+T\+E\+CT}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a2f8406584861bbcbd152bac72b6051c8}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a2f8406584861bbcbd152bac72b6051c8}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+D\+E\+T\+E\+CT&OR in to the above to specify automatic sampling when edge detected (A\+T\+IC command). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+UP@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+UP}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+UP@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+UP}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a6338af6819290605a1c535a610965340}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a6338af6819290605a1c535a610965340}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+UP&OR in to the above to specify pull-\/up resistor active (A\+T\+PR command). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+D\+O\+WN@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+D\+O\+WN}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+D\+O\+WN@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+D\+O\+WN}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a74522e6465b22217ea88fec09cf6601c}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a74522e6465b22217ea88fec09cf6601c}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+U\+L\+L\+D\+O\+WN&OR in to the above to specify pull-\/down resistor active (reserved for future hardware). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE}!Xbee\+\_\+io@{Xbee\+\_\+io}}\index{Xbee\+\_\+io@{Xbee\+\_\+io}!X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE@{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE}}}\mbox{\Hypertarget{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4566a81606cd9dbd9ec84207a02a5936}\label{group__xbee__io_ggac23a55c53310f865d9ed2381e331a438a4566a81606cd9dbd9ec84207a02a5936}} 
+X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE&OR in to the above to force transmit to the device (else only transmits if changed from last known state) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__xbee__io_ga0734acd149ca45fa8041d426f552e51a}\label{group__xbee__io_ga0734acd149ca45fa8041d426f552e51a}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+configure@{xbee\+\_\+io\+\_\+configure}}
+\index{xbee\+\_\+io\+\_\+configure@{xbee\+\_\+io\+\_\+configure}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+configure()}{xbee\_io\_configure()}}
+{\footnotesize\ttfamily int xbee\+\_\+io\+\_\+configure (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{io,  }\item[{uint\+\_\+fast8\+\_\+t}]{index,  }\item[{enum \hyperlink{group__xbee__io_gac23a55c53310f865d9ed2381e331a438}{xbee\+\_\+io\+\_\+type}}]{type,  }\item[{const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Configure X\+Bee digital and analog I/\+Os. 
+
+This modifies the shadow state in the io parameter, as well as sending the appropriate configuration command to the target device. If the new state is the same as the shadow state, then the function returns without doing anything, unless X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE is specified in the type parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em xbee} & local device through which to action the request \\
+\hline
+\mbox{\tt in,out}  & {\em io} & pointer to an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure as set up by xbee\+\_\+io\+\_\+query(). Shadow state of I/O may be modified \\
+\hline
+\mbox{\tt in}  & {\em index} & digital or analog I/O number e.\+g. 0 for D\+I\+O0 or A\+D0. \\
+\hline
+\mbox{\tt in}  & {\em type} & type of I/O to configure. If the X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE flag is O\+Red in, force a configuration update to the device. Otherwise, a configuration change will only be sent to the device if the shadow (i.\+e. last known) configuration is different. \\
+\hline
+\mbox{\tt in}  & {\em address} & N\+U\+LL for local X\+Bee, or destination I\+E\+EE (64-\/bit) or network (16 bit) address of a remote device.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & Specified I/O index does not exist, or bad parameter. \\
+\hline
+{\em -\/\+E\+N\+O\+S\+PC} & the AT command table is full (increase the compile-\/time macro X\+B\+E\+E\+\_\+\+C\+M\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE) \\
+\hline
+{\em -\/\+E\+P\+E\+RM} & Specified I/O cannot be configured as requested because the hardware or firmware does not support it. \\
+\hline
+{\em $<$0} & Other negative value indicates problem transmitting the configuration request. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__xbee__io_ga69fd62a7e8b6ebd3654ba426f8aa07ab}\label{group__xbee__io_ga69fd62a7e8b6ebd3654ba426f8aa07ab}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+get\+\_\+analog\+\_\+input@{xbee\+\_\+io\+\_\+get\+\_\+analog\+\_\+input}}
+\index{xbee\+\_\+io\+\_\+get\+\_\+analog\+\_\+input@{xbee\+\_\+io\+\_\+get\+\_\+analog\+\_\+input}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+get\+\_\+analog\+\_\+input()}{xbee\_io\_get\_analog\_input()}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} xbee\+\_\+io\+\_\+get\+\_\+analog\+\_\+input (\begin{DoxyParamCaption}\item[{const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{io,  }\item[{uint\+\_\+fast8\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Return reading of an analog input. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em io} & pointer to an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure as set up by \hyperlink{group__xbee__io_ga49aae35ec2a46306bf2ad593cecbcf26}{xbee\+\_\+io\+\_\+response\+\_\+parse()} \\
+\hline
+\mbox{\tt in}  & {\em index} & analog input number e.\+g. 0 for A\+D0, 2 for A\+D2, 7 for Vcc reading (where available) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0..\+32767} & raw single-\/ended analog reading, normalized to the range 0..32767. Current hardware supports 10-\/bit A\+D\+Cs, hence the 5 L\+S\+Bs will be zero. Future hardware with higher resolution A\+D\+Cs will add precision to the L\+S\+Bs. \\
+\hline
+{\em -\/16384..\+16383} & raw differential analog reading, normalized to the range -\/16384..16383. This is reserved for future hardware. \\
+\hline
+{\em X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+I\+N\+V\+A\+L\+ID} & Output unknown because not configured as an analog input, or is a non-\/existent input index. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__xbee__io_gad542b5112bb7aafb9b3b9f965d6f3703}\label{group__xbee__io_gad542b5112bb7aafb9b3b9f965d6f3703}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+input@{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+input}}
+\index{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+input@{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+input}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+input()}{xbee\_io\_get\_digital\_input()}}
+{\footnotesize\ttfamily int xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+input (\begin{DoxyParamCaption}\item[{const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{io,  }\item[{uint\+\_\+fast8\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Return state of a digital input. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em io} & pointer to an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure as set up by \hyperlink{group__xbee__io_ga49aae35ec2a46306bf2ad593cecbcf26}{xbee\+\_\+io\+\_\+response\+\_\+parse()} \\
+\hline
+\mbox{\tt in}  & {\em index} & digital input number e.\+g. 0 for D\+I\+O0, 12 for D\+I\+O12. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Input low \\
+\hline
+{\em 1} & Input high \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & Input unknown because not configured as a digital input, or is a non-\/existent input index. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__xbee__io_ga6f3c5c657a49cd87abe13bdba3af15e9}\label{group__xbee__io_ga6f3c5c657a49cd87abe13bdba3af15e9}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+output@{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+output}}
+\index{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+output@{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+output}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+output()}{xbee\_io\_get\_digital\_output()}}
+{\footnotesize\ttfamily int xbee\+\_\+io\+\_\+get\+\_\+digital\+\_\+output (\begin{DoxyParamCaption}\item[{const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{io,  }\item[{uint\+\_\+fast8\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Return state of a digital output. 
+
+This is a shadow state i.\+e. the last known state setting.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em io} & pointer to an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure as set up by xbee\+\_\+io\+\_\+query() \\
+\hline
+\mbox{\tt in}  & {\em index} & digital output number e.\+g. 0 for D\+I\+O0, 2 for D\+I\+O2. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Output low \\
+\hline
+{\em 1} & Output high \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & Output unknown because not configured as a digital output, or is a non-\/existent output index. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__xbee__io_gad253478285335c84b310aafb13aa1b21}\label{group__xbee__io_gad253478285335c84b310aafb13aa1b21}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+query\+\_\+status@{xbee\+\_\+io\+\_\+query\+\_\+status}}
+\index{xbee\+\_\+io\+\_\+query\+\_\+status@{xbee\+\_\+io\+\_\+query\+\_\+status}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+query\+\_\+status()}{xbee\_io\_query\_status()}}
+{\footnotesize\ttfamily int xbee\+\_\+io\+\_\+query\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{io }\end{DoxyParamCaption})}
+
+
+
+Check the status of querying an X\+Bee device, as initiated by xbee\+\_\+io\+\_\+query(). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em io} & I/O query to check (pointer as passed to xbee\+\_\+io\+\_\+query()).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & query completed \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & {\itshape io} is N\+U\+LL \\
+\hline
+{\em -\/\+E\+B\+U\+SY} & query underway \\
+\hline
+{\em -\/\+E\+T\+I\+M\+E\+D\+O\+UT} & query timed out \\
+\hline
+{\em -\/\+E\+IO} & halted, but query may not have completed (unexpected response) \\
+\hline
+\end{DoxyRetVals}
+
+
+References E\+I\+N\+V\+AL, xbee\+\_\+cmd\+\_\+list\+\_\+status(), and xbee\+\_\+cmd\+\_\+tick().
+
+\mbox{\Hypertarget{group__xbee__io_ga931be802188e7f6d5f34ca8c47405479}\label{group__xbee__io_ga931be802188e7f6d5f34ca8c47405479}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+response\+\_\+dump@{xbee\+\_\+io\+\_\+response\+\_\+dump}}
+\index{xbee\+\_\+io\+\_\+response\+\_\+dump@{xbee\+\_\+io\+\_\+response\+\_\+dump}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+response\+\_\+dump()}{xbee\_io\_response\_dump()}}
+{\footnotesize\ttfamily void xbee\+\_\+io\+\_\+response\+\_\+dump (\begin{DoxyParamCaption}\item[{const \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{io }\end{DoxyParamCaption})}
+
+
+
+Debugging function used to dump an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure to stdout. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em io} & pointer to an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure as set up by \hyperlink{group__xbee__io_ga49aae35ec2a46306bf2ad593cecbcf26}{xbee\+\_\+io\+\_\+response\+\_\+parse()} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__xbee__io_ga49aae35ec2a46306bf2ad593cecbcf26}\label{group__xbee__io_ga49aae35ec2a46306bf2ad593cecbcf26}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+response\+\_\+parse@{xbee\+\_\+io\+\_\+response\+\_\+parse}}
+\index{xbee\+\_\+io\+\_\+response\+\_\+parse@{xbee\+\_\+io\+\_\+response\+\_\+parse}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+response\+\_\+parse()}{xbee\_io\_response\_parse()}}
+{\footnotesize\ttfamily int xbee\+\_\+io\+\_\+response\+\_\+parse (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{parsed,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{source }\end{DoxyParamCaption})}
+
+
+
+Parse an I/O response and store it in an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em parsed} & Result structure \#param\mbox{[}in\mbox{]} source Pointer to the start of the data i.\+e. the num\+\_\+samples field of the I/O response. \\
+\hline
+\end{DoxyParams}
+
+
+References be16toh, E\+I\+N\+V\+AL, and F\+AR.
+
+\mbox{\Hypertarget{group__xbee__io_ga73696df85c4f9e52d5d24825d3a90b2a}\label{group__xbee__io_ga73696df85c4f9e52d5d24825d3a90b2a}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+set\+\_\+digital\+\_\+output@{xbee\+\_\+io\+\_\+set\+\_\+digital\+\_\+output}}
+\index{xbee\+\_\+io\+\_\+set\+\_\+digital\+\_\+output@{xbee\+\_\+io\+\_\+set\+\_\+digital\+\_\+output}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+set\+\_\+digital\+\_\+output()}{xbee\_io\_set\_digital\_output()}}
+{\footnotesize\ttfamily int xbee\+\_\+io\+\_\+set\+\_\+digital\+\_\+output (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{io,  }\item[{uint\+\_\+fast8\+\_\+t}]{index,  }\item[{enum \hyperlink{group__xbee__io_gaf104a10d2bc34550b99de92fe3564cd2}{xbee\+\_\+io\+\_\+digital\+\_\+output\+\_\+state}}]{state,  }\item[{const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Set state of a digital output. 
+
+This modifies the shadow state in the io parameter, as well as sending the appropriate configuration command to the target device. If the new state is the same as the shadow state, then the function returns without doing anything, unless X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE is specified in the state parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em xbee} & local device through which to action the request \\
+\hline
+\mbox{\tt in,out}  & {\em io} & pointer to an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure as set up by xbee\+\_\+io\+\_\+query(). Shadow state of I/O may be modified \\
+\hline
+\mbox{\tt in}  & {\em index} & digital output number e.\+g. 0 for D\+I\+O0, 2 for D\+I\+O2. \\
+\hline
+\mbox{\tt in}  & {\em state} & new state of I/O. If the X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+F\+O\+R\+CE flag is O\+Red in, then force a state update to the device, whether or not configured as an input or with shadow state unchanged. This can be used to initially configure and set a digital output. Otherwise, a state change will only be sent to the device if the shadow (i.\+e. last known) state is opposite A\+ND the I/O is configured as a digital output. \\
+\hline
+\mbox{\tt in}  & {\em address} & N\+U\+LL for local X\+Bee, or destination I\+E\+EE (64-\/bit) or network (16 bit) address of a remote device. See {\itshape \hyperlink{group__wpan__aps_ga95e2bb4e4c546191c059f54179064fc3}{wpan\+\_\+envelope\+\_\+create()}} for use of I\+E\+EE and network addressing. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Output low \\
+\hline
+{\em 1} & Output high \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & Output unknown because not configured as a digital output (and force was not specified), or is a non-\/existent output index, or bad parameter passed. \\
+\hline
+{\em $<$0} & Other negative value indicates problem transmitting the configuration request. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__xbee__io_ga6a1e9ccca3a6d97f1b583e76f1193dca}\label{group__xbee__io_ga6a1e9ccca3a6d97f1b583e76f1193dca}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+set\+\_\+options@{xbee\+\_\+io\+\_\+set\+\_\+options}}
+\index{xbee\+\_\+io\+\_\+set\+\_\+options@{xbee\+\_\+io\+\_\+set\+\_\+options}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+set\+\_\+options()}{xbee\_io\_set\_options()}}
+{\footnotesize\ttfamily int xbee\+\_\+io\+\_\+set\+\_\+options (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__dev__t}{xbee\+\_\+dev\+\_\+t} $\ast$}]{xbee,  }\item[{\hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{io,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{sample\+\_\+rate,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{change\+\_\+mask,  }\item[{const \hyperlink{structwpan__address__t}{wpan\+\_\+address\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+Configure X\+Bee automatic I/O sampling options. 
+
+This basically controls the A\+T\+IR and A\+T\+IC settings. IR specifies an automatic sampling interval, and IC specifies sampling on digital I/O change.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em xbee} & local device through which to action the request \\
+\hline
+\mbox{\tt in,out}  & {\em io} & pointer to an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure as set up by xbee\+\_\+io\+\_\+query(). Shadow state of I/O may be modified \\
+\hline
+\mbox{\tt in}  & {\em sample\+\_\+rate} & sample period in ms. 0 to turn off sampling, otherwise must be a value geater than X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+P\+E\+R\+I\+OD (50 ms with current hardware). \\
+\hline
+\mbox{\tt in}  & {\em change\+\_\+mask} & bitmask of I/\+Os which are to generate samples when their state changes. Construct from O\+Red combination of \hyperlink{group__xbee__io_gaf01ab2d51afb8e360ade1ec5ceb15f0c}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O0}, \hyperlink{group__xbee__io_gaf13c9ac98667d02de7b5ab0428b20dc2}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O1} etc. \\
+\hline
+\mbox{\tt in}  & {\em address} & N\+U\+LL for local X\+Bee, or destination I\+E\+EE (64-\/bit) or network (16 bit) address of a remote device. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & Bad parameter. \\
+\hline
+{\em -\/\+E\+P\+E\+RM} & Specified sampling rate or I/O bitmask not supported. \\
+\hline
+{\em $<$0} & Other negative value indicates problem transmitting the configuration request. \\
+\hline
+\end{DoxyRetVals}
+
+
+References E\+I\+N\+V\+AL, E\+P\+E\+RM, xbee\+\_\+cmd\+\_\+create(), xbee\+\_\+cmd\+\_\+send(), xbee\+\_\+cmd\+\_\+set\+\_\+param(), xbee\+\_\+cmd\+\_\+set\+\_\+target(), and X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+P\+E\+R\+I\+OD.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__xbee__io_ga7a1595c7d0d5f24cf4248e4f2d807639}\label{group__xbee__io_ga7a1595c7d0d5f24cf4248e4f2d807639}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!\+\_\+xbee\+\_\+io\+\_\+query\+\_\+regs@{\+\_\+xbee\+\_\+io\+\_\+query\+\_\+regs}}
+\index{\+\_\+xbee\+\_\+io\+\_\+query\+\_\+regs@{\+\_\+xbee\+\_\+io\+\_\+query\+\_\+regs}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+io\+\_\+query\+\_\+regs}{\_xbee\_io\_query\_regs}}
+{\footnotesize\ttfamily const \hyperlink{structxbee__atcmd__reg__t}{xbee\+\_\+atcmd\+\_\+reg\+\_\+t} \+\_\+xbee\+\_\+io\+\_\+query\+\_\+regs\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'D'}, \textcolor{charliteral}{'0'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[0]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'D'}, \textcolor{charliteral}{'1'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[1]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'D'}, \textcolor{charliteral}{'2'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[2]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'D'}, \textcolor{charliteral}{'3'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[3]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'D'}, \textcolor{charliteral}{'4'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[4]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'D'}, \textcolor{charliteral}{'5'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[5]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'D'}, \textcolor{charliteral}{'6'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[6]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'D'}, \textcolor{charliteral}{'7'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[7]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'P'}, \textcolor{charliteral}{'0'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[10]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'P'}, \textcolor{charliteral}{'1'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[11]),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'P'}, \textcolor{charliteral}{'2'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70baef8d715c8725d801676943b868508633}{XBEE\_CLT\_COPY}, \hyperlink{structxbee__io__t}{xbee\_io\_t}, config[12]),
+   \hyperlink{group__xbee__atcmd_gabbaf60bd4d186b860fd58c8a6111e9f9}{XBEE\_ATCMD\_REG\_CB}( \textcolor{charliteral}{'P'}, \textcolor{charliteral}{'R'}, \_xbee\_io\_query\_handle\_pr, 0),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'I'}, \textcolor{charliteral}{'R'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537}{XBEE\_CLT\_COPY\_BE}, 
+      \hyperlink{structxbee__io__t}{xbee\_io\_t}, sample\_rate),
+   \hyperlink{group__xbee__atcmd_gaafe33c3d8ea48b42b25d1183eaf93071}{XBEE\_ATCMD\_REG}( \textcolor{charliteral}{'I'}, \textcolor{charliteral}{'C'}, \hyperlink{group__xbee__atcmd_gga1bd8ecd38c107579d20ded3c79a7d70ba0be0c682bc30049849b0c169b661c537}{XBEE\_CLT\_COPY\_BE}, 
+      \hyperlink{structxbee__io__t}{xbee\_io\_t}, change\_mask),
+
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__xbee__io_gabcf9c9881057623ef7b28330631fad9b}\label{group__xbee__io_gabcf9c9881057623ef7b28330631fad9b}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!\+\_\+xbee\+\_\+pullup\+\_\+atcmd\+\_\+to\+\_\+iomask@{\+\_\+xbee\+\_\+pullup\+\_\+atcmd\+\_\+to\+\_\+iomask}}
+\index{\+\_\+xbee\+\_\+pullup\+\_\+atcmd\+\_\+to\+\_\+iomask@{\+\_\+xbee\+\_\+pullup\+\_\+atcmd\+\_\+to\+\_\+iomask}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+pullup\+\_\+atcmd\+\_\+to\+\_\+iomask}{\_xbee\_pullup\_atcmd\_to\_iomask}}
+{\footnotesize\ttfamily const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \+\_\+xbee\+\_\+pullup\+\_\+atcmd\+\_\+to\+\_\+iomask\mbox{[}16\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+   
+   
+   1u<<4,
+   1u<<3,
+   1u<<2,
+   1u<<1,
+   1u<<0,
+   1u<<6,
+   1u<<8,
+   0,       
+   1u<<5,
+   1u<<9,
+   1u<<12,
+   1u<<10,
+   1u<<11,
+   1u<<7,
+   0,
+   0
+\}
+\end{DoxyCode}
+
+
+Read current configuration of X\+Bee digital and analog I/\+Os. 
+
+This sets the shadow state in the io parameter by querying the device configuration with a sequence of AT commands (D0,D0,...P0,...,PR). Unless the application has prior knowledge of the I/O config, this function should be used when a new node is discovered.
+
+Since several commands must be executed, the results are not available immediately on return from this function. Instead, the application must call \hyperlink{group__xbee__io_gad253478285335c84b310aafb13aa1b21}{xbee\+\_\+io\+\_\+query\+\_\+status()} in order to poll for command completion.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em xbee} & local device through which to action the request \\
+\hline
+\mbox{\tt in,out}  & {\em io} & pointer to an \hyperlink{structxbee__io__t}{xbee\+\_\+io\+\_\+t} structure, which will be modified by this call. Since the results are returned asynchronously, the data pointed to must be static. \\
+\hline
+\mbox{\tt in}  & {\em address} & N\+U\+LL for local X\+Bee, or destination I\+E\+EE (64-\/bit) or network (16 bit) address of a remote device. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Success \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & Bad parameter. \\
+\hline
+{\em -\/\+E\+B\+U\+SY} & Device is currently busy with another request for this device. Try again later (after calling \hyperlink{group__xbee__atcmd_ga7ef08f6771da8c18234bbffca2be4ff3}{xbee\+\_\+cmd\+\_\+tick()}). In general, several get configuration requests can run simultaneously, however only one per remote device. \\
+\hline
+{\em $<$0} & Other negative value indicates problem transmitting the configuration query commands.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__xbee__io_gad253478285335c84b310aafb13aa1b21}{xbee\+\_\+io\+\_\+query\+\_\+status()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__xbee__io_ga51a638af480039b3c6578b36b5ad44f0}\label{group__xbee__io_ga51a638af480039b3c6578b36b5ad44f0}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!adc\+\_\+sample@{adc\+\_\+sample}}
+\index{adc\+\_\+sample@{adc\+\_\+sample}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{adc\+\_\+sample}{adc\_sample}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} adc\+\_\+sample\mbox{[}8\mbox{]}}
+
+
+
+Analog samples (raw count 0..1023) Entries 0..3 correspond to A\+D0..3, Entries 4..6 not currently used, Entry 7 for Vcc reading (only obtained if A\+T\+V+ issued, and Vcc is less than that threshold). 
+
+\mbox{\Hypertarget{group__xbee__io_ga8473837f97f54ee29f09cd8f9c15e084}\label{group__xbee__io_ga8473837f97f54ee29f09cd8f9c15e084}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!analog\+\_\+enabled@{analog\+\_\+enabled}}
+\index{analog\+\_\+enabled@{analog\+\_\+enabled}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{analog\+\_\+enabled}{analog\_enabled}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} analog\+\_\+enabled}
+
+
+
+Which analog inputs are enabled See \hyperlink{group__xbee__io_gafc56816e62b0dd0a8d981b08f5f29651}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+A\+D0} etc. 
+
+\mbox{\Hypertarget{group__xbee__io_ga46d8dea1f8c2a731faf0db27d6ed308f}\label{group__xbee__io_ga46d8dea1f8c2a731faf0db27d6ed308f}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!config@{config}}
+\index{config@{config}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} config\mbox{[}16\mbox{]}}
+
+
+
+First 16 configuration states (from A\+T\+D0 etc. 
+
+commands). Not all used with current hardware. \mbox{\Hypertarget{group__xbee__io_gabf150485c21c63b46d511cb50b2bf2df}\label{group__xbee__io_gabf150485c21c63b46d511cb50b2bf2df}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!din\+\_\+enabled@{din\+\_\+enabled}}
+\index{din\+\_\+enabled@{din\+\_\+enabled}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{din\+\_\+enabled}{din\_enabled}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} din\+\_\+enabled}
+
+
+
+Which pins have digital input sampling enabled. 
+
+See \hyperlink{group__xbee__io_gaf01ab2d51afb8e360ade1ec5ceb15f0c}{X\+B\+E\+E\+\_\+\+I\+O\+\_\+\+D\+I\+O0} etc. \mbox{\Hypertarget{group__xbee__io_gab9c5cc4d30d476f26698c96f9aa329fe}\label{group__xbee__io_gab9c5cc4d30d476f26698c96f9aa329fe}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!dout\+\_\+enabled@{dout\+\_\+enabled}}
+\index{dout\+\_\+enabled@{dout\+\_\+enabled}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{dout\+\_\+enabled}{dout\_enabled}}
+{\footnotesize\ttfamily \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} dout\+\_\+enabled}
+
+
+
+Which pins have digital output enabled. 
+
+\mbox{\Hypertarget{group__xbee__io_gae37c4ac030a185af04ce61671b8acfbd}\label{group__xbee__io_gae37c4ac030a185af04ce61671b8acfbd}} 
+\index{Xbee\+\_\+io@{Xbee\+\_\+io}!xbee\+\_\+io\+\_\+cmd\+\_\+by\+\_\+index@{xbee\+\_\+io\+\_\+cmd\+\_\+by\+\_\+index}}
+\index{xbee\+\_\+io\+\_\+cmd\+\_\+by\+\_\+index@{xbee\+\_\+io\+\_\+cmd\+\_\+by\+\_\+index}!Xbee\+\_\+io@{Xbee\+\_\+io}}
+\subsubsection{\texorpdfstring{xbee\+\_\+io\+\_\+cmd\+\_\+by\+\_\+index}{xbee\_io\_cmd\_by\_index}}
+{\footnotesize\ttfamily const \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} \hyperlink{unionxbee__at__cmd__t}{xbee\+\_\+at\+\_\+cmd\+\_\+t} xbee\+\_\+io\+\_\+cmd\+\_\+by\+\_\+index\mbox{[}16\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+   \{\{\textcolor{charliteral}{'D'},\textcolor{charliteral}{'0'}\}\},
+   \{\{\textcolor{charliteral}{'D'},\textcolor{charliteral}{'1'}\}\},
+   \{\{\textcolor{charliteral}{'D'},\textcolor{charliteral}{'2'}\}\},
+   \{\{\textcolor{charliteral}{'D'},\textcolor{charliteral}{'3'}\}\},
+   \{\{\textcolor{charliteral}{'D'},\textcolor{charliteral}{'4'}\}\},
+   \{\{\textcolor{charliteral}{'D'},\textcolor{charliteral}{'5'}\}\},
+   \{\{\textcolor{charliteral}{'\(\backslash\)0'},\textcolor{charliteral}{'\(\backslash\)0'}\}\},
+   \{\{\textcolor{charliteral}{'\(\backslash\)0'},\textcolor{charliteral}{'\(\backslash\)0'}\}\},
+   \{\{\textcolor{charliteral}{'D'},\textcolor{charliteral}{'8'}\}\},
+   \{\{\textcolor{charliteral}{'\(\backslash\)0'},\textcolor{charliteral}{'\(\backslash\)0'}\}\},
+   \{\{\textcolor{charliteral}{'P'},\textcolor{charliteral}{'0'}\}\},
+   \{\{\textcolor{charliteral}{'P'},\textcolor{charliteral}{'1'}\}\},
+   \{\{\textcolor{charliteral}{'P'},\textcolor{charliteral}{'2'}\}\},
+   \{\{\textcolor{charliteral}{'P'},\textcolor{charliteral}{'3'}\}\},
+\}
+\end{DoxyCode}

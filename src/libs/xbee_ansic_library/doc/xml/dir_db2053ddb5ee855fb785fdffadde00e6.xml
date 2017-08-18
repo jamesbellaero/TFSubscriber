@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_db2053ddb5ee855fb785fdffadde00e6" kind="dir">
+    <compoundname>src/zigbee</compoundname>
+    <innerfile refid="zcl__basic_8c">zcl_basic.c</innerfile>
+    <innerfile refid="zcl__client_8c">zcl_client.c</innerfile>
+    <innerfile refid="zcl__commissioning_8c">zcl_commissioning.c</innerfile>
+    <innerfile refid="zcl__identify_8c">zcl_identify.c</innerfile>
+    <innerfile refid="zcl__onoff_8c">zcl_onoff.c</innerfile>
+    <innerfile refid="zcl__time_8c">zcl_time.c</innerfile>
+    <innerfile refid="zcl__types_8c">zcl_types.c</innerfile>
+    <innerfile refid="zigbee__zcl_8c">zigbee_zcl.c</innerfile>
+    <innerfile refid="zigbee__zdo_8c">zigbee_zdo.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/zigbee/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1692 @@
+\hypertarget{group__zdo}{}\section{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}
+\label{group__zdo}\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{zigbee__zdo_8c}{zigbee\+\_\+zdo.\+c}
+\begin{DoxyCompactList}\small\item\em Zig\+Bee Device Objects (Z\+DO) and Zig\+Bee Device Profile (Z\+DP). \end{DoxyCompactList}\item 
+file \hyperlink{zdo_8h}{zdo.\+h}
+\begin{DoxyCompactList}\small\item\em Zig\+Bee Device Objects (Z\+DO) and Zig\+Bee Device Profile (Z\+DP). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionzdo__bind__req__t}{zdo\+\_\+bind\+\_\+req\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zdo_ga126dd7828d5c11842a466f1a792f8674}\label{group__zdo_ga126dd7828d5c11842a466f1a792f8674}} 
+\#define {\bfseries zigbee\+\_\+zdo\+\_\+debug}
+\item 
+\mbox{\Hypertarget{group__zdo_ga00aac62a0e22c8d6accd9bb701188c34}\label{group__zdo_ga00aac62a0e22c8d6accd9bb701188c34}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+M\+A\+X\+\_\+\+E\+N\+D\+P\+O\+I\+N\+TS}~20
+\item 
+\mbox{\Hypertarget{group__zdo_gae1d68b13491e1e29493f412d984886e7}\label{group__zdo_gae1d68b13491e1e29493f412d984886e7}} 
+\#define \hyperlink{group__zdo_gae1d68b13491e1e29493f412d984886e7}{Z\+D\+O\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT}~15
+\begin{DoxyCompactList}\small\item\em number of seconds to wait for Z\+DO responses before timing out \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zdo_gaef7118e478f5ad9949dcd23f6e0901c9}{Z\+D\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT}(state)
+\begin{DoxyCompactList}\small\item\em Macro for Z\+DO endpoint table entry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga79de2096f8f5c8c313ad1c963a0c81e5}\label{group__zdo_ga79de2096f8f5c8c313ad1c963a0c81e5}} 
+\#define \hyperlink{group__zdo_ga79de2096f8f5c8c313ad1c963a0c81e5}{Z\+D\+O\+\_\+\+C\+L\+U\+S\+T\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+M\+A\+SK}~0x8000
+\begin{DoxyCompactList}\small\item\em Cluster I\+Ds with the high bit set are responses. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga87a413d580d227c0a5da654c4177b154}\label{group__zdo_ga87a413d580d227c0a5da654c4177b154}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+C\+L\+U\+S\+T\+\_\+\+I\+S\+\_\+\+R\+E\+S\+P\+O\+N\+SE}(c)~(c \& \hyperlink{group__zdo_ga79de2096f8f5c8c313ad1c963a0c81e5}{Z\+D\+O\+\_\+\+C\+L\+U\+S\+T\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+M\+A\+SK})
+\item 
+\mbox{\Hypertarget{group__zdo_ga1458b65a34a4f94893f5d0ba12a4f4d8}\label{group__zdo_ga1458b65a34a4f94893f5d0ba12a4f4d8}} 
+\#define \hyperlink{group__zdo_ga1458b65a34a4f94893f5d0ba12a4f4d8}{Z\+D\+O\+\_\+\+N\+W\+K\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EQ}~0x0000
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO N\+W\+K\+\_\+addr request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga27214fd0c8264e185af650aaaa937cca}\label{group__zdo_ga27214fd0c8264e185af650aaaa937cca}} 
+\#define \hyperlink{group__zdo_ga27214fd0c8264e185af650aaaa937cca}{Z\+D\+O\+\_\+\+N\+W\+K\+\_\+\+A\+D\+D\+R\+\_\+\+R\+SP}~0x8000
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO N\+W\+K\+\_\+addr response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gab08dbfd2d3ac3420d6983d57250b5ff6}\label{group__zdo_gab08dbfd2d3ac3420d6983d57250b5ff6}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+P\+E\+N\+D\+I\+NG}~0x\+F\+F\+FE
+\item 
+\mbox{\Hypertarget{group__zdo_ga0fc0eab688d3729212b53bf879c939da}\label{group__zdo_ga0fc0eab688d3729212b53bf879c939da}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+T\+I\+M\+E\+O\+UT}~0x\+F\+F\+FF
+\item 
+\mbox{\Hypertarget{group__zdo_gab6d2ba7c42eb7cc0016b7bec3e5f3439}\label{group__zdo_gab6d2ba7c42eb7cc0016b7bec3e5f3439}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}~0x\+F\+F\+FD
+\item 
+\mbox{\Hypertarget{group__zdo_ga912ec46cfce0729c06fa48e6298cb20f}\label{group__zdo_ga912ec46cfce0729c06fa48e6298cb20f}} 
+\#define \hyperlink{group__zdo_ga912ec46cfce0729c06fa48e6298cb20f}{Z\+D\+O\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EQ}~0x0001
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO I\+E\+E\+E\+\_\+addr request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga13eaf1fb0a36978e8c2f9aa7a613238f}\label{group__zdo_ga13eaf1fb0a36978e8c2f9aa7a613238f}} 
+\#define \hyperlink{group__zdo_ga13eaf1fb0a36978e8c2f9aa7a613238f}{Z\+D\+O\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+R\+SP}~0x8001
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO I\+E\+E\+E\+\_\+addr response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gabf3af6fc6700372bca9d0bc7117b28bc}\label{group__zdo_gabf3af6fc6700372bca9d0bc7117b28bc}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+P\+E\+N\+D\+I\+NG}~\hyperlink{group__wpan__types_ga09e965ef6cfbfd48312d86bb011f125b}{W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED}
+\item 
+\mbox{\Hypertarget{group__zdo_ga69da31cc1a3b48c9053c14fc0dbd2522}\label{group__zdo_ga69da31cc1a3b48c9053c14fc0dbd2522}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+T\+I\+M\+E\+O\+UT}~\hyperlink{group__wpan__types_gaced36f5538c5bb2da4f60a90313f1674}{W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST}
+\item 
+\mbox{\Hypertarget{group__zdo_ga5e2b6207146eebf6c4787ca3d9448491}\label{group__zdo_ga5e2b6207146eebf6c4787ca3d9448491}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR}~\hyperlink{group__wpan__types_ga014f9d0857312b6a7f80ee10ecfd0935}{W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+A\+L\+L\+\_\+\+Z\+E\+R\+OS}
+\item 
+\mbox{\Hypertarget{group__zdo_ga93263f3bfe644fea4faf6d3a526bcfb8}\label{group__zdo_ga93263f3bfe644fea4faf6d3a526bcfb8}} 
+\#define \hyperlink{group__zdo_ga93263f3bfe644fea4faf6d3a526bcfb8}{Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ}~0x0002
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Node\+\_\+\+Desc request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga14f5651d9702f40c194e964756256c94}\label{group__zdo_ga14f5651d9702f40c194e964756256c94}} 
+\#define \hyperlink{group__zdo_ga14f5651d9702f40c194e964756256c94}{Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+R\+SP}~0x8002
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Node\+\_\+\+Desc response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gaf67b237d220ee838548a60bf74a2c57b}\label{group__zdo_gaf67b237d220ee838548a60bf74a2c57b}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S0\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+SK}~0x07
+\item 
+\mbox{\Hypertarget{group__zdo_ga045e2e1260aedda9d893eda672ff2759}\label{group__zdo_ga045e2e1260aedda9d893eda672ff2759}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S0\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+O\+RD}~0x00
+\item 
+\mbox{\Hypertarget{group__zdo_ga638960e6443cf99ea580bda38247de6a}\label{group__zdo_ga638960e6443cf99ea580bda38247de6a}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S0\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+U\+T\+ER}~0x01
+\item 
+\mbox{\Hypertarget{group__zdo_ga73b2f81177df4b568597a7937903cdda}\label{group__zdo_ga73b2f81177df4b568597a7937903cdda}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S0\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+D\+D\+EV}~0x02
+\item 
+\mbox{\Hypertarget{group__zdo_gaccb1d140d777a88fcb71f107adcf4c0b}\label{group__zdo_gaccb1d140d777a88fcb71f107adcf4c0b}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S0\+\_\+\+C\+O\+M\+P\+L\+E\+X\+\_\+\+D\+E\+S\+C\+\_\+\+A\+V\+A\+IL}~0x08
+\item 
+\mbox{\Hypertarget{group__zdo_ga721ea4088a875ddddda53d88e0f2c1c4}\label{group__zdo_ga721ea4088a875ddddda53d88e0f2c1c4}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S0\+\_\+\+U\+S\+E\+R\+\_\+\+D\+E\+S\+C\+\_\+\+A\+V\+A\+IL}~0x10
+\item 
+\mbox{\Hypertarget{group__zdo_ga95e4053f203577f2b7b07d25bb7857a6}\label{group__zdo_ga95e4053f203577f2b7b07d25bb7857a6}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S0\+\_\+\+R\+E\+S\+E\+R\+V\+ED}~0x\+E0
+\item 
+\mbox{\Hypertarget{group__zdo_ga4bf942f7cd1215c7981577a55b05bed0}\label{group__zdo_ga4bf942f7cd1215c7981577a55b05bed0}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S1\+\_\+\+A\+P\+S\+\_\+\+F\+I\+E\+LD}~0x07
+\item 
+\mbox{\Hypertarget{group__zdo_ga55dcb5f623fc0cb8260955ab905256a9}\label{group__zdo_ga55dcb5f623fc0cb8260955ab905256a9}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S1\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+A\+SK}~0x\+F8
+\item 
+\mbox{\Hypertarget{group__zdo_gabdea6b505cf180a055176641383e3b16}\label{group__zdo_gabdea6b505cf180a055176641383e3b16}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S1\+\_\+\+F\+R\+E\+Q\+\_\+868}~(1$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__zdo_gad8202e575692c98ef71cdba4f242dbe4}\label{group__zdo_gad8202e575692c98ef71cdba4f242dbe4}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S1\+\_\+\+F\+R\+E\+Q\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+1}~(1$<$$<$1)
+\item 
+\mbox{\Hypertarget{group__zdo_ga9341ad451dc0eb833c7b536b0f52f5cf}\label{group__zdo_ga9341ad451dc0eb833c7b536b0f52f5cf}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S1\+\_\+\+F\+R\+E\+Q\+\_\+900}~(1$<$$<$2)
+\item 
+\mbox{\Hypertarget{group__zdo_ga76eff916f936a26c1d1d3bca683b4a5a}\label{group__zdo_ga76eff916f936a26c1d1d3bca683b4a5a}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S1\+\_\+\+F\+R\+E\+Q\+\_\+2400}~(1$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__zdo_ga95ced39975281d36fd6d075c89a0c248}\label{group__zdo_ga95ced39975281d36fd6d075c89a0c248}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+F\+L\+A\+G\+S1\+\_\+\+F\+R\+E\+Q\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+4}~(1$<$$<$4)
+\item 
+\mbox{\Hypertarget{group__zdo_ga6289766f3024daf25e1482536f78e2cc}\label{group__zdo_ga6289766f3024daf25e1482536f78e2cc}} 
+\#define \hyperlink{group__zdo_ga6289766f3024daf25e1482536f78e2cc}{Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ}~0x0003
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Power\+\_\+\+Desc request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga346087460c7fc4356d01deb9e955bcd3}\label{group__zdo_ga346087460c7fc4356d01deb9e955bcd3}} 
+\#define \hyperlink{group__zdo_ga346087460c7fc4356d01deb9e955bcd3}{Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+E\+S\+C\+\_\+\+R\+SP}~0x8003
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Power\+\_\+\+Desc response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga273177b195b871fe08bb7e5cab487141}\label{group__zdo_ga273177b195b871fe08bb7e5cab487141}} 
+\#define \hyperlink{group__zdo_ga273177b195b871fe08bb7e5cab487141}{Z\+D\+O\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ}~0x0004
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Simple\+\_\+\+Desc request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gac3b06d8201953a14e1e7d38d5d812de8}\label{group__zdo_gac3b06d8201953a14e1e7d38d5d812de8}} 
+\#define \hyperlink{group__zdo_gac3b06d8201953a14e1e7d38d5d812de8}{Z\+D\+O\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+D\+E\+S\+C\+\_\+\+R\+SP}~0x8004
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Simple\+\_\+\+Desc response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gaece69bc80056a9892623eadf1ce84d8d}\label{group__zdo_gaece69bc80056a9892623eadf1ce84d8d}} 
+\#define \hyperlink{group__zdo_gaece69bc80056a9892623eadf1ce84d8d}{Z\+D\+O\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+E\+P\+\_\+\+R\+EQ}~0x0005
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Active\+\_\+\+EP request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga8b3c50e3be71969eacf69d4197acd2b0}\label{group__zdo_ga8b3c50e3be71969eacf69d4197acd2b0}} 
+\#define \hyperlink{group__zdo_ga8b3c50e3be71969eacf69d4197acd2b0}{Z\+D\+O\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+E\+P\+\_\+\+R\+SP}~0x8005
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Active\+\_\+\+EP response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga8c614773175b0518e3a1f5a512dfe4d1}\label{group__zdo_ga8c614773175b0518e3a1f5a512dfe4d1}} 
+\#define \hyperlink{group__zdo_ga8c614773175b0518e3a1f5a512dfe4d1}{Z\+D\+O\+\_\+\+M\+A\+T\+C\+H\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ}~0x0006
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Match\+\_\+\+Desc request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga693e5c00189b7ea1e748d35fce6c8501}\label{group__zdo_ga693e5c00189b7ea1e748d35fce6c8501}} 
+\#define \hyperlink{group__zdo_ga693e5c00189b7ea1e748d35fce6c8501}{Z\+D\+O\+\_\+\+M\+A\+T\+C\+H\+\_\+\+D\+E\+S\+C\+\_\+\+R\+SP}~0x8006
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Match\+\_\+\+Desc response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga622e805b27540e3571d3a7450f617ad5}\label{group__zdo_ga622e805b27540e3571d3a7450f617ad5}} 
+\#define \hyperlink{group__zdo_ga622e805b27540e3571d3a7450f617ad5}{Z\+D\+O\+\_\+\+C\+O\+M\+P\+L\+E\+X\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ}~0x0007
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Complex\+\_\+\+Desc request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gacf1b20af0440a2e2dd779e1e3111cc66}\label{group__zdo_gacf1b20af0440a2e2dd779e1e3111cc66}} 
+\#define \hyperlink{group__zdo_gacf1b20af0440a2e2dd779e1e3111cc66}{Z\+D\+O\+\_\+\+C\+O\+M\+P\+L\+E\+X\+\_\+\+D\+E\+S\+C\+\_\+\+R\+SP}~0x8007
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Complex\+\_\+\+Desc response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga6e02c0cb5bec58a8a4bc799233284f9a}\label{group__zdo_ga6e02c0cb5bec58a8a4bc799233284f9a}} 
+\#define \hyperlink{group__zdo_ga6e02c0cb5bec58a8a4bc799233284f9a}{Z\+D\+O\+\_\+\+U\+S\+E\+R\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ}~0x0011
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO User\+\_\+\+Desc request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga293e46b65ec35d55108029888e6b0a90}\label{group__zdo_ga293e46b65ec35d55108029888e6b0a90}} 
+\#define \hyperlink{group__zdo_ga293e46b65ec35d55108029888e6b0a90}{Z\+D\+O\+\_\+\+U\+S\+E\+R\+\_\+\+D\+E\+S\+C\+\_\+\+R\+SP}~0x8011
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO User\+\_\+\+Desc response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gaffd566d5fc7aa21973fd7e5e026db30a}\label{group__zdo_gaffd566d5fc7aa21973fd7e5e026db30a}} 
+\#define \hyperlink{group__zdo_gaffd566d5fc7aa21973fd7e5e026db30a}{Z\+D\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+N\+N\+CE}~0x0013
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Device\+\_\+annce announcement \end{DoxyCompactList}\item 
+\#define \hyperlink{group__zdo_ga6f85faaf451b834c9b01ad0e3700ec9f}{Z\+D\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+N\+N\+C\+E\+\_\+\+C\+L\+U\+S\+T\+ER}(handler,  context)
+\begin{DoxyCompactList}\small\item\em Entry for Device Annce handler in cluster table of Z\+DO endpoint. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga9e97bead2ca9d929bb94183ddc2106bb}\label{group__zdo_ga9e97bead2ca9d929bb94183ddc2106bb}} 
+\#define \hyperlink{group__zdo_ga9e97bead2ca9d929bb94183ddc2106bb}{Z\+D\+O\+\_\+\+B\+I\+N\+D\+\_\+\+R\+EQ}~0x0021
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Bind request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gaf896a1b673d2325dfa32c691e22b5e0d}\label{group__zdo_gaf896a1b673d2325dfa32c691e22b5e0d}} 
+\#define \hyperlink{group__zdo_gaf896a1b673d2325dfa32c691e22b5e0d}{Z\+D\+O\+\_\+\+B\+I\+N\+D\+\_\+\+R\+SP}~0x8021
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Bind response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gad447486341b5d51d91f5a44aad418a99}\label{group__zdo_gad447486341b5d51d91f5a44aad418a99}} 
+\#define \hyperlink{group__zdo_gad447486341b5d51d91f5a44aad418a99}{Z\+D\+O\+\_\+\+U\+N\+B\+I\+N\+D\+\_\+\+R\+EQ}~0x0022
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Unbind request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga410489839f223dc8197a9bb7a8da071c}\label{group__zdo_ga410489839f223dc8197a9bb7a8da071c}} 
+\#define \hyperlink{group__zdo_ga410489839f223dc8197a9bb7a8da071c}{Z\+D\+O\+\_\+\+U\+N\+B\+I\+N\+D\+\_\+\+R\+SP}~0x8022
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Unbind response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gabde8d0c9053c0b4e5c2f747870ae79c5}\label{group__zdo_gabde8d0c9053c0b4e5c2f747870ae79c5}} 
+\#define \hyperlink{group__zdo_gabde8d0c9053c0b4e5c2f747870ae79c5}{Z\+D\+O\+\_\+\+B\+I\+N\+D\+\_\+\+D\+S\+T\+\_\+\+M\+O\+D\+E\+\_\+\+G\+R\+O\+UP}~0x01
+\begin{DoxyCompactList}\small\item\em \hyperlink{unionzdo__bind__req__t}{zdo\+\_\+bind\+\_\+req\+\_\+t} contains 16-\/bit group address \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gafdcf940776d593e2847a990248efc41a}\label{group__zdo_gafdcf940776d593e2847a990248efc41a}} 
+\#define \hyperlink{group__zdo_gafdcf940776d593e2847a990248efc41a}{Z\+D\+O\+\_\+\+B\+I\+N\+D\+\_\+\+D\+S\+T\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR}~0x03
+\begin{DoxyCompactList}\small\item\em \hyperlink{unionzdo__bind__req__t}{zdo\+\_\+bind\+\_\+req\+\_\+t} contains 64-\/bit destination address and endpoint \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga4fc084156021285ac010e1bb3a2bc5b8}\label{group__zdo_ga4fc084156021285ac010e1bb3a2bc5b8}} 
+\#define \hyperlink{group__zdo_ga4fc084156021285ac010e1bb3a2bc5b8}{Z\+D\+O\+\_\+\+M\+G\+M\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+R\+EQ}~0x0034
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Management Leave Request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gadf2abd7ea7b2d93d334b8349595ada0e}\label{group__zdo_gadf2abd7ea7b2d93d334b8349595ada0e}} 
+\#define \hyperlink{group__zdo_gadf2abd7ea7b2d93d334b8349595ada0e}{Z\+D\+O\+\_\+\+M\+G\+M\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+R\+SP}~0x8034
+\begin{DoxyCompactList}\small\item\em cluster ID for Z\+DO Management Leave Response \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gad38af5fd79833ce21fc6db74a0da2d59}\label{group__zdo_gad38af5fd79833ce21fc6db74a0da2d59}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+M\+G\+M\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+R\+E\+Q\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE}~0x00
+\item 
+\mbox{\Hypertarget{group__zdo_ga8b8f314709a24ba19b4b802000800c18}\label{group__zdo_ga8b8f314709a24ba19b4b802000800c18}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+M\+G\+M\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+R\+E\+Q\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+J\+O\+IN}~0x01
+\item 
+\mbox{\Hypertarget{group__zdo_ga6abdd6bd391973f4fa19747ee6c18a86}\label{group__zdo_ga6abdd6bd391973f4fa19747ee6c18a86}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+M\+G\+M\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+R\+E\+Q\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+C\+H\+I\+L\+D\+R\+EN}~0x02
+\item 
+\mbox{\Hypertarget{group__zdo_ga2941a931686d22927d9e6a7ad7472737}\label{group__zdo_ga2941a931686d22927d9e6a7ad7472737}} 
+\#define \hyperlink{group__zdo_ga2941a931686d22927d9e6a7ad7472737}{Z\+D\+O\+\_\+\+M\+G\+M\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+R\+E\+Q\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+ED}~0x0100
+\begin{DoxyCompactList}\small\item\em extra sending option for zdo\+\_\+mgmt\+\_\+leave\+\_\+req \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_gac1680800358ab1c7a6690c3a3f2628ff}{zdo\+\_\+nwk\+\_\+addr\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for Z\+DO N\+K\+W\+\_\+addr request \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zdo\+\_\+nwk\+\_\+addr\+\_\+rsp\+\_\+header\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga750ebc1379ded82ecdd43bf07306a812}{zdo\+\_\+ieee\+\_\+addr\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for Z\+DO I\+E\+E\+E\+\_\+addr request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga3aaa32dc1a5568dbe64ee5e80696d2f6}\label{group__zdo_ga3aaa32dc1a5568dbe64ee5e80696d2f6}} 
+typedef zdo\+\_\+nwk\+\_\+addr\+\_\+rsp\+\_\+header\+\_\+t {\bfseries zdo\+\_\+ieee\+\_\+addr\+\_\+rsp\+\_\+header\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_gac66d43595fc4f074cb4c50c1531100d5}{zdo\+\_\+node\+\_\+desc\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for Z\+DO Node\+\_\+\+Desc request \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga194073102dea473d1c5ac730f46d6d6d}{zdo\+\_\+node\+\_\+desc\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for Z\+DO Node\+\_\+\+Desc response \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga5b77ee7a2a4f9b5f5b6145bd839c1b1f}{zdo\+\_\+node\+\_\+desc\+\_\+resp\+\_\+t}
+\begin{DoxyCompactList}\small\item\em see Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macros \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga553d13ce64a2cc38a82048f624d9d1f9}{zdo\+\_\+power\+\_\+desc\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for Z\+DO Power\+\_\+\+Desc request \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga38f8a530fcbd8b3be41f9026c1b95b70}{zdo\+\_\+power\+\_\+desc\+\_\+t}
+\begin{DoxyCompactList}\small\item\em format for Z\+DO Power\+Descriptor \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga52ee72ef139c275a30a02aeefd2dfb89}{zdo\+\_\+power\+\_\+desc\+\_\+rsp\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for Z\+DO Power\+\_\+\+Desc response \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_gaa612a19982dc0c39d207a0662e8a0761}{zdo\+\_\+simple\+\_\+desc\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for Z\+DO Simple\+\_\+\+Desc request \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_gaee853401cb00e58396b01015a1713f3b}{zdo\+\_\+simple\+\_\+desc\+\_\+resp\+\_\+header\+\_\+t}
+\begin{DoxyCompactList}\small\item\em header for Z\+DO Simple\+\_\+\+Desc response, followed by a Simple\+Descriptor \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga2fcb208122b12b93deec95fa934cf40d}{zdo\+\_\+simple\+\_\+desc\+\_\+header\+\_\+t}
+\begin{DoxyCompactList}\small\item\em header for Z\+DO Simple\+Descriptor (part of a Simple\+\_\+\+Desc response), followed by uint8\+\_\+t input cluster count, multiple uint16\+\_\+t input cluster I\+Ds, uint8\+\_\+t output cluster count, multiple uint16\+\_\+t output cluster I\+Ds \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga54a6580e6f7572ca6014963d3e03e735}{zdo\+\_\+active\+\_\+ep\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for Z\+DO Active\+\_\+\+EP request \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga47a4305044809f1e37b1a88c3232676a}{zdo\+\_\+active\+\_\+ep\+\_\+rsp\+\_\+header\+\_\+t}
+\begin{DoxyCompactList}\small\item\em header for Z\+DO Active\+\_\+\+EP response, followed by {\ttfamily }.ep\+\_\+count uint8\+\_\+t endpoints \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_gac4eb6edc67f4b6c7cfb7b876f86c7316}{zdo\+\_\+match\+\_\+desc\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em header for Z\+DO Match\+\_\+\+Desc request \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga58933040f33055a85f168d27cba35b02}{zdo\+\_\+match\+\_\+desc\+\_\+out\+\_\+clust\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Second half of Match\+\_\+\+Desc request. \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga92bab7ada78e3865e606ce81bb610935}{zdo\+\_\+match\+\_\+desc\+\_\+rsp\+\_\+header\+\_\+t}
+\begin{DoxyCompactList}\small\item\em header for Z\+DO Match\+\_\+\+Desc response, followed by {\ttfamily }.match\+\_\+length uint8\+\_\+t endpoints \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga9f34abaa1c2be82e33a7aaf37908f79c}{zdo\+\_\+complex\+\_\+desc\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for Z\+DO Complex\+\_\+\+Desc request \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga589d313ae350f36d7b9de7d26c3df977}{zdo\+\_\+user\+\_\+desc\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for Z\+DO Complex\+\_\+\+Desc request \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga95dc0a6858fdb8b8237ef6091d31d2ea}{zdo\+\_\+device\+\_\+annce\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for a Z\+DO Device\+\_\+annce announcement \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zdo\+\_\+bind\+\_\+req\+\_\+header\+\_\+t}
+\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga41ab3318ee2bd538e044d6d6e101f376}{zdo\+\_\+bind\+\_\+group\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for a Z\+DO Bind Request with a group address as the destination (header.\+dst\+\_\+addr\+\_\+mode == Z\+D\+O\+\_\+\+B\+I\+N\+D\+\_\+\+D\+S\+T\+\_\+\+M\+O\+D\+E\+\_\+\+G\+R\+O\+UP) \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_ga68c283a043714a9e40d3674146dd6239}{zdo\+\_\+bind\+\_\+address\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for a Z\+DO Bind Request with an I\+E\+EE address and endpoint as the destination (header.\+dst\+\_\+addr\+\_\+mode == Z\+D\+O\+\_\+\+B\+I\+N\+D\+\_\+\+D\+S\+T\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR) \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} \hyperlink{group__zdo_gaa7b8baffae72af214b453440e763da1e}{zdo\+\_\+mgmt\+\_\+leave\+\_\+req\+\_\+t}
+\begin{DoxyCompactList}\small\item\em frame format for a Z\+DO Management Leave Request \end{DoxyCompactList}\item 
+typedef \hyperlink{group___s_x_a_ga4233297bd31be5c273d4fb0758cc54d7}{P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT} {\bfseries zdo\+\_\+mgmt\+\_\+leave\+\_\+rsp\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structwpan__endpoint__table__entry__t}{wpan\+\_\+endpoint\+\_\+table\+\_\+entry\+\_\+t} $\ast$ \hyperlink{group__zdo_gab405baf051b6c2b3c85bc4e80aa5c2bb}{\+\_\+zdo\+\_\+endpoint\+\_\+of} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em Return the endpoint table entry for the Z\+DO endpoint. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ \hyperlink{group__zdo_gaaf992619b06595291c2aead8a3d4dba1}{zdo\+\_\+endpoint\+\_\+state} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev)
+\begin{DoxyCompactList}\small\item\em Returns the Z\+DO endpoint\textquotesingle{}s state if a device has a Z\+DO endpoint. \end{DoxyCompactList}\item 
+const \hyperlink{unionaddr64}{addr64} $\ast$ \hyperlink{group__zdo_gae4b6736d215caf2a10790761ed52443d}{\+\_\+zdo\+\_\+envelope\+\_\+create} (\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$envelope, \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, const \hyperlink{unionaddr64}{addr64} $\ast$address)
+\begin{DoxyCompactList}\small\item\em helper function for creating Z\+DO request envelopes \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga1d645805a731e1419b5012a5c8a09bf8}{zdo\+\_\+send\+\_\+response} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$request, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$response, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length})
+\begin{DoxyCompactList}\small\item\em Send a response to a Z\+DO request. \end{DoxyCompactList}\item 
+int \hyperlink{group__zdo_ga1a65d88af9f0c9906d548aa1ff2586f7}{\+\_\+match\+\_\+desc\+\_\+cluster\+\_\+list} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} $\ast$$\ast$buffer, const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} $\ast$clust\+\_\+read, int max\+\_\+count)
+\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga5746efffb4b90718eb973796f2b4bb41}{zdo\+\_\+match\+\_\+desc\+\_\+request} (void $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} buflen, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} addr\+\_\+of\+\_\+interest, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} profile\+\_\+id, const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} $\ast$in\+Clust, const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} $\ast$out\+Clust)
+\begin{DoxyCompactList}\small\item\em Generate a Match\+\_\+\+Desc (Match Descriptor) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+7) to send on the network. \end{DoxyCompactList}\item 
+int \hyperlink{group__zdo_ga41d93e5e12d9ed4e18d092fe3af779a2}{\+\_\+zdo\+\_\+match\+\_\+desc\+\_\+respond} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Respond to a Match Descriptor (Match\+\_\+\+Desc) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+7). \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_gafbbece379bc09af360099d1e0825d507}{zdo\+\_\+simple\+\_\+desc\+\_\+request} (\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$envelope, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} addr\+\_\+of\+\_\+interest, uint\+\_\+fast8\+\_\+t \hyperlink{group__zdo_ga7d397493728da2bca8d55b2d61c4ec5d}{endpoint}, \hyperlink{group__wpan__aps_gabf0a6b85c9ff3ff9104c8b58c1436d72}{wpan\+\_\+response\+\_\+fn} callback, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Send a Z\+DO Simple Descriptor Request. \end{DoxyCompactList}\item 
+int \hyperlink{group__zdo_gaa70aa4bcb14a98c69e7a54a9971ea194}{\+\_\+zdo\+\_\+simple\+\_\+desc\+\_\+respond} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Respond to a Simple Descriptor (Simple\+\_\+\+Desc) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+5). \end{DoxyCompactList}\item 
+int \hyperlink{group__zdo_ga558539813d6a9c8813eeae855e77385f}{\+\_\+simple\+\_\+desc\+\_\+cluster\+\_\+list} (\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} $\ast$$\ast$buffer, int max\+\_\+count, \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} mask, const \hyperlink{structwpan__cluster__table__entry__t}{wpan\+\_\+cluster\+\_\+table\+\_\+entry\+\_\+t} $\ast$entry)
+\item 
+int \hyperlink{group__zdo_ga233f2d57bc9b9d68cb18bd9d76c08e34}{\+\_\+zdo\+\_\+active\+\_\+ep\+\_\+respond} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Respond to an Active Endpoint (Active\+\_\+\+EP) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+6). \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga2e4465da8204d6c9a67edc3a6f210c1d}{zdo\+\_\+handler} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ep\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Process Z\+DO frames (received on endpoint 0 with Profile ID 0). \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_gab02e4c1584594c0a96d05399bd69bffa}{zdo\+\_\+send\+\_\+bind\+\_\+req} (\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$envelope, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zcl_ga1d127017fb298b889f4ba24752d08b8e}{type}, \hyperlink{group__wpan__aps_gabf0a6b85c9ff3ff9104c8b58c1436d72}{wpan\+\_\+response\+\_\+fn} callback, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Send a Z\+DO Bind (or Unbind) Request to the destination address in the envelope. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga4ab17250ec2957d91a6ef4f1377ab62d}{zdo\+\_\+mgmt\+\_\+leave\+\_\+req} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, const \hyperlink{unionaddr64}{addr64} $\ast$address, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} flags)
+\begin{DoxyCompactList}\small\item\em Send a Z\+DO Management Leave Request. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_gac842062e5e1a60d25cddf16ec22ef601}{zdo\+\_\+send\+\_\+descriptor\+\_\+req} (\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$envelope, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} cluster, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} addr\+\_\+of\+\_\+interest, \hyperlink{group__wpan__aps_gabf0a6b85c9ff3ff9104c8b58c1436d72}{wpan\+\_\+response\+\_\+fn} callback, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Send a Z\+DO Node, Power, Complex or User Descriptor request, or an Active Endpoint request. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga9c1afb2178cc3e3b515373c7e351fc02}{\+\_\+zdo\+\_\+process\+\_\+nwk\+\_\+addr\+\_\+resp} (\hyperlink{structwpan__conversation__t}{wpan\+\_\+conversation\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$conversation, const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Callback function to process N\+W\+K\+\_\+addr response frames. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga40f076c190ab2390836687b8e1f705eb}{zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ieee\+\_\+be, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$net)
+\begin{DoxyCompactList}\small\item\em Given a device\textquotesingle{}s I\+E\+EE (64-\/bit) address, get its 16-\/bit network address by unicasting a Z\+DO N\+W\+K\+\_\+addr request to it. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_gad723bd899ccda9ec96f6226893c1335b}{\+\_\+zdo\+\_\+process\+\_\+ieee\+\_\+addr\+\_\+resp} (\hyperlink{structwpan__conversation__t}{wpan\+\_\+conversation\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$conversation, const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope)
+\begin{DoxyCompactList}\small\item\em Callback function to process I\+E\+E\+E\+\_\+addr response frames. \end{DoxyCompactList}\item 
+zigbee\+\_\+zdo\+\_\+debug int \hyperlink{group__zdo_ga4af5f8d70054f7883dbc1305e3a3f181}{zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req} (\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} net\+\_\+addr, \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ieee\+\_\+be)
+\begin{DoxyCompactList}\small\item\em Given a device\textquotesingle{}s 16-\/bit network address, get its I\+E\+EE (64-\/bit) address by unicasting a Z\+DO I\+E\+E\+E\+\_\+addr request to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zdo_gaaa2474cd4ba581b23bc91a868c7e2714}\label{group__zdo_gaaa2474cd4ba581b23bc91a868c7e2714}} 
+\hyperlink{unionaddr64}{addr64} {\bfseries ieee\+\_\+address\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zdo_gacccc7895ee6181a7b3a1e15712402b55}\label{group__zdo_gacccc7895ee6181a7b3a1e15712402b55}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zdo_gacccc7895ee6181a7b3a1e15712402b55}{request\+\_\+type}
+\begin{DoxyCompactList}\small\item\em See Z\+D\+O\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+$\ast$ macros. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga00d5b2926389442973ad976082766309}\label{group__zdo_ga00d5b2926389442973ad976082766309}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries start\+\_\+index}
+\item 
+\mbox{\Hypertarget{group__zdo_ga78a3358cbe5c23b718fba39bf101c593}\label{group__zdo_ga78a3358cbe5c23b718fba39bf101c593}} 
+\hyperlink{unionaddr64}{addr64} {\bfseries ieee\+\_\+remote\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zdo_ga536ff74dbcaa4380305de1658b13c206}\label{group__zdo_ga536ff74dbcaa4380305de1658b13c206}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries net\+\_\+remote\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zdo_gaadd537d3a956b5c9ac83d83e7eb28f1e}\label{group__zdo_gaadd537d3a956b5c9ac83d83e7eb28f1e}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries num\+\_\+assoc\+\_\+dev}
+\item 
+\mbox{\Hypertarget{group__zdo_gaa7b6adb5a5b6441e4f669337f4ef61e5}\label{group__zdo_gaa7b6adb5a5b6441e4f669337f4ef61e5}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gaa7b6adb5a5b6441e4f669337f4ef61e5}{network\+\_\+addr\+\_\+le}
+\begin{DoxyCompactList}\small\item\em device\textquotesingle{}s network address (little-\/endian) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga2db3c72f2819e6fc2ded786640e45be7}\label{group__zdo_ga2db3c72f2819e6fc2ded786640e45be7}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries flags1}
+\item 
+\mbox{\Hypertarget{group__zdo_gaf67c671dfb2dbb7cc3fa97fc9a13f833}\label{group__zdo_gaf67c671dfb2dbb7cc3fa97fc9a13f833}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries mac\+\_\+capability}
+\item 
+\mbox{\Hypertarget{group__zdo_ga5c11d0b39a260bdb72f61ff8e0105036}\label{group__zdo_ga5c11d0b39a260bdb72f61ff8e0105036}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries manufacturer\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zdo_gad56babf5f36b7296aac39b4d81a30120}\label{group__zdo_gad56babf5f36b7296aac39b4d81a30120}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries max\+\_\+buffer}
+\item 
+\mbox{\Hypertarget{group__zdo_ga9bae1013e78009e3b70cd35e21e9c7d0}\label{group__zdo_ga9bae1013e78009e3b70cd35e21e9c7d0}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries max\+\_\+incoming\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zdo_gaaed443997171bfc71523f4a0be4cd9cb}\label{group__zdo_gaaed443997171bfc71523f4a0be4cd9cb}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries server\+\_\+mask\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zdo_gafb39b249636cc267d871e26e3cfa146c}\label{group__zdo_gafb39b249636cc267d871e26e3cfa146c}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries max\+\_\+outgoing\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zdo_ga3ebd427285fbb534b6a883c1ce6ddd48}\label{group__zdo_ga3ebd427285fbb534b6a883c1ce6ddd48}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries desc\+\_\+capability}
+\item 
+\mbox{\Hypertarget{group__zdo_ga6ceac1bbc9ea67b634b16a6017474190}\label{group__zdo_ga6ceac1bbc9ea67b634b16a6017474190}} 
+\hyperlink{group__zdo_ga194073102dea473d1c5ac730f46d6d6d}{zdo\+\_\+node\+\_\+desc\+\_\+t} {\bfseries node\+\_\+desc}
+\item 
+\mbox{\Hypertarget{group__zdo_gae224a557c1b34dee80aabadd7de67437}\label{group__zdo_gae224a557c1b34dee80aabadd7de67437}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zdo_gae224a557c1b34dee80aabadd7de67437}{power1}
+\begin{DoxyCompactList}\small\item\em combination of Z\+D\+O\+\_\+\+P\+O\+W\+E\+R1\+\_\+$\ast$ macros \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga860c2f178dcb30cb0b76d8553ce4a043}\label{group__zdo_ga860c2f178dcb30cb0b76d8553ce4a043}} 
+\hyperlink{group__zdo_ga38f8a530fcbd8b3be41f9026c1b95b70}{zdo\+\_\+power\+\_\+desc\+\_\+t} {\bfseries power\+\_\+desc}
+\item 
+\mbox{\Hypertarget{group__zdo_ga7d397493728da2bca8d55b2d61c4ec5d}\label{group__zdo_ga7d397493728da2bca8d55b2d61c4ec5d}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zdo_ga7d397493728da2bca8d55b2d61c4ec5d}{endpoint}
+\begin{DoxyCompactList}\small\item\em 0x01 to 0x\+FE \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}\label{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zdo_gab2b3adeb2a67e656ff030b56727fd0ac}{length}
+\begin{DoxyCompactList}\small\item\em length of simple descriptor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga9f7e601c7386ae55f5e6d5ec558af125}\label{group__zdo_ga9f7e601c7386ae55f5e6d5ec558af125}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_ga9f7e601c7386ae55f5e6d5ec558af125}{profile\+\_\+id\+\_\+le}
+\begin{DoxyCompactList}\small\item\em endpoint\textquotesingle{}s profile ID (little-\/endian) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga8c37f5aa38d2a7b85e35461b14d4560c}\label{group__zdo_ga8c37f5aa38d2a7b85e35461b14d4560c}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_ga8c37f5aa38d2a7b85e35461b14d4560c}{device\+\_\+id\+\_\+le}
+\begin{DoxyCompactList}\small\item\em endpoint\textquotesingle{}s device ID (little-\/endian) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga0b8f4e315b56b3e3c53dea801ce92104}\label{group__zdo_ga0b8f4e315b56b3e3c53dea801ce92104}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zdo_ga0b8f4e315b56b3e3c53dea801ce92104}{device\+\_\+version}
+\begin{DoxyCompactList}\small\item\em upper 4 bits are reserved \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga9a8b8b39bbb81f592d9bee87f3873e35}\label{group__zdo_ga9a8b8b39bbb81f592d9bee87f3873e35}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries ep\+\_\+count}
+\item 
+\mbox{\Hypertarget{group__zdo_ga3f988a7832917601d076a2433d059b98}\label{group__zdo_ga3f988a7832917601d076a2433d059b98}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries num\+\_\+in\+\_\+clusters}
+\item 
+\mbox{\Hypertarget{group__zdo_gafe318b7d7cf8e293920f40b44ee2a0ac}\label{group__zdo_gafe318b7d7cf8e293920f40b44ee2a0ac}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_gafe318b7d7cf8e293920f40b44ee2a0ac}{in\+\_\+cluster\+\_\+list} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em variable length \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga388a92fd3a9368ec99a8a903260d9d0b}\label{group__zdo_ga388a92fd3a9368ec99a8a903260d9d0b}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__zdo_ga388a92fd3a9368ec99a8a903260d9d0b}{out\+\_\+cluster\+\_\+list} \mbox{[}1\mbox{]}
+\begin{DoxyCompactList}\small\item\em variable length \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_gadc282aa14277b4bec82a53ca510949d1}\label{group__zdo_gadc282aa14277b4bec82a53ca510949d1}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries match\+\_\+length}
+\item 
+\mbox{\Hypertarget{group__zdo_ga9d0b9239afd3f5abed5ba5712d6e1cb6}\label{group__zdo_ga9d0b9239afd3f5abed5ba5712d6e1cb6}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__zdo_ga9d0b9239afd3f5abed5ba5712d6e1cb6}{capability}
+\begin{DoxyCompactList}\small\item\em see Z\+D\+O\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+$\ast$ macros \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__zdo_ga2f980290790d1fecb3764ef797c03335}\label{group__zdo_ga2f980290790d1fecb3764ef797c03335}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries src\+\_\+endpoint}
+\item 
+\mbox{\Hypertarget{group__zdo_gada29752b9bbd48b046220d6fce530186}\label{group__zdo_gada29752b9bbd48b046220d6fce530186}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries cluster\+\_\+id\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zdo_ga619981db48edfd86cdd35bd9a62f9a50}\label{group__zdo_ga619981db48edfd86cdd35bd9a62f9a50}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries dst\+\_\+addr\+\_\+mode}
+\item 
+\mbox{\Hypertarget{group__zdo_gab445d3ee6077a076b153f2c9030152b7}\label{group__zdo_gab445d3ee6077a076b153f2c9030152b7}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} {\bfseries group\+\_\+addr\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zdo_ga44c865492ade7f56b46336e58f3b80be}\label{group__zdo_ga44c865492ade7f56b46336e58f3b80be}} 
+\hyperlink{unionaddr64}{addr64} {\bfseries dst\+\_\+address\+\_\+le}
+\item 
+\mbox{\Hypertarget{group__zdo_ga29afa3eb588689304497e905a855270a}\label{group__zdo_ga29afa3eb588689304497e905a855270a}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries dst\+\_\+endpoint}
+\item 
+\mbox{\Hypertarget{group__zdo_ga5a520a3fd94801faed2b25261d8cf244}\label{group__zdo_ga5a520a3fd94801faed2b25261d8cf244}} 
+zdo\+\_\+bind\+\_\+req\+\_\+header\+\_\+t {\bfseries header}
+\item 
+\mbox{\Hypertarget{group__zdo_gabb9332f3f72154b4e8aa79f4cd615dbf}\label{group__zdo_gabb9332f3f72154b4e8aa79f4cd615dbf}} 
+\hyperlink{group__zdo_ga41ab3318ee2bd538e044d6d6e101f376}{zdo\+\_\+bind\+\_\+group\+\_\+req\+\_\+t} {\bfseries group}
+\item 
+\mbox{\Hypertarget{group__zdo_gaeb044cdc1535cba42db0c32a6b116ad2}\label{group__zdo_gaeb044cdc1535cba42db0c32a6b116ad2}} 
+\hyperlink{group__zdo_ga68c283a043714a9e40d3674146dd6239}{zdo\+\_\+bind\+\_\+address\+\_\+req\+\_\+t} {\bfseries address}
+\item 
+\mbox{\Hypertarget{group__zdo_gaa2585d779da0ab21273a8d92de9a0ebe}\label{group__zdo_gaa2585d779da0ab21273a8d92de9a0ebe}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} {\bfseries flags}
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+values for {\ttfamily }.request\+\_\+type in N\+WK and I\+E\+EE address requests \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zdo_gaa2e60574e4f18025365955f61787b512}\label{group__zdo_gaa2e60574e4f18025365955f61787b512}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+N\+G\+LE}~0x00
+\item 
+\mbox{\Hypertarget{group__zdo_ga0090806cf0aab326024524fec4c8339a}\label{group__zdo_ga0090806cf0aab326024524fec4c8339a}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+X\+T\+E\+N\+D\+ED}~0x01
+\end{DoxyCompactItemize}
+\subsection*{Z\+DO Mac Capability Flags}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zdo_ga37c6821b48ca70aef7c64b1f3763571d}\label{group__zdo_ga37c6821b48ca70aef7c64b1f3763571d}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+E\+\_\+\+P\+AN}~0x01
+\item 
+\mbox{\Hypertarget{group__zdo_gaf94e4d8a7b20ab1cbb3fba7bc0dd1c41}\label{group__zdo_gaf94e4d8a7b20ab1cbb3fba7bc0dd1c41}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+F\+U\+L\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON}~0x02
+\item 
+\mbox{\Hypertarget{group__zdo_gab04c9345bdf68648eec414b84e1f87c6}\label{group__zdo_gab04c9345bdf68648eec414b84e1f87c6}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+M\+A\+I\+N\+S\+\_\+\+P\+O\+W\+ER}~0x04
+\item 
+\mbox{\Hypertarget{group__zdo_ga88e90d61371411240533e1a939c79671}\label{group__zdo_ga88e90d61371411240533e1a939c79671}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+R\+X\+\_\+\+O\+N\+\_\+\+I\+D\+LE}~0x08
+\item 
+\mbox{\Hypertarget{group__zdo_gacd166110237f016d80559f0a001f8d28}\label{group__zdo_gacd166110237f016d80559f0a001f8d28}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+1}~0x10
+\item 
+\mbox{\Hypertarget{group__zdo_ga149bb219f6e1e84e51d60650124e46cc}\label{group__zdo_ga149bb219f6e1e84e51d60650124e46cc}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+2}~0x20
+\item 
+\mbox{\Hypertarget{group__zdo_gafccc4c34b99048dd420457b867c4d158}\label{group__zdo_gafccc4c34b99048dd420457b867c4d158}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+S\+E\+C\+U\+R\+I\+TY}~0x40
+\item 
+\mbox{\Hypertarget{group__zdo_gaf97614279526a70a93516e8ac3be9024}\label{group__zdo_gaf97614279526a70a93516e8ac3be9024}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+\+A\+D\+DR}~0x80
+\end{DoxyCompactItemize}
+\subsection*{Z\+DO Status Values}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zdo_gaca852eaafe6a2a7e8fc42a2963d473bf}\label{group__zdo_gaca852eaafe6a2a7e8fc42a2963d473bf}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}~0x00
+\item 
+\mbox{\Hypertarget{group__zdo_ga4e093ba54e396ff7c323fab9ea077d18}\label{group__zdo_ga4e093ba54e396ff7c323fab9ea077d18}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+T\+Y\+PE}~0x80
+\item 
+\mbox{\Hypertarget{group__zdo_ga539854426a1115ab577f821085ff2256}\label{group__zdo_ga539854426a1115ab577f821085ff2256}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}~0x81
+\item 
+\mbox{\Hypertarget{group__zdo_gac3028cb83e21749768eca42838263019}\label{group__zdo_gac3028cb83e21749768eca42838263019}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+EP}~0x82
+\item 
+\mbox{\Hypertarget{group__zdo_ga557bd739746cc08113ede4935c1918f2}\label{group__zdo_ga557bd739746cc08113ede4935c1918f2}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+T\+\_\+\+A\+C\+T\+I\+VE}~0x83
+\item 
+\mbox{\Hypertarget{group__zdo_gadd64e2c0f5b7126a0c906f0ec6e60473}\label{group__zdo_gadd64e2c0f5b7126a0c906f0ec6e60473}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED}~0x84
+\item 
+\mbox{\Hypertarget{group__zdo_gaea9de0d4efef9cd1d1ae12dae22f1d37}\label{group__zdo_gaea9de0d4efef9cd1d1ae12dae22f1d37}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+T\+I\+M\+E\+O\+UT}~0x85
+\item 
+\mbox{\Hypertarget{group__zdo_ga00eda593d9937e6c55f9da1ab509091f}\label{group__zdo_ga00eda593d9937e6c55f9da1ab509091f}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+\_\+\+M\+A\+T\+CH}~0x86
+\item 
+\mbox{\Hypertarget{group__zdo_ga1f183b5c7a93f106d28696acb96652d6}\label{group__zdo_ga1f183b5c7a93f106d28696acb96652d6}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+\_\+\+E\+N\+T\+RY}~0x88
+\item 
+\mbox{\Hypertarget{group__zdo_ga6e2e64f9a8999b8334de157c6c0cdad1}\label{group__zdo_ga6e2e64f9a8999b8334de157c6c0cdad1}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}~0x89
+\item 
+\mbox{\Hypertarget{group__zdo_ga8e834faf1232208d667ff946fd9ae1ab}\label{group__zdo_ga8e834faf1232208d667ff946fd9ae1ab}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+N\+S\+U\+F\+F\+I\+C\+I\+E\+N\+T\+\_\+\+S\+P\+A\+CE}~0x8A
+\item 
+\mbox{\Hypertarget{group__zdo_ga74c9f08daf978af42a89f710a3ac0549}\label{group__zdo_ga74c9f08daf978af42a89f710a3ac0549}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+T\+\_\+\+P\+E\+R\+M\+I\+T\+T\+ED}~0x8B
+\item 
+\mbox{\Hypertarget{group__zdo_gab2f02cd6c716a5217aa9671dfc657872}\label{group__zdo_gab2f02cd6c716a5217aa9671dfc657872}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+T\+A\+B\+L\+E\+\_\+\+F\+U\+LL}~0x8C
+\item 
+\mbox{\Hypertarget{group__zdo_gac1b973f9681f4bbf319244d55ca6d2cd}\label{group__zdo_gac1b973f9681f4bbf319244d55ca6d2cd}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+ED}~0x8D
+\end{DoxyCompactItemize}
+\subsection*{Z\+DO Node Descriptor -\/ M\+AC Capability Flags}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zdo_ga6a1870a7d244cc148bc65fc2f5e78af7}\label{group__zdo_ga6a1870a7d244cc148bc65fc2f5e78af7}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+M\+A\+C\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+A\+L\+T\+\_\+\+P\+A\+N\+\_\+\+C\+O\+O\+RD}~(1$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__zdo_ga0eb8cdab069e6e7fef3e092f685f8aee}\label{group__zdo_ga0eb8cdab069e6e7fef3e092f685f8aee}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+M\+A\+C\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+PE}~(1$<$$<$1)
+\item 
+\mbox{\Hypertarget{group__zdo_ga50f63999d9dc3a726d3efa967d73b1b1}\label{group__zdo_ga50f63999d9dc3a726d3efa967d73b1b1}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+M\+A\+C\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+CE}~(1$<$$<$2)
+\item 
+\mbox{\Hypertarget{group__zdo_gabc8be41d8e8da1b6aa8e2acdfc12e36f}\label{group__zdo_gabc8be41d8e8da1b6aa8e2acdfc12e36f}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+M\+A\+C\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+R\+X\+\_\+\+O\+N\+\_\+\+I\+D\+LE}~(1$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__zdo_ga3ddc671709736fef6059f858b1dc5237}\label{group__zdo_ga3ddc671709736fef6059f858b1dc5237}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+M\+A\+C\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+4}~(1$<$$<$4)
+\item 
+\mbox{\Hypertarget{group__zdo_ga95eda5277af7fcade9ebadbc0b1bb5b0}\label{group__zdo_ga95eda5277af7fcade9ebadbc0b1bb5b0}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+M\+A\+C\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+5}~(1$<$$<$5)
+\item 
+\mbox{\Hypertarget{group__zdo_ga76652fe1ab732b4345e932f10a2e94f8}\label{group__zdo_ga76652fe1ab732b4345e932f10a2e94f8}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+M\+A\+C\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+S\+E\+C\+U\+R\+I\+TY}~(1$<$$<$6)
+\item 
+\mbox{\Hypertarget{group__zdo_ga5c906be729a9f9e0fb63ff600fcd9777}\label{group__zdo_ga5c906be729a9f9e0fb63ff600fcd9777}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+M\+A\+C\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+Y\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+\+A\+D\+DR}~(1$<$$<$7)
+\end{DoxyCompactItemize}
+\subsection*{Z\+DO Node Descriptor -\/ Server Mask Bit Assignments}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zdo_ga047221deea621025ac8dcaaf1f2338f2}\label{group__zdo_ga047221deea621025ac8dcaaf1f2338f2}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+A\+S\+K\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+T\+R\+U\+ST}~(1$<$$<$0)
+\item 
+\mbox{\Hypertarget{group__zdo_gade4cff93e5bb2144c457b5cd2662901f}\label{group__zdo_gade4cff93e5bb2144c457b5cd2662901f}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+A\+S\+K\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+T\+R\+U\+ST}~(1$<$$<$1)
+\item 
+\mbox{\Hypertarget{group__zdo_gab02988bb51ab342541de959b6817548b}\label{group__zdo_gab02988bb51ab342541de959b6817548b}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+A\+S\+K\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+B\+I\+N\+D\+I\+NG}~(1$<$$<$2)
+\item 
+\mbox{\Hypertarget{group__zdo_ga8c4d4bd7c4408c9490f946812ba19fa4}\label{group__zdo_ga8c4d4bd7c4408c9490f946812ba19fa4}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+A\+S\+K\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+B\+I\+N\+D\+I\+NG}~(1$<$$<$3)
+\item 
+\mbox{\Hypertarget{group__zdo_gad76fcdfacf026313325c23ac2160f698}\label{group__zdo_gad76fcdfacf026313325c23ac2160f698}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+A\+S\+K\+\_\+\+P\+R\+I\+M\+A\+R\+Y\+\_\+\+D\+I\+S\+C\+O\+V\+E\+RY}~(1$<$$<$4)
+\item 
+\mbox{\Hypertarget{group__zdo_ga2369288296faf5931decd53d0822acc7}\label{group__zdo_ga2369288296faf5931decd53d0822acc7}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+A\+S\+K\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+D\+I\+S\+C\+O\+V\+E\+RY}~(1$<$$<$5)
+\item 
+\mbox{\Hypertarget{group__zdo_ga44008802d01c87ad30c906829a799737}\label{group__zdo_ga44008802d01c87ad30c906829a799737}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+A\+S\+K\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+M\+A\+N\+A\+G\+ER}~(1$<$$<$6)
+\end{DoxyCompactItemize}
+\subsection*{Power\+Descriptor macros}
+\label{_amgrpc8b2f63f47b11b1245f13496e262efc5}%
+macros used in Power\+Descriptor (zdo\+\_\+power\+\_\+desc\+\_\+t) \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__zdo_gaf915c94ec813213961b3fc93c4c608ca}\label{group__zdo_gaf915c94ec813213961b3fc93c4c608ca}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+M\+A\+I\+NS}~0x01
+\item 
+\mbox{\Hypertarget{group__zdo_ga5096133eec6c50b31fdf5a994c1fc228}\label{group__zdo_ga5096133eec6c50b31fdf5a994c1fc228}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+E\+C\+H\+A\+R\+G\+A\+B\+LE}~0x02
+\item 
+\mbox{\Hypertarget{group__zdo_ga9ba5e697f3da7fb0488d047676264436}\label{group__zdo_ga9ba5e697f3da7fb0488d047676264436}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+S\+P\+O\+S\+A\+B\+LE}~0x04
+\item 
+\mbox{\Hypertarget{group__zdo_gab21873d088d45d8f3aa0c534fabd824b}\label{group__zdo_gab21873d088d45d8f3aa0c534fabd824b}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+E\+S\+E\+R\+V\+ED}~0x08
+\item 
+\mbox{\Hypertarget{group__zdo_ga21506c473239ac9f7fb08bd639581b71}\label{group__zdo_ga21506c473239ac9f7fb08bd639581b71}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R0\+\_\+\+S\+Y\+NC}~0x00
+\item 
+\mbox{\Hypertarget{group__zdo_ga14c775cfd03dad684f6f080383076764}\label{group__zdo_ga14c775cfd03dad684f6f080383076764}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R0\+\_\+\+P\+E\+R\+I\+O\+D\+IC}~0x01
+\item 
+\mbox{\Hypertarget{group__zdo_ga985110ef15923867842bee91e66e0b1f}\label{group__zdo_ga985110ef15923867842bee91e66e0b1f}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R0\+\_\+\+S\+T\+I\+M\+U\+L\+A\+T\+ED}~0x02
+\item 
+\mbox{\Hypertarget{group__zdo_gad07d6e180ee997547235aa5a113296a0}\label{group__zdo_gad07d6e180ee997547235aa5a113296a0}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R0\+\_\+\+A\+V\+A\+I\+L\+\_\+\+M\+A\+I\+NS}~(Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+M\+A\+I\+NS $<$$<$ 4)
+\item 
+\mbox{\Hypertarget{group__zdo_ga64a668e80cdcd48b1752e25fc2748568}\label{group__zdo_ga64a668e80cdcd48b1752e25fc2748568}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R0\+\_\+\+A\+V\+A\+I\+L\+\_\+\+R\+E\+C\+H\+A\+R\+G\+A\+B\+LE}~(Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+E\+C\+H\+A\+R\+G\+A\+B\+LE $<$$<$ 4)
+\item 
+\mbox{\Hypertarget{group__zdo_ga803a168de8acadbcf958c156b50cefd5}\label{group__zdo_ga803a168de8acadbcf958c156b50cefd5}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R0\+\_\+\+A\+V\+A\+I\+L\+\_\+\+D\+I\+S\+P\+O\+S\+A\+B\+LE}~(Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+S\+P\+O\+S\+A\+B\+LE $<$$<$ 4)
+\item 
+\mbox{\Hypertarget{group__zdo_gaa2b0dc9387b2357aff027c868fdfb626}\label{group__zdo_gaa2b0dc9387b2357aff027c868fdfb626}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R0\+\_\+\+A\+V\+A\+I\+L\+\_\+\+R\+E\+S\+E\+R\+V\+ED}~(Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+E\+S\+E\+R\+V\+ED $<$$<$ 4)
+\item 
+\mbox{\Hypertarget{group__zdo_ga499c77cd31be8a2eb08ffa396f6004aa}\label{group__zdo_ga499c77cd31be8a2eb08ffa396f6004aa}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R1\+\_\+\+L\+E\+V\+E\+L\+\_\+\+C\+R\+I\+T\+I\+C\+AL}~0x00
+\item 
+\mbox{\Hypertarget{group__zdo_ga916c88fc8989c52c38c84aa36f99effc}\label{group__zdo_ga916c88fc8989c52c38c84aa36f99effc}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R1\+\_\+\+L\+E\+V\+E\+L\+\_\+33}~0x40
+\item 
+\mbox{\Hypertarget{group__zdo_gaad1b84fd581772392982c9c26cb0487a}\label{group__zdo_gaad1b84fd581772392982c9c26cb0487a}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R1\+\_\+\+L\+E\+V\+E\+L\+\_\+66}~0x80
+\item 
+\mbox{\Hypertarget{group__zdo_ga64240a0e6567164403aea6ac65bdb691}\label{group__zdo_ga64240a0e6567164403aea6ac65bdb691}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R1\+\_\+\+L\+E\+V\+E\+L\+\_\+\+F\+U\+LL}~0x\+C0
+\item 
+\mbox{\Hypertarget{group__zdo_ga431fde766645c30139e485fbedd08fb9}\label{group__zdo_ga431fde766645c30139e485fbedd08fb9}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R1\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+M\+A\+I\+NS}~Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+M\+A\+I\+NS
+\item 
+\mbox{\Hypertarget{group__zdo_ga1d45b95a0a987d3e10d5b81447783491}\label{group__zdo_ga1d45b95a0a987d3e10d5b81447783491}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R1\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+R\+E\+C\+H\+A\+R\+G\+A\+B\+LE}~Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+E\+C\+H\+A\+R\+G\+A\+B\+LE
+\item 
+\mbox{\Hypertarget{group__zdo_ga95049e82db572f2fc8ebf1357ee37a03}\label{group__zdo_ga95049e82db572f2fc8ebf1357ee37a03}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R1\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+D\+I\+S\+P\+O\+S\+A\+B\+LE}~Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+I\+S\+P\+O\+S\+A\+B\+LE
+\item 
+\mbox{\Hypertarget{group__zdo_ga7fd4a3248c8e543fc0daf67586be5c1a}\label{group__zdo_ga7fd4a3248c8e543fc0daf67586be5c1a}} 
+\#define {\bfseries Z\+D\+O\+\_\+\+P\+O\+W\+E\+R1\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+R\+E\+S\+E\+R\+V\+ED}~Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+E\+S\+E\+R\+V\+ED
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__zdo_ga6f85faaf451b834c9b01ad0e3700ec9f}\label{group__zdo_ga6f85faaf451b834c9b01ad0e3700ec9f}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!Z\+D\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+N\+N\+C\+E\+\_\+\+C\+L\+U\+S\+T\+ER@{Z\+D\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+N\+N\+C\+E\+\_\+\+C\+L\+U\+S\+T\+ER}}
+\index{Z\+D\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+N\+N\+C\+E\+\_\+\+C\+L\+U\+S\+T\+ER@{Z\+D\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+N\+N\+C\+E\+\_\+\+C\+L\+U\+S\+T\+ER}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{Z\+D\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+N\+N\+C\+E\+\_\+\+C\+L\+U\+S\+T\+ER}{ZDO\_DEVICE\_ANNCE\_CLUSTER}}
+{\footnotesize\ttfamily \#define Z\+D\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+N\+N\+C\+E\+\_\+\+C\+L\+U\+S\+T\+ER(\begin{DoxyParamCaption}\item[{}]{handler,  }\item[{}]{context }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \hyperlink{group__zdo_gaffd566d5fc7aa21973fd7e5e026db30a}{ZDO\_DEVICE\_ANNCE}, handler, context, \(\backslash\)
+                     WPAN\_CLUST\_FLAG\_OUTPUT | \hyperlink{group__wpan__aps_gacb0e365a8c5e72ee90be503513e7e630}{WPAN\_CLUST\_FLAG\_NOT\_ZCL} \}
+\end{DoxyCode}
+
+
+Entry for Device Annce handler in cluster table of Z\+DO endpoint. 
+
+\mbox{\Hypertarget{group__zdo_gaef7118e478f5ad9949dcd23f6e0901c9}\label{group__zdo_gaef7118e478f5ad9949dcd23f6e0901c9}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!Z\+D\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT@{Z\+D\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT}}
+\index{Z\+D\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT@{Z\+D\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{Z\+D\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT}{ZDO\_ENDPOINT}}
+{\footnotesize\ttfamily \#define Z\+D\+O\+\_\+\+E\+N\+D\+P\+O\+I\+NT(\begin{DoxyParamCaption}\item[{}]{state }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \hyperlink{group__wpan__aps_ga860a08927c4e6d7656281713186c43dd}{WPAN\_ENDPOINT\_ZDO}, \hyperlink{group__wpan__aps_gabdbce33bdd976b65877a241842b73a20}{WPAN\_PROFILE\_ZDO}, 
+      \hyperlink{group__zdo_ga2e4465da8204d6c9a67edc3a6f210c1d}{zdo\_handler},       \(\backslash\)
+      &state, 0x0000, 0x00, NULL \}
+\end{DoxyCode}
+
+
+Macro for Z\+DO endpoint table entry. 
+
+{\ttfamily state} is the name of a \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} global used to track the Z\+DO endpoint\textquotesingle{}s state. Can\textquotesingle{}t just have the state declared in \hyperlink{zigbee__zdo_8c}{zigbee\+\_\+zdo.\+c} since a device with multiple X\+Bee modules, will need multiple Z\+DO \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} globals. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__zdo_ga54a6580e6f7572ca6014963d3e03e735}\label{group__zdo_ga54a6580e6f7572ca6014963d3e03e735}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+active\+\_\+ep\+\_\+req\+\_\+t@{zdo\+\_\+active\+\_\+ep\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+active\+\_\+ep\+\_\+req\+\_\+t@{zdo\+\_\+active\+\_\+ep\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+active\+\_\+ep\+\_\+req\+\_\+t}{zdo\_active\_ep\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga54a6580e6f7572ca6014963d3e03e735}{zdo\+\_\+active\+\_\+ep\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    transaction
+\end{DoxyCode}
+
+
+frame format for Z\+DO Active\+\_\+\+EP request 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zdo_gac842062e5e1a60d25cddf16ec22ef601}{zdo\+\_\+send\+\_\+descriptor\+\_\+req()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__zdo_ga47a4305044809f1e37b1a88c3232676a}\label{group__zdo_ga47a4305044809f1e37b1a88c3232676a}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+active\+\_\+ep\+\_\+rsp\+\_\+header\+\_\+t@{zdo\+\_\+active\+\_\+ep\+\_\+rsp\+\_\+header\+\_\+t}}
+\index{zdo\+\_\+active\+\_\+ep\+\_\+rsp\+\_\+header\+\_\+t@{zdo\+\_\+active\+\_\+ep\+\_\+rsp\+\_\+header\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+active\+\_\+ep\+\_\+rsp\+\_\+header\+\_\+t}{zdo\_active\_ep\_rsp\_header\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga47a4305044809f1e37b1a88c3232676a}{zdo\+\_\+active\+\_\+ep\+\_\+rsp\+\_\+header\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+
+
+header for Z\+DO Active\+\_\+\+EP response, followed by {\ttfamily }.ep\+\_\+count uint8\+\_\+t endpoints 
+
+see Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macros \mbox{\Hypertarget{group__zdo_ga68c283a043714a9e40d3674146dd6239}\label{group__zdo_ga68c283a043714a9e40d3674146dd6239}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+bind\+\_\+address\+\_\+req\+\_\+t@{zdo\+\_\+bind\+\_\+address\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+bind\+\_\+address\+\_\+req\+\_\+t@{zdo\+\_\+bind\+\_\+address\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+bind\+\_\+address\+\_\+req\+\_\+t}{zdo\_bind\_address\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga68c283a043714a9e40d3674146dd6239}{zdo\+\_\+bind\+\_\+address\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   zdo\_bind\_req\_header\_t   header
+\end{DoxyCode}
+
+
+frame format for a Z\+DO Bind Request with an I\+E\+EE address and endpoint as the destination (header.\+dst\+\_\+addr\+\_\+mode == Z\+D\+O\+\_\+\+B\+I\+N\+D\+\_\+\+D\+S\+T\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR) 
+
+\mbox{\Hypertarget{group__zdo_ga41ab3318ee2bd538e044d6d6e101f376}\label{group__zdo_ga41ab3318ee2bd538e044d6d6e101f376}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+bind\+\_\+group\+\_\+req\+\_\+t@{zdo\+\_\+bind\+\_\+group\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+bind\+\_\+group\+\_\+req\+\_\+t@{zdo\+\_\+bind\+\_\+group\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+bind\+\_\+group\+\_\+req\+\_\+t}{zdo\_bind\_group\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga41ab3318ee2bd538e044d6d6e101f376}{zdo\+\_\+bind\+\_\+group\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   zdo\_bind\_req\_header\_t   header
+\end{DoxyCode}
+
+
+frame format for a Z\+DO Bind Request with a group address as the destination (header.\+dst\+\_\+addr\+\_\+mode == Z\+D\+O\+\_\+\+B\+I\+N\+D\+\_\+\+D\+S\+T\+\_\+\+M\+O\+D\+E\+\_\+\+G\+R\+O\+UP) 
+
+\mbox{\Hypertarget{group__zdo_gac9b4aad016a9081d7e6ae3dfb1586e61}\label{group__zdo_gac9b4aad016a9081d7e6ae3dfb1586e61}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+bind\+\_\+req\+\_\+header\+\_\+t@{zdo\+\_\+bind\+\_\+req\+\_\+header\+\_\+t}}
+\index{zdo\+\_\+bind\+\_\+req\+\_\+header\+\_\+t@{zdo\+\_\+bind\+\_\+req\+\_\+header\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+bind\+\_\+req\+\_\+header\+\_\+t}{zdo\_bind\_req\_header\_t}}
+{\footnotesize\ttfamily zdo\+\_\+bind\+\_\+req\+\_\+header\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{unionaddr64}{addr64}      src\_address\_le
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zdo_ga9f34abaa1c2be82e33a7aaf37908f79c}\label{group__zdo_ga9f34abaa1c2be82e33a7aaf37908f79c}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+complex\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+complex\+\_\+desc\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+complex\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+complex\+\_\+desc\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+complex\+\_\+desc\+\_\+req\+\_\+t}{zdo\_complex\_desc\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga9f34abaa1c2be82e33a7aaf37908f79c}{zdo\+\_\+complex\+\_\+desc\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    transaction
+\end{DoxyCode}
+
+
+frame format for Z\+DO Complex\+\_\+\+Desc request 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zdo_gac842062e5e1a60d25cddf16ec22ef601}{zdo\+\_\+send\+\_\+descriptor\+\_\+req()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__zdo_ga95dc0a6858fdb8b8237ef6091d31d2ea}\label{group__zdo_ga95dc0a6858fdb8b8237ef6091d31d2ea}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+device\+\_\+annce\+\_\+t@{zdo\+\_\+device\+\_\+annce\+\_\+t}}
+\index{zdo\+\_\+device\+\_\+annce\+\_\+t@{zdo\+\_\+device\+\_\+annce\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+device\+\_\+annce\+\_\+t}{zdo\_device\_annce\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga95dc0a6858fdb8b8237ef6091d31d2ea}{zdo\+\_\+device\+\_\+annce\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    transaction
+\end{DoxyCode}
+
+
+frame format for a Z\+DO Device\+\_\+annce announcement 
+
+\mbox{\Hypertarget{group__zdo_ga750ebc1379ded82ecdd43bf07306a812}\label{group__zdo_ga750ebc1379ded82ecdd43bf07306a812}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+ieee\+\_\+addr\+\_\+req\+\_\+t@{zdo\+\_\+ieee\+\_\+addr\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+ieee\+\_\+addr\+\_\+req\+\_\+t@{zdo\+\_\+ieee\+\_\+addr\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+ieee\+\_\+addr\+\_\+req\+\_\+t}{zdo\_ieee\_addr\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga750ebc1379ded82ecdd43bf07306a812}{zdo\+\_\+ieee\+\_\+addr\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    transaction
+\end{DoxyCode}
+
+
+frame format for Z\+DO I\+E\+E\+E\+\_\+addr request 
+
+\mbox{\Hypertarget{group__zdo_ga58933040f33055a85f168d27cba35b02}\label{group__zdo_ga58933040f33055a85f168d27cba35b02}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+match\+\_\+desc\+\_\+out\+\_\+clust\+\_\+t@{zdo\+\_\+match\+\_\+desc\+\_\+out\+\_\+clust\+\_\+t}}
+\index{zdo\+\_\+match\+\_\+desc\+\_\+out\+\_\+clust\+\_\+t@{zdo\+\_\+match\+\_\+desc\+\_\+out\+\_\+clust\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+match\+\_\+desc\+\_\+out\+\_\+clust\+\_\+t}{zdo\_match\_desc\_out\_clust\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga58933040f33055a85f168d27cba35b02}{zdo\+\_\+match\+\_\+desc\+\_\+out\+\_\+clust\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    num\_out\_clusters
+\end{DoxyCode}
+
+
+Second half of Match\+\_\+\+Desc request. 
+
+cast to address of zdo\+\_\+match\+\_\+desc\+\_\+req\+\_\+t
+\begin{DoxyItemize}
+\item offsetof {\ttfamily }.in\+\_\+cluster\+\_\+list + 2 $\ast$ {\ttfamily }.num\+\_\+in\+\_\+clusters 
+\end{DoxyItemize}\mbox{\Hypertarget{group__zdo_gac4eb6edc67f4b6c7cfb7b876f86c7316}\label{group__zdo_gac4eb6edc67f4b6c7cfb7b876f86c7316}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+match\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+match\+\_\+desc\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+match\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+match\+\_\+desc\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+match\+\_\+desc\+\_\+req\+\_\+t}{zdo\_match\_desc\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_gac4eb6edc67f4b6c7cfb7b876f86c7316}{zdo\+\_\+match\+\_\+desc\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    transaction
+\end{DoxyCode}
+
+
+header for Z\+DO Match\+\_\+\+Desc request 
+
+\mbox{\Hypertarget{group__zdo_ga92bab7ada78e3865e606ce81bb610935}\label{group__zdo_ga92bab7ada78e3865e606ce81bb610935}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+match\+\_\+desc\+\_\+rsp\+\_\+header\+\_\+t@{zdo\+\_\+match\+\_\+desc\+\_\+rsp\+\_\+header\+\_\+t}}
+\index{zdo\+\_\+match\+\_\+desc\+\_\+rsp\+\_\+header\+\_\+t@{zdo\+\_\+match\+\_\+desc\+\_\+rsp\+\_\+header\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+match\+\_\+desc\+\_\+rsp\+\_\+header\+\_\+t}{zdo\_match\_desc\_rsp\_header\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga92bab7ada78e3865e606ce81bb610935}{zdo\+\_\+match\+\_\+desc\+\_\+rsp\+\_\+header\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+
+
+header for Z\+DO Match\+\_\+\+Desc response, followed by {\ttfamily }.match\+\_\+length uint8\+\_\+t endpoints 
+
+see Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macros \mbox{\Hypertarget{group__zdo_gaa7b8baffae72af214b453440e763da1e}\label{group__zdo_gaa7b8baffae72af214b453440e763da1e}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+mgmt\+\_\+leave\+\_\+req\+\_\+t@{zdo\+\_\+mgmt\+\_\+leave\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+mgmt\+\_\+leave\+\_\+req\+\_\+t@{zdo\+\_\+mgmt\+\_\+leave\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+mgmt\+\_\+leave\+\_\+req\+\_\+t}{zdo\_mgmt\_leave\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_gaa7b8baffae72af214b453440e763da1e}{zdo\+\_\+mgmt\+\_\+leave\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{unionaddr64}{addr64}      device\_address
+\end{DoxyCode}
+
+
+frame format for a Z\+DO Management Leave Request 
+
+\mbox{\Hypertarget{group__zdo_gafc12b26d1475fd20ac9b7c73c84d9a89}\label{group__zdo_gafc12b26d1475fd20ac9b7c73c84d9a89}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+mgmt\+\_\+leave\+\_\+rsp\+\_\+t@{zdo\+\_\+mgmt\+\_\+leave\+\_\+rsp\+\_\+t}}
+\index{zdo\+\_\+mgmt\+\_\+leave\+\_\+rsp\+\_\+t@{zdo\+\_\+mgmt\+\_\+leave\+\_\+rsp\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+mgmt\+\_\+leave\+\_\+rsp\+\_\+t}{zdo\_mgmt\_leave\_rsp\_t}}
+{\footnotesize\ttfamily zdo\+\_\+mgmt\+\_\+leave\+\_\+rsp\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zdo_gac66d43595fc4f074cb4c50c1531100d5}\label{group__zdo_gac66d43595fc4f074cb4c50c1531100d5}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+node\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+node\+\_\+desc\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+node\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+node\+\_\+desc\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+node\+\_\+desc\+\_\+req\+\_\+t}{zdo\_node\_desc\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_gac66d43595fc4f074cb4c50c1531100d5}{zdo\+\_\+node\+\_\+desc\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    transaction
+\end{DoxyCode}
+
+
+frame format for Z\+DO Node\+\_\+\+Desc request 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zdo_gac842062e5e1a60d25cddf16ec22ef601}{zdo\+\_\+send\+\_\+descriptor\+\_\+req()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__zdo_ga5b77ee7a2a4f9b5f5b6145bd839c1b1f}\label{group__zdo_ga5b77ee7a2a4f9b5f5b6145bd839c1b1f}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+node\+\_\+desc\+\_\+resp\+\_\+t@{zdo\+\_\+node\+\_\+desc\+\_\+resp\+\_\+t}}
+\index{zdo\+\_\+node\+\_\+desc\+\_\+resp\+\_\+t@{zdo\+\_\+node\+\_\+desc\+\_\+resp\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+node\+\_\+desc\+\_\+resp\+\_\+t}{zdo\_node\_desc\_resp\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga5b77ee7a2a4f9b5f5b6145bd839c1b1f}{zdo\+\_\+node\+\_\+desc\+\_\+resp\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}             \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+
+
+see Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macros 
+
+\mbox{\Hypertarget{group__zdo_ga194073102dea473d1c5ac730f46d6d6d}\label{group__zdo_ga194073102dea473d1c5ac730f46d6d6d}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+node\+\_\+desc\+\_\+t@{zdo\+\_\+node\+\_\+desc\+\_\+t}}
+\index{zdo\+\_\+node\+\_\+desc\+\_\+t@{zdo\+\_\+node\+\_\+desc\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+node\+\_\+desc\+\_\+t}{zdo\_node\_desc\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga194073102dea473d1c5ac730f46d6d6d}{zdo\+\_\+node\+\_\+desc\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    flags0
+\end{DoxyCode}
+
+
+frame format for Z\+DO Node\+\_\+\+Desc response 
+
+\mbox{\Hypertarget{group__zdo_gac1680800358ab1c7a6690c3a3f2628ff}\label{group__zdo_gac1680800358ab1c7a6690c3a3f2628ff}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+nwk\+\_\+addr\+\_\+req\+\_\+t@{zdo\+\_\+nwk\+\_\+addr\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+nwk\+\_\+addr\+\_\+req\+\_\+t@{zdo\+\_\+nwk\+\_\+addr\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+nwk\+\_\+addr\+\_\+req\+\_\+t}{zdo\_nwk\_addr\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_gac1680800358ab1c7a6690c3a3f2628ff}{zdo\+\_\+nwk\+\_\+addr\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    transaction
+\end{DoxyCode}
+
+
+frame format for Z\+DO N\+K\+W\+\_\+addr request 
+
+\mbox{\Hypertarget{group__zdo_ga1807c0442a103f4dae60745a534b042d}\label{group__zdo_ga1807c0442a103f4dae60745a534b042d}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+nwk\+\_\+addr\+\_\+rsp\+\_\+header\+\_\+t@{zdo\+\_\+nwk\+\_\+addr\+\_\+rsp\+\_\+header\+\_\+t}}
+\index{zdo\+\_\+nwk\+\_\+addr\+\_\+rsp\+\_\+header\+\_\+t@{zdo\+\_\+nwk\+\_\+addr\+\_\+rsp\+\_\+header\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+nwk\+\_\+addr\+\_\+rsp\+\_\+header\+\_\+t}{zdo\_nwk\_addr\_rsp\_header\_t}}
+{\footnotesize\ttfamily zdo\+\_\+nwk\+\_\+addr\+\_\+rsp\+\_\+header\+\_\+t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__zdo_ga553d13ce64a2cc38a82048f624d9d1f9}\label{group__zdo_ga553d13ce64a2cc38a82048f624d9d1f9}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+power\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+power\+\_\+desc\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+power\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+power\+\_\+desc\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+power\+\_\+desc\+\_\+req\+\_\+t}{zdo\_power\_desc\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga553d13ce64a2cc38a82048f624d9d1f9}{zdo\+\_\+power\+\_\+desc\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    transaction
+\end{DoxyCode}
+
+
+frame format for Z\+DO Power\+\_\+\+Desc request 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zdo_gac842062e5e1a60d25cddf16ec22ef601}{zdo\+\_\+send\+\_\+descriptor\+\_\+req()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__zdo_ga52ee72ef139c275a30a02aeefd2dfb89}\label{group__zdo_ga52ee72ef139c275a30a02aeefd2dfb89}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+power\+\_\+desc\+\_\+rsp\+\_\+t@{zdo\+\_\+power\+\_\+desc\+\_\+rsp\+\_\+t}}
+\index{zdo\+\_\+power\+\_\+desc\+\_\+rsp\+\_\+t@{zdo\+\_\+power\+\_\+desc\+\_\+rsp\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+power\+\_\+desc\+\_\+rsp\+\_\+t}{zdo\_power\_desc\_rsp\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga52ee72ef139c275a30a02aeefd2dfb89}{zdo\+\_\+power\+\_\+desc\+\_\+rsp\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}             \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+
+
+frame format for Z\+DO Power\+\_\+\+Desc response 
+
+see Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macros \mbox{\Hypertarget{group__zdo_ga38f8a530fcbd8b3be41f9026c1b95b70}\label{group__zdo_ga38f8a530fcbd8b3be41f9026c1b95b70}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+power\+\_\+desc\+\_\+t@{zdo\+\_\+power\+\_\+desc\+\_\+t}}
+\index{zdo\+\_\+power\+\_\+desc\+\_\+t@{zdo\+\_\+power\+\_\+desc\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+power\+\_\+desc\+\_\+t}{zdo\_power\_desc\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga38f8a530fcbd8b3be41f9026c1b95b70}{zdo\+\_\+power\+\_\+desc\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    power0
+\end{DoxyCode}
+
+
+format for Z\+DO Power\+Descriptor 
+
+combination of Z\+D\+O\+\_\+\+P\+O\+W\+E\+R0\+\_\+$\ast$ macros \mbox{\Hypertarget{group__zdo_ga2fcb208122b12b93deec95fa934cf40d}\label{group__zdo_ga2fcb208122b12b93deec95fa934cf40d}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+simple\+\_\+desc\+\_\+header\+\_\+t@{zdo\+\_\+simple\+\_\+desc\+\_\+header\+\_\+t}}
+\index{zdo\+\_\+simple\+\_\+desc\+\_\+header\+\_\+t@{zdo\+\_\+simple\+\_\+desc\+\_\+header\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+simple\+\_\+desc\+\_\+header\+\_\+t}{zdo\_simple\_desc\_header\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga2fcb208122b12b93deec95fa934cf40d}{zdo\+\_\+simple\+\_\+desc\+\_\+header\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    \hyperlink{group__zdo_ga7d397493728da2bca8d55b2d61c4ec5d}{endpoint}
+\end{DoxyCode}
+
+
+header for Z\+DO Simple\+Descriptor (part of a Simple\+\_\+\+Desc response), followed by uint8\+\_\+t input cluster count, multiple uint16\+\_\+t input cluster I\+Ds, uint8\+\_\+t output cluster count, multiple uint16\+\_\+t output cluster I\+Ds 
+
+0x01 to 0x\+FE \mbox{\Hypertarget{group__zdo_gaa612a19982dc0c39d207a0662e8a0761}\label{group__zdo_gaa612a19982dc0c39d207a0662e8a0761}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+simple\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+simple\+\_\+desc\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+simple\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+simple\+\_\+desc\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+simple\+\_\+desc\+\_\+req\+\_\+t}{zdo\_simple\_desc\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_gaa612a19982dc0c39d207a0662e8a0761}{zdo\+\_\+simple\+\_\+desc\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    transaction
+\end{DoxyCode}
+
+
+frame format for Z\+DO Simple\+\_\+\+Desc request 
+
+\mbox{\Hypertarget{group__zdo_gaee853401cb00e58396b01015a1713f3b}\label{group__zdo_gaee853401cb00e58396b01015a1713f3b}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+simple\+\_\+desc\+\_\+resp\+\_\+header\+\_\+t@{zdo\+\_\+simple\+\_\+desc\+\_\+resp\+\_\+header\+\_\+t}}
+\index{zdo\+\_\+simple\+\_\+desc\+\_\+resp\+\_\+header\+\_\+t@{zdo\+\_\+simple\+\_\+desc\+\_\+resp\+\_\+header\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+simple\+\_\+desc\+\_\+resp\+\_\+header\+\_\+t}{zdo\_simple\_desc\_resp\_header\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_gaee853401cb00e58396b01015a1713f3b}{zdo\+\_\+simple\+\_\+desc\+\_\+resp\+\_\+header\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    \hyperlink{group__xbee__atcmd_gade818037fd6c985038ff29656089758d}{status}
+\end{DoxyCode}
+
+
+header for Z\+DO Simple\+\_\+\+Desc response, followed by a Simple\+Descriptor 
+
+see Z\+D\+O\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+$\ast$ macros \mbox{\Hypertarget{group__zdo_ga589d313ae350f36d7b9de7d26c3df977}\label{group__zdo_ga589d313ae350f36d7b9de7d26c3df977}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+user\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+user\+\_\+desc\+\_\+req\+\_\+t}}
+\index{zdo\+\_\+user\+\_\+desc\+\_\+req\+\_\+t@{zdo\+\_\+user\+\_\+desc\+\_\+req\+\_\+t}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+user\+\_\+desc\+\_\+req\+\_\+t}{zdo\_user\_desc\_req\_t}}
+{\footnotesize\ttfamily \hyperlink{group__zdo_ga589d313ae350f36d7b9de7d26c3df977}{zdo\+\_\+user\+\_\+desc\+\_\+req\+\_\+t}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+   \hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t}    transaction
+\end{DoxyCode}
+
+
+frame format for Z\+DO Complex\+\_\+\+Desc request 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zdo_gac842062e5e1a60d25cddf16ec22ef601}{zdo\+\_\+send\+\_\+descriptor\+\_\+req()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__zdo_ga1a65d88af9f0c9906d548aa1ff2586f7}\label{group__zdo_ga1a65d88af9f0c9906d548aa1ff2586f7}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!\+\_\+match\+\_\+desc\+\_\+cluster\+\_\+list@{\+\_\+match\+\_\+desc\+\_\+cluster\+\_\+list}}
+\index{\+\_\+match\+\_\+desc\+\_\+cluster\+\_\+list@{\+\_\+match\+\_\+desc\+\_\+cluster\+\_\+list}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{\+\_\+match\+\_\+desc\+\_\+cluster\+\_\+list()}{\_match\_desc\_cluster\_list()}}
+{\footnotesize\ttfamily int \+\_\+match\+\_\+desc\+\_\+cluster\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} $\ast$$\ast$}]{buffer,  }\item[{const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} $\ast$}]{clust\+\_\+read,  }\item[{int}]{max\+\_\+count }\end{DoxyParamCaption})}
+
+Writes to $\ast$buffer, an 8-\/bit cluster count followed by the 16-\/bit cluster I\+Ds in little-\/endian byte order.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em buffer} & location to store cluster list, updated to point to first byte after bytes written \\
+\hline
+\mbox{\tt in}  & {\em cluster\+\_\+read} & list of 16-\/bit cluster I\+Ds, terminated by W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+ST \\
+\hline
+\mbox{\tt in}  & {\em max\+\_\+count} & maximum number of clusters to write to $\ast$buffer\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/\+E\+N\+O\+S\+PC} & can\textquotesingle{}t fit list of clusters into buffer \\
+\hline
+{\em $>$=0} & number of clusters written to buffer \\
+\hline
+\end{DoxyRetVals}
+
+
+References E\+N\+O\+S\+PC, htole16, and W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+ST.
+
+
+
+Referenced by zdo\+\_\+match\+\_\+desc\+\_\+request().
+
+\mbox{\Hypertarget{group__zdo_ga558539813d6a9c8813eeae855e77385f}\label{group__zdo_ga558539813d6a9c8813eeae855e77385f}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!\+\_\+simple\+\_\+desc\+\_\+cluster\+\_\+list@{\+\_\+simple\+\_\+desc\+\_\+cluster\+\_\+list}}
+\index{\+\_\+simple\+\_\+desc\+\_\+cluster\+\_\+list@{\+\_\+simple\+\_\+desc\+\_\+cluster\+\_\+list}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{\+\_\+simple\+\_\+desc\+\_\+cluster\+\_\+list()}{\_simple\_desc\_cluster\_list()}}
+{\footnotesize\ttfamily int \+\_\+simple\+\_\+desc\+\_\+cluster\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} $\ast$$\ast$}]{buffer,  }\item[{int}]{max\+\_\+count,  }\item[{\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t}}]{mask,  }\item[{const \hyperlink{structwpan__cluster__table__entry__t}{wpan\+\_\+cluster\+\_\+table\+\_\+entry\+\_\+t} $\ast$}]{entry }\end{DoxyParamCaption})}
+
+Writes to $\ast$buffer, an 8-\/bit cluster count followed by the 16-\/bit I\+Ds for entries in a cluster table matching a given mask.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em buffer} & location to store cluster list, updated to point to first byte after bytes written \\
+\hline
+\mbox{\tt in}  & {\em max\+\_\+count} & maximum number of clusters to write to $\ast$buffer \\
+\hline
+\mbox{\tt in}  & {\em mask} & mask used to restrict entries \\
+\hline
+\mbox{\tt in}  & {\em entry} & list of clusters, terminated by an entry with and ID of W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+ST\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/\+E\+N\+O\+S\+PC} & can\textquotesingle{}t fit list of clusters into buffer \\
+\hline
+{\em $>$=0} & number of clusters written to buffer \\
+\hline
+\end{DoxyRetVals}
+
+
+References wpan\+\_\+cluster\+\_\+table\+\_\+entry\+\_\+t\+::cluster\+\_\+id, E\+N\+O\+S\+PC, wpan\+\_\+cluster\+\_\+table\+\_\+entry\+\_\+t\+::flags, htole16, and W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+ST.
+
+\mbox{\Hypertarget{group__zdo_ga233f2d57bc9b9d68cb18bd9d76c08e34}\label{group__zdo_ga233f2d57bc9b9d68cb18bd9d76c08e34}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!\+\_\+zdo\+\_\+active\+\_\+ep\+\_\+respond@{\+\_\+zdo\+\_\+active\+\_\+ep\+\_\+respond}}
+\index{\+\_\+zdo\+\_\+active\+\_\+ep\+\_\+respond@{\+\_\+zdo\+\_\+active\+\_\+ep\+\_\+respond}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{\+\_\+zdo\+\_\+active\+\_\+ep\+\_\+respond()}{\_zdo\_active\_ep\_respond()}}
+{\footnotesize\ttfamily zigbee\+\_\+zdo\+\_\+debug int \+\_\+zdo\+\_\+active\+\_\+ep\+\_\+respond (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope }\end{DoxyParamCaption})}
+
+
+
+Respond to an Active Endpoint (Active\+\_\+\+EP) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+6). 
+
+This Z\+DO request is used to get a list of active endoints on a device.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & envelope of request\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully sent response \\
+\hline
+{\em -\/\+E\+N\+O\+D\+A\+TA} & don\textquotesingle{}t know network address of {\ttfamily envelope-\/$>$dev} \\
+\hline
+{\em !0} & error parsing request or sending response \\
+\hline
+\end{DoxyRetVals}
+
+
+References P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT.
+
+\mbox{\Hypertarget{group__zdo_gab405baf051b6c2b3c85bc4e80aa5c2bb}\label{group__zdo_gab405baf051b6c2b3c85bc4e80aa5c2bb}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!\+\_\+zdo\+\_\+endpoint\+\_\+of@{\+\_\+zdo\+\_\+endpoint\+\_\+of}}
+\index{\+\_\+zdo\+\_\+endpoint\+\_\+of@{\+\_\+zdo\+\_\+endpoint\+\_\+of}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{\+\_\+zdo\+\_\+endpoint\+\_\+of()}{\_zdo\_endpoint\_of()}}
+{\footnotesize\ttfamily zigbee\+\_\+zdo\+\_\+debug const \hyperlink{structwpan__endpoint__table__entry__t}{wpan\+\_\+endpoint\+\_\+table\+\_\+entry\+\_\+t} $\ast$ \+\_\+zdo\+\_\+endpoint\+\_\+of (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+Return the endpoint table entry for the Z\+DO endpoint. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dev} & search the endpoint table of this device\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & couldn\textquotesingle{}t find the Z\+DO endpoint for {\ttfamily dev} \\
+\hline
+{\em !\+N\+U\+LL} & pointer to the Z\+DO endpoint of {\ttfamily dev} \\
+\hline
+\end{DoxyRetVals}
+
+
+References wpan\+\_\+endpoint\+\_\+match(), W\+P\+A\+N\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+Z\+DO, and W\+P\+A\+N\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+Z\+DO.
+
+
+
+Referenced by zdo\+\_\+endpoint\+\_\+state().
+
+\mbox{\Hypertarget{group__zdo_gae4b6736d215caf2a10790761ed52443d}\label{group__zdo_gae4b6736d215caf2a10790761ed52443d}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!\+\_\+zdo\+\_\+envelope\+\_\+create@{\+\_\+zdo\+\_\+envelope\+\_\+create}}
+\index{\+\_\+zdo\+\_\+envelope\+\_\+create@{\+\_\+zdo\+\_\+envelope\+\_\+create}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{\+\_\+zdo\+\_\+envelope\+\_\+create()}{\_zdo\_envelope\_create()}}
+{\footnotesize\ttfamily zigbee\+\_\+zdo\+\_\+debug const \hyperlink{unionaddr64}{addr64} $\ast$ \+\_\+zdo\+\_\+envelope\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$}]{envelope,  }\item[{\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$}]{dev,  }\item[{const \hyperlink{unionaddr64}{addr64} $\ast$}]{address }\end{DoxyParamCaption})}
+
+
+
+helper function for creating Z\+DO request envelopes 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em envelope} & envelope to populate \\
+\hline
+\mbox{\tt in}  & {\em dev} & device that will send this envelope \\
+\hline
+\mbox{\tt in}  & {\em address} & send request to the given target, or N\+U\+LL for a self-\/addressed request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either {\ttfamily address} or a pointer to an all-\/zero I\+E\+EE address
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+return value may change to something more useful in a future release 
+\end{DoxyNote}
+
+
+References wpan\+\_\+dev\+\_\+t\+::address, wpan\+\_\+envelope\+\_\+t\+::dest\+\_\+endpoint, wpan\+\_\+envelope\+\_\+t\+::profile\+\_\+id, wpan\+\_\+envelope\+\_\+t\+::source\+\_\+endpoint, W\+P\+A\+N\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+Z\+DO, wpan\+\_\+envelope\+\_\+create(), W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+A\+L\+L\+\_\+\+Z\+E\+R\+OS, W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED, and W\+P\+A\+N\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+Z\+DO.
+
+
+
+Referenced by zdo\+\_\+endpoint\+\_\+state(), zdo\+\_\+send\+\_\+bind\+\_\+req(), and zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req().
+
+\mbox{\Hypertarget{group__zdo_ga41d93e5e12d9ed4e18d092fe3af779a2}\label{group__zdo_ga41d93e5e12d9ed4e18d092fe3af779a2}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!\+\_\+zdo\+\_\+match\+\_\+desc\+\_\+respond@{\+\_\+zdo\+\_\+match\+\_\+desc\+\_\+respond}}
+\index{\+\_\+zdo\+\_\+match\+\_\+desc\+\_\+respond@{\+\_\+zdo\+\_\+match\+\_\+desc\+\_\+respond}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{\+\_\+zdo\+\_\+match\+\_\+desc\+\_\+respond()}{\_zdo\_match\_desc\_respond()}}
+{\footnotesize\ttfamily zigbee\+\_\+zdo\+\_\+debug int \+\_\+zdo\+\_\+match\+\_\+desc\+\_\+respond (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope }\end{DoxyParamCaption})}
+
+
+
+Respond to a Match Descriptor (Match\+\_\+\+Desc) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+7). 
+
+This Z\+DO request is used to find endpoints using a particular Profile ID and a cluster from a list of input and output clusters.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & envelope of request\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully sent response, or none of the endpoints matched the request \\
+\hline
+{\em -\/\+E\+N\+O\+D\+A\+TA} & don\textquotesingle{}t know network address of {\ttfamily envelope-\/$>$dev} \\
+\hline
+{\em !0} & error parsing request or sending response \\
+\hline
+\end{DoxyRetVals}
+
+
+References F\+AR, P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT, and type.
+
+
+
+Referenced by zdo\+\_\+match\+\_\+desc\+\_\+request().
+
+\mbox{\Hypertarget{group__zdo_gad723bd899ccda9ec96f6226893c1335b}\label{group__zdo_gad723bd899ccda9ec96f6226893c1335b}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!\+\_\+zdo\+\_\+process\+\_\+ieee\+\_\+addr\+\_\+resp@{\+\_\+zdo\+\_\+process\+\_\+ieee\+\_\+addr\+\_\+resp}}
+\index{\+\_\+zdo\+\_\+process\+\_\+ieee\+\_\+addr\+\_\+resp@{\+\_\+zdo\+\_\+process\+\_\+ieee\+\_\+addr\+\_\+resp}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{\+\_\+zdo\+\_\+process\+\_\+ieee\+\_\+addr\+\_\+resp()}{\_zdo\_process\_ieee\_addr\_resp()}}
+{\footnotesize\ttfamily zigbee\+\_\+zdo\+\_\+debug int \+\_\+zdo\+\_\+process\+\_\+ieee\+\_\+addr\+\_\+resp (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__conversation__t}{wpan\+\_\+conversation\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{conversation,  }\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope }\end{DoxyParamCaption})}
+
+
+
+Callback function to process I\+E\+E\+E\+\_\+addr response frames. 
+
+The {\itshape context} field of the conversation is the location to store the 64-\/bit address returned in the response.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zdo_ga4af5f8d70054f7883dbc1305e3a3f181}{zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req()} 
+\end{DoxySeeAlso}
+
+
+References A\+D\+D\+R64\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH, F\+AR, and P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT.
+
+
+
+Referenced by zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req().
+
+\mbox{\Hypertarget{group__zdo_ga9c1afb2178cc3e3b515373c7e351fc02}\label{group__zdo_ga9c1afb2178cc3e3b515373c7e351fc02}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!\+\_\+zdo\+\_\+process\+\_\+nwk\+\_\+addr\+\_\+resp@{\+\_\+zdo\+\_\+process\+\_\+nwk\+\_\+addr\+\_\+resp}}
+\index{\+\_\+zdo\+\_\+process\+\_\+nwk\+\_\+addr\+\_\+resp@{\+\_\+zdo\+\_\+process\+\_\+nwk\+\_\+addr\+\_\+resp}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{\+\_\+zdo\+\_\+process\+\_\+nwk\+\_\+addr\+\_\+resp()}{\_zdo\_process\_nwk\_addr\_resp()}}
+{\footnotesize\ttfamily zigbee\+\_\+zdo\+\_\+debug int \+\_\+zdo\+\_\+process\+\_\+nwk\+\_\+addr\+\_\+resp (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__conversation__t}{wpan\+\_\+conversation\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{conversation,  }\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope }\end{DoxyParamCaption})}
+
+
+
+Callback function to process N\+W\+K\+\_\+addr response frames. 
+
+The {\itshape context} field of the conversation is the location to store the 16-\/bit address returned in the response.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__zdo_ga40f076c190ab2390836687b8e1f705eb}{zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req()} 
+\end{DoxySeeAlso}
+
+
+References F\+AR, and P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT.
+
+
+
+Referenced by zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req().
+
+\mbox{\Hypertarget{group__zdo_gaa70aa4bcb14a98c69e7a54a9971ea194}\label{group__zdo_gaa70aa4bcb14a98c69e7a54a9971ea194}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!\+\_\+zdo\+\_\+simple\+\_\+desc\+\_\+respond@{\+\_\+zdo\+\_\+simple\+\_\+desc\+\_\+respond}}
+\index{\+\_\+zdo\+\_\+simple\+\_\+desc\+\_\+respond@{\+\_\+zdo\+\_\+simple\+\_\+desc\+\_\+respond}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{\+\_\+zdo\+\_\+simple\+\_\+desc\+\_\+respond()}{\_zdo\_simple\_desc\_respond()}}
+{\footnotesize\ttfamily zigbee\+\_\+zdo\+\_\+debug int \+\_\+zdo\+\_\+simple\+\_\+desc\+\_\+respond (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope }\end{DoxyParamCaption})}
+
+
+
+Respond to a Simple Descriptor (Simple\+\_\+\+Desc) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+5). 
+
+This Z\+DO request is used to get information about a single endpoint.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & envelope of request\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully sent response \\
+\hline
+{\em -\/\+E\+N\+O\+D\+A\+TA} & don\textquotesingle{}t know network address of {\ttfamily envelope-\/$>$dev} \\
+\hline
+{\em !0} & error parsing request or sending response \\
+\hline
+\end{DoxyRetVals}
+number of clusters that fit in cluster list, minus 2 count bytes 
+
+References E\+I\+N\+V\+AL, F\+AR, P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT, and W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED.
+
+
+
+Referenced by zdo\+\_\+simple\+\_\+desc\+\_\+request().
+
+\mbox{\Hypertarget{group__zdo_gaaf992619b06595291c2aead8a3d4dba1}\label{group__zdo_gaaf992619b06595291c2aead8a3d4dba1}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+endpoint\+\_\+state@{zdo\+\_\+endpoint\+\_\+state}}
+\index{zdo\+\_\+endpoint\+\_\+state@{zdo\+\_\+endpoint\+\_\+state}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+endpoint\+\_\+state()}{zdo\_endpoint\_state()}}
+{\footnotesize\ttfamily \hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$ zdo\+\_\+endpoint\+\_\+state (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+Returns the Z\+DO endpoint\textquotesingle{}s state if a device has a Z\+DO endpoint. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dev} & device to query\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em N\+U\+LL} & {\ttfamily dev} does not have a Z\+DO endpoint \\
+\hline
+{\em !\+N\+U\+LL} & address of wpan\+\_\+ep\+\_\+state variable used for state tracking \\
+\hline
+\end{DoxyRetVals}
+
+
+References \+\_\+zdo\+\_\+endpoint\+\_\+of(), \+\_\+zdo\+\_\+envelope\+\_\+create(), and wpan\+\_\+endpoint\+\_\+table\+\_\+entry\+\_\+t\+::ep\+\_\+state.
+
+
+
+Referenced by zdo\+\_\+send\+\_\+bind\+\_\+req(), zdo\+\_\+send\+\_\+descriptor\+\_\+req(), zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req(), zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req(), and zdo\+\_\+simple\+\_\+desc\+\_\+request().
+
+\mbox{\Hypertarget{group__zdo_ga2e4465da8204d6c9a67edc3a6f210c1d}\label{group__zdo_ga2e4465da8204d6c9a67edc3a6f210c1d}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+handler@{zdo\+\_\+handler}}
+\index{zdo\+\_\+handler@{zdo\+\_\+handler}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+handler()}{zdo\_handler()}}
+{\footnotesize\ttfamily int zdo\+\_\+handler (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope,  }\item[{\hyperlink{structwpan__ep__state__t}{wpan\+\_\+ep\+\_\+state\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{ep\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Process Z\+DO frames (received on endpoint 0 with Profile ID 0). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & envelope of received Z\+DO frame, contains address, endpoint, profile, and cluster info \\
+\hline
+\mbox{\tt in}  & {\em ep\+\_\+state} & pointer to endpoint\textquotesingle{}s state structure (used for tracking transactions)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully processed \\
+\hline
+{\em !0} & error trying to process frame \\
+\hline
+\end{DoxyRetVals}
+
+
+References E\+I\+N\+V\+AL, and F\+AR.
+
+\mbox{\Hypertarget{group__zdo_ga5746efffb4b90718eb973796f2b4bb41}\label{group__zdo_ga5746efffb4b90718eb973796f2b4bb41}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+match\+\_\+desc\+\_\+request@{zdo\+\_\+match\+\_\+desc\+\_\+request}}
+\index{zdo\+\_\+match\+\_\+desc\+\_\+request@{zdo\+\_\+match\+\_\+desc\+\_\+request}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+match\+\_\+desc\+\_\+request()}{zdo\_match\_desc\_request()}}
+{\footnotesize\ttfamily int zdo\+\_\+match\+\_\+desc\+\_\+request (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{buflen,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{addr\+\_\+of\+\_\+interest,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{profile\+\_\+id,  }\item[{const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} $\ast$}]{in\+Clust,  }\item[{const \hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} $\ast$}]{out\+Clust }\end{DoxyParamCaption})}
+
+
+
+Generate a Match\+\_\+\+Desc (Match Descriptor) request (Zig\+Bee spec 2.\+4.\+3.\+1.\+7) to send on the network. 
+
+Note that the first byte of {\itshape buffer} is N\+OT set, and that the caller should set it to the next sequence number/transaction ID.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buffer} & Buffer to hold generated request. \\
+\hline
+\mbox{\tt in}  & {\em buflen} & Size of {\itshape buffer} used to hold generated request. \\
+\hline
+\mbox{\tt in}  & {\em addr\+\_\+of\+\_\+interest} & See Z\+DO documentation for N\+W\+K\+Addr\+Of\+Interest. \\
+\hline
+\mbox{\tt in}  & {\em profile\+\_\+id} & Profile ID to match, must be an actual profile ID (cannot be W\+P\+A\+N\+\_\+\+A\+P\+S\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+A\+NY). \\
+\hline
+\mbox{\tt in}  & {\em in\+Clust} & List of input clusters, ending with \hyperlink{group__wpan__aps_gacbfdff1cef70167f178c4e05b69f65fe}{W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+ST}. Can use {\ttfamily N\+U\+LL} if there aren\textquotesingle{}t any input clusters. \\
+\hline
+\mbox{\tt in}  & {\em out\+Clust} & List of output clusters, ending with \hyperlink{group__wpan__aps_gacbfdff1cef70167f178c4e05b69f65fe}{W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+E\+R\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+L\+I\+ST}. Can use {\ttfamily N\+U\+LL} if there aren\textquotesingle{}t any output clusters.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/\+E\+N\+O\+S\+PC} & {\itshape buffer} isn\textquotesingle{}t large enough to hold request; need 7 bytes plus (2 $\ast$ the number of clusters) \\
+\hline
+{\em $>$0} & number of bytes written to {\itshape buffer} \\
+\hline
+\end{DoxyRetVals}
+
+
+References \+\_\+match\+\_\+desc\+\_\+cluster\+\_\+list(), \+\_\+zdo\+\_\+match\+\_\+desc\+\_\+respond(), E\+I\+N\+V\+AL, E\+N\+O\+S\+PC, F\+AR, htole16, network\+\_\+addr\+\_\+le, P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT, and profile\+\_\+id\+\_\+le.
+
+
+
+Referenced by zdo\+\_\+send\+\_\+match\+\_\+desc().
+
+\mbox{\Hypertarget{group__zdo_ga4ab17250ec2957d91a6ef4f1377ab62d}\label{group__zdo_ga4ab17250ec2957d91a6ef4f1377ab62d}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+mgmt\+\_\+leave\+\_\+req@{zdo\+\_\+mgmt\+\_\+leave\+\_\+req}}
+\index{zdo\+\_\+mgmt\+\_\+leave\+\_\+req@{zdo\+\_\+mgmt\+\_\+leave\+\_\+req}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+mgmt\+\_\+leave\+\_\+req()}{zdo\_mgmt\_leave\_req()}}
+{\footnotesize\ttfamily int zdo\+\_\+mgmt\+\_\+leave\+\_\+req (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$}]{dev,  }\item[{const \hyperlink{unionaddr64}{addr64} $\ast$}]{address,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Send a Z\+DO Management Leave Request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dev} & device to send request on \\
+\hline
+\mbox{\tt in}  & {\em address} & address to send request to, or N\+U\+LL for self-\/addressed \\
+\hline
+\mbox{\tt in}  & {\em flags} & one or more of the following flags\+:
+\begin{DoxyItemize}
+\item Z\+D\+O\+\_\+\+M\+G\+M\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+R\+E\+Q\+\_\+\+F\+L\+A\+G\+\_\+\+N\+O\+NE
+\item Z\+D\+O\+\_\+\+M\+G\+M\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+R\+E\+Q\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+C\+H\+I\+L\+D\+R\+EN -\/ set the Remove Children flag in the Z\+DO request
+\item Z\+D\+O\+\_\+\+M\+G\+M\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+R\+E\+Q\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+J\+O\+IN -\/ set the Rejoin flag in the Z\+DO request
+\item Z\+D\+O\+\_\+\+M\+G\+M\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+R\+E\+Q\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+ED -\/ send the request with A\+PS encryption
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully sent request \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & bad parameter passed to function \\
+\hline
+{\em !0} & error sending request \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__zdo_gab02e4c1584594c0a96d05399bd69bffa}\label{group__zdo_gab02e4c1584594c0a96d05399bd69bffa}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+send\+\_\+bind\+\_\+req@{zdo\+\_\+send\+\_\+bind\+\_\+req}}
+\index{zdo\+\_\+send\+\_\+bind\+\_\+req@{zdo\+\_\+send\+\_\+bind\+\_\+req}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+send\+\_\+bind\+\_\+req()}{zdo\_send\_bind\_req()}}
+{\footnotesize\ttfamily int zdo\+\_\+send\+\_\+bind\+\_\+req (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$}]{envelope,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{type,  }\item[{\hyperlink{group__wpan__aps_gabf0a6b85c9ff3ff9104c8b58c1436d72}{wpan\+\_\+response\+\_\+fn}}]{callback,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Send a Z\+DO Bind (or Unbind) Request to the destination address in the envelope. 
+
+Binds {\ttfamily }.dest\+\_\+endpoint on {\ttfamily }.ieee\+\_\+address to {\ttfamily }.source\+\_\+endpoint on {\ttfamily }.dev using {\ttfamily }.cluster\+\_\+id.
+
+Ignores the {\ttfamily }.options, {\ttfamily }.payload, and {\ttfamily }.length members of the envelope.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & addressing information used for the Bind Request \\
+\hline
+\mbox{\tt in}  & {\em type} & Z\+D\+O\+\_\+\+B\+I\+N\+D\+\_\+\+R\+EQ for a Bind Request or Z\+D\+O\+\_\+\+U\+N\+B\+I\+N\+D\+\_\+\+R\+EQ for an Unbind Request; all other values are invalid \\
+\hline
+\mbox{\tt in}  & {\em callback} & callback to receive Bind/\+Unbind (or Default) Response; N\+U\+LL if you don\textquotesingle{}t care about the response \\
+\hline
+\mbox{\tt in}  & {\em context} & context passed to callback\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully sent request \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & bad parameter passed to function \\
+\hline
+{\em !0} & error sending request \\
+\hline
+\end{DoxyRetVals}
+
+
+References \+\_\+zdo\+\_\+envelope\+\_\+create(), wpan\+\_\+envelope\+\_\+t\+::cluster\+\_\+id, wpan\+\_\+envelope\+\_\+t\+::dev, E\+I\+N\+V\+AL, wpan\+\_\+envelope\+\_\+t\+::ieee\+\_\+address, wpan\+\_\+envelope\+\_\+t\+::length, wpan\+\_\+envelope\+\_\+t\+::network\+\_\+address, P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT, wpan\+\_\+envelope\+\_\+t\+::payload, type, wpan\+\_\+conversation\+\_\+register(), Z\+D\+O\+\_\+\+B\+I\+N\+D\+\_\+\+R\+EQ, Z\+D\+O\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT, zdo\+\_\+endpoint\+\_\+state(), and Z\+D\+O\+\_\+\+U\+N\+B\+I\+N\+D\+\_\+\+R\+EQ.
+
+\mbox{\Hypertarget{group__zdo_gac842062e5e1a60d25cddf16ec22ef601}\label{group__zdo_gac842062e5e1a60d25cddf16ec22ef601}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+send\+\_\+descriptor\+\_\+req@{zdo\+\_\+send\+\_\+descriptor\+\_\+req}}
+\index{zdo\+\_\+send\+\_\+descriptor\+\_\+req@{zdo\+\_\+send\+\_\+descriptor\+\_\+req}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+send\+\_\+descriptor\+\_\+req()}{zdo\_send\_descriptor\_req()}}
+{\footnotesize\ttfamily int zdo\+\_\+send\+\_\+descriptor\+\_\+req (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$}]{envelope,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{cluster,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{addr\+\_\+of\+\_\+interest,  }\item[{\hyperlink{group__wpan__aps_gabf0a6b85c9ff3ff9104c8b58c1436d72}{wpan\+\_\+response\+\_\+fn}}]{callback,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Send a Z\+DO Node, Power, Complex or User Descriptor request, or an Active Endpoint request. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em envelope} & Envelope created by wpan\+\_\+envelope\+\_\+create; this function will fill in the {\itshape cluster} and reset the {\itshape payload} and {\itshape length}. \\
+\hline
+\mbox{\tt in}  & {\em cluster} & Any Z\+DO request with a transaction and 16-\/bit network address as its only fields, including\+:
+\begin{DoxyItemize}
+\item Z\+D\+O\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ
+\item Z\+D\+O\+\_\+\+P\+O\+W\+E\+R\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ
+\item Z\+D\+O\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+E\+P\+\_\+\+R\+EQ
+\item Z\+D\+O\+\_\+\+C\+O\+M\+P\+L\+E\+X\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ
+\item Z\+D\+O\+\_\+\+U\+S\+E\+R\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ 
+\end{DoxyItemize}\\
+\hline
+\mbox{\tt in}  & {\em addr\+\_\+of\+\_\+interest} & address to use in Z\+DO request \\
+\hline
+\mbox{\tt in}  & {\em callback} & function to receive response \\
+\hline
+\mbox{\tt in}  & {\em context} & context to pass to {\itshape callback} with response\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em !0} & error sending request \\
+\hline
+{\em 0} & request sent \\
+\hline
+\end{DoxyRetVals}
+
+
+References wpan\+\_\+envelope\+\_\+t\+::cluster\+\_\+id, wpan\+\_\+envelope\+\_\+t\+::dest\+\_\+endpoint, wpan\+\_\+envelope\+\_\+t\+::dev, E\+I\+N\+V\+AL, htole16, wpan\+\_\+envelope\+\_\+t\+::length, network\+\_\+addr\+\_\+le, P\+A\+C\+K\+E\+D\+\_\+\+S\+T\+R\+U\+CT, wpan\+\_\+envelope\+\_\+t\+::payload, wpan\+\_\+envelope\+\_\+t\+::profile\+\_\+id, wpan\+\_\+envelope\+\_\+t\+::source\+\_\+endpoint, wpan\+\_\+conversation\+\_\+register(), W\+P\+A\+N\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+Z\+DO, wpan\+\_\+envelope\+\_\+send(), W\+P\+A\+N\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+Z\+DO, Z\+D\+O\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT, and zdo\+\_\+endpoint\+\_\+state().
+
+\mbox{\Hypertarget{group__zdo_ga4af5f8d70054f7883dbc1305e3a3f181}\label{group__zdo_ga4af5f8d70054f7883dbc1305e3a3f181}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req@{zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req}}
+\index{zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req@{zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req()}{zdo\_send\_ieee\_addr\_req()}}
+{\footnotesize\ttfamily int zdo\+\_\+send\+\_\+ieee\+\_\+addr\+\_\+req (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$}]{dev,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{net\+\_\+addr,  }\item[{\hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{ieee\+\_\+be }\end{DoxyParamCaption})}
+
+
+
+Given a device\textquotesingle{}s 16-\/bit network address, get its I\+E\+EE (64-\/bit) address by unicasting a Z\+DO I\+E\+E\+E\+\_\+addr request to it. 
+
+This function only works with the following X\+Bee firmware versions\+:
+\begin{DoxyItemize}
+\item S2C\+: 401F and later (Zig\+Bee), 5123 and later (Smart Energy)
+\item S2\mbox{[}B\mbox{]}\+: not supported
+\end{DoxyItemize}
+
+After calling this function, {\ttfamily $\ast$ieee\+\_\+be} is set to $\ast$\+Z\+D\+O\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+P\+E\+N\+D\+I\+NG.
+
+When a S\+U\+C\+C\+E\+SS response comes back, {\ttfamily $\ast$ieee\+\_\+be} is set to the 64-\/bit I\+E\+EE address in the response.
+
+If an E\+R\+R\+OR response comes back, {\ttfamily $\ast$ieee\+\_\+be} is set to all zeros ($\ast$\+Z\+D\+O\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR).
+
+If a timeout occurs waiting for a response, {\ttfamily $\ast$ieee\+\_\+be} is set to Z\+D\+O\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+T\+I\+M\+E\+O\+UT.
+
+
+\begin{DoxyCode}
+\hyperlink{unionaddr64}{addr64} ieee\_be;      \textcolor{comment}{// IEEE address in big-endian byte order}
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\_t} net\_addr;
+
+printf( \textcolor{stringliteral}{"Sending IEEE\_addr request for 0x%04X\(\backslash\)n"}, net\_addr);
+\hyperlink{group__zdo_ga4af5f8d70054f7883dbc1305e3a3f181}{zdo\_send\_ieee\_addr\_req}( dev, net\_addr, &ieee\_be);
+\textcolor{keywordflow}{do} \{
+   \hyperlink{group__wpan__aps_ga1254464011d2d98c13db7b0b3d41c25b}{wpan\_tick}( dev);
+\} \textcolor{keywordflow}{while} (\hyperlink{group__wpan__types_ga2f0706c06dc9bdcb918b55635dcd9b6f}{addr64\_equal}( &ieee\_be, ZDO\_IEEE\_ADDR\_PENDING));
+
+\textcolor{keywordflow}{if} (\hyperlink{group__wpan__types_ga2f0706c06dc9bdcb918b55635dcd9b6f}{addr64\_equal}( &ieee\_be, ZDO\_IEEE\_ADDR\_TIMEOUT))
+\{
+   printf( \textcolor{stringliteral}{"IEEE\_addr request for 0x%04X timed out\(\backslash\)n"}, net\_addr);
+\}
+\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{group__wpan__types_ga9795dea7f415ceb7502f39a78ebadfc1}{addr64\_is\_zero}( &ieee\_be))
+\{
+   printf( \textcolor{stringliteral}{"Error retrieving IEEE\_addr for 0x%04X\(\backslash\)n"}, net\_addr);
+\}
+\textcolor{keywordflow}{else}
+\{
+   printf( \textcolor{stringliteral}{"IEEE address of 0x%04X is %"} \hyperlink{group__hal_ga379022d2cd3136d8f3500c88658056b7}{PRIsFAR} \textcolor{stringliteral}{"\(\backslash\)n"}, net\_addr,
+      \hyperlink{group__wpan__types_ga448782f4aed0821758969b47221417ed}{addr64\_format}( buffer, &ieee\_be));
+\}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dev} & \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} to send request \\
+\hline
+\mbox{\tt in}  & {\em net\+\_\+addr} & network address of device we\textquotesingle{}re seeking an I\+E\+EE address for \\
+\hline
+\mbox{\tt out}  & {\em ieee\+\_\+be} & location to store the 64-\/bit I\+E\+EE address when the I\+E\+E\+E\+\_\+addr response comes back.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+{\em -\/\+E\+N\+O\+S\+PC} & conversation table is full, wait and try sending later \\
+\hline
+{\em 0} & request sent \\
+\hline
+{\em !0} & error trying to send request \\
+\hline
+\end{DoxyRetVals}
+
+
+References \+\_\+zdo\+\_\+process\+\_\+ieee\+\_\+addr\+\_\+resp(), wpan\+\_\+envelope\+\_\+t\+::cluster\+\_\+id, E\+I\+N\+V\+AL, htole16, wpan\+\_\+envelope\+\_\+t\+::length, wpan\+\_\+envelope\+\_\+t\+::payload, wpan\+\_\+conversation\+\_\+register(), wpan\+\_\+envelope\+\_\+create(), W\+P\+A\+N\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED, Z\+D\+O\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT, zdo\+\_\+endpoint\+\_\+state(), and Z\+D\+O\+\_\+\+I\+E\+E\+E\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EQ.
+
+\mbox{\Hypertarget{group__zdo_ga40f076c190ab2390836687b8e1f705eb}\label{group__zdo_ga40f076c190ab2390836687b8e1f705eb}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req@{zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req}}
+\index{zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req@{zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req()}{zdo\_send\_nwk\_addr\_req()}}
+{\footnotesize\ttfamily int zdo\+\_\+send\+\_\+nwk\+\_\+addr\+\_\+req (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$}]{dev,  }\item[{const \hyperlink{unionaddr64}{addr64} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{ieee\+\_\+be,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{net }\end{DoxyParamCaption})}
+
+
+
+Given a device\textquotesingle{}s I\+E\+EE (64-\/bit) address, get its 16-\/bit network address by unicasting a Z\+DO N\+W\+K\+\_\+addr request to it. 
+
+After calling this function, {\ttfamily $\ast$net} is set to Z\+D\+O\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+P\+E\+N\+D\+I\+NG.
+
+When a S\+U\+C\+C\+E\+SS response comes back, {\ttfamily $\ast$net} is set to the 16-\/bit network address in the response.
+
+When an E\+R\+R\+OR response comes back, {\ttfamily $\ast$net} is set to Z\+D\+O\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+E\+R\+R\+OR.
+
+If a timeout occurs waiting for a response, {\ttfamily $\ast$net} is set to Z\+D\+O\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+T\+I\+M\+E\+O\+UT.
+
+(So the caller needs to wait until ($\ast$net != Z\+D\+O\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+P\+E\+N\+D\+I\+NG)).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dev} & \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} to send request \\
+\hline
+\mbox{\tt in}  & {\em ieee\+\_\+be} & I\+E\+EE address (in big-\/endian byte order) of device we\textquotesingle{}re seeking a network address for \\
+\hline
+\mbox{\tt out}  & {\em net} & location to store the 16-\/bit network address when the N\+W\+K\+\_\+addr response comes back.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed to function \\
+\hline
+{\em -\/\+E\+N\+O\+S\+PC} & conversation table is full, wait and try sending later \\
+\hline
+{\em 0} & request sent \\
+\hline
+{\em !0} & error trying to send request \\
+\hline
+\end{DoxyRetVals}
+
+
+References \+\_\+zdo\+\_\+envelope\+\_\+create(), \+\_\+zdo\+\_\+process\+\_\+nwk\+\_\+addr\+\_\+resp(), A\+D\+D\+R64\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH, wpan\+\_\+envelope\+\_\+t\+::cluster\+\_\+id, E\+I\+N\+V\+AL, wpan\+\_\+envelope\+\_\+t\+::length, memcpy\+\_\+betole, wpan\+\_\+envelope\+\_\+t\+::payload, wpan\+\_\+conversation\+\_\+register(), Z\+D\+O\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT, zdo\+\_\+endpoint\+\_\+state(), and Z\+D\+O\+\_\+\+N\+W\+K\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EQ.
+
+\mbox{\Hypertarget{group__zdo_ga1d645805a731e1419b5012a5c8a09bf8}\label{group__zdo_ga1d645805a731e1419b5012a5c8a09bf8}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+send\+\_\+response@{zdo\+\_\+send\+\_\+response}}
+\index{zdo\+\_\+send\+\_\+response@{zdo\+\_\+send\+\_\+response}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+send\+\_\+response()}{zdo\_send\_response()}}
+{\footnotesize\ttfamily int zdo\+\_\+send\+\_\+response (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{request,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{response,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{length }\end{DoxyParamCaption})}
+
+
+
+Send a response to a Z\+DO request. 
+
+Automatically builds the response envelope and sets its cluster ID (to the request\textquotesingle{}s cluster ID with the high bit set) before sending.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em request} & envelope of original request \\
+\hline
+\mbox{\tt in}  & {\em response} & frame to send in response \\
+\hline
+\mbox{\tt in}  & {\em length} & length of {\itshape response} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & sent response \\
+\hline
+{\em !0} & error sending response \\
+\hline
+\end{DoxyRetVals}
+
+
+References wpan\+\_\+envelope\+\_\+reply().
+
+\mbox{\Hypertarget{group__zdo_gafbbece379bc09af360099d1e0825d507}\label{group__zdo_gafbbece379bc09af360099d1e0825d507}} 
+\index{Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}!zdo\+\_\+simple\+\_\+desc\+\_\+request@{zdo\+\_\+simple\+\_\+desc\+\_\+request}}
+\index{zdo\+\_\+simple\+\_\+desc\+\_\+request@{zdo\+\_\+simple\+\_\+desc\+\_\+request}!Zig\+Bee Data Object/\+Zig\+Bee Device Profile@{Zig\+Bee Data Object/\+Zig\+Bee Device Profile}}
+\subsubsection{\texorpdfstring{zdo\+\_\+simple\+\_\+desc\+\_\+request()}{zdo\_simple\_desc\_request()}}
+{\footnotesize\ttfamily int zdo\+\_\+simple\+\_\+desc\+\_\+request (\begin{DoxyParamCaption}\item[{\hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} $\ast$}]{envelope,  }\item[{\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t}}]{addr\+\_\+of\+\_\+interest,  }\item[{uint\+\_\+fast8\+\_\+t}]{endpoint,  }\item[{\hyperlink{group__wpan__aps_gabf0a6b85c9ff3ff9104c8b58c1436d72}{wpan\+\_\+response\+\_\+fn}}]{callback,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Send a Z\+DO Simple Descriptor Request. 
+
+The simple descriptor contains information specific to each of a node\textquotesingle{}s endpoints. Use the Z\+DO Simple Descriptor Request to get a descriptor for an endpoint on a remote node.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & Envelope created with \hyperlink{group__wpan__aps_ga95e2bb4e4c546191c059f54179064fc3}{wpan\+\_\+envelope\+\_\+create()}. Only {\ttfamily dev}, {\ttfamily ieee\+\_\+address} and {\ttfamily network\+\_\+address} should be set, all other structure elements should be zero. Address may match {\ttfamily addr\+\_\+of\+\_\+interest} or an alternative device that contains the discovery information of that device (like an end device\textquotesingle{}s parent).\\
+\hline
+\mbox{\tt in}  & {\em addr\+\_\+of\+\_\+interest} & Network address of the device for which the simple descriptor is required.\\
+\hline
+\mbox{\tt in}  & {\em endpoint} & Endpoint of interest, a value from 1 to 254.\\
+\hline
+\mbox{\tt in}  & {\em callback} & Function to receive the Simple Descriptor Response. See documentation for wpan\+\_\+response\+\_\+fn for this callback\textquotesingle{}s A\+PI.\\
+\hline
+\mbox{\tt in}  & {\em context} & Context pointer passed to the callback along with the response.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & request sent \\
+\hline
+{\em !0} & error sending request \\
+\hline
+\end{DoxyRetVals}
+
+
+References \+\_\+zdo\+\_\+simple\+\_\+desc\+\_\+respond(), wpan\+\_\+envelope\+\_\+t\+::cluster\+\_\+id, wpan\+\_\+envelope\+\_\+t\+::dest\+\_\+endpoint, wpan\+\_\+envelope\+\_\+t\+::dev, E\+I\+N\+V\+AL, endpoint, F\+AR, htole16, wpan\+\_\+envelope\+\_\+t\+::length, wpan\+\_\+envelope\+\_\+t\+::payload, wpan\+\_\+envelope\+\_\+t\+::profile\+\_\+id, wpan\+\_\+envelope\+\_\+t\+::source\+\_\+endpoint, wpan\+\_\+conversation\+\_\+register(), W\+P\+A\+N\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+Z\+DO, wpan\+\_\+envelope\+\_\+send(), W\+P\+A\+N\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+Z\+DO, Z\+D\+O\+\_\+\+C\+O\+N\+V\+E\+R\+S\+A\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT, zdo\+\_\+endpoint\+\_\+state(), and Z\+D\+O\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+D\+E\+S\+C\+\_\+\+R\+EQ.
+

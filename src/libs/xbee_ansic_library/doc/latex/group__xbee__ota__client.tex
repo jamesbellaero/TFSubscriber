@@ -1,0 +1,250 @@
+\hypertarget{group__xbee__ota__client}{}\section{Client}
+\label{group__xbee__ota__client}\index{Client@{Client}}
+
+
+\begin{DoxyVerb}     Code for a device to send over-the-air firmware updates to a
+     Programmable XBee.\end{DoxyVerb}
+  
+
+
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{xbee__ota__client_8c}{xbee\+\_\+ota\+\_\+client.\+c}
+\begin{DoxyCompactList}\small\item\em Support code for over-\/the-\/air (O\+TA) firmware updates of application code on Programmable X\+Bee target. \end{DoxyCompactList}\item 
+file \hyperlink{ota__client_8h}{ota\+\_\+client.\+h}
+\begin{DoxyCompactList}\small\item\em Support code for over-\/the-\/air (O\+TA) firmware updates of application code on Programmable X\+Bee target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure for tracking state of over-\/the-\/air update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__ota__client_gabdc98be69226a7bbd2eb8dc231948688}\label{group__xbee__ota__client_gabdc98be69226a7bbd2eb8dc231948688}} 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+M\+A\+X\+\_\+\+A\+U\+T\+H\+\_\+\+L\+E\+N\+G\+TH}~64
+\item 
+\mbox{\Hypertarget{group__xbee__ota__client_ga2febaa0d599fc4f6fd94fbcf232f8d09}\label{group__xbee__ota__client_ga2febaa0d599fc4f6fd94fbcf232f8d09}} 
+\#define \hyperlink{group__xbee__ota__client_ga2febaa0d599fc4f6fd94fbcf232f8d09}{X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+A\+P\+S\+\_\+\+E\+N\+C\+R\+Y\+PT}~0x0001
+\begin{DoxyCompactList}\small\item\em Send data with A\+PS encryption. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__xbee__ota__client_ga35fda0f9b1d07269c75d0407f3b26425}{X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY}(ota,  flags)
+\begin{DoxyCompactList}\small\item\em Macro for adding the O\+TA receive cluster (Digi Transparent Serial) to the cluster list for W\+P\+A\+N\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+TA. \end{DoxyCompactList}\item 
+\#define {\bfseries X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+C\+M\+D\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY}(handler,  context,  flag)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__xbee__ota__client_ga8d196639e5234b3a56eb5c00ae730261}{\+\_\+xbee\+\_\+ota\+\_\+transparent\+\_\+rx} (const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$envelope, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Cluster handler for \char`\"{}\+Digi Transparent Serial\char`\"{} cluster. \end{DoxyCompactList}\item 
+int \hyperlink{group__xbee__ota__client_ga1e29a78ac03e3450859847d4a5e3b73b}{\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+read} (void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context, void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} bytes)
+\item 
+int \hyperlink{group__xbee__ota__client_ga88905a78517417dd42f6356038717d01}{\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+write} (void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$context, const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$buffer, \hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t} bytes)
+\item 
+int \hyperlink{group__xbee__ota__client_ga4805b029d840b86133ef62d64866c6af}{xbee\+\_\+ota\+\_\+init} (\hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t} $\ast$ota, \hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$dev, const \hyperlink{unionaddr64}{addr64} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Initialize an \hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t} structure to send firmware updates to {\ttfamily target} using {\ttfamily dev}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__xbee__ota__client_gaa7262b389539547f7405189cd4bf274c}\label{group__xbee__ota__client_gaa7262b389539547f7405189cd4bf274c}} 
+\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$ \hyperlink{group__xbee__ota__client_gaa7262b389539547f7405189cd4bf274c}{dev}
+\begin{DoxyCompactList}\small\item\em local device to send updates through \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__ota__client_gaef649f9dfe9109ac17db3fda73c61036}\label{group__xbee__ota__client_gaef649f9dfe9109ac17db3fda73c61036}} 
+\hyperlink{unionaddr64}{addr64} \hyperlink{group__xbee__ota__client_gaef649f9dfe9109ac17db3fda73c61036}{target}
+\begin{DoxyCompactList}\small\item\em network device to update \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__ota__client_ga1e87af3c18a2fd36c61faf89949bdc3f}\label{group__xbee__ota__client_ga1e87af3c18a2fd36c61faf89949bdc3f}} 
+\hyperlink{group__hal__dos_ga5a8b2dc9e45a9ee81a94ef304fb62505}{uint16\+\_\+t} \hyperlink{group__xbee__ota__client_ga1e87af3c18a2fd36c61faf89949bdc3f}{flags}
+\begin{DoxyCompactList}\small\item\em combination of X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+$\ast$ values \end{DoxyCompactList}\item 
+\hyperlink{structxbee__cbuf__t}{xbee\+\_\+cbuf\+\_\+t} \hyperlink{group__xbee__ota__client_gaa86751bccf68cd96c559cd1947e455c9}{cbuf}
+\begin{DoxyCompactList}\small\item\em track state of circular buffer \end{DoxyCompactList}\item 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__ota__client_gafaab4db801ec47fb901e28ee4c4eac04}{raw} \mbox{[}255+\hyperlink{group__util__cbuf_ga6fb73f000c9aa3d2b26f3ae089676bfa}{X\+B\+E\+E\+\_\+\+C\+B\+U\+F\+\_\+\+O\+V\+E\+R\+H\+E\+AD}\mbox{]}
+\begin{DoxyCompactList}\small\item\em buffer for \hyperlink{structxbee__cbuf__t}{xbee\+\_\+cbuf\+\_\+t} structure and bytes received from target \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__ota__client_ga8a3826497465a168bcbbb5de14ea9595}\label{group__xbee__ota__client_ga8a3826497465a168bcbbb5de14ea9595}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{structxbee__cbuf__t}{xbee\_cbuf\_t} \hyperlink{group__xbee__ota__client_gaa86751bccf68cd96c559cd1947e455c9}{cbuf}\\
+\>\>{\em track state of circular buffer }\\
+\>\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\_t} \hyperlink{group__xbee__ota__client_gafaab4db801ec47fb901e28ee4c4eac04}{raw} \mbox{[}255+\hyperlink{group__util__cbuf_ga6fb73f000c9aa3d2b26f3ae089676bfa}{XBEE\_CBUF\_OVERHEAD}\mbox{]}\\
+\>\>{\em buffer for \hyperlink{structxbee__cbuf__t}{xbee\_cbuf\_t} structure and bytes received from target }\\
+\} {\bfseries rxbuf}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{group__xbee__ota__client_ga198adacee7500d0135a88d6ecc591bf5}\label{group__xbee__ota__client_ga198adacee7500d0135a88d6ecc591bf5}} 
+\hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} \hyperlink{group__xbee__ota__client_ga198adacee7500d0135a88d6ecc591bf5}{xbxm}
+\begin{DoxyCompactList}\small\item\em track state of Xmodem transfer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__ota__client_ga93137186f6fec6ed6ba4db70db04ca1f}\label{group__xbee__ota__client_ga93137186f6fec6ed6ba4db70db04ca1f}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__ota__client_ga93137186f6fec6ed6ba4db70db04ca1f}{auth\+\_\+data} \mbox{[}X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+M\+A\+X\+\_\+\+A\+U\+T\+H\+\_\+\+L\+E\+N\+G\+TH\mbox{]}
+\begin{DoxyCompactList}\small\item\em Payload used to initiate update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__xbee__ota__client_ga67b236f1ec1fbada8e400218c6e5c1f7}\label{group__xbee__ota__client_ga67b236f1ec1fbada8e400218c6e5c1f7}} 
+\hyperlink{group__hal__dos_gae1affc9ca37cfb624959c866a73f83c2}{uint8\+\_\+t} \hyperlink{group__xbee__ota__client_ga67b236f1ec1fbada8e400218c6e5c1f7}{auth\+\_\+length}
+\begin{DoxyCompactList}\small\item\em Number of bytes in {\ttfamily auth\+\_\+data}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}     Code for a device to send over-the-air firmware updates to a
+     Programmable XBee.\end{DoxyVerb}
+ 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__xbee__ota__client_gada576e1f290c08c3a5ff065a4a1504cb}\label{group__xbee__ota__client_gada576e1f290c08c3a5ff065a4a1504cb}} 
+\index{Client@{Client}!X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+C\+M\+D\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY@{X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+C\+M\+D\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY}}
+\index{X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+C\+M\+D\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY@{X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+C\+M\+D\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY}!Client@{Client}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+C\+M\+D\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY}{XBEE\_OTA\_CMD\_CLIENT\_CLUST\_ENTRY}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+C\+M\+D\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY(\begin{DoxyParamCaption}\item[{}]{handler,  }\item[{}]{context,  }\item[{}]{flag }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{  \hyperlink{group__wpan__aps_gga1227ab13b41d82d9c9c9080662f74cf7aedb825ada66b8c7bbfbeaee6d9dfba0a}{DIGI\_CLUST\_PROG\_XBEE\_OTA\_UPD}, handler,                           \(\backslash\)
+      context, (flag) | \hyperlink{group__wpan__aps_ga9aae0646b212af63cbb07c98a33cd986}{WPAN\_CLUST\_FLAG\_CLIENT} | 
+      \hyperlink{group__wpan__aps_gacb0e365a8c5e72ee90be503513e7e630}{WPAN\_CLUST\_FLAG\_NOT\_ZCL} \}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__xbee__ota__client_ga35fda0f9b1d07269c75d0407f3b26425}\label{group__xbee__ota__client_ga35fda0f9b1d07269c75d0407f3b26425}} 
+\index{Client@{Client}!X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY@{X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY}}
+\index{X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY@{X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY}!Client@{Client}}
+\subsubsection{\texorpdfstring{X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY}{XBEE\_OTA\_DATA\_CLIENT\_CLUST\_ENTRY}}
+{\footnotesize\ttfamily \#define X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+D\+A\+T\+A\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+L\+U\+S\+T\+\_\+\+E\+N\+T\+RY(\begin{DoxyParamCaption}\item[{}]{ota,  }\item[{}]{flags }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \hyperlink{group__wpan__aps_gga1227ab13b41d82d9c9c9080662f74cf7a8208e143b452d11140e487d7d29eb38f}{DIGI\_CLUST\_SERIAL}, \hyperlink{group__xbee__ota__client_ga8d196639e5234b3a56eb5c00ae730261}{\_xbee\_ota\_transparent\_rx}, ota,       \(\backslash\)
+      WPAN\_CLUST\_FLAG\_INOUT | \hyperlink{group__wpan__aps_gacb0e365a8c5e72ee90be503513e7e630}{WPAN\_CLUST\_FLAG\_NOT\_ZCL} | flags \}
+\end{DoxyCode}
+
+
+Macro for adding the O\+TA receive cluster (Digi Transparent Serial) to the cluster list for W\+P\+A\+N\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+TA. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ota} & pointer to an \hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t} structure for tracking update state \\
+\hline
+\mbox{\tt in}  & {\em flags} & additional flags for the cluster; typically 0 or \hyperlink{group__wpan__aps_ga1eafd87038a2134da7a1f72e6801d23b}{W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+\_\+\+F\+L\+A\+G\+\_\+\+E\+N\+C\+R\+Y\+PT} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__xbee__ota__client_ga8d196639e5234b3a56eb5c00ae730261}\label{group__xbee__ota__client_ga8d196639e5234b3a56eb5c00ae730261}} 
+\index{Client@{Client}!\+\_\+xbee\+\_\+ota\+\_\+transparent\+\_\+rx@{\+\_\+xbee\+\_\+ota\+\_\+transparent\+\_\+rx}}
+\index{\+\_\+xbee\+\_\+ota\+\_\+transparent\+\_\+rx@{\+\_\+xbee\+\_\+ota\+\_\+transparent\+\_\+rx}!Client@{Client}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+ota\+\_\+transparent\+\_\+rx()}{\_xbee\_ota\_transparent\_rx()}}
+{\footnotesize\ttfamily int \+\_\+xbee\+\_\+ota\+\_\+transparent\+\_\+rx (\begin{DoxyParamCaption}\item[{const \hyperlink{structwpan__envelope__t}{wpan\+\_\+envelope\+\_\+t} \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{envelope,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Cluster handler for \char`\"{}\+Digi Transparent Serial\char`\"{} cluster. 
+
+Used in the cluster table of \hyperlink{group__wpan__aps_ga83cb85a2a1e374554f9ad735c9c06e7b}{W\+P\+A\+N\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+TA} (0x\+E8) for cluster D\+I\+G\+I\+\_\+\+C\+L\+U\+S\+T\+\_\+\+S\+E\+R\+I\+AL (0x0011).
+
+This is a preliminary A\+PI and W\+I\+LL change in a future release. This version is dedicated to processing responses in O\+TA (over-\/the-\/air) firmware updates and has not been generalized for other uses.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em envelope} & information about the frame (addresses, endpoint, profile, cluster, etc.) \\
+\hline
+\mbox{\tt in,out}  & {\em context} & pointer to \hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t} structure\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & handled data \\
+\hline
+{\em !0} & some sort of error processing data\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__wpan__aps_ga8575b0db762a5fbb858d4994c9b657e3}{wpan\+\_\+aps\+\_\+handler\+\_\+fn()} 
+\end{DoxySeeAlso}
+
+
+References F\+AR.
+
+\mbox{\Hypertarget{group__xbee__ota__client_ga1e29a78ac03e3450859847d4a5e3b73b}\label{group__xbee__ota__client_ga1e29a78ac03e3450859847d4a5e3b73b}} 
+\index{Client@{Client}!\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+read@{\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+read}}
+\index{\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+read@{\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+read}!Client@{Client}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+read()}{\_xbee\_ota\_xmodem\_read()}}
+{\footnotesize\ttfamily int \+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+read (\begin{DoxyParamCaption}\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context,  }\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{bytes }\end{DoxyParamCaption})}
+
+Function assigned to the {\ttfamily stream.\+read} function pointer of an \hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} object. Reads data from the target specified in the \hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t} structure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em context} & \hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t} structure \\
+\hline
+\mbox{\tt in,out}  & {\em buffer} & buffer to store read data \\
+\hline
+\mbox{\tt in}  & {\em bytes} & maximum number of bytes to write to {\ttfamily buffer} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__util__xmodem_ga25f49dbd4c2f9e274a32217a709d6382}{xbee\+\_\+xmodem\+\_\+read\+\_\+fn()} 
+\end{DoxySeeAlso}
+
+
+References E\+I\+N\+V\+AL, F\+AR, and xbee\+\_\+cbuf\+\_\+get().
+
+\mbox{\Hypertarget{group__xbee__ota__client_ga88905a78517417dd42f6356038717d01}\label{group__xbee__ota__client_ga88905a78517417dd42f6356038717d01}} 
+\index{Client@{Client}!\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+write@{\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+write}}
+\index{\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+write@{\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+write}!Client@{Client}}
+\subsubsection{\texorpdfstring{\+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+write()}{\_xbee\_ota\_xmodem\_write()}}
+{\footnotesize\ttfamily int \+\_\+xbee\+\_\+ota\+\_\+xmodem\+\_\+write (\begin{DoxyParamCaption}\item[{void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{context,  }\item[{const void \hyperlink{group__hal_gaef060b3456fdcc093a7210a762d5f2ed}{F\+AR} $\ast$}]{buffer,  }\item[{\hyperlink{group__hal__dos_ga2140805d08462d474b82ddc8d1c2f3e6}{int16\+\_\+t}}]{bytes }\end{DoxyParamCaption})}
+
+Function assigned to the {\ttfamily stream.\+write} function pointer of an \hyperlink{structxbee__xmodem__state__t}{xbee\+\_\+xmodem\+\_\+state\+\_\+t} object. Sends data to the target specified in the \hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t} structure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em context} & \hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t} structure \\
+\hline
+\mbox{\tt in,out}  & {\em buffer} & source of data to send \\
+\hline
+\mbox{\tt in}  & {\em bytes} & number of bytes to send\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes sent to target.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__util__xmodem_ga57f329cc7f4e1b18f5baddb888221d7f}{xbee\+\_\+xmodem\+\_\+write\+\_\+fn()} 
+\end{DoxySeeAlso}
+
+
+References wpan\+\_\+envelope\+\_\+t\+::dev, E\+I\+N\+V\+AL, F\+AR, wpan\+\_\+envelope\+\_\+t\+::length, wpan\+\_\+envelope\+\_\+t\+::payload, W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+\_\+\+F\+L\+A\+G\+\_\+\+E\+N\+C\+R\+Y\+PT, wpan\+\_\+envelope\+\_\+create(), W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED, X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+A\+P\+S\+\_\+\+E\+N\+C\+R\+Y\+PT, and xbee\+\_\+transparent\+\_\+serial().
+
+\mbox{\Hypertarget{group__xbee__ota__client_ga4805b029d840b86133ef62d64866c6af}\label{group__xbee__ota__client_ga4805b029d840b86133ef62d64866c6af}} 
+\index{Client@{Client}!xbee\+\_\+ota\+\_\+init@{xbee\+\_\+ota\+\_\+init}}
+\index{xbee\+\_\+ota\+\_\+init@{xbee\+\_\+ota\+\_\+init}!Client@{Client}}
+\subsubsection{\texorpdfstring{xbee\+\_\+ota\+\_\+init()}{xbee\_ota\_init()}}
+{\footnotesize\ttfamily int xbee\+\_\+ota\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t} $\ast$}]{ota,  }\item[{\hyperlink{structwpan__dev__t}{wpan\+\_\+dev\+\_\+t} $\ast$}]{dev,  }\item[{const \hyperlink{unionaddr64}{addr64} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Initialize an \hyperlink{structxbee__ota__t}{xbee\+\_\+ota\+\_\+t} structure to send firmware updates to {\ttfamily target} using {\ttfamily dev}. 
+
+Calls xbee\+\_\+xmodem\+\_\+tx\+\_\+init and xbee\+\_\+xmodem\+\_\+set\+\_\+stream (therefore unnecessary to do so in main program).
+
+Note that when performing O\+TA updates, you M\+U\+ST use X\+B\+E\+E\+\_\+\+X\+M\+O\+D\+E\+M\+\_\+\+F\+L\+A\+G\+\_\+64 (64-\/byte xmodem blocks) if calling xbee\+\_\+xmodem\+\_\+tx\+\_\+init directly.
+
+Sends frames to the target to have it start the update cycle.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em ota} & state-\/tracking structure for sending update \\
+\hline
+\mbox{\tt in}  & {\em dev} & device to use for sending update \\
+\hline
+\mbox{\tt in}  & {\em target} & 64-\/bit address of target device\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & successfully initialized \\
+\hline
+{\em -\/\+E\+I\+N\+V\+AL} & invalid parameter passed in \\
+\hline
+\end{DoxyRetVals}
+
+
+References xbee\+\_\+ota\+\_\+t\+::cbuf, wpan\+\_\+envelope\+\_\+t\+::cluster\+\_\+id, wpan\+\_\+envelope\+\_\+t\+::dest\+\_\+endpoint, xbee\+\_\+ota\+\_\+t\+::dev, D\+I\+G\+I\+\_\+\+C\+L\+U\+S\+T\+\_\+\+P\+R\+O\+G\+\_\+\+X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+U\+PD, E\+I\+N\+V\+AL, xbee\+\_\+ota\+\_\+t\+::flags, wpan\+\_\+envelope\+\_\+t\+::profile\+\_\+id, wpan\+\_\+envelope\+\_\+t\+::source\+\_\+endpoint, xbee\+\_\+ota\+\_\+t\+::target, W\+P\+A\+N\+\_\+\+C\+L\+U\+S\+T\+\_\+\+F\+L\+A\+G\+\_\+\+E\+N\+C\+R\+Y\+PT, W\+P\+A\+N\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+I\+G\+I\+\_\+\+D\+A\+TA, wpan\+\_\+envelope\+\_\+create(), W\+P\+A\+N\+\_\+\+N\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED, W\+P\+A\+N\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+D\+I\+GI, xbee\+\_\+cbuf\+\_\+init(), and X\+B\+E\+E\+\_\+\+O\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+A\+P\+S\+\_\+\+E\+N\+C\+R\+Y\+PT.
+
