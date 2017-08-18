@@ -1,3 +1,0 @@
-/mnt/c/Users/James/ArduinoProjects/omnibot/TFSubscriber/libs/xbee_ansic_library/src/xbee/CMakeFiles/edit_cache.dir
-/mnt/c/Users/James/ArduinoProjects/omnibot/TFSubscriber/libs/xbee_ansic_library/src/xbee/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/James/ArduinoProjects/omnibot/TFSubscriber/libs/xbee_ansic_library/src/xbee/CMakeFiles/XBee.dir
