@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/TFSubscriber.dir/tfsubscriber.cpp.o  -o TFSubscriber libs/xbee_ansic_library/src/xbee/libXBee.so -Wl,-rpath,/mnt/c/Users/James/ArduinoProjects/omnibot/TFSubscriber/libs/xbee_ansic_library/src/xbee 
