@@ -18,7 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package()
 include_directories(
 ${PROJECT_SOURCE_DIR}/libs/xbee_ansic_library
-${PROJECT_SOURCE_DIR/libs/xbee_ansic_library/include
+${PROJECT_SOURCE_DIR}/libs/xbee_ansic_library/include
 ${catkin_INCLUDE_DIRS}
 )
 add_executable(tfsubscriber src/tfsubscriber.cpp)
