@@ -1,7 +1,14 @@
 cmake_minimum_required (VERSION 3.5)
-project (tfsubscriber)
+project(Serial)
+include_directories(${PROJECT_SOURCE_DIR}/src)
 
-add_definitions(-DPOSIX)
+file(GLOB SERIAL_SOURCES ${PROJECT_SOURCE_DIR}/src/parse_serial_args*)
+add_library(Serial SHARED ${SERIAL_SOURCES})
+
+
+project (tfsubscriber)
+add_definitions(-DPOSIX -DXBEE_ATMODE_DEBUG -DXBEE_DEVICE_ENABLE_ATMODE)
+add_subdirectory (${PROJECT_SOURCE_DIR}/libs/xbee_ansic_library)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
@@ -10,12 +17,9 @@ find_package(catkin REQUIRED COMPONENTS
 )
 catkin_package()
 include_directories(
-  ${catkin_INCLUDE_DIRS}
-  ${PROJECT_SOURCE_DIR}/src/libs/xbee_ansic_library/include/xbee
-  ${PROJECT_SOURCE_DIR}/src/libs/xbee_ansic_library/src/xbee
-  ${PROJECT_SOURCE_DIR}/src/libs/xbee_ansic_library/src
-  ${PROJECT_SOURCE_DIR}/src/libs/xbee_ansic_library/include
+${PROJECT_SOURCE_DIR}/libs/xbee_ansic_library
+${PROJECT_SOURCE_DIR/libs/xbee_ansic_library/include
+${catkin_INCLUDE_DIRS}
 )
-add_subdirectory (${PROJECT_SOURCE_DIR}/src/libs/xbee_ansic_library/src/xbee)
 add_executable(tfsubscriber src/tfsubscriber.cpp)
-target_link_libraries (tfsubscriber XBee ${catkin_LIBRARIES})
+target_link_libraries (tfsubscriber XBee Serial ${catkin_LIBRARIES})

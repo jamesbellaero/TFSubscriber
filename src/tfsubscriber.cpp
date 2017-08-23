@@ -1,19 +1,18 @@
-#include <ros/ros.h>
-#include <tf/transform_broadcaster.h>
-#include <geometry_msgs/TransformStamped.h>
-#include <geometry_msgs/Twist.h>
-
 #include <string>
-#include "quaternion.h"
-#include "device.h"
+#include <math.h>
+#include <stdio.h>
 
-ros::NodeHandle nh;
+#include "quaternion.h"
+#include "xbee/device.h"
+#include "xbee/serial.h"
+#include "parse_serial_args.h"
+
 float vx,vy,theta,thetaROC;
 Vec3 tarLoc;
 Vec3 tarAtt;
 Vec3 loc;
 Vec3 att;
-
+xbee_dev_t xbee;
 
 void sendMessage(){
 //  radio.write( &vx, sizeof(float) );
@@ -21,6 +20,7 @@ void sendMessage(){
 //  radio.write( &theta, sizeof(float) );
 //  radio.write( &thetaROC, sizeof(float) );
 //  radio.startListening();
+
   time_t  startTime,currTime;
   time(&startTime);//seconds
   bool timeout = false;
@@ -46,48 +46,54 @@ void sendMessage(){
 
   }
 
-void messageCallback( const geometry_msgs::TransformStamped& t){
-
-  std::string a =  t.header.frame_id;
-  //Set target
-  //Vec4 x;
-  Vec4 quat;
-  if(a=="tar"){
-    tarLoc.v[0] = t.transform.translation.x;
-    tarLoc.v[1] = t.transform.translation.y;
-    tarLoc.v[2] = t.transform.translation.z;
-    quat.v[0] = t.transform.rotation.w;
-    quat.v[1] = t.transform.rotation.x;
-    quat.v[2] = t.transform.rotation.y;
-    quat.v[3] = t.transform.rotation.z;
-    tarAtt = Quat2RPY(quat);
-  }
-  else{
-    loc.v[0] = t.transform.translation.x;
-    loc.v[1] = t.transform.translation.y;
-    loc.v[2] = t.transform.translation.z;
-    quat.v[0] = t.transform.rotation.w;
-    quat.v[1] = t.transform.rotation.x;
-    quat.v[2] = t.transform.rotation.y;
-    quat.v[3] = t.transform.rotation.z;
-    att = Quat2RPY(quat);
-  }
-  //edit formulas!
-  vx = (float)(tarLoc.v[0] - loc.v[0]);
-
-  vy = (float)(tarLoc.v[1] - loc.v[1]);
-
-  theta = (float)att.v[2];//yaw
-
-  thetaROC  = (float)(tarAtt.v[2]-att.v[2]);
-
-  sendMessage();
-
-}
+// void messageCallback( const geometry_msgs::TransformStamped& t){
+//
+//   std::string a =  t.header.frame_id;
+//   //Set target
+//   //Vec4 x;
+//   Vec4 quat;
+//   if(a=="tar"){
+//     tarLoc.v[0] = t.transform.translation.x;
+//     tarLoc.v[1] = t.transform.translation.y;
+//     tarLoc.v[2] = t.transform.translation.z;
+//     quat.v[0] = t.transform.rotation.w;
+//     quat.v[1] = t.transform.rotation.x;
+//     quat.v[2] = t.transform.rotation.y;
+//     quat.v[3] = t.transform.rotation.z;
+//     tarAtt = Quat2RPY(quat);
+//   }
+//   else{
+//     loc.v[0] = t.transform.translation.x;
+//     loc.v[1] = t.transform.translation.y;
+//     loc.v[2] = t.transform.translation.z;
+//     quat.v[0] = t.transform.rotation.w;
+//     quat.v[1] = t.transform.rotation.x;
+//     quat.v[2] = t.transform.rotation.y;
+//     quat.v[3] = t.transform.rotation.z;
+//     att = Quat2RPY(quat);
+//   }
+//   //edit formulas!
+//   vx = (float)(tarLoc.v[0] - loc.v[0]);
+//
+//   vy = (float)(tarLoc.v[1] - loc.v[1]);
+//
+//   theta = (float)att.v[2];//yaw
+//
+//   thetaROC  = (float)(tarAtt.v[2]-att.v[2]);
+//
+//   sendMessage();
+//
+// }
 
 
 int main(int argc, char **argv){
-  ros::init(argc,argv,"omnibot_throttle");
-  ros::Subscriber sub = nh.subscribe("/vicon/omnibot", 1000, messageCallback);
-  ros::spinOnce();
+  xbee_serial_t serial_port;
+  parse_serial_arguments(argc,argv,&serial_port);
+  if (xbee_dev_init( &xbee, &serial_port, NULL, NULL))
+	{
+		printf( "Failed to initialize device.\n");
+		return 0;
+	}
+  uint8_t toSend[]="hello";
+  xbee_ser_write(&serial_port,toSend,sizeof toSend);
 }

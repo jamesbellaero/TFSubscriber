@@ -1,3 +1,4 @@
+#include <math.h>
 struct Vec4{
 	double v[4];
 };
@@ -8,7 +9,7 @@ struct Vec3{
 
 Vec3 Quat2RPY(Vec4 q){
 	float q0 = q.v[0]; //q0 = q.v[1];
-	float q1 = q.v[1]; //q1 = q.v[2]; 
+	float q1 = q.v[1]; //q1 = q.v[2];
 	float q2 = q.v[2]; //q2 = q.v[3];
 	float q3 = q.v[3]; //q3 = q.v[0];
 	Vec3 RPY;
