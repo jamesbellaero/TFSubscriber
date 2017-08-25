@@ -24,13 +24,29 @@ xbee_serial_t serial_port;
 void sendMessage(){
   uint8_t toSend[4*sizeof(float)];
   int loc=0;
-  std::cout<<"Beginning send message";
+  vx=3.3;
+  vy=4.2;
+  theta=10;
+  omega=91.1;
   memcpy(&toSend+(sizeof(float)*loc++),&vx,sizeof(float));
-  memcpy(&toSend+(sizeof(float)*loc++),&vy,sizeof(float));
-  memcpy(&toSend+(sizeof(float)*loc++),&theta,sizeof(float));
-  memcpy(&toSend+(sizeof(float)*loc++),&omega,sizeof(float));
+  //std::cout<<""<<*((float*)&vx)<<"\n";
+  std::cout<<""<<*((float*)&toSend)<<"\n";
+  memcpy(&toSend+1,&vy,sizeof(vy));
+  std::cout<<""<<*((float*)&toSend+)<<"\n";
+  memcpy(&toSend+1,&theta,sizeof(float));
+  std::cout<<""<<*((float*)&toSend)<<"\n";
+  memcpy(&toSend,&omega,sizeof(float));
+  std::cout<<""<<*((float*)&toSend)<<"\n";
+  float check[4];
   xbee_ser_write(&serial_port,toSend,sizeof toSend);
-  std::cout<<"Finished send message";
+  ROS_INFO("Finished send message\n");
+  for(int i =0;i<4;i++){
+    // memcpy(&check+i,&toSend+(sizeof(float)*i),sizeof(float));
+    // for(int j=0;j<4;j++){
+    //   std::cout<<""<<check[j]<<"\n";
+    // }
+    std::cout<<""<<(&toSend+(4*i))<<"\n";
+  }
   time_t  startTime,currTime;
   time(&startTime);//seconds
   bool timeout = false;
@@ -57,8 +73,8 @@ void sendMessage(){
   }
 }
 
-void messageCallback( const geometry_msgs::TransformStamped &t){
-  std::cout<<"Beginning message read";
+void messageCallback( geometry_msgs::TransformStamped t){
+  //const geometry_msgs::TransformStamped *t = &transform;
   std::string a =  t.header.frame_id;
   //Set target
   //Vec4 x;
@@ -83,7 +99,6 @@ void messageCallback( const geometry_msgs::TransformStamped &t){
     quat.v[3] = t.transform.rotation.z;
     att = Quat2RPY(quat);
   }
-  std::cout<<"Finished message read";
   //edit formulas!
   vx = (float)(tarLoc.v[0] - loc.v[0]);
 
@@ -110,8 +125,6 @@ int main(int argc, char **argv){
   ros::init(argc,argv,"omnibot_throttle");
   ros::NodeHandle nh;
   ros::Subscriber sub = nh.subscribe("/vicon/omnibot",1000,messageCallback);
-
-
   ros::spin();
   
 

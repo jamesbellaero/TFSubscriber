@@ -1,10 +1,10 @@
 #include <math.h>
 struct Vec4{
-	double v[4];
+	float v[4];
 };
 
 struct Vec3{
-	double v[3];
+	float v[3];
 };
 
 Vec3 Quat2RPY(Vec4 q){

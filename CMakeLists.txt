@@ -7,7 +7,8 @@ add_library(Serial SHARED ${SERIAL_SOURCES})
 
 
 project (tfsubscriber)
-add_definitions(-DPOSIX -DXBEE_ATMODE_DEBUG -DXBEE_DEVICE_ENABLE_ATMODE)
+SET(GCC_FLAGS "-g")
+add_definitions(-DPOSIX -DXBEE_ATMODE_DEBUG -DXBEE_DEVICE_ENABLE_ATMODE ${GCC_FLAGS})
 add_subdirectory (${PROJECT_SOURCE_DIR}/libs/xbee_ansic_library)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
