@@ -6,7 +6,7 @@
 #include <string>
 #include <math.h>
 #include <stdio.h>
-
+#include <iostream>
 #include "quaternion.h"
 #include "xbee/device.h"
 #include "xbee/serial.h"
@@ -24,13 +24,13 @@ xbee_serial_t serial_port;
 void sendMessage(){
   uint8_t toSend[4*sizeof(float)];
   int loc=0;
-  cout<<"Beginning send message";
+  std::cout<<"Beginning send message";
   memcpy(&toSend+(sizeof(float)*loc++),&vx,sizeof(float));
   memcpy(&toSend+(sizeof(float)*loc++),&vy,sizeof(float));
   memcpy(&toSend+(sizeof(float)*loc++),&theta,sizeof(float));
   memcpy(&toSend+(sizeof(float)*loc++),&omega,sizeof(float));
   xbee_ser_write(&serial_port,toSend,sizeof toSend);
-  cout<<"Finished send message";
+  std::cout<<"Finished send message";
   time_t  startTime,currTime;
   time(&startTime);//seconds
   bool timeout = false;
@@ -43,8 +43,7 @@ void sendMessage(){
   }
   if ( timeout ){
     //TODO: fill this in lol
-  }
-  // else{
+    // else{
   //   if (radio.available()){
   //
   //     for(int i = 0; i<4; i++){
@@ -55,10 +54,11 @@ void sendMessage(){
   //   }
   // }
 
+  }
 }
 
 void messageCallback( const geometry_msgs::TransformStamped &t){
-  cout<<"Beginning message read";
+  std::cout<<"Beginning message read";
   std::string a =  t.header.frame_id;
   //Set target
   //Vec4 x;
@@ -83,7 +83,7 @@ void messageCallback( const geometry_msgs::TransformStamped &t){
     quat.v[3] = t.transform.rotation.z;
     att = Quat2RPY(quat);
   }
-  cout<<"Finished message read";
+  std::cout<<"Finished message read";
   //edit formulas!
   vx = (float)(tarLoc.v[0] - loc.v[0]);
 
