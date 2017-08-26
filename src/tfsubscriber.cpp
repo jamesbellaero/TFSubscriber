@@ -24,29 +24,12 @@ xbee_serial_t serial_port;
 void sendMessage(){
   uint8_t toSend[4*sizeof(float)];
   int loc=0;
-  vx=3.3;
-  vy=4.2;
-  theta=10;
-  omega=91.1;
-  memcpy(&toSend+(sizeof(float)*loc++),&vx,sizeof(float));
-  //std::cout<<""<<*((float*)&vx)<<"\n";
-  std::cout<<""<<*((float*)&toSend)<<"\n";
-  memcpy(&toSend+1,&vy,sizeof(vy));
-  std::cout<<""<<*((float*)&toSend+)<<"\n";
-  memcpy(&toSend+1,&theta,sizeof(float));
-  std::cout<<""<<*((float*)&toSend)<<"\n";
-  memcpy(&toSend,&omega,sizeof(float));
-  std::cout<<""<<*((float*)&toSend)<<"\n";
-  float check[4];
+  memcpy(&toSend[sizeof(float)*loc++],&vx,sizeof(float));
+  memcpy(&toSend[sizeof(float)*loc++],&vy,sizeof(float));
+  memcpy(&toSend[sizeof(float)*loc++],&theta,sizeof(float));
+  memcpy(&toSend[sizeof(float)*loc++],&omega,sizeof(float));
   xbee_ser_write(&serial_port,toSend,sizeof toSend);
   ROS_INFO("Finished send message\n");
-  for(int i =0;i<4;i++){
-    // memcpy(&check+i,&toSend+(sizeof(float)*i),sizeof(float));
-    // for(int j=0;j<4;j++){
-    //   std::cout<<""<<check[j]<<"\n";
-    // }
-    std::cout<<""<<(&toSend+(4*i))<<"\n";
-  }
   time_t  startTime,currTime;
   time(&startTime);//seconds
   bool timeout = false;
