@@ -28,8 +28,21 @@ void sendMessage(){
   memcpy(&toSend[sizeof(float)*loc++],&vy,sizeof(float));
   memcpy(&toSend[sizeof(float)*loc++],&theta,sizeof(float));
   memcpy(&toSend[sizeof(float)*loc++],&omega,sizeof(float));
+  //xbee_frame_write(&xbee,NULL,0,toSend,16,0);
+  uint8_t msb=0;
+  uint8_t lsb=17;
+  uint8_t checksum=1;
+  for(int i=0;i<sizeof toSend;i++){
+    checksum+=toSend[i];
+  }
+  checksum=(uint8_t)255-(uint8_t)(checksum+0xFF+0xFE);
+  xbee_ser_write( &serial_port, "\x7E\x00\x13\x01\xFF\xFE", 7);//FF FE are the 16 bit address, doesn't matter though
   xbee_ser_write(&serial_port,toSend,sizeof toSend);
+  xbee_ser_write(&serial_port,&checksum,1);
   ROS_INFO("Finished send message\n");
+  for(int i = 0;i<4;i++){
+    std::cout<<*((float*)&toSend[i*4])<<"\n";
+  }
   time_t  startTime,currTime;
   time(&startTime);//seconds
   bool timeout = false;
@@ -62,7 +75,7 @@ void messageCallback( geometry_msgs::TransformStamped t){
   //Set target
   //Vec4 x;
   Vec4 quat;
-  if(a=="tar"){
+  if(a=="target"){
     tarLoc.v[0] = t.transform.translation.x;
     tarLoc.v[1] = t.transform.translation.y;
     tarLoc.v[2] = t.transform.translation.z;
@@ -107,8 +120,12 @@ int main(int argc, char **argv){
   xbee_ser_open(&serial_port,9600);
   ros::init(argc,argv,"omnibot_throttle");
   ros::NodeHandle nh;
-  ros::Subscriber sub = nh.subscribe("/vicon/omnibot",1000,messageCallback);
-  ros::spin();
+  ros::Subscriber sub = nh.subscribe("/vicon/omnibot/omnibot",1000,messageCallback);
+  ros::Rate rate(1);
+  while(ros::ok()){
+    ros::spinOnce();
+    rate.sleep();
+  }
   
 
 }

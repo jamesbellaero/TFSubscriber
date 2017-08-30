@@ -43,7 +43,12 @@
 #include "wpan/aps.h"
 /*** EndHeader */
 
-
+const xbee_dispatch_table_entry_t xbee_frame_handlers[] =
+{
+  1,
+  0,
+  XBEE_FRAME_TABLE_END
+};
 /*** BeginHeader xbee_next_frame_id */
 /*** EndHeader */
 /**
@@ -362,9 +367,7 @@ void _xbee_dispatch_table_dump( const xbee_dev_t *xbee)
 	}
 
 	puts( "Index\tType\tID\tHandler\tContext");
-	entry ={
-		XBEE_FRAME_TABLE_END
-	};
+	entry =xbee_frame_handlers;
 
 
 	for (i = 0; entry->frame_type != 0xFF; ++i, ++entry)
@@ -376,7 +379,7 @@ void _xbee_dispatch_table_dump( const xbee_dev_t *xbee)
 		}
 		else
 		{
-			printf( "%3d:\t[empty]\n", i);
+			printf( "%3d:\t[empty]\n", i);xbee_frame_handlers
 		}
 	}
 #endif
@@ -922,7 +925,7 @@ int _xbee_frame_dispatch( xbee_dev_t *xbee, const void FAR *frame,
 	#endif
 
 	dispatched = 0;
-	for (; entry->frame_type != 0xFF; ++entry)
+	for (entry=xbee_frame_handlers; entry->frame_type != 0xFF; ++entry)
 	{
 		if (! entry->frame_type || entry->frame_type == frametype)
 		{
