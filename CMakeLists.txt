@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 3.5)
 project(Serial)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
-file(GLOB SERIAL_SOURCES ${PROJECT_SOURCE_DIR}/src/parse_serial_args*)
+file(GLOB SERIAL_SOURCES ${PROJECT_SOURCE_DIR}/src/serial_help*)
 add_library(Serial SHARED ${SERIAL_SOURCES})
 
 

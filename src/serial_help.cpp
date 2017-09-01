@@ -20,7 +20,7 @@
 #include <string.h>
 
 #include "xbee/serial.h"
-#include "parse_serial_args.h"
+#include "serial_help.h"
 
 /*
 	Parse the command-line arguments, looking for "/dev/" to determine the
@@ -37,7 +37,7 @@ void parse_serial_arguments( int argc, char *argv[], xbee_serial_t *serial)
 	memset( serial, 0, sizeof *serial);
 
 	// default baud rate
-	serial->baudrate = 115200;
+	serial->baudrate = 9600;
 	//cycle through all arguments
 	for (i = 1; i < argc; ++i)
 	{

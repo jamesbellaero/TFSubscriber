@@ -10,7 +10,7 @@
 #include "quaternion.h"
 #include "xbee/device.h"
 #include "xbee/serial.h"
-#include "parse_serial_args.h"
+#include "serial_help.h"
 
 
 float vx,vy,theta,omega;
@@ -30,19 +30,18 @@ void sendMessage(){
   memcpy(&toSend[sizeof(float)*loc++],&omega,sizeof(float));
   //xbee_frame_write(&xbee,NULL,0,toSend,16,0);
   uint8_t msb=0;
-  uint8_t lsb=17;
+  uint8_t lsb=19;
   uint8_t checksum=1;
   for(int i=0;i<sizeof toSend;i++){
     checksum+=toSend[i];
   }
   checksum=(uint8_t)255-(uint8_t)(checksum+0xFF+0xFE);
-  xbee_ser_write( &serial_port, "\x7E\x00\x13\x01\xFF\xFE", 7);//FF FE are the 16 bit address, doesn't matter though
+  xbee_ser_write( &serial_port, "\x7E\x00\x13\x01\xFF\xFE", 6);//FF FE are the 16 bit address, doesn't matter though
   xbee_ser_write(&serial_port,toSend,sizeof toSend);
   xbee_ser_write(&serial_port,&checksum,1);
-  ROS_INFO("Finished send message\n");
-  for(int i = 0;i<4;i++){
-    std::cout<<*((float*)&toSend[i*4])<<"\n";
-  }
+  // for(int i = 0;i<4;i++){
+  //   std::cout<<*((float*)&toSend[i*4])<<"\n";
+  // }
   time_t  startTime,currTime;
   time(&startTime);//seconds
   bool timeout = false;
@@ -113,19 +112,55 @@ int main(int argc, char **argv){
   
   parse_serial_arguments(argc,argv,&serial_port);
  //  if (xbee_dev_init( &xbee, &serial_port, NULL, NULL))
-	// {
-	// 	printf( "Failed to initialize device.\n");
-	// 	return 0;
-	// }
+  // {
+  //  printf( "Failed to initialize device.\n");
+  //  return 0;
+  // }
   xbee_ser_open(&serial_port,9600);
   ros::init(argc,argv,"omnibot_throttle");
   ros::NodeHandle nh;
   ros::Subscriber sub = nh.subscribe("/vicon/omnibot/omnibot",1000,messageCallback);
-  ros::Rate rate(1);
+
+
+  double freq=1;
+  ros::Rate rate(freq);
+  ros::Duration dur(1/freq);
+  
   while(ros::ok()){
+    ros::Time start_ = ros::Time::now();
+    //listen for updated position from vicon
     ros::spinOnce();
+    //listen for info from omnibot until it's time to check for updates from vicon
+    while(ros::Time::now()-start_<dur){
+      uint8_t b=xbee_ser_getchar(&serial_port);
+      if(b==0x7E){
+
+        uint8_t upper=xbee_ser_getchar(&serial_port);
+        uint8_t lower=xbee_ser_getchar(&serial_port);
+        uint16_t len = ((uint16_t)upper<<8) | lower;
+        std::cout<<"Received "<<len<<" bytes\n";
+        if(len!=21)
+          break;
+        uint8_t data[len];
+        uint8_t sum=0;
+        for(int i=0;i<len;i++){
+          data[i]=xbee_ser_getchar(&serial_port);
+          sum+=data[i];
+        }
+        uint8_t checksum=xbee_ser_getchar(&serial_port);
+        sum+=checksum;
+        if(sum==0xFF){
+          float speeds[4];
+          int offset=len-16;
+          std::cout<<"Received speeds: ";
+          for(int i=0;i<4;i++){
+            speeds[i]=*((float*)&data[i*4+offset]);
+            std::cout<<speeds[i]<<"\t";
+          }
+          std::cout<<"\n";
+        }
+      }
+    }
     rate.sleep();
   }
-  
-
 }
